@@ -12,6 +12,9 @@ results.csv
 model.pkl
 report_*.txt
 
+# Dashboard data is tracked so Render can serve it
+# dashboard_data.json is intentionally NOT ignored
+
 # Claude settings
 .claude/
 

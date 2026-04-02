@@ -9,6 +9,8 @@ import sys
 import time
 from datetime import date
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+
 from config import PARK_FACTOR_DEFAULT
 
 
@@ -290,6 +292,20 @@ def main():
     with open(dashboard_path, "w") as f:
         json.dump(dashboard, f, indent=2)
     print(f"Dashboard data saved to dashboard_data.json")
+
+    # Push dashboard data to GitHub so Render serves the latest report
+    import subprocess
+    print("\nPushing dashboard to GitHub...")
+    try:
+        subprocess.run(["git", "add", "dashboard_data.json"], cwd=SCRIPT_DIR, check=True)
+        subprocess.run(
+            ["git", "commit", "-m", f"Dashboard update {game_date}"],
+            cwd=SCRIPT_DIR, check=True, capture_output=True
+        )
+        subprocess.run(["git", "push"], cwd=SCRIPT_DIR, check=True, capture_output=True)
+        print("Dashboard live at https://mlbsharp.onrender.com")
+    except subprocess.CalledProcessError:
+        print("Git push skipped (no changes or auth issue)")
 
 
 if __name__ == "__main__":
