@@ -1,0 +1,19 @@
+# API keys — never commit
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Data files — local only
+projections_cache.json
+results.csv
+model.pkl
+report_*.txt
+
+# Claude settings
+.claude/
+
+# macOS
+.DS_Store
