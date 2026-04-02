@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>MLBSharp</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0f1117;
+      color: #e2e8f0;
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+      padding-bottom: 40px;
+    }
+    .header {
+      background: linear-gradient(135deg, #1a1f2e 0%, #0f1117 100%);
+      border-bottom: 1px solid #1e2535;
+      padding: 20px 16px 16px;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .header-top { display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-size: 22px; font-weight: 700; letter-spacing: -0.5px; color: #fff; }
+    .logo span { color: #3b82f6; }
+    .date-badge { font-size: 12px; color: #64748b; background: #1e2535; padding: 4px 10px; border-radius: 20px; }
+    .generated { font-size: 11px; color: #475569; margin-top: 6px; }
+    .summary { display: flex; gap: 8px; padding: 12px 16px; overflow-x: auto; scrollbar-width: none; border-bottom: 1px solid #1e2535; }
+    .summary::-webkit-scrollbar { display: none; }
+    .summary-pill { flex-shrink: 0; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; display: flex; align-items: center; gap: 6px; }
+    .pill-strong { background: #052e16; color: #4ade80; border: 1px solid #166534; }
+    .pill-moderate { background: #1c1917; color: #fbbf24; border: 1px solid #78350f; }
+    .pill-lean { background: #0f172a; color: #818cf8; border: 1px solid #312e81; }
+    .pill-pass { background: #1a1a1a; color: #64748b; border: 1px solid #334155; }
+    .pill-dot { width: 7px; height: 7px; border-radius: 50%; }
+    .dot-strong { background: #4ade80; }
+    .dot-moderate { background: #fbbf24; }
+    .dot-lean { background: #818cf8; }
+    .dot-pass { background: #475569; }
+    .section-header { padding: 20px 16px 8px; display: flex; align-items: center; gap: 8px; }
+    .section-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+    .label-strong { color: #4ade80; }
+    .label-moderate { color: #fbbf24; }
+    .label-lean { color: #818cf8; }
+    .label-pass { color: #475569; }
+    .section-line { flex: 1; height: 1px; background: #1e2535; }
+    .card { margin: 0 12px 10px; border-radius: 14px; overflow: hidden; border: 1px solid #1e2535; }
+    .card-strong { border-color: #166534; background: #030f06; }
+    .card-moderate { border-color: #78350f; background: #0d0900; }
+    .card-lean { border-color: #312e81; background: #06060f; }
+    .card-pass { border-color: #1e2535; background: #0d1117; }
+    .card-header { padding: 14px 16px 12px; cursor: pointer; user-select: none; }
+    .card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
+    .pitcher-name { font-size: 17px; font-weight: 700; color: #f1f5f9; letter-spacing: -0.3px; }
+    .matchup-line { font-size: 13px; color: #94a3b8; margin-bottom: 10px; }
+    .edge-badge { font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 8px; }
+    .edge-strong { background: #052e16; color: #4ade80; }
+    .edge-moderate { background: #1c1917; color: #fbbf24; }
+    .edge-lean { background: #0f172a; color: #818cf8; }
+    .edge-none { background: #1a1a1a; color: #475569; }
+    .play-tag { display: inline-block; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 5px; margin-right: 6px; letter-spacing: 0.5px; }
+    .tag-over { background: #052e16; color: #4ade80; }
+    .tag-under { background: #450a0a; color: #f87171; }
+    .tag-na { background: #1e2535; color: #64748b; }
+    .stats-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+    .stat-chip { background: #1e2535; border-radius: 6px; padding: 4px 8px; font-size: 11px; color: #94a3b8; }
+    .stat-chip strong { color: #e2e8f0; }
+    .proj-strong { color: #4ade80; }
+    .proj-moderate { color: #fbbf24; }
+    .proj-lean { color: #818cf8; }
+    .proj-pass { color: #94a3b8; }
+    .k-dist { padding: 10px 0 2px; }
+    .k-dist-title { font-size: 10px; color: #475569; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 8px; font-weight: 600; }
+    .k-bars { display: flex; align-items: flex-end; gap: 4px; height: 60px; }
+    .k-bar-group { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px; }
+    .k-bar { width: 100%; border-radius: 3px 3px 0 0; min-height: 2px; }
+    .k-bar-label { font-size: 9px; color: #475569; }
+    .k-bar-pct { font-size: 9px; color: #64748b; }
+    .card-details { display: none; padding: 12px 16px 14px; border-top: 1px solid #1e2535; }
+    .card-details.open { display: block; }
+    .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 10px; }
+    .detail-item { background: #1a1f2e; border-radius: 8px; padding: 8px 10px; }
+    .detail-label { font-size: 10px; color: #475569; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 2px; }
+    .detail-value { font-size: 14px; font-weight: 600; color: #e2e8f0; }
+    .books-section { margin-top: 10px; }
+    .books-label { font-size: 10px; color: #475569; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 6px; }
+    .books-list { display: flex; flex-wrap: wrap; gap: 6px; }
+    .book-chip { background: #1e2535; border-radius: 6px; padding: 5px 10px; font-size: 12px; color: #94a3b8; }
+    .book-chip.best { background: #0c2340; border: 1px solid #1d4ed8; color: #93c5fd; }
+    .book-chip .book-odds { color: #cbd5e1; margin-left: 4px; }
+    .context-row { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+    .context-chip { background: #1a1f2e; border-radius: 6px; padding: 5px 10px; font-size: 11px; color: #64748b; display: flex; align-items: center; gap: 5px; }
+    .context-chip span { color: #94a3b8; }
+    .chevron { display: inline-block; margin-left: 6px; font-size: 10px; color: #475569; transition: transform 0.2s; }
+    .chevron.open { transform: rotate(180deg); }
+    .parlay-section { margin: 8px 12px 0; background: #0c1628; border: 1px solid #1d4ed8; border-radius: 14px; padding: 16px; }
+    .parlay-title { font-size: 11px; font-weight: 700; color: #3b82f6; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+    .parlay-card { background: #0f1f3d; border-radius: 10px; padding: 12px; margin-bottom: 8px; }
+    .parlay-card:last-child { margin-bottom: 0; }
+    .parlay-legs { font-size: 13px; font-weight: 600; color: #e2e8f0; line-height: 1.6; }
+    .parlay-books { font-size: 11px; color: #64748b; margin-top: 4px; }
+    .no-report { margin: 40px 16px; background: #1a1f2e; border-radius: 14px; padding: 30px; text-align: center; }
+    .no-report h2 { color: #e2e8f0; font-size: 18px; margin-bottom: 8px; }
+    .no-report p { color: #64748b; font-size: 14px; line-height: 1.6; }
+    .no-report code { background: #0f1117; color: #3b82f6; padding: 2px 6px; border-radius: 4px; font-size: 13px; }
+  </style>
+</head>
+<body>
+
+{# ── MACRO: render a single pitcher card ── #}
+{% macro render_card(play, tier) %}
+{% set card_id = (play.pitcher_name ~ play.opp_team) | replace(' ', '-') | lower %}
+<div class="card card-{{ tier }}">
+  <div class="card-header" onclick="toggleCard('{{ card_id }}')">
+    <div class="card-top">
+      <div>
+        <div class="pitcher-name">
+          {{ play.pitcher_name }}
+          <span class="chevron" id="chevron-{{ card_id }}">▾</span>
+        </div>
+        <div class="matchup-line">vs {{ play.opp_team }} · {{ play.venue }}</div>
+      </div>
+      <div style="text-align:right">
+        {% if play.edge and play.edge != 0 %}
+          <div class="edge-badge edge-{{ tier }}">+{{ "%.1f"|format(play.edge) }}pts</div>
+        {% endif %}
+        <div style="margin-top:4px">
+          {% if play.play and play.line and play.line > 0 %}
+            <span class="play-tag tag-{{ play.play|lower }}">{{ play.play }} {{ play.line }}</span>
+          {% else %}
+            <span class="play-tag tag-na">No Line</span>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-chip">Proj: <strong class="proj-{{ tier }}">{{ play.projected_ks }}</strong></div>
+      {% if play.hit_rate and play.line and play.line > 0 %}
+        <div class="stat-chip">Hit Rate: <strong>{{ play.hit_rate | int }}%</strong></div>
+      {% endif %}
+      {% if play.swstr_pct %}
+        <div class="stat-chip">SwStr: <strong>{{ "%.1f"|format(play.swstr_pct * 100) }}%</strong></div>
+      {% endif %}
+      {% if play.opp_k_pct %}
+        <div class="stat-chip">OppK: <strong>{{ "%.1f"|format(play.opp_k_pct * 100) }}%</strong></div>
+      {% endif %}
+    </div>
+
+    {% if play.k_distribution %}
+    <div class="k-dist">
+      <div class="k-dist-title">K Probability Distribution</div>
+      <div class="k-bars">
+        {% set show_ks = ['4','5','6','7','8','9','10+'] %}
+        {% set ns = namespace(max_pct=0.01) %}
+        {% for k in show_ks %}
+          {% set pct = play.k_distribution.get(k, 0) %}
+          {% if pct > ns.max_pct %}{% set ns.max_pct = pct %}{% endif %}
+        {% endfor %}
+        {% for k in show_ks %}
+          {% set pct = play.k_distribution.get(k, 0) %}
+          {% set height = ((pct / ns.max_pct) * 44) | int %}
+          {% if play.line and play.line > 0 and k != '10+' %}
+            {% if play.play == 'OVER' and k|int > play.line %}
+              {% set bar_color = '#166534' %}
+            {% elif play.play == 'UNDER' and k|int < play.line %}
+              {% set bar_color = '#7f1d1d' %}
+            {% else %}
+              {% set bar_color = '#1e3a5f' %}
+            {% endif %}
+          {% elif k == '10+' and play.play == 'OVER' %}
+            {% set bar_color = '#166534' %}
+          {% else %}
+            {% set bar_color = '#1e3a5f' %}
+          {% endif %}
+          <div class="k-bar-group">
+            <div class="k-bar-pct">{{ (pct * 100) | int }}%</div>
+            <div class="k-bar" style="height:{{ height }}px;background:{{ bar_color }};"></div>
+            <div class="k-bar-label">{{ k }}</div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="card-details" id="details-{{ card_id }}">
+    <div class="detail-grid">
+      <div class="detail-item">
+        <div class="detail-label">CSW%</div>
+        <div class="detail-value">{{ "%.1f"|format(play.csw_pct * 100) }}%</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">K%</div>
+        <div class="detail-value">{{ "%.1f"|format(play.k_pct * 100) }}%</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">Chase Rate</div>
+        <div class="detail-value">{{ "%.1f"|format(play.opp_chase * 100) }}%</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">Days Rest</div>
+        <div class="detail-value">{{ play.days_rest }}</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">Rolling K (3)</div>
+        <div class="detail-value">{{ play.rolling_k_3 }}</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">Rolling K (5)</div>
+        <div class="detail-value">{{ play.rolling_k_5 }}</div>
+      </div>
+    </div>
+
+    {% if play.umpire and play.umpire.name and play.umpire.name != 'Unknown' %}
+    <div class="context-row">
+      <div class="context-chip">⚖️ <span>{{ play.umpire.name }}</span> — {{ play.umpire.zone_tendency }}</div>
+    </div>
+    {% endif %}
+
+    {% if play.weather %}
+    <div class="context-row">
+      {% if play.weather.indoor %}
+        <div class="context-chip">🏟️ <span>Dome</span></div>
+      {% else %}
+        <div class="context-chip">🌡️ <span>{{ play.weather.temp_f }}°F</span></div>
+        <div class="context-chip">💨 <span>{{ play.weather.wind_mph }} mph</span></div>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    {% set odds_list = play.over_odds if play.play == 'OVER' else play.under_odds %}
+    {% if odds_list %}
+    <div class="books-section">
+      <div class="books-label">{{ play.play }} Lines</div>
+      <div class="books-list">
+        {% for book in odds_list[:5] %}
+        <div class="book-chip {% if loop.first %}best{% endif %}">
+          <span class="book-name">{{ book.book }}</span>
+          <span class="book-odds">{% if book.odds > 0 %}+{{ book.odds }}{% else %}{{ book.odds }}{% endif %}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endmacro %}
+
+{# ── PAGE CONTENT ── #}
+
+<div class="header">
+  <div class="header-top">
+    <div class="logo">MLB<span>Sharp</span></div>
+    <div class="date-badge">{{ data.date }}</div>
+  </div>
+  {% if data.generated_at %}
+  <div class="generated">Updated {{ data.generated_at }}</div>
+  {% endif %}
+</div>
+
+{% set total = data.strong|length + data.moderate|length + data.lean|length + data.no_value|length %}
+
+{% if total == 0 %}
+<div class="no-report">
+  <h2>No report yet today</h2>
+  <p>Run <code>python3 run.py</code> on your Mac to generate today's picks.</p>
+</div>
+
+{% else %}
+
+<div class="summary">
+  <div class="summary-pill pill-strong"><div class="pill-dot dot-strong"></div>{{ data.strong|length }} Strong</div>
+  <div class="summary-pill pill-moderate"><div class="pill-dot dot-moderate"></div>{{ data.moderate|length }} Moderate</div>
+  <div class="summary-pill pill-lean"><div class="pill-dot dot-lean"></div>{{ data.lean|length }} Lean</div>
+  <div class="summary-pill pill-pass"><div class="pill-dot dot-pass"></div>{{ data.no_value|length }} Pass</div>
+</div>
+
+{% if data.strong %}
+<div class="section-header">
+  <span class="section-label label-strong">Strong Plays</span>
+  <div class="section-line"></div>
+</div>
+{% for play in data.strong %}{{ render_card(play, 'strong') }}{% endfor %}
+{% endif %}
+
+{% if data.moderate %}
+<div class="section-header">
+  <span class="section-label label-moderate">Moderate Plays</span>
+  <div class="section-line"></div>
+</div>
+{% for play in data.moderate %}{{ render_card(play, 'moderate') }}{% endfor %}
+{% endif %}
+
+{% if data.lean %}
+<div class="section-header">
+  <span class="section-label label-lean">Lean / Monitor</span>
+  <div class="section-line"></div>
+</div>
+{% for play in data.lean %}{{ render_card(play, 'lean') }}{% endfor %}
+{% endif %}
+
+{% if data.parlays %}
+<div class="section-header">
+  <span class="section-label" style="color:#3b82f6">Parlay Suggestions</span>
+  <div class="section-line"></div>
+</div>
+<div class="parlay-section">
+  <div class="parlay-title">Best Combinations</div>
+  {% for parlay in data.parlays %}
+  <div class="parlay-card">
+    <div class="parlay-legs">{{ parlay.legs }}</div>
+    {% if parlay.books %}<div class="parlay-books">Best books: {{ parlay.books }}</div>{% endif %}
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+
+{% if data.no_value %}
+<div class="section-header">
+  <span class="section-label label-pass">No Value — Pass</span>
+  <div class="section-line"></div>
+</div>
+{% for play in data.no_value %}{{ render_card(play, 'pass') }}{% endfor %}
+{% endif %}
+
+{% endif %}
+
+<script>
+  function toggleCard(id) {
+    const details = document.getElementById('details-' + id);
+    const chevron = document.getElementById('chevron-' + id);
+    if (details) { details.classList.toggle('open'); }
+    if (chevron) { chevron.classList.toggle('open'); }
+  }
+</script>
+</body>
+</html>

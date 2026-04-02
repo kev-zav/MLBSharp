@@ -220,6 +220,77 @@ def main():
         json.dump(existing, f, indent=2)
     print(f"Projections cached to projections_cache.json ({len(cache_data)} entries)")
 
+    # Save dashboard data for the web app
+    from config import EDGE_STRONG, EDGE_MODERATE, EDGE_LEAN
+    from datetime import datetime
+
+    def make_play(s):
+        return {
+            "pitcher_name": s.get("pitcher_name", ""),
+            "pitcher_team": s.get("pitcher_team", ""),
+            "opp_team": s.get("opp_team", ""),
+            "venue": s.get("venue", ""),
+            "projected_ks": s.get("projected_ks", 0),
+            "line": s.get("line", 0),
+            "play": s.get("play", ""),
+            "edge": s.get("edge", 0),
+            "hit_rate": s.get("hit_rate", 0),
+            "swstr_pct": s.get("swstr_pct", 0),
+            "csw_pct": s.get("csw_pct", 0),
+            "k_pct": s.get("k_pct", 0),
+            "opp_k_pct": s.get("opp_k_pct", 0),
+            "opp_chase": s.get("opp_chase", 0),
+            "days_rest": s.get("days_rest", 5),
+            "rolling_k_3": s.get("rolling_k_3", 0),
+            "rolling_k_5": s.get("rolling_k_5", 0),
+            "umpire": s.get("umpire", {}),
+            "weather": s.get("weather", {}),
+            "over_odds": s.get("over_odds", []),
+            "under_odds": s.get("under_odds", []),
+            "best_line": s.get("best_line"),
+            "k_distribution": {
+                str(k): v for k, v in s.get("k_distribution", {}).items()
+            },
+        }
+
+    sorted_scored = sorted(scored, key=lambda x: x.get("edge", 0), reverse=True)
+    strong = [make_play(s) for s in sorted_scored if s.get("edge", 0) >= EDGE_STRONG]
+    moderate = [make_play(s) for s in sorted_scored if EDGE_MODERATE <= s.get("edge", 0) < EDGE_STRONG]
+    lean = [make_play(s) for s in sorted_scored if EDGE_LEAN <= s.get("edge", 0) < EDGE_MODERATE]
+    no_value = [make_play(s) for s in sorted_scored if s.get("edge", 0) < EDGE_LEAN]
+
+    # Build parlay suggestions
+    candidates = strong + moderate
+    parlays = []
+    if len(candidates) >= 2:
+        t = candidates
+        legs2 = f"{t[0]['pitcher_name']} {t[0]['play']} {t[0]['line']} + {t[1]['pitcher_name']} {t[1]['play']} {t[1]['line']}"
+        books2 = ", ".join(filter(None, [
+            t[0].get("best_line", {}).get("book") if t[0].get("best_line") else None,
+            t[1].get("best_line", {}).get("book") if t[1].get("best_line") else None,
+        ]))
+        parlays.append({"legs": legs2, "books": books2})
+    if len(candidates) >= 3:
+        t = candidates
+        legs3 = " + ".join(f"{p['pitcher_name']} {p['play']} {p['line']}" for p in t[:3])
+        parlays.append({"legs": legs3, "books": ""})
+
+    dashboard = {
+        "date": datetime.strptime(game_date, "%Y-%m-%d").strftime("%B %d, %Y"),
+        "generated_at": datetime.now().strftime("%I:%M %p"),
+        "strong": strong,
+        "moderate": moderate,
+        "lean": lean,
+        "no_value": no_value,
+        "parlays": parlays,
+        "total_plays": len(scored),
+    }
+
+    dashboard_path = os.path.join(os.path.dirname(__file__) or ".", "dashboard_data.json")
+    with open(dashboard_path, "w") as f:
+        json.dump(dashboard, f, indent=2)
+    print(f"Dashboard data saved to dashboard_data.json")
+
 
 if __name__ == "__main__":
     main()
