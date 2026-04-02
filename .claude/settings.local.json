@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install:*)",
+      "Bash(pip3 install:*)",
+      "Bash(python3:*)",
+      "Bash(brew install:*)",
+      "Read(//opt/homebrew/Cellar/libomp/22.1.2/**)",
+      "Bash(ln -sf /opt/homebrew/Cellar/libomp/22.1.2 /opt/homebrew/opt/libomp)",
+      "Read(//opt/homebrew/Cellar/libomp/22.1.2/lib/**)",
+      "Bash(ls /Users/kevinzavala/MLBSharp/report_*.txt)",
+      "Bash(rm -f /Users/kevinzavala/MLBSharp/report_2025-*.txt)",
+      "Bash(ls /Users/kevinzavala/MLBSharp/*.txt)"
+    ]
+  }
+}
