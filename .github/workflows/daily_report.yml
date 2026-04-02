@@ -1,0 +1,36 @@
+name: Daily MLB Sharp Report
+
+on:
+  schedule:
+    - cron: '30 12 * * *'  # 7:30 AM CT (12:30 UTC)
+  workflow_dispatch:        # allow manual trigger from GitHub UI
+
+jobs:
+  run-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run MLBSharp
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
+        run: python run.py
+
+      - name: Push dashboard data
+        run: |
+          git config user.name "MLBSharp Bot"
+          git config user.email "mlbsharp@users.noreply.github.com"
+          git add dashboard_data.json
+          git diff --staged --quiet || git commit -m "Auto dashboard update $(date +'%Y-%m-%d')"
+          git push
