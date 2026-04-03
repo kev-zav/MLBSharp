@@ -413,8 +413,8 @@
           <span class="rung-odds-val" style="color:var(--text-muted)">—</span>
           <span class="rung-book" style="color:var(--text-muted)">no line</span>
         {% endif %}
-        <span class="rung-fair {% if rung.fair_value_over > 0 %}rung-odds-pos{% else %}rung-odds-neg{% endif %}">
-          {% if rung.fair_value_over > 0 %}+{{ rung.fair_value_over }}{% else %}{{ rung.fair_value_over }}{% endif %}
+        <span class="rung-fair {% if (rung.fair_value_over | default(0)) > 0 %}rung-odds-pos{% else %}rung-odds-neg{% endif %}">
+          {% if (rung.fair_value_over | default(0)) > 0 %}+{{ rung.fair_value_over | default(0) }}{% else %}{{ rung.fair_value_over | default(0) }}{% endif %}
         </span>
         {% if rung.over_edge == ns.max_edge and rung.over_edge > 0 %}<span class="rung-value">value</span>{% endif %}
       </div>
