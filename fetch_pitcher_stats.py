@@ -224,6 +224,35 @@ def get_days_rest(game_logs: list[dict]) -> int:
     return (date.today() - last_date).days
 
 
+# Reasonable bounds for pitcher stats — anything outside these is a data error
+_STAT_BOUNDS = {
+    "k_pct":    (0.05, 0.35),   # best in MLB history ~35%
+    "xk_pct":   (0.05, 0.35),
+    "swstr_pct": (0.03, 0.20),  # elite is ~17-18%
+    "csw_pct":  (0.10, 0.40),
+    "rolling_k_3": (0.0, 13.0), # no starter averages 13+ Ks over 3 starts
+    "rolling_k_5": (0.0, 13.0),
+}
+
+
+def _sanitize(stats: dict) -> dict:
+    """Clamp stats to reasonable bounds and print a warning if something is off."""
+    flagged = []
+    for key, (lo, hi) in _STAT_BOUNDS.items():
+        val = stats.get(key)
+        if val is None or val == 0:
+            continue
+        if val > hi:
+            flagged.append(f"{key} {val:.3f} → capped {hi}")
+            stats[key] = hi
+        elif val < lo:
+            flagged.append(f"{key} {val:.3f} → floored {lo}")
+            stats[key] = lo
+    if flagged:
+        print(f"  [SANITY] {stats.get('pitcher_name','?')}: {' | '.join(flagged)}")
+    return stats
+
+
 def fetch_pitcher_stats(pitcher_id: int, pitcher_name: str) -> dict:
     """
     Main entry point. Returns a complete pitcher stats dict.
@@ -234,7 +263,7 @@ def fetch_pitcher_stats(pitcher_id: int, pitcher_name: str) -> dict:
 
     last_outing_pitches = game_logs[-1]["pitches"] if game_logs else 0
 
-    return {
+    stats = {
         "pitcher_id": pitcher_id,
         "pitcher_name": pitcher_name,
         "swstr_pct": calc_swstr_pct(df),
@@ -252,6 +281,8 @@ def fetch_pitcher_stats(pitcher_id: int, pitcher_name: str) -> dict:
         "pitcher_hand": get_pitcher_hand(df),
         "game_logs": game_logs,
     }
+
+    return _sanitize(stats)
 
 
 if __name__ == "__main__":

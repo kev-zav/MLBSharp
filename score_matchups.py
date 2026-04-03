@@ -139,6 +139,9 @@ def project_strikeouts(
     else:
         final_ks = adjusted_ks
 
+    # Hard cap — no starter should project above 14 Ks or below 0.5
+    final_ks = max(0.5, min(14.0, final_ks))
+
     return {
         "projected_ks": round(final_ks, 1),
         "xk_rate": round(xk_rate, 4),
