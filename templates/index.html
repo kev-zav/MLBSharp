@@ -259,8 +259,26 @@
   'TOR': '#134A8E', 'WSH': '#AB0003'
 } %}
 
-{% macro grade_class(edge) %}{% if edge >= 20 %}grade-aplus{% elif edge >= 15 %}grade-a{% elif edge >= 10 %}grade-aminus{% elif edge >= 8 %}grade-bplus{% elif edge >= 4 %}grade-b{% elif edge >= 1 %}grade-c{% else %}grade-d{% endif %}{% endmacro %}
-{% macro grade_label(edge) %}{% if edge >= 20 %}A+{% elif edge >= 15 %}A{% elif edge >= 10 %}A-{% elif edge >= 8 %}B+{% elif edge >= 4 %}B{% elif edge >= 1 %}C{% else %}D{% endif %}{% endmacro %}
+{% macro grade_class(edge, hr) %}
+  {%- set hr = hr | float -%}
+  {%- if edge >= 15 and hr >= 85 %}grade-aplus
+  {%- elif edge >= 10 and hr >= 80 %}grade-a
+  {%- elif edge >= 7 and hr >= 72 %}grade-aminus
+  {%- elif edge >= 5 and hr >= 65 %}grade-bplus
+  {%- elif edge >= 3 and hr >= 60 %}grade-b
+  {%- elif edge >= 1 and hr >= 52 %}grade-c
+  {%- else %}grade-d{%- endif %}
+{%- endmacro %}
+{% macro grade_label(edge, hr) %}
+  {%- set hr = hr | float -%}
+  {%- if edge >= 15 and hr >= 85 %}A+
+  {%- elif edge >= 10 and hr >= 80 %}A
+  {%- elif edge >= 7 and hr >= 72 %}A-
+  {%- elif edge >= 5 and hr >= 65 %}B+
+  {%- elif edge >= 3 and hr >= 60 %}B
+  {%- elif edge >= 1 and hr >= 52 %}C
+  {%- else %}D{%- endif %}
+{%- endmacro %}
 
 {% macro render_card(play) %}
 {% set card_id = (play.pitcher_name ~ play.opp_team) | replace(' ', '-') | lower %}
@@ -286,7 +304,7 @@
         <div class="matchup-sub">vs {{ play.opp_team }} · {{ play.venue }}</div>
       </div>
       <div class="grade-wrap">
-        <div class="grade-badge {{ grade_class(play.edge) }}">{{ grade_label(play.edge) }}</div>
+        <div class="grade-badge {{ grade_class(play.edge, play.hit_rate or 0) }}">{{ grade_label(play.edge, play.hit_rate or 0) }}</div>
         <div class="grade-proj">{{ play.projected_ks }}K proj</div>
       </div>
     </div>
