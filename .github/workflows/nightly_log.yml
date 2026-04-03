@@ -1,0 +1,36 @@
+name: Nightly Results Logger
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # 1:00 AM CT (6:00 UTC)
+  workflow_dispatch:      # allow manual trigger from GitHub UI
+
+jobs:
+  log-and-tune:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Log yesterday's results
+        run: python log_results.py
+
+      - name: Run model tuner
+        run: python tune_model.py > tune_report.txt 2>&1 || true
+
+      - name: Push results
+        run: |
+          git config user.name "MLBSharp Bot"
+          git config user.email "mlbsharp@users.noreply.github.com"
+          git add results.csv tune_report.txt
+          git diff --staged --quiet || git commit -m "Auto results log $(date +'%Y-%m-%d')"
+          git push

@@ -7,8 +7,6 @@ __pycache__/
 *.pyo
 
 # Data files — local only
-projections_cache.json
-results.csv
 model.pkl
 report_*.txt
 
