@@ -153,6 +153,12 @@ def fetch_strikeout_odds() -> tuple[list[dict], str | None]:
     return all_props, earliest_date
 
 
+def _normalize(name: str) -> str:
+    """Strip accents and lowercase for fuzzy name matching."""
+    import unicodedata
+    return unicodedata.normalize("NFD", name).encode("ascii", "ignore").decode("ascii").lower()
+
+
 def get_pitcher_odds(all_props: list[dict], pitcher_name: str, team_abbr: str = "") -> dict:
     """
     Find the best odds for a specific pitcher's strikeout props.
@@ -166,13 +172,15 @@ def get_pitcher_odds(all_props: list[dict], pitcher_name: str, team_abbr: str = 
     if not all_props:
         return empty
 
-    # Try exact name match first
-    matching = [p for p in all_props if p["pitcher_name"].lower() == pitcher_name.lower()]
+    norm_name = _normalize(pitcher_name)
 
-    # Fall back to last name match
+    # Try exact name match first (accent-normalized)
+    matching = [p for p in all_props if _normalize(p["pitcher_name"]) == norm_name]
+
+    # Fall back to last name match (accent-normalized)
     if not matching:
-        last_name = pitcher_name.strip().split()[-1].lower()
-        matching = [p for p in all_props if last_name in p["pitcher_name"].lower()]
+        last_name = norm_name.strip().split()[-1]
+        matching = [p for p in all_props if last_name in _normalize(p["pitcher_name"])]
 
     # If multiple matches, filter by team
     if len(matching) > 2 and team_abbr:

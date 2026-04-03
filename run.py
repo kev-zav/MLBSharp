@@ -20,6 +20,8 @@ _XGB_FEATURES = [
     "swstr_pct", "csw_pct", "k_pct", "opp_k_pct_vs_hand", "o_swing_pct",
     "park_factor", "ump_adjustment", "weather_temp", "weather_wind",
     "days_rest", "pitch_count_last_outing", "rolling_k_avg_3", "rolling_k_avg_5",
+    "projected_ks_manual",   # manual model output as a feature
+    "pitch_mix_adj",         # pitch type matchup multiplier
 ]
 
 
@@ -41,7 +43,7 @@ def _load_xgb_model():
         return None, None
 
 
-def _xgb_predict(model, features, p_stats, l_stats, park_factor, weather, umpire):
+def _xgb_predict(model, features, p_stats, l_stats, park_factor, weather, umpire, manual_proj: float = 0.0, pitch_mix_adj: float = 1.0):
     """Use XGBoost model to predict Ks. Returns float or None if inputs incomplete."""
     import numpy as np
     row = {
@@ -58,6 +60,8 @@ def _xgb_predict(model, features, p_stats, l_stats, park_factor, weather, umpire
         "pitch_count_last_outing": p_stats.get("last_outing_pitches", 0),
         "rolling_k_avg_3": p_stats.get("rolling_k_3", 0),
         "rolling_k_avg_5": p_stats.get("rolling_k_5", 0),
+        "projected_ks_manual": manual_proj,
+        "pitch_mix_adj": pitch_mix_adj,
     }
     X = np.array([[row[f] for f in features]])
     pred = float(model.predict(X)[0])
@@ -199,11 +203,20 @@ def main():
                 print(f" [scoring error: {e}]")
                 continue
 
-            # Override projected_ks with XGBoost if model is loaded
+            result["pitch_mix_adj"] = result.get("pitch_mix_adj", 1.0)
+
+            # Save manual projection before XGB may override it
+            result["projected_ks_manual"] = result.get("projected_ks", 0)
+
+            # Stack XGBoost on top of manual model (manual proj is a feature)
             if xgb_model is not None:
+                manual_proj = result.get("projected_ks", 0)
+                pitch_mix_adj = result.get("pitch_mix_adj", 1.0)
                 xgb_proj = _xgb_predict(
                     xgb_model, xgb_features, p_stats, l_stats,
                     PARK_FACTOR_DEFAULT, weather, umpire,
+                    manual_proj=manual_proj,
+                    pitch_mix_adj=pitch_mix_adj,
                 )
                 if xgb_proj is not None:
                     result["projected_ks"] = xgb_proj
@@ -348,6 +361,8 @@ def main():
             "last_outing_pitches": s.get("last_outing_pitches", 0),
             "rolling_k_3": s.get("rolling_k_3", 0),
             "rolling_k_5": s.get("rolling_k_5", 0),
+            "pitch_mix_adj": s.get("pitch_mix_adj", 1.0),
+            "projected_ks_manual": s.get("projected_ks_manual", s.get("projected_ks", 0)),
         })
 
     cache_path = os.path.join(os.path.dirname(__file__) or ".", "projections_cache.json")

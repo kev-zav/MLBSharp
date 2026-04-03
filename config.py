@@ -24,6 +24,7 @@ SEASON = date.today().year
 # --- Projection Settings ---
 LEAGUE_AVG_K_PCT = 0.224          # ~22.4% league average K%
 LEAGUE_AVG_SWSTR = 0.115          # ~11.5% league average SwStr%
+LEAGUE_AVG_CSW = 0.270            # ~27.0% league average CSW%
 DEFAULT_BATTERS_FACED = 25        # ~6 IP estimate
 DEFAULT_PITCH_LIMIT = 95
 

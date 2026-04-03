@@ -26,6 +26,8 @@ _DEFAULTS = {
     "team_k_pct_last10": LEAGUE_AVG_K_PCT,
     "avg_batter_k_pct": LEAGUE_AVG_K_PCT,
     "batter_k_pcts": [],
+    "bb_pct": 0.085,
+    "chase_by_pitch_type": {},
 }
 
 
@@ -82,8 +84,9 @@ def _build_team_stats(df: pd.DataFrame) -> dict:
 
     results = {}
     pitch_type_whiff = {}  # keyed by (team_abbr, pitch_type)
+    pitch_type_chase = {}  # keyed by (team_abbr, pitch_type)
 
-    # Build team whiff rate by pitch type
+    # Build team whiff rate and chase rate by pitch type
     for (bat_team, pitch_type), pt_grp in df.groupby(["batting_team", "pitch_type"]):
         if not pitch_type or str(pitch_type) == "nan":
             continue
@@ -97,6 +100,18 @@ def _build_team_stats(df: pd.DataFrame) -> dict:
         pitch_type_whiff[(str(bat_team), str(pitch_type))] = round(
             reg_w * raw_whiff + (1 - reg_w) * LEAGUE_AVG_SWSTR, 4
         )
+
+        # Chase rate by pitch type (swings on out-of-zone pitches / total out-of-zone pitches)
+        pt_out_zone = pt_grp[pt_grp["zone"].isin(out_zone)]
+        pt_out_zone_swings = pt_out_zone["description"].isin(swing_desc).sum()
+        pt_out_zone_pitches = len(pt_out_zone)
+        if pt_out_zone_pitches > 0:
+            raw_chase = pt_out_zone_swings / pt_out_zone_pitches
+            swings = pt_out_zone_swings
+            chase_reg_w = swings / (swings + 50)
+            pitch_type_chase[(str(bat_team), str(pitch_type))] = round(
+                chase_reg_w * raw_chase + (1 - chase_reg_w) * 0.30, 4
+            )
 
     for (bat_team, p_hand), grp in df.groupby(["batting_team", "p_throws"]):
         # Plate appearances = rows where events is populated
@@ -134,9 +149,20 @@ def _build_team_stats(df: pd.DataFrame) -> dict:
         reg_chase = w * chase_pct + (1 - w) * 0.30
         reg_z_contact = w * z_contact_pct + (1 - w) * 0.82
 
+        # BB% (walk rate) — regress toward league average of 8.5%
+        bb_count = len(pa[pa["events"] == "walk"])
+        bb_pct = bb_count / pa_count
+        reg_bb_pct = w * bb_pct + (1 - w) * 0.085
+
         # Collect pitch type whiff rates for this team
         team_pt_whiff = {
             pt: whiff for (team, pt), whiff in pitch_type_whiff.items()
+            if team == str(bat_team)
+        }
+
+        # Collect pitch type chase rates for this team
+        team_pt_chase = {
+            pt: chase for (team, pt), chase in pitch_type_chase.items()
             if team == str(bat_team)
         }
 
@@ -148,6 +174,8 @@ def _build_team_stats(df: pd.DataFrame) -> dict:
             "z_contact_pct": round(reg_z_contact, 4),
             "pa_count": pa_count,
             "whiff_by_pitch_type": team_pt_whiff,
+            "bb_pct": round(reg_bb_pct, 4),
+            "chase_by_pitch_type": team_pt_chase,
         }
 
     return results
@@ -190,6 +218,8 @@ def fetch_lineup_stats(team_abbr: str, pitcher_hand: str = "R") -> dict:
         "batter_k_pcts": [],
         "pitcher_hand": pitcher_hand,
         "whiff_by_pitch_type": result.get("whiff_by_pitch_type", {}),
+        "bb_pct": result.get("bb_pct", 0.085),
+        "chase_by_pitch_type": result.get("chase_by_pitch_type", {}),
     }
 
 

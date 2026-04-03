@@ -47,6 +47,8 @@ CSV_COLUMNS = [
     "pitch_count_last_outing",
     "rolling_k_avg_3",
     "rolling_k_avg_5",
+    "pitch_mix_adj",
+    "projected_ks_manual",
 ]
 
 
@@ -270,6 +272,8 @@ def log_results(game_date: str):
                 proj.get("last_outing_pitches", "") if proj else "",
                 proj.get("rolling_k_3", "") if proj else "",
                 proj.get("rolling_k_5", "") if proj else "",
+                proj.get("pitch_mix_adj", "") if proj else "",
+                proj.get("projected_ks_manual", "") if proj else "",
             ]
 
             writer.writerow(row)

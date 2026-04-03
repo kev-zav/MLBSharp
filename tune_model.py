@@ -39,6 +39,8 @@ FACTOR_COLS = [
     "pitch_count_last_outing",
     "rolling_k_avg_3",
     "rolling_k_avg_5",
+    "projected_ks_manual",
+    "pitch_mix_adj",
 ]
 
 # Current model weights (from score_matchups.py) for reference

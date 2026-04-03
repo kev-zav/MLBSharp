@@ -125,6 +125,7 @@ def calc_lineup_adjustment(lineup_stats: dict) -> float:
     chase = lineup_stats.get("o_swing_pct", 0.30)
     swstr_against = lineup_stats.get("swstr_pct_against", LEAGUE_AVG_SWSTR)
     z_contact = lineup_stats.get("z_contact_pct", 0.82)
+    bb_pct = lineup_stats.get("bb_pct", 0.085)
 
     # K% differential vs league average
     k_diff = team_k - LEAGUE_AVG_K_PCT
@@ -138,9 +139,12 @@ def calc_lineup_adjustment(lineup_stats: dict) -> float:
     # Z-Contact% — lower = worse contact in zone = more Ks
     contact_diff = -(z_contact - 0.82)  # flip sign: lower contact = positive adj
 
+    # BB% — higher walk rate = more pitches per PA = slightly more K opportunities
+    bb_diff = bb_pct - 0.085  # league avg ~8.5%
+
     # Weighted combination → multiplier
     # Each differential is roughly % points, combine them
-    raw_adj = (k_diff * 0.40) + (chase_diff * 0.25) + (swstr_diff * 0.20) + (contact_diff * 0.15)
+    raw_adj = (k_diff * 0.35) + (chase_diff * 0.25) + (swstr_diff * 0.20) + (contact_diff * 0.10) + (bb_diff * 0.10)
     multiplier = 1.0 + (raw_adj / LEAGUE_AVG_K_PCT)  # normalize to K% scale
 
     return max(0.80, min(1.25, multiplier))  # clamp
@@ -187,6 +191,7 @@ def project_strikeouts(
 
     return {
         "projected_ks": round(final_ks, 1),
+        "pitch_mix_adj": round(pitch_mix_adj, 4),
         "xk_rate": round(xk_rate, 4),
         "batters_faced": bf,
         "lineup_adj": round(lineup_adj, 3),

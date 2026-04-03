@@ -180,20 +180,22 @@
     .value-divider { width: 1px; height: 10px; background: var(--border); }
     .value-fair { font-size: 11px; color: var(--text-muted); }
     .value-hr { font-size: 11px; font-weight: 700; color: var(--text-sec); }
-    .grade-proj { font-size: 10px; color: var(--text-muted); margin-top: 3px; }
+    .grade-proj { font-size: 13px; font-weight: 800; color: var(--text); margin-top: 5px; }
 
-    /* ── GRADE BADGE (small, kept for color coding) ── */
-    .grade-dot {
-      display: inline-block; width: 8px; height: 8px;
-      border-radius: 50%; margin-left: 4px; vertical-align: middle;
+    /* ── GRADE BADGE ── */
+    .grade-badge {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-width: 38px; height: 26px; border-radius: 6px;
+      font-size: 13px; font-weight: 800; padding: 0 6px; letter-spacing: 0.3px;
     }
-    .grade-aplus  { background: #10b981; }
-    .grade-a      { background: #34d399; }
-    .grade-aminus { background: #fbbf24; }
-    .grade-bplus  { background: var(--amber); }
-    .grade-b      { background: #a78bfa; }
-    .grade-c      { background: var(--text-muted); }
-    .grade-d      { background: var(--border); }
+    .grade-aplus  { background: #052e16; color: #10b981; border: 1px solid #10b981; }
+    .grade-a      { background: #052e16; color: #34d399; border: 1px solid #34d399; }
+    .grade-aminus { background: #1f1500; color: #fbbf24; border: 1px solid #fbbf24; }
+    .grade-bplus  { background: #1f1500; color: #f59e0b; border: 1px solid #f59e0b; }
+    .grade-b      { background: #1a0e2e; color: #a78bfa; border: 1px solid #a78bfa; }
+    .grade-c      { background: #161b27; color: #8b949e; border: 1px solid #484f58; }
+    .grade-d      { background: #161b27; color: #484f58; border: 1px solid #30363d; }
+    .grade-f      { background: #300a0a; color: #ef4444; border: 1px solid #ef4444; }
 
     /* ── STATS ROW ── */
     .stats-row { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 10px; }
@@ -304,7 +306,8 @@
   {%- elif edge >= 5 and hr >= 65 %}grade-bplus
   {%- elif edge >= 3 and hr >= 60 %}grade-b
   {%- elif edge >= 1 and hr >= 52 %}grade-c
-  {%- else %}grade-d{%- endif %}
+  {%- elif edge > 0 %}grade-d
+  {%- else %}grade-f{%- endif %}
 {%- endmacro %}
 {% macro grade_label(edge, hr) %}
   {%- set hr = hr | float -%}
@@ -314,7 +317,8 @@
   {%- elif edge >= 5 and hr >= 65 %}B+
   {%- elif edge >= 3 and hr >= 60 %}B
   {%- elif edge >= 1 and hr >= 52 %}C
-  {%- else %}D{%- endif %}
+  {%- elif edge > 0 %}D
+  {%- else %}F{%- endif %}
 {%- endmacro %}
 
 {% macro render_card(play) %}
@@ -341,13 +345,10 @@
         <div class="matchup-sub">vs {{ play.opp_team }} · {{ play.venue }}</div>
       </div>
       <div class="value-block">
+        <span class="grade-badge {{ grade_class(play.edge, play.hit_rate or 0) }}">{{ grade_label(play.edge, play.hit_rate or 0) }}</span>
         {% if play.play and play.line and play.line > 0 %}
-          <div class="value-prop value-prop-{{ play.play | lower }}">
-            {{ play.play }} {{ play.line }}
-            <span class="grade-dot {{ grade_class(play.edge, play.hit_rate or 0) }}"></span>
-          </div>
           {% if play.best_line %}
-          <div class="value-row">
+          <div class="value-row" style="margin-top:5px">
             <span class="value-label">Book</span>
             <span class="value-odds {% if play.best_line.odds > 0 %}value-odds-pos{% else %}value-odds-neg{% endif %}">
               {% if play.best_line.odds > 0 %}+{{ play.best_line.odds }}{% else %}{{ play.best_line.odds }}{% endif %}
@@ -366,10 +367,8 @@
             <span class="value-label">Hit</span>
             <span class="value-hr">{{ play.hit_rate | int }}%</span>
           </div>
-        {% else %}
-          <div class="value-prop value-prop-na">No Line</div>
         {% endif %}
-        <div class="grade-proj">{{ play.projected_ks }}K proj</div>
+        <div class="grade-proj"><strong>{{ play.projected_ks }}K</strong> proj</div>
       </div>
     </div>
 

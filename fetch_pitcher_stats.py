@@ -19,12 +19,30 @@ from pybaseball import (
     statcast_pitcher,
     pitching_stats,
 )
-from config import SEASON, LEAGUE_AVG_SWSTR, LEAGUE_AVG_K_PCT
+from config import SEASON, LEAGUE_AVG_SWSTR, LEAGUE_AVG_K_PCT, LEAGUE_AVG_CSW
 
 warnings.filterwarnings("ignore")
 
 # In-memory cache for Statcast data
 _cache: dict[str, any] = {}
+
+# Module-level FanGraphs DataFrame cache — fetched once per process, reused for all pitchers
+_fg_df: pd.DataFrame | None = None
+
+
+def _get_fg_df() -> pd.DataFrame:
+    """Fetch FanGraphs pitching stats once per run and cache in memory."""
+    global _fg_df
+    if _fg_df is not None:
+        return _fg_df
+    try:
+        print("  [FG] Pulling FanGraphs pitching stats (one-time fetch)...")
+        _fg_df = pitching_stats(SEASON, SEASON, qual=1)
+        print(f"  [FG] {len(_fg_df)} pitchers loaded from FanGraphs.")
+    except Exception as e:
+        print(f"  [FG] FanGraphs fetch failed: {e}")
+        _fg_df = pd.DataFrame()
+    return _fg_df
 
 # Disk cache for FanGraphs data (avoids repeated scraping)
 _FG_CACHE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fg_cache.json")
@@ -235,26 +253,25 @@ _MLB_TO_FG_TEAM = {
 }
 
 
-def get_prior_season_k_pct(pitcher_id: int, pitcher_name: str = "") -> float:
+def get_prior_season_stats(pitcher_id: int, pitcher_name: str = "") -> dict:
     """
-    Pull prior season K% from Statcast as a regression anchor.
-    Returns LEAGUE_AVG_K_PCT if no prior data exists (rookies, etc).
+    Pull prior season K%, SwStr%, and CSW% from Statcast as career anchors.
+    Used as fallbacks when current season sample is too small.
+    Returns league averages for rookies or missing data.
     """
     prior_season = SEASON - 1
-    cache_key = f"prior_{pitcher_id}_{prior_season}"
+    cache_key = f"prior_stats_{pitcher_id}_{prior_season}"
+    defaults = {"k_pct": LEAGUE_AVG_K_PCT, "swstr_pct": LEAGUE_AVG_SWSTR, "csw_pct": LEAGUE_AVG_CSW}
 
-    # Check in-memory cache
     if cache_key in _cache:
         return _cache[cache_key]
 
-    # Check disk cache
     disk_cache = _load_fg_disk_cache()
     entry = disk_cache.get(cache_key)
-    if entry:
+    if entry and isinstance(entry.get("data"), dict):
         _cache[cache_key] = entry["data"]
         return entry["data"]
 
-    # Pull from Statcast
     try:
         df = statcast_pitcher(
             f"{prior_season}-03-01",
@@ -265,14 +282,21 @@ def get_prior_season_k_pct(pitcher_id: int, pitcher_name: str = "") -> float:
             df = df[df["game_type"] == "R"]
 
         k_pct = calc_k_pct_from_statcast(df)
-        result = k_pct if k_pct > 0 else LEAGUE_AVG_K_PCT
+        swstr = calc_swstr_pct(df)
+        csw = calc_csw_pct(df)
 
-        if k_pct > 0 and pitcher_name:
-            print(f"  [PRIOR] {pitcher_name}: {prior_season} K% = {k_pct:.1%} (anchor)")
+        result = {
+            "k_pct":    k_pct  if k_pct  > 0 else LEAGUE_AVG_K_PCT,
+            "swstr_pct": swstr if swstr  > 0 else LEAGUE_AVG_SWSTR,
+            "csw_pct":   csw   if csw    > 0 else LEAGUE_AVG_CSW,
+        }
+
+        if pitcher_name:
+            print(f"  [PRIOR] {pitcher_name}: {prior_season} "
+                  f"K%={result['k_pct']:.1%} SwStr%={result['swstr_pct']:.1%} CSW%={result['csw_pct']:.1%}")
     except Exception:
-        result = LEAGUE_AVG_K_PCT
+        result = defaults
 
-    # Cache to disk (prior season data never changes — no TTL needed)
     disk_cache[cache_key] = {"timestamp": datetime.now().isoformat(), "data": result}
     _save_fg_disk_cache(disk_cache)
     _cache[cache_key] = result
@@ -315,13 +339,14 @@ def get_fangraphs_stats(pitcher_name: str, team_abbr: str = "", statcast_df: pd.
             _cache[mem_key] = entry["data"]
             return entry["data"]
 
-    # Fetch prior season K% to use as regression anchor (better than league average)
-    anchor = get_prior_season_k_pct(pitcher_id, pitcher_name) if pitcher_id else LEAGUE_AVG_K_PCT
+    # Fetch prior season stats for regression anchor
+    prior = get_prior_season_stats(pitcher_id, pitcher_name) if pitcher_id else {"k_pct": LEAGUE_AVG_K_PCT, "swstr_pct": LEAGUE_AVG_SWSTR, "csw_pct": LEAGUE_AVG_CSW}
+    anchor = prior["k_pct"]
 
     # Try FanGraphs
     result = None
     try:
-        stats = pitching_stats(SEASON, SEASON, qual=1)
+        stats = _get_fg_df()
         if not stats.empty:
             name_parts = pitcher_name.strip().split()
             if len(name_parts) >= 2:
@@ -381,14 +406,26 @@ def get_fangraphs_stats(pitcher_name: str, team_abbr: str = "", statcast_df: pd.
             }
 
     if result is None:
-        result = defaults
+        # Use prior season K% rather than falling back to 0.0 (which causes swstr*2.1 inflation)
+        if anchor > 0:
+            print(f"  [FG] {pitcher_name}: FanGraphs unavailable — using {anchor:.1%} prior-season K% as fallback")
+            result = {
+                "k_pct": anchor,
+                "k_per_9": round(anchor * 27, 2),
+                "xk_pct": anchor,
+                "source": "prior_season",
+            }
+        else:
+            result = defaults
 
-    # Save to disk cache
-    disk_cache[cache_key] = {
-        "timestamp": datetime.now().isoformat(),
-        "data": result,
-    }
-    _save_fg_disk_cache(disk_cache)
+    # Only cache to disk when we have real data (don't lock in failures for 24h)
+    if result.get("k_pct", 0) > 0:
+        disk_cache[cache_key] = {
+            "timestamp": datetime.now().isoformat(),
+            "data": result,
+        }
+        _save_fg_disk_cache(disk_cache)
+
     _cache[mem_key] = result
     return result
 
@@ -447,10 +484,11 @@ def fetch_pitcher_stats(pitcher_id: int, pitcher_name: str, team_abbr: str = "")
     df = get_statcast_data(pitcher_id)
     game_logs = get_game_logs(df)
     fg = get_fangraphs_stats(pitcher_name, team_abbr, statcast_df=df, pitcher_id=pitcher_id)
+    prior = get_prior_season_stats(pitcher_id, pitcher_name)  # returned from cache, no extra fetch
 
     num_starts = df["game_date"].nunique() if not df.empty and "game_date" in df.columns else 0
     if num_starts < 3:
-        print(f"  [SAMPLE] {pitcher_name}: only {num_starts} starts in Statcast data — rate stats unreliable, using league averages")
+        print(f"  [SAMPLE] {pitcher_name}: only {num_starts} starts — using {SEASON-1} career SwStr%/CSW% as fallback")
 
     last_outing_pitches = game_logs[-1]["pitches"] if game_logs else 0
 
@@ -458,8 +496,8 @@ def fetch_pitcher_stats(pitcher_id: int, pitcher_name: str, team_abbr: str = "")
         "pitcher_id": pitcher_id,
         "pitcher_name": pitcher_name,
         "num_starts": num_starts,
-        "swstr_pct": calc_swstr_pct(df) if num_starts >= 3 else LEAGUE_AVG_SWSTR,
-        "csw_pct": calc_csw_pct(df) if num_starts >= 3 else 0.0,
+        "swstr_pct": calc_swstr_pct(df) if num_starts >= 3 else prior["swstr_pct"],
+        "csw_pct": calc_csw_pct(df) if num_starts >= 3 else prior["csw_pct"],
         "whiff_by_pitch": calc_whiff_by_pitch(df),
         "pitch_usage": calc_pitch_usage(df),
         "velocity": calc_velocity_trend(df),
