@@ -146,11 +146,13 @@ def main():
                 print(f" [scoring error: {e}]")
                 continue
 
-            # Calculate hit rate and edge for each ladder rung
-            from score_matchups import calc_hit_rate, calc_edge
+            # Calculate hit rate, edge, and fair value for each ladder rung
+            from score_matchups import calc_hit_rate, calc_edge, calc_fair_value_odds
             ladder_analysis = []
+            seen_lines = set()
             for rung in odds.get("ladder", []):
                 rung_line = rung["line"]
+                seen_lines.add(rung_line)
                 over_hr = calc_hit_rate(result["projected_ks"], rung_line)
                 under_hr = round(100 - over_hr, 1)
                 best_over = rung.get("best_over")
@@ -165,7 +167,33 @@ def main():
                     "under_edge": round(under_edge, 1),
                     "best_over": best_over,
                     "best_under": best_under,
+                    "fair_value_over": calc_fair_value_odds(over_hr),
+                    "fair_value_under": calc_fair_value_odds(under_hr),
+                    "model_only": False,
                 })
+
+            # Add model-only rungs for thresholds above the main line (no book needed)
+            main_line = odds.get("line", 0)
+            if main_line > 0:
+                for offset in [1.0, 2.0, 3.0]:
+                    ext_line = main_line + offset
+                    if ext_line not in seen_lines:
+                        over_hr = calc_hit_rate(result["projected_ks"], ext_line)
+                        under_hr = round(100 - over_hr, 1)
+                        ladder_analysis.append({
+                            "line": ext_line,
+                            "over_hit_rate": over_hr,
+                            "under_hit_rate": under_hr,
+                            "over_edge": 0,
+                            "under_edge": 0,
+                            "best_over": None,
+                            "best_under": None,
+                            "fair_value_over": calc_fair_value_odds(over_hr),
+                            "fair_value_under": calc_fair_value_odds(under_hr),
+                            "model_only": True,
+                        })
+
+            ladder_analysis.sort(key=lambda x: x["line"])
             result["ladder"] = ladder_analysis
 
             # Enrich result with display info
@@ -189,6 +217,19 @@ def main():
             result["last_outing_pitches"] = p_stats.get("last_outing_pitches", 0)
             result["rolling_k_3"] = p_stats.get("rolling_k_3", 0)
             result["rolling_k_5"] = p_stats.get("rolling_k_5", 0)
+            result["fair_value"] = calc_fair_value_odds(result.get("hit_rate", 50))
+
+            # Last 5 game logs for display
+            raw_logs = p_stats.get("game_logs", [])
+            last5 = []
+            for g in raw_logs[-5:]:
+                d = g["date"]
+                try:
+                    d = d.strftime("%m/%d") if hasattr(d, "strftime") else d.date().strftime("%m/%d")
+                except Exception:
+                    d = str(d)[:10]
+                last5.append({"date": d, "k": g["strikeouts"], "pitches": g["pitches"]})
+            result["last5"] = last5
 
             scored.append(result)
             edge_str = f"edge {result['edge']:+.1f}" if result['edge'] != 0 else "no odds"
@@ -286,7 +327,9 @@ def main():
             "over_odds": s.get("over_odds", []),
             "under_odds": s.get("under_odds", []),
             "best_line": s.get("best_line"),
+            "fair_value": s.get("fair_value", 0),
             "ladder": s.get("ladder", []),
+            "last5": s.get("last5", []),
             "k_distribution": {
                 str(k): v for k, v in s.get("k_distribution", {}).items()
             },

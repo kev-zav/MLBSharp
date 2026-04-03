@@ -158,21 +158,42 @@
       white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     }
 
-    /* ── GRADE BADGE ── */
-    .grade-wrap { text-align: center; flex-shrink: 0; }
-    .grade-badge {
-      display: inline-flex; align-items: center; justify-content: center;
-      width: 42px; height: 42px; border-radius: 10px;
-      font-size: 17px; font-weight: 800; letter-spacing: -0.5px;
+    /* ── VALUE BLOCK (replaces grade badge) ── */
+    .value-block {
+      flex-shrink: 0; text-align: right; min-width: 90px;
     }
-    .grade-aplus  { background: #021f0e; color: #10b981; border: 1px solid #166534; }
-    .grade-a      { background: #021f0e; color: #34d399; border: 1px solid #065f46; }
-    .grade-aminus { background: #1c1205; color: #fbbf24; border: 1px solid #78350f; }
-    .grade-bplus  { background: #1c1205; color: var(--amber); border: 1px solid #92400e; }
-    .grade-b      { background: #160d3d; color: #a78bfa; border: 1px solid #4c1d95; }
-    .grade-c      { background: #161b27; color: var(--text-sec); border: 1px solid #334155; }
-    .grade-d      { background: var(--border); color: var(--text-muted); border: 1px solid var(--border); }
-    .grade-proj   { font-size: 10px; color: var(--text-muted); margin-top: 3px; }
+    .value-prop {
+      font-size: 13px; font-weight: 800; letter-spacing: -0.2px;
+      white-space: nowrap;
+    }
+    .value-prop-over { color: var(--green); }
+    .value-prop-under { color: #f87171; }
+    .value-prop-na { color: var(--text-muted); }
+    .value-row {
+      display: flex; justify-content: flex-end; align-items: center;
+      gap: 5px; margin-top: 3px;
+    }
+    .value-label { font-size: 9px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+    .value-odds { font-size: 12px; font-weight: 700; }
+    .value-odds-pos { color: var(--blue); }
+    .value-odds-neg { color: var(--text-sec); }
+    .value-divider { width: 1px; height: 10px; background: var(--border); }
+    .value-fair { font-size: 11px; color: var(--text-muted); }
+    .value-hr { font-size: 11px; font-weight: 700; color: var(--text-sec); }
+    .grade-proj { font-size: 10px; color: var(--text-muted); margin-top: 3px; }
+
+    /* ── GRADE BADGE (small, kept for color coding) ── */
+    .grade-dot {
+      display: inline-block; width: 8px; height: 8px;
+      border-radius: 50%; margin-left: 4px; vertical-align: middle;
+    }
+    .grade-aplus  { background: #10b981; }
+    .grade-a      { background: #34d399; }
+    .grade-aminus { background: #fbbf24; }
+    .grade-bplus  { background: var(--amber); }
+    .grade-b      { background: #a78bfa; }
+    .grade-c      { background: var(--text-muted); }
+    .grade-d      { background: var(--border); }
 
     /* ── STATS ROW ── */
     .stats-row { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 10px; }
@@ -203,8 +224,24 @@
     .rung-odds-val { font-size: 12px; font-weight: 600; width: 44px; text-align: right; flex-shrink: 0; }
     .rung-odds-pos { color: var(--blue); }
     .rung-odds-neg { color: var(--text-sec); }
-    .rung-book { font-size: 10px; color: var(--text-muted); width: 56px; flex-shrink: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .rung-book { font-size: 10px; color: var(--text-muted); width: 52px; flex-shrink: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .rung-fair { font-size: 11px; font-weight: 600; width: 44px; text-align: right; flex-shrink: 0; }
     .rung-value { font-size: 9px; font-weight: 700; background: #052e16; color: var(--green); padding: 2px 5px; border-radius: 4px; flex-shrink: 0; }
+
+    /* ── LAST 5 STARTS ── */
+    .last5-section { margin-top: 10px; }
+    .last5-title { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 6px; }
+    .last5-row { display: flex; gap: 5px; flex-wrap: wrap; }
+    .last5-chip {
+      background: #161b27; border-radius: 6px; padding: 5px 9px;
+      font-size: 11px; text-align: center; min-width: 52px;
+    }
+    .last5-date { color: var(--text-muted); font-size: 9px; }
+    .last5-k { font-size: 14px; font-weight: 700; }
+    .last5-k-high { color: var(--green); }
+    .last5-k-mid { color: var(--amber); }
+    .last5-k-low { color: #f87171; }
+    .last5-pitches { font-size: 9px; color: var(--text-muted); }
 
     /* ── DETAILS TOGGLE ── */
     .details-toggle { text-align: right; margin-top: 4px; }
@@ -303,8 +340,35 @@
         </div>
         <div class="matchup-sub">vs {{ play.opp_team }} · {{ play.venue }}</div>
       </div>
-      <div class="grade-wrap">
-        <div class="grade-badge {{ grade_class(play.edge, play.hit_rate or 0) }}">{{ grade_label(play.edge, play.hit_rate or 0) }}</div>
+      <div class="value-block">
+        {% if play.play and play.line and play.line > 0 %}
+          <div class="value-prop value-prop-{{ play.play | lower }}">
+            {{ play.play }} {{ play.line }}
+            <span class="grade-dot {{ grade_class(play.edge, play.hit_rate or 0) }}"></span>
+          </div>
+          {% if play.best_line %}
+          <div class="value-row">
+            <span class="value-label">Book</span>
+            <span class="value-odds {% if play.best_line.odds > 0 %}value-odds-pos{% else %}value-odds-neg{% endif %}">
+              {% if play.best_line.odds > 0 %}+{{ play.best_line.odds }}{% else %}{{ play.best_line.odds }}{% endif %}
+            </span>
+          </div>
+          {% endif %}
+          {% if play.fair_value %}
+          <div class="value-row">
+            <span class="value-label">Fair</span>
+            <span class="value-fair">
+              {% if play.fair_value > 0 %}+{{ play.fair_value }}{% else %}{{ play.fair_value }}{% endif %}
+            </span>
+          </div>
+          {% endif %}
+          <div class="value-row">
+            <span class="value-label">Hit</span>
+            <span class="value-hr">{{ play.hit_rate | int }}%</span>
+          </div>
+        {% else %}
+          <div class="value-prop value-prop-na">No Line</div>
+        {% endif %}
         <div class="grade-proj">{{ play.projected_ks }}K proj</div>
       </div>
     </div>
@@ -324,13 +388,13 @@
       {% endif %}
     </div>
 
-    {# LADDER — multiple lines #}
-    {% if play.ladder and play.ladder | length > 1 %}
+    {# LADDER #}
+    {% if play.ladder %}
     {% set ns = namespace(max_edge=0) %}
     {% for rung in play.ladder %}{% if rung.over_edge > ns.max_edge %}{% set ns.max_edge = rung.over_edge %}{% endif %}{% endfor %}
     <div class="ladder">
-      <div class="ladder-title">Strikeout Ladder</div>
-      {% for rung in play.ladder %}{% if rung.best_over %}
+      <div class="ladder-title">K Ladder · Book / Fair Value</div>
+      {% for rung in play.ladder %}
       <div class="rung">
         <span class="rung-dir rung-dir-over">O</span>
         <span class="rung-line-val">{{ rung.line }}</span>
@@ -340,34 +404,23 @@
                style="background:{% if rung.over_hit_rate >= 70 %}#10b981{% elif rung.over_hit_rate >= 50 %}#f59e0b{% else %}#ef4444{% endif %}"></div>
         </div>
         <span class="rung-pct">{{ rung.over_hit_rate | int }}%</span>
-        <span class="rung-odds-val {% if rung.best_over.odds > 0 %}rung-odds-pos{% else %}rung-odds-neg{% endif %}">
-          {% if rung.best_over.odds > 0 %}+{{ rung.best_over.odds }}{% else %}{{ rung.best_over.odds }}{% endif %}
+        {% if rung.best_over and not rung.model_only %}
+          <span class="rung-odds-val {% if rung.best_over.odds > 0 %}rung-odds-pos{% else %}rung-odds-neg{% endif %}">
+            {% if rung.best_over.odds > 0 %}+{{ rung.best_over.odds }}{% else %}{{ rung.best_over.odds }}{% endif %}
+          </span>
+          <span class="rung-book">{{ rung.best_over.book }}</span>
+        {% else %}
+          <span class="rung-odds-val" style="color:var(--text-muted)">—</span>
+          <span class="rung-book" style="color:var(--text-muted)">no line</span>
+        {% endif %}
+        <span class="rung-fair {% if rung.fair_value_over > 0 %}rung-odds-pos{% else %}rung-odds-neg{% endif %}">
+          {% if rung.fair_value_over > 0 %}+{{ rung.fair_value_over }}{% else %}{{ rung.fair_value_over }}{% endif %}
         </span>
-        <span class="rung-book">{{ rung.best_over.book }}</span>
         {% if rung.over_edge == ns.max_edge and rung.over_edge > 0 %}<span class="rung-value">value</span>{% endif %}
       </div>
-      {% endif %}{% endfor %}
+      {% endfor %}
     </div>
-
-    {# SINGLE LINE — under play #}
-    {% elif play.ladder and play.ladder | length == 1 and play.play == 'UNDER' %}
-    {% set rung = play.ladder[0] %}{% if rung.best_under %}
-    <div class="ladder">
-      <div class="ladder-title">Best Under</div>
-      <div class="rung">
-        <span class="rung-dir rung-dir-under">U</span>
-        <span class="rung-line-val">{{ rung.line }}</span>
-        <div class="rung-bar-wrap">
-          <div class="rung-bar-fill" data-width="{{ rung.under_hit_rate | int }}" style="background:#10b981"></div>
-        </div>
-        <span class="rung-pct">{{ rung.under_hit_rate | int }}%</span>
-        <span class="rung-odds-val {% if rung.best_under.odds > 0 %}rung-odds-pos{% else %}rung-odds-neg{% endif %}">
-          {% if rung.best_under.odds > 0 %}+{{ rung.best_under.odds }}{% else %}{{ rung.best_under.odds }}{% endif %}
-        </span>
-        <span class="rung-book">{{ rung.best_under.book }}</span>
-      </div>
-    </div>
-    {% endif %}{% endif %}
+    {% endif %}
 
     <div class="details-toggle">
       <span class="toggle-label">details</span>
@@ -427,6 +480,21 @@
         {% for book in odds_list[:5] %}
         <div class="book-chip {% if loop.first %}best{% endif %}">
           {{ book.book }} <strong>{% if book.odds > 0 %}+{{ book.odds }}{% else %}{{ book.odds }}{% endif %}</strong>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if play.last5 %}
+    <div class="last5-section">
+      <div class="last5-title">Last {{ play.last5 | length }} Starts</div>
+      <div class="last5-row">
+        {% for g in play.last5 %}
+        <div class="last5-chip">
+          <div class="last5-date">{{ g.date }}</div>
+          <div class="last5-k {% if g.k >= 7 %}last5-k-high{% elif g.k >= 5 %}last5-k-mid{% else %}last5-k-low{% endif %}">{{ g.k }}K</div>
+          <div class="last5-pitches">{{ g.pitches }}p</div>
         </div>
         {% endfor %}
       </div>

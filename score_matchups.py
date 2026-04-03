@@ -240,6 +240,18 @@ def calc_hit_rate(projected_ks: float, line: float) -> float:
     return round(hit_rate * 100, 1)
 
 
+def calc_fair_value_odds(hit_rate: float) -> int:
+    """
+    Convert a hit rate % into American odds (fair value, no vig).
+    70% hit rate → -233 (what the line should be at fair value).
+    """
+    p = max(0.01, min(0.99, hit_rate / 100))
+    if p >= 0.5:
+        return round(-(p / (1 - p)) * 100)
+    else:
+        return round(((1 - p) / p) * 100)
+
+
 def calc_edge(hit_rate: float, odds: int) -> float:
     """
     Calculate edge: model implied probability vs book implied probability.
