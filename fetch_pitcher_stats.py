@@ -222,10 +222,24 @@ def get_fangraphs_stats(pitcher_name: str, team_abbr: str = "") -> dict:
                 k_pct = row.get("K%", 0)
                 if isinstance(k_pct, str):
                     k_pct = float(k_pct.strip("% ")) / 100
+                k_pct = float(k_pct)
+
+                # Regress K% toward league average based on innings pitched
+                # Prevents absurd early-season rates like 47% from 1 good start
+                ip = float(row.get("IP", 0) or 0)
+                regression_ip = 40.0  # ~8 starts before we trust the rate
+                regressed_k_pct = (k_pct * ip + LEAGUE_AVG_K_PCT * regression_ip) / (ip + regression_ip)
+
+                if ip < 20 and abs(k_pct - LEAGUE_AVG_K_PCT) > 0.08:
+                    print(f"  [REGRESS] {pitcher_name}: K% {k_pct:.1%} on {ip:.0f} IP "
+                          f"→ regressed to {regressed_k_pct:.1%}")
+
                 result = {
-                    "k_pct": round(float(k_pct), 4),
+                    "k_pct": round(regressed_k_pct, 4),
                     "k_per_9": round(float(row.get("K/9", 0)), 2),
-                    "xk_pct": round(float(k_pct), 4),
+                    "xk_pct": round(regressed_k_pct, 4),
+                    "k_pct_raw": round(k_pct, 4),
+                    "ip": ip,
                 }
                 _cache[cache_key] = result
                 return result
