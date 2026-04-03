@@ -134,6 +134,28 @@ def main():
                 print(f" [scoring error: {e}]")
                 continue
 
+            # Calculate hit rate and edge for each ladder rung
+            from score_matchups import calc_hit_rate, calc_edge
+            ladder_analysis = []
+            for rung in odds.get("ladder", []):
+                rung_line = rung["line"]
+                over_hr = calc_hit_rate(result["projected_ks"], rung_line)
+                under_hr = round(100 - over_hr, 1)
+                best_over = rung.get("best_over")
+                best_under = rung.get("best_under")
+                over_edge = calc_edge(over_hr, best_over["odds"]) if best_over else 0
+                under_edge = calc_edge(under_hr, best_under["odds"]) if best_under else 0
+                ladder_analysis.append({
+                    "line": rung_line,
+                    "over_hit_rate": over_hr,
+                    "under_hit_rate": under_hr,
+                    "over_edge": round(over_edge, 1),
+                    "under_edge": round(under_edge, 1),
+                    "best_over": best_over,
+                    "best_under": best_under,
+                })
+            result["ladder"] = ladder_analysis
+
             # Enrich result with display info
             result["pitcher_name"] = pitcher_name
             result["pitcher_id"] = pitcher_id
@@ -229,7 +251,9 @@ def main():
     def make_play(s):
         return {
             "pitcher_name": s.get("pitcher_name", ""),
+            "pitcher_id": s.get("pitcher_id", 0),
             "pitcher_team": s.get("pitcher_team", ""),
+            "pitcher_hand": s.get("pitcher_hand", "R"),
             "opp_team": s.get("opp_team", ""),
             "venue": s.get("venue", ""),
             "projected_ks": s.get("projected_ks", 0),
@@ -250,6 +274,7 @@ def main():
             "over_odds": s.get("over_odds", []),
             "under_odds": s.get("under_odds", []),
             "best_line": s.get("best_line"),
+            "ladder": s.get("ladder", []),
             "k_distribution": {
                 str(k): v for k, v in s.get("k_distribution", {}).items()
             },
@@ -260,6 +285,7 @@ def main():
     moderate = [make_play(s) for s in sorted_scored if EDGE_MODERATE <= s.get("edge", 0) < EDGE_STRONG]
     lean = [make_play(s) for s in sorted_scored if EDGE_LEAN <= s.get("edge", 0) < EDGE_MODERATE]
     no_value = [make_play(s) for s in sorted_scored if s.get("edge", 0) < EDGE_LEAN]
+    all_pitchers = [make_play(s) for s in sorted(scored, key=lambda x: x.get("projected_ks", 0), reverse=True)]
 
     # Build parlay suggestions
     candidates = strong + moderate
@@ -284,6 +310,7 @@ def main():
         "moderate": moderate,
         "lean": lean,
         "no_value": no_value,
+        "all_pitchers": all_pitchers,
         "parlays": parlays,
         "total_plays": len(scored),
     }

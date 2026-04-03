@@ -6,101 +6,369 @@
   <title>MLBSharp</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      background: #0f1117;
-      color: #e2e8f0;
-      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
-      padding-bottom: 40px;
+      background: #070b12;
+      color: #f0f6fc;
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+      padding-bottom: 48px;
+      min-height: 100vh;
     }
+
+    /* ── HEADER ── */
     .header {
-      background: linear-gradient(135deg, #1a1f2e 0%, #0f1117 100%);
-      border-bottom: 1px solid #1e2535;
-      padding: 20px 16px 16px;
-      position: sticky; top: 0; z-index: 100;
+      background: #070b12;
+      border-bottom: 1px solid #1c2333;
+      padding: 18px 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-    .header-top { display: flex; align-items: center; justify-content: space-between; }
-    .logo { font-size: 22px; font-weight: 700; letter-spacing: -0.5px; color: #fff; }
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #f0f6fc;
+    }
     .logo span { color: #3b82f6; }
-    .date-badge { font-size: 12px; color: #64748b; background: #1e2535; padding: 4px 10px; border-radius: 20px; }
-    .generated { font-size: 11px; color: #475569; margin-top: 6px; }
-    .summary { display: flex; gap: 8px; padding: 12px 16px; overflow-x: auto; scrollbar-width: none; border-bottom: 1px solid #1e2535; }
-    .summary::-webkit-scrollbar { display: none; }
-    .summary-pill { flex-shrink: 0; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; display: flex; align-items: center; gap: 6px; }
-    .pill-strong { background: #052e16; color: #4ade80; border: 1px solid #166534; }
-    .pill-moderate { background: #1c1917; color: #fbbf24; border: 1px solid #78350f; }
-    .pill-lean { background: #0f172a; color: #818cf8; border: 1px solid #312e81; }
-    .pill-pass { background: #1a1a1a; color: #64748b; border: 1px solid #334155; }
-    .pill-dot { width: 7px; height: 7px; border-radius: 50%; }
-    .dot-strong { background: #4ade80; }
-    .dot-moderate { background: #fbbf24; }
-    .dot-lean { background: #818cf8; }
-    .dot-pass { background: #475569; }
-    .section-header { padding: 20px 16px 8px; display: flex; align-items: center; gap: 8px; }
-    .section-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
-    .label-strong { color: #4ade80; }
-    .label-moderate { color: #fbbf24; }
-    .label-lean { color: #818cf8; }
-    .label-pass { color: #475569; }
-    .section-line { flex: 1; height: 1px; background: #1e2535; }
-    .card { margin: 0 12px 10px; border-radius: 14px; overflow: hidden; border: 1px solid #1e2535; }
-    .card-strong { border-color: #166534; background: #030f06; }
-    .card-moderate { border-color: #78350f; background: #0d0900; }
-    .card-lean { border-color: #312e81; background: #06060f; }
-    .card-pass { border-color: #1e2535; background: #0d1117; }
-    .card-header { padding: 14px 16px 12px; cursor: pointer; user-select: none; }
-    .card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
-    .pitcher-name { font-size: 17px; font-weight: 700; color: #f1f5f9; letter-spacing: -0.3px; }
-    .matchup-line { font-size: 13px; color: #94a3b8; margin-bottom: 10px; }
-    .edge-badge { font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 8px; }
-    .edge-strong { background: #052e16; color: #4ade80; }
-    .edge-moderate { background: #1c1917; color: #fbbf24; }
-    .edge-lean { background: #0f172a; color: #818cf8; }
-    .edge-none { background: #1a1a1a; color: #475569; }
-    .play-tag { display: inline-block; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 5px; margin-right: 6px; letter-spacing: 0.5px; }
-    .tag-over { background: #052e16; color: #4ade80; }
-    .tag-under { background: #450a0a; color: #f87171; }
-    .tag-na { background: #1e2535; color: #64748b; }
-    .stats-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
-    .stat-chip { background: #1e2535; border-radius: 6px; padding: 4px 8px; font-size: 11px; color: #94a3b8; }
-    .stat-chip strong { color: #e2e8f0; }
-    .proj-strong { color: #4ade80; }
-    .proj-moderate { color: #fbbf24; }
-    .proj-lean { color: #818cf8; }
-    .proj-pass { color: #94a3b8; }
-    .k-dist { padding: 10px 0 2px; }
-    .k-dist-title { font-size: 10px; color: #475569; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 8px; font-weight: 600; }
-    .k-bars { display: flex; align-items: flex-end; gap: 4px; height: 60px; }
-    .k-bar-group { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px; }
-    .k-bar { width: 100%; border-radius: 3px 3px 0 0; min-height: 2px; }
-    .k-bar-label { font-size: 9px; color: #475569; }
-    .k-bar-pct { font-size: 9px; color: #64748b; }
-    .card-details { display: none; padding: 12px 16px 14px; border-top: 1px solid #1e2535; }
-    .card-details.open { display: block; }
-    .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 10px; }
-    .detail-item { background: #1a1f2e; border-radius: 8px; padding: 8px 10px; }
-    .detail-label { font-size: 10px; color: #475569; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 2px; }
-    .detail-value { font-size: 14px; font-weight: 600; color: #e2e8f0; }
-    .books-section { margin-top: 10px; }
-    .books-label { font-size: 10px; color: #475569; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 6px; }
-    .books-list { display: flex; flex-wrap: wrap; gap: 6px; }
-    .book-chip { background: #1e2535; border-radius: 6px; padding: 5px 10px; font-size: 12px; color: #94a3b8; }
-    .book-chip.best { background: #0c2340; border: 1px solid #1d4ed8; color: #93c5fd; }
-    .book-chip .book-odds { color: #cbd5e1; margin-left: 4px; }
-    .context-row { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
-    .context-chip { background: #1a1f2e; border-radius: 6px; padding: 5px 10px; font-size: 11px; color: #64748b; display: flex; align-items: center; gap: 5px; }
-    .context-chip span { color: #94a3b8; }
-    .chevron { display: inline-block; margin-left: 6px; font-size: 10px; color: #475569; transition: transform 0.2s; }
+    .header-right { text-align: right; }
+    .date-text { font-size: 13px; font-weight: 600; color: #f0f6fc; }
+    .updated-text { font-size: 11px; color: #484f58; margin-top: 1px; }
+
+    /* ── TABS ── */
+    .tab-bar {
+      display: flex;
+      margin-top: 14px;
+    }
+    .tab {
+      flex: 1;
+      padding: 10px 4px;
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      color: #484f58;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      letter-spacing: 0.2px;
+      transition: color 0.15s, border-color 0.15s;
+      text-align: center;
+    }
+    .tab.active { color: #f0f6fc; border-bottom-color: #3b82f6; }
+    .tab-count {
+      display: inline-block;
+      background: #1c2333;
+      border-radius: 10px;
+      padding: 1px 7px;
+      font-size: 11px;
+      margin-left: 5px;
+      vertical-align: middle;
+    }
+    .tab.active .tab-count { background: #1d3a6e; color: #93c5fd; }
+
+    /* ── TAB CONTENT ── */
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    /* ── EMPTY STATE ── */
+    .empty-state {
+      margin: 48px 20px;
+      text-align: center;
+      color: #484f58;
+    }
+    .empty-state .icon { font-size: 36px; margin-bottom: 12px; }
+    .empty-state h3 { font-size: 16px; color: #8b949e; margin-bottom: 6px; }
+    .empty-state p { font-size: 13px; line-height: 1.5; }
+
+    /* ── SECTION LABEL ── */
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 20px 16px 8px;
+    }
+    .section-label span {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+    .section-label .line { flex: 1; height: 1px; background: #1c2333; }
+    .label-strong { color: #10b981; }
+    .label-moderate { color: #f59e0b; }
+    .label-lean { color: #8b5cf6; }
+    .label-pass { color: #484f58; }
+
+    /* ── CARD ── */
+    .card {
+      margin: 0 12px 10px;
+      border-radius: 12px;
+      background: #0d1117;
+      border: 1px solid #1c2333;
+      overflow: hidden;
+    }
+    .card-strong { border-left: 3px solid #10b981; }
+    .card-moderate { border-left: 3px solid #f59e0b; }
+    .card-lean { border-left: 3px solid #8b5cf6; }
+    .card-pass { border-left: 3px solid #1c2333; }
+
+    .card-header {
+      padding: 14px 14px 12px;
+      cursor: pointer;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* ── PITCHER ROW ── */
+    .pitcher-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .pitcher-img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #1c2333;
+      flex-shrink: 0;
+      border: 1px solid #1c2333;
+    }
+    .pitcher-info { flex: 1; min-width: 0; }
+    .pitcher-name {
+      font-size: 16px;
+      font-weight: 700;
+      color: #f0f6fc;
+      letter-spacing: -0.2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .hand-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      background: #1c2333;
+      color: #8b949e;
+      padding: 1px 5px;
+      border-radius: 4px;
+      margin-left: 5px;
+      vertical-align: middle;
+    }
+    .matchup-line {
+      font-size: 12px;
+      color: #8b949e;
+      margin-top: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .card-meta { text-align: right; flex-shrink: 0; }
+    .edge-badge {
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-bottom: 4px;
+    }
+    .edge-strong { background: #052e16; color: #10b981; }
+    .edge-moderate { background: #1c1205; color: #f59e0b; }
+    .edge-lean { background: #1a0d3d; color: #a78bfa; }
+    .edge-pass { background: #1c2333; color: #484f58; }
+    .play-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 5px;
+      letter-spacing: 0.3px;
+    }
+    .tag-over { background: #052e16; color: #10b981; }
+    .tag-under { background: #300a0a; color: #f87171; }
+    .tag-na { background: #1c2333; color: #484f58; }
+
+    /* ── STATS ROW ── */
+    .stats-row {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .stat-chip {
+      background: #161b27;
+      border-radius: 6px;
+      padding: 4px 8px;
+      font-size: 11px;
+      color: #8b949e;
+    }
+    .stat-chip strong { color: #f0f6fc; font-weight: 600; }
+    .proj-strong { color: #10b981; }
+    .proj-moderate { color: #f59e0b; }
+    .proj-lean { color: #a78bfa; }
+    .proj-pass { color: #8b949e; }
+
+    /* ── LADDER ── */
+    .ladder { border-top: 1px solid #1c2333; padding-top: 10px; margin-top: 2px; }
+    .ladder-title {
+      font-size: 10px;
+      font-weight: 700;
+      color: #484f58;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .rung {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 0;
+      border-bottom: 1px solid #0d1117;
+    }
+    .rung:last-child { border-bottom: none; }
+    .rung-dir {
+      font-size: 11px;
+      font-weight: 700;
+      width: 14px;
+      flex-shrink: 0;
+    }
+    .rung-dir-over { color: #10b981; }
+    .rung-dir-under { color: #f87171; }
+    .rung-line-val {
+      font-size: 13px;
+      font-weight: 700;
+      color: #f0f6fc;
+      width: 32px;
+      flex-shrink: 0;
+    }
+    .rung-bar-wrap {
+      flex: 1;
+      height: 4px;
+      background: #1c2333;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .rung-bar-fill {
+      height: 100%;
+      border-radius: 2px;
+    }
+    .rung-pct {
+      font-size: 12px;
+      color: #8b949e;
+      width: 34px;
+      text-align: right;
+      flex-shrink: 0;
+    }
+    .rung-odds-val {
+      font-size: 12px;
+      font-weight: 600;
+      width: 44px;
+      text-align: right;
+      flex-shrink: 0;
+    }
+    .rung-odds-pos { color: #3b82f6; }
+    .rung-odds-neg { color: #8b949e; }
+    .rung-book {
+      font-size: 10px;
+      color: #484f58;
+      width: 60px;
+      flex-shrink: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .rung-best-tag {
+      font-size: 9px;
+      font-weight: 700;
+      background: #052e16;
+      color: #10b981;
+      padding: 2px 5px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    /* ── EXPANDABLE DETAILS ── */
+    .chevron {
+      display: inline-block;
+      font-size: 10px;
+      color: #484f58;
+      transition: transform 0.2s;
+      margin-left: 4px;
+    }
     .chevron.open { transform: rotate(180deg); }
-    .parlay-section { margin: 8px 12px 0; background: #0c1628; border: 1px solid #1d4ed8; border-radius: 14px; padding: 16px; }
-    .parlay-title { font-size: 11px; font-weight: 700; color: #3b82f6; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
-    .parlay-card { background: #0f1f3d; border-radius: 10px; padding: 12px; margin-bottom: 8px; }
+    .card-details { display: none; padding: 12px 14px 14px; border-top: 1px solid #1c2333; }
+    .card-details.open { display: block; }
+    .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin-bottom: 10px; }
+    .detail-item { background: #161b27; border-radius: 8px; padding: 8px 10px; }
+    .detail-label { font-size: 10px; color: #484f58; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 2px; }
+    .detail-value { font-size: 14px; font-weight: 600; color: #f0f6fc; }
+    .context-row { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+    .context-chip {
+      background: #161b27;
+      border-radius: 6px;
+      padding: 5px 9px;
+      font-size: 11px;
+      color: #8b949e;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .books-section { margin-top: 10px; }
+    .books-label { font-size: 10px; color: #484f58; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 6px; }
+    .books-list { display: flex; flex-wrap: wrap; gap: 5px; }
+    .book-chip {
+      background: #161b27;
+      border-radius: 6px;
+      padding: 4px 9px;
+      font-size: 12px;
+      color: #8b949e;
+    }
+    .book-chip.best { background: #0c1f3d; border: 1px solid #1d4ed8; color: #93c5fd; }
+
+    /* ── PARLAY SECTION ── */
+    .parlay-section {
+      margin: 4px 12px 10px;
+      background: #0c1628;
+      border: 1px solid #1d4ed8;
+      border-radius: 12px;
+      padding: 14px;
+    }
+    .parlay-title {
+      font-size: 10px;
+      font-weight: 700;
+      color: #3b82f6;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+    .parlay-card {
+      background: #0f1f3d;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 7px;
+    }
     .parlay-card:last-child { margin-bottom: 0; }
-    .parlay-legs { font-size: 13px; font-weight: 600; color: #e2e8f0; line-height: 1.6; }
-    .parlay-books { font-size: 11px; color: #64748b; margin-top: 4px; }
-    .no-report { margin: 40px 16px; background: #1a1f2e; border-radius: 14px; padding: 30px; text-align: center; }
-    .no-report h2 { color: #e2e8f0; font-size: 18px; margin-bottom: 8px; }
-    .no-report p { color: #64748b; font-size: 14px; line-height: 1.6; }
-    .no-report code { background: #0f1117; color: #3b82f6; padding: 2px 6px; border-radius: 4px; font-size: 13px; }
+    .parlay-legs { font-size: 13px; font-weight: 600; color: #f0f6fc; line-height: 1.6; }
+    .parlay-books { font-size: 11px; color: #484f58; margin-top: 3px; }
+
+    /* ── NO REPORT ── */
+    .no-report {
+      margin: 48px 16px;
+      background: #0d1117;
+      border: 1px solid #1c2333;
+      border-radius: 12px;
+      padding: 32px;
+      text-align: center;
+    }
+    .no-report h2 { color: #f0f6fc; font-size: 18px; margin-bottom: 8px; }
+    .no-report p { color: #484f58; font-size: 14px; line-height: 1.6; }
   </style>
 </head>
 <body>
@@ -108,86 +376,102 @@
 {# ── MACRO: render a single pitcher card ── #}
 {% macro render_card(play, tier) %}
 {% set card_id = (play.pitcher_name ~ play.opp_team) | replace(' ', '-') | lower %}
+{% set img_url = "https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png/w_213,q_auto:best/v1/people/" ~ play.pitcher_id ~ "/headshot/67/current" %}
+
 <div class="card card-{{ tier }}">
   <div class="card-header" onclick="toggleCard('{{ card_id }}')">
-    <div class="card-top">
-      <div>
+
+    {# Pitcher row: photo + name + edge #}
+    <div class="pitcher-row">
+      <img src="{{ img_url }}" class="pitcher-img" alt="{{ play.pitcher_name }}"
+           onerror="this.src='https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png/v1/people/0/headshot/67/current'">
+      <div class="pitcher-info">
         <div class="pitcher-name">
           {{ play.pitcher_name }}
-          <span class="chevron" id="chevron-{{ card_id }}">▾</span>
+          {% if play.pitcher_hand %}<span class="hand-badge">{{ play.pitcher_hand }}</span>{% endif %}
         </div>
         <div class="matchup-line">vs {{ play.opp_team }} · {{ play.venue }}</div>
       </div>
-      <div style="text-align:right">
-        {% if play.edge and play.edge != 0 %}
-          <div class="edge-badge edge-{{ tier }}">+{{ "%.1f"|format(play.edge) }}pts</div>
+      <div class="card-meta">
+        {% if play.edge and play.edge > 0 %}
+          <div class="edge-badge edge-{{ tier }}">+{{ "%.1f"|format(play.edge) }}</div><br>
         {% endif %}
-        <div style="margin-top:4px">
-          {% if play.play and play.line and play.line > 0 %}
-            <span class="play-tag tag-{{ play.play|lower }}">{{ play.play }} {{ play.line }}</span>
-          {% else %}
-            <span class="play-tag tag-na">No Line</span>
-          {% endif %}
-        </div>
+        {% if play.play and play.line and play.line > 0 %}
+          <span class="play-tag tag-{{ play.play|lower }}">{{ play.play }} {{ play.line }}</span>
+        {% else %}
+          <span class="play-tag tag-na">No Line</span>
+        {% endif %}
       </div>
     </div>
 
+    {# Key stats #}
     <div class="stats-row">
-      <div class="stat-chip">Proj: <strong class="proj-{{ tier }}">{{ play.projected_ks }}</strong></div>
+      <div class="stat-chip">Proj <strong class="proj-{{ tier }}">{{ play.projected_ks }}</strong></div>
       {% if play.hit_rate and play.line and play.line > 0 %}
-        <div class="stat-chip">Hit Rate: <strong>{{ play.hit_rate | int }}%</strong></div>
+        <div class="stat-chip">Hit Rate <strong>{{ play.hit_rate | int }}%</strong></div>
       {% endif %}
       {% if play.swstr_pct %}
-        <div class="stat-chip">SwStr: <strong>{{ "%.1f"|format(play.swstr_pct * 100) }}%</strong></div>
+        <div class="stat-chip">SwStr <strong>{{ "%.1f"|format(play.swstr_pct * 100) }}%</strong></div>
       {% endif %}
-      {% if play.opp_k_pct %}
-        <div class="stat-chip">OppK: <strong>{{ "%.1f"|format(play.opp_k_pct * 100) }}%</strong></div>
+      {% if play.csw_pct %}
+        <div class="stat-chip">CSW <strong>{{ "%.1f"|format(play.csw_pct * 100) }}%</strong></div>
       {% endif %}
     </div>
 
-    {% if play.k_distribution %}
-    <div class="k-dist">
-      <div class="k-dist-title">K Probability Distribution</div>
-      <div class="k-bars">
-        {% set show_ks = ['4','5','6','7','8','9','10+'] %}
-        {% set ns = namespace(max_pct=0.01) %}
-        {% for k in show_ks %}
-          {% set pct = play.k_distribution.get(k, 0) %}
-          {% if pct > ns.max_pct %}{% set ns.max_pct = pct %}{% endif %}
-        {% endfor %}
-        {% for k in show_ks %}
-          {% set pct = play.k_distribution.get(k, 0) %}
-          {% set height = ((pct / ns.max_pct) * 44) | int %}
-          {% if play.line and play.line > 0 and k != '10+' %}
-            {% if play.play == 'OVER' and k|int > play.line %}
-              {% set bar_color = '#166534' %}
-            {% elif play.play == 'UNDER' and k|int < play.line %}
-              {% set bar_color = '#7f1d1d' %}
-            {% else %}
-              {% set bar_color = '#1e3a5f' %}
-            {% endif %}
-          {% elif k == '10+' and play.play == 'OVER' %}
-            {% set bar_color = '#166534' %}
-          {% else %}
-            {% set bar_color = '#1e3a5f' %}
-          {% endif %}
-          <div class="k-bar-group">
-            <div class="k-bar-pct">{{ (pct * 100) | int }}%</div>
-            <div class="k-bar" style="height:{{ height }}px;background:{{ bar_color }};"></div>
-            <div class="k-bar-label">{{ k }}</div>
+    {# Ladder — only show if multiple lines available #}
+    {% if play.ladder and play.ladder|length > 1 %}
+    <div class="ladder">
+      <div class="ladder-title">Strikeout Ladder</div>
+      {% for rung in play.ladder %}
+        {% if rung.best_over %}
+          {% set hr = rung.over_hit_rate %}
+          {% set is_best = (rung.over_edge == play.ladder | map(attribute='over_edge') | max) and rung.over_edge > 0 %}
+          <div class="rung">
+            <span class="rung-dir rung-dir-over">O</span>
+            <span class="rung-line-val">{{ rung.line }}</span>
+            <div class="rung-bar-wrap">
+              <div class="rung-bar-fill" style="width:{{ hr | int }}%;background:{% if hr >= 70 %}#10b981{% elif hr >= 50 %}#f59e0b{% else %}#ef4444{% endif %};"></div>
+            </div>
+            <span class="rung-pct">{{ hr | int }}%</span>
+            <span class="rung-odds-val {% if rung.best_over.odds > 0 %}rung-odds-pos{% else %}rung-odds-neg{% endif %}">
+              {% if rung.best_over.odds > 0 %}+{{ rung.best_over.odds }}{% else %}{{ rung.best_over.odds }}{% endif %}
+            </span>
+            <span class="rung-book">{{ rung.best_over.book }}</span>
+            {% if is_best %}<span class="rung-best-tag">value</span>{% endif %}
           </div>
-        {% endfor %}
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% elif play.ladder and play.ladder|length == 1 %}
+    {# Single line — show under options too if model prefers under #}
+    {% set rung = play.ladder[0] %}
+    {% if play.play == 'UNDER' and rung.best_under %}
+    <div class="ladder">
+      <div class="ladder-title">Best Under</div>
+      <div class="rung">
+        <span class="rung-dir rung-dir-under">U</span>
+        <span class="rung-line-val">{{ rung.line }}</span>
+        <div class="rung-bar-wrap">
+          <div class="rung-bar-fill" style="width:{{ rung.under_hit_rate | int }}%;background:#10b981;"></div>
+        </div>
+        <span class="rung-pct">{{ rung.under_hit_rate | int }}%</span>
+        <span class="rung-odds-val {% if rung.best_under.odds > 0 %}rung-odds-pos{% else %}rung-odds-neg{% endif %}">
+          {% if rung.best_under.odds > 0 %}+{{ rung.best_under.odds }}{% else %}{{ rung.best_under.odds }}{% endif %}
+        </span>
+        <span class="rung-book">{{ rung.best_under.book }}</span>
       </div>
     </div>
     {% endif %}
+    {% endif %}
+
+    <div style="text-align:right;margin-top:6px">
+      <span class="chevron" id="chevron-{{ card_id }}">▾ details</span>
+    </div>
   </div>
 
+  {# Expandable details #}
   <div class="card-details" id="details-{{ card_id }}">
     <div class="detail-grid">
-      <div class="detail-item">
-        <div class="detail-label">CSW%</div>
-        <div class="detail-value">{{ "%.1f"|format(play.csw_pct * 100) }}%</div>
-      </div>
       <div class="detail-item">
         <div class="detail-label">K%</div>
         <div class="detail-value">{{ "%.1f"|format(play.k_pct * 100) }}%</div>
@@ -201,6 +485,10 @@
         <div class="detail-value">{{ play.days_rest }}</div>
       </div>
       <div class="detail-item">
+        <div class="detail-label">Opp K%</div>
+        <div class="detail-value">{{ "%.1f"|format(play.opp_k_pct * 100) }}%</div>
+      </div>
+      <div class="detail-item">
         <div class="detail-label">Rolling K (3)</div>
         <div class="detail-value">{{ play.rolling_k_3 }}</div>
       </div>
@@ -212,17 +500,17 @@
 
     {% if play.umpire and play.umpire.name and play.umpire.name != 'Unknown' %}
     <div class="context-row">
-      <div class="context-chip">⚖️ <span>{{ play.umpire.name }}</span> — {{ play.umpire.zone_tendency }}</div>
+      <div class="context-chip">⚖ {{ play.umpire.name }} — {{ play.umpire.zone_tendency }}</div>
     </div>
     {% endif %}
 
     {% if play.weather %}
     <div class="context-row">
       {% if play.weather.indoor %}
-        <div class="context-chip">🏟️ <span>Dome</span></div>
+        <div class="context-chip">🏟 Dome</div>
       {% else %}
-        <div class="context-chip">🌡️ <span>{{ play.weather.temp_f }}°F</span></div>
-        <div class="context-chip">💨 <span>{{ play.weather.wind_mph }} mph</span></div>
+        <div class="context-chip">🌡 {{ play.weather.temp_f }}°F</div>
+        <div class="context-chip">💨 {{ play.weather.wind_mph }} mph</div>
       {% endif %}
     </div>
     {% endif %}
@@ -234,8 +522,8 @@
       <div class="books-list">
         {% for book in odds_list[:5] %}
         <div class="book-chip {% if loop.first %}best{% endif %}">
-          <span class="book-name">{{ book.book }}</span>
-          <span class="book-odds">{% if book.odds > 0 %}+{{ book.odds }}{% else %}{{ book.odds }}{% endif %}</span>
+          {{ book.book }}
+          <strong style="margin-left:4px">{% if book.odds > 0 %}+{{ book.odds }}{% else %}{{ book.odds }}{% endif %}</strong>
         </div>
         {% endfor %}
       </div>
@@ -245,91 +533,117 @@
 </div>
 {% endmacro %}
 
-{# ── PAGE CONTENT ── #}
+{# ── PAGE ── #}
+
+{% set total = data.strong|length + data.moderate|length + data.lean|length + data.no_value|length %}
+{% set plays_count = data.moderate|length + data.lean|length %}
 
 <div class="header">
   <div class="header-top">
     <div class="logo">MLB<span>Sharp</span></div>
-    <div class="date-badge">{{ data.date }}</div>
+    <div class="header-right">
+      <div class="date-text">{{ data.date }}</div>
+      {% if data.generated_at %}<div class="updated-text">Updated {{ data.generated_at }}</div>{% endif %}
+    </div>
   </div>
-  {% if data.generated_at %}
-  <div class="generated">Updated {{ data.generated_at }}</div>
-  {% endif %}
-</div>
 
-{% set total = data.strong|length + data.moderate|length + data.lean|length + data.no_value|length %}
+  <div class="tab-bar">
+    <button class="tab active" onclick="switchTab('strong', this)">
+      Strong <span class="tab-count">{{ data.strong|length }}</span>
+    </button>
+    <button class="tab" onclick="switchTab('plays', this)">
+      Plays <span class="tab-count">{{ plays_count }}</span>
+    </button>
+    <button class="tab" onclick="switchTab('all', this)">
+      All <span class="tab-count">{{ total }}</span>
+    </button>
+  </div>
+</div>
 
 {% if total == 0 %}
 <div class="no-report">
-  <h2>No report yet today</h2>
-  <p>Run <code>python3 run.py</code> on your Mac to generate today's picks.</p>
+  <h2>No report yet</h2>
+  <p>Today's picks will appear here after the morning run.</p>
 </div>
 
 {% else %}
 
-<div class="summary">
-  <div class="summary-pill pill-strong"><div class="pill-dot dot-strong"></div>{{ data.strong|length }} Strong</div>
-  <div class="summary-pill pill-moderate"><div class="pill-dot dot-moderate"></div>{{ data.moderate|length }} Moderate</div>
-  <div class="summary-pill pill-lean"><div class="pill-dot dot-lean"></div>{{ data.lean|length }} Lean</div>
-  <div class="summary-pill pill-pass"><div class="pill-dot dot-pass"></div>{{ data.no_value|length }} Pass</div>
+{# ── STRONG TAB ── #}
+<div id="tab-strong" class="tab-content active">
+  {% if data.strong %}
+    {% if data.parlays %}
+    <div style="height:8px"></div>
+    <div class="parlay-section">
+      <div class="parlay-title">Parlay Suggestions</div>
+      {% for parlay in data.parlays %}
+      <div class="parlay-card">
+        <div class="parlay-legs">{{ parlay.legs }}</div>
+        {% if parlay.books %}<div class="parlay-books">Best books: {{ parlay.books }}</div>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+    <div class="section-label"><span class="label-strong">Strong Plays</span><div class="line"></div></div>
+    {% for play in data.strong %}{{ render_card(play, 'strong') }}{% endfor %}
+  {% else %}
+    <div class="empty-state">
+      <div class="icon">—</div>
+      <h3>No strong plays today</h3>
+      <p>Check the Plays tab for moderate and lean edges.</p>
+    </div>
+  {% endif %}
 </div>
 
-{% if data.strong %}
-<div class="section-header">
-  <span class="section-label label-strong">Strong Plays</span>
-  <div class="section-line"></div>
+{# ── PLAYS TAB ── #}
+<div id="tab-plays" class="tab-content">
+  {% if data.moderate %}
+    <div class="section-label"><span class="label-moderate">Moderate</span><div class="line"></div></div>
+    {% for play in data.moderate %}{{ render_card(play, 'moderate') }}{% endfor %}
+  {% endif %}
+  {% if data.lean %}
+    <div class="section-label"><span class="label-lean">Lean</span><div class="line"></div></div>
+    {% for play in data.lean %}{{ render_card(play, 'lean') }}{% endfor %}
+  {% endif %}
+  {% if not data.moderate and not data.lean %}
+    <div class="empty-state">
+      <div class="icon">—</div>
+      <h3>No plays today</h3>
+      <p>No moderate or lean edges found.</p>
+    </div>
+  {% endif %}
 </div>
-{% for play in data.strong %}{{ render_card(play, 'strong') }}{% endfor %}
-{% endif %}
 
-{% if data.moderate %}
-<div class="section-header">
-  <span class="section-label label-moderate">Moderate Plays</span>
-  <div class="section-line"></div>
-</div>
-{% for play in data.moderate %}{{ render_card(play, 'moderate') }}{% endfor %}
-{% endif %}
-
-{% if data.lean %}
-<div class="section-header">
-  <span class="section-label label-lean">Lean / Monitor</span>
-  <div class="section-line"></div>
-</div>
-{% for play in data.lean %}{{ render_card(play, 'lean') }}{% endfor %}
-{% endif %}
-
-{% if data.parlays %}
-<div class="section-header">
-  <span class="section-label" style="color:#3b82f6">Parlay Suggestions</span>
-  <div class="section-line"></div>
-</div>
-<div class="parlay-section">
-  <div class="parlay-title">Best Combinations</div>
-  {% for parlay in data.parlays %}
-  <div class="parlay-card">
-    <div class="parlay-legs">{{ parlay.legs }}</div>
-    {% if parlay.books %}<div class="parlay-books">Best books: {{ parlay.books }}</div>{% endif %}
-  </div>
+{# ── ALL TAB ── #}
+<div id="tab-all" class="tab-content">
+  <div class="section-label"><span style="color:#8b949e;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">All Starters · Sorted by Projected Ks</span><div class="line"></div></div>
+  {% for play in data.all_pitchers %}
+    {% if play.edge >= 8 %}
+      {{ render_card(play, 'strong') }}
+    {% elif play.edge >= 4 %}
+      {{ render_card(play, 'moderate') }}
+    {% elif play.edge >= 1 %}
+      {{ render_card(play, 'lean') }}
+    {% else %}
+      {{ render_card(play, 'pass') }}
+    {% endif %}
   {% endfor %}
 </div>
-{% endif %}
-
-{% if data.no_value %}
-<div class="section-header">
-  <span class="section-label label-pass">No Value — Pass</span>
-  <div class="section-line"></div>
-</div>
-{% for play in data.no_value %}{{ render_card(play, 'pass') }}{% endfor %}
-{% endif %}
 
 {% endif %}
 
 <script>
+  function switchTab(name, btn) {
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
+    document.getElementById('tab-' + name).classList.add('active');
+    btn.classList.add('active');
+  }
+
   function toggleCard(id) {
     const details = document.getElementById('details-' + id);
     const chevron = document.getElementById('chevron-' + id);
-    if (details) { details.classList.toggle('open'); }
-    if (chevron) { chevron.classList.toggle('open'); }
+    if (details) details.classList.toggle('open');
+    if (chevron) chevron.classList.toggle('open');
   }
 </script>
 </body>

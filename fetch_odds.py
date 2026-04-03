@@ -156,9 +156,12 @@ def get_pitcher_odds(all_props: list[dict], pitcher_name: str, team_abbr: str = 
     """
     Find the best odds for a specific pitcher's strikeout props.
     Matches by pitcher last name, with team abbreviation as tiebreaker.
-    Returns {line, over_odds, under_odds, best_over, best_under}.
+    Returns {line, over_odds, under_odds, best_over, best_under, ladder}.
+    Ladder contains all available K total lines for the pitcher.
     """
-    empty = {"line": 0, "over_odds": [], "under_odds": [], "best_over": None, "best_under": None}
+    from collections import Counter, defaultdict
+
+    empty = {"line": 0, "over_odds": [], "under_odds": [], "best_over": None, "best_under": None, "ladder": []}
     if not all_props:
         return empty
 
@@ -182,25 +185,41 @@ def get_pitcher_odds(all_props: list[dict], pitcher_name: str, team_abbr: str = 
     if not matching:
         return empty
 
-    line = matching[0]["line"]
-    over_odds = [
-        {"book": p["book"], "odds": p["odds"]}
-        for p in matching if p["over_under"] == "Over"
-    ]
-    under_odds = [
-        {"book": p["book"], "odds": p["odds"]}
-        for p in matching if p["over_under"] == "Under"
-    ]
+    # Group all props by line value
+    lines_data = defaultdict(lambda: {"over": [], "under": []})
+    for p in matching:
+        if p["over_under"] == "Over":
+            lines_data[p["line"]]["over"].append({"book": p["book"], "odds": p["odds"]})
+        else:
+            lines_data[p["line"]]["under"].append({"book": p["book"], "odds": p["odds"]})
 
-    best_over = max(over_odds, key=lambda x: x["odds"]) if over_odds else None
-    best_under = max(under_odds, key=lambda x: x["odds"]) if under_odds else None
+    # Main line = most common across books
+    line_counts = Counter(p["line"] for p in matching)
+    main_line = line_counts.most_common(1)[0][0]
+
+    # Build ladder — all available lines sorted ascending
+    ladder = []
+    for line_val in sorted(lines_data.keys()):
+        over = sorted(lines_data[line_val]["over"], key=lambda x: x["odds"], reverse=True)
+        under = sorted(lines_data[line_val]["under"], key=lambda x: x["odds"], reverse=True)
+        ladder.append({
+            "line": line_val,
+            "over_odds": over,
+            "under_odds": under,
+            "best_over": over[0] if over else None,
+            "best_under": under[0] if under else None,
+        })
+
+    main_over = sorted(lines_data[main_line]["over"], key=lambda x: x["odds"], reverse=True)
+    main_under = sorted(lines_data[main_line]["under"], key=lambda x: x["odds"], reverse=True)
 
     return {
-        "line": line,
-        "over_odds": sorted(over_odds, key=lambda x: x["odds"], reverse=True),
-        "under_odds": sorted(under_odds, key=lambda x: x["odds"], reverse=True),
-        "best_over": best_over,
-        "best_under": best_under,
+        "line": main_line,
+        "over_odds": main_over,
+        "under_odds": main_under,
+        "best_over": main_over[0] if main_over else None,
+        "best_under": main_under[0] if main_under else None,
+        "ladder": ladder,
     }
 
 
