@@ -109,7 +109,7 @@ def main():
             print(f"  Scoring: {pitcher_name} ({pitcher_team_abbr}) vs {opp_abbr}...", end="", flush=True)
 
             try:
-                p_stats = fetch_pitcher_stats(pitcher_id, pitcher_name)
+                p_stats = fetch_pitcher_stats(pitcher_id, pitcher_name, pitcher_team_abbr)
             except Exception as e:
                 print(f" [pitcher stats error: {e}]")
                 continue
@@ -122,6 +122,18 @@ def main():
 
             # Match odds by pitcher name AND team
             odds = get_pitcher_odds(all_props, pitcher_name, pitcher_team_abbr)
+
+            # Starter change detection — if no odds found, check if a different pitcher
+            # from the same team has odds (indicates probable starter may have changed)
+            if odds["line"] == 0 and all_props:
+                team_props = [
+                    p["pitcher_name"] for p in all_props
+                    if p.get("home_abbr") == pitcher_team_abbr or p.get("away_abbr") == pitcher_team_abbr
+                ]
+                team_props = list(set(team_props))
+                if team_props:
+                    print(f"\n  [STARTER CHANGE?] No odds for {pitcher_name} ({pitcher_team_abbr}) "
+                          f"but odds exist for: {', '.join(team_props)} — probable starter may have changed")
 
             try:
                 result = score_matchup(

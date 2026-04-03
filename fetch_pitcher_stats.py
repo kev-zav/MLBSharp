@@ -166,7 +166,19 @@ def calc_swstr_trend(df: pd.DataFrame) -> float:
     return round(last3_swstr - season_swstr, 4)
 
 
-def get_fangraphs_stats(pitcher_name: str) -> dict:
+# Map MLB Stats API abbreviations to FanGraphs team names for disambiguation
+_MLB_TO_FG_TEAM = {
+    "AZ": "ARI", "ARI": "ARI", "ATL": "ATL", "BAL": "BAL", "BOS": "BOS",
+    "CHC": "CHC", "CWS": "CHW", "CIN": "CIN", "CLE": "CLE", "COL": "COL",
+    "DET": "DET", "HOU": "HOU", "KC": "KCR", "LAA": "LAA", "LAD": "LAD",
+    "MIA": "MIA", "MIL": "MIL", "MIN": "MIN", "NYM": "NYM", "NYY": "NYY",
+    "ATH": "OAK", "OAK": "OAK", "PHI": "PHI", "PIT": "PIT", "SD": "SDP",
+    "SF": "SFG", "SEA": "SEA", "STL": "STL", "TB": "TBR", "TEX": "TEX",
+    "TOR": "TOR", "WSH": "WSN",
+}
+
+
+def get_fangraphs_stats(pitcher_name: str, team_abbr: str = "") -> dict:
     """Pull season-level K%, K/9 from FanGraphs via pybaseball."""
     cache_key = f"fg_{pitcher_name}_{SEASON}"
     if cache_key in _cache:
@@ -179,14 +191,32 @@ def get_fangraphs_stats(pitcher_name: str) -> dict:
             _cache[cache_key] = defaults
             return defaults
 
-        # Try to match by name
+        # Match by last name first
         name_parts = pitcher_name.strip().split()
         if len(name_parts) >= 2:
             mask = stats["Name"].str.contains(name_parts[-1], case=False, na=False)
             match = stats[mask]
+
+            # Narrow by first name if multiple hits
             if len(match) > 1:
                 mask2 = match["Name"].str.contains(name_parts[0], case=False, na=False)
-                match = match[mask2]
+                if mask2.any():
+                    match = match[mask2]
+
+            # Narrow by team if still multiple hits
+            if len(match) > 1 and team_abbr:
+                fg_team = _MLB_TO_FG_TEAM.get(team_abbr, team_abbr)
+                team_col = next((c for c in ["Team", "Tm", "team"] if c in match.columns), None)
+                if team_col:
+                    team_mask = match[team_col].astype(str).str.contains(fg_team, case=False, na=False)
+                    if team_mask.any():
+                        match = match[team_mask]
+                    else:
+                        print(f"  [FG] {pitcher_name}: team {fg_team} not found among {len(match)} matches — picking first")
+
+            if len(match) > 1:
+                print(f"  [FG] {pitcher_name}: {len(match)} matches after filtering, using first result")
+
             if not match.empty:
                 row = match.iloc[0]
                 k_pct = row.get("K%", 0)
@@ -195,7 +225,7 @@ def get_fangraphs_stats(pitcher_name: str) -> dict:
                 result = {
                     "k_pct": round(float(k_pct), 4),
                     "k_per_9": round(float(row.get("K/9", 0)), 2),
-                    "xk_pct": round(float(k_pct), 4),  # FG doesn't always have xK%
+                    "xk_pct": round(float(k_pct), 4),
                 }
                 _cache[cache_key] = result
                 return result
@@ -253,21 +283,27 @@ def _sanitize(stats: dict) -> dict:
     return stats
 
 
-def fetch_pitcher_stats(pitcher_id: int, pitcher_name: str) -> dict:
+def fetch_pitcher_stats(pitcher_id: int, pitcher_name: str, team_abbr: str = "") -> dict:
     """
     Main entry point. Returns a complete pitcher stats dict.
     """
     df = get_statcast_data(pitcher_id)
     game_logs = get_game_logs(df)
-    fg = get_fangraphs_stats(pitcher_name)
+    fg = get_fangraphs_stats(pitcher_name, team_abbr)
+
+    # Sample size check — fewer than 3 starts means rate stats are unreliable
+    num_starts = df["game_date"].nunique() if not df.empty and "game_date" in df.columns else 0
+    if num_starts < 3:
+        print(f"  [SAMPLE] {pitcher_name}: only {num_starts} starts in Statcast data — rate stats unreliable, using league averages")
 
     last_outing_pitches = game_logs[-1]["pitches"] if game_logs else 0
 
     stats = {
         "pitcher_id": pitcher_id,
         "pitcher_name": pitcher_name,
-        "swstr_pct": calc_swstr_pct(df),
-        "csw_pct": calc_csw_pct(df),
+        "num_starts": num_starts,
+        "swstr_pct": calc_swstr_pct(df) if num_starts >= 3 else LEAGUE_AVG_SWSTR,
+        "csw_pct": calc_csw_pct(df) if num_starts >= 3 else 0.0,
         "whiff_by_pitch": calc_whiff_by_pitch(df),
         "velocity": calc_velocity_trend(df),
         "k_pct": fg["k_pct"],
