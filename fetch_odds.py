@@ -110,6 +110,7 @@ def fetch_strikeout_odds() -> tuple[list[dict], str | None]:
                 "regions": "us",
                 "markets": "pitcher_strikeouts",
                 "oddsFormat": "american",
+                "bookmakers": "fanduel,draftkings,thescorebet,bet365",
             }, timeout=15)
             resp.raise_for_status()
             remaining = resp.headers.get("x-requests-remaining", remaining)
