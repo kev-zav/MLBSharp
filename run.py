@@ -7,11 +7,61 @@ Usage: python run.py [--date YYYY-MM-DD]
 import os
 import sys
 import time
+import pickle
 from datetime import date
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(SCRIPT_DIR, "model.pkl")
 
 from config import PARK_FACTOR_DEFAULT
+
+# XGBoost feature order must match what tune_model.py trained on
+_XGB_FEATURES = [
+    "swstr_pct", "csw_pct", "k_pct", "opp_k_pct_vs_hand", "o_swing_pct",
+    "park_factor", "ump_adjustment", "weather_temp", "weather_wind",
+    "days_rest", "pitch_count_last_outing", "rolling_k_avg_3", "rolling_k_avg_5",
+]
+
+
+def _load_xgb_model():
+    """Load XGBoost model if available. Returns (model, features) or (None, None)."""
+    try:
+        with open(MODEL_PATH, "rb") as f:
+            data = pickle.load(f)
+        model = data["model"]
+        features = data["features"]
+        rows = data.get("train_rows", "?")
+        mae = data.get("cv_mae", data.get("train_mae", "?"))
+        print(f"  [XGB] Loaded model.pkl — trained on {rows} rows, CV MAE: {mae:.2f}")
+        return model, features
+    except FileNotFoundError:
+        return None, None
+    except Exception as e:
+        print(f"  [XGB] Failed to load model.pkl: {e}")
+        return None, None
+
+
+def _xgb_predict(model, features, p_stats, l_stats, park_factor, weather, umpire):
+    """Use XGBoost model to predict Ks. Returns float or None if inputs incomplete."""
+    import numpy as np
+    row = {
+        "swstr_pct": p_stats.get("swstr_pct", 0),
+        "csw_pct": p_stats.get("csw_pct", 0),
+        "k_pct": p_stats.get("k_pct", 0),
+        "opp_k_pct_vs_hand": l_stats.get("team_k_pct", 0),
+        "o_swing_pct": l_stats.get("o_swing_pct", 0),
+        "park_factor": park_factor,
+        "ump_adjustment": umpire.get("adjustment", 1.0),
+        "weather_temp": weather.get("temp_f", 72),
+        "weather_wind": weather.get("wind_mph", 0),
+        "days_rest": p_stats.get("days_rest", 5),
+        "pitch_count_last_outing": p_stats.get("last_outing_pitches", 0),
+        "rolling_k_avg_3": p_stats.get("rolling_k_3", 0),
+        "rolling_k_avg_5": p_stats.get("rolling_k_5", 0),
+    }
+    X = np.array([[row[f] for f in features]])
+    pred = float(model.predict(X)[0])
+    return round(max(0.5, min(14.0, pred)), 1)
 
 
 def main():
@@ -25,6 +75,9 @@ def main():
     print(f"\n{'='*50}")
     print(f"  MLB STRIKEOUT SHARP — Loading data...")
     print(f"{'='*50}\n")
+
+    # Load XGBoost model if available
+    xgb_model, xgb_features = _load_xgb_model()
 
     # Step 1: Fetch odds FIRST to determine the target date
     print("[1/6] Fetching strikeout odds...")
@@ -145,6 +198,20 @@ def main():
             except Exception as e:
                 print(f" [scoring error: {e}]")
                 continue
+
+            # Override projected_ks with XGBoost if model is loaded
+            if xgb_model is not None:
+                xgb_proj = _xgb_predict(
+                    xgb_model, xgb_features, p_stats, l_stats,
+                    PARK_FACTOR_DEFAULT, weather, umpire,
+                )
+                if xgb_proj is not None:
+                    result["projected_ks"] = xgb_proj
+                    result["projection_source"] = "xgboost"
+                else:
+                    result["projection_source"] = "manual"
+            else:
+                result["projection_source"] = "manual"
 
             # Calculate hit rate, edge, and fair value for each ladder rung
             from score_matchups import calc_hit_rate, calc_edge, calc_fair_value_odds
