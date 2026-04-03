@@ -438,7 +438,9 @@
 
 {# ── PAGE ── #}
 {% set total = data.strong|length + data.moderate|length + data.lean|length + data.no_value|length %}
-{% set plays_count = data.moderate|length + data.lean|length %}
+{% set power_count = data.strong|length %}
+{% set other_plays = data.moderate + data.lean + data.no_value %}
+{% set other_count = other_plays|length %}
 
 <div class="header">
   <div class="header-top">
@@ -461,8 +463,8 @@
 
 {% else %}
 
-{# ── STRONG TAB ── #}
-<div id="tab-strong" class="tab-content active">
+{# ── POWER PLAYS TAB ── #}
+<div id="tab-power" class="tab-content active">
   <div class="spacer"></div>
   {% if data.parlays %}
   <div class="parlay-section">
@@ -477,79 +479,56 @@
   {% endif %}
   {% if data.strong %}
     <div class="section-label">
-      <span class="section-label-text" style="color:#10b981">Strong Plays</span>
+      <span class="section-label-text" style="color:#10b981">Power Plays</span>
       <div class="section-line"></div>
     </div>
     {% for play in data.strong %}{{ render_card(play) }}{% endfor %}
   {% else %}
     <div class="empty-state">
       <div class="empty-icon">⚡</div>
-      <div class="empty-title">No strong plays today</div>
-      <div class="empty-sub">Check the Plays tab for moderate edges.</div>
+      <div class="empty-title">No power plays today</div>
+      <div class="empty-sub">Check Other Projections for smaller edges.</div>
     </div>
   {% endif %}
 </div>
 
-{# ── PLAYS TAB ── #}
-<div id="tab-plays" class="tab-content">
+{# ── OTHER PROJECTIONS TAB ── #}
+<div id="tab-other" class="tab-content">
   <div class="spacer"></div>
-  {% if data.moderate %}
+  {% if other_plays %}
     <div class="section-label">
-      <span class="section-label-text" style="color:#f59e0b">Moderate</span>
+      <span class="section-label-text" style="color:var(--text-muted)">Other Projections · By Grade</span>
       <div class="section-line"></div>
     </div>
-    {% for play in data.moderate %}{{ render_card(play) }}{% endfor %}
-  {% endif %}
-  {% if data.lean %}
-    <div class="section-label">
-      <span class="section-label-text" style="color:#8b5cf6">Lean</span>
-      <div class="section-line"></div>
-    </div>
-    {% for play in data.lean %}{{ render_card(play) }}{% endfor %}
-  {% endif %}
-  {% if not data.moderate and not data.lean %}
+    {% for play in other_plays | sort(attribute='edge', reverse=True) %}{{ render_card(play) }}{% endfor %}
+  {% else %}
     <div class="empty-state">
       <div class="empty-icon">📊</div>
-      <div class="empty-title">No plays today</div>
-      <div class="empty-sub">No moderate or lean edges found.</div>
+      <div class="empty-title">No other projections</div>
+      <div class="empty-sub">All plays are in Power Plays today.</div>
     </div>
   {% endif %}
-</div>
-
-{# ── ALL TAB ── #}
-<div id="tab-all" class="tab-content">
-  <div class="spacer"></div>
-  <div class="section-label">
-    <span class="section-label-text" style="color:var(--text-muted)">All Starters · By Projected Ks</span>
-    <div class="section-line"></div>
-  </div>
-  {% for play in data.all_pitchers %}{{ render_card(play) }}{% endfor %}
 </div>
 
 {% endif %}
 
 {# ── BOTTOM NAV ── #}
 <div class="bottom-nav">
-  <button class="nav-btn active" id="nav-strong" onclick="switchTab('strong', this)">
+  <button class="nav-btn active" id="nav-power" onclick="switchTab('power', this)">
     <span class="nav-icon">⚡</span>
-    <span>Strong</span>
-    <span class="nav-count">{{ data.strong|length }}</span>
+    <span>Power Plays</span>
+    <span class="nav-count">{{ power_count }}</span>
   </button>
-  <button class="nav-btn" id="nav-plays" onclick="switchTab('plays', this)">
-    <span class="nav-icon">📈</span>
-    <span>Plays</span>
-    <span class="nav-count">{{ plays_count }}</span>
-  </button>
-  <button class="nav-btn" id="nav-all" onclick="switchTab('all', this)">
-    <span class="nav-icon">⚾</span>
-    <span>All</span>
-    <span class="nav-count">{{ total }}</span>
+  <button class="nav-btn" id="nav-other" onclick="switchTab('other', this)">
+    <span class="nav-icon">📊</span>
+    <span>Other</span>
+    <span class="nav-count">{{ other_count }}</span>
   </button>
 </div>
 
 <script>
   function switchTab(name, btn) {
-    ['strong','plays','all'].forEach(t => {
+    ['power','other'].forEach(t => {
       document.getElementById('tab-' + t).classList.remove('active');
       document.getElementById('nav-' + t).classList.remove('active');
     });

@@ -2,10 +2,16 @@
 Fetch pitcher Statcast and FanGraphs stats via pybaseball.
 Returns SwStr%, CSW%, K%, K/9, Whiff% by pitch, velocity trends,
 rolling K averages, pitch count, and days rest.
+
+K% source priority:
+  1. FanGraphs (disk-cached, refreshed every 24h)
+  2. Savant-derived K% from Statcast pitch data (fallback when FanGraphs is blocked)
 """
 
+import json
+import os
 import warnings
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 
 import pandas as pd
 from pybaseball import (
@@ -13,12 +19,32 @@ from pybaseball import (
     statcast_pitcher,
     pitching_stats,
 )
-from config import SEASON, LEAGUE_AVG_SWSTR
+from config import SEASON, LEAGUE_AVG_SWSTR, LEAGUE_AVG_K_PCT
 
 warnings.filterwarnings("ignore")
 
-# Cache to avoid redundant pybaseball calls within a session
+# In-memory cache for Statcast data
 _cache: dict[str, any] = {}
+
+# Disk cache for FanGraphs data (avoids repeated scraping)
+_FG_CACHE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fg_cache.json")
+_FG_CACHE_TTL_HOURS = 24
+
+
+def _load_fg_disk_cache() -> dict:
+    try:
+        with open(_FG_CACHE_PATH) as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+
+def _save_fg_disk_cache(cache: dict) -> None:
+    try:
+        with open(_FG_CACHE_PATH, "w") as f:
+            json.dump(cache, f, indent=2)
+    except Exception:
+        pass
 
 
 def _mlb_id_to_fangraphs_name(pitcher_name: str) -> tuple[str, str]:
@@ -30,7 +56,7 @@ def _mlb_id_to_fangraphs_name(pitcher_name: str) -> tuple[str, str]:
 
 
 def get_statcast_data(pitcher_id: int, days_back: int = 60) -> pd.DataFrame:
-    """Pull recent Statcast pitch-level data for a pitcher."""
+    """Pull recent Statcast pitch-level data for a pitcher (regular season only)."""
     cache_key = f"sc_{pitcher_id}_{days_back}"
     if cache_key in _cache:
         return _cache[cache_key]
@@ -46,6 +72,10 @@ def get_statcast_data(pitcher_id: int, days_back: int = 60) -> pd.DataFrame:
     except Exception:
         df = pd.DataFrame()
 
+    # Filter to regular season only (exclude spring training, exhibitions)
+    if not df.empty and "game_type" in df.columns:
+        df = df[df["game_type"] == "R"].copy()
+
     _cache[cache_key] = df
     return df
 
@@ -57,7 +87,7 @@ def calc_swstr_pct(df: pd.DataFrame) -> float:
     total = len(df)
     swinging_strikes = len(df[df["description"].isin([
         "swinging_strike", "swinging_strike_blocked",
-        "foul_tip",  # foul tips are Ks
+        "foul_tip",
     ])])
     return round(swinging_strikes / total, 4) if total else LEAGUE_AVG_SWSTR
 
@@ -72,6 +102,20 @@ def calc_csw_pct(df: pd.DataFrame) -> float:
         "foul_tip",
     ])])
     return round(csw / total, 4) if total else 0.0
+
+
+def calc_pitch_usage(df: pd.DataFrame) -> dict[str, float]:
+    """Pitch usage % by pitch type."""
+    if df.empty or "pitch_type" not in df.columns:
+        return {}
+    valid = df[df["pitch_type"].notna() & (df["pitch_type"] != "")]
+    total = len(valid)
+    if total == 0:
+        return {}
+    usage = {}
+    for pt, grp in valid.groupby("pitch_type"):
+        usage[str(pt)] = round(len(grp) / total, 4)
+    return usage
 
 
 def calc_whiff_by_pitch(df: pd.DataFrame) -> dict[str, float]:
@@ -108,7 +152,6 @@ def calc_velocity_trend(df: pd.DataFrame) -> dict:
 
     avg_velo = round(fb_recent["release_speed"].mean(), 1)
 
-    # Trend: compare last 2 games vs first 2 games in window
     if len(dates) >= 4:
         early = fb[fb["game_date"].isin(dates[:2])]["release_speed"].mean()
         late = fb[fb["game_date"].isin(dates[-2:])]["release_speed"].mean()
@@ -166,6 +209,20 @@ def calc_swstr_trend(df: pd.DataFrame) -> float:
     return round(last3_swstr - season_swstr, 4)
 
 
+def calc_k_pct_from_statcast(df: pd.DataFrame) -> float:
+    """
+    Derive K% directly from Statcast pitch data as a FanGraphs fallback.
+    K% = strikeouts / total plate appearances.
+    """
+    if df.empty:
+        return 0.0
+    pa = df[df["events"].notna() & (df["events"] != "")]
+    if len(pa) < 5:
+        return 0.0
+    ks = len(pa[pa["events"] == "strikeout"])
+    return round(ks / len(pa), 4)
+
+
 # Map MLB Stats API abbreviations to FanGraphs team names for disambiguation
 _MLB_TO_FG_TEAM = {
     "AZ": "ARI", "ARI": "ARI", "ATL": "ATL", "BAL": "BAL", "BOS": "BOS",
@@ -178,76 +235,162 @@ _MLB_TO_FG_TEAM = {
 }
 
 
-def get_fangraphs_stats(pitcher_name: str, team_abbr: str = "") -> dict:
-    """Pull season-level K%, K/9 from FanGraphs via pybaseball."""
-    cache_key = f"fg_{pitcher_name}_{SEASON}"
+def get_prior_season_k_pct(pitcher_id: int, pitcher_name: str = "") -> float:
+    """
+    Pull prior season K% from Statcast as a regression anchor.
+    Returns LEAGUE_AVG_K_PCT if no prior data exists (rookies, etc).
+    """
+    prior_season = SEASON - 1
+    cache_key = f"prior_{pitcher_id}_{prior_season}"
+
+    # Check in-memory cache
     if cache_key in _cache:
         return _cache[cache_key]
 
+    # Check disk cache
+    disk_cache = _load_fg_disk_cache()
+    entry = disk_cache.get(cache_key)
+    if entry:
+        _cache[cache_key] = entry["data"]
+        return entry["data"]
+
+    # Pull from Statcast
+    try:
+        df = statcast_pitcher(
+            f"{prior_season}-03-01",
+            f"{prior_season}-11-30",
+            pitcher_id,
+        )
+        if not df.empty and "game_type" in df.columns:
+            df = df[df["game_type"] == "R"]
+
+        k_pct = calc_k_pct_from_statcast(df)
+        result = k_pct if k_pct > 0 else LEAGUE_AVG_K_PCT
+
+        if k_pct > 0 and pitcher_name:
+            print(f"  [PRIOR] {pitcher_name}: {prior_season} K% = {k_pct:.1%} (anchor)")
+    except Exception:
+        result = LEAGUE_AVG_K_PCT
+
+    # Cache to disk (prior season data never changes — no TTL needed)
+    disk_cache[cache_key] = {"timestamp": datetime.now().isoformat(), "data": result}
+    _save_fg_disk_cache(disk_cache)
+    _cache[cache_key] = result
+    return result
+
+
+def _regress_k_pct(k_pct: float, ip: float, pitcher_name: str = "", anchor: float = LEAGUE_AVG_K_PCT) -> float:
+    """
+    Regress K% toward an anchor weighted by innings pitched.
+    Anchor defaults to league average but uses prior season K% when available.
+    """
+    regression_ip = 40.0
+    regressed = (k_pct * ip + anchor * regression_ip) / (ip + regression_ip)
+    if ip < 20 and abs(k_pct - anchor) > 0.05:
+        print(f"  [REGRESS] {pitcher_name}: K% {k_pct:.1%} on {ip:.0f} IP "
+              f"→ regressed to {regressed:.1%} (anchor: {anchor:.1%})")
+    return round(regressed, 4)
+
+
+def get_fangraphs_stats(pitcher_name: str, team_abbr: str = "", statcast_df: pd.DataFrame = None, pitcher_id: int = 0) -> dict:
+    """
+    Pull season-level K%, K/9 from FanGraphs via pybaseball.
+    Uses disk cache to avoid repeated requests (refreshed every 24h).
+    Falls back to Savant-derived K% when FanGraphs is blocked.
+    """
+    cache_key = f"{pitcher_name}_{SEASON}"
     defaults = {"k_pct": 0.0, "k_per_9": 0.0, "xk_pct": 0.0}
+
+    # Check in-memory cache first
+    mem_key = f"fg_{cache_key}"
+    if mem_key in _cache:
+        return _cache[mem_key]
+
+    # Check disk cache
+    disk_cache = _load_fg_disk_cache()
+    entry = disk_cache.get(cache_key)
+    if entry:
+        age_hours = (datetime.now() - datetime.fromisoformat(entry["timestamp"])).total_seconds() / 3600
+        if age_hours < _FG_CACHE_TTL_HOURS:
+            _cache[mem_key] = entry["data"]
+            return entry["data"]
+
+    # Fetch prior season K% to use as regression anchor (better than league average)
+    anchor = get_prior_season_k_pct(pitcher_id, pitcher_name) if pitcher_id else LEAGUE_AVG_K_PCT
+
+    # Try FanGraphs
+    result = None
     try:
         stats = pitching_stats(SEASON, SEASON, qual=1)
-        if stats.empty:
-            _cache[cache_key] = defaults
-            return defaults
+        if not stats.empty:
+            name_parts = pitcher_name.strip().split()
+            if len(name_parts) >= 2:
+                mask = stats["Name"].str.contains(name_parts[-1], case=False, na=False)
+                match = stats[mask]
 
-        # Match by last name first
-        name_parts = pitcher_name.strip().split()
-        if len(name_parts) >= 2:
-            mask = stats["Name"].str.contains(name_parts[-1], case=False, na=False)
-            match = stats[mask]
+                if len(match) > 1:
+                    mask2 = match["Name"].str.contains(name_parts[0], case=False, na=False)
+                    if mask2.any():
+                        match = match[mask2]
 
-            # Narrow by first name if multiple hits
-            if len(match) > 1:
-                mask2 = match["Name"].str.contains(name_parts[0], case=False, na=False)
-                if mask2.any():
-                    match = match[mask2]
+                if len(match) > 1 and team_abbr:
+                    fg_team = _MLB_TO_FG_TEAM.get(team_abbr, team_abbr)
+                    team_col = next((c for c in ["Team", "Tm", "team"] if c in match.columns), None)
+                    if team_col:
+                        team_mask = match[team_col].astype(str).str.contains(fg_team, case=False, na=False)
+                        if team_mask.any():
+                            match = match[team_mask]
 
-            # Narrow by team if still multiple hits
-            if len(match) > 1 and team_abbr:
-                fg_team = _MLB_TO_FG_TEAM.get(team_abbr, team_abbr)
-                team_col = next((c for c in ["Team", "Tm", "team"] if c in match.columns), None)
-                if team_col:
-                    team_mask = match[team_col].astype(str).str.contains(fg_team, case=False, na=False)
-                    if team_mask.any():
-                        match = match[team_mask]
-                    else:
-                        print(f"  [FG] {pitcher_name}: team {fg_team} not found among {len(match)} matches — picking first")
+                if len(match) > 1:
+                    print(f"  [FG] {pitcher_name}: {len(match)} matches, using first")
 
-            if len(match) > 1:
-                print(f"  [FG] {pitcher_name}: {len(match)} matches after filtering, using first result")
-
-            if not match.empty:
-                row = match.iloc[0]
-                k_pct = row.get("K%", 0)
-                if isinstance(k_pct, str):
-                    k_pct = float(k_pct.strip("% ")) / 100
-                k_pct = float(k_pct)
-
-                # Regress K% toward league average based on innings pitched
-                # Prevents absurd early-season rates like 47% from 1 good start
-                ip = float(row.get("IP", 0) or 0)
-                regression_ip = 40.0  # ~8 starts before we trust the rate
-                regressed_k_pct = (k_pct * ip + LEAGUE_AVG_K_PCT * regression_ip) / (ip + regression_ip)
-
-                if ip < 20 and abs(k_pct - LEAGUE_AVG_K_PCT) > 0.08:
-                    print(f"  [REGRESS] {pitcher_name}: K% {k_pct:.1%} on {ip:.0f} IP "
-                          f"→ regressed to {regressed_k_pct:.1%}")
-
-                result = {
-                    "k_pct": round(regressed_k_pct, 4),
-                    "k_per_9": round(float(row.get("K/9", 0)), 2),
-                    "xk_pct": round(regressed_k_pct, 4),
-                    "k_pct_raw": round(k_pct, 4),
-                    "ip": ip,
-                }
-                _cache[cache_key] = result
-                return result
+                if not match.empty:
+                    row = match.iloc[0]
+                    k_pct = row.get("K%", 0)
+                    if isinstance(k_pct, str):
+                        k_pct = float(k_pct.strip("% ")) / 100
+                    k_pct = float(k_pct)
+                    ip = float(row.get("IP", 0) or 0)
+                    regressed = _regress_k_pct(k_pct, ip, pitcher_name, anchor=anchor)
+                    result = {
+                        "k_pct": regressed,
+                        "k_per_9": round(float(row.get("K/9", 0)), 2),
+                        "xk_pct": regressed,
+                        "k_pct_raw": round(k_pct, 4),
+                        "ip": ip,
+                        "source": "fangraphs",
+                    }
     except Exception:
         pass
 
-    _cache[cache_key] = defaults
-    return defaults
+    # Fallback: derive K% from Statcast if FanGraphs failed
+    if result is None and statcast_df is not None and not statcast_df.empty:
+        sc_k_pct = calc_k_pct_from_statcast(statcast_df)
+        if sc_k_pct > 0:
+            pa = statcast_df[statcast_df["events"].notna() & (statcast_df["events"] != "")]
+            ip_estimate = len(pa) / 3.0
+            regressed = _regress_k_pct(sc_k_pct, ip_estimate, pitcher_name, anchor=anchor)
+            print(f"  [SAVANT K%] {pitcher_name}: {sc_k_pct:.1%} from Statcast → regressed {regressed:.1%} (anchor: {anchor:.1%})")
+            result = {
+                "k_pct": regressed,
+                "k_per_9": round(regressed * 27, 2),  # approximate K/9
+                "xk_pct": regressed,
+                "k_pct_raw": round(sc_k_pct, 4),
+                "ip": round(ip_estimate, 1),
+                "source": "savant",
+            }
+
+    if result is None:
+        result = defaults
+
+    # Save to disk cache
+    disk_cache[cache_key] = {
+        "timestamp": datetime.now().isoformat(),
+        "data": result,
+    }
+    _save_fg_disk_cache(disk_cache)
+    _cache[mem_key] = result
+    return result
 
 
 def get_pitcher_hand(df: pd.DataFrame) -> str:
@@ -261,20 +404,20 @@ def get_pitcher_hand(df: pd.DataFrame) -> str:
 def get_days_rest(game_logs: list[dict]) -> int:
     """Days since last start."""
     if not game_logs:
-        return 5  # default assumption
+        return 5
     last_date = game_logs[-1]["date"]
     if hasattr(last_date, "date"):
         last_date = last_date.date()
     return (date.today() - last_date).days
 
 
-# Reasonable bounds for pitcher stats — anything outside these is a data error
+# Reasonable bounds for pitcher stats
 _STAT_BOUNDS = {
-    "k_pct":    (0.05, 0.35),   # best in MLB history ~35%
+    "k_pct":    (0.05, 0.35),
     "xk_pct":   (0.05, 0.35),
-    "swstr_pct": (0.03, 0.20),  # elite is ~17-18%
+    "swstr_pct": (0.03, 0.20),
     "csw_pct":  (0.10, 0.40),
-    "rolling_k_3": (0.0, 13.0), # no starter averages 13+ Ks over 3 starts
+    "rolling_k_3": (0.0, 13.0),
     "rolling_k_5": (0.0, 13.0),
 }
 
@@ -303,9 +446,8 @@ def fetch_pitcher_stats(pitcher_id: int, pitcher_name: str, team_abbr: str = "")
     """
     df = get_statcast_data(pitcher_id)
     game_logs = get_game_logs(df)
-    fg = get_fangraphs_stats(pitcher_name, team_abbr)
+    fg = get_fangraphs_stats(pitcher_name, team_abbr, statcast_df=df, pitcher_id=pitcher_id)
 
-    # Sample size check — fewer than 3 starts means rate stats are unreliable
     num_starts = df["game_date"].nunique() if not df.empty and "game_date" in df.columns else 0
     if num_starts < 3:
         print(f"  [SAMPLE] {pitcher_name}: only {num_starts} starts in Statcast data — rate stats unreliable, using league averages")
@@ -319,6 +461,7 @@ def fetch_pitcher_stats(pitcher_id: int, pitcher_name: str, team_abbr: str = "")
         "swstr_pct": calc_swstr_pct(df) if num_starts >= 3 else LEAGUE_AVG_SWSTR,
         "csw_pct": calc_csw_pct(df) if num_starts >= 3 else 0.0,
         "whiff_by_pitch": calc_whiff_by_pitch(df),
+        "pitch_usage": calc_pitch_usage(df),
         "velocity": calc_velocity_trend(df),
         "k_pct": fg["k_pct"],
         "k_per_9": fg["k_per_9"],
@@ -330,13 +473,13 @@ def fetch_pitcher_stats(pitcher_id: int, pitcher_name: str, team_abbr: str = "")
         "days_rest": get_days_rest(game_logs),
         "pitcher_hand": get_pitcher_hand(df),
         "game_logs": game_logs,
+        "k_pct_source": fg.get("source", "unknown"),
     }
 
     return _sanitize(stats)
 
 
 if __name__ == "__main__":
-    # Test with a known pitcher — Corbin Burnes (MLB ID 669203)
     stats = fetch_pitcher_stats(669203, "Corbin Burnes")
     print("Corbin Burnes stats:")
     for k, v in stats.items():

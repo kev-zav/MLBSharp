@@ -65,26 +65,27 @@ def _get_ump_profile(ump_name: str) -> dict:
     if cache_key in _cache:
         return _cache[cache_key]
 
-    # Known umpire tendencies (from UmpScorecards historical data)
-    # Positive favor_k = larger zone / more called strikes
+    # Known umpire tendencies — dampened 50% for 2026 ABS challenge system.
+    # Human ump still calls every pitch but egregious miscalls can be challenged,
+    # reducing zone variance impact. Pre-ABS values halved across the board.
     KNOWN_UMPS = {
-        "Angel Hernandez": {"favor_k": -0.02, "zone_tendency": "Erratic / Tight"},
-        "CB Bucknor": {"favor_k": -0.01, "zone_tendency": "Erratic"},
-        "Joe West": {"favor_k": 0.02, "zone_tendency": "Expanded"},
-        "Doug Eddings": {"favor_k": 0.02, "zone_tendency": "Expanded"},
-        "Ron Kulpa": {"favor_k": 0.015, "zone_tendency": "Slightly Expanded"},
-        "Lance Barksdale": {"favor_k": 0.02, "zone_tendency": "Expanded"},
-        "Marvin Hudson": {"favor_k": 0.015, "zone_tendency": "Slightly Expanded"},
-        "Todd Tichenor": {"favor_k": -0.01, "zone_tendency": "Tight"},
+        "Angel Hernandez": {"favor_k": -0.010, "zone_tendency": "Erratic / Tight"},
+        "CB Bucknor": {"favor_k": -0.005, "zone_tendency": "Erratic"},
+        "Joe West": {"favor_k": 0.010, "zone_tendency": "Expanded"},
+        "Doug Eddings": {"favor_k": 0.010, "zone_tendency": "Expanded"},
+        "Ron Kulpa": {"favor_k": 0.008, "zone_tendency": "Slightly Expanded"},
+        "Lance Barksdale": {"favor_k": 0.010, "zone_tendency": "Expanded"},
+        "Marvin Hudson": {"favor_k": 0.008, "zone_tendency": "Slightly Expanded"},
+        "Todd Tichenor": {"favor_k": -0.005, "zone_tendency": "Tight"},
         "Pat Hoberg": {"favor_k": 0.0, "zone_tendency": "Accurate"},
-        "Nic Lentz": {"favor_k": 0.01, "zone_tendency": "Slightly Expanded"},
-        "Dan Bellino": {"favor_k": 0.02, "zone_tendency": "Expanded"},
-        "Tripp Gibson": {"favor_k": 0.01, "zone_tendency": "Slightly Expanded"},
-        "John Tumpane": {"favor_k": -0.01, "zone_tendency": "Slightly Tight"},
+        "Nic Lentz": {"favor_k": 0.005, "zone_tendency": "Slightly Expanded"},
+        "Dan Bellino": {"favor_k": 0.010, "zone_tendency": "Expanded"},
+        "Tripp Gibson": {"favor_k": 0.005, "zone_tendency": "Slightly Expanded"},
+        "John Tumpane": {"favor_k": -0.005, "zone_tendency": "Slightly Tight"},
         "Mark Carlson": {"favor_k": 0.0, "zone_tendency": "Neutral"},
-        "Alan Porter": {"favor_k": 0.01, "zone_tendency": "Slightly Expanded"},
-        "Chris Guccione": {"favor_k": -0.015, "zone_tendency": "Tight"},
-        "Bill Miller": {"favor_k": 0.01, "zone_tendency": "Slightly Expanded"},
+        "Alan Porter": {"favor_k": 0.005, "zone_tendency": "Slightly Expanded"},
+        "Chris Guccione": {"favor_k": -0.008, "zone_tendency": "Tight"},
+        "Bill Miller": {"favor_k": 0.005, "zone_tendency": "Slightly Expanded"},
     }
 
     if ump_name in KNOWN_UMPS:

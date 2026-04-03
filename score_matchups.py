@@ -13,6 +13,48 @@ from config import (
 )
 
 
+# League average whiff rates by pitch type (Statcast 2023-2025 baselines)
+_LEAGUE_WHIFF_BY_PITCH = {
+    "FF": 0.22, "SI": 0.17, "FC": 0.23,
+    "SL": 0.34, "ST": 0.38, "CU": 0.28, "KC": 0.27,
+    "CH": 0.32, "FS": 0.37, "FO": 0.32, "CS": 0.26,
+}
+_DEFAULT_PITCH_WHIFF = 0.27
+
+
+def calc_pitch_mix_adjustment(pitcher_stats: dict, lineup_stats: dict) -> float:
+    """
+    Multiplier based on how well pitcher's arsenal matches lineup vulnerabilities.
+    Cross-references pitcher pitch usage + whiff rate vs team whiff rate by pitch type.
+    >1.0 = lineup is weak against this pitcher's stuff. <1.0 = lineup handles it well.
+    Clamped to ±8% impact.
+    """
+    pitch_usage = pitcher_stats.get("pitch_usage", {})
+    team_whiff_by_pitch = lineup_stats.get("whiff_by_pitch_type", {})
+
+    if not pitch_usage or not team_whiff_by_pitch:
+        return 1.0
+
+    weighted_diff = 0.0
+    total_weight = 0.0
+
+    for pitch_type, usage in pitch_usage.items():
+        if usage < 0.05:  # ignore pitches thrown < 5% of the time
+            continue
+        league_avg = _LEAGUE_WHIFF_BY_PITCH.get(pitch_type, _DEFAULT_PITCH_WHIFF)
+        team_whiff = team_whiff_by_pitch.get(pitch_type, league_avg)
+        weighted_diff += usage * (team_whiff - league_avg)
+        total_weight += usage
+
+    if total_weight == 0:
+        return 1.0
+
+    # Normalize and scale conservatively
+    raw_adj = weighted_diff / total_weight
+    multiplier = 1.0 + (raw_adj / LEAGUE_AVG_K_PCT) * 0.4  # dampened 40%
+    return max(0.92, min(1.08, multiplier))
+
+
 def estimate_batters_faced(pitcher_stats: dict) -> float:
     """
     Estimate batters faced based on pitch limit, days rest, and recent workload.
@@ -126,8 +168,9 @@ def project_strikeouts(
     weather_adj = weather.get("adjustment", 1.0)
     ump_adj = umpire.get("adjustment", 1.0)
 
+    pitch_mix_adj = calc_pitch_mix_adjustment(pitcher_stats, lineup_stats)
     raw_ks = xk_rate * bf
-    adjusted_ks = raw_ks * lineup_adj * park_adj * weather_adj * ump_adj
+    adjusted_ks = raw_ks * lineup_adj * park_adj * weather_adj * ump_adj * pitch_mix_adj
 
     # Recent form: blend with rolling averages
     rolling_3 = pitcher_stats.get("rolling_k_3", 0)
