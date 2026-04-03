@@ -206,6 +206,14 @@ def get_fangraphs_stats(pitcher_name: str) -> dict:
     return defaults
 
 
+def get_pitcher_hand(df: pd.DataFrame) -> str:
+    """Get pitcher throwing hand from Statcast data."""
+    if df.empty or "p_throws" not in df.columns:
+        return "R"
+    vals = df["p_throws"].dropna()
+    return str(vals.iloc[0]) if not vals.empty else "R"
+
+
 def get_days_rest(game_logs: list[dict]) -> int:
     """Days since last start."""
     if not game_logs:
@@ -241,6 +249,7 @@ def fetch_pitcher_stats(pitcher_id: int, pitcher_name: str) -> dict:
         "swstr_trend": calc_swstr_trend(df),
         "last_outing_pitches": last_outing_pitches,
         "days_rest": get_days_rest(game_logs),
+        "pitcher_hand": get_pitcher_hand(df),
         "game_logs": game_logs,
     }
 

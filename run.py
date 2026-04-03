@@ -115,7 +115,7 @@ def main():
                 continue
 
             try:
-                l_stats = fetch_lineup_stats(opp_abbr, "R")
+                l_stats = fetch_lineup_stats(opp_abbr, p_stats.get("pitcher_hand", "R"))
             except Exception as e:
                 print(f" [lineup stats error: {e}]")
                 continue
@@ -145,7 +145,7 @@ def main():
             result["swstr_pct"] = p_stats.get("swstr_pct", 0)
             result["csw_pct"] = p_stats.get("csw_pct", 0)
             result["k_pct"] = p_stats.get("k_pct", 0)
-            result["pitcher_hand"] = "R"
+            result["pitcher_hand"] = p_stats.get("pitcher_hand", "R")
             result["opp_k_pct"] = l_stats.get("team_k_pct", 0)
             result["opp_chase"] = l_stats.get("o_swing_pct", 0)
             result["park_factor"] = PARK_FACTOR_DEFAULT
