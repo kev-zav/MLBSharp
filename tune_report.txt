@@ -2,99 +2,31 @@
 ============================================================
   MLB STRIKEOUT SHARP — MODEL TUNER
 ============================================================
-
-  Loaded 186 rows from results.csv
-  Date range: 2026-03-26 to 2026-04-02 (8 game days)
-
-============================================================
-  SECTION 1: CALIBRATION REPORT
-============================================================
-
-  Total games logged: 186
-  Games with projections: 32
-
-  Overall Accuracy:
-    Avg Projected Ks:  5.45
-    Avg Actual Ks:     5.41
-    Avg Miss:          +0.04 (over-projecting)
-    MAE:               1.83
-    RMSE:              2.22
-
-  Tier                       Plays   Over%  AvgProj   AvgAct  AvgMiss
-  ------------------------- ------ ------- -------- -------- --------
-  STRONG (edge > 8)              5     60%      5.5      5.2     +0.3
-  MODERATE (edge 4-8)            0       —        —        —        —
-  LEAN (edge 1-4)                0       —        —        —        —
-  NO VALUE (edge < 1)           27       —      5.4      5.4     -0.0
-
-  Line Results:
-    Overs hit:  3/5 (60%)
-    Unders hit: 2/5 (40%)
-    Pushes:     0/5 (0%)
-
-============================================================
-  SECTION 2: FACTOR CORRELATION
-============================================================
-
-  Pearson correlation of each factor with actual_ks:
-  (+ = more of this factor → more Ks)
-
-  Factor                        Corr    p-value      N Strength       
-  ------------------------- -------- ---------- ------ ---------------
-  swstr_pct                  +0.3743     0.0348*    32 Moderate       
-  k_pct                      +0.3629     0.0412*    32 Moderate       
-  rolling_k_avg_5            +0.3343     0.0615     32 Moderate       
-  rolling_k_avg_3            +0.3080     0.0864     32 Moderate       
-  weather_temp               -0.1541     0.3996     32 Weak           
-  csw_pct                    +0.1540     0.4000     32 Weak           
-  pitch_count_last_outing    +0.1395     0.4465     32 Negligible     
-  days_rest                  -0.1296     0.4795     32 Negligible     
-  o_swing_pct                +0.1249     0.4958     32 Negligible     
-  weather_wind               +0.1172     0.5229     32 Negligible     
-  opp_k_pct_vs_hand          -0.0545     0.7670     32 Negligible     
-
-  Strongest predictor: swstr_pct (r=+0.3743)
-
-============================================================
-  SECTION 3: BIAS DETECTION
-============================================================
-
-  Checking for systematic over/under projection biases...
-
-  Category                               N   AvgMiss   vs Base Direction 
-  ----------------------------------- ---- --------- --------- ----------
-  Low K% Pitchers (below median)        14     -0.94     -1.74 under     
-  High K% Pitchers (above median)       14     +0.81     +1.74 over      
-  Cold Weather (<60°F)                   8     -0.80     -1.12 under     
-  Neutral Zone Umps                     32     +0.04     +0.00 over      
-
-============================================================
-  SECTION 4: WEIGHT SUGGESTIONS
-============================================================
-
-  Based on correlation data and projection accuracy:
-
-  1. Swstr % shows moderate correlation (r=+0.374). Current weight seems reasonable — monitor as more data comes in.
-
-  2. K % shows moderate correlation (r=+0.363). Current weight seems reasonable — monitor as more data comes in.
-
-  3. Rolling K Avg 5 shows moderate correlation (r=+0.334). Current weight seems reasonable — monitor as more data comes in.
-
-  4. Rolling K Avg 3 shows moderate correlation (r=+0.308). Current weight seems reasonable — monitor as more data comes in.
-
-
-============================================================
-  SECTION 5: XGBOOST AUTO-TUNING
-============================================================
-
-  XGBoost auto-tuning requires 50 complete rows.
-  Current: 32/50
-  [███████████████████░░░░░░░░░░░] 64%
-
-  Log 18 more game results to unlock auto-tuning.
-  At ~12 starters/day, that's roughly 2 more days of games.
-
-============================================================
-  TUNING COMPLETE
-============================================================
+Traceback (most recent call last):
+  File "/home/runner/work/MLBSharp/MLBSharp/tune_model.py", line 600, in <module>
+    main()
+  File "/home/runner/work/MLBSharp/MLBSharp/tune_model.py", line 580, in main
+    df = load_data()
+         ^^^^^^^^^^^
+  File "/home/runner/work/MLBSharp/MLBSharp/tune_model.py", line 65, in load_data
+    df = pd.read_csv(RESULTS_CSV)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 873, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 306, in _read
+    return parser.read(nrows)
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1947, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 215, in read
+    chunks = self._reader.read_low_memory(nrows)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/parsers.pyx", line 832, in pandas._libs.parsers.TextReader.read_low_memory
+  File "pandas/_libs/parsers.pyx", line 897, in pandas._libs.parsers.TextReader._read_rows
+  File "pandas/_libs/parsers.pyx", line 868, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 885, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "pandas/_libs/parsers.pyx", line 2084, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 24 fields in line 188, saw 26
 
