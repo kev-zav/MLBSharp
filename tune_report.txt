@@ -2,31 +2,105 @@
 ============================================================
   MLB STRIKEOUT SHARP — MODEL TUNER
 ============================================================
-Traceback (most recent call last):
-  File "/home/runner/work/MLBSharp/MLBSharp/tune_model.py", line 600, in <module>
-    main()
-  File "/home/runner/work/MLBSharp/MLBSharp/tune_model.py", line 580, in main
-    df = load_data()
-         ^^^^^^^^^^^
-  File "/home/runner/work/MLBSharp/MLBSharp/tune_model.py", line 65, in load_data
-    df = pd.read_csv(RESULTS_CSV)
-         ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 873, in read_csv
-    return _read(filepath_or_buffer, kwds)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 306, in _read
-    return parser.read(nrows)
-           ^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1947, in read
-    ) = self._engine.read(  # type: ignore[attr-defined]
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 215, in read
-    chunks = self._reader.read_low_memory(nrows)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "pandas/_libs/parsers.pyx", line 832, in pandas._libs.parsers.TextReader.read_low_memory
-  File "pandas/_libs/parsers.pyx", line 897, in pandas._libs.parsers.TextReader._read_rows
-  File "pandas/_libs/parsers.pyx", line 868, in pandas._libs.parsers.TextReader._tokenize_rows
-  File "pandas/_libs/parsers.pyx", line 885, in pandas._libs.parsers.TextReader._check_tokenize_status
-  File "pandas/_libs/parsers.pyx", line 2084, in pandas._libs.parsers.raise_parser_error
-pandas.errors.ParserError: Error tokenizing data. C error: Expected 24 fields in line 188, saw 26
+
+  Loaded 242 rows from results.csv
+  Date range: 2026-03-26 to 2026-04-04 (10 game days)
+
+============================================================
+  SECTION 1: CALIBRATION REPORT
+============================================================
+
+  Total games logged: 242
+  Games with projections: 75
+
+  Overall Accuracy:
+    Avg Projected Ks:  5.73
+    Avg Actual Ks:     5.05
+    Avg Miss:          +0.67 (over-projecting)
+    MAE:               2.31
+    RMSE:              2.97
+
+  Tier                       Plays   Over%  AvgProj   AvgAct  AvgMiss
+  ------------------------- ------ ------- -------- -------- --------
+  STRONG (edge > 8)             25     44%      5.7      4.4     +1.3
+  MODERATE (edge 4-8)            4     50%      6.1      6.2     -0.2
+  LEAN (edge 1-4)                6     50%      5.3      6.0     -0.7
+  NO VALUE (edge < 1)           40     43%      5.8      5.2     +0.6
+
+  Line Results:
+    Overs hit:  19/42 (45%)
+    Unders hit: 23/42 (55%)
+    Pushes:     0/42 (0%)
+
+============================================================
+  SECTION 2: FACTOR CORRELATION
+============================================================
+
+  Pearson correlation of each factor with actual_ks:
+  (+ = more of this factor → more Ks)
+
+  Factor                        Corr    p-value      N Strength       
+  ------------------------- -------- ---------- ------ ---------------
+  pitch_count_last_outing    +0.2223     0.0552     75 Weak           
+  k_pct                      +0.1993     0.0865     75 Weak           
+  rolling_k_avg_3            +0.1879     0.1064     75 Weak           
+  rolling_k_avg_5            +0.1724     0.1392     75 Weak           
+  weather_temp               -0.1333     0.2543     75 Negligible     
+  o_swing_pct                +0.1324     0.2574     75 Negligible     
+  swstr_pct                  +0.1179     0.3139     75 Negligible     
+  projected_ks_manual        +0.0639     0.6840     43 Negligible     
+  pitch_mix_adj              +0.0280     0.8586     43 Negligible     
+  days_rest                  +0.0162     0.8901     75 Negligible     
+  csw_pct                    +0.0153     0.8966     75 Negligible     
+  opp_k_pct_vs_hand          -0.0144     0.9025     75 Negligible     
+  weather_wind               +0.0049     0.9669     75 Negligible     
+
+  Strongest predictor: pitch_count_last_outing (r=+0.2223)
+
+============================================================
+  SECTION 3: BIAS DETECTION
+============================================================
+
+  Checking for systematic over/under projection biases...
+
+  Category                               N   AvgMiss   vs Base Direction 
+  ----------------------------------- ---- --------- --------- ----------
+  High Wind (>15 mph)                   13     +1.57     +1.09 over       ⚠
+  Park: Chase Field                      8     +1.51     +0.84 over       ⚠
+  High K% Pitchers (above median)       37     +1.14     +0.98 over       ⚠
+  Park: Kauffman Stadium                 5     +0.82     +0.15 over      
+  Neutral Zone Umps                     75     +0.67     +0.00 over      
+  Low K% Pitchers (below median)        34     +0.15     -0.98 over      
+  Cold Weather (<60°F)                  23     -0.12     -1.14 under     
+
+  ⚠ Found 3 significant biases (>1.0 K avg miss):
+    → High Wind (>15 mph): over-projecting by 1.6 Ks on average
+    → Park: Chase Field: over-projecting by 1.5 Ks on average
+    → High K% Pitchers (above median): over-projecting by 1.1 Ks on average
+
+============================================================
+  SECTION 4: WEIGHT SUGGESTIONS
+============================================================
+
+  Based on correlation data and projection accuracy:
+
+  1. OVERALL BIAS: You are over-projecting by 0.7 Ks on average. Consider reducing DEFAULT_BATTERS_FACED in config.py from 25 to 24 or reducing the form blend weight.
+
+  2. Pitch Count Last Outing shows moderate correlation (r=+0.222). Current weight seems reasonable — monitor as more data comes in.
+
+
+============================================================
+  SECTION 5: XGBOOST AUTO-TUNING
+============================================================
+
+  XGBoost auto-tuning requires 50 complete rows.
+  Current: 43/50
+  [█████████████████████████░░░░░] 86%
+
+  Log 7 more game results to unlock auto-tuning.
+  At ~12 starters/day, that's roughly 1 more days of games.
+
+============================================================
+  TUNING COMPLETE
+============================================================
 
