@@ -141,8 +141,8 @@
       "opp_k_pct": 0.2225,
       "opp_chase": 0.2812,
       "days_rest": 6,
-      "rolling_k_3": 7.0,
-      "rolling_k_5": 7.0,
+      "rolling_k_3": 2.0,
+      "rolling_k_5": 2.0,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -164,8 +164,8 @@
       "last5": [
         {
           "date": "03/29",
-          "k": 7,
-          "pitches": 82
+          "k": 2,
+          "pitches": 81
         }
       ],
       "k_distribution": {
@@ -191,7 +191,7 @@
       "venue": "Progressive Field",
       "projected_ks": 5.7,
       "line": 0,
-      "play": "OVER",
+      "play": "UNDER",
       "edge": 0.0,
       "hit_rate": 50.0,
       "swstr_pct": 0.11776666666666667,
@@ -2257,7 +2257,9 @@
         "9": 0.0675,
         "10+": 0.0647
       }
-    },
+    }
+  ],
+  "all_pitchers": [
     {
       "pitcher_name": "Max Fried",
       "pitcher_id": 608331,
@@ -2545,17 +2547,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0147,
-        "1": 0.0323,
-        "2": 0.0608,
-        "3": 0.0976,
-        "4": 0.1338,
-        "5": 0.1567,
-        "6": 0.1567,
-        "7": 0.1338,
-        "8": 0.0976,
-        "9": 0.0608,
-        "10+": 0.0553
+        "0": 0.0023,
+        "1": 0.0104,
+        "2": 0.0347,
+        "3": 0.0855,
+        "4": 0.1561,
+        "5": 0.2108,
+        "6": 0.2108,
+        "7": 0.1561,
+        "8": 0.0855,
+        "9": 0.0347,
+        "10+": 0.0131
       }
     },
     {
@@ -2650,12 +2652,422 @@
         "adjustment": 1.015,
         "indoor": false
       },
+      "over_odds": [
+        {
+          "book": "FanDuel",
+          "odds": 100
+        },
+        {
+          "book": "DraftKings",
+          "odds": -104
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "DraftKings",
+          "odds": -122
+        },
+        {
+          "book": "FanDuel",
+          "odds": -132
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": 100
+      },
+      "fair_value": -130,
+      "ladder": [
+        {
+          "line": 4.5,
+          "over_hit_rate": 56.6,
+          "under_hit_rate": 43.4,
+          "over_edge": 6.6,
+          "under_edge": -11.6,
+          "best_over": {
+            "book": "FanDuel",
+            "odds": 100
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": -122
+          },
+          "fair_value_over": -130,
+          "fair_value_under": 130,
+          "model_only": false
+        },
+        {
+          "line": 5.5,
+          "over_hit_rate": 34.9,
+          "under_hit_rate": 65.1,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 187,
+          "fair_value_under": -187,
+          "model_only": true
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 17.2,
+          "under_hit_rate": 82.8,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 481,
+          "fair_value_under": -481,
+          "model_only": true
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 6.7,
+          "under_hit_rate": 93.3,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1393,
+          "fair_value_under": -1393,
+          "model_only": true
+        }
+      ],
+      "last5": [
+        {
+          "date": "03/29",
+          "k": 4,
+          "pitches": 85
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0068,
+        "1": 0.025,
+        "2": 0.0674,
+        "3": 0.1346,
+        "4": 0.1991,
+        "5": 0.2179,
+        "6": 0.1765,
+        "7": 0.1058,
+        "8": 0.047,
+        "9": 0.0154,
+        "10+": 0.0045
+      }
+    },
+    {
+      "pitcher_name": "Clay Holmes",
+      "pitcher_id": 605280,
+      "pitcher_team": "NYM",
+      "pitcher_hand": "R",
+      "opp_team": "SF",
+      "venue": "Oracle Park",
+      "projected_ks": 4.8,
+      "line": 4.5,
+      "play": "OVER",
+      "edge": 10.7,
+      "hit_rate": 56.6,
+      "swstr_pct": 0.0987,
+      "csw_pct": 0.2784,
+      "k_pct": 0.1833,
+      "opp_k_pct": 0.1982,
+      "opp_chase": 0.3191,
+      "days_rest": 5,
+      "rolling_k_3": 5.0,
+      "rolling_k_5": 5.0,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 54,
+        "wind_mph": 5,
+        "description": "Broken Clouds",
+        "adjustment": 1.015,
+        "indoor": false
+      },
+      "over_odds": [
+        {
+          "book": "FanDuel",
+          "odds": 118
+        },
+        {
+          "book": "DraftKings",
+          "odds": 117
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "DraftKings",
+          "odds": -149
+        },
+        {
+          "book": "FanDuel",
+          "odds": -158
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": 118
+      },
+      "fair_value": -130,
+      "ladder": [
+        {
+          "line": 4.5,
+          "over_hit_rate": 56.6,
+          "under_hit_rate": 43.4,
+          "over_edge": 10.7,
+          "under_edge": -16.4,
+          "best_over": {
+            "book": "FanDuel",
+            "odds": 118
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": -149
+          },
+          "fair_value_over": -130,
+          "fair_value_under": 130,
+          "model_only": false
+        },
+        {
+          "line": 5.5,
+          "over_hit_rate": 34.9,
+          "under_hit_rate": 65.1,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 187,
+          "fair_value_under": -187,
+          "model_only": true
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 17.2,
+          "under_hit_rate": 82.8,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 481,
+          "fair_value_under": -481,
+          "model_only": true
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 6.7,
+          "under_hit_rate": 93.3,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1393,
+          "fair_value_under": -1393,
+          "model_only": true
+        }
+      ],
+      "last5": [
+        {
+          "date": "03/30",
+          "k": 5,
+          "pitches": 90
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0068,
+        "1": 0.025,
+        "2": 0.0674,
+        "3": 0.1346,
+        "4": 0.1991,
+        "5": 0.2179,
+        "6": 0.1765,
+        "7": 0.1058,
+        "8": 0.047,
+        "9": 0.0154,
+        "10+": 0.0045
+      }
+    },
+    {
+      "pitcher_name": "Dustin May",
+      "pitcher_id": 669160,
+      "pitcher_team": "STL",
+      "pitcher_hand": "R",
+      "opp_team": "DET",
+      "venue": "Comerica Park",
+      "projected_ks": 4.5,
+      "line": 4.5,
+      "play": "UNDER",
+      "edge": 1.0,
+      "hit_rate": 50.0,
+      "swstr_pct": 0.0894,
+      "csw_pct": 0.2731,
+      "k_pct": 0.2038,
+      "opp_k_pct": 0.244,
+      "opp_chase": 0.2877,
+      "days_rest": 6,
+      "rolling_k_3": 3.0,
+      "rolling_k_5": 3.0,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 42,
+        "wind_mph": 16,
+        "description": "Overcast Clouds",
+        "adjustment": 1.04,
+        "indoor": false
+      },
+      "over_odds": [
+        {
+          "book": "DraftKings",
+          "odds": -121
+        },
+        {
+          "book": "FanDuel",
+          "odds": -138
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "FanDuel",
+          "odds": 104
+        },
+        {
+          "book": "DraftKings",
+          "odds": -105
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": 104
+      },
+      "fair_value": -100,
+      "ladder": [
+        {
+          "line": 4.5,
+          "over_hit_rate": 50.0,
+          "under_hit_rate": 50.0,
+          "over_edge": -4.8,
+          "under_edge": 1.0,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": -121
+          },
+          "best_under": {
+            "book": "FanDuel",
+            "odds": 104
+          },
+          "fair_value_over": -100,
+          "fair_value_under": -100,
+          "model_only": false
+        },
+        {
+          "line": 5.5,
+          "over_hit_rate": 28.9,
+          "under_hit_rate": 71.1,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 246,
+          "fair_value_under": -246,
+          "model_only": true
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 13.3,
+          "under_hit_rate": 86.7,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 652,
+          "fair_value_under": -652,
+          "model_only": true
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 4.8,
+          "under_hit_rate": 95.2,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1983,
+          "fair_value_under": -1983,
+          "model_only": true
+        }
+      ],
+      "last5": [
+        {
+          "date": "03/29",
+          "k": 3,
+          "pitches": 61
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0104,
+        "1": 0.0348,
+        "2": 0.0857,
+        "3": 0.1564,
+        "4": 0.2113,
+        "5": 0.2113,
+        "6": 0.1564,
+        "7": 0.0857,
+        "8": 0.0348,
+        "9": 0.0104,
+        "10+": 0.0027
+      }
+    },
+    {
+      "pitcher_name": "Grant Taylor",
+      "pitcher_id": 691799,
+      "pitcher_team": "CWS",
+      "pitcher_hand": "R",
+      "opp_team": "TOR",
+      "venue": "Rate Field",
+      "projected_ks": 4.4,
+      "line": 0,
+      "play": "UNDER",
+      "edge": 0.0,
+      "hit_rate": 50.0,
+      "swstr_pct": 0.1525,
+      "csw_pct": 0.322,
+      "k_pct": 0.3448,
+      "opp_k_pct": 0.2098,
+      "opp_chase": 0.3269,
+      "days_rest": 1,
+      "rolling_k_3": 1.67,
+      "rolling_k_5": 1.67,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
       "over_odds": [],
       "under_odds": [],
       "best_line": null,
       "fair_value": -100,
       "ladder": [],
       "last5": [
+        {
+          "date": "03/28",
+          "k": 1,
+          "pitches": 26
+        },
         {
           "date": "03/29",
           "k": 5,
@@ -2685,7 +3097,7 @@
       "venue": "Progressive Field",
       "projected_ks": 5.1,
       "line": 0,
-      "play": "OVER",
+      "play": "UNDER",
       "edge": 0.0,
       "hit_rate": 50.0,
       "swstr_pct": 0.13371666666666665,
@@ -3234,11 +3646,87 @@
         "adjustment": 1.03,
         "indoor": false
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "DraftKings",
+          "odds": 126
+        },
+        {
+          "book": "FanDuel",
+          "odds": 116
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -154
+        },
+        {
+          "book": "DraftKings",
+          "odds": -162
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -154
+      },
+      "fair_value": -156,
+      "ladder": [
+        {
+          "line": 4.5,
+          "over_hit_rate": 39.1,
+          "under_hit_rate": 60.9,
+          "over_edge": -5.1,
+          "under_edge": 0.3,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": 126
+          },
+          "best_under": {
+            "book": "FanDuel",
+            "odds": -154
+          },
+          "fair_value_over": 156,
+          "fair_value_under": -156,
+          "model_only": false
+        },
+        {
+          "line": 5.5,
+          "over_hit_rate": 20.2,
+          "under_hit_rate": 79.8,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 395,
+          "fair_value_under": -395,
+          "model_only": true
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 8.2,
+          "under_hit_rate": 91.8,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1120,
+          "fair_value_under": -1120,
+          "model_only": true
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 2.6,
+          "under_hit_rate": 97.4,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 3746,
+          "fair_value_under": -3746,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
           "date": "03/30",
@@ -3247,17 +3735,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0435,
-        "1": 0.0768,
-        "2": 0.1157,
-        "3": 0.149,
-        "4": 0.1638,
-        "5": 0.1538,
-        "6": 0.1233,
-        "7": 0.0844,
-        "8": 0.0493,
-        "9": 0.0246,
-        "10+": 0.0159
+        "0": 0.0198,
+        "1": 0.0569,
+        "2": 0.1206,
+        "3": 0.1894,
+        "4": 0.2202,
+        "5": 0.1894,
+        "6": 0.1206,
+        "7": 0.0569,
+        "8": 0.0198,
+        "9": 0.0051,
+        "10+": 0.0011
       }
     },
     {
