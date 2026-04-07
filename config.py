@@ -36,6 +36,14 @@ EDGE_STRONG = 8
 EDGE_MODERATE = 4
 EDGE_LEAN = 1
 
+# --- Hit Rate Model Calibration ---
+# Empirical std dev of (actual_ks - projected_ks) from logged results.
+# Update this as more games are logged. Current: 129 games as of 2026-04-07.
+HIT_RATE_STD_DEV = 2.675
+# Systematic bias: model over-projects by this many Ks on average.
+# Applied as a correction when estimating hit rate. Positive = model over-projects.
+HIT_RATE_BIAS = 0.813
+
 # --- Park Factors (FanGraphs SO park factor, 100 = neutral) ---
 # Loaded dynamically but fallback dict for known parks
 PARK_FACTOR_DEFAULT = 100

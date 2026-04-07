@@ -31,15 +31,43 @@ _cache: dict[str, any] = {}
 _fg_df: pd.DataFrame | None = None
 
 
+_FG_TABLE_CACHE_KEY = f"__fg_table_{SEASON}__"
+
+
 def _get_fg_df() -> pd.DataFrame:
-    """Fetch FanGraphs pitching stats once per run and cache in memory."""
+    """
+    Fetch FanGraphs pitching stats once per run and cache in memory + disk.
+    Disk cache ensures the full league table survives across GitHub Action runs,
+    so new/rare pitchers are always covered without a fresh scrape.
+    """
     global _fg_df
     if _fg_df is not None:
         return _fg_df
+
+    # Check disk cache for the full table
+    disk_cache = _load_fg_disk_cache()
+    entry = disk_cache.get(_FG_TABLE_CACHE_KEY)
+    if entry:
+        age_hours = (datetime.now() - datetime.fromisoformat(entry["timestamp"])).total_seconds() / 3600
+        if age_hours < _FG_CACHE_TTL_HOURS:
+            try:
+                _fg_df = pd.DataFrame(entry["data"])
+                print(f"  [FG] Loaded {len(_fg_df)} pitchers from disk cache ({age_hours:.1f}h old).")
+                return _fg_df
+            except Exception:
+                pass
+
+    # Fetch fresh from FanGraphs
     try:
         print("  [FG] Pulling FanGraphs pitching stats (one-time fetch)...")
         _fg_df = pitching_stats(SEASON, SEASON, qual=1)
         print(f"  [FG] {len(_fg_df)} pitchers loaded from FanGraphs.")
+        # Persist full table to disk
+        disk_cache[_FG_TABLE_CACHE_KEY] = {
+            "timestamp": datetime.now().isoformat(),
+            "data": _fg_df.to_dict(orient="records"),
+        }
+        _save_fg_disk_cache(disk_cache)
     except Exception as e:
         print(f"  [FG] FanGraphs fetch failed: {e}")
         _fg_df = pd.DataFrame()
@@ -47,7 +75,7 @@ def _get_fg_df() -> pd.DataFrame:
 
 # Disk cache for FanGraphs data (avoids repeated scraping)
 _FG_CACHE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fg_cache.json")
-_FG_CACHE_TTL_HOURS = 24
+_FG_CACHE_TTL_HOURS = 48
 
 
 def _load_fg_disk_cache() -> dict:

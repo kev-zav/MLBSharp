@@ -31,6 +31,6 @@ jobs:
         run: |
           git config user.name "MLBSharp Bot"
           git config user.email "mlbsharp@users.noreply.github.com"
-          git add dashboard_data.json projections_cache.json
+          git add dashboard_data.json projections_cache.json fg_cache.json
           git diff --staged --quiet || git commit -m "Auto dashboard update $(date +'%Y-%m-%d')"
           git push

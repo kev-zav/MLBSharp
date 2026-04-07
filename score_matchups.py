@@ -257,15 +257,18 @@ def calc_k_distribution(projected_ks: float, std_dev: float = 2.5) -> dict[int, 
 def calc_hit_rate(projected_ks: float, line: float) -> float:
     """
     Estimate probability of hitting the over based on projected Ks vs line.
-    Uses a simple normal approximation with std dev ~1.8 Ks.
+    Uses empirical std dev and bias correction derived from logged results.
+    Update HIT_RATE_STD_DEV and HIT_RATE_BIAS in config.py as more games are logged.
     """
     if line <= 0:
         return 50.0
 
     import math
-    std_dev = 2.5  # early-season std dev; recalibrate after ~50 logged results
-    z = (projected_ks - line) / std_dev
-    # Standard normal CDF approximation
+    from config import HIT_RATE_STD_DEV, HIT_RATE_BIAS
+
+    # Apply bias correction: model over-projects by HIT_RATE_BIAS on average
+    corrected_proj = projected_ks - HIT_RATE_BIAS
+    z = (corrected_proj - line) / HIT_RATE_STD_DEV
     hit_rate = 0.5 * (1 + math.erf(z / math.sqrt(2)))
     return round(hit_rate * 100, 1)
 
