@@ -197,22 +197,23 @@ def project_strikeouts(
     raw_ks = xk_rate * bf
     adjusted_ks = raw_ks * lineup_adj * park_adj * weather_adj * ump_adj * pitch_mix_adj
 
-    # Recent form: blend with rolling averages, scaled by sample size
+    # Recent form: blend with rolling averages, scaled by sample size.
+    # Max weight capped at 20% — rolling avgs add noise early in season.
+    # Revisit cap once 200+ games logged.
     rolling_3 = pitcher_stats.get("rolling_k_3", 0)
     rolling_5 = pitcher_stats.get("rolling_k_5", 0)
     num_starts = pitcher_stats.get("num_starts", 0)
 
-    if rolling_3 > 0 and rolling_5 > 0 and num_starts >= 3:
+    if rolling_3 > 0 and rolling_5 > 0 and num_starts >= 5:
         form_ks = rolling_3 * 0.6 + rolling_5 * 0.4
-        # Only trust rolling averages once we have 3+ starts.
-        # Scale weight gradually: 3 starts=20%, 4=28%, 5=35%, 6+=40%
-        rolling_weight = min(0.40, (num_starts - 2) / 4 * 0.40)
+        # Scale weight gradually: 5 starts=10%, 8 starts=15%, 12+ starts=20%
+        rolling_weight = min(0.20, (num_starts - 4) / 8 * 0.20)
         final_ks = adjusted_ks * (1 - rolling_weight) + form_ks * rolling_weight
     else:
         final_ks = adjusted_ks
 
-    # Hard cap — no starter should project above 14 Ks or below 0.5
-    final_ks = max(0.5, min(14.0, final_ks))
+    # Hard cap — no starter should project above 12 Ks or below 0.5
+    final_ks = max(0.5, min(12.0, final_ks))
 
     return {
         "projected_ks": round(final_ks, 1),

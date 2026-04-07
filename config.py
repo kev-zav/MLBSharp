@@ -28,7 +28,7 @@ LEAGUE_AVG_SWSTR   = 0.115        # ~11.5% league average SwStr%
 LEAGUE_AVG_CSW     = 0.270        # ~27.0% league average CSW%
 LEAGUE_AVG_IP_PER_START     = 4.9
 LEAGUE_AVG_PITCHES_PER_START = 88.0
-DEFAULT_BATTERS_FACED = 21        # ~5.3 IP estimate (league average starter)
+DEFAULT_BATTERS_FACED = 19        # empirically optimal from 95-game sample (Apr 2026)
 DEFAULT_PITCH_LIMIT = 85          # league average pitches/start
 
 # --- Edge Thresholds (percentage points) ---
