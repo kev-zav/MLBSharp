@@ -1,13 +1,18 @@
 """
 Fetch strikeout prop lines from The Odds API.
-Conserves API requests — one call per run.
+File-based cache (odds_cache.json) avoids redundant API calls on re-runs.
+Cache is considered fresh for 30 minutes.
 """
 
+import json
+import os
 import requests
 from datetime import datetime
 from config import ODDS_API_KEY, ODDS_API_BASE, ODDS_SPORT
 
 _cache: dict[str, any] = {}
+_CACHE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "odds_cache.json")
+_CACHE_TTL_MINUTES = 30
 
 # Map Odds API full team names to abbreviations used by MLB Stats API
 ODDS_TEAM_TO_ABBR = {
@@ -53,6 +58,22 @@ def fetch_strikeout_odds() -> tuple[list[dict], str | None]:
     if "odds" in _cache:
         return _cache["odds"], _cache.get("odds_date")
 
+    # Check file-based cache
+    try:
+        with open(_CACHE_FILE) as f:
+            cached = json.load(f)
+        saved_at = datetime.fromisoformat(cached["saved_at"])
+        age_minutes = (datetime.now() - saved_at).total_seconds() / 60
+        if age_minutes < _CACHE_TTL_MINUTES:
+            print(f"  [ODDS] Using cached odds ({age_minutes:.0f}m old, TTL {_CACHE_TTL_MINUTES}m)")
+            _cache["odds"] = cached["props"]
+            _cache["odds_date"] = cached.get("odds_date")
+            return _cache["odds"], _cache.get("odds_date")
+        else:
+            print(f"  [ODDS] Cache expired ({age_minutes:.0f}m old) — fetching fresh")
+    except (FileNotFoundError, KeyError, ValueError):
+        pass
+
     if not ODDS_API_KEY or ODDS_API_KEY == "your_odds_api_key_here":
         print("  [ODDS] No API key set — skipping odds fetch.")
         print("  [ODDS] Get a free key at https://the-odds-api.com/")
@@ -91,6 +112,18 @@ def fetch_strikeout_odds() -> tuple[list[dict], str | None]:
             except Exception:
                 pass
 
+    # Deduplicate events — same matchup can appear multiple times (doubleheaders/API quirk)
+    seen_matchups: set[tuple] = set()
+    unique_events = []
+    for ev in events:
+        key = (ev.get("home_team", ""), ev.get("away_team", ""), ev.get("commence_time", "")[:10])
+        if key not in seen_matchups:
+            seen_matchups.add(key)
+            unique_events.append(ev)
+    if len(unique_events) < len(events):
+        print(f"  [ODDS] Deduplicated {len(events)} events → {len(unique_events)} unique games")
+    events = unique_events
+
     # Fetch pitcher strikeout props for each event
     all_props = []
     remaining = "?"
@@ -103,19 +136,31 @@ def fetch_strikeout_odds() -> tuple[list[dict], str | None]:
         home_abbr = ODDS_TEAM_TO_ABBR.get(event_home, event_home)
         away_abbr = ODDS_TEAM_TO_ABBR.get(event_away, event_away)
 
-        try:
-            props_url = f"{ODDS_API_BASE}/sports/{ODDS_SPORT}/events/{event_id}/odds"
-            resp = requests.get(props_url, params={
-                "apiKey": ODDS_API_KEY,
-                "regions": "us",
-                "markets": "pitcher_strikeouts",
-                "oddsFormat": "american",
-                "bookmakers": "fanduel,draftkings,thescorebet,bet365",
-            }, timeout=15)
-            resp.raise_for_status()
-            remaining = resp.headers.get("x-requests-remaining", remaining)
-            data = resp.json()
-        except Exception:
+        props_url = f"{ODDS_API_BASE}/sports/{ODDS_SPORT}/events/{event_id}/odds"
+        req_params = {
+            "apiKey": ODDS_API_KEY,
+            "regions": "us",
+            "markets": "pitcher_strikeouts",
+            "oddsFormat": "american",
+            "bookmakers": "fanduel,draftkings,thescorebet,bet365",
+        }
+        data = None
+        for attempt in range(3):
+            try:
+                resp = requests.get(props_url, params=req_params, timeout=15)
+                if resp.status_code == 429:
+                    wait = 2 ** attempt  # 1s, 2s, 4s
+                    print(f"  [ODDS] 429 rate limit for {event_away} @ {event_home} — retrying in {wait}s")
+                    import time; time.sleep(wait)
+                    continue
+                resp.raise_for_status()
+                remaining = resp.headers.get("x-requests-remaining", remaining)
+                data = resp.json()
+                break
+            except Exception as e:
+                if attempt == 2:
+                    print(f"  [ODDS] Failed to fetch props for {event_away} @ {event_home}: {e}")
+        if data is None:
             continue
 
         bookmakers = data.get("bookmakers", [])
@@ -144,8 +189,17 @@ def fetch_strikeout_odds() -> tuple[list[dict], str | None]:
                         "book": book_name,
                     })
 
+        import time; time.sleep(0.3)  # avoid rate limiting across 15+ event requests
+
     _cache["odds"] = all_props
     _cache["odds_date"] = earliest_date
+
+    # Save to file cache so re-runs within 30 minutes skip API calls
+    try:
+        with open(_CACHE_FILE, "w") as f:
+            json.dump({"saved_at": datetime.now().isoformat(), "odds_date": earliest_date, "props": all_props}, f)
+    except Exception as e:
+        print(f"  [ODDS] Could not save odds cache: {e}")
 
     print(f"  [ODDS] Pulled {len(all_props)} props across {len(events)} events. "
           f"Games date: {earliest_date}. API remaining: {remaining}")

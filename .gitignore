@@ -9,6 +9,7 @@ __pycache__/
 # Data files — local only
 model.pkl
 report_*.txt
+odds_cache.json
 
 # Dashboard data is tracked so Render can serve it
 # dashboard_data.json is intentionally NOT ignored

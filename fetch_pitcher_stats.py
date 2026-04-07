@@ -19,7 +19,8 @@ from pybaseball import (
     statcast_pitcher,
     pitching_stats,
 )
-from config import SEASON, LEAGUE_AVG_SWSTR, LEAGUE_AVG_K_PCT, LEAGUE_AVG_CSW
+from config import (SEASON, LEAGUE_AVG_SWSTR, LEAGUE_AVG_K_PCT, LEAGUE_AVG_CSW,
+                    LEAGUE_AVG_BB_PCT, LEAGUE_AVG_IP_PER_START, LEAGUE_AVG_PITCHES_PER_START)
 
 warnings.filterwarnings("ignore")
 
@@ -255,17 +256,47 @@ _MLB_TO_FG_TEAM = {
 
 def get_prior_season_stats(pitcher_id: int, pitcher_name: str = "") -> dict:
     """
-    Pull prior season K%, SwStr%, and CSW% from Statcast as career anchors.
-    Used as fallbacks when current season sample is too small.
-    Returns league averages for rookies or missing data.
+    Pull prior season K%, BB%, SwStr%, CSW%, IP/start, pitches/start from the
+    local SQLite DB (built by build_pitcher_db.py). Falls back to a live
+    Statcast pull if the DB has no entry, then to league averages.
     """
     prior_season = SEASON - 1
     cache_key = f"prior_stats_{pitcher_id}_{prior_season}"
-    defaults = {"k_pct": LEAGUE_AVG_K_PCT, "swstr_pct": LEAGUE_AVG_SWSTR, "csw_pct": LEAGUE_AVG_CSW}
+    defaults = {
+        "k_pct": LEAGUE_AVG_K_PCT,
+        "bb_pct": LEAGUE_AVG_BB_PCT,
+        "swstr_pct": LEAGUE_AVG_SWSTR,
+        "csw_pct": LEAGUE_AVG_CSW,
+        "ip_per_start": LEAGUE_AVG_IP_PER_START,
+        "pitches_per_start": LEAGUE_AVG_PITCHES_PER_START,
+    }
 
     if cache_key in _cache:
         return _cache[cache_key]
 
+    # 1. Check local SQLite DB first (fast, no API call)
+    try:
+        from build_pitcher_db import lookup
+        row = lookup(pitcher_id, prior_season)
+        if row:
+            result = {
+                "k_pct":              row.get("k_pct")              or LEAGUE_AVG_K_PCT,
+                "bb_pct":             row.get("bb_pct")             or LEAGUE_AVG_BB_PCT,
+                "swstr_pct":          row.get("swstr_pct")          or LEAGUE_AVG_SWSTR,
+                "csw_pct":            row.get("csw_pct")            or LEAGUE_AVG_CSW,
+                "ip_per_start":       row.get("ip_per_start")       or LEAGUE_AVG_IP_PER_START,
+                "pitches_per_start":  row.get("pitches_per_start")  or LEAGUE_AVG_PITCHES_PER_START,
+            }
+            if pitcher_name:
+                print(f"  [DB] {pitcher_name}: {prior_season} "
+                      f"K%={result['k_pct']:.1%} BB%={result['bb_pct']:.1%} "
+                      f"SwStr%={result['swstr_pct']:.1%} IP/GS={result['ip_per_start']:.1f}")
+            _cache[cache_key] = result
+            return result
+    except Exception:
+        pass
+
+    # 2. Fall back to live Statcast pull (DB not built yet or pitcher missing)
     disk_cache = _load_fg_disk_cache()
     entry = disk_cache.get(cache_key)
     if entry and isinstance(entry.get("data"), dict):
@@ -285,15 +316,32 @@ def get_prior_season_stats(pitcher_id: int, pitcher_name: str = "") -> dict:
         swstr = calc_swstr_pct(df)
         csw = calc_csw_pct(df)
 
+        # Derive BB% and pitches/start from Statcast
+        bb_pct = LEAGUE_AVG_BB_PCT
+        pitches_per_start = LEAGUE_AVG_PITCHES_PER_START
+        if not df.empty:
+            pa = df[df["events"].notna() & (df["events"] != "")]
+            if len(pa) > 0:
+                bb_pct = round(len(pa[pa["events"] == "walk"]) / len(pa), 4)
+            import pandas as _pd
+            df["game_date"] = _pd.to_datetime(df["game_date"])
+            starts = df.groupby("game_date").size()
+            if len(starts):
+                pitches_per_start = round(starts.mean(), 1)
+
         result = {
-            "k_pct":    k_pct  if k_pct  > 0 else LEAGUE_AVG_K_PCT,
-            "swstr_pct": swstr if swstr  > 0 else LEAGUE_AVG_SWSTR,
-            "csw_pct":   csw   if csw    > 0 else LEAGUE_AVG_CSW,
+            "k_pct":             k_pct  if k_pct  > 0 else LEAGUE_AVG_K_PCT,
+            "bb_pct":            bb_pct,
+            "swstr_pct":         swstr  if swstr  > 0 else LEAGUE_AVG_SWSTR,
+            "csw_pct":           csw    if csw    > 0 else LEAGUE_AVG_CSW,
+            "ip_per_start":      LEAGUE_AVG_IP_PER_START,
+            "pitches_per_start": pitches_per_start,
         }
 
         if pitcher_name:
             print(f"  [PRIOR] {pitcher_name}: {prior_season} "
-                  f"K%={result['k_pct']:.1%} SwStr%={result['swstr_pct']:.1%} CSW%={result['csw_pct']:.1%}")
+                  f"K%={result['k_pct']:.1%} BB%={result['bb_pct']:.1%} "
+                  f"SwStr%={result['swstr_pct']:.1%} CSW%={result['csw_pct']:.1%}")
     except Exception:
         result = defaults
 
@@ -487,8 +535,22 @@ def fetch_pitcher_stats(pitcher_id: int, pitcher_name: str, team_abbr: str = "")
     prior = get_prior_season_stats(pitcher_id, pitcher_name)  # returned from cache, no extra fetch
 
     num_starts = df["game_date"].nunique() if not df.empty and "game_date" in df.columns else 0
-    if num_starts < 3:
-        print(f"  [SAMPLE] {pitcher_name}: only {num_starts} starts — using {SEASON-1} career SwStr%/CSW% as fallback")
+
+    # Blend current season SwStr%/CSW% with prior season based on starts.
+    # Below 6 starts the sample is too noisy — weight heavily toward prior season.
+    # At 6+ starts trust current season fully.
+    if num_starts == 0:
+        swstr_blended = prior["swstr_pct"]
+        csw_blended = prior["csw_pct"]
+    elif num_starts < 6:
+        current_weight = num_starts / 6
+        prior_weight = 1 - current_weight
+        swstr_blended = calc_swstr_pct(df) * current_weight + prior["swstr_pct"] * prior_weight
+        csw_blended = calc_csw_pct(df) * current_weight + prior["csw_pct"] * prior_weight
+        print(f"  [SAMPLE] {pitcher_name}: {num_starts} starts — blending {current_weight:.0%} current / {prior_weight:.0%} prior SwStr%/CSW%")
+    else:
+        swstr_blended = calc_swstr_pct(df)
+        csw_blended = calc_csw_pct(df)
 
     last_outing_pitches = game_logs[-1]["pitches"] if game_logs else 0
 
@@ -496,8 +558,8 @@ def fetch_pitcher_stats(pitcher_id: int, pitcher_name: str, team_abbr: str = "")
         "pitcher_id": pitcher_id,
         "pitcher_name": pitcher_name,
         "num_starts": num_starts,
-        "swstr_pct": calc_swstr_pct(df) if num_starts >= 3 else prior["swstr_pct"],
-        "csw_pct": calc_csw_pct(df) if num_starts >= 3 else prior["csw_pct"],
+        "swstr_pct": swstr_blended,
+        "csw_pct": csw_blended,
         "whiff_by_pitch": calc_whiff_by_pitch(df),
         "pitch_usage": calc_pitch_usage(df),
         "velocity": calc_velocity_trend(df),
@@ -512,6 +574,9 @@ def fetch_pitcher_stats(pitcher_id: int, pitcher_name: str, team_abbr: str = "")
         "pitcher_hand": get_pitcher_hand(df),
         "game_logs": game_logs,
         "k_pct_source": fg.get("source", "unknown"),
+        "bb_pct": prior["bb_pct"],
+        "ip_per_start": prior["ip_per_start"],
+        "pitches_per_start": prior["pitches_per_start"],
     }
 
     return _sanitize(stats)

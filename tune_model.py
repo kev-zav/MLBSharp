@@ -22,7 +22,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 RESULTS_CSV = os.path.join(SCRIPT_DIR, "results.csv")
 MODEL_PATH = os.path.join(SCRIPT_DIR, "model.pkl")
 
-XGBOOST_THRESHOLD = 50  # minimum rows to train XGBoost
+XGBOOST_THRESHOLD = 200  # minimum rows to train XGBoost
 
 # Factor columns used for correlation analysis and XGBoost
 FACTOR_COLS = [
@@ -68,9 +68,18 @@ def load_data() -> pd.DataFrame:
         sys.exit(1)
 
     # Convert numeric columns
-    for col in FACTOR_COLS + ["projected_ks", "actual_ks", "book_line", "our_edge_score"]:
+    for col in FACTOR_COLS + ["projected_ks", "actual_ks", "book_line", "our_edge_score", "innings_pitched"]:
         if col in df.columns:
             df[col] = pd.to_numeric(df[col], errors="coerce")
+
+    # Exclude injury/early-exit starts (< 3 innings) from model training
+    # These are not real performance samples and would corrupt the model
+    if "innings_pitched" in df.columns:
+        short_starts = df["innings_pitched"].notna() & (df["innings_pitched"] < 3)
+        n_excluded = short_starts.sum()
+        if n_excluded > 0:
+            print(f"  Excluding {n_excluded} short start(s) (< 3 IP) from model training.")
+        df = df[~short_starts]
 
     return df
 

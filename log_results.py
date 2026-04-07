@@ -49,6 +49,7 @@ CSV_COLUMNS = [
     "rolling_k_avg_5",
     "pitch_mix_adj",
     "projected_ks_manual",
+    "innings_pitched",
 ]
 
 
@@ -71,7 +72,7 @@ def get_actual_ks(game_date: str) -> list[dict]:
     for d in data.get("dates", []):
         for game in d.get("games", []):
             status = game.get("status", {}).get("detailedState", "")
-            if status != "Final":
+            if status not in ("Final", "Completed Early"):
                 continue
 
             game_id = game.get("gamePk")
@@ -274,6 +275,7 @@ def log_results(game_date: str):
                 proj.get("rolling_k_5", "") if proj else "",
                 proj.get("pitch_mix_adj", "") if proj else "",
                 proj.get("projected_ks_manual", "") if proj else "",
+                actual["innings_pitched"],
             ]
 
             writer.writerow(row)

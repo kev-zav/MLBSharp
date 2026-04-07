@@ -76,26 +76,35 @@ def main():
         if idx + 1 < len(sys.argv):
             game_date = sys.argv[idx + 1]
 
+    no_odds = "--no-odds" in sys.argv
+
     print(f"\n{'='*50}")
     print(f"  MLB STRIKEOUT SHARP — Loading data...")
     print(f"{'='*50}\n")
 
-    # Load XGBoost model if available
-    xgb_model, xgb_features = _load_xgb_model()
+    # XGBoost disabled until 200+ graded results are available for reliable training
+    xgb_model, xgb_features = None, None
 
-    # Step 1: Fetch odds FIRST to determine the target date
-    print("[1/6] Fetching strikeout odds...")
-    t0 = time.time()
-    from fetch_odds import fetch_strikeout_odds, get_pitcher_odds
-    all_props, odds_date = fetch_strikeout_odds()
-    print(f"  ({time.time()-t0:.1f}s)")
+    # Step 1: Fetch odds FIRST to determine the target date (skip with --no-odds)
+    from fetch_odds import get_pitcher_odds
+    if no_odds:
+        print("[1/6] Skipping odds fetch (--no-odds)...")
+        all_props = []
+        if game_date is None:
+            game_date = date.today().strftime("%Y-%m-%d")
+    else:
+        print("[1/6] Fetching strikeout odds...")
+        t0 = time.time()
+        from fetch_odds import fetch_strikeout_odds
+        all_props, odds_date = fetch_strikeout_odds()
+        print(f"  ({time.time()-t0:.1f}s)")
 
-    # Use odds date if no explicit date given (odds target the next game day)
-    if game_date is None and odds_date:
-        game_date = odds_date
-        print(f"  → Using odds date: {game_date}")
-    elif game_date is None:
-        game_date = date.today().strftime("%Y-%m-%d")
+        # Use odds date if no explicit date given (odds target the next game day)
+        if game_date is None and odds_date:
+            game_date = odds_date
+            print(f"  → Using odds date: {game_date}")
+        elif game_date is None:
+            game_date = date.today().strftime("%Y-%m-%d")
 
     print(f"\n  Target date: {game_date}\n")
 
@@ -219,15 +228,55 @@ def main():
                     pitch_mix_adj=pitch_mix_adj,
                 )
                 if xgb_proj is not None:
-                    result["projected_ks"] = xgb_proj
-                    result["projection_source"] = "xgboost"
+                    # If XGB diverges from manual by more than 2K, blend 50/50
+                    # XGB has limited training data early season and can produce outliers
+                    deviation = abs(xgb_proj - manual_proj)
+                    if deviation >= 1.5:
+                        blended = round((xgb_proj + manual_proj) / 2, 1)
+                        print(f"\n  [XGB] {pitcher_name}: XGB={xgb_proj} vs manual={manual_proj} "
+                              f"(diff {deviation:.1f}K > 2K) → blended to {blended}")
+                        result["projected_ks"] = blended
+                        result["projection_source"] = "xgboost_blended"
+                    else:
+                        result["projected_ks"] = xgb_proj
+                        result["projection_source"] = "xgboost"
                 else:
                     result["projection_source"] = "manual"
             else:
                 result["projection_source"] = "manual"
 
-            # Calculate hit rate, edge, and fair value for each ladder rung
             from score_matchups import calc_hit_rate, calc_edge, calc_fair_value_odds
+
+            # Recalculate hit rate / edge / play using final projected_ks
+            # (XGBoost may have overridden the manual model's projection)
+            final_proj = result["projected_ks"]
+            line_val = odds.get("line", 0)
+            best_over_o = odds.get("best_over")
+            best_under_o = odds.get("best_under")
+            over_hr = calc_hit_rate(final_proj, line_val)
+            under_hr = round(100 - over_hr, 1)
+            over_edge_r = calc_edge(over_hr, best_over_o["odds"]) if best_over_o else 0.0
+            under_edge_r = calc_edge(under_hr, best_under_o["odds"]) if best_under_o else 0.0
+            if line_val <= 0 or final_proj >= line_val:
+                result["play"] = "OVER"
+                result["edge"] = over_edge_r
+                result["hit_rate"] = over_hr
+                result["best_line"] = best_over_o
+            else:
+                result["play"] = "UNDER"
+                result["edge"] = under_edge_r
+                result["hit_rate"] = under_hr
+                result["best_line"] = best_under_o
+            result["over_hit_rate"] = over_hr
+            result["under_hit_rate"] = under_hr
+            result["over_edge"] = over_edge_r
+            result["under_edge"] = under_edge_r
+
+            # Recalculate K distribution using final projected_ks
+            from score_matchups import calc_k_distribution
+            result["k_distribution"] = calc_k_distribution(result["projected_ks"])
+
+            # Calculate hit rate, edge, and fair value for each ladder rung
             ladder_analysis = []
             seen_lines = set()
             for rung in odds.get("ladder", []):
@@ -316,6 +365,24 @@ def main():
             print(f" → {result['projected_ks']} Ks proj, {edge_str}")
 
     print(f"\n  Scored {len(scored)} pitcher matchups. ({time.time()-t0:.1f}s)")
+
+    # Deduplicate by pitcher_id — doubleheaders can list the same starter for both games
+    seen_pitchers: dict[int, int] = {}  # pitcher_id -> index in scored
+    deduped = []
+    for entry in scored:
+        pid = entry.get("pitcher_id")
+        if pid not in seen_pitchers:
+            seen_pitchers[pid] = len(deduped)
+            deduped.append(entry)
+        else:
+            # Keep whichever has the higher edge
+            existing_idx = seen_pitchers[pid]
+            if entry.get("edge", 0) > deduped[existing_idx].get("edge", 0):
+                print(f"  [DEDUP] Replaced {entry.get('pitcher_name')} entry (higher edge kept)")
+                deduped[existing_idx] = entry
+            else:
+                print(f"  [DEDUP] Dropped duplicate {entry.get('pitcher_name')} entry")
+    scored = deduped
 
     # Step 6: Generate report
     print("\n[6/6] Generating report...\n")

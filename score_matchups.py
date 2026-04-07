@@ -58,22 +58,43 @@ def calc_pitch_mix_adjustment(pitcher_stats: dict, lineup_stats: dict) -> float:
 def estimate_batters_faced(pitcher_stats: dict) -> float:
     """
     Estimate batters faced based on pitch limit, days rest, and recent workload.
+    Uses pitcher's historical pitches/start and IP/start from the DB when available.
     """
-    pitch_limit = DEFAULT_PITCH_LIMIT
     days_rest = pitcher_stats.get("days_rest", 5)
+
+    # Use pitcher's historical pitch limit from DB, fall back to league default
+    # Cap at 120 to guard against bad DB entries (e.g. relievers with 2 GS inflating totals)
+    raw_pitches = pitcher_stats.get("pitches_per_start") or DEFAULT_PITCH_LIMIT
+    pitch_limit = raw_pitches if raw_pitches <= 120 else DEFAULT_PITCH_LIMIT
 
     # Short rest = lower pitch limit
     if days_rest <= 3:
-        pitch_limit = 75
+        pitch_limit = min(pitch_limit, 75)
     elif days_rest == 4:
-        pitch_limit = 85
+        pitch_limit = min(pitch_limit, 85)
 
     last_pitches = pitcher_stats.get("last_outing_pitches", 0)
     if last_pitches > 105:
-        pitch_limit = min(pitch_limit, 90)  # managed workload
+        pitch_limit = min(pitch_limit, pitch_limit * 0.90)  # managed workload
 
-    # Roughly 3.8 pitches per batter faced in MLB
-    bf = pitch_limit / 3.8
+    # Adjust pitches per batter for walk rate — more walks = more pitches per PA
+    # League avg BB% ~8.2% ≈ 3.89 pitches/BF; each 1% above adds ~0.05 pitches/BF
+    bb_pct = pitcher_stats.get("bb_pct", 0.082)
+    pitches_per_bf = 3.89 + (bb_pct - 0.082) * 5.0
+    pitches_per_bf = max(3.60, min(4.20, pitches_per_bf))  # clamp to reasonable range
+
+    bf_from_pitches = pitch_limit / pitches_per_bf
+
+    # Blend with IP/start-based estimate when available (4.35 BF per inning avg)
+    # Cap at 7.5 IP to guard against bad DB entries (relievers/openers with inflated totals)
+    raw_ip = pitcher_stats.get("ip_per_start")
+    ip_per_start = raw_ip if raw_ip and raw_ip <= 7.5 else None
+    if ip_per_start and ip_per_start > 0:
+        bf_from_ip = ip_per_start * 4.35
+        bf = bf_from_pitches * 0.5 + bf_from_ip * 0.5
+    else:
+        bf = bf_from_pitches
+
     return round(bf, 1)
 
 
@@ -176,13 +197,17 @@ def project_strikeouts(
     raw_ks = xk_rate * bf
     adjusted_ks = raw_ks * lineup_adj * park_adj * weather_adj * ump_adj * pitch_mix_adj
 
-    # Recent form: blend with rolling averages
+    # Recent form: blend with rolling averages, scaled by sample size
     rolling_3 = pitcher_stats.get("rolling_k_3", 0)
     rolling_5 = pitcher_stats.get("rolling_k_5", 0)
-    if rolling_3 > 0 and rolling_5 > 0:
+    num_starts = pitcher_stats.get("num_starts", 0)
+
+    if rolling_3 > 0 and rolling_5 > 0 and num_starts >= 3:
         form_ks = rolling_3 * 0.6 + rolling_5 * 0.4
-        # Blend model projection with recent form (60/40)
-        final_ks = adjusted_ks * 0.6 + form_ks * 0.4
+        # Only trust rolling averages once we have 3+ starts.
+        # Scale weight gradually: 3 starts=20%, 4=28%, 5=35%, 6+=40%
+        rolling_weight = min(0.40, (num_starts - 2) / 4 * 0.40)
+        final_ks = adjusted_ks * (1 - rolling_weight) + form_ks * rolling_weight
     else:
         final_ks = adjusted_ks
 
@@ -203,7 +228,7 @@ def project_strikeouts(
     }
 
 
-def calc_k_distribution(projected_ks: float, std_dev: float = 1.8) -> dict[int, float]:
+def calc_k_distribution(projected_ks: float, std_dev: float = 2.5) -> dict[int, float]:
     """
     Probability distribution over discrete K totals using a normal approximation.
     Returns {k: probability} for k in 0..9 and 10+ as a bucket.
@@ -238,7 +263,7 @@ def calc_hit_rate(projected_ks: float, line: float) -> float:
         return 50.0
 
     import math
-    std_dev = 1.8  # empirical std dev of pitcher K totals
+    std_dev = 2.5  # early-season std dev; recalibrate after ~50 logged results
     z = (projected_ks - line) / std_dev
     # Standard normal CDF approximation
     hit_rate = 0.5 * (1 + math.erf(z / math.sqrt(2)))
@@ -306,8 +331,8 @@ def score_matchup(
     if best_under:
         under_edge = calc_edge(under_hit_rate, best_under["odds"])
 
-    # Determine play direction
-    if over_edge > under_edge:
+    # Determine play direction based on projection vs line
+    if line <= 0 or projection["projected_ks"] >= line:
         play = "OVER"
         edge = over_edge
         hit_rate = over_hit_rate
