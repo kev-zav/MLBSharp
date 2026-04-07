@@ -180,6 +180,16 @@ def main():
                 print(f" [pitcher stats error: {e}]")
                 continue
 
+            # Skip openers and bulk relievers
+            from config import EXCLUDED_PITCHER_IDS, EXCLUDED_PITCHER_NAMES, MIN_IP_PER_START
+            if pitcher_id in EXCLUDED_PITCHER_IDS or pitcher_name in EXCLUDED_PITCHER_NAMES:
+                print(f" [SKIPPED — known opener/reliever]")
+                continue
+            ip_per_start = p_stats.get("ip_per_start", 99)
+            if ip_per_start > 0 and ip_per_start < MIN_IP_PER_START:
+                print(f" [SKIPPED — avg {ip_per_start:.1f} IP/start, likely opener/reliever]")
+                continue
+
             try:
                 l_stats = fetch_lineup_stats(opp_abbr, p_stats.get("pitcher_hand", "R"))
             except Exception as e:

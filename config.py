@@ -31,6 +31,18 @@ LEAGUE_AVG_PITCHES_PER_START = 88.0
 DEFAULT_BATTERS_FACED = 19        # empirically optimal from 95-game sample (Apr 2026)
 DEFAULT_PITCH_LIMIT = 85          # league average pitches/start
 
+# --- Opener / Bulk Reliever Exclusion ---
+# Pitchers excluded from projections because they are openers or bulk relievers,
+# not true starters. Add by MLB pitcher ID where possible (more reliable than name).
+EXCLUDED_PITCHER_IDS = {
+    691799,  # Grant Taylor (CWS opener — 1.0 IP/start in DB)
+}
+EXCLUDED_PITCHER_NAMES = {
+    "Grant Taylor",
+}
+# Minimum avg IP/start to be considered a starter. Below this = opener/reliever.
+MIN_IP_PER_START = 3.0
+
 # --- Edge Thresholds (percentage points) ---
 EDGE_STRONG = 8
 EDGE_MODERATE = 4
