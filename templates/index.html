@@ -300,23 +300,23 @@
 
 {% macro grade_class(edge, hr) %}
   {%- set hr = hr | float -%}
-  {%- if edge >= 15 and hr >= 85 %}grade-aplus
-  {%- elif edge >= 10 and hr >= 80 %}grade-a
-  {%- elif edge >= 7 and hr >= 72 %}grade-aminus
-  {%- elif edge >= 5 and hr >= 65 %}grade-bplus
-  {%- elif edge >= 3 and hr >= 60 %}grade-b
-  {%- elif edge >= 1 and hr >= 52 %}grade-c
+  {%- if edge >= 20 and hr >= 72 %}grade-aplus
+  {%- elif edge >= 13 and hr >= 65 %}grade-a
+  {%- elif edge >= 8 and hr >= 60 %}grade-aminus
+  {%- elif edge >= 5 and hr >= 55 %}grade-bplus
+  {%- elif edge >= 3 and hr >= 52 %}grade-b
+  {%- elif edge >= 1 and hr >= 48 %}grade-c
   {%- elif edge > 0 %}grade-d
   {%- else %}grade-f{%- endif %}
 {%- endmacro %}
 {% macro grade_label(edge, hr) %}
   {%- set hr = hr | float -%}
-  {%- if edge >= 15 and hr >= 85 %}A+
-  {%- elif edge >= 10 and hr >= 80 %}A
-  {%- elif edge >= 7 and hr >= 72 %}A-
-  {%- elif edge >= 5 and hr >= 65 %}B+
-  {%- elif edge >= 3 and hr >= 60 %}B
-  {%- elif edge >= 1 and hr >= 52 %}C
+  {%- if edge >= 20 and hr >= 72 %}A+
+  {%- elif edge >= 13 and hr >= 65 %}A
+  {%- elif edge >= 8 and hr >= 60 %}A-
+  {%- elif edge >= 5 and hr >= 55 %}B+
+  {%- elif edge >= 3 and hr >= 52 %}B
+  {%- elif edge >= 1 and hr >= 48 %}C
   {%- elif edge > 0 %}D
   {%- else %}F{%- endif %}
 {%- endmacro %}
