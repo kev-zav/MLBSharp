@@ -1,6 +1,6 @@
 {
   "date": "April 07, 2026",
-  "generated_at": "02:34 PM",
+  "generated_at": "03:01 PM",
   "strong": [
     {
       "pitcher_name": "Reynaldo L\u00f3pez",
@@ -29,8 +29,8 @@
         "adjustment": 1.0
       },
       "weather": {
-        "temp_f": 72,
-        "wind_mph": 8,
+        "temp_f": 73,
+        "wind_mph": 9,
         "description": "Clear Sky",
         "adjustment": 1.0,
         "indoor": false
@@ -169,8 +169,8 @@
         "adjustment": 1.0
       },
       "weather": {
-        "temp_f": 42,
-        "wind_mph": 8,
+        "temp_f": 43,
+        "wind_mph": 9,
         "description": "Overcast Clouds",
         "adjustment": 1.03,
         "indoor": false
@@ -309,8 +309,8 @@
         "adjustment": 1.0
       },
       "weather": {
-        "temp_f": 42,
-        "wind_mph": 8,
+        "temp_f": 43,
+        "wind_mph": 9,
         "description": "Overcast Clouds",
         "adjustment": 1.03,
         "indoor": false
@@ -589,8 +589,8 @@
         "adjustment": 1.0
       },
       "weather": {
-        "temp_f": 72,
-        "wind_mph": 8,
+        "temp_f": 73,
+        "wind_mph": 9,
         "description": "Clear Sky",
         "adjustment": 1.0,
         "indoor": false
@@ -729,8 +729,8 @@
         "adjustment": 1.0
       },
       "weather": {
-        "temp_f": 59,
-        "wind_mph": 13,
+        "temp_f": 57,
+        "wind_mph": 12,
         "description": "Clear Sky",
         "adjustment": 1.015,
         "indoor": false
@@ -869,8 +869,8 @@
         "adjustment": 1.0
       },
       "weather": {
-        "temp_f": 59,
-        "wind_mph": 13,
+        "temp_f": 57,
+        "wind_mph": 12,
         "description": "Clear Sky",
         "adjustment": 1.015,
         "indoor": false
@@ -1709,7 +1709,7 @@
       "weather": {
         "temp_f": 44,
         "wind_mph": 13,
-        "description": "Moderate Rain",
+        "description": "Overcast Clouds",
         "adjustment": 1.03,
         "indoor": false
       },
@@ -1823,13 +1823,136 @@
   ],
   "no_value": [
     {
+      "pitcher_name": "Noah Cameron",
+      "pitcher_id": 702070,
+      "pitcher_team": "KC",
+      "pitcher_hand": "L",
+      "opp_team": "CLE",
+      "venue": "Progressive Field",
+      "projected_ks": 5.0,
+      "line": 0,
+      "play": "OVER",
+      "edge": 0.0,
+      "hit_rate": 50.0,
+      "swstr_pct": 0.11133333333333334,
+      "csw_pct": 0.26680000000000004,
+      "k_pct": 0.2114,
+      "opp_k_pct": 0.2144,
+      "opp_chase": 0.2798,
+      "days_rest": 6,
+      "rolling_k_3": 5.0,
+      "rolling_k_5": 5.0,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 39,
+        "wind_mph": 8,
+        "description": "Clear Sky",
+        "adjustment": 1.03,
+        "indoor": false
+      },
+      "over_odds": [],
+      "under_odds": [],
+      "best_line": null,
+      "fair_value": -100,
+      "ladder": [],
+      "last5": [
+        {
+          "date": "04/01",
+          "k": 5,
+          "pitches": 86
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0223,
+        "1": 0.0455,
+        "2": 0.079,
+        "3": 0.1172,
+        "4": 0.1486,
+        "5": 0.1608,
+        "6": 0.1486,
+        "7": 0.1172,
+        "8": 0.079,
+        "9": 0.0455,
+        "10+": 0.0364
+      }
+    },
+    {
+      "pitcher_name": "Gavin Williams",
+      "pitcher_id": 668909,
+      "pitcher_team": "CLE",
+      "pitcher_hand": "R",
+      "opp_team": "KC",
+      "venue": "Progressive Field",
+      "projected_ks": 6.3,
+      "line": 0,
+      "play": "OVER",
+      "edge": 0.0,
+      "hit_rate": 50.0,
+      "swstr_pct": 0.13806666666666667,
+      "csw_pct": 0.2862,
+      "k_pct": 0.2819,
+      "opp_k_pct": 0.2314,
+      "opp_chase": 0.2932,
+      "days_rest": 6,
+      "rolling_k_3": 8.5,
+      "rolling_k_5": 8.5,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 39,
+        "wind_mph": 8,
+        "description": "Clear Sky",
+        "adjustment": 1.03,
+        "indoor": false
+      },
+      "over_odds": [],
+      "under_odds": [],
+      "best_line": null,
+      "fair_value": -100,
+      "ladder": [],
+      "last5": [
+        {
+          "date": "03/27",
+          "k": 7,
+          "pitches": 89
+        },
+        {
+          "date": "04/01",
+          "k": 10,
+          "pitches": 85
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0069,
+        "1": 0.0173,
+        "2": 0.0369,
+        "3": 0.0673,
+        "4": 0.1047,
+        "5": 0.1392,
+        "6": 0.1579,
+        "7": 0.153,
+        "8": 0.1266,
+        "9": 0.0894,
+        "10+": 0.1006
+      }
+    },
+    {
       "pitcher_name": "Mason Englert",
       "pitcher_id": 669438,
       "pitcher_team": "TB",
       "pitcher_hand": "R",
       "opp_team": "CHC",
       "venue": "Tropicana Field",
-      "projected_ks": 4.5,
+      "projected_ks": 4.9,
       "line": 0,
       "play": "OVER",
       "edge": 0.0,
@@ -1878,17 +2001,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0328,
-        "1": 0.0617,
-        "2": 0.099,
-        "3": 0.1358,
-        "4": 0.159,
-        "5": 0.159,
-        "6": 0.1358,
-        "7": 0.099,
-        "8": 0.0617,
-        "9": 0.0328,
-        "10+": 0.0233
+        "0": 0.0242,
+        "1": 0.0485,
+        "2": 0.0829,
+        "3": 0.1211,
+        "4": 0.151,
+        "5": 0.1609,
+        "6": 0.1463,
+        "7": 0.1137,
+        "8": 0.0754,
+        "9": 0.0427,
+        "10+": 0.0334
       }
     },
     {
@@ -2756,7 +2879,7 @@
         "adjustment": 1.0
       },
       "weather": {
-        "temp_f": 67,
+        "temp_f": 68,
         "wind_mph": 6,
         "description": "Broken Clouds",
         "adjustment": 1.0,
@@ -3176,7 +3299,7 @@
       "weather": {
         "temp_f": 44,
         "wind_mph": 13,
-        "description": "Moderate Rain",
+        "description": "Overcast Clouds",
         "adjustment": 1.03,
         "indoor": false
       },
@@ -3312,7 +3435,7 @@
         "adjustment": 1.0
       },
       "weather": {
-        "temp_f": 67,
+        "temp_f": 68,
         "wind_mph": 6,
         "description": "Broken Clouds",
         "adjustment": 1.0,
@@ -3596,7 +3719,7 @@
       "weather": {
         "temp_f": 44,
         "wind_mph": 13,
-        "description": "Moderate Rain",
+        "description": "Overcast Clouds",
         "adjustment": 1.03,
         "indoor": false
       },
@@ -3734,8 +3857,8 @@
         "adjustment": 1.0
       },
       "weather": {
-        "temp_f": 42,
-        "wind_mph": 8,
+        "temp_f": 43,
+        "wind_mph": 9,
         "description": "Overcast Clouds",
         "adjustment": 1.03,
         "indoor": false
@@ -4016,7 +4139,7 @@
       "weather": {
         "temp_f": 44,
         "wind_mph": 13,
-        "description": "Moderate Rain",
+        "description": "Overcast Clouds",
         "adjustment": 1.03,
         "indoor": false
       },
@@ -5104,6 +5227,70 @@
       }
     },
     {
+      "pitcher_name": "Gavin Williams",
+      "pitcher_id": 668909,
+      "pitcher_team": "CLE",
+      "pitcher_hand": "R",
+      "opp_team": "KC",
+      "venue": "Progressive Field",
+      "projected_ks": 6.3,
+      "line": 0,
+      "play": "OVER",
+      "edge": 0.0,
+      "hit_rate": 50.0,
+      "swstr_pct": 0.13806666666666667,
+      "csw_pct": 0.2862,
+      "k_pct": 0.2819,
+      "opp_k_pct": 0.2314,
+      "opp_chase": 0.2932,
+      "days_rest": 6,
+      "rolling_k_3": 8.5,
+      "rolling_k_5": 8.5,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 39,
+        "wind_mph": 8,
+        "description": "Clear Sky",
+        "adjustment": 1.03,
+        "indoor": false
+      },
+      "over_odds": [],
+      "under_odds": [],
+      "best_line": null,
+      "fair_value": -100,
+      "ladder": [],
+      "last5": [
+        {
+          "date": "03/27",
+          "k": 7,
+          "pitches": 89
+        },
+        {
+          "date": "04/01",
+          "k": 10,
+          "pitches": 85
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0069,
+        "1": 0.0173,
+        "2": 0.0369,
+        "3": 0.0673,
+        "4": 0.1047,
+        "5": 0.1392,
+        "6": 0.1579,
+        "7": 0.153,
+        "8": 0.1266,
+        "9": 0.0894,
+        "10+": 0.1006
+      }
+    },
+    {
       "pitcher_name": "Yoshinobu Yamamoto",
       "pitcher_id": 808967,
       "pitcher_team": "LAD",
@@ -5698,8 +5885,8 @@
         "adjustment": 1.0
       },
       "weather": {
-        "temp_f": 42,
-        "wind_mph": 8,
+        "temp_f": 43,
+        "wind_mph": 9,
         "description": "Overcast Clouds",
         "adjustment": 1.03,
         "indoor": false
@@ -5812,6 +5999,134 @@
       }
     },
     {
+      "pitcher_name": "Noah Cameron",
+      "pitcher_id": 702070,
+      "pitcher_team": "KC",
+      "pitcher_hand": "L",
+      "opp_team": "CLE",
+      "venue": "Progressive Field",
+      "projected_ks": 5.0,
+      "line": 0,
+      "play": "OVER",
+      "edge": 0.0,
+      "hit_rate": 50.0,
+      "swstr_pct": 0.11133333333333334,
+      "csw_pct": 0.26680000000000004,
+      "k_pct": 0.2114,
+      "opp_k_pct": 0.2144,
+      "opp_chase": 0.2798,
+      "days_rest": 6,
+      "rolling_k_3": 5.0,
+      "rolling_k_5": 5.0,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 39,
+        "wind_mph": 8,
+        "description": "Clear Sky",
+        "adjustment": 1.03,
+        "indoor": false
+      },
+      "over_odds": [],
+      "under_odds": [],
+      "best_line": null,
+      "fair_value": -100,
+      "ladder": [],
+      "last5": [
+        {
+          "date": "04/01",
+          "k": 5,
+          "pitches": 86
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0223,
+        "1": 0.0455,
+        "2": 0.079,
+        "3": 0.1172,
+        "4": 0.1486,
+        "5": 0.1608,
+        "6": 0.1486,
+        "7": 0.1172,
+        "8": 0.079,
+        "9": 0.0455,
+        "10+": 0.0364
+      }
+    },
+    {
+      "pitcher_name": "Mason Englert",
+      "pitcher_id": 669438,
+      "pitcher_team": "TB",
+      "pitcher_hand": "R",
+      "opp_team": "CHC",
+      "venue": "Tropicana Field",
+      "projected_ks": 4.9,
+      "line": 0,
+      "play": "OVER",
+      "edge": 0.0,
+      "hit_rate": 50.0,
+      "swstr_pct": 0.11879999999999999,
+      "csw_pct": 0.26895,
+      "k_pct": 0.2281,
+      "opp_k_pct": 0.2255,
+      "opp_chase": 0.2761,
+      "days_rest": 3,
+      "rolling_k_3": 0.67,
+      "rolling_k_5": 0.67,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 0,
+        "description": "Dome / Retractable Roof",
+        "adjustment": 1.0,
+        "indoor": true
+      },
+      "over_odds": [],
+      "under_odds": [],
+      "best_line": null,
+      "fair_value": -100,
+      "ladder": [],
+      "last5": [
+        {
+          "date": "03/29",
+          "k": 1,
+          "pitches": 24
+        },
+        {
+          "date": "04/01",
+          "k": 0,
+          "pitches": 13
+        },
+        {
+          "date": "04/04",
+          "k": 1,
+          "pitches": 14
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0242,
+        "1": 0.0485,
+        "2": 0.0829,
+        "3": 0.1211,
+        "4": 0.151,
+        "5": 0.1609,
+        "6": 0.1463,
+        "7": 0.1137,
+        "8": 0.0754,
+        "9": 0.0427,
+        "10+": 0.0334
+      }
+    },
+    {
       "pitcher_name": "Mike Burrows",
       "pitcher_id": 681347,
       "pitcher_team": "HOU",
@@ -5838,7 +6153,7 @@
         "adjustment": 1.0
       },
       "weather": {
-        "temp_f": 67,
+        "temp_f": 68,
         "wind_mph": 6,
         "description": "Broken Clouds",
         "adjustment": 1.0,
@@ -5978,8 +6293,8 @@
         "adjustment": 1.0
       },
       "weather": {
-        "temp_f": 72,
-        "wind_mph": 8,
+        "temp_f": 73,
+        "wind_mph": 9,
         "description": "Clear Sky",
         "adjustment": 1.0,
         "indoor": false
@@ -6232,75 +6547,6 @@
       }
     },
     {
-      "pitcher_name": "Mason Englert",
-      "pitcher_id": 669438,
-      "pitcher_team": "TB",
-      "pitcher_hand": "R",
-      "opp_team": "CHC",
-      "venue": "Tropicana Field",
-      "projected_ks": 4.5,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
-      "swstr_pct": 0.11879999999999999,
-      "csw_pct": 0.26895,
-      "k_pct": 0.2281,
-      "opp_k_pct": 0.2255,
-      "opp_chase": 0.2761,
-      "days_rest": 3,
-      "rolling_k_3": 0.67,
-      "rolling_k_5": 0.67,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 0,
-        "description": "Dome / Retractable Roof",
-        "adjustment": 1.0,
-        "indoor": true
-      },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
-      "last5": [
-        {
-          "date": "03/29",
-          "k": 1,
-          "pitches": 24
-        },
-        {
-          "date": "04/01",
-          "k": 0,
-          "pitches": 13
-        },
-        {
-          "date": "04/04",
-          "k": 1,
-          "pitches": 14
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0328,
-        "1": 0.0617,
-        "2": 0.099,
-        "3": 0.1358,
-        "4": 0.159,
-        "5": 0.159,
-        "6": 0.1358,
-        "7": 0.099,
-        "8": 0.0617,
-        "9": 0.0328,
-        "10+": 0.0233
-      }
-    },
-    {
       "pitcher_name": "Aaron Civale",
       "pitcher_id": 650644,
       "pitcher_team": "ATH",
@@ -6462,8 +6708,8 @@
         "adjustment": 1.0
       },
       "weather": {
-        "temp_f": 59,
-        "wind_mph": 13,
+        "temp_f": 57,
+        "wind_mph": 12,
         "description": "Clear Sky",
         "adjustment": 1.015,
         "indoor": false
@@ -6602,7 +6848,7 @@
         "adjustment": 1.0
       },
       "weather": {
-        "temp_f": 67,
+        "temp_f": 68,
         "wind_mph": 6,
         "description": "Broken Clouds",
         "adjustment": 1.0,
@@ -6742,8 +6988,8 @@
         "adjustment": 1.0
       },
       "weather": {
-        "temp_f": 59,
-        "wind_mph": 13,
+        "temp_f": 57,
+        "wind_mph": 12,
         "description": "Clear Sky",
         "adjustment": 1.015,
         "indoor": false
@@ -7011,8 +7257,8 @@
         "adjustment": 1.0
       },
       "weather": {
-        "temp_f": 72,
-        "wind_mph": 8,
+        "temp_f": 73,
+        "wind_mph": 9,
         "description": "Clear Sky",
         "adjustment": 1.0,
         "indoor": false
@@ -7135,5 +7381,5 @@
       "books": ""
     }
   ],
-  "total_plays": 26
+  "total_plays": 28
 }
