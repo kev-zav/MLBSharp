@@ -1,30 +1,27 @@
 {
   "date": "April 07, 2026",
-  "generated_at": "02:33 PM",
-  "strong": [],
-  "moderate": [],
-  "lean": [],
-  "no_value": [
+  "generated_at": "02:34 PM",
+  "strong": [
     {
-      "pitcher_name": "Zac Gallen",
-      "pitcher_id": 668678,
-      "pitcher_team": "AZ",
+      "pitcher_name": "Reynaldo L\u00f3pez",
+      "pitcher_id": 625643,
+      "pitcher_team": "ATL",
       "pitcher_hand": "R",
-      "opp_team": "NYM",
-      "venue": "Citi Field",
-      "projected_ks": 4.6,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
-      "swstr_pct": 0.09383333333333334,
-      "csw_pct": 0.2612333333333333,
-      "k_pct": 0.1862,
-      "opp_k_pct": 0.1963,
-      "opp_chase": 0.2949,
-      "days_rest": 6,
-      "rolling_k_3": 2.0,
-      "rolling_k_5": 2.0,
+      "opp_team": "LAA",
+      "venue": "Angel Stadium",
+      "projected_ks": 3.0,
+      "line": 5.5,
+      "play": "UNDER",
+      "edge": 31.2,
+      "hit_rate": 89.2,
+      "swstr_pct": 0.04583333333333334,
+      "csw_pct": 0.21323333333333333,
+      "k_pct": 0.0667,
+      "opp_k_pct": 0.2763,
+      "opp_chase": 0.2758,
+      "days_rest": 5,
+      "rolling_k_3": 3.0,
+      "rolling_k_5": 3.0,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -32,124 +29,416 @@
         "adjustment": 1.0
       },
       "weather": {
-        "temp_f": 52,
-        "wind_mph": 19,
+        "temp_f": 72,
+        "wind_mph": 8,
         "description": "Clear Sky",
-        "adjustment": 1.025,
+        "adjustment": 1.0,
         "indoor": false
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
-      "last5": [
+      "over_odds": [
         {
-          "date": "03/26",
-          "k": 2,
-          "pitches": 76
+          "book": "DraftKings",
+          "odds": 108
         },
         {
-          "date": "04/01",
-          "k": 2,
-          "pitches": 88
+          "book": "FanDuel",
+          "odds": 104
         }
       ],
-      "k_distribution": {
-        "0": 0.0305,
-        "1": 0.0582,
-        "2": 0.0949,
-        "3": 0.1322,
-        "4": 0.1573,
-        "5": 0.1598,
-        "6": 0.1387,
-        "7": 0.1027,
-        "8": 0.065,
-        "9": 0.0351,
-        "10+": 0.0255
-      }
-    },
-    {
-      "pitcher_name": "Freddy Peralta",
-      "pitcher_id": 642547,
-      "pitcher_team": "NYM",
-      "pitcher_hand": "R",
-      "opp_team": "AZ",
-      "venue": "Citi Field",
-      "projected_ks": 6.7,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
-      "swstr_pct": 0.1422,
-      "csw_pct": 0.2828333333333334,
-      "k_pct": 0.2953,
-      "opp_k_pct": 0.2252,
-      "opp_chase": 0.3151,
-      "days_rest": 6,
-      "rolling_k_3": 7.0,
-      "rolling_k_5": 7.0,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
+      "under_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -138
+        },
+        {
+          "book": "DraftKings",
+          "odds": -138
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -138
       },
-      "weather": {
-        "temp_f": 52,
-        "wind_mph": 19,
-        "description": "Clear Sky",
-        "adjustment": 1.025,
-        "indoor": false
-      },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "fair_value": -826,
+      "ladder": [
+        {
+          "line": 5.5,
+          "over_hit_rate": 10.8,
+          "under_hit_rate": 89.2,
+          "over_edge": -37.3,
+          "under_edge": 31.2,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": 108
+          },
+          "best_under": {
+            "book": "FanDuel",
+            "odds": -138
+          },
+          "fair_value_over": 826,
+          "fair_value_under": -826,
+          "model_only": false
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 5.3,
+          "under_hit_rate": 94.7,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1787,
+          "fair_value_under": -1787,
+          "model_only": true
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 2.4,
+          "under_hit_rate": 97.6,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 4067,
+          "fair_value_under": -4067,
+          "model_only": true
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 0.9,
+          "under_hit_rate": 99.1,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 9900,
+          "fair_value_under": -9900,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
-          "date": "03/26",
-          "k": 7,
+          "date": "03/28",
+          "k": 3,
+          "pitches": 77
+        },
+        {
+          "date": "04/02",
+          "k": 3,
           "pitches": 80
-        },
-        {
-          "date": "04/01",
-          "k": 7,
-          "pitches": 92
         }
       ],
       "k_distribution": {
-        "0": 0.0046,
-        "1": 0.0122,
-        "2": 0.0278,
-        "3": 0.0539,
-        "4": 0.0893,
-        "5": 0.1264,
-        "6": 0.1528,
-        "7": 0.1577,
-        "8": 0.139,
-        "9": 0.1046,
-        "10+": 0.1316
+        "0": 0.0847,
+        "1": 0.1258,
+        "2": 0.1594,
+        "3": 0.1724,
+        "4": 0.1594,
+        "5": 0.1258,
+        "6": 0.0847,
+        "7": 0.0488,
+        "8": 0.024,
+        "9": 0.0101,
+        "10+": 0.0051
       }
     },
     {
-      "pitcher_name": "Nick Pivetta",
-      "pitcher_id": 601713,
-      "pitcher_team": "SD",
+      "pitcher_name": "Taj Bradley",
+      "pitcher_id": 671737,
+      "pitcher_team": "MIN",
       "pitcher_hand": "R",
-      "opp_team": "PIT",
-      "venue": "PNC Park",
-      "projected_ks": 6.6,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
-      "swstr_pct": 0.11636666666666667,
-      "csw_pct": 0.2811666666666667,
-      "k_pct": 0.2782,
-      "opp_k_pct": 0.2263,
-      "opp_chase": 0.2956,
+      "opp_team": "DET",
+      "venue": "Target Field",
+      "projected_ks": 5.1,
+      "line": 5.5,
+      "play": "UNDER",
+      "edge": 22.9,
+      "hit_rate": 67.5,
+      "swstr_pct": 0.11073333333333335,
+      "csw_pct": 0.25360000000000005,
+      "k_pct": 0.2282,
+      "opp_k_pct": 0.2433,
+      "opp_chase": 0.2741,
+      "days_rest": 5,
+      "rolling_k_3": 6.0,
+      "rolling_k_5": 6.0,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 42,
+        "wind_mph": 8,
+        "description": "Overcast Clouds",
+        "adjustment": 1.03,
+        "indoor": false
+      },
+      "over_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -146
+        },
+        {
+          "book": "DraftKings",
+          "odds": -159
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "DraftKings",
+          "odds": 124
+        },
+        {
+          "book": "FanDuel",
+          "odds": 110
+        }
+      ],
+      "best_line": {
+        "book": "DraftKings",
+        "odds": 124
+      },
+      "fair_value": -208,
+      "ladder": [
+        {
+          "line": 5.5,
+          "over_hit_rate": 32.5,
+          "under_hit_rate": 67.5,
+          "over_edge": -26.8,
+          "under_edge": 22.9,
+          "best_over": {
+            "book": "FanDuel",
+            "odds": -146
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": 124
+          },
+          "fair_value_over": 208,
+          "fair_value_under": -208,
+          "model_only": false
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 20.4,
+          "under_hit_rate": 79.6,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 390,
+          "fair_value_under": -390,
+          "model_only": true
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 11.5,
+          "under_hit_rate": 88.5,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 770,
+          "fair_value_under": -770,
+          "model_only": true
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 5.8,
+          "under_hit_rate": 94.2,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1624,
+          "fair_value_under": -1624,
+          "model_only": true
+        }
+      ],
+      "last5": [
+        {
+          "date": "03/28",
+          "k": 9,
+          "pitches": 92
+        },
+        {
+          "date": "04/02",
+          "k": 3,
+          "pitches": 100
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0206,
+        "1": 0.0426,
+        "2": 0.0752,
+        "3": 0.1133,
+        "4": 0.1459,
+        "5": 0.1604,
+        "6": 0.1506,
+        "7": 0.1207,
+        "8": 0.0826,
+        "9": 0.0483,
+        "10+": 0.0397
+      }
+    },
+    {
+      "pitcher_name": "Tarik Skubal",
+      "pitcher_id": 669373,
+      "pitcher_team": "DET",
+      "pitcher_hand": "L",
+      "opp_team": "MIN",
+      "venue": "Target Field",
+      "projected_ks": 7.4,
+      "line": 7.5,
+      "play": "UNDER",
+      "edge": 16.9,
+      "hit_rate": 63.4,
+      "swstr_pct": 0.14793333333333336,
+      "csw_pct": 0.3071666666666667,
+      "k_pct": 0.2853,
+      "opp_k_pct": 0.2432,
+      "opp_chase": 0.2645,
+      "days_rest": 6,
+      "rolling_k_3": 4.5,
+      "rolling_k_5": 4.5,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 42,
+        "wind_mph": 8,
+        "description": "Overcast Clouds",
+        "adjustment": 1.03,
+        "indoor": false
+      },
+      "over_odds": [
+        {
+          "book": "DraftKings",
+          "odds": -147
+        },
+        {
+          "book": "FanDuel",
+          "odds": -148
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "DraftKings",
+          "odds": 115
+        },
+        {
+          "book": "FanDuel",
+          "odds": 112
+        }
+      ],
+      "best_line": {
+        "book": "DraftKings",
+        "odds": 115
+      },
+      "fair_value": -173,
+      "ladder": [
+        {
+          "line": 7.5,
+          "over_hit_rate": 36.6,
+          "under_hit_rate": 63.4,
+          "over_edge": -22.9,
+          "under_edge": 16.9,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": -147
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": 115
+          },
+          "fair_value_over": 173,
+          "fair_value_under": -173,
+          "model_only": false
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 23.7,
+          "under_hit_rate": 76.3,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 322,
+          "fair_value_under": -322,
+          "model_only": true
+        },
+        {
+          "line": 9.5,
+          "over_hit_rate": 13.8,
+          "under_hit_rate": 86.2,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 625,
+          "fair_value_under": -625,
+          "model_only": true
+        },
+        {
+          "line": 10.5,
+          "over_hit_rate": 7.2,
+          "under_hit_rate": 92.8,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1289,
+          "fair_value_under": -1289,
+          "model_only": true
+        }
+      ],
+      "last5": [
+        {
+          "date": "03/26",
+          "k": 6,
+          "pitches": 74
+        },
+        {
+          "date": "04/01",
+          "k": 3,
+          "pitches": 87
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0021,
+        "1": 0.0063,
+        "2": 0.0159,
+        "3": 0.0344,
+        "4": 0.0637,
+        "5": 0.1007,
+        "6": 0.1359,
+        "7": 0.1567,
+        "8": 0.1542,
+        "9": 0.1296,
+        "10+": 0.2006
+      }
+    },
+    {
+      "pitcher_name": "Sandy Alcantara",
+      "pitcher_id": 645261,
+      "pitcher_team": "MIA",
+      "pitcher_hand": "R",
+      "opp_team": "CIN",
+      "venue": "loanDepot park",
+      "projected_ks": 5.1,
+      "line": 5.5,
+      "play": "UNDER",
+      "edge": 14.7,
+      "hit_rate": 67.5,
+      "swstr_pct": 0.1142,
+      "csw_pct": 0.2757666666666667,
+      "k_pct": 0.1984,
+      "opp_k_pct": 0.2326,
+      "opp_chase": 0.2695,
       "days_rest": 6,
       "rolling_k_3": 6.0,
       "rolling_k_5": 6.0,
@@ -160,61 +449,557 @@
         "adjustment": 1.0
       },
       "weather": {
-        "temp_f": 50,
-        "wind_mph": 9,
-        "description": "Clear Sky",
-        "adjustment": 1.03,
-        "indoor": false
+        "temp_f": 72,
+        "wind_mph": 0,
+        "description": "Dome / Retractable Roof",
+        "adjustment": 1.0,
+        "indoor": true
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "DraftKings",
+          "odds": -109
+        },
+        {
+          "book": "FanDuel",
+          "odds": -118
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -112
+        },
+        {
+          "book": "DraftKings",
+          "odds": -117
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -112
+      },
+      "fair_value": -208,
+      "ladder": [
+        {
+          "line": 5.5,
+          "over_hit_rate": 32.5,
+          "under_hit_rate": 67.5,
+          "over_edge": -19.7,
+          "under_edge": 14.7,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": -109
+          },
+          "best_under": {
+            "book": "FanDuel",
+            "odds": -112
+          },
+          "fair_value_over": 208,
+          "fair_value_under": -208,
+          "model_only": false
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 20.4,
+          "under_hit_rate": 79.6,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 390,
+          "fair_value_under": -390,
+          "model_only": true
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 11.5,
+          "under_hit_rate": 88.5,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 770,
+          "fair_value_under": -770,
+          "model_only": true
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 5.8,
+          "under_hit_rate": 94.2,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1624,
+          "fair_value_under": -1624,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
-          "date": "03/26",
-          "k": 4,
-          "pitches": 69
+          "date": "03/27",
+          "k": 5,
+          "pitches": 73
         },
         {
           "date": "04/01",
-          "k": 8,
-          "pitches": 82
+          "k": 7,
+          "pitches": 93
         }
       ],
       "k_distribution": {
-        "0": 0.0051,
-        "1": 0.0134,
-        "2": 0.0299,
-        "3": 0.0571,
-        "4": 0.0932,
-        "5": 0.1298,
-        "6": 0.1544,
-        "7": 0.1569,
-        "8": 0.1361,
-        "9": 0.1008,
-        "10+": 0.1233
+        "0": 0.0206,
+        "1": 0.0426,
+        "2": 0.0752,
+        "3": 0.1133,
+        "4": 0.1459,
+        "5": 0.1604,
+        "6": 0.1506,
+        "7": 0.1207,
+        "8": 0.0826,
+        "9": 0.0483,
+        "10+": 0.0397
       }
     },
     {
-      "pitcher_name": "Paul Skenes",
-      "pitcher_id": 694973,
-      "pitcher_team": "PIT",
-      "pitcher_hand": "R",
-      "opp_team": "SD",
-      "venue": "PNC Park",
-      "projected_ks": 7.0,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
-      "swstr_pct": 0.1388,
-      "csw_pct": 0.28596666666666665,
-      "k_pct": 0.2779,
-      "opp_k_pct": 0.2211,
-      "opp_chase": 0.2941,
+      "pitcher_name": "Yusei Kikuchi",
+      "pitcher_id": 579328,
+      "pitcher_team": "LAA",
+      "pitcher_hand": "L",
+      "opp_team": "ATL",
+      "venue": "Angel Stadium",
+      "projected_ks": 4.7,
+      "line": 5.5,
+      "play": "UNDER",
+      "edge": 13.4,
+      "hit_rate": 72.7,
+      "swstr_pct": 0.1164,
+      "csw_pct": 0.27813333333333334,
+      "k_pct": 0.2083,
+      "opp_k_pct": 0.1884,
+      "opp_chase": 0.2915,
       "days_rest": 6,
+      "rolling_k_3": 4.0,
+      "rolling_k_5": 4.0,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 8,
+        "description": "Clear Sky",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "over_odds": [
+        {
+          "book": "DraftKings",
+          "odds": 125
+        },
+        {
+          "book": "FanDuel",
+          "odds": 110
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -146
+        },
+        {
+          "book": "DraftKings",
+          "odds": -160
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -146
+      },
+      "fair_value": -266,
+      "ladder": [
+        {
+          "line": 5.5,
+          "over_hit_rate": 27.3,
+          "under_hit_rate": 72.7,
+          "over_edge": -17.1,
+          "under_edge": 13.4,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": 125
+          },
+          "best_under": {
+            "book": "FanDuel",
+            "odds": -146
+          },
+          "fair_value_over": 266,
+          "fair_value_under": -266,
+          "model_only": false
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 16.4,
+          "under_hit_rate": 83.6,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 510,
+          "fair_value_under": -510,
+          "model_only": true
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 8.8,
+          "under_hit_rate": 91.2,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1036,
+          "fair_value_under": -1036,
+          "model_only": true
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 4.2,
+          "under_hit_rate": 95.8,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 2281,
+          "fair_value_under": -2281,
+          "model_only": true
+        }
+      ],
+      "last5": [
+        {
+          "date": "03/27",
+          "k": 3,
+          "pitches": 86
+        },
+        {
+          "date": "04/01",
+          "k": 5,
+          "pitches": 91
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0282,
+        "1": 0.0548,
+        "2": 0.0909,
+        "3": 0.1286,
+        "4": 0.1554,
+        "5": 0.1604,
+        "6": 0.1414,
+        "7": 0.1064,
+        "8": 0.0684,
+        "9": 0.0375,
+        "10+": 0.028
+      }
+    },
+    {
+      "pitcher_name": "Cade Cavalli",
+      "pitcher_id": 676917,
+      "pitcher_team": "WSH",
+      "pitcher_hand": "R",
+      "opp_team": "STL",
+      "venue": "Nationals Park",
+      "projected_ks": 4.3,
+      "line": 4.5,
+      "play": "UNDER",
+      "edge": 12.0,
+      "hit_rate": 64.8,
+      "swstr_pct": 0.11410000000000001,
+      "csw_pct": 0.2981666666666667,
+      "k_pct": 0.1849,
+      "opp_k_pct": 0.2238,
+      "opp_chase": 0.2961,
+      "days_rest": 6,
+      "rolling_k_3": 4.0,
+      "rolling_k_5": 4.0,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 59,
+        "wind_mph": 13,
+        "description": "Clear Sky",
+        "adjustment": 1.015,
+        "indoor": false
+      },
+      "over_odds": [
+        {
+          "book": "DraftKings",
+          "odds": -113
+        },
+        {
+          "book": "FanDuel",
+          "odds": -118
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -112
+        },
+        {
+          "book": "DraftKings",
+          "odds": -112
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -112
+      },
+      "fair_value": -184,
+      "ladder": [
+        {
+          "line": 4.5,
+          "over_hit_rate": 35.2,
+          "under_hit_rate": 64.8,
+          "over_edge": -17.9,
+          "under_edge": 12.0,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": -113
+          },
+          "best_under": {
+            "book": "FanDuel",
+            "odds": -112
+          },
+          "fair_value_over": 184,
+          "fair_value_under": -184,
+          "model_only": false
+        },
+        {
+          "line": 5.5,
+          "over_hit_rate": 22.6,
+          "under_hit_rate": 77.4,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 342,
+          "fair_value_under": -342,
+          "model_only": true
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 13.0,
+          "under_hit_rate": 87.0,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 669,
+          "fair_value_under": -669,
+          "model_only": true
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 6.7,
+          "under_hit_rate": 93.3,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1393,
+          "fair_value_under": -1393,
+          "model_only": true
+        }
+      ],
+      "last5": [
+        {
+          "date": "03/26",
+          "k": 5,
+          "pitches": 75
+        },
+        {
+          "date": "04/01",
+          "k": 3,
+          "pitches": 84
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0379,
+        "1": 0.069,
+        "2": 0.1074,
+        "3": 0.1426,
+        "4": 0.1618,
+        "5": 0.1568,
+        "6": 0.1297,
+        "7": 0.0917,
+        "8": 0.0553,
+        "9": 0.0285,
+        "10+": 0.0193
+      }
+    },
+    {
+      "pitcher_name": "Matthew Liberatore",
+      "pitcher_id": 669461,
+      "pitcher_team": "STL",
+      "pitcher_hand": "L",
+      "opp_team": "WSH",
+      "venue": "Nationals Park",
+      "projected_ks": 4.0,
+      "line": 4.5,
+      "play": "UNDER",
+      "edge": 11.9,
+      "hit_rate": 68.8,
+      "swstr_pct": 0.07880000000000001,
+      "csw_pct": 0.2297666666666667,
+      "k_pct": 0.16,
+      "opp_k_pct": 0.2362,
+      "opp_chase": 0.3145,
+      "days_rest": 6,
+      "rolling_k_3": 2.0,
+      "rolling_k_5": 2.0,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 59,
+        "wind_mph": 13,
+        "description": "Clear Sky",
+        "adjustment": 1.015,
+        "indoor": false
+      },
+      "over_odds": [
+        {
+          "book": "DraftKings",
+          "odds": 108
+        },
+        {
+          "book": "FanDuel",
+          "odds": 100
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -132
+        },
+        {
+          "book": "DraftKings",
+          "odds": -138
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -132
+      },
+      "fair_value": -221,
+      "ladder": [
+        {
+          "line": 4.5,
+          "over_hit_rate": 31.2,
+          "under_hit_rate": 68.8,
+          "over_edge": -16.9,
+          "under_edge": 11.9,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": 108
+          },
+          "best_under": {
+            "book": "FanDuel",
+            "odds": -132
+          },
+          "fair_value_over": 221,
+          "fair_value_under": -221,
+          "model_only": false
+        },
+        {
+          "line": 5.5,
+          "over_hit_rate": 19.4,
+          "under_hit_rate": 80.6,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 415,
+          "fair_value_under": -415,
+          "model_only": true
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 10.8,
+          "under_hit_rate": 89.2,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 826,
+          "fair_value_under": -826,
+          "model_only": true
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 5.3,
+          "under_hit_rate": 94.7,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1787,
+          "fair_value_under": -1787,
+          "model_only": true
+        }
+      ],
+      "last5": [
+        {
+          "date": "03/26",
+          "k": 2,
+          "pitches": 78
+        },
+        {
+          "date": "04/01",
+          "k": 2,
+          "pitches": 76
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0465,
+        "1": 0.0808,
+        "2": 0.1199,
+        "3": 0.1519,
+        "4": 0.1644,
+        "5": 0.1519,
+        "6": 0.1199,
+        "7": 0.0808,
+        "8": 0.0465,
+        "9": 0.0228,
+        "10+": 0.0144
+      }
+    },
+    {
+      "pitcher_name": "Aaron Civale",
+      "pitcher_id": 650644,
+      "pitcher_team": "ATH",
+      "pitcher_hand": "R",
+      "opp_team": "NYY",
+      "venue": "Yankee Stadium",
+      "projected_ks": 4.4,
+      "line": 4.5,
+      "play": "UNDER",
+      "edge": 11.9,
+      "hit_rate": 63.4,
+      "swstr_pct": 0.08700000000000001,
+      "csw_pct": 0.25965000000000005,
+      "k_pct": 0.1946,
+      "opp_k_pct": 0.2463,
+      "opp_chase": 0.254,
+      "days_rest": 7,
       "rolling_k_3": 3.0,
       "rolling_k_5": 3.0,
       "umpire": {
@@ -224,41 +1009,112 @@
         "adjustment": 1.0
       },
       "weather": {
-        "temp_f": 50,
-        "wind_mph": 9,
+        "temp_f": 54,
+        "wind_mph": 18,
         "description": "Clear Sky",
-        "adjustment": 1.03,
+        "adjustment": 1.025,
         "indoor": false
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
-      "last5": [
+      "over_odds": [
         {
-          "date": "03/26",
-          "k": 1,
-          "pitches": 37
+          "book": "DraftKings",
+          "odds": -106
         },
         {
-          "date": "04/01",
-          "k": 5,
-          "pitches": 77
+          "book": "FanDuel",
+          "odds": -125
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -106
+        },
+        {
+          "book": "DraftKings",
+          "odds": -121
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -106
+      },
+      "fair_value": -173,
+      "ladder": [
+        {
+          "line": 4.5,
+          "over_hit_rate": 36.6,
+          "under_hit_rate": 63.4,
+          "over_edge": -14.9,
+          "under_edge": 11.9,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": -106
+          },
+          "best_under": {
+            "book": "FanDuel",
+            "odds": -106
+          },
+          "fair_value_over": 173,
+          "fair_value_under": -173,
+          "model_only": false
+        },
+        {
+          "line": 5.5,
+          "over_hit_rate": 23.7,
+          "under_hit_rate": 76.3,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 322,
+          "fair_value_under": -322,
+          "model_only": true
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 13.8,
+          "under_hit_rate": 86.2,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 625,
+          "fair_value_under": -625,
+          "model_only": true
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 7.2,
+          "under_hit_rate": 92.8,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1289,
+          "fair_value_under": -1289,
+          "model_only": true
+        }
+      ],
+      "last5": [
+        {
+          "date": "03/31",
+          "k": 3,
+          "pitches": 87
         }
       ],
       "k_distribution": {
-        "0": 0.0033,
-        "1": 0.0093,
-        "2": 0.0221,
-        "3": 0.0449,
-        "4": 0.078,
-        "5": 0.1158,
-        "6": 0.1467,
-        "7": 0.1587,
-        "8": 0.1467,
-        "9": 0.1158,
-        "10+": 0.1589
+        "0": 0.0353,
+        "1": 0.0653,
+        "2": 0.1032,
+        "3": 0.1393,
+        "4": 0.1605,
+        "5": 0.158,
+        "6": 0.1328,
+        "7": 0.0954,
+        "8": 0.0584,
+        "9": 0.0306,
+        "10+": 0.0212
       }
     },
     {
@@ -269,10 +1125,10 @@
       "opp_team": "TB",
       "venue": "Tropicana Field",
       "projected_ks": 3.2,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
+      "line": 3.5,
+      "play": "UNDER",
+      "edge": 11.6,
+      "hit_rate": 66.1,
       "swstr_pct": 0.067,
       "csw_pct": 0.242,
       "k_pct": 0.15,
@@ -294,11 +1150,87 @@
         "adjustment": 1.0,
         "indoor": true
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "DraftKings",
+          "odds": 109
+        },
+        {
+          "book": "FanDuel",
+          "odds": -110
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -120
+        },
+        {
+          "book": "DraftKings",
+          "odds": -139
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -120
+      },
+      "fair_value": -195,
+      "ladder": [
+        {
+          "line": 3.5,
+          "over_hit_rate": 33.9,
+          "under_hit_rate": 66.1,
+          "over_edge": -13.9,
+          "under_edge": 11.6,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": 109
+          },
+          "best_under": {
+            "book": "FanDuel",
+            "odds": -120
+          },
+          "fair_value_over": 195,
+          "fair_value_under": -195,
+          "model_only": false
+        },
+        {
+          "line": 4.5,
+          "over_hit_rate": 21.5,
+          "under_hit_rate": 78.5,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 365,
+          "fair_value_under": -365,
+          "model_only": true
+        },
+        {
+          "line": 5.5,
+          "over_hit_rate": 12.2,
+          "under_hit_rate": 87.8,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 720,
+          "fair_value_under": -720,
+          "model_only": true
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 6.2,
+          "under_hit_rate": 93.8,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1513,
+          "fair_value_under": -1513,
+          "model_only": true
+        }
+      ],
       "last5": [],
       "k_distribution": {
         "0": 0.0759,
@@ -314,6 +1246,582 @@
         "10+": 0.0063
       }
     },
+    {
+      "pitcher_name": "Robbie Ray",
+      "pitcher_id": 592662,
+      "pitcher_team": "SF",
+      "pitcher_hand": "L",
+      "opp_team": "PHI",
+      "venue": "Oracle Park",
+      "projected_ks": 6.1,
+      "line": 6.5,
+      "play": "UNDER",
+      "edge": 9.7,
+      "hit_rate": 67.5,
+      "swstr_pct": 0.13740000000000002,
+      "csw_pct": 0.2773,
+      "k_pct": 0.2486,
+      "opp_k_pct": 0.2159,
+      "opp_chase": 0.2935,
+      "days_rest": 5,
+      "rolling_k_3": 5.5,
+      "rolling_k_5": 5.5,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 59,
+        "wind_mph": 10,
+        "description": "Broken Clouds",
+        "adjustment": 1.015,
+        "indoor": false
+      },
+      "over_odds": [
+        {
+          "book": "DraftKings",
+          "odds": 108
+        },
+        {
+          "book": "FanDuel",
+          "odds": 104
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "DraftKings",
+          "odds": -137
+        },
+        {
+          "book": "FanDuel",
+          "odds": -138
+        }
+      ],
+      "best_line": {
+        "book": "DraftKings",
+        "odds": -137
+      },
+      "fair_value": -208,
+      "ladder": [
+        {
+          "line": 6.5,
+          "over_hit_rate": 32.5,
+          "under_hit_rate": 67.5,
+          "over_edge": -15.6,
+          "under_edge": 9.7,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": 108
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": -137
+          },
+          "fair_value_over": 208,
+          "fair_value_under": -208,
+          "model_only": false
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 20.4,
+          "under_hit_rate": 79.6,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 390,
+          "fair_value_under": -390,
+          "model_only": true
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 11.5,
+          "under_hit_rate": 88.5,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 770,
+          "fair_value_under": -770,
+          "model_only": true
+        },
+        {
+          "line": 9.5,
+          "over_hit_rate": 5.8,
+          "under_hit_rate": 94.2,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1624,
+          "fair_value_under": -1624,
+          "model_only": true
+        }
+      ],
+      "last5": [
+        {
+          "date": "03/27",
+          "k": 4,
+          "pitches": 89
+        },
+        {
+          "date": "04/02",
+          "k": 7,
+          "pitches": 96
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0084,
+        "1": 0.0204,
+        "2": 0.0422,
+        "3": 0.0745,
+        "4": 0.1124,
+        "5": 0.1447,
+        "6": 0.1591,
+        "7": 0.1493,
+        "8": 0.1197,
+        "9": 0.082,
+        "10+": 0.0873
+      }
+    }
+  ],
+  "moderate": [
+    {
+      "pitcher_name": "Nathan Eovaldi",
+      "pitcher_id": 543135,
+      "pitcher_team": "TEX",
+      "pitcher_hand": "R",
+      "opp_team": "SEA",
+      "venue": "Globe Life Field",
+      "projected_ks": 7.0,
+      "line": 5.5,
+      "play": "OVER",
+      "edge": 6.8,
+      "hit_rate": 60.1,
+      "swstr_pct": 0.13890000000000002,
+      "csw_pct": 0.29123333333333334,
+      "k_pct": 0.2618,
+      "opp_k_pct": 0.2806,
+      "opp_chase": 0.3132,
+      "days_rest": 6,
+      "rolling_k_3": 6.0,
+      "rolling_k_5": 6.0,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 0,
+        "description": "Dome / Retractable Roof",
+        "adjustment": 1.0,
+        "indoor": true
+      },
+      "over_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -114
+        },
+        {
+          "book": "DraftKings",
+          "odds": -119
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "DraftKings",
+          "odds": -107
+        },
+        {
+          "book": "FanDuel",
+          "odds": -114
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -114
+      },
+      "fair_value": -151,
+      "ladder": [
+        {
+          "line": 5.5,
+          "over_hit_rate": 60.1,
+          "under_hit_rate": 39.9,
+          "over_edge": 6.8,
+          "under_edge": -11.8,
+          "best_over": {
+            "book": "FanDuel",
+            "odds": -114
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": -107
+          },
+          "fair_value_over": -151,
+          "fair_value_under": 151,
+          "model_only": false
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 45.3,
+          "under_hit_rate": 54.7,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 121,
+          "fair_value_under": -121,
+          "model_only": true
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 31.2,
+          "under_hit_rate": 68.8,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 221,
+          "fair_value_under": -221,
+          "model_only": true
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 19.4,
+          "under_hit_rate": 80.6,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 415,
+          "fair_value_under": -415,
+          "model_only": true
+        }
+      ],
+      "last5": [
+        {
+          "date": "03/26",
+          "k": 7,
+          "pitches": 80
+        },
+        {
+          "date": "04/01",
+          "k": 5,
+          "pitches": 88
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0033,
+        "1": 0.0093,
+        "2": 0.0221,
+        "3": 0.0449,
+        "4": 0.078,
+        "5": 0.1158,
+        "6": 0.1467,
+        "7": 0.1587,
+        "8": 0.1467,
+        "9": 0.1158,
+        "10+": 0.1589
+      }
+    },
+    {
+      "pitcher_name": "Andrew Abbott",
+      "pitcher_id": 671096,
+      "pitcher_team": "CIN",
+      "pitcher_hand": "L",
+      "opp_team": "MIA",
+      "venue": "loanDepot park",
+      "projected_ks": 5.1,
+      "line": 5.5,
+      "play": "UNDER",
+      "edge": 5.7,
+      "hit_rate": 67.5,
+      "swstr_pct": 0.1058,
+      "csw_pct": 0.27490000000000003,
+      "k_pct": 0.2093,
+      "opp_k_pct": 0.2012,
+      "opp_chase": 0.3007,
+      "days_rest": 6,
+      "rolling_k_3": 4.5,
+      "rolling_k_5": 4.5,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 0,
+        "description": "Dome / Retractable Roof",
+        "adjustment": 1.0,
+        "indoor": true
+      },
+      "over_odds": [
+        {
+          "book": "FanDuel",
+          "odds": 122
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -162
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -162
+      },
+      "fair_value": -208,
+      "ladder": [
+        {
+          "line": 4.5,
+          "over_hit_rate": 46.8,
+          "under_hit_rate": 53.2,
+          "over_edge": -13.5,
+          "under_edge": 7.5,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": -152
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": 119
+          },
+          "fair_value_over": 114,
+          "fair_value_under": -114,
+          "model_only": false
+        },
+        {
+          "line": 5.5,
+          "over_hit_rate": 32.5,
+          "under_hit_rate": 67.5,
+          "over_edge": -12.5,
+          "under_edge": 5.7,
+          "best_over": {
+            "book": "FanDuel",
+            "odds": 122
+          },
+          "best_under": {
+            "book": "FanDuel",
+            "odds": -162
+          },
+          "fair_value_over": 208,
+          "fair_value_under": -208,
+          "model_only": false
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 20.4,
+          "under_hit_rate": 79.6,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 390,
+          "fair_value_under": -390,
+          "model_only": true
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 11.5,
+          "under_hit_rate": 88.5,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 770,
+          "fair_value_under": -770,
+          "model_only": true
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 5.8,
+          "under_hit_rate": 94.2,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1624,
+          "fair_value_under": -1624,
+          "model_only": true
+        }
+      ],
+      "last5": [
+        {
+          "date": "03/26",
+          "k": 4,
+          "pitches": 83
+        },
+        {
+          "date": "04/01",
+          "k": 5,
+          "pitches": 88
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0206,
+        "1": 0.0426,
+        "2": 0.0752,
+        "3": 0.1133,
+        "4": 0.1459,
+        "5": 0.1604,
+        "6": 0.1506,
+        "7": 0.1207,
+        "8": 0.0826,
+        "9": 0.0483,
+        "10+": 0.0397
+      }
+    }
+  ],
+  "lean": [
+    {
+      "pitcher_name": "Garrett Crochet",
+      "pitcher_id": 676979,
+      "pitcher_team": "BOS",
+      "pitcher_hand": "L",
+      "opp_team": "MIL",
+      "venue": "Fenway Park",
+      "projected_ks": 8.5,
+      "line": 7.5,
+      "play": "OVER",
+      "edge": 2.3,
+      "hit_rate": 52.8,
+      "swstr_pct": 0.13756666666666667,
+      "csw_pct": 0.28003333333333336,
+      "k_pct": 0.3147,
+      "opp_k_pct": 0.2497,
+      "opp_chase": 0.3069,
+      "days_rest": 6,
+      "rolling_k_3": 7.5,
+      "rolling_k_5": 7.5,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 44,
+        "wind_mph": 13,
+        "description": "Moderate Rain",
+        "adjustment": 1.03,
+        "indoor": false
+      },
+      "over_odds": [
+        {
+          "book": "DraftKings",
+          "odds": -102
+        },
+        {
+          "book": "FanDuel",
+          "odds": -110
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -120
+        },
+        {
+          "book": "DraftKings",
+          "odds": -125
+        }
+      ],
+      "best_line": {
+        "book": "DraftKings",
+        "odds": -102
+      },
+      "fair_value": -112,
+      "ladder": [
+        {
+          "line": 7.5,
+          "over_hit_rate": 52.8,
+          "under_hit_rate": 47.2,
+          "over_edge": 2.3,
+          "under_edge": -7.3,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": -102
+          },
+          "best_under": {
+            "book": "FanDuel",
+            "odds": -120
+          },
+          "fair_value_over": -112,
+          "fair_value_under": 112,
+          "model_only": false
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 38.1,
+          "under_hit_rate": 61.9,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 162,
+          "fair_value_under": -162,
+          "model_only": true
+        },
+        {
+          "line": 9.5,
+          "over_hit_rate": 24.9,
+          "under_hit_rate": 75.1,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 302,
+          "fair_value_under": -302,
+          "model_only": true
+        },
+        {
+          "line": 10.5,
+          "over_hit_rate": 14.6,
+          "under_hit_rate": 85.4,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 585,
+          "fair_value_under": -585,
+          "model_only": true
+        }
+      ],
+      "last5": [
+        {
+          "date": "03/26",
+          "k": 8,
+          "pitches": 80
+        },
+        {
+          "date": "04/01",
+          "k": 7,
+          "pitches": 93
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0005,
+        "1": 0.0019,
+        "2": 0.0056,
+        "3": 0.0146,
+        "4": 0.0321,
+        "5": 0.0603,
+        "6": 0.0968,
+        "7": 0.1327,
+        "8": 0.1554,
+        "9": 0.1554,
+        "10+": 0.3446
+      }
+    }
+  ],
+  "no_value": [
     {
       "pitcher_name": "Mason Englert",
       "pitcher_id": 669438,
@@ -384,769 +1892,6 @@
       }
     },
     {
-      "pitcher_name": "Andrew Abbott",
-      "pitcher_id": 671096,
-      "pitcher_team": "CIN",
-      "pitcher_hand": "L",
-      "opp_team": "MIA",
-      "venue": "loanDepot park",
-      "projected_ks": 5.1,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
-      "swstr_pct": 0.1058,
-      "csw_pct": 0.27490000000000003,
-      "k_pct": 0.2093,
-      "opp_k_pct": 0.2012,
-      "opp_chase": 0.3007,
-      "days_rest": 6,
-      "rolling_k_3": 4.5,
-      "rolling_k_5": 4.5,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 0,
-        "description": "Dome / Retractable Roof",
-        "adjustment": 1.0,
-        "indoor": true
-      },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
-      "last5": [
-        {
-          "date": "03/26",
-          "k": 4,
-          "pitches": 83
-        },
-        {
-          "date": "04/01",
-          "k": 5,
-          "pitches": 88
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0206,
-        "1": 0.0426,
-        "2": 0.0752,
-        "3": 0.1133,
-        "4": 0.1459,
-        "5": 0.1604,
-        "6": 0.1506,
-        "7": 0.1207,
-        "8": 0.0826,
-        "9": 0.0483,
-        "10+": 0.0397
-      }
-    },
-    {
-      "pitcher_name": "Sandy Alcantara",
-      "pitcher_id": 645261,
-      "pitcher_team": "MIA",
-      "pitcher_hand": "R",
-      "opp_team": "CIN",
-      "venue": "loanDepot park",
-      "projected_ks": 5.1,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
-      "swstr_pct": 0.1142,
-      "csw_pct": 0.2757666666666667,
-      "k_pct": 0.1984,
-      "opp_k_pct": 0.2326,
-      "opp_chase": 0.2695,
-      "days_rest": 6,
-      "rolling_k_3": 6.0,
-      "rolling_k_5": 6.0,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 0,
-        "description": "Dome / Retractable Roof",
-        "adjustment": 1.0,
-        "indoor": true
-      },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
-      "last5": [
-        {
-          "date": "03/27",
-          "k": 5,
-          "pitches": 73
-        },
-        {
-          "date": "04/01",
-          "k": 7,
-          "pitches": 93
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0206,
-        "1": 0.0426,
-        "2": 0.0752,
-        "3": 0.1133,
-        "4": 0.1459,
-        "5": 0.1604,
-        "6": 0.1506,
-        "7": 0.1207,
-        "8": 0.0826,
-        "9": 0.0483,
-        "10+": 0.0397
-      }
-    },
-    {
-      "pitcher_name": "Matthew Liberatore",
-      "pitcher_id": 669461,
-      "pitcher_team": "STL",
-      "pitcher_hand": "L",
-      "opp_team": "WSH",
-      "venue": "Nationals Park",
-      "projected_ks": 4.0,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
-      "swstr_pct": 0.07880000000000001,
-      "csw_pct": 0.2297666666666667,
-      "k_pct": 0.16,
-      "opp_k_pct": 0.2362,
-      "opp_chase": 0.3145,
-      "days_rest": 6,
-      "rolling_k_3": 2.0,
-      "rolling_k_5": 2.0,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 59,
-        "wind_mph": 13,
-        "description": "Clear Sky",
-        "adjustment": 1.015,
-        "indoor": false
-      },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
-      "last5": [
-        {
-          "date": "03/26",
-          "k": 2,
-          "pitches": 78
-        },
-        {
-          "date": "04/01",
-          "k": 2,
-          "pitches": 76
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0465,
-        "1": 0.0808,
-        "2": 0.1199,
-        "3": 0.1519,
-        "4": 0.1644,
-        "5": 0.1519,
-        "6": 0.1199,
-        "7": 0.0808,
-        "8": 0.0465,
-        "9": 0.0228,
-        "10+": 0.0144
-      }
-    },
-    {
-      "pitcher_name": "Cade Cavalli",
-      "pitcher_id": 676917,
-      "pitcher_team": "WSH",
-      "pitcher_hand": "R",
-      "opp_team": "STL",
-      "venue": "Nationals Park",
-      "projected_ks": 4.3,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
-      "swstr_pct": 0.11410000000000001,
-      "csw_pct": 0.2981666666666667,
-      "k_pct": 0.1849,
-      "opp_k_pct": 0.2238,
-      "opp_chase": 0.2961,
-      "days_rest": 6,
-      "rolling_k_3": 4.0,
-      "rolling_k_5": 4.0,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 59,
-        "wind_mph": 13,
-        "description": "Clear Sky",
-        "adjustment": 1.015,
-        "indoor": false
-      },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
-      "last5": [
-        {
-          "date": "03/26",
-          "k": 5,
-          "pitches": 75
-        },
-        {
-          "date": "04/01",
-          "k": 3,
-          "pitches": 84
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0379,
-        "1": 0.069,
-        "2": 0.1074,
-        "3": 0.1426,
-        "4": 0.1618,
-        "5": 0.1568,
-        "6": 0.1297,
-        "7": 0.0917,
-        "8": 0.0553,
-        "9": 0.0285,
-        "10+": 0.0193
-      }
-    },
-    {
-      "pitcher_name": "Jacob Misiorowski",
-      "pitcher_id": 694819,
-      "pitcher_team": "MIL",
-      "pitcher_hand": "R",
-      "opp_team": "BOS",
-      "venue": "Fenway Park",
-      "projected_ks": 7.1,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
-      "swstr_pct": 0.1537,
-      "csw_pct": 0.3095,
-      "k_pct": 0.3411,
-      "opp_k_pct": 0.2567,
-      "opp_chase": 0.3194,
-      "days_rest": 6,
-      "rolling_k_3": 9.0,
-      "rolling_k_5": 9.0,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 44,
-        "wind_mph": 13,
-        "description": "Moderate Rain",
-        "adjustment": 1.03,
-        "indoor": false
-      },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
-      "last5": [
-        {
-          "date": "03/26",
-          "k": 11,
-          "pitches": 95
-        },
-        {
-          "date": "04/01",
-          "k": 7,
-          "pitches": 94
-        }
-      ],
-      "k_distribution": {
-        "0": 0.003,
-        "1": 0.0084,
-        "2": 0.0204,
-        "3": 0.0421,
-        "4": 0.0743,
-        "5": 0.112,
-        "6": 0.1442,
-        "7": 0.1586,
-        "8": 0.1489,
-        "9": 0.1194,
-        "10+": 0.1687
-      }
-    },
-    {
-      "pitcher_name": "Garrett Crochet",
-      "pitcher_id": 676979,
-      "pitcher_team": "BOS",
-      "pitcher_hand": "L",
-      "opp_team": "MIL",
-      "venue": "Fenway Park",
-      "projected_ks": 8.5,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
-      "swstr_pct": 0.13756666666666667,
-      "csw_pct": 0.28003333333333336,
-      "k_pct": 0.3147,
-      "opp_k_pct": 0.2497,
-      "opp_chase": 0.3069,
-      "days_rest": 6,
-      "rolling_k_3": 7.5,
-      "rolling_k_5": 7.5,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 44,
-        "wind_mph": 13,
-        "description": "Moderate Rain",
-        "adjustment": 1.03,
-        "indoor": false
-      },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
-      "last5": [
-        {
-          "date": "03/26",
-          "k": 8,
-          "pitches": 80
-        },
-        {
-          "date": "04/01",
-          "k": 7,
-          "pitches": 93
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0005,
-        "1": 0.0019,
-        "2": 0.0056,
-        "3": 0.0146,
-        "4": 0.0321,
-        "5": 0.0603,
-        "6": 0.0968,
-        "7": 0.1327,
-        "8": 0.1554,
-        "9": 0.1554,
-        "10+": 0.3446
-      }
-    },
-    {
-      "pitcher_name": "Aaron Civale",
-      "pitcher_id": 650644,
-      "pitcher_team": "ATH",
-      "pitcher_hand": "R",
-      "opp_team": "NYY",
-      "venue": "Yankee Stadium",
-      "projected_ks": 4.4,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
-      "swstr_pct": 0.08700000000000001,
-      "csw_pct": 0.25965000000000005,
-      "k_pct": 0.1946,
-      "opp_k_pct": 0.2463,
-      "opp_chase": 0.254,
-      "days_rest": 7,
-      "rolling_k_3": 3.0,
-      "rolling_k_5": 3.0,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 54,
-        "wind_mph": 18,
-        "description": "Clear Sky",
-        "adjustment": 1.025,
-        "indoor": false
-      },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
-      "last5": [
-        {
-          "date": "03/31",
-          "k": 3,
-          "pitches": 87
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0353,
-        "1": 0.0653,
-        "2": 0.1032,
-        "3": 0.1393,
-        "4": 0.1605,
-        "5": 0.158,
-        "6": 0.1328,
-        "7": 0.0954,
-        "8": 0.0584,
-        "9": 0.0306,
-        "10+": 0.0212
-      }
-    },
-    {
-      "pitcher_name": "Cam Schlittler",
-      "pitcher_id": 693645,
-      "pitcher_team": "NYY",
-      "pitcher_hand": "R",
-      "opp_team": "ATH",
-      "venue": "Yankee Stadium",
-      "projected_ks": 7.3,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
-      "swstr_pct": 0.13256666666666667,
-      "csw_pct": 0.2861,
-      "k_pct": 0.3045,
-      "opp_k_pct": 0.2554,
-      "opp_chase": 0.3149,
-      "days_rest": 6,
-      "rolling_k_3": 7.5,
-      "rolling_k_5": 7.5,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 54,
-        "wind_mph": 18,
-        "description": "Clear Sky",
-        "adjustment": 1.025,
-        "indoor": false
-      },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
-      "last5": [
-        {
-          "date": "03/27",
-          "k": 8,
-          "pitches": 69
-        },
-        {
-          "date": "04/01",
-          "k": 7,
-          "pitches": 79
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0024,
-        "1": 0.0069,
-        "2": 0.0173,
-        "3": 0.0369,
-        "4": 0.0672,
-        "5": 0.1045,
-        "6": 0.1388,
-        "7": 0.1575,
-        "8": 0.1526,
-        "9": 0.1263,
-        "10+": 0.1896
-      }
-    },
-    {
-      "pitcher_name": "Yoshinobu Yamamoto",
-      "pitcher_id": 808967,
-      "pitcher_team": "LAD",
-      "pitcher_hand": "R",
-      "opp_team": "TOR",
-      "venue": "Rogers Centre",
-      "projected_ks": 6.2,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
-      "swstr_pct": 0.13163333333333332,
-      "csw_pct": 0.30073333333333335,
-      "k_pct": 0.2655,
-      "opp_k_pct": 0.2122,
-      "opp_chase": 0.327,
-      "days_rest": 6,
-      "rolling_k_3": 4.0,
-      "rolling_k_5": 4.0,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 0,
-        "description": "Dome / Retractable Roof",
-        "adjustment": 1.0,
-        "indoor": true
-      },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
-      "last5": [
-        {
-          "date": "03/26",
-          "k": 6,
-          "pitches": 95
-        },
-        {
-          "date": "04/01",
-          "k": 2,
-          "pitches": 87
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0077,
-        "1": 0.0188,
-        "2": 0.0395,
-        "3": 0.0709,
-        "4": 0.1086,
-        "5": 0.142,
-        "6": 0.1586,
-        "7": 0.1513,
-        "8": 0.1232,
-        "9": 0.0857,
-        "10+": 0.0938
-      }
-    },
-    {
-      "pitcher_name": "Kevin Gausman",
-      "pitcher_id": 592332,
-      "pitcher_team": "TOR",
-      "pitcher_hand": "R",
-      "opp_team": "LAD",
-      "venue": "Rogers Centre",
-      "projected_ks": 6.9,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
-      "swstr_pct": 0.15376666666666666,
-      "csw_pct": 0.3056,
-      "k_pct": 0.3143,
-      "opp_k_pct": 0.2125,
-      "opp_chase": 0.2643,
-      "days_rest": 6,
-      "rolling_k_3": 10.5,
-      "rolling_k_5": 10.5,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 0,
-        "description": "Dome / Retractable Roof",
-        "adjustment": 1.0,
-        "indoor": true
-      },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
-      "last5": [
-        {
-          "date": "03/27",
-          "k": 11,
-          "pitches": 83
-        },
-        {
-          "date": "04/01",
-          "k": 10,
-          "pitches": 89
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0037,
-        "1": 0.0102,
-        "2": 0.0239,
-        "3": 0.0478,
-        "4": 0.0817,
-        "5": 0.1194,
-        "6": 0.1489,
-        "7": 0.1586,
-        "8": 0.1443,
-        "9": 0.1121,
-        "10+": 0.1494
-      }
-    },
-    {
-      "pitcher_name": "Tarik Skubal",
-      "pitcher_id": 669373,
-      "pitcher_team": "DET",
-      "pitcher_hand": "L",
-      "opp_team": "MIN",
-      "venue": "Target Field",
-      "projected_ks": 7.4,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
-      "swstr_pct": 0.14793333333333336,
-      "csw_pct": 0.3071666666666667,
-      "k_pct": 0.2853,
-      "opp_k_pct": 0.2432,
-      "opp_chase": 0.2645,
-      "days_rest": 6,
-      "rolling_k_3": 4.5,
-      "rolling_k_5": 4.5,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 42,
-        "wind_mph": 8,
-        "description": "Overcast Clouds",
-        "adjustment": 1.03,
-        "indoor": false
-      },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
-      "last5": [
-        {
-          "date": "03/26",
-          "k": 6,
-          "pitches": 74
-        },
-        {
-          "date": "04/01",
-          "k": 3,
-          "pitches": 87
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0021,
-        "1": 0.0063,
-        "2": 0.0159,
-        "3": 0.0344,
-        "4": 0.0637,
-        "5": 0.1007,
-        "6": 0.1359,
-        "7": 0.1567,
-        "8": 0.1542,
-        "9": 0.1296,
-        "10+": 0.2006
-      }
-    },
-    {
-      "pitcher_name": "Taj Bradley",
-      "pitcher_id": 671737,
-      "pitcher_team": "MIN",
-      "pitcher_hand": "R",
-      "opp_team": "DET",
-      "venue": "Target Field",
-      "projected_ks": 5.1,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
-      "swstr_pct": 0.11073333333333335,
-      "csw_pct": 0.25360000000000005,
-      "k_pct": 0.2282,
-      "opp_k_pct": 0.2433,
-      "opp_chase": 0.2741,
-      "days_rest": 5,
-      "rolling_k_3": 6.0,
-      "rolling_k_5": 6.0,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 42,
-        "wind_mph": 8,
-        "description": "Overcast Clouds",
-        "adjustment": 1.03,
-        "indoor": false
-      },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
-      "last5": [
-        {
-          "date": "03/28",
-          "k": 9,
-          "pitches": 92
-        },
-        {
-          "date": "04/02",
-          "k": 3,
-          "pitches": 100
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0206,
-        "1": 0.0426,
-        "2": 0.0752,
-        "3": 0.1133,
-        "4": 0.1459,
-        "5": 0.1604,
-        "6": 0.1506,
-        "7": 0.1207,
-        "8": 0.0826,
-        "9": 0.0483,
-        "10+": 0.0397
-      }
-    },
-    {
       "pitcher_name": "George Kirby",
       "pitcher_id": 669923,
       "pitcher_team": "SEA",
@@ -1154,10 +1899,10 @@
       "opp_team": "TEX",
       "venue": "Globe Life Field",
       "projected_ks": 6.5,
-      "line": 0,
+      "line": 5.5,
       "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
+      "edge": -1.1,
+      "hit_rate": 52.8,
       "swstr_pct": 0.10473333333333334,
       "csw_pct": 0.2648666666666667,
       "k_pct": 0.261,
@@ -1179,11 +1924,87 @@
         "adjustment": 1.0,
         "indoor": true
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "DraftKings",
+          "odds": -117
+        },
+        {
+          "book": "FanDuel",
+          "odds": -130
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -102
+        },
+        {
+          "book": "DraftKings",
+          "odds": -109
+        }
+      ],
+      "best_line": {
+        "book": "DraftKings",
+        "odds": -117
+      },
+      "fair_value": -112,
+      "ladder": [
+        {
+          "line": 5.5,
+          "over_hit_rate": 52.8,
+          "under_hit_rate": 47.2,
+          "over_edge": -1.1,
+          "under_edge": -3.3,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": -117
+          },
+          "best_under": {
+            "book": "FanDuel",
+            "odds": -102
+          },
+          "fair_value_over": -112,
+          "fair_value_under": 112,
+          "model_only": false
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 38.1,
+          "under_hit_rate": 61.9,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 162,
+          "fair_value_under": -162,
+          "model_only": true
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 24.9,
+          "under_hit_rate": 75.1,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 302,
+          "fair_value_under": -302,
+          "model_only": true
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 14.6,
+          "under_hit_rate": 85.4,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 585,
+          "fair_value_under": -585,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
           "date": "03/27",
@@ -1211,25 +2032,25 @@
       }
     },
     {
-      "pitcher_name": "Nathan Eovaldi",
-      "pitcher_id": 543135,
-      "pitcher_team": "TEX",
+      "pitcher_name": "Freddy Peralta",
+      "pitcher_id": 642547,
+      "pitcher_team": "NYM",
       "pitcher_hand": "R",
-      "opp_team": "SEA",
-      "venue": "Globe Life Field",
-      "projected_ks": 7.0,
-      "line": 0,
+      "opp_team": "AZ",
+      "venue": "Citi Field",
+      "projected_ks": 6.7,
+      "line": 5.5,
       "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
-      "swstr_pct": 0.13890000000000002,
-      "csw_pct": 0.29123333333333334,
-      "k_pct": 0.2618,
-      "opp_k_pct": 0.2806,
-      "opp_chase": 0.3132,
+      "edge": -1.8,
+      "hit_rate": 55.8,
+      "swstr_pct": 0.1422,
+      "csw_pct": 0.2828333333333334,
+      "k_pct": 0.2953,
+      "opp_k_pct": 0.2252,
+      "opp_chase": 0.3151,
       "days_rest": 6,
-      "rolling_k_3": 6.0,
-      "rolling_k_5": 6.0,
+      "rolling_k_3": 7.0,
+      "rolling_k_5": 7.0,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -1237,17 +2058,93 @@
         "adjustment": 1.0
       },
       "weather": {
-        "temp_f": 72,
-        "wind_mph": 0,
-        "description": "Dome / Retractable Roof",
-        "adjustment": 1.0,
-        "indoor": true
+        "temp_f": 52,
+        "wind_mph": 19,
+        "description": "Clear Sky",
+        "adjustment": 1.025,
+        "indoor": false
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -136
+        },
+        {
+          "book": "DraftKings",
+          "odds": -140
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "DraftKings",
+          "odds": 110
+        },
+        {
+          "book": "FanDuel",
+          "odds": 102
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -136
+      },
+      "fair_value": -126,
+      "ladder": [
+        {
+          "line": 5.5,
+          "over_hit_rate": 55.8,
+          "under_hit_rate": 44.2,
+          "over_edge": -1.8,
+          "under_edge": -3.4,
+          "best_over": {
+            "book": "FanDuel",
+            "odds": -136
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": 110
+          },
+          "fair_value_over": -126,
+          "fair_value_under": 126,
+          "model_only": false
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 40.9,
+          "under_hit_rate": 59.1,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 144,
+          "fair_value_under": -144,
+          "model_only": true
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 27.3,
+          "under_hit_rate": 72.7,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 266,
+          "fair_value_under": -266,
+          "model_only": true
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 16.4,
+          "under_hit_rate": 83.6,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 510,
+          "fair_value_under": -510,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
           "date": "03/26",
@@ -1256,44 +2153,44 @@
         },
         {
           "date": "04/01",
-          "k": 5,
-          "pitches": 88
+          "k": 7,
+          "pitches": 92
         }
       ],
       "k_distribution": {
-        "0": 0.0033,
-        "1": 0.0093,
-        "2": 0.0221,
-        "3": 0.0449,
-        "4": 0.078,
-        "5": 0.1158,
-        "6": 0.1467,
-        "7": 0.1587,
-        "8": 0.1467,
-        "9": 0.1158,
-        "10+": 0.1589
+        "0": 0.0046,
+        "1": 0.0122,
+        "2": 0.0278,
+        "3": 0.0539,
+        "4": 0.0893,
+        "5": 0.1264,
+        "6": 0.1528,
+        "7": 0.1577,
+        "8": 0.139,
+        "9": 0.1046,
+        "10+": 0.1316
       }
     },
     {
-      "pitcher_name": "Mike Burrows",
-      "pitcher_id": 681347,
-      "pitcher_team": "HOU",
+      "pitcher_name": "Cam Schlittler",
+      "pitcher_id": 693645,
+      "pitcher_team": "NYY",
       "pitcher_hand": "R",
-      "opp_team": "COL",
-      "venue": "Coors Field",
-      "projected_ks": 4.7,
-      "line": 0,
+      "opp_team": "ATH",
+      "venue": "Yankee Stadium",
+      "projected_ks": 7.3,
+      "line": 6.5,
       "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
-      "swstr_pct": 0.12493333333333334,
-      "csw_pct": 0.28936666666666666,
-      "k_pct": 0.2407,
-      "opp_k_pct": 0.2313,
-      "opp_chase": 0.3389,
+      "edge": -4.3,
+      "hit_rate": 49.8,
+      "swstr_pct": 0.13256666666666667,
+      "csw_pct": 0.2861,
+      "k_pct": 0.3045,
+      "opp_k_pct": 0.2554,
+      "opp_chase": 0.3149,
       "days_rest": 6,
-      "rolling_k_3": 6.0,
-      "rolling_k_5": 6.0,
+      "rolling_k_3": 7.5,
+      "rolling_k_5": 7.5,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -1301,233 +2198,117 @@
         "adjustment": 1.0
       },
       "weather": {
-        "temp_f": 67,
-        "wind_mph": 6,
-        "description": "Broken Clouds",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
-      "last5": [
-        {
-          "date": "03/27",
-          "k": 6,
-          "pitches": 94
-        },
-        {
-          "date": "04/01",
-          "k": 6,
-          "pitches": 84
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0282,
-        "1": 0.0548,
-        "2": 0.0909,
-        "3": 0.1286,
-        "4": 0.1554,
-        "5": 0.1604,
-        "6": 0.1414,
-        "7": 0.1064,
-        "8": 0.0684,
-        "9": 0.0375,
-        "10+": 0.028
-      }
-    },
-    {
-      "pitcher_name": "Kyle Freeland",
-      "pitcher_id": 607536,
-      "pitcher_team": "COL",
-      "pitcher_hand": "L",
-      "opp_team": "HOU",
-      "venue": "Coors Field",
-      "projected_ks": 4.2,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
-      "swstr_pct": 0.09886666666666667,
-      "csw_pct": 0.2733,
-      "k_pct": 0.1779,
-      "opp_k_pct": 0.2382,
-      "opp_chase": 0.2937,
-      "days_rest": 6,
-      "rolling_k_3": 4.0,
-      "rolling_k_5": 4.0,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 67,
-        "wind_mph": 6,
-        "description": "Broken Clouds",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
-      "last5": [
-        {
-          "date": "03/27",
-          "k": 2,
-          "pitches": 81
-        },
-        {
-          "date": "04/01",
-          "k": 6,
-          "pitches": 88
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0406,
-        "1": 0.0728,
-        "2": 0.1115,
-        "3": 0.1459,
-        "4": 0.1629,
-        "5": 0.1554,
-        "6": 0.1265,
-        "7": 0.088,
-        "8": 0.0523,
-        "9": 0.0265,
-        "10+": 0.0175
-      }
-    },
-    {
-      "pitcher_name": "Reynaldo L\u00f3pez",
-      "pitcher_id": 625643,
-      "pitcher_team": "ATL",
-      "pitcher_hand": "R",
-      "opp_team": "LAA",
-      "venue": "Angel Stadium",
-      "projected_ks": 3.0,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
-      "swstr_pct": 0.04583333333333334,
-      "csw_pct": 0.21323333333333333,
-      "k_pct": 0.0667,
-      "opp_k_pct": 0.2763,
-      "opp_chase": 0.2758,
-      "days_rest": 5,
-      "rolling_k_3": 3.0,
-      "rolling_k_5": 3.0,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 8,
+        "temp_f": 54,
+        "wind_mph": 18,
         "description": "Clear Sky",
-        "adjustment": 1.0,
+        "adjustment": 1.025,
         "indoor": false
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
-      "last5": [
+      "over_odds": [
         {
-          "date": "03/28",
-          "k": 3,
-          "pitches": 77
+          "book": "FanDuel",
+          "odds": -118
         },
         {
-          "date": "04/02",
-          "k": 3,
-          "pitches": 80
+          "book": "DraftKings",
+          "odds": -134
         }
       ],
-      "k_distribution": {
-        "0": 0.0847,
-        "1": 0.1258,
-        "2": 0.1594,
-        "3": 0.1724,
-        "4": 0.1594,
-        "5": 0.1258,
-        "6": 0.0847,
-        "7": 0.0488,
-        "8": 0.024,
-        "9": 0.0101,
-        "10+": 0.0051
-      }
-    },
-    {
-      "pitcher_name": "Yusei Kikuchi",
-      "pitcher_id": 579328,
-      "pitcher_team": "LAA",
-      "pitcher_hand": "L",
-      "opp_team": "ATL",
-      "venue": "Angel Stadium",
-      "projected_ks": 4.7,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
-      "swstr_pct": 0.1164,
-      "csw_pct": 0.27813333333333334,
-      "k_pct": 0.2083,
-      "opp_k_pct": 0.1884,
-      "opp_chase": 0.2915,
-      "days_rest": 6,
-      "rolling_k_3": 4.0,
-      "rolling_k_5": 4.0,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
+      "under_odds": [
+        {
+          "book": "DraftKings",
+          "odds": 105
+        },
+        {
+          "book": "FanDuel",
+          "odds": -112
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -118
       },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 8,
-        "description": "Clear Sky",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "fair_value": 101,
+      "ladder": [
+        {
+          "line": 6.5,
+          "over_hit_rate": 49.8,
+          "under_hit_rate": 50.2,
+          "over_edge": -4.3,
+          "under_edge": 1.4,
+          "best_over": {
+            "book": "FanDuel",
+            "odds": -118
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": 105
+          },
+          "fair_value_over": 101,
+          "fair_value_under": -101,
+          "model_only": false
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 35.2,
+          "under_hit_rate": 64.8,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 184,
+          "fair_value_under": -184,
+          "model_only": true
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 22.6,
+          "under_hit_rate": 77.4,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 342,
+          "fair_value_under": -342,
+          "model_only": true
+        },
+        {
+          "line": 9.5,
+          "over_hit_rate": 13.0,
+          "under_hit_rate": 87.0,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 669,
+          "fair_value_under": -669,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
           "date": "03/27",
-          "k": 3,
-          "pitches": 86
+          "k": 8,
+          "pitches": 69
         },
         {
           "date": "04/01",
-          "k": 5,
-          "pitches": 91
+          "k": 7,
+          "pitches": 79
         }
       ],
       "k_distribution": {
-        "0": 0.0282,
-        "1": 0.0548,
-        "2": 0.0909,
-        "3": 0.1286,
-        "4": 0.1554,
-        "5": 0.1604,
-        "6": 0.1414,
-        "7": 0.1064,
-        "8": 0.0684,
-        "9": 0.0375,
-        "10+": 0.028
+        "0": 0.0024,
+        "1": 0.0069,
+        "2": 0.0173,
+        "3": 0.0369,
+        "4": 0.0672,
+        "5": 0.1045,
+        "6": 0.1388,
+        "7": 0.1575,
+        "8": 0.1526,
+        "9": 0.1263,
+        "10+": 0.1896
       }
     },
     {
@@ -1538,10 +2319,10 @@
       "opp_team": "SF",
       "venue": "Oracle Park",
       "projected_ks": 6.7,
-      "line": 0,
+      "line": 6.5,
       "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
+      "edge": -5.4,
+      "hit_rate": 40.9,
       "swstr_pct": 0.13796666666666668,
       "csw_pct": 0.3071666666666667,
       "k_pct": 0.2943,
@@ -1563,11 +2344,87 @@
         "adjustment": 1.015,
         "indoor": false
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "FanDuel",
+          "odds": 116
+        },
+        {
+          "book": "DraftKings",
+          "odds": 106
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "DraftKings",
+          "odds": -135
+        },
+        {
+          "book": "FanDuel",
+          "odds": -154
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": 116
+      },
+      "fair_value": 144,
+      "ladder": [
+        {
+          "line": 6.5,
+          "over_hit_rate": 40.9,
+          "under_hit_rate": 59.1,
+          "over_edge": -5.4,
+          "under_edge": 1.7,
+          "best_over": {
+            "book": "FanDuel",
+            "odds": 116
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": -135
+          },
+          "fair_value_over": 144,
+          "fair_value_under": -144,
+          "model_only": false
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 27.3,
+          "under_hit_rate": 72.7,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 266,
+          "fair_value_under": -266,
+          "model_only": true
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 16.4,
+          "under_hit_rate": 83.6,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 510,
+          "fair_value_under": -510,
+          "model_only": true
+        },
+        {
+          "line": 9.5,
+          "over_hit_rate": 8.8,
+          "under_hit_rate": 91.2,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1036,
+          "fair_value_under": -1036,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
           "date": "03/26",
@@ -1595,25 +2452,25 @@
       }
     },
     {
-      "pitcher_name": "Robbie Ray",
-      "pitcher_id": 592662,
-      "pitcher_team": "SF",
-      "pitcher_hand": "L",
-      "opp_team": "PHI",
-      "venue": "Oracle Park",
-      "projected_ks": 6.1,
-      "line": 0,
+      "pitcher_name": "Paul Skenes",
+      "pitcher_id": 694973,
+      "pitcher_team": "PIT",
+      "pitcher_hand": "R",
+      "opp_team": "SD",
+      "venue": "PNC Park",
+      "projected_ks": 7.0,
+      "line": 6.5,
       "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
-      "swstr_pct": 0.13740000000000002,
-      "csw_pct": 0.2773,
-      "k_pct": 0.2486,
-      "opp_k_pct": 0.2159,
-      "opp_chase": 0.2935,
-      "days_rest": 5,
-      "rolling_k_3": 5.5,
-      "rolling_k_5": 5.5,
+      "edge": -6.2,
+      "hit_rate": 45.3,
+      "swstr_pct": 0.1388,
+      "csw_pct": 0.28596666666666665,
+      "k_pct": 0.2779,
+      "opp_k_pct": 0.2211,
+      "opp_chase": 0.2941,
+      "days_rest": 6,
+      "rolling_k_3": 3.0,
+      "rolling_k_5": 3.0,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -1621,41 +2478,1091 @@
         "adjustment": 1.0
       },
       "weather": {
-        "temp_f": 59,
-        "wind_mph": 10,
-        "description": "Broken Clouds",
-        "adjustment": 1.015,
+        "temp_f": 50,
+        "wind_mph": 9,
+        "description": "Clear Sky",
+        "adjustment": 1.03,
         "indoor": false
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
-      "last5": [
+      "over_odds": [
         {
-          "date": "03/27",
-          "k": 4,
-          "pitches": 89
+          "book": "DraftKings",
+          "odds": -106
         },
         {
-          "date": "04/02",
-          "k": 7,
-          "pitches": 96
+          "book": "FanDuel",
+          "odds": -122
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -108
+        },
+        {
+          "book": "DraftKings",
+          "odds": -120
+        }
+      ],
+      "best_line": {
+        "book": "DraftKings",
+        "odds": -106
+      },
+      "fair_value": 121,
+      "ladder": [
+        {
+          "line": 6.5,
+          "over_hit_rate": 45.3,
+          "under_hit_rate": 54.7,
+          "over_edge": -6.2,
+          "under_edge": 2.8,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": -106
+          },
+          "best_under": {
+            "book": "FanDuel",
+            "odds": -108
+          },
+          "fair_value_over": 121,
+          "fair_value_under": -121,
+          "model_only": false
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 31.2,
+          "under_hit_rate": 68.8,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 221,
+          "fair_value_under": -221,
+          "model_only": true
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 19.4,
+          "under_hit_rate": 80.6,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 415,
+          "fair_value_under": -415,
+          "model_only": true
+        },
+        {
+          "line": 9.5,
+          "over_hit_rate": 10.8,
+          "under_hit_rate": 89.2,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 826,
+          "fair_value_under": -826,
+          "model_only": true
+        }
+      ],
+      "last5": [
+        {
+          "date": "03/26",
+          "k": 1,
+          "pitches": 37
+        },
+        {
+          "date": "04/01",
+          "k": 5,
+          "pitches": 77
         }
       ],
       "k_distribution": {
-        "0": 0.0084,
-        "1": 0.0204,
-        "2": 0.0422,
-        "3": 0.0745,
-        "4": 0.1124,
-        "5": 0.1447,
-        "6": 0.1591,
-        "7": 0.1493,
-        "8": 0.1197,
-        "9": 0.082,
-        "10+": 0.0873
+        "0": 0.0033,
+        "1": 0.0093,
+        "2": 0.0221,
+        "3": 0.0449,
+        "4": 0.078,
+        "5": 0.1158,
+        "6": 0.1467,
+        "7": 0.1587,
+        "8": 0.1467,
+        "9": 0.1158,
+        "10+": 0.1589
+      }
+    },
+    {
+      "pitcher_name": "Kevin Gausman",
+      "pitcher_id": 592332,
+      "pitcher_team": "TOR",
+      "pitcher_hand": "R",
+      "opp_team": "LAD",
+      "venue": "Rogers Centre",
+      "projected_ks": 6.9,
+      "line": 5.5,
+      "play": "OVER",
+      "edge": -8.0,
+      "hit_rate": 58.7,
+      "swstr_pct": 0.15376666666666666,
+      "csw_pct": 0.3056,
+      "k_pct": 0.3143,
+      "opp_k_pct": 0.2125,
+      "opp_chase": 0.2643,
+      "days_rest": 6,
+      "rolling_k_3": 10.5,
+      "rolling_k_5": 10.5,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 0,
+        "description": "Dome / Retractable Roof",
+        "adjustment": 1.0,
+        "indoor": true
+      },
+      "over_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -200
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "FanDuel",
+          "odds": 148
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -200
+      },
+      "fair_value": -142,
+      "ladder": [
+        {
+          "line": 5.5,
+          "over_hit_rate": 58.7,
+          "under_hit_rate": 41.3,
+          "over_edge": -8.0,
+          "under_edge": 1.0,
+          "best_over": {
+            "book": "FanDuel",
+            "odds": -200
+          },
+          "best_under": {
+            "book": "FanDuel",
+            "odds": 148
+          },
+          "fair_value_over": -142,
+          "fair_value_under": 142,
+          "model_only": false
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 43.9,
+          "under_hit_rate": 56.1,
+          "over_edge": -3.0,
+          "under_edge": -2.9,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": 113
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": -144
+          },
+          "fair_value_over": 128,
+          "fair_value_under": -128,
+          "model_only": false
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 29.9,
+          "under_hit_rate": 70.1,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 234,
+          "fair_value_under": -234,
+          "model_only": true
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 18.4,
+          "under_hit_rate": 81.6,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 443,
+          "fair_value_under": -443,
+          "model_only": true
+        }
+      ],
+      "last5": [
+        {
+          "date": "03/27",
+          "k": 11,
+          "pitches": 83
+        },
+        {
+          "date": "04/01",
+          "k": 10,
+          "pitches": 89
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0037,
+        "1": 0.0102,
+        "2": 0.0239,
+        "3": 0.0478,
+        "4": 0.0817,
+        "5": 0.1194,
+        "6": 0.1489,
+        "7": 0.1586,
+        "8": 0.1443,
+        "9": 0.1121,
+        "10+": 0.1494
+      }
+    },
+    {
+      "pitcher_name": "Kyle Freeland",
+      "pitcher_id": 607536,
+      "pitcher_team": "COL",
+      "pitcher_hand": "L",
+      "opp_team": "HOU",
+      "venue": "Coors Field",
+      "projected_ks": 4.2,
+      "line": 3.5,
+      "play": "OVER",
+      "edge": -9.0,
+      "hit_rate": 48.3,
+      "swstr_pct": 0.09886666666666667,
+      "csw_pct": 0.2733,
+      "k_pct": 0.1779,
+      "opp_k_pct": 0.2382,
+      "opp_chase": 0.2937,
+      "days_rest": 6,
+      "rolling_k_3": 4.0,
+      "rolling_k_5": 4.0,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 67,
+        "wind_mph": 6,
+        "description": "Broken Clouds",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "over_odds": [
+        {
+          "book": "DraftKings",
+          "odds": -134
+        },
+        {
+          "book": "FanDuel",
+          "odds": -138
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "DraftKings",
+          "odds": 105
+        },
+        {
+          "book": "FanDuel",
+          "odds": 104
+        }
+      ],
+      "best_line": {
+        "book": "DraftKings",
+        "odds": -134
+      },
+      "fair_value": 107,
+      "ladder": [
+        {
+          "line": 3.5,
+          "over_hit_rate": 48.3,
+          "under_hit_rate": 51.7,
+          "over_edge": -9.0,
+          "under_edge": 2.9,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": -134
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": 105
+          },
+          "fair_value_over": 107,
+          "fair_value_under": -107,
+          "model_only": false
+        },
+        {
+          "line": 4.5,
+          "over_hit_rate": 33.9,
+          "under_hit_rate": 66.1,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 195,
+          "fair_value_under": -195,
+          "model_only": true
+        },
+        {
+          "line": 5.5,
+          "over_hit_rate": 21.5,
+          "under_hit_rate": 78.5,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 365,
+          "fair_value_under": -365,
+          "model_only": true
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 12.2,
+          "under_hit_rate": 87.8,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 720,
+          "fair_value_under": -720,
+          "model_only": true
+        }
+      ],
+      "last5": [
+        {
+          "date": "03/27",
+          "k": 2,
+          "pitches": 81
+        },
+        {
+          "date": "04/01",
+          "k": 6,
+          "pitches": 88
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0406,
+        "1": 0.0728,
+        "2": 0.1115,
+        "3": 0.1459,
+        "4": 0.1629,
+        "5": 0.1554,
+        "6": 0.1265,
+        "7": 0.088,
+        "8": 0.0523,
+        "9": 0.0265,
+        "10+": 0.0175
+      }
+    },
+    {
+      "pitcher_name": "Yoshinobu Yamamoto",
+      "pitcher_id": 808967,
+      "pitcher_team": "LAD",
+      "pitcher_hand": "R",
+      "opp_team": "TOR",
+      "venue": "Rogers Centre",
+      "projected_ks": 6.2,
+      "line": 5.5,
+      "play": "OVER",
+      "edge": -9.7,
+      "hit_rate": 48.3,
+      "swstr_pct": 0.13163333333333332,
+      "csw_pct": 0.30073333333333335,
+      "k_pct": 0.2655,
+      "opp_k_pct": 0.2122,
+      "opp_chase": 0.327,
+      "days_rest": 6,
+      "rolling_k_3": 4.0,
+      "rolling_k_5": 4.0,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 0,
+        "description": "Dome / Retractable Roof",
+        "adjustment": 1.0,
+        "indoor": true
+      },
+      "over_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -138
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "FanDuel",
+          "odds": 104
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -138
+      },
+      "fair_value": 107,
+      "ladder": [
+        {
+          "line": 5.5,
+          "over_hit_rate": 48.3,
+          "under_hit_rate": 51.7,
+          "over_edge": -9.7,
+          "under_edge": 2.7,
+          "best_over": {
+            "book": "FanDuel",
+            "odds": -138
+          },
+          "best_under": {
+            "book": "FanDuel",
+            "odds": 104
+          },
+          "fair_value_over": 107,
+          "fair_value_under": -107,
+          "model_only": false
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 33.9,
+          "under_hit_rate": 66.1,
+          "over_edge": -12.0,
+          "under_edge": 5.9,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": 118
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": -151
+          },
+          "fair_value_over": 195,
+          "fair_value_under": -195,
+          "model_only": false
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 21.5,
+          "under_hit_rate": 78.5,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 365,
+          "fair_value_under": -365,
+          "model_only": true
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 12.2,
+          "under_hit_rate": 87.8,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 720,
+          "fair_value_under": -720,
+          "model_only": true
+        }
+      ],
+      "last5": [
+        {
+          "date": "03/26",
+          "k": 6,
+          "pitches": 95
+        },
+        {
+          "date": "04/01",
+          "k": 2,
+          "pitches": 87
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0077,
+        "1": 0.0188,
+        "2": 0.0395,
+        "3": 0.0709,
+        "4": 0.1086,
+        "5": 0.142,
+        "6": 0.1586,
+        "7": 0.1513,
+        "8": 0.1232,
+        "9": 0.0857,
+        "10+": 0.0938
+      }
+    },
+    {
+      "pitcher_name": "Nick Pivetta",
+      "pitcher_id": 601713,
+      "pitcher_team": "SD",
+      "pitcher_hand": "R",
+      "opp_team": "PIT",
+      "venue": "PNC Park",
+      "projected_ks": 6.6,
+      "line": 6.5,
+      "play": "OVER",
+      "edge": -12.0,
+      "hit_rate": 39.5,
+      "swstr_pct": 0.11636666666666667,
+      "csw_pct": 0.2811666666666667,
+      "k_pct": 0.2782,
+      "opp_k_pct": 0.2263,
+      "opp_chase": 0.2956,
+      "days_rest": 6,
+      "rolling_k_3": 6.0,
+      "rolling_k_5": 6.0,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 50,
+        "wind_mph": 9,
+        "description": "Clear Sky",
+        "adjustment": 1.03,
+        "indoor": false
+      },
+      "over_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -106
+        },
+        {
+          "book": "DraftKings",
+          "odds": -107
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "DraftKings",
+          "odds": -119
+        },
+        {
+          "book": "FanDuel",
+          "odds": -122
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -106
+      },
+      "fair_value": 153,
+      "ladder": [
+        {
+          "line": 6.5,
+          "over_hit_rate": 39.5,
+          "under_hit_rate": 60.5,
+          "over_edge": -12.0,
+          "under_edge": 6.2,
+          "best_over": {
+            "book": "FanDuel",
+            "odds": -106
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": -119
+          },
+          "fair_value_over": 153,
+          "fair_value_under": -153,
+          "model_only": false
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 26.1,
+          "under_hit_rate": 73.9,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 283,
+          "fair_value_under": -283,
+          "model_only": true
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 15.5,
+          "under_hit_rate": 84.5,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 545,
+          "fair_value_under": -545,
+          "model_only": true
+        },
+        {
+          "line": 9.5,
+          "over_hit_rate": 8.3,
+          "under_hit_rate": 91.7,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1105,
+          "fair_value_under": -1105,
+          "model_only": true
+        }
+      ],
+      "last5": [
+        {
+          "date": "03/26",
+          "k": 4,
+          "pitches": 69
+        },
+        {
+          "date": "04/01",
+          "k": 8,
+          "pitches": 82
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0051,
+        "1": 0.0134,
+        "2": 0.0299,
+        "3": 0.0571,
+        "4": 0.0932,
+        "5": 0.1298,
+        "6": 0.1544,
+        "7": 0.1569,
+        "8": 0.1361,
+        "9": 0.1008,
+        "10+": 0.1233
+      }
+    },
+    {
+      "pitcher_name": "Jacob Misiorowski",
+      "pitcher_id": 694819,
+      "pitcher_team": "MIL",
+      "pitcher_hand": "R",
+      "opp_team": "BOS",
+      "venue": "Fenway Park",
+      "projected_ks": 7.1,
+      "line": 6.5,
+      "play": "OVER",
+      "edge": -13.8,
+      "hit_rate": 46.8,
+      "swstr_pct": 0.1537,
+      "csw_pct": 0.3095,
+      "k_pct": 0.3411,
+      "opp_k_pct": 0.2567,
+      "opp_chase": 0.3194,
+      "days_rest": 6,
+      "rolling_k_3": 9.0,
+      "rolling_k_5": 9.0,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 44,
+        "wind_mph": 13,
+        "description": "Moderate Rain",
+        "adjustment": 1.03,
+        "indoor": false
+      },
+      "over_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -154
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "FanDuel",
+          "odds": 116
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -154
+      },
+      "fair_value": 114,
+      "ladder": [
+        {
+          "line": 6.5,
+          "over_hit_rate": 46.8,
+          "under_hit_rate": 53.2,
+          "over_edge": -13.8,
+          "under_edge": 6.9,
+          "best_over": {
+            "book": "FanDuel",
+            "odds": -154
+          },
+          "best_under": {
+            "book": "FanDuel",
+            "odds": 116
+          },
+          "fair_value_over": 114,
+          "fair_value_under": -114,
+          "model_only": false
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 32.5,
+          "under_hit_rate": 67.5,
+          "over_edge": -15.3,
+          "under_edge": 9.3,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": 109
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": -139
+          },
+          "fair_value_over": 208,
+          "fair_value_under": -208,
+          "model_only": false
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 20.4,
+          "under_hit_rate": 79.6,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 390,
+          "fair_value_under": -390,
+          "model_only": true
+        },
+        {
+          "line": 9.5,
+          "over_hit_rate": 11.5,
+          "under_hit_rate": 88.5,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 770,
+          "fair_value_under": -770,
+          "model_only": true
+        }
+      ],
+      "last5": [
+        {
+          "date": "03/26",
+          "k": 11,
+          "pitches": 95
+        },
+        {
+          "date": "04/01",
+          "k": 7,
+          "pitches": 94
+        }
+      ],
+      "k_distribution": {
+        "0": 0.003,
+        "1": 0.0084,
+        "2": 0.0204,
+        "3": 0.0421,
+        "4": 0.0743,
+        "5": 0.112,
+        "6": 0.1442,
+        "7": 0.1586,
+        "8": 0.1489,
+        "9": 0.1194,
+        "10+": 0.1687
+      }
+    },
+    {
+      "pitcher_name": "Mike Burrows",
+      "pitcher_id": 681347,
+      "pitcher_team": "HOU",
+      "pitcher_hand": "R",
+      "opp_team": "COL",
+      "venue": "Coors Field",
+      "projected_ks": 4.7,
+      "line": 4.5,
+      "play": "OVER",
+      "edge": -17.1,
+      "hit_rate": 40.9,
+      "swstr_pct": 0.12493333333333334,
+      "csw_pct": 0.28936666666666666,
+      "k_pct": 0.2407,
+      "opp_k_pct": 0.2313,
+      "opp_chase": 0.3389,
+      "days_rest": 6,
+      "rolling_k_3": 6.0,
+      "rolling_k_5": 6.0,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 67,
+        "wind_mph": 6,
+        "description": "Broken Clouds",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "over_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -138
+        },
+        {
+          "book": "DraftKings",
+          "odds": -145
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "DraftKings",
+          "odds": 114
+        },
+        {
+          "book": "FanDuel",
+          "odds": 104
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -138
+      },
+      "fair_value": 144,
+      "ladder": [
+        {
+          "line": 4.5,
+          "over_hit_rate": 40.9,
+          "under_hit_rate": 59.1,
+          "over_edge": -17.1,
+          "under_edge": 12.4,
+          "best_over": {
+            "book": "FanDuel",
+            "odds": -138
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": 114
+          },
+          "fair_value_over": 144,
+          "fair_value_under": -144,
+          "model_only": false
+        },
+        {
+          "line": 5.5,
+          "over_hit_rate": 27.3,
+          "under_hit_rate": 72.7,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 266,
+          "fair_value_under": -266,
+          "model_only": true
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 16.4,
+          "under_hit_rate": 83.6,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 510,
+          "fair_value_under": -510,
+          "model_only": true
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 8.8,
+          "under_hit_rate": 91.2,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1036,
+          "fair_value_under": -1036,
+          "model_only": true
+        }
+      ],
+      "last5": [
+        {
+          "date": "03/27",
+          "k": 6,
+          "pitches": 94
+        },
+        {
+          "date": "04/01",
+          "k": 6,
+          "pitches": 84
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0282,
+        "1": 0.0548,
+        "2": 0.0909,
+        "3": 0.1286,
+        "4": 0.1554,
+        "5": 0.1604,
+        "6": 0.1414,
+        "7": 0.1064,
+        "8": 0.0684,
+        "9": 0.0375,
+        "10+": 0.028
+      }
+    },
+    {
+      "pitcher_name": "Zac Gallen",
+      "pitcher_id": 668678,
+      "pitcher_team": "AZ",
+      "pitcher_hand": "R",
+      "opp_team": "NYM",
+      "venue": "Citi Field",
+      "projected_ks": 4.6,
+      "line": 4.5,
+      "play": "OVER",
+      "edge": -19.5,
+      "hit_rate": 39.5,
+      "swstr_pct": 0.09383333333333334,
+      "csw_pct": 0.2612333333333333,
+      "k_pct": 0.1862,
+      "opp_k_pct": 0.1963,
+      "opp_chase": 0.2949,
+      "days_rest": 6,
+      "rolling_k_3": 2.0,
+      "rolling_k_5": 2.0,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 52,
+        "wind_mph": 19,
+        "description": "Clear Sky",
+        "adjustment": 1.025,
+        "indoor": false
+      },
+      "over_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -144
+        },
+        {
+          "book": "DraftKings",
+          "odds": -146
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "DraftKings",
+          "odds": 114
+        },
+        {
+          "book": "FanDuel",
+          "odds": 108
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -144
+      },
+      "fair_value": 153,
+      "ladder": [
+        {
+          "line": 4.5,
+          "over_hit_rate": 39.5,
+          "under_hit_rate": 60.5,
+          "over_edge": -19.5,
+          "under_edge": 13.8,
+          "best_over": {
+            "book": "FanDuel",
+            "odds": -144
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": 114
+          },
+          "fair_value_over": 153,
+          "fair_value_under": -153,
+          "model_only": false
+        },
+        {
+          "line": 5.5,
+          "over_hit_rate": 26.1,
+          "under_hit_rate": 73.9,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 283,
+          "fair_value_under": -283,
+          "model_only": true
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 15.5,
+          "under_hit_rate": 84.5,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 545,
+          "fair_value_under": -545,
+          "model_only": true
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 8.3,
+          "under_hit_rate": 91.7,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1105,
+          "fair_value_under": -1105,
+          "model_only": true
+        }
+      ],
+      "last5": [
+        {
+          "date": "03/26",
+          "k": 2,
+          "pitches": 76
+        },
+        {
+          "date": "04/01",
+          "k": 2,
+          "pitches": 88
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0305,
+        "1": 0.0582,
+        "2": 0.0949,
+        "3": 0.1322,
+        "4": 0.1573,
+        "5": 0.1598,
+        "6": 0.1387,
+        "7": 0.1027,
+        "8": 0.065,
+        "9": 0.0351,
+        "10+": 0.0255
       }
     }
   ],
@@ -1668,10 +3575,10 @@
       "opp_team": "MIL",
       "venue": "Fenway Park",
       "projected_ks": 8.5,
-      "line": 0,
+      "line": 7.5,
       "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
+      "edge": 2.3,
+      "hit_rate": 52.8,
       "swstr_pct": 0.13756666666666667,
       "csw_pct": 0.28003333333333336,
       "k_pct": 0.3147,
@@ -1693,11 +3600,87 @@
         "adjustment": 1.03,
         "indoor": false
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "DraftKings",
+          "odds": -102
+        },
+        {
+          "book": "FanDuel",
+          "odds": -110
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -120
+        },
+        {
+          "book": "DraftKings",
+          "odds": -125
+        }
+      ],
+      "best_line": {
+        "book": "DraftKings",
+        "odds": -102
+      },
+      "fair_value": -112,
+      "ladder": [
+        {
+          "line": 7.5,
+          "over_hit_rate": 52.8,
+          "under_hit_rate": 47.2,
+          "over_edge": 2.3,
+          "under_edge": -7.3,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": -102
+          },
+          "best_under": {
+            "book": "FanDuel",
+            "odds": -120
+          },
+          "fair_value_over": -112,
+          "fair_value_under": 112,
+          "model_only": false
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 38.1,
+          "under_hit_rate": 61.9,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 162,
+          "fair_value_under": -162,
+          "model_only": true
+        },
+        {
+          "line": 9.5,
+          "over_hit_rate": 24.9,
+          "under_hit_rate": 75.1,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 302,
+          "fair_value_under": -302,
+          "model_only": true
+        },
+        {
+          "line": 10.5,
+          "over_hit_rate": 14.6,
+          "under_hit_rate": 85.4,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 585,
+          "fair_value_under": -585,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
           "date": "03/26",
@@ -1732,10 +3715,10 @@
       "opp_team": "MIN",
       "venue": "Target Field",
       "projected_ks": 7.4,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
+      "line": 7.5,
+      "play": "UNDER",
+      "edge": 16.9,
+      "hit_rate": 63.4,
       "swstr_pct": 0.14793333333333336,
       "csw_pct": 0.3071666666666667,
       "k_pct": 0.2853,
@@ -1757,11 +3740,87 @@
         "adjustment": 1.03,
         "indoor": false
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "DraftKings",
+          "odds": -147
+        },
+        {
+          "book": "FanDuel",
+          "odds": -148
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "DraftKings",
+          "odds": 115
+        },
+        {
+          "book": "FanDuel",
+          "odds": 112
+        }
+      ],
+      "best_line": {
+        "book": "DraftKings",
+        "odds": 115
+      },
+      "fair_value": -173,
+      "ladder": [
+        {
+          "line": 7.5,
+          "over_hit_rate": 36.6,
+          "under_hit_rate": 63.4,
+          "over_edge": -22.9,
+          "under_edge": 16.9,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": -147
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": 115
+          },
+          "fair_value_over": 173,
+          "fair_value_under": -173,
+          "model_only": false
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 23.7,
+          "under_hit_rate": 76.3,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 322,
+          "fair_value_under": -322,
+          "model_only": true
+        },
+        {
+          "line": 9.5,
+          "over_hit_rate": 13.8,
+          "under_hit_rate": 86.2,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 625,
+          "fair_value_under": -625,
+          "model_only": true
+        },
+        {
+          "line": 10.5,
+          "over_hit_rate": 7.2,
+          "under_hit_rate": 92.8,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1289,
+          "fair_value_under": -1289,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
           "date": "03/26",
@@ -1796,10 +3855,10 @@
       "opp_team": "ATH",
       "venue": "Yankee Stadium",
       "projected_ks": 7.3,
-      "line": 0,
+      "line": 6.5,
       "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
+      "edge": -4.3,
+      "hit_rate": 49.8,
       "swstr_pct": 0.13256666666666667,
       "csw_pct": 0.2861,
       "k_pct": 0.3045,
@@ -1821,11 +3880,87 @@
         "adjustment": 1.025,
         "indoor": false
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -118
+        },
+        {
+          "book": "DraftKings",
+          "odds": -134
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "DraftKings",
+          "odds": 105
+        },
+        {
+          "book": "FanDuel",
+          "odds": -112
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -118
+      },
+      "fair_value": 101,
+      "ladder": [
+        {
+          "line": 6.5,
+          "over_hit_rate": 49.8,
+          "under_hit_rate": 50.2,
+          "over_edge": -4.3,
+          "under_edge": 1.4,
+          "best_over": {
+            "book": "FanDuel",
+            "odds": -118
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": 105
+          },
+          "fair_value_over": 101,
+          "fair_value_under": -101,
+          "model_only": false
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 35.2,
+          "under_hit_rate": 64.8,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 184,
+          "fair_value_under": -184,
+          "model_only": true
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 22.6,
+          "under_hit_rate": 77.4,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 342,
+          "fair_value_under": -342,
+          "model_only": true
+        },
+        {
+          "line": 9.5,
+          "over_hit_rate": 13.0,
+          "under_hit_rate": 87.0,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 669,
+          "fair_value_under": -669,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
           "date": "03/27",
@@ -1860,10 +3995,10 @@
       "opp_team": "BOS",
       "venue": "Fenway Park",
       "projected_ks": 7.1,
-      "line": 0,
+      "line": 6.5,
       "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
+      "edge": -13.8,
+      "hit_rate": 46.8,
       "swstr_pct": 0.1537,
       "csw_pct": 0.3095,
       "k_pct": 0.3411,
@@ -1885,11 +4020,85 @@
         "adjustment": 1.03,
         "indoor": false
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -154
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "FanDuel",
+          "odds": 116
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -154
+      },
+      "fair_value": 114,
+      "ladder": [
+        {
+          "line": 6.5,
+          "over_hit_rate": 46.8,
+          "under_hit_rate": 53.2,
+          "over_edge": -13.8,
+          "under_edge": 6.9,
+          "best_over": {
+            "book": "FanDuel",
+            "odds": -154
+          },
+          "best_under": {
+            "book": "FanDuel",
+            "odds": 116
+          },
+          "fair_value_over": 114,
+          "fair_value_under": -114,
+          "model_only": false
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 32.5,
+          "under_hit_rate": 67.5,
+          "over_edge": -15.3,
+          "under_edge": 9.3,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": 109
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": -139
+          },
+          "fair_value_over": 208,
+          "fair_value_under": -208,
+          "model_only": false
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 20.4,
+          "under_hit_rate": 79.6,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 390,
+          "fair_value_under": -390,
+          "model_only": true
+        },
+        {
+          "line": 9.5,
+          "over_hit_rate": 11.5,
+          "under_hit_rate": 88.5,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 770,
+          "fair_value_under": -770,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
           "date": "03/26",
@@ -1924,10 +4133,10 @@
       "opp_team": "SD",
       "venue": "PNC Park",
       "projected_ks": 7.0,
-      "line": 0,
+      "line": 6.5,
       "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
+      "edge": -6.2,
+      "hit_rate": 45.3,
       "swstr_pct": 0.1388,
       "csw_pct": 0.28596666666666665,
       "k_pct": 0.2779,
@@ -1949,11 +4158,87 @@
         "adjustment": 1.03,
         "indoor": false
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "DraftKings",
+          "odds": -106
+        },
+        {
+          "book": "FanDuel",
+          "odds": -122
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -108
+        },
+        {
+          "book": "DraftKings",
+          "odds": -120
+        }
+      ],
+      "best_line": {
+        "book": "DraftKings",
+        "odds": -106
+      },
+      "fair_value": 121,
+      "ladder": [
+        {
+          "line": 6.5,
+          "over_hit_rate": 45.3,
+          "under_hit_rate": 54.7,
+          "over_edge": -6.2,
+          "under_edge": 2.8,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": -106
+          },
+          "best_under": {
+            "book": "FanDuel",
+            "odds": -108
+          },
+          "fair_value_over": 121,
+          "fair_value_under": -121,
+          "model_only": false
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 31.2,
+          "under_hit_rate": 68.8,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 221,
+          "fair_value_under": -221,
+          "model_only": true
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 19.4,
+          "under_hit_rate": 80.6,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 415,
+          "fair_value_under": -415,
+          "model_only": true
+        },
+        {
+          "line": 9.5,
+          "over_hit_rate": 10.8,
+          "under_hit_rate": 89.2,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 826,
+          "fair_value_under": -826,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
           "date": "03/26",
@@ -1988,10 +4273,10 @@
       "opp_team": "SEA",
       "venue": "Globe Life Field",
       "projected_ks": 7.0,
-      "line": 0,
+      "line": 5.5,
       "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
+      "edge": 6.8,
+      "hit_rate": 60.1,
       "swstr_pct": 0.13890000000000002,
       "csw_pct": 0.29123333333333334,
       "k_pct": 0.2618,
@@ -2013,11 +4298,87 @@
         "adjustment": 1.0,
         "indoor": true
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -114
+        },
+        {
+          "book": "DraftKings",
+          "odds": -119
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "DraftKings",
+          "odds": -107
+        },
+        {
+          "book": "FanDuel",
+          "odds": -114
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -114
+      },
+      "fair_value": -151,
+      "ladder": [
+        {
+          "line": 5.5,
+          "over_hit_rate": 60.1,
+          "under_hit_rate": 39.9,
+          "over_edge": 6.8,
+          "under_edge": -11.8,
+          "best_over": {
+            "book": "FanDuel",
+            "odds": -114
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": -107
+          },
+          "fair_value_over": -151,
+          "fair_value_under": 151,
+          "model_only": false
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 45.3,
+          "under_hit_rate": 54.7,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 121,
+          "fair_value_under": -121,
+          "model_only": true
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 31.2,
+          "under_hit_rate": 68.8,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 221,
+          "fair_value_under": -221,
+          "model_only": true
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 19.4,
+          "under_hit_rate": 80.6,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 415,
+          "fair_value_under": -415,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
           "date": "03/26",
@@ -2052,10 +4413,10 @@
       "opp_team": "LAD",
       "venue": "Rogers Centre",
       "projected_ks": 6.9,
-      "line": 0,
+      "line": 5.5,
       "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
+      "edge": -8.0,
+      "hit_rate": 58.7,
       "swstr_pct": 0.15376666666666666,
       "csw_pct": 0.3056,
       "k_pct": 0.3143,
@@ -2077,11 +4438,85 @@
         "adjustment": 1.0,
         "indoor": true
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -200
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "FanDuel",
+          "odds": 148
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -200
+      },
+      "fair_value": -142,
+      "ladder": [
+        {
+          "line": 5.5,
+          "over_hit_rate": 58.7,
+          "under_hit_rate": 41.3,
+          "over_edge": -8.0,
+          "under_edge": 1.0,
+          "best_over": {
+            "book": "FanDuel",
+            "odds": -200
+          },
+          "best_under": {
+            "book": "FanDuel",
+            "odds": 148
+          },
+          "fair_value_over": -142,
+          "fair_value_under": 142,
+          "model_only": false
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 43.9,
+          "under_hit_rate": 56.1,
+          "over_edge": -3.0,
+          "under_edge": -2.9,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": 113
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": -144
+          },
+          "fair_value_over": 128,
+          "fair_value_under": -128,
+          "model_only": false
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 29.9,
+          "under_hit_rate": 70.1,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 234,
+          "fair_value_under": -234,
+          "model_only": true
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 18.4,
+          "under_hit_rate": 81.6,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 443,
+          "fair_value_under": -443,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
           "date": "03/27",
@@ -2116,10 +4551,10 @@
       "opp_team": "AZ",
       "venue": "Citi Field",
       "projected_ks": 6.7,
-      "line": 0,
+      "line": 5.5,
       "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
+      "edge": -1.8,
+      "hit_rate": 55.8,
       "swstr_pct": 0.1422,
       "csw_pct": 0.2828333333333334,
       "k_pct": 0.2953,
@@ -2141,11 +4576,87 @@
         "adjustment": 1.025,
         "indoor": false
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -136
+        },
+        {
+          "book": "DraftKings",
+          "odds": -140
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "DraftKings",
+          "odds": 110
+        },
+        {
+          "book": "FanDuel",
+          "odds": 102
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -136
+      },
+      "fair_value": -126,
+      "ladder": [
+        {
+          "line": 5.5,
+          "over_hit_rate": 55.8,
+          "under_hit_rate": 44.2,
+          "over_edge": -1.8,
+          "under_edge": -3.4,
+          "best_over": {
+            "book": "FanDuel",
+            "odds": -136
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": 110
+          },
+          "fair_value_over": -126,
+          "fair_value_under": 126,
+          "model_only": false
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 40.9,
+          "under_hit_rate": 59.1,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 144,
+          "fair_value_under": -144,
+          "model_only": true
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 27.3,
+          "under_hit_rate": 72.7,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 266,
+          "fair_value_under": -266,
+          "model_only": true
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 16.4,
+          "under_hit_rate": 83.6,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 510,
+          "fair_value_under": -510,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
           "date": "03/26",
@@ -2180,10 +4691,10 @@
       "opp_team": "SF",
       "venue": "Oracle Park",
       "projected_ks": 6.7,
-      "line": 0,
+      "line": 6.5,
       "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
+      "edge": -5.4,
+      "hit_rate": 40.9,
       "swstr_pct": 0.13796666666666668,
       "csw_pct": 0.3071666666666667,
       "k_pct": 0.2943,
@@ -2205,11 +4716,87 @@
         "adjustment": 1.015,
         "indoor": false
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "FanDuel",
+          "odds": 116
+        },
+        {
+          "book": "DraftKings",
+          "odds": 106
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "DraftKings",
+          "odds": -135
+        },
+        {
+          "book": "FanDuel",
+          "odds": -154
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": 116
+      },
+      "fair_value": 144,
+      "ladder": [
+        {
+          "line": 6.5,
+          "over_hit_rate": 40.9,
+          "under_hit_rate": 59.1,
+          "over_edge": -5.4,
+          "under_edge": 1.7,
+          "best_over": {
+            "book": "FanDuel",
+            "odds": 116
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": -135
+          },
+          "fair_value_over": 144,
+          "fair_value_under": -144,
+          "model_only": false
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 27.3,
+          "under_hit_rate": 72.7,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 266,
+          "fair_value_under": -266,
+          "model_only": true
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 16.4,
+          "under_hit_rate": 83.6,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 510,
+          "fair_value_under": -510,
+          "model_only": true
+        },
+        {
+          "line": 9.5,
+          "over_hit_rate": 8.8,
+          "under_hit_rate": 91.2,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1036,
+          "fair_value_under": -1036,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
           "date": "03/26",
@@ -2244,10 +4831,10 @@
       "opp_team": "PIT",
       "venue": "PNC Park",
       "projected_ks": 6.6,
-      "line": 0,
+      "line": 6.5,
       "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
+      "edge": -12.0,
+      "hit_rate": 39.5,
       "swstr_pct": 0.11636666666666667,
       "csw_pct": 0.2811666666666667,
       "k_pct": 0.2782,
@@ -2269,11 +4856,87 @@
         "adjustment": 1.03,
         "indoor": false
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -106
+        },
+        {
+          "book": "DraftKings",
+          "odds": -107
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "DraftKings",
+          "odds": -119
+        },
+        {
+          "book": "FanDuel",
+          "odds": -122
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -106
+      },
+      "fair_value": 153,
+      "ladder": [
+        {
+          "line": 6.5,
+          "over_hit_rate": 39.5,
+          "under_hit_rate": 60.5,
+          "over_edge": -12.0,
+          "under_edge": 6.2,
+          "best_over": {
+            "book": "FanDuel",
+            "odds": -106
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": -119
+          },
+          "fair_value_over": 153,
+          "fair_value_under": -153,
+          "model_only": false
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 26.1,
+          "under_hit_rate": 73.9,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 283,
+          "fair_value_under": -283,
+          "model_only": true
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 15.5,
+          "under_hit_rate": 84.5,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 545,
+          "fair_value_under": -545,
+          "model_only": true
+        },
+        {
+          "line": 9.5,
+          "over_hit_rate": 8.3,
+          "under_hit_rate": 91.7,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1105,
+          "fair_value_under": -1105,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
           "date": "03/26",
@@ -2308,10 +4971,10 @@
       "opp_team": "TEX",
       "venue": "Globe Life Field",
       "projected_ks": 6.5,
-      "line": 0,
+      "line": 5.5,
       "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
+      "edge": -1.1,
+      "hit_rate": 52.8,
       "swstr_pct": 0.10473333333333334,
       "csw_pct": 0.2648666666666667,
       "k_pct": 0.261,
@@ -2333,11 +4996,87 @@
         "adjustment": 1.0,
         "indoor": true
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "DraftKings",
+          "odds": -117
+        },
+        {
+          "book": "FanDuel",
+          "odds": -130
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -102
+        },
+        {
+          "book": "DraftKings",
+          "odds": -109
+        }
+      ],
+      "best_line": {
+        "book": "DraftKings",
+        "odds": -117
+      },
+      "fair_value": -112,
+      "ladder": [
+        {
+          "line": 5.5,
+          "over_hit_rate": 52.8,
+          "under_hit_rate": 47.2,
+          "over_edge": -1.1,
+          "under_edge": -3.3,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": -117
+          },
+          "best_under": {
+            "book": "FanDuel",
+            "odds": -102
+          },
+          "fair_value_over": -112,
+          "fair_value_under": 112,
+          "model_only": false
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 38.1,
+          "under_hit_rate": 61.9,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 162,
+          "fair_value_under": -162,
+          "model_only": true
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 24.9,
+          "under_hit_rate": 75.1,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 302,
+          "fair_value_under": -302,
+          "model_only": true
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 14.6,
+          "under_hit_rate": 85.4,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 585,
+          "fair_value_under": -585,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
           "date": "03/27",
@@ -2372,10 +5111,10 @@
       "opp_team": "TOR",
       "venue": "Rogers Centre",
       "projected_ks": 6.2,
-      "line": 0,
+      "line": 5.5,
       "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
+      "edge": -9.7,
+      "hit_rate": 48.3,
       "swstr_pct": 0.13163333333333332,
       "csw_pct": 0.30073333333333335,
       "k_pct": 0.2655,
@@ -2397,11 +5136,85 @@
         "adjustment": 1.0,
         "indoor": true
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -138
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "FanDuel",
+          "odds": 104
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -138
+      },
+      "fair_value": 107,
+      "ladder": [
+        {
+          "line": 5.5,
+          "over_hit_rate": 48.3,
+          "under_hit_rate": 51.7,
+          "over_edge": -9.7,
+          "under_edge": 2.7,
+          "best_over": {
+            "book": "FanDuel",
+            "odds": -138
+          },
+          "best_under": {
+            "book": "FanDuel",
+            "odds": 104
+          },
+          "fair_value_over": 107,
+          "fair_value_under": -107,
+          "model_only": false
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 33.9,
+          "under_hit_rate": 66.1,
+          "over_edge": -12.0,
+          "under_edge": 5.9,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": 118
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": -151
+          },
+          "fair_value_over": 195,
+          "fair_value_under": -195,
+          "model_only": false
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 21.5,
+          "under_hit_rate": 78.5,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 365,
+          "fair_value_under": -365,
+          "model_only": true
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 12.2,
+          "under_hit_rate": 87.8,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 720,
+          "fair_value_under": -720,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
           "date": "03/26",
@@ -2436,10 +5249,10 @@
       "opp_team": "PHI",
       "venue": "Oracle Park",
       "projected_ks": 6.1,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
+      "line": 6.5,
+      "play": "UNDER",
+      "edge": 9.7,
+      "hit_rate": 67.5,
       "swstr_pct": 0.13740000000000002,
       "csw_pct": 0.2773,
       "k_pct": 0.2486,
@@ -2461,11 +5274,87 @@
         "adjustment": 1.015,
         "indoor": false
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "DraftKings",
+          "odds": 108
+        },
+        {
+          "book": "FanDuel",
+          "odds": 104
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "DraftKings",
+          "odds": -137
+        },
+        {
+          "book": "FanDuel",
+          "odds": -138
+        }
+      ],
+      "best_line": {
+        "book": "DraftKings",
+        "odds": -137
+      },
+      "fair_value": -208,
+      "ladder": [
+        {
+          "line": 6.5,
+          "over_hit_rate": 32.5,
+          "under_hit_rate": 67.5,
+          "over_edge": -15.6,
+          "under_edge": 9.7,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": 108
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": -137
+          },
+          "fair_value_over": 208,
+          "fair_value_under": -208,
+          "model_only": false
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 20.4,
+          "under_hit_rate": 79.6,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 390,
+          "fair_value_under": -390,
+          "model_only": true
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 11.5,
+          "under_hit_rate": 88.5,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 770,
+          "fair_value_under": -770,
+          "model_only": true
+        },
+        {
+          "line": 9.5,
+          "over_hit_rate": 5.8,
+          "under_hit_rate": 94.2,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1624,
+          "fair_value_under": -1624,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
           "date": "03/27",
@@ -2500,10 +5389,10 @@
       "opp_team": "MIA",
       "venue": "loanDepot park",
       "projected_ks": 5.1,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
+      "line": 5.5,
+      "play": "UNDER",
+      "edge": 5.7,
+      "hit_rate": 67.5,
       "swstr_pct": 0.1058,
       "csw_pct": 0.27490000000000003,
       "k_pct": 0.2093,
@@ -2525,11 +5414,97 @@
         "adjustment": 1.0,
         "indoor": true
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "FanDuel",
+          "odds": 122
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -162
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -162
+      },
+      "fair_value": -208,
+      "ladder": [
+        {
+          "line": 4.5,
+          "over_hit_rate": 46.8,
+          "under_hit_rate": 53.2,
+          "over_edge": -13.5,
+          "under_edge": 7.5,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": -152
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": 119
+          },
+          "fair_value_over": 114,
+          "fair_value_under": -114,
+          "model_only": false
+        },
+        {
+          "line": 5.5,
+          "over_hit_rate": 32.5,
+          "under_hit_rate": 67.5,
+          "over_edge": -12.5,
+          "under_edge": 5.7,
+          "best_over": {
+            "book": "FanDuel",
+            "odds": 122
+          },
+          "best_under": {
+            "book": "FanDuel",
+            "odds": -162
+          },
+          "fair_value_over": 208,
+          "fair_value_under": -208,
+          "model_only": false
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 20.4,
+          "under_hit_rate": 79.6,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 390,
+          "fair_value_under": -390,
+          "model_only": true
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 11.5,
+          "under_hit_rate": 88.5,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 770,
+          "fair_value_under": -770,
+          "model_only": true
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 5.8,
+          "under_hit_rate": 94.2,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1624,
+          "fair_value_under": -1624,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
           "date": "03/26",
@@ -2564,10 +5539,10 @@
       "opp_team": "CIN",
       "venue": "loanDepot park",
       "projected_ks": 5.1,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
+      "line": 5.5,
+      "play": "UNDER",
+      "edge": 14.7,
+      "hit_rate": 67.5,
       "swstr_pct": 0.1142,
       "csw_pct": 0.2757666666666667,
       "k_pct": 0.1984,
@@ -2589,11 +5564,87 @@
         "adjustment": 1.0,
         "indoor": true
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "DraftKings",
+          "odds": -109
+        },
+        {
+          "book": "FanDuel",
+          "odds": -118
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -112
+        },
+        {
+          "book": "DraftKings",
+          "odds": -117
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -112
+      },
+      "fair_value": -208,
+      "ladder": [
+        {
+          "line": 5.5,
+          "over_hit_rate": 32.5,
+          "under_hit_rate": 67.5,
+          "over_edge": -19.7,
+          "under_edge": 14.7,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": -109
+          },
+          "best_under": {
+            "book": "FanDuel",
+            "odds": -112
+          },
+          "fair_value_over": 208,
+          "fair_value_under": -208,
+          "model_only": false
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 20.4,
+          "under_hit_rate": 79.6,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 390,
+          "fair_value_under": -390,
+          "model_only": true
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 11.5,
+          "under_hit_rate": 88.5,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 770,
+          "fair_value_under": -770,
+          "model_only": true
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 5.8,
+          "under_hit_rate": 94.2,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1624,
+          "fair_value_under": -1624,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
           "date": "03/27",
@@ -2628,10 +5679,10 @@
       "opp_team": "DET",
       "venue": "Target Field",
       "projected_ks": 5.1,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
+      "line": 5.5,
+      "play": "UNDER",
+      "edge": 22.9,
+      "hit_rate": 67.5,
       "swstr_pct": 0.11073333333333335,
       "csw_pct": 0.25360000000000005,
       "k_pct": 0.2282,
@@ -2653,11 +5704,87 @@
         "adjustment": 1.03,
         "indoor": false
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -146
+        },
+        {
+          "book": "DraftKings",
+          "odds": -159
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "DraftKings",
+          "odds": 124
+        },
+        {
+          "book": "FanDuel",
+          "odds": 110
+        }
+      ],
+      "best_line": {
+        "book": "DraftKings",
+        "odds": 124
+      },
+      "fair_value": -208,
+      "ladder": [
+        {
+          "line": 5.5,
+          "over_hit_rate": 32.5,
+          "under_hit_rate": 67.5,
+          "over_edge": -26.8,
+          "under_edge": 22.9,
+          "best_over": {
+            "book": "FanDuel",
+            "odds": -146
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": 124
+          },
+          "fair_value_over": 208,
+          "fair_value_under": -208,
+          "model_only": false
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 20.4,
+          "under_hit_rate": 79.6,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 390,
+          "fair_value_under": -390,
+          "model_only": true
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 11.5,
+          "under_hit_rate": 88.5,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 770,
+          "fair_value_under": -770,
+          "model_only": true
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 5.8,
+          "under_hit_rate": 94.2,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1624,
+          "fair_value_under": -1624,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
           "date": "03/28",
@@ -2692,10 +5819,10 @@
       "opp_team": "COL",
       "venue": "Coors Field",
       "projected_ks": 4.7,
-      "line": 0,
+      "line": 4.5,
       "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
+      "edge": -17.1,
+      "hit_rate": 40.9,
       "swstr_pct": 0.12493333333333334,
       "csw_pct": 0.28936666666666666,
       "k_pct": 0.2407,
@@ -2717,11 +5844,87 @@
         "adjustment": 1.0,
         "indoor": false
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -138
+        },
+        {
+          "book": "DraftKings",
+          "odds": -145
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "DraftKings",
+          "odds": 114
+        },
+        {
+          "book": "FanDuel",
+          "odds": 104
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -138
+      },
+      "fair_value": 144,
+      "ladder": [
+        {
+          "line": 4.5,
+          "over_hit_rate": 40.9,
+          "under_hit_rate": 59.1,
+          "over_edge": -17.1,
+          "under_edge": 12.4,
+          "best_over": {
+            "book": "FanDuel",
+            "odds": -138
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": 114
+          },
+          "fair_value_over": 144,
+          "fair_value_under": -144,
+          "model_only": false
+        },
+        {
+          "line": 5.5,
+          "over_hit_rate": 27.3,
+          "under_hit_rate": 72.7,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 266,
+          "fair_value_under": -266,
+          "model_only": true
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 16.4,
+          "under_hit_rate": 83.6,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 510,
+          "fair_value_under": -510,
+          "model_only": true
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 8.8,
+          "under_hit_rate": 91.2,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1036,
+          "fair_value_under": -1036,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
           "date": "03/27",
@@ -2756,10 +5959,10 @@
       "opp_team": "ATL",
       "venue": "Angel Stadium",
       "projected_ks": 4.7,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
+      "line": 5.5,
+      "play": "UNDER",
+      "edge": 13.4,
+      "hit_rate": 72.7,
       "swstr_pct": 0.1164,
       "csw_pct": 0.27813333333333334,
       "k_pct": 0.2083,
@@ -2781,11 +5984,87 @@
         "adjustment": 1.0,
         "indoor": false
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "DraftKings",
+          "odds": 125
+        },
+        {
+          "book": "FanDuel",
+          "odds": 110
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -146
+        },
+        {
+          "book": "DraftKings",
+          "odds": -160
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -146
+      },
+      "fair_value": -266,
+      "ladder": [
+        {
+          "line": 5.5,
+          "over_hit_rate": 27.3,
+          "under_hit_rate": 72.7,
+          "over_edge": -17.1,
+          "under_edge": 13.4,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": 125
+          },
+          "best_under": {
+            "book": "FanDuel",
+            "odds": -146
+          },
+          "fair_value_over": 266,
+          "fair_value_under": -266,
+          "model_only": false
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 16.4,
+          "under_hit_rate": 83.6,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 510,
+          "fair_value_under": -510,
+          "model_only": true
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 8.8,
+          "under_hit_rate": 91.2,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1036,
+          "fair_value_under": -1036,
+          "model_only": true
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 4.2,
+          "under_hit_rate": 95.8,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 2281,
+          "fair_value_under": -2281,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
           "date": "03/27",
@@ -2820,10 +6099,10 @@
       "opp_team": "NYM",
       "venue": "Citi Field",
       "projected_ks": 4.6,
-      "line": 0,
+      "line": 4.5,
       "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
+      "edge": -19.5,
+      "hit_rate": 39.5,
       "swstr_pct": 0.09383333333333334,
       "csw_pct": 0.2612333333333333,
       "k_pct": 0.1862,
@@ -2845,11 +6124,87 @@
         "adjustment": 1.025,
         "indoor": false
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -144
+        },
+        {
+          "book": "DraftKings",
+          "odds": -146
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "DraftKings",
+          "odds": 114
+        },
+        {
+          "book": "FanDuel",
+          "odds": 108
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -144
+      },
+      "fair_value": 153,
+      "ladder": [
+        {
+          "line": 4.5,
+          "over_hit_rate": 39.5,
+          "under_hit_rate": 60.5,
+          "over_edge": -19.5,
+          "under_edge": 13.8,
+          "best_over": {
+            "book": "FanDuel",
+            "odds": -144
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": 114
+          },
+          "fair_value_over": 153,
+          "fair_value_under": -153,
+          "model_only": false
+        },
+        {
+          "line": 5.5,
+          "over_hit_rate": 26.1,
+          "under_hit_rate": 73.9,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 283,
+          "fair_value_under": -283,
+          "model_only": true
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 15.5,
+          "under_hit_rate": 84.5,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 545,
+          "fair_value_under": -545,
+          "model_only": true
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 8.3,
+          "under_hit_rate": 91.7,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1105,
+          "fair_value_under": -1105,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
           "date": "03/26",
@@ -2953,10 +6308,10 @@
       "opp_team": "NYY",
       "venue": "Yankee Stadium",
       "projected_ks": 4.4,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
+      "line": 4.5,
+      "play": "UNDER",
+      "edge": 11.9,
+      "hit_rate": 63.4,
       "swstr_pct": 0.08700000000000001,
       "csw_pct": 0.25965000000000005,
       "k_pct": 0.1946,
@@ -2978,11 +6333,87 @@
         "adjustment": 1.025,
         "indoor": false
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "DraftKings",
+          "odds": -106
+        },
+        {
+          "book": "FanDuel",
+          "odds": -125
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -106
+        },
+        {
+          "book": "DraftKings",
+          "odds": -121
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -106
+      },
+      "fair_value": -173,
+      "ladder": [
+        {
+          "line": 4.5,
+          "over_hit_rate": 36.6,
+          "under_hit_rate": 63.4,
+          "over_edge": -14.9,
+          "under_edge": 11.9,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": -106
+          },
+          "best_under": {
+            "book": "FanDuel",
+            "odds": -106
+          },
+          "fair_value_over": 173,
+          "fair_value_under": -173,
+          "model_only": false
+        },
+        {
+          "line": 5.5,
+          "over_hit_rate": 23.7,
+          "under_hit_rate": 76.3,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 322,
+          "fair_value_under": -322,
+          "model_only": true
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 13.8,
+          "under_hit_rate": 86.2,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 625,
+          "fair_value_under": -625,
+          "model_only": true
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 7.2,
+          "under_hit_rate": 92.8,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1289,
+          "fair_value_under": -1289,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
           "date": "03/31",
@@ -3012,10 +6443,10 @@
       "opp_team": "STL",
       "venue": "Nationals Park",
       "projected_ks": 4.3,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
+      "line": 4.5,
+      "play": "UNDER",
+      "edge": 12.0,
+      "hit_rate": 64.8,
       "swstr_pct": 0.11410000000000001,
       "csw_pct": 0.2981666666666667,
       "k_pct": 0.1849,
@@ -3037,11 +6468,87 @@
         "adjustment": 1.015,
         "indoor": false
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "DraftKings",
+          "odds": -113
+        },
+        {
+          "book": "FanDuel",
+          "odds": -118
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -112
+        },
+        {
+          "book": "DraftKings",
+          "odds": -112
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -112
+      },
+      "fair_value": -184,
+      "ladder": [
+        {
+          "line": 4.5,
+          "over_hit_rate": 35.2,
+          "under_hit_rate": 64.8,
+          "over_edge": -17.9,
+          "under_edge": 12.0,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": -113
+          },
+          "best_under": {
+            "book": "FanDuel",
+            "odds": -112
+          },
+          "fair_value_over": 184,
+          "fair_value_under": -184,
+          "model_only": false
+        },
+        {
+          "line": 5.5,
+          "over_hit_rate": 22.6,
+          "under_hit_rate": 77.4,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 342,
+          "fair_value_under": -342,
+          "model_only": true
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 13.0,
+          "under_hit_rate": 87.0,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 669,
+          "fair_value_under": -669,
+          "model_only": true
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 6.7,
+          "under_hit_rate": 93.3,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1393,
+          "fair_value_under": -1393,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
           "date": "03/26",
@@ -3076,10 +6583,10 @@
       "opp_team": "HOU",
       "venue": "Coors Field",
       "projected_ks": 4.2,
-      "line": 0,
+      "line": 3.5,
       "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
+      "edge": -9.0,
+      "hit_rate": 48.3,
       "swstr_pct": 0.09886666666666667,
       "csw_pct": 0.2733,
       "k_pct": 0.1779,
@@ -3101,11 +6608,87 @@
         "adjustment": 1.0,
         "indoor": false
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "DraftKings",
+          "odds": -134
+        },
+        {
+          "book": "FanDuel",
+          "odds": -138
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "DraftKings",
+          "odds": 105
+        },
+        {
+          "book": "FanDuel",
+          "odds": 104
+        }
+      ],
+      "best_line": {
+        "book": "DraftKings",
+        "odds": -134
+      },
+      "fair_value": 107,
+      "ladder": [
+        {
+          "line": 3.5,
+          "over_hit_rate": 48.3,
+          "under_hit_rate": 51.7,
+          "over_edge": -9.0,
+          "under_edge": 2.9,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": -134
+          },
+          "best_under": {
+            "book": "DraftKings",
+            "odds": 105
+          },
+          "fair_value_over": 107,
+          "fair_value_under": -107,
+          "model_only": false
+        },
+        {
+          "line": 4.5,
+          "over_hit_rate": 33.9,
+          "under_hit_rate": 66.1,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 195,
+          "fair_value_under": -195,
+          "model_only": true
+        },
+        {
+          "line": 5.5,
+          "over_hit_rate": 21.5,
+          "under_hit_rate": 78.5,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 365,
+          "fair_value_under": -365,
+          "model_only": true
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 12.2,
+          "under_hit_rate": 87.8,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 720,
+          "fair_value_under": -720,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
           "date": "03/27",
@@ -3140,10 +6723,10 @@
       "opp_team": "WSH",
       "venue": "Nationals Park",
       "projected_ks": 4.0,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
+      "line": 4.5,
+      "play": "UNDER",
+      "edge": 11.9,
+      "hit_rate": 68.8,
       "swstr_pct": 0.07880000000000001,
       "csw_pct": 0.2297666666666667,
       "k_pct": 0.16,
@@ -3165,11 +6748,87 @@
         "adjustment": 1.015,
         "indoor": false
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "DraftKings",
+          "odds": 108
+        },
+        {
+          "book": "FanDuel",
+          "odds": 100
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -132
+        },
+        {
+          "book": "DraftKings",
+          "odds": -138
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -132
+      },
+      "fair_value": -221,
+      "ladder": [
+        {
+          "line": 4.5,
+          "over_hit_rate": 31.2,
+          "under_hit_rate": 68.8,
+          "over_edge": -16.9,
+          "under_edge": 11.9,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": 108
+          },
+          "best_under": {
+            "book": "FanDuel",
+            "odds": -132
+          },
+          "fair_value_over": 221,
+          "fair_value_under": -221,
+          "model_only": false
+        },
+        {
+          "line": 5.5,
+          "over_hit_rate": 19.4,
+          "under_hit_rate": 80.6,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 415,
+          "fair_value_under": -415,
+          "model_only": true
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 10.8,
+          "under_hit_rate": 89.2,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 826,
+          "fair_value_under": -826,
+          "model_only": true
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 5.3,
+          "under_hit_rate": 94.7,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1787,
+          "fair_value_under": -1787,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
           "date": "03/26",
@@ -3204,10 +6863,10 @@
       "opp_team": "TB",
       "venue": "Tropicana Field",
       "projected_ks": 3.2,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
+      "line": 3.5,
+      "play": "UNDER",
+      "edge": 11.6,
+      "hit_rate": 66.1,
       "swstr_pct": 0.067,
       "csw_pct": 0.242,
       "k_pct": 0.15,
@@ -3229,11 +6888,87 @@
         "adjustment": 1.0,
         "indoor": true
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "DraftKings",
+          "odds": 109
+        },
+        {
+          "book": "FanDuel",
+          "odds": -110
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -120
+        },
+        {
+          "book": "DraftKings",
+          "odds": -139
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -120
+      },
+      "fair_value": -195,
+      "ladder": [
+        {
+          "line": 3.5,
+          "over_hit_rate": 33.9,
+          "under_hit_rate": 66.1,
+          "over_edge": -13.9,
+          "under_edge": 11.6,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": 109
+          },
+          "best_under": {
+            "book": "FanDuel",
+            "odds": -120
+          },
+          "fair_value_over": 195,
+          "fair_value_under": -195,
+          "model_only": false
+        },
+        {
+          "line": 4.5,
+          "over_hit_rate": 21.5,
+          "under_hit_rate": 78.5,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 365,
+          "fair_value_under": -365,
+          "model_only": true
+        },
+        {
+          "line": 5.5,
+          "over_hit_rate": 12.2,
+          "under_hit_rate": 87.8,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 720,
+          "fair_value_under": -720,
+          "model_only": true
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 6.2,
+          "under_hit_rate": 93.8,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1513,
+          "fair_value_under": -1513,
+          "model_only": true
+        }
+      ],
       "last5": [],
       "k_distribution": {
         "0": 0.0759,
@@ -3257,10 +6992,10 @@
       "opp_team": "LAA",
       "venue": "Angel Stadium",
       "projected_ks": 3.0,
-      "line": 0,
-      "play": "OVER",
-      "edge": 0.0,
-      "hit_rate": 50.0,
+      "line": 5.5,
+      "play": "UNDER",
+      "edge": 31.2,
+      "hit_rate": 89.2,
       "swstr_pct": 0.04583333333333334,
       "csw_pct": 0.21323333333333333,
       "k_pct": 0.0667,
@@ -3282,11 +7017,87 @@
         "adjustment": 1.0,
         "indoor": false
       },
-      "over_odds": [],
-      "under_odds": [],
-      "best_line": null,
-      "fair_value": -100,
-      "ladder": [],
+      "over_odds": [
+        {
+          "book": "DraftKings",
+          "odds": 108
+        },
+        {
+          "book": "FanDuel",
+          "odds": 104
+        }
+      ],
+      "under_odds": [
+        {
+          "book": "FanDuel",
+          "odds": -138
+        },
+        {
+          "book": "DraftKings",
+          "odds": -138
+        }
+      ],
+      "best_line": {
+        "book": "FanDuel",
+        "odds": -138
+      },
+      "fair_value": -826,
+      "ladder": [
+        {
+          "line": 5.5,
+          "over_hit_rate": 10.8,
+          "under_hit_rate": 89.2,
+          "over_edge": -37.3,
+          "under_edge": 31.2,
+          "best_over": {
+            "book": "DraftKings",
+            "odds": 108
+          },
+          "best_under": {
+            "book": "FanDuel",
+            "odds": -138
+          },
+          "fair_value_over": 826,
+          "fair_value_under": -826,
+          "model_only": false
+        },
+        {
+          "line": 6.5,
+          "over_hit_rate": 5.3,
+          "under_hit_rate": 94.7,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 1787,
+          "fair_value_under": -1787,
+          "model_only": true
+        },
+        {
+          "line": 7.5,
+          "over_hit_rate": 2.4,
+          "under_hit_rate": 97.6,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 4067,
+          "fair_value_under": -4067,
+          "model_only": true
+        },
+        {
+          "line": 8.5,
+          "over_hit_rate": 0.9,
+          "under_hit_rate": 99.1,
+          "over_edge": 0,
+          "under_edge": 0,
+          "best_over": null,
+          "best_under": null,
+          "fair_value_over": 9900,
+          "fair_value_under": -9900,
+          "model_only": true
+        }
+      ],
       "last5": [
         {
           "date": "03/28",
@@ -3314,6 +7125,15 @@
       }
     }
   ],
-  "parlays": [],
+  "parlays": [
+    {
+      "legs": "Reynaldo L\u00f3pez UNDER 5.5 + Taj Bradley UNDER 5.5",
+      "books": "FanDuel, DraftKings"
+    },
+    {
+      "legs": "Reynaldo L\u00f3pez UNDER 5.5 + Taj Bradley UNDER 5.5 + Tarik Skubal UNDER 7.5",
+      "books": ""
+    }
+  ],
   "total_plays": 26
 }
