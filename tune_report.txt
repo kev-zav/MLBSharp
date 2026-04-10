@@ -2,36 +2,36 @@
 ============================================================
   MLB STRIKEOUT SHARP — MODEL TUNER
 ============================================================
-  Excluding 16 short start(s) (< 3 IP) from model training.
+  Excluding 17 short start(s) (< 3 IP) from model training.
 
-  Loaded 342 rows from results.csv
-  Date range: 2026-03-26 to 2026-04-08 (14 game days)
+  Loaded 353 rows from results.csv
+  Date range: 2026-03-26 to 2026-04-09 (15 game days)
 
 ============================================================
   SECTION 1: CALIBRATION REPORT
 ============================================================
 
-  Total games logged: 342
-  Games with projections: 141
+  Total games logged: 353
+  Games with projections: 148
 
   Overall Accuracy:
-    Avg Projected Ks:  5.41
-    Avg Actual Ks:     5.26
-    Avg Miss:          +0.16 (over-projecting)
-    MAE:               1.97
-    RMSE:              2.35
+    Avg Projected Ks:  5.39
+    Avg Actual Ks:     5.24
+    Avg Miss:          +0.15 (over-projecting)
+    MAE:               1.94
+    RMSE:              2.32
 
   Tier                       Plays   Over%  AvgProj   AvgAct  AvgMiss
   ------------------------- ------ ------- -------- -------- --------
-  STRONG (edge > 8)             45     47%      5.8      5.0     +0.8
-  MODERATE (edge 4-8)            7     71%      5.7      6.3     -0.6
+  STRONG (edge > 8)             47     47%      5.7      5.0     +0.8
+  MODERATE (edge 4-8)            8     75%      5.5      6.2     -0.8
   LEAN (edge 1-4)                9     44%      5.5      5.7     -0.1
-  NO VALUE (edge < 1)           80     56%      5.2      5.3     -0.1
+  NO VALUE (edge < 1)           84     56%      5.2      5.3     -0.1
 
   Line Results:
-    Overs hit:  52/100 (52%)
-    Unders hit: 48/100 (48%)
-    Pushes:     0/100 (0%)
+    Overs hit:  56/107 (52%)
+    Unders hit: 51/107 (48%)
+    Pushes:     0/107 (0%)
 
 ============================================================
   SECTION 2: FACTOR CORRELATION
@@ -42,21 +42,21 @@
 
   Factor                        Corr    p-value      N Strength       
   ------------------------- -------- ---------- ------ ---------------
-  swstr_pct                  +0.2858     0.0006*   141 Weak           
-  k_pct                      +0.2611     0.0018*   141 Weak           
-  projected_ks_manual        +0.2297     0.0163*   109 Weak           
-  rolling_k_avg_3            +0.1972     0.0191*   141 Weak           
-  rolling_k_avg_5            +0.1891     0.0247*   141 Weak           
-  csw_pct                    +0.1846     0.0284*   141 Weak           
-  pitch_count_last_outing    +0.1695     0.0445*   141 Weak           
-  weather_wind               +0.0935     0.2701    141 Negligible     
-  weather_temp               -0.0789     0.3524    141 Negligible     
-  opp_k_pct_vs_hand          +0.0766     0.3666    141 Negligible     
-  days_rest                  +0.0416     0.6244    141 Negligible     
-  o_swing_pct                -0.0130     0.8788    141 Negligible     
-  pitch_mix_adj              -0.0080     0.9346    109 Negligible     
+  swstr_pct                  +0.2844     0.0005*   148 Weak           
+  k_pct                      +0.2587     0.0015*   148 Weak           
+  projected_ks_manual        +0.2280     0.0138*   116 Weak           
+  rolling_k_avg_3            +0.1900     0.0207*   148 Weak           
+  rolling_k_avg_5            +0.1818     0.0270*   148 Weak           
+  csw_pct                    +0.1770     0.0314*   148 Weak           
+  pitch_count_last_outing    +0.1617     0.0496*   148 Weak           
+  weather_wind               +0.1154     0.1626    148 Negligible     
+  weather_temp               -0.1013     0.2204    148 Negligible     
+  opp_k_pct_vs_hand          +0.0757     0.3605    148 Negligible     
+  days_rest                  +0.0445     0.5912    148 Negligible     
+  o_swing_pct                +0.0082     0.9208    148 Negligible     
+  pitch_mix_adj              -0.0004     0.9964    116 Negligible     
 
-  Strongest predictor: swstr_pct (r=+0.2858)
+  Strongest predictor: swstr_pct (r=+0.2844)
 
 ============================================================
   SECTION 3: BIAS DETECTION
@@ -66,22 +66,23 @@
 
   Category                               N   AvgMiss   vs Base Direction 
   ----------------------------------- ---- --------- --------- ----------
-  Park: Fenway Park                      6     +2.32     +2.16 over       ⚠
-  Park: Chase Field                     10     +1.71     +1.55 over       ⚠
-  Short Rest (<=4 days)                  5     +1.28     +1.16 over       ⚠
-  Park: Nationals Park                   8     -0.85     -1.01 under     
-  Park: loanDepot park                   5     +0.64     +0.48 over      
+  Park: Fenway Park                      6     +2.32     +2.17 over       ⚠
+  Park: Chase Field                     10     +1.71     +1.56 over       ⚠
+  Short Rest (<=4 days)                  5     +1.28     +1.17 over       ⚠
+  Park: loanDepot park                   7     +1.03     +0.88 over       ⚠
+  Park: Nationals Park                   8     -0.85     -1.00 under     
   Park: Oracle Park                      8     -0.64     -0.79 under     
-  High Wind (>15 mph)                   19     +0.55     +0.46 over      
-  High K% Pitchers (above median)       69     +0.40     +0.52 over      
-  Neutral Zone Umps                    141     +0.16     +0.00 over      
-  Low K% Pitchers (below median)        68     -0.12     -0.52 under     
-  Cold Weather (<60°F)                  65     -0.07     -0.42 under     
+  High Wind (>15 mph)                   21     +0.40     +0.30 over      
+  High K% Pitchers (above median)       72     +0.37     +0.48 over      
+  Neutral Zone Umps                    148     +0.15     +0.00 over      
+  Cold Weather (<60°F)                  68     -0.12     -0.50 under     
+  Low K% Pitchers (below median)        72     -0.11     -0.48 under     
 
-  ⚠ Found 3 significant biases (>1.0 K avg miss):
+  ⚠ Found 4 significant biases (>1.0 K avg miss):
     → Park: Fenway Park: over-projecting by 2.3 Ks on average
     → Park: Chase Field: over-projecting by 1.7 Ks on average
     → Short Rest (<=4 days): over-projecting by 1.3 Ks on average
+    → Park: loanDepot park: over-projecting by 1.0 Ks on average
 
 ============================================================
   SECTION 4: WEIGHT SUGGESTIONS
@@ -89,11 +90,11 @@
 
   Based on correlation data and projection accuracy:
 
-  1. Swstr % shows moderate correlation (r=+0.286). Current weight seems reasonable — monitor as more data comes in.
+  1. Swstr % shows moderate correlation (r=+0.284). Current weight seems reasonable — monitor as more data comes in.
 
-  2. K % shows moderate correlation (r=+0.261). Current weight seems reasonable — monitor as more data comes in.
+  2. K % shows moderate correlation (r=+0.259). Current weight seems reasonable — monitor as more data comes in.
 
-  3. Projected Ks Manual shows moderate correlation (r=+0.230). Current weight seems reasonable — monitor as more data comes in.
+  3. Projected Ks Manual shows moderate correlation (r=+0.228). Current weight seems reasonable — monitor as more data comes in.
 
 
 ============================================================
@@ -101,10 +102,10 @@
 ============================================================
 
   XGBoost auto-tuning requires 200 complete rows.
-  Current: 109/200
-  [████████████████░░░░░░░░░░░░░░] 55%
+  Current: 116/200
+  [█████████████████░░░░░░░░░░░░░] 58%
 
-  Log 91 more game results to unlock auto-tuning.
+  Log 84 more game results to unlock auto-tuning.
   At ~12 starters/day, that's roughly 8 more days of games.
 
 ============================================================
