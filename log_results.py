@@ -31,9 +31,6 @@ CSV_COLUMNS = [
     "venue",
     "projected_ks",
     "actual_ks",
-    "book_line",
-    "our_edge_score",
-    "over_hit",
     "swstr_pct",
     "csw_pct",
     "k_pct",
@@ -159,18 +156,6 @@ def match_projection(actual: dict, projections: list[dict]) -> dict | None:
     return None
 
 
-def determine_over_hit(actual_ks: int, line: float) -> str:
-    """Did the over hit? Y/N/P(ush)."""
-    if line <= 0:
-        return "N/A"
-    if actual_ks > line:
-        return "Y"
-    elif actual_ks == line:
-        return "P"
-    else:
-        return "N"
-
-
 def ensure_csv():
     """Create results.csv with headers if it doesn't exist."""
     if not os.path.exists(RESULTS_CSV):
@@ -245,9 +230,6 @@ def log_results(game_date: str):
 
             proj = match_projection(actual, projections)
 
-            line = proj.get("line", 0) if proj else 0
-            over_hit = determine_over_hit(actual["actual_ks"], line)
-
             row = [
                 game_date,
                 pitcher_name,
@@ -257,9 +239,6 @@ def log_results(game_date: str):
                 actual["venue"],
                 proj.get("projected_ks", "") if proj else "",
                 actual["actual_ks"],
-                line if line > 0 else "",
-                proj.get("edge", "") if proj else "",
-                over_hit,
                 proj.get("swstr_pct", "") if proj else "",
                 proj.get("csw_pct", "") if proj else "",
                 proj.get("k_pct", "") if proj else "",
@@ -283,10 +262,8 @@ def log_results(game_date: str):
 
             matched_str = "MATCHED" if proj else "no projection"
             proj_str = f" | proj {proj['projected_ks']}" if proj else ""
-            line_str = f" | line {line}" if line > 0 else ""
             print(f"  {pitcher_name} ({actual['team_abbr']}): "
-                  f"{actual['actual_ks']} Ks{proj_str}{line_str}"
-                  f" | over: {over_hit} — [{matched_str}]")
+                  f"{actual['actual_ks']} Ks{proj_str} — [{matched_str}]")
 
     print(f"\n  Wrote {rows_written} rows to results.csv "
           f"({rows_skipped} skipped as duplicates).")

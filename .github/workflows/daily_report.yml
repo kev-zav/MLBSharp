@@ -2,7 +2,9 @@ name: Daily MLB Sharp Report
 
 on:
   schedule:
-    - cron: '30 12 * * *'  # 7:30 AM CT (12:30 UTC)
+    - cron: '0 16 * * *'   # 11:00 AM CT (16:00 UTC)
+    - cron: '30 19 * * *'  # 2:30 PM CT (19:30 UTC)
+    - cron: '0 22 * * *'   # 5:00 PM CT (22:00 UTC)
   workflow_dispatch:        # allow manual trigger from GitHub UI
 
 jobs:
@@ -23,7 +25,6 @@ jobs:
 
       - name: Run MLBSharp
         env:
-          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
           OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
         run: python run.py
 
@@ -32,5 +33,5 @@ jobs:
           git config user.name "MLBSharp Bot"
           git config user.email "mlbsharp@users.noreply.github.com"
           git add dashboard_data.json projections_cache.json fg_cache.json
-          git diff --staged --quiet || git commit -m "Auto dashboard update $(date +'%Y-%m-%d')"
+          git diff --staged --quiet || git commit -m "Auto dashboard update $(date +'%Y-%m-%d %H:%M')"
           git push

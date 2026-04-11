@@ -4,18 +4,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # --- API Keys ---
-ODDS_API_KEY = os.getenv("ODDS_API_KEY", "")
 OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY", "")
 
 # --- MLB Stats API (no key needed) ---
 MLB_API_BASE = "https://statsapi.mlb.com/api/v1"
-
-# --- The Odds API ---
-ODDS_API_BASE = "https://api.the-odds-api.com/v4"
-ODDS_SPORT = "baseball_mlb"
-ODDS_MARKETS = "pitcher_strikeouts"
-ODDS_REGIONS = "us"
-ODDS_FORMATS = "american"
 
 # --- Season / Year ---
 from datetime import date
@@ -42,19 +34,6 @@ EXCLUDED_PITCHER_NAMES = {
 }
 # Minimum avg IP/start to be considered a starter. Below this = opener/reliever.
 MIN_IP_PER_START = 3.0
-
-# --- Edge Thresholds (percentage points) ---
-EDGE_STRONG = 8
-EDGE_MODERATE = 4
-EDGE_LEAN = 1
-
-# --- Hit Rate Model Calibration ---
-# Empirical std dev of (actual_ks - projected_ks) from logged results.
-# Update this as more games are logged. Current: 129 games as of 2026-04-07.
-HIT_RATE_STD_DEV = 2.675
-# Systematic bias: model over-projects by this many Ks on average.
-# Applied as a correction when estimating hit rate. Positive = model over-projects.
-HIT_RATE_BIAS = 0.813
 
 # --- Park Factors (FanGraphs SO park factor, 100 = neutral) ---
 # Loaded dynamically but fallback dict for known parks

@@ -17,7 +17,6 @@
       --blue: #3b82f6;
       --green: #10b981;
       --amber: #f59e0b;
-      --purple: #8b5cf6;
       --red: #ef4444;
     }
 
@@ -25,7 +24,7 @@
       background: var(--bg);
       color: var(--text);
       font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
-      padding-bottom: 80px;
+      padding-bottom: 24px;
       min-height: 100vh;
     }
 
@@ -54,60 +53,9 @@
       0%, 100% { opacity: 1; transform: scale(1); }
       50% { opacity: 0.3; transform: scale(0.75); }
     }
-
-    /* ── BOTTOM NAV ── */
-    .bottom-nav {
-      position: fixed;
-      bottom: 0; left: 0; right: 0;
-      background: #0a0e18;
-      border-top: 1px solid var(--border);
-      display: flex;
-      z-index: 200;
-      padding-bottom: env(safe-area-inset-bottom, 0px);
+    .count-badge {
+      font-size: 11px; color: var(--text-muted); margin-top: 2px;
     }
-    .nav-btn {
-      flex: 1;
-      padding: 10px 4px 11px;
-      background: none;
-      border: none;
-      border-top: 2px solid transparent;
-      color: var(--text-muted);
-      font-size: 11px;
-      font-weight: 600;
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 3px;
-      letter-spacing: 0.2px;
-      transition: color 0.15s, border-color 0.15s;
-      -webkit-tap-highlight-color: transparent;
-    }
-    .nav-btn.active { color: var(--text); border-top-color: var(--blue); }
-    .nav-icon { font-size: 19px; line-height: 1; }
-    .nav-count {
-      background: var(--border);
-      border-radius: 8px;
-      padding: 1px 6px;
-      font-size: 10px;
-    }
-    .nav-btn.active .nav-count { background: #1d3a6e; color: #93c5fd; }
-
-    /* ── TAB CONTENT ── */
-    .tab-content { display: none; }
-    .tab-content.active { display: block; animation: fadeIn 0.15s ease; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
-
-    /* ── SECTION LABEL ── */
-    .section-label {
-      display: flex; align-items: center; gap: 8px;
-      padding: 18px 16px 8px;
-    }
-    .section-label-text {
-      font-size: 10px; font-weight: 700;
-      letter-spacing: 1.2px; text-transform: uppercase; white-space: nowrap;
-    }
-    .section-line { flex: 1; height: 1px; background: var(--border); }
 
     /* ── CARD ── */
     .card {
@@ -146,56 +94,23 @@
       background: var(--border); color: var(--text-sec);
       padding: 1px 5px; border-radius: 4px;
     }
-    .play-tag {
-      display: inline-block; font-size: 11px; font-weight: 700;
-      padding: 2px 7px; border-radius: 5px; letter-spacing: 0.3px;
+    .lineup-badge {
+      font-size: 10px; font-weight: 700;
+      background: #052e16; color: var(--green);
+      padding: 1px 6px; border-radius: 4px;
     }
-    .tag-over { background: #052e16; color: var(--green); }
-    .tag-under { background: #300a0a; color: #f87171; }
-    .tag-na { background: var(--border); color: var(--text-muted); }
     .matchup-sub {
       font-size: 11px; color: var(--text-muted); margin-top: 3px;
       white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     }
 
-    /* ── VALUE BLOCK (replaces grade badge) ── */
-    .value-block {
-      flex-shrink: 0; text-align: right; min-width: 90px;
+    /* ── PROJ BLOCK ── */
+    .proj-block { flex-shrink: 0; text-align: right; min-width: 72px; }
+    .proj-ks {
+      font-size: 28px; font-weight: 800; letter-spacing: -1px; line-height: 1;
+      color: var(--text);
     }
-    .value-prop {
-      font-size: 13px; font-weight: 800; letter-spacing: -0.2px;
-      white-space: nowrap;
-    }
-    .value-prop-over { color: var(--green); }
-    .value-prop-under { color: #f87171; }
-    .value-prop-na { color: var(--text-muted); }
-    .value-row {
-      display: flex; justify-content: flex-end; align-items: center;
-      gap: 5px; margin-top: 3px;
-    }
-    .value-label { font-size: 9px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
-    .value-odds { font-size: 12px; font-weight: 700; }
-    .value-odds-pos { color: var(--blue); }
-    .value-odds-neg { color: var(--text-sec); }
-    .value-divider { width: 1px; height: 10px; background: var(--border); }
-    .value-fair { font-size: 11px; color: var(--text-muted); }
-    .value-hr { font-size: 11px; font-weight: 700; color: var(--text-sec); }
-    .grade-proj { font-size: 13px; font-weight: 800; color: var(--text); margin-top: 5px; }
-
-    /* ── GRADE BADGE ── */
-    .grade-badge {
-      display: inline-flex; align-items: center; justify-content: center;
-      min-width: 38px; height: 26px; border-radius: 6px;
-      font-size: 13px; font-weight: 800; padding: 0 6px; letter-spacing: 0.3px;
-    }
-    .grade-aplus  { background: #052e16; color: #10b981; border: 1px solid #10b981; }
-    .grade-a      { background: #052e16; color: #34d399; border: 1px solid #34d399; }
-    .grade-aminus { background: #1f1500; color: #fbbf24; border: 1px solid #fbbf24; }
-    .grade-bplus  { background: #1f1500; color: #f59e0b; border: 1px solid #f59e0b; }
-    .grade-b      { background: #1a0e2e; color: #a78bfa; border: 1px solid #a78bfa; }
-    .grade-c      { background: #161b27; color: #8b949e; border: 1px solid #484f58; }
-    .grade-d      { background: #161b27; color: #484f58; border: 1px solid #30363d; }
-    .grade-f      { background: #300a0a; color: #ef4444; border: 1px solid #ef4444; }
+    .proj-label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
 
     /* ── STATS ROW ── */
     .stats-row { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 10px; }
@@ -205,45 +120,15 @@
     }
     .stat-chip strong { color: var(--text); font-weight: 600; }
 
-    /* ── LADDER ── */
-    .ladder { border-top: 1px solid var(--border); padding-top: 9px; margin-top: 2px; }
-    .ladder-title {
-      font-size: 10px; font-weight: 700; color: var(--text-muted);
-      text-transform: uppercase; letter-spacing: 1px; margin-bottom: 7px;
+    /* ── K DISTRIBUTION ── */
+    .kdist { margin-bottom: 8px; }
+    .kdist-row { display: flex; gap: 4px; align-items: flex-end; height: 36px; }
+    .kdist-bar-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px; }
+    .kdist-bar {
+      width: 100%; border-radius: 3px 3px 0 0;
+      transition: height 0.6s cubic-bezier(.4,0,.2,1);
     }
-    .rung {
-      display: flex; align-items: center; gap: 7px;
-      padding: 5px 0; border-bottom: 1px solid #0a0e18;
-    }
-    .rung:last-child { border-bottom: none; }
-    .rung-dir { font-size: 11px; font-weight: 700; width: 12px; flex-shrink: 0; }
-    .rung-dir-over { color: var(--green); }
-    .rung-dir-under { color: #f87171; }
-    .rung-line-val { font-size: 13px; font-weight: 700; width: 30px; flex-shrink: 0; }
-    .rung-bar-wrap { flex: 1; height: 4px; background: #1c2333; border-radius: 2px; overflow: hidden; }
-    .rung-bar-fill { height: 100%; border-radius: 2px; width: 0; transition: width 0.7s cubic-bezier(.4,0,.2,1); }
-    .rung-pct { font-size: 12px; color: var(--text-sec); width: 32px; text-align: right; flex-shrink: 0; }
-    .rung-odds-val { font-size: 12px; font-weight: 600; width: 44px; text-align: right; flex-shrink: 0; }
-    .rung-odds-pos { color: var(--blue); }
-    .rung-odds-neg { color: var(--text-sec); }
-    .rung-book { font-size: 10px; color: var(--text-muted); width: 52px; flex-shrink: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    .rung-fair { font-size: 11px; font-weight: 600; width: 44px; text-align: right; flex-shrink: 0; }
-    .rung-value { font-size: 9px; font-weight: 700; background: #052e16; color: var(--green); padding: 2px 5px; border-radius: 4px; flex-shrink: 0; }
-
-    /* ── LAST 5 STARTS ── */
-    .last5-section { margin-top: 10px; }
-    .last5-title { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 6px; }
-    .last5-row { display: flex; gap: 5px; flex-wrap: wrap; }
-    .last5-chip {
-      background: #161b27; border-radius: 6px; padding: 5px 9px;
-      font-size: 11px; text-align: center; min-width: 52px;
-    }
-    .last5-date { color: var(--text-muted); font-size: 9px; }
-    .last5-k { font-size: 14px; font-weight: 700; }
-    .last5-k-high { color: var(--green); }
-    .last5-k-mid { color: var(--amber); }
-    .last5-k-low { color: #f87171; }
-    .last5-pitches { font-size: 9px; color: var(--text-muted); }
+    .kdist-label { font-size: 9px; color: var(--text-muted); }
 
     /* ── DETAILS TOGGLE ── */
     .details-toggle { text-align: right; margin-top: 4px; }
@@ -260,29 +145,39 @@
     .detail-value { font-size: 14px; font-weight: 600; }
     .context-row { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
     .context-chip { background: #161b27; border-radius: 6px; padding: 5px 9px; font-size: 11px; color: var(--text-sec); }
-    .books-section { margin-top: 10px; }
-    .books-label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 6px; }
-    .books-list { display: flex; flex-wrap: wrap; gap: 5px; }
-    .book-chip { background: #161b27; border-radius: 6px; padding: 4px 9px; font-size: 12px; color: var(--text-sec); }
-    .book-chip.best { background: #0c1f3d; border: 1px solid #1d4ed8; color: #93c5fd; }
 
-    /* ── PARLAY ── */
-    .parlay-section { margin: 8px 12px 4px; background: #0c1628; border: 1px solid #1d4ed8; border-radius: 12px; padding: 14px; }
-    .parlay-title { font-size: 10px; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
-    .parlay-card { background: #0f1f3d; border-radius: 8px; padding: 10px 12px; margin-bottom: 7px; }
-    .parlay-card:last-child { margin-bottom: 0; }
-    .parlay-legs { font-size: 13px; font-weight: 600; line-height: 1.6; }
-    .parlay-books { font-size: 11px; color: var(--text-muted); margin-top: 3px; }
+    /* ── LAST 5 STARTS ── */
+    .last5-section { margin-top: 10px; }
+    .last5-title { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 6px; }
+    .last5-row { display: flex; gap: 5px; flex-wrap: wrap; }
+    .last5-chip {
+      background: #161b27; border-radius: 6px; padding: 5px 9px;
+      font-size: 11px; text-align: center; min-width: 52px;
+    }
+    .last5-date { color: var(--text-muted); font-size: 9px; }
+    .last5-k { font-size: 14px; font-weight: 700; }
+    .last5-k-high { color: var(--green); }
+    .last5-k-mid { color: var(--amber); }
+    .last5-k-low { color: #f87171; }
+    .last5-pitches { font-size: 9px; color: var(--text-muted); }
 
-    /* ── EMPTY / NO REPORT ── */
-    .empty-state { margin: 48px 20px; text-align: center; }
-    .empty-icon { font-size: 32px; margin-bottom: 12px; }
-    .empty-title { font-size: 16px; color: var(--text-sec); margin-bottom: 6px; font-weight: 600; }
-    .empty-sub { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+    /* ── SECTION LABEL ── */
+    .section-label {
+      display: flex; align-items: center; gap: 8px;
+      padding: 18px 16px 8px;
+    }
+    .section-label-text {
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 1.2px; text-transform: uppercase; white-space: nowrap;
+    }
+    .section-line { flex: 1; height: 1px; background: var(--border); }
+
+    .spacer { height: 8px; }
+
+    /* ── EMPTY ── */
     .no-report { margin: 48px 16px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 32px; text-align: center; }
     .no-report h2 { font-size: 18px; margin-bottom: 8px; }
     .no-report p { color: var(--text-muted); font-size: 14px; line-height: 1.6; }
-    .spacer { height: 8px; }
   </style>
 </head>
 <body>
@@ -298,33 +193,11 @@
   'TOR': '#134A8E', 'WSH': '#AB0003'
 } %}
 
-{% macro grade_class(edge, hr) %}
-  {%- set hr = hr | float -%}
-  {%- if edge >= 20 and hr >= 72 %}grade-aplus
-  {%- elif edge >= 13 and hr >= 65 %}grade-a
-  {%- elif edge >= 8 and hr >= 60 %}grade-aminus
-  {%- elif edge >= 5 and hr >= 55 %}grade-bplus
-  {%- elif edge >= 3 and hr >= 52 %}grade-b
-  {%- elif edge >= 1 and hr >= 48 %}grade-c
-  {%- elif edge > 0 %}grade-d
-  {%- else %}grade-f{%- endif %}
-{%- endmacro %}
-{% macro grade_label(edge, hr) %}
-  {%- set hr = hr | float -%}
-  {%- if edge >= 20 and hr >= 72 %}A+
-  {%- elif edge >= 13 and hr >= 65 %}A
-  {%- elif edge >= 8 and hr >= 60 %}A-
-  {%- elif edge >= 5 and hr >= 55 %}B+
-  {%- elif edge >= 3 and hr >= 52 %}B
-  {%- elif edge >= 1 and hr >= 48 %}C
-  {%- elif edge > 0 %}D
-  {%- else %}F{%- endif %}
-{%- endmacro %}
-
 {% macro render_card(play) %}
 {% set card_id = (play.pitcher_name ~ play.opp_team) | replace(' ', '-') | lower %}
 {% set img_url = "https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png/w_213,q_auto:best/v1/people/" ~ play.pitcher_id ~ "/headshot/67/current" %}
 {% set team_color = TEAM_COLORS.get(play.pitcher_team, '#1c2333') %}
+{% set kdist = play.k_distribution or {} %}
 
 <div class="card" style="--team-color:{{ team_color }}">
   <div class="card-header" onclick="toggleCard('{{ card_id }}')">
@@ -336,46 +209,17 @@
         <div class="pitcher-name">{{ play.pitcher_name }}</div>
         <div class="badges">
           {% if play.pitcher_hand %}<span class="hand-badge">{{ play.pitcher_hand }}HP</span>{% endif %}
-          {% if play.play and play.line and play.line > 0 %}
-            <span class="play-tag tag-{{ play.play | lower }}">{{ play.play }} {{ play.line }}</span>
-          {% else %}
-            <span class="play-tag tag-na">No Line</span>
-          {% endif %}
+          {% if play.lineup_confirmed %}<span class="lineup-badge">✓ Lineup</span>{% endif %}
         </div>
         <div class="matchup-sub">vs {{ play.opp_team }} · {{ play.venue }}</div>
       </div>
-      <div class="value-block">
-        <span class="grade-badge {{ grade_class(play.edge, play.hit_rate or 0) }}">{{ grade_label(play.edge, play.hit_rate or 0) }}</span>
-        {% if play.play and play.line and play.line > 0 %}
-          {% if play.best_line %}
-          <div class="value-row" style="margin-top:5px">
-            <span class="value-label">Book</span>
-            <span class="value-odds {% if play.best_line.odds > 0 %}value-odds-pos{% else %}value-odds-neg{% endif %}">
-              {% if play.best_line.odds > 0 %}+{{ play.best_line.odds }}{% else %}{{ play.best_line.odds }}{% endif %}
-            </span>
-          </div>
-          {% endif %}
-          {% if play.fair_value %}
-          <div class="value-row">
-            <span class="value-label">Fair</span>
-            <span class="value-fair">
-              {% if play.fair_value > 0 %}+{{ play.fair_value }}{% else %}{{ play.fair_value }}{% endif %}
-            </span>
-          </div>
-          {% endif %}
-          <div class="value-row">
-            <span class="value-label">Hit</span>
-            <span class="value-hr">{{ play.hit_rate | int }}%</span>
-          </div>
-        {% endif %}
-        <div class="grade-proj"><strong>{{ play.projected_ks }}K</strong> proj</div>
+      <div class="proj-block">
+        <div class="proj-ks">{{ play.projected_ks }}</div>
+        <div class="proj-label">Proj Ks</div>
       </div>
     </div>
 
     <div class="stats-row">
-      {% if play.hit_rate and play.line and play.line > 0 %}
-        <div class="stat-chip">Hit Rate <strong>{{ play.hit_rate | int }}%</strong></div>
-      {% endif %}
       {% if play.swstr_pct %}
         <div class="stat-chip">SwStr <strong>{{ "%.1f"|format(play.swstr_pct * 100) }}%</strong></div>
       {% endif %}
@@ -385,39 +229,29 @@
       {% if play.k_pct %}
         <div class="stat-chip">K% <strong>{{ "%.1f"|format(play.k_pct * 100) }}%</strong></div>
       {% endif %}
+      {% if play.opp_k_pct %}
+        <div class="stat-chip">Opp K% <strong>{{ "%.1f"|format(play.opp_k_pct * 100) }}%</strong></div>
+      {% endif %}
     </div>
 
-    {# LADDER #}
-    {% if play.ladder %}
-    {% set ns = namespace(max_edge=0) %}
-    {% for rung in play.ladder %}{% if rung.over_edge > ns.max_edge %}{% set ns.max_edge = rung.over_edge %}{% endif %}{% endfor %}
-    <div class="ladder">
-      <div class="ladder-title">K Ladder · Book / Fair Value</div>
-      {% for rung in play.ladder %}
-      <div class="rung">
-        <span class="rung-dir rung-dir-over">O</span>
-        <span class="rung-line-val">{{ rung.line }}</span>
-        <div class="rung-bar-wrap">
-          <div class="rung-bar-fill"
-               data-width="{{ rung.over_hit_rate | int }}"
-               style="background:{% if rung.over_hit_rate >= 70 %}#10b981{% elif rung.over_hit_rate >= 50 %}#f59e0b{% else %}#ef4444{% endif %}"></div>
+    {# K Distribution bar chart #}
+    {% if kdist %}
+    {% set show_ks = [3, 4, 5, 6, 7, 8, 9, '10+'] %}
+    {% set max_pct = namespace(val=0.01) %}
+    {% for k in show_ks %}{% set v = kdist.get(k|string, 0) %}{% if v > max_pct.val %}{% set max_pct.val = v %}{% endif %}{% endfor %}
+    <div class="kdist">
+      <div class="kdist-row">
+        {% for k in show_ks %}
+        {% set pct = kdist.get(k|string, 0) %}
+        {% set bar_h = ((pct / max_pct.val) * 32) | int %}
+        <div class="kdist-bar-wrap">
+          <div class="kdist-bar"
+               style="height:{{ bar_h }}px; background:{% if pct >= 0.18 %}{{ team_color }}{% elif pct >= 0.12 %}#3b82f6{% else %}#1c2333{% endif %}">
+          </div>
+          <div class="kdist-label">{{ k }}</div>
         </div>
-        <span class="rung-pct">{{ rung.over_hit_rate | int }}%</span>
-        {% if rung.best_over and not rung.model_only %}
-          <span class="rung-odds-val {% if rung.best_over.odds > 0 %}rung-odds-pos{% else %}rung-odds-neg{% endif %}">
-            {% if rung.best_over.odds > 0 %}+{{ rung.best_over.odds }}{% else %}{{ rung.best_over.odds }}{% endif %}
-          </span>
-          <span class="rung-book">{{ rung.best_over.book }}</span>
-        {% else %}
-          <span class="rung-odds-val" style="color:var(--text-muted)">—</span>
-          <span class="rung-book" style="color:var(--text-muted)">no line</span>
-        {% endif %}
-        <span class="rung-fair {% if (rung.fair_value_over | default(0)) > 0 %}rung-odds-pos{% else %}rung-odds-neg{% endif %}">
-          {% if (rung.fair_value_over | default(0)) > 0 %}+{{ rung.fair_value_over | default(0) }}{% else %}{{ rung.fair_value_over | default(0) }}{% endif %}
-        </span>
-        {% if rung.over_edge == ns.max_edge and rung.over_edge > 0 %}<span class="rung-value">value</span>{% endif %}
+        {% endfor %}
       </div>
-      {% endfor %}
     </div>
     {% endif %}
 
@@ -450,8 +284,10 @@
         <div class="detail-value">{{ play.rolling_k_5 }}</div>
       </div>
       <div class="detail-item">
-        <div class="detail-label">Edge Score</div>
-        <div class="detail-value">+{{ "%.1f"|format(play.edge) }}</div>
+        <div class="detail-label">Lineup Source</div>
+        <div class="detail-value" style="font-size:12px; color:{% if play.lineup_confirmed %}var(--green){% else %}var(--text-muted){% endif %}">
+          {% if play.lineup_confirmed %}Confirmed{% else %}Team Avg{% endif %}
+        </div>
       </div>
     </div>
 
@@ -468,20 +304,6 @@
         <div class="context-chip">🌡 {{ play.weather.temp_f }}°F</div>
         <div class="context-chip">💨 {{ play.weather.wind_mph }} mph</div>
       {% endif %}
-    </div>
-    {% endif %}
-
-    {% set odds_list = play.over_odds if play.play == 'OVER' else play.under_odds %}
-    {% if odds_list %}
-    <div class="books-section">
-      <div class="books-label">{{ play.play }} Lines</div>
-      <div class="books-list">
-        {% for book in odds_list[:5] %}
-        <div class="book-chip {% if loop.first %}best{% endif %}">
-          {{ book.book }} <strong>{% if book.odds > 0 %}+{{ book.odds }}{% else %}{{ book.odds }}{% endif %}</strong>
-        </div>
-        {% endfor %}
-      </div>
     </div>
     {% endif %}
 
@@ -504,10 +326,7 @@
 {% endmacro %}
 
 {# ── PAGE ── #}
-{% set total = data.strong|length + data.moderate|length + data.lean|length + data.no_value|length %}
-{% set power_count = data.strong|length %}
-{% set other_plays = data.moderate + data.lean + data.no_value %}
-{% set other_count = other_plays|length %}
+{% set pitchers = data.all_pitchers or [] %}
 
 <div class="header">
   <div class="header-top">
@@ -516,110 +335,52 @@
       <div class="date-text">{{ data.date }}</div>
       <div class="updated-row">
         <div class="pulse-dot"></div>
-        {% if data.generated_at %}<span class="updated-text">{{ data.generated_at }}</span>{% endif %}
+        {% if data.generated_at %}<span class="updated-text">Updated {{ data.generated_at }}</span>{% endif %}
       </div>
+      <div class="count-badge">{{ pitchers | length }} pitchers</div>
     </div>
   </div>
 </div>
 
-{% if total == 0 %}
+{% if pitchers | length == 0 %}
 <div class="no-report">
-  <h2>No report yet</h2>
-  <p>Today's picks appear here after the morning run.</p>
+  <h2>No projections yet</h2>
+  <p>Today's K projections appear here after the 11 AM run.</p>
 </div>
 
 {% else %}
 
-{# ── POWER PLAYS TAB ── #}
-<div id="tab-power" class="tab-content active">
-  <div class="spacer"></div>
-  {% if data.parlays %}
-  <div class="parlay-section">
-    <div class="parlay-title">⚡ Parlay Suggestions</div>
-    {% for parlay in data.parlays %}
-    <div class="parlay-card">
-      <div class="parlay-legs">{{ parlay.legs }}</div>
-      {% if parlay.books %}<div class="parlay-books">Best books: {{ parlay.books }}</div>{% endif %}
-    </div>
-    {% endfor %}
-  </div>
-  {% endif %}
-  {% if data.strong %}
-    <div class="section-label">
-      <span class="section-label-text" style="color:#10b981">Power Plays</span>
-      <div class="section-line"></div>
-    </div>
-    {% for play in data.strong %}{{ render_card(play) }}{% endfor %}
-  {% else %}
-    <div class="empty-state">
-      <div class="empty-icon">⚡</div>
-      <div class="empty-title">No power plays today</div>
-      <div class="empty-sub">Check Other Projections for smaller edges.</div>
-    </div>
-  {% endif %}
-</div>
+<div class="spacer"></div>
 
-{# ── OTHER PROJECTIONS TAB ── #}
-<div id="tab-other" class="tab-content">
-  <div class="spacer"></div>
-  {% if other_plays %}
-    <div class="section-label">
-      <span class="section-label-text" style="color:var(--text-muted)">Other Projections · By Grade</span>
-      <div class="section-line"></div>
-    </div>
-    {% for play in other_plays | sort(attribute='edge', reverse=True) %}{{ render_card(play) }}{% endfor %}
-  {% else %}
-    <div class="empty-state">
-      <div class="empty-icon">📊</div>
-      <div class="empty-title">No other projections</div>
-      <div class="empty-sub">All plays are in Power Plays today.</div>
-    </div>
-  {% endif %}
+{# Split into high (≥6K) and standard (<6K) #}
+{% set high = pitchers | selectattr('projected_ks', '>=', 6.0) | list %}
+{% set standard = pitchers | rejectattr('projected_ks', '>=', 6.0) | list %}
+
+{% if high %}
+<div class="section-label">
+  <span class="section-label-text" style="color:var(--green)">High K Upside · 6+</span>
+  <div class="section-line"></div>
 </div>
+{% for play in high %}{{ render_card(play) }}{% endfor %}
+{% endif %}
+
+{% if standard %}
+<div class="section-label">
+  <span class="section-label-text" style="color:var(--text-muted)">All Projections</span>
+  <div class="section-line"></div>
+</div>
+{% for play in standard %}{{ render_card(play) }}{% endfor %}
+{% endif %}
 
 {% endif %}
 
-{# ── BOTTOM NAV ── #}
-<div class="bottom-nav">
-  <button class="nav-btn active" id="nav-power" onclick="switchTab('power', this)">
-    <span class="nav-icon">⚡</span>
-    <span>Power Plays</span>
-    <span class="nav-count">{{ power_count }}</span>
-  </button>
-  <button class="nav-btn" id="nav-other" onclick="switchTab('other', this)">
-    <span class="nav-icon">📊</span>
-    <span>Other</span>
-    <span class="nav-count">{{ other_count }}</span>
-  </button>
-</div>
-
 <script>
-  function switchTab(name, btn) {
-    ['power','other'].forEach(t => {
-      document.getElementById('tab-' + t).classList.remove('active');
-      document.getElementById('nav-' + t).classList.remove('active');
-    });
-    document.getElementById('tab-' + name).classList.add('active');
-    btn.classList.add('active');
-    animateBars();
-  }
-
   function toggleCard(id) {
     const d = document.getElementById('details-' + id);
     const c = document.getElementById('chevron-' + id);
     if (d) d.classList.toggle('open');
     if (c) c.classList.toggle('open');
   }
-
-  function animateBars() {
-    requestAnimationFrame(() => {
-      document.querySelectorAll('.tab-content.active .rung-bar-fill').forEach(bar => {
-        bar.style.width = (bar.getAttribute('data-width') || 0) + '%';
-      });
-    });
-  }
-
-  window.addEventListener('load', () => setTimeout(animateBars, 120));
 </script>
 </body>
 </html>

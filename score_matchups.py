@@ -21,37 +21,68 @@ _LEAGUE_WHIFF_BY_PITCH = {
 }
 _DEFAULT_PITCH_WHIFF = 0.27
 
+# League average chase rates by pitch type (out-of-zone swing%, Statcast 2023-2025)
+_LEAGUE_CHASE_BY_PITCH = {
+    "FF": 0.27, "SI": 0.29, "FC": 0.29,
+    "SL": 0.38, "ST": 0.40, "CU": 0.36, "KC": 0.34,
+    "CH": 0.34, "FS": 0.38, "FO": 0.34, "CS": 0.32,
+}
+_DEFAULT_PITCH_CHASE = 0.32
+
 
 def calc_pitch_mix_adjustment(pitcher_stats: dict, lineup_stats: dict) -> float:
     """
     Multiplier based on how well pitcher's arsenal matches lineup vulnerabilities.
-    Cross-references pitcher pitch usage + whiff rate vs team whiff rate by pitch type.
-    >1.0 = lineup is weak against this pitcher's stuff. <1.0 = lineup handles it well.
-    Clamped to ±8% impact.
+    Combines two signals per pitch type, weighted by pitcher usage:
+      - Whiff rate: lineup whiff% vs league avg (contact quality once they swing)
+      - Chase rate: lineup chase% vs league avg (willingness to expand zone)
+    Whiff contributes 60%, chase 40%. Clamped to ±8% impact.
+    >1.0 = lineup is vulnerable to this pitcher's stuff. <1.0 = lineup handles it well.
     """
     pitch_usage = pitcher_stats.get("pitch_usage", {})
     team_whiff_by_pitch = lineup_stats.get("whiff_by_pitch_type", {})
+    team_chase_by_pitch = lineup_stats.get("chase_by_pitch_type", {})
 
-    if not pitch_usage or not team_whiff_by_pitch:
+    if not pitch_usage:
+        return 1.0
+
+    # Need at least one signal to proceed
+    has_whiff = bool(team_whiff_by_pitch)
+    has_chase = bool(team_chase_by_pitch)
+    if not has_whiff and not has_chase:
         return 1.0
 
     weighted_diff = 0.0
     total_weight = 0.0
 
     for pitch_type, usage in pitch_usage.items():
-        if usage < 0.05:  # ignore pitches thrown < 5% of the time
+        if usage < 0.05:
             continue
-        league_avg = _LEAGUE_WHIFF_BY_PITCH.get(pitch_type, _DEFAULT_PITCH_WHIFF)
-        team_whiff = team_whiff_by_pitch.get(pitch_type, league_avg)
-        weighted_diff += usage * (team_whiff - league_avg)
-        total_weight += usage
+
+        signal = 0.0
+        signal_count = 0
+
+        if has_whiff:
+            lg_whiff = _LEAGUE_WHIFF_BY_PITCH.get(pitch_type, _DEFAULT_PITCH_WHIFF)
+            team_whiff = team_whiff_by_pitch.get(pitch_type, lg_whiff)
+            signal += (team_whiff - lg_whiff) * 0.60
+            signal_count += 1
+
+        if has_chase:
+            lg_chase = _LEAGUE_CHASE_BY_PITCH.get(pitch_type, _DEFAULT_PITCH_CHASE)
+            team_chase = team_chase_by_pitch.get(pitch_type, lg_chase)
+            signal += (team_chase - lg_chase) * 0.40
+            signal_count += 1
+
+        if signal_count > 0:
+            weighted_diff += usage * signal
+            total_weight += usage
 
     if total_weight == 0:
         return 1.0
 
-    # Normalize and scale conservatively
     raw_adj = weighted_diff / total_weight
-    multiplier = 1.0 + (raw_adj / LEAGUE_AVG_K_PCT) * 0.4  # dampened 40%
+    multiplier = 1.0 + (raw_adj / LEAGUE_AVG_K_PCT) * 0.4
     return max(0.92, min(1.08, multiplier))
 
 
@@ -255,115 +286,21 @@ def calc_k_distribution(projected_ks: float, std_dev: float = 2.5) -> dict[int, 
     return dist
 
 
-def calc_hit_rate(projected_ks: float, line: float) -> float:
-    """
-    Estimate probability of hitting the over based on projected Ks vs line.
-    Uses empirical std dev and bias correction derived from logged results.
-    Update HIT_RATE_STD_DEV and HIT_RATE_BIAS in config.py as more games are logged.
-    """
-    if line <= 0:
-        return 50.0
-
-    import math
-    from config import HIT_RATE_STD_DEV, HIT_RATE_BIAS
-
-    # Apply bias correction: model over-projects by HIT_RATE_BIAS on average
-    corrected_proj = projected_ks - HIT_RATE_BIAS
-    z = (corrected_proj - line) / HIT_RATE_STD_DEV
-    hit_rate = 0.5 * (1 + math.erf(z / math.sqrt(2)))
-    return round(hit_rate * 100, 1)
-
-
-def calc_fair_value_odds(hit_rate: float) -> int:
-    """
-    Convert a hit rate % into American odds (fair value, no vig).
-    70% hit rate → -233 (what the line should be at fair value).
-    """
-    p = max(0.01, min(0.99, hit_rate / 100))
-    if p >= 0.5:
-        return round(-(p / (1 - p)) * 100)
-    else:
-        return round(((1 - p) / p) * 100)
-
-
-def calc_edge(hit_rate: float, odds: int) -> float:
-    """
-    Calculate edge: model implied probability vs book implied probability.
-    Returns edge in percentage points.
-    """
-    # Convert American odds to implied probability
-    if odds > 0:
-        book_prob = 100 / (odds + 100)
-    elif odds < 0:
-        book_prob = abs(odds) / (abs(odds) + 100)
-    else:
-        book_prob = 0.50
-
-    model_prob = hit_rate / 100
-    edge = (model_prob - book_prob) * 100  # in percentage points
-    return round(edge, 1)
-
-
-def score_matchup(
+def project_matchup(
     pitcher_stats: dict,
     lineup_stats: dict,
-    odds_data: dict,
     park_factor: float = PARK_FACTOR_DEFAULT,
     weather: dict | None = None,
     umpire: dict | None = None,
 ) -> dict:
     """
-    Score a single matchup. Returns full projection with edge analysis.
+    Project strikeouts for a single matchup. Returns projection with K distribution.
     """
     projection = project_strikeouts(
         pitcher_stats, lineup_stats, park_factor, weather, umpire
     )
-
-    line = odds_data.get("line", 0)
-    best_over = odds_data.get("best_over")
-    best_under = odds_data.get("best_under")
-
-    # Hit rates for over and under
-    over_hit_rate = calc_hit_rate(projection["projected_ks"], line)
-    under_hit_rate = 100 - over_hit_rate
-
-    # Edge calculation
-    over_edge = 0.0
-    under_edge = 0.0
-    if best_over:
-        over_edge = calc_edge(over_hit_rate, best_over["odds"])
-    if best_under:
-        under_edge = calc_edge(under_hit_rate, best_under["odds"])
-
-    # Determine play direction based on projection vs line
-    if line <= 0 or projection["projected_ks"] >= line:
-        play = "OVER"
-        edge = over_edge
-        hit_rate = over_hit_rate
-        best_line = best_over
-    else:
-        play = "UNDER"
-        edge = under_edge
-        hit_rate = under_hit_rate
-        best_line = best_under
-
-    k_dist = calc_k_distribution(projection["projected_ks"])
-
-    return {
-        **projection,
-        "line": line,
-        "play": play,
-        "edge": edge,
-        "hit_rate": hit_rate,
-        "over_hit_rate": over_hit_rate,
-        "under_hit_rate": under_hit_rate,
-        "over_edge": over_edge,
-        "under_edge": under_edge,
-        "best_line": best_line,
-        "over_odds": odds_data.get("over_odds", []),
-        "under_odds": odds_data.get("under_odds", []),
-        "k_distribution": k_dist,
-    }
+    projection["k_distribution"] = calc_k_distribution(projection["projected_ks"])
+    return projection
 
 
 if __name__ == "__main__":

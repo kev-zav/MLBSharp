@@ -190,11 +190,38 @@ def _get_team_stats_cache() -> dict:
     return _cache[cache_key]
 
 
-def fetch_lineup_stats(team_abbr: str, pitcher_hand: str = "R") -> dict:
+def fetch_lineup_stats(
+    team_abbr: str,
+    pitcher_hand: str = "R",
+    batter_ids: list[int] | None = None,
+) -> dict:
     """
-    Main entry point. Returns team K vulnerability profile vs a given pitcher hand.
-    Falls back to league averages if data is unavailable.
+    Main entry point. Returns lineup K vulnerability profile vs a given pitcher hand.
+
+    If batter_ids are provided (confirmed lineup), computes per-batter stats and
+    aggregates them. Falls back to team aggregate if lineup not available or
+    insufficient individual data.
     """
+    # Try per-batter path when lineup is confirmed
+    if batter_ids:
+        from fetch_batter_stats import fetch_batter_lineup_stats
+        season_df = _get_season_statcast()
+        batter_result = fetch_batter_lineup_stats(batter_ids, pitcher_hand, season_df)
+        if batter_result:
+            k_pct = batter_result["team_k_pct"]
+            return {
+                **_DEFAULTS,
+                **batter_result,
+                "team_k_pct_vs_rhp": k_pct if pitcher_hand == "R" else _DEFAULTS["team_k_pct_vs_rhp"],
+                "team_k_pct_vs_lhp": k_pct if pitcher_hand == "L" else _DEFAULTS["team_k_pct_vs_lhp"],
+                "team_k_pct_last10": k_pct,
+                "avg_batter_k_pct": k_pct,
+                "batter_k_pcts": [],
+                "pitcher_hand": pitcher_hand,
+                "lineup_source": "individual_batters",
+            }
+
+    # Fall back to team aggregate
     team_stats = _get_team_stats_cache()
 
     result = team_stats.get((team_abbr, pitcher_hand))
@@ -205,7 +232,7 @@ def fetch_lineup_stats(team_abbr: str, pitcher_hand: str = "R") -> dict:
         result = team_stats.get((team_abbr, alt_hand))
 
     if result is None:
-        return {**_DEFAULTS, "pitcher_hand": pitcher_hand}
+        return {**_DEFAULTS, "pitcher_hand": pitcher_hand, "lineup_source": "defaults"}
 
     k_pct = result["team_k_pct"]
     return {
@@ -220,6 +247,7 @@ def fetch_lineup_stats(team_abbr: str, pitcher_hand: str = "R") -> dict:
         "whiff_by_pitch_type": result.get("whiff_by_pitch_type", {}),
         "bb_pct": result.get("bb_pct", 0.085),
         "chase_by_pitch_type": result.get("chase_by_pitch_type", {}),
+        "lineup_source": "team_aggregate",
     }
 
 

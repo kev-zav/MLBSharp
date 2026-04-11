@@ -23,12 +23,8 @@ def load_dashboard_data() -> dict:
         return {
             "date": date.today().strftime("%B %d, %Y"),
             "generated_at": "",
-            "strong": [],
-            "moderate": [],
-            "lean": [],
-            "no_value": [],
-            "parlays": [],
-            "total_plays": 0,
+            "all_pitchers": [],
+            "total_pitchers": 0,
         }
 
 

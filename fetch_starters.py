@@ -103,6 +103,32 @@ def parse_matchups(games: list[dict]) -> list[dict]:
     return matchups
 
 
+def fetch_lineup_for_game(game_id: int) -> dict | None:
+    """
+    Attempt to fetch the confirmed batting lineup for a game from the MLB boxscore API.
+    Returns {away_batters: [id,...], home_batters: [id,...]} or None if lineups not posted.
+    """
+    try:
+        resp = requests.get(
+            f"{MLB_API_BASE}/game/{game_id}/boxscore",
+            timeout=15,
+        )
+        resp.raise_for_status()
+        boxscore = resp.json()
+    except Exception:
+        return None
+
+    teams = boxscore.get("teams", {})
+    result = {}
+    for side in ["away", "home"]:
+        batters = teams.get(side, {}).get("batters", [])
+        if not batters:
+            return None  # lineup not posted yet
+        result[f"{side}_batters"] = [int(b) for b in batters]
+
+    return result if len(result) == 2 else None
+
+
 def fetch_starters(game_date: str | None = None) -> list[dict]:
     """Main entry point — returns parsed matchups for the day."""
     games = get_todays_games(game_date)
