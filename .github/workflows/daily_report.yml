@@ -23,15 +23,18 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Log yesterday's results
+        run: python log_results.py || true
+
       - name: Run MLBSharp
         env:
           OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
         run: python run.py
 
-      - name: Push dashboard data and projections cache
+      - name: Push dashboard data, projections cache, and results
         run: |
           git config user.name "MLBSharp Bot"
           git config user.email "mlbsharp@users.noreply.github.com"
-          git add dashboard_data.json projections_cache.json fg_cache.json
-          git diff --staged --quiet || git commit -m "Auto dashboard update $(date +'%Y-%m-%d %H:%M')"
+          git add dashboard_data.json projections_cache.json fg_cache.json results.csv
+          git diff --staged --quiet || git commit -m "Auto update $(date +'%Y-%m-%d %H:%M')"
           git push
