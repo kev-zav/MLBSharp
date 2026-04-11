@@ -4,34 +4,34 @@
 ============================================================
   Excluding 17 short start(s) (< 3 IP) from model training.
 
-  Loaded 353 rows from results.csv
-  Date range: 2026-03-26 to 2026-04-09 (15 game days)
+  Loaded 383 rows from results.csv
+  Date range: 2026-03-26 to 2026-04-10 (16 game days)
 
 ============================================================
   SECTION 1: CALIBRATION REPORT
 ============================================================
 
-  Total games logged: 353
-  Games with projections: 148
+  Total games logged: 383
+  Games with projections: 171
 
   Overall Accuracy:
-    Avg Projected Ks:  5.39
-    Avg Actual Ks:     5.24
-    Avg Miss:          +0.15 (over-projecting)
-    MAE:               1.94
-    RMSE:              2.32
+    Avg Projected Ks:  5.30
+    Avg Actual Ks:     5.16
+    Avg Miss:          +0.14 (over-projecting)
+    MAE:               1.98
+    RMSE:              2.36
 
   Tier                       Plays   Over%  AvgProj   AvgAct  AvgMiss
   ------------------------- ------ ------- -------- -------- --------
   STRONG (edge > 8)             47     47%      5.7      5.0     +0.8
   MODERATE (edge 4-8)            8     75%      5.5      6.2     -0.8
   LEAN (edge 1-4)                9     44%      5.5      5.7     -0.1
-  NO VALUE (edge < 1)           84     56%      5.2      5.3     -0.1
+  NO VALUE (edge < 1)          107     71%      5.1      5.1     -0.1
 
   Line Results:
-    Overs hit:  56/107 (52%)
-    Unders hit: 51/107 (48%)
-    Pushes:     0/107 (0%)
+    Overs hit:  79/130 (61%)
+    Unders hit: 51/130 (39%)
+    Pushes:     0/130 (0%)
 
 ============================================================
   SECTION 2: FACTOR CORRELATION
@@ -42,21 +42,23 @@
 
   Factor                        Corr    p-value      N Strength       
   ------------------------- -------- ---------- ------ ---------------
-  swstr_pct                  +0.2844     0.0005*   148 Weak           
-  k_pct                      +0.2587     0.0015*   148 Weak           
   projected_ks_manual        +0.2280     0.0138*   116 Weak           
-  rolling_k_avg_3            +0.1900     0.0207*   148 Weak           
-  rolling_k_avg_5            +0.1818     0.0270*   148 Weak           
-  csw_pct                    +0.1770     0.0314*   148 Weak           
-  pitch_count_last_outing    +0.1617     0.0496*   148 Weak           
-  weather_wind               +0.1154     0.1626    148 Negligible     
-  weather_temp               -0.1013     0.2204    148 Negligible     
-  opp_k_pct_vs_hand          +0.0757     0.3605    148 Negligible     
-  days_rest                  +0.0445     0.5912    148 Negligible     
-  o_swing_pct                +0.0082     0.9208    148 Negligible     
+  rolling_k_avg_5            +0.1956     0.0089*   178 Weak           
+  rolling_k_avg_3            +0.1833     0.0164*   171 Weak           
+  pitch_count_last_outing    +0.1600     0.0366*   171 Weak           
+  csw_pct                    +0.1351     0.0780    171 Negligible     
+  days_rest                  +0.1332     0.0824    171 Negligible     
+  weather_wind               +0.1329     0.0832    171 Negligible     
+  o_swing_pct                -0.1028     0.1811    171 Negligible     
+  park_factor                +0.0937     0.2227    171 Negligible     
+  k_pct                      -0.0888     0.2480    171 Negligible     
+  ump_adjustment             -0.0868     0.2592    171 Negligible     
+  opp_k_pct_vs_hand          -0.0818     0.2878    171 Negligible     
+  swstr_pct                  +0.0727     0.3445    171 Negligible     
+  weather_temp               -0.0258     0.7377    171 Negligible     
   pitch_mix_adj              -0.0004     0.9964    116 Negligible     
 
-  Strongest predictor: swstr_pct (r=+0.2844)
+  Strongest predictor: projected_ks_manual (r=+0.2280)
 
 ============================================================
   SECTION 3: BIAS DETECTION
@@ -66,22 +68,23 @@
 
   Category                               N   AvgMiss   vs Base Direction 
   ----------------------------------- ---- --------- --------- ----------
-  Park: Fenway Park                      6     +2.32     +2.17 over       ⚠
-  Park: Chase Field                     10     +1.71     +1.56 over       ⚠
-  Short Rest (<=4 days)                  5     +1.28     +1.17 over       ⚠
-  Park: loanDepot park                   7     +1.03     +0.88 over       ⚠
-  Park: Nationals Park                   8     -0.85     -1.00 under     
-  Park: Oracle Park                      8     -0.64     -0.79 under     
+  Park: Fenway Park                      6     +2.32     +2.18 over       ⚠
+  Park: Chase Field                     10     +1.71     +1.57 over       ⚠
+  Park: loanDepot park                   7     +1.03     +0.89 over       ⚠
+  Park: Nationals Park                   8     -0.85     -0.99 under     
+  Short Rest (<=4 days)                 11     +0.76     +0.67 over      
+  Park: Rogers Centre                    8     +0.64     +0.50 over      
+  Park: Oracle Park                      8     -0.64     -0.78 under     
   High Wind (>15 mph)                   21     +0.40     +0.30 over      
-  High K% Pitchers (above median)       72     +0.37     +0.48 over      
-  Neutral Zone Umps                    148     +0.15     +0.00 over      
-  Cold Weather (<60°F)                  68     -0.12     -0.50 under     
-  Low K% Pitchers (below median)        72     -0.11     -0.48 under     
+  High K% Pitchers (above median)       84     +0.34     +0.44 over      
+  Neutral Zone Umps                    148     +0.15     +0.01 over      
+  Low K% Pitchers (below median)        83     -0.10     -0.44 under     
+  Cold Weather (<60°F)                  71     -0.07     -0.35 under     
+  Expanded Zone Umps                    23     +0.05     -0.09 over      
 
-  ⚠ Found 4 significant biases (>1.0 K avg miss):
+  ⚠ Found 3 significant biases (>1.0 K avg miss):
     → Park: Fenway Park: over-projecting by 2.3 Ks on average
     → Park: Chase Field: over-projecting by 1.7 Ks on average
-    → Short Rest (<=4 days): over-projecting by 1.3 Ks on average
     → Park: loanDepot park: over-projecting by 1.0 Ks on average
 
 ============================================================
@@ -90,11 +93,7 @@
 
   Based on correlation data and projection accuracy:
 
-  1. Swstr % shows moderate correlation (r=+0.284). Current weight seems reasonable — monitor as more data comes in.
-
-  2. K % shows moderate correlation (r=+0.259). Current weight seems reasonable — monitor as more data comes in.
-
-  3. Projected Ks Manual shows moderate correlation (r=+0.228). Current weight seems reasonable — monitor as more data comes in.
+  1. Projected Ks Manual shows moderate correlation (r=+0.228). Current weight seems reasonable — monitor as more data comes in.
 
 
 ============================================================
