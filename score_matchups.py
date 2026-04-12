@@ -30,14 +30,98 @@ _LEAGUE_CHASE_BY_PITCH = {
 _DEFAULT_PITCH_CHASE = 0.32
 
 
+def calc_arsenal_matchup_k_rate(pitcher_stats: dict, lineup_stats: dict) -> float | None:
+    """
+    Compute expected K rate from pitcher's actual per-pitch whiff rates × lineup
+    vulnerability by pitch type. This is the primary projection signal when data
+    is available — it captures what the pitcher actually does to batters with each
+    pitch, adjusted for how that specific lineup handles those pitch types.
+
+    Process per pitch type:
+      1. Start from pitcher's own whiff rate on that pitch (their actual stuff)
+      2. Scale by lineup's relative difficulty vs league avg on that pitch type
+         (dampened with 0.7 exponent to limit small-sample extremes)
+      3. Add chase bonus: when a lineup chases a pitch above-average, there are
+         more swing opportunities on out-of-zone pitches → more miss chances
+      4. Weight by pitcher's usage to get arsenal-level weighted whiff
+      5. Convert to K% using the pitcher's own K%/whiff conversion factor
+         (accounts for their called-strike profile — high CSW pitchers convert more)
+
+    Returns None if <2 pitch types have sufficient data (fall back to xk_rate alone).
+    """
+    pitch_usage = pitcher_stats.get("pitch_usage", {})
+    pitcher_whiff_by_pitch = pitcher_stats.get("whiff_by_pitch", {})
+
+    if not pitch_usage or not pitcher_whiff_by_pitch:
+        return None
+
+    team_whiff_by_pitch = lineup_stats.get("whiff_by_pitch_type", {})
+    team_chase_by_pitch = lineup_stats.get("chase_by_pitch_type", {})
+
+    # Pitcher's overall arsenal-weighted whiff rate (to derive their K/whiff conversion)
+    pitcher_arsenal_whiff = 0.0
+    pitcher_whiff_weight = 0.0
+    for pt, usage in pitch_usage.items():
+        if usage >= 0.05 and pt in pitcher_whiff_by_pitch:
+            pitcher_arsenal_whiff += usage * pitcher_whiff_by_pitch[pt]
+            pitcher_whiff_weight += usage
+
+    if pitcher_whiff_weight < 0.25:
+        return None  # not enough pitch-type coverage
+
+    pitcher_arsenal_whiff /= pitcher_whiff_weight
+
+    # K%/whiff conversion: how efficiently the pitcher's whiffs become Ks.
+    # A pitcher with high called-strike rate converts at >1.0; purely whiff-based at ~0.85.
+    # Use regressed k_pct divided by their arsenal whiff — clamp to plausible range.
+    k_pct = pitcher_stats.get("k_pct", 0.0)
+    if k_pct > 0 and pitcher_arsenal_whiff > 0:
+        conversion = max(0.70, min(1.30, k_pct / pitcher_arsenal_whiff))
+    else:
+        conversion = 0.95  # league avg fallback
+
+    # Build expected whiff rate per pitch type against this specific lineup
+    arsenal_weighted_whiff = 0.0
+    total_weight = 0.0
+    pitch_types_used = 0
+
+    for pt, usage in pitch_usage.items():
+        if usage < 0.05 or pt not in pitcher_whiff_by_pitch:
+            continue
+
+        pitcher_whiff = pitcher_whiff_by_pitch[pt]
+        lg_whiff = _LEAGUE_WHIFF_BY_PITCH.get(pt, _DEFAULT_PITCH_WHIFF)
+        team_whiff = team_whiff_by_pitch.get(pt, lg_whiff)
+
+        # Scale pitcher's whiff by how this lineup performs vs league avg on this pitch.
+        # 0.7 exponent dampens extremes from small samples.
+        lineup_whiff_ratio = (team_whiff / lg_whiff) ** 0.7
+        adj_whiff = pitcher_whiff * lineup_whiff_ratio
+
+        # Chase bonus: above-avg chase on this pitch = more out-of-zone swings = more miss chances
+        lg_chase = _LEAGUE_CHASE_BY_PITCH.get(pt, _DEFAULT_PITCH_CHASE)
+        team_chase = team_chase_by_pitch.get(pt, lg_chase)
+        chase_bonus = max(-0.03, min(0.05, (team_chase - lg_chase) * 0.35))
+        adj_whiff = adj_whiff + chase_bonus
+
+        arsenal_weighted_whiff += usage * adj_whiff
+        total_weight += usage
+        pitch_types_used += 1
+
+    if pitch_types_used < 2 or total_weight < 0.25:
+        return None
+
+    arsenal_whiff_rate = arsenal_weighted_whiff / total_weight
+    arsenal_k_rate = arsenal_whiff_rate * conversion
+
+    return max(0.05, min(0.45, arsenal_k_rate))
+
+
 def calc_pitch_mix_adjustment(pitcher_stats: dict, lineup_stats: dict) -> float:
     """
-    Multiplier based on how well pitcher's arsenal matches lineup vulnerabilities.
-    Combines two signals per pitch type, weighted by pitcher usage:
-      - Whiff rate: lineup whiff% vs league avg (contact quality once they swing)
-      - Chase rate: lineup chase% vs league avg (willingness to expand zone)
-    Whiff contributes 60%, chase 40%. Clamped to ±8% impact.
-    >1.0 = lineup is vulnerable to this pitcher's stuff. <1.0 = lineup handles it well.
+    Fallback multiplier used when per-pitch arsenal data is insufficient for
+    calc_arsenal_matchup_k_rate. Measures lineup vulnerability vs league avg
+    on the pitcher's pitch mix. Clamped to ±12%.
     """
     pitch_usage = pitcher_stats.get("pitch_usage", {})
     team_whiff_by_pitch = lineup_stats.get("whiff_by_pitch_type", {})
@@ -46,7 +130,6 @@ def calc_pitch_mix_adjustment(pitcher_stats: dict, lineup_stats: dict) -> float:
     if not pitch_usage:
         return 1.0
 
-    # Need at least one signal to proceed
     has_whiff = bool(team_whiff_by_pitch)
     has_chase = bool(team_chase_by_pitch)
     if not has_whiff and not has_chase:
@@ -82,8 +165,8 @@ def calc_pitch_mix_adjustment(pitcher_stats: dict, lineup_stats: dict) -> float:
         return 1.0
 
     raw_adj = weighted_diff / total_weight
-    multiplier = 1.0 + (raw_adj / LEAGUE_AVG_K_PCT) * 0.4
-    return max(0.92, min(1.08, multiplier))
+    multiplier = 1.0 + (raw_adj / LEAGUE_AVG_K_PCT) * 0.5
+    return max(0.88, min(1.12, multiplier))
 
 
 def estimate_batters_faced(pitcher_stats: dict) -> float:
@@ -219,13 +302,45 @@ def project_strikeouts(
     # Core projection
     xk_rate = calc_pitcher_xk_rate(pitcher_stats)
     bf = estimate_batters_faced(pitcher_stats)
-    lineup_adj = calc_lineup_adjustment(lineup_stats)
     park_adj = park_factor / 100.0  # FanGraphs uses 100 = neutral
     weather_adj = weather.get("adjustment", 1.0)
     ump_adj = umpire.get("adjustment", 1.0)
 
-    pitch_mix_adj = calc_pitch_mix_adjustment(pitcher_stats, lineup_stats)
-    raw_ks = xk_rate * bf
+    # Arsenal matchup: pitcher's actual per-pitch whiff rates × lineup vulnerability.
+    # When available this is the primary K rate signal — it captures the specific
+    # pitch-type matchup rather than relying on a regression-heavy historical rate.
+    arsenal_k_rate = calc_arsenal_matchup_k_rate(pitcher_stats, lineup_stats)
+
+    num_starts = pitcher_stats.get("num_starts", 0)
+    lineup_source = lineup_stats.get("lineup_source", "team_aggregate")
+
+    if arsenal_k_rate is not None:
+        # Arsenal weight scales with pitcher data confidence (starts).
+        # With <5 starts, per-pitch whiff rates are noisy — limit their influence.
+        # At 5 starts: ~45% max weight. At 10+ starts: full weight.
+        # Confirmed per-batter lineup unlocks higher ceiling.
+        max_weight = 0.65 if lineup_source == "individual_batters" else 0.50
+        confidence = min(1.0, num_starts / 10)  # 0 at 0 starts, 1.0 at 10+ starts
+        arsenal_weight = confidence * max_weight
+        arsenal_weight = max(0.0, arsenal_weight)  # no floor — noisy data should not force-blend
+
+        if arsenal_weight > 0:
+            final_k_rate = arsenal_k_rate * arsenal_weight + xk_rate * (1 - arsenal_weight)
+            pitch_mix_adj = 1.0  # baked into arsenal_k_rate
+            lineup_adj = 1.0     # baked into arsenal_k_rate
+        else:
+            # Not enough starts — fall through to historical path
+            arsenal_k_rate = None
+            final_k_rate = xk_rate
+            lineup_adj = calc_lineup_adjustment(lineup_stats)
+            pitch_mix_adj = calc_pitch_mix_adjustment(pitcher_stats, lineup_stats)
+    else:
+        # No pitch-type data available — historical k_rate + lineup/pitch-mix adjustments
+        final_k_rate = xk_rate
+        lineup_adj = calc_lineup_adjustment(lineup_stats)
+        pitch_mix_adj = calc_pitch_mix_adjustment(pitcher_stats, lineup_stats)
+
+    raw_ks = final_k_rate * bf
     adjusted_ks = raw_ks * lineup_adj * park_adj * weather_adj * ump_adj * pitch_mix_adj
 
     # Recent form: blend with rolling averages, scaled by sample size.
@@ -248,8 +363,10 @@ def project_strikeouts(
 
     return {
         "projected_ks": round(final_ks, 1),
-        "pitch_mix_adj": round(pitch_mix_adj, 4),
+        "arsenal_k_rate": round(arsenal_k_rate, 4) if arsenal_k_rate is not None else None,
         "xk_rate": round(xk_rate, 4),
+        "final_k_rate": round(final_k_rate, 4),
+        "pitch_mix_adj": round(pitch_mix_adj, 4),
         "batters_faced": bf,
         "lineup_adj": round(lineup_adj, 3),
         "park_adj": round(park_adj, 3),

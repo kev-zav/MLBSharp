@@ -297,6 +297,8 @@ def get_prior_season_stats(pitcher_id: int, pitcher_name: str = "") -> dict:
         "csw_pct": LEAGUE_AVG_CSW,
         "ip_per_start": LEAGUE_AVG_IP_PER_START,
         "pitches_per_start": LEAGUE_AVG_PITCHES_PER_START,
+        "whiff_by_pitch": {},
+        "pitch_usage": {},
     }
 
     if cache_key in _cache:
@@ -314,6 +316,8 @@ def get_prior_season_stats(pitcher_id: int, pitcher_name: str = "") -> dict:
                 "csw_pct":            row.get("csw_pct")            or LEAGUE_AVG_CSW,
                 "ip_per_start":       row.get("ip_per_start")       or LEAGUE_AVG_IP_PER_START,
                 "pitches_per_start":  row.get("pitches_per_start")  or LEAGUE_AVG_PITCHES_PER_START,
+                "whiff_by_pitch":     row.get("whiff_by_pitch")     or {},
+                "pitch_usage":        row.get("pitch_usage")        or {},
             }
             if pitcher_name:
                 print(f"  [DB] {pitcher_name}: {prior_season} "
@@ -384,7 +388,7 @@ def _regress_k_pct(k_pct: float, ip: float, pitcher_name: str = "", anchor: floa
     Regress K% toward an anchor weighted by innings pitched.
     Anchor defaults to league average but uses prior season K% when available.
     """
-    regression_ip = 40.0
+    regression_ip = 20.0
     regressed = (k_pct * ip + anchor * regression_ip) / (ip + regression_ip)
     if ip < 20 and abs(k_pct - anchor) > 0.05:
         print(f"  [REGRESS] {pitcher_name}: K% {k_pct:.1%} on {ip:.0f} IP "
@@ -580,6 +584,46 @@ def fetch_pitcher_stats(pitcher_id: int, pitcher_name: str, team_abbr: str = "")
         swstr_blended = calc_swstr_pct(df)
         csw_blended = calc_csw_pct(df)
 
+    # Blend per-pitch whiff rates: prior season anchors, current season nudges
+    # Same weight schedule as SwStr%/CSW% above
+    prior_whiff = prior.get("whiff_by_pitch", {})
+    prior_usage = prior.get("pitch_usage", {})
+    current_whiff = calc_whiff_by_pitch(df)
+    current_usage = calc_pitch_usage(df)
+
+    if num_starts == 0:
+        whiff_blended = prior_whiff
+        usage_blended = prior_usage
+    elif num_starts < 6:
+        current_weight = num_starts / 6
+        prior_weight = 1 - current_weight
+        all_pts = set(prior_whiff) | set(current_whiff)
+        whiff_blended = {}
+        for pt in all_pts:
+            p = prior_whiff.get(pt)
+            c = current_whiff.get(pt)
+            if p is not None and c is not None:
+                whiff_blended[pt] = round(p * prior_weight + c * current_weight, 4)
+            elif p is not None:
+                whiff_blended[pt] = round(p, 4)
+            elif c is not None:
+                whiff_blended[pt] = round(c, 4)
+        # Usage: blend if both exist, otherwise use whichever is available
+        all_usage_pts = set(prior_usage) | set(current_usage)
+        usage_blended = {}
+        for pt in all_usage_pts:
+            p = prior_usage.get(pt)
+            c = current_usage.get(pt)
+            if p is not None and c is not None:
+                usage_blended[pt] = round(p * prior_weight + c * current_weight, 4)
+            elif p is not None:
+                usage_blended[pt] = round(p, 4)
+            elif c is not None:
+                usage_blended[pt] = round(c, 4)
+    else:
+        whiff_blended = current_whiff
+        usage_blended = current_usage
+
     last_outing_pitches = game_logs[-1]["pitches"] if game_logs else 0
 
     stats = {
@@ -588,8 +632,8 @@ def fetch_pitcher_stats(pitcher_id: int, pitcher_name: str, team_abbr: str = "")
         "num_starts": num_starts,
         "swstr_pct": swstr_blended,
         "csw_pct": csw_blended,
-        "whiff_by_pitch": calc_whiff_by_pitch(df),
-        "pitch_usage": calc_pitch_usage(df),
+        "whiff_by_pitch": whiff_blended,
+        "pitch_usage": usage_blended,
         "velocity": calc_velocity_trend(df),
         "k_pct": fg["k_pct"],
         "k_per_9": fg["k_per_9"],

@@ -11,6 +11,11 @@ model.pkl
 report_*.txt
 odds_cache.json
 
+# Generated artifacts
+tune_report.txt
+pitcher_db_build.log
+pitchers.db
+
 # Dashboard data is tracked so Render can serve it
 # dashboard_data.json is intentionally NOT ignored
 
