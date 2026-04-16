@@ -4,20 +4,20 @@
 ============================================================
   Excluding 17 short start(s) (< 3 IP) from model training.
 
-  Loaded 493 rows from results.csv
-  Date range: 2026-03-26 to 2026-04-14 (20 game days)
+  Loaded 523 rows from results.csv
+  Date range: 2026-03-26 to 2026-04-15 (21 game days)
 
 ============================================================
   SECTION 1: CALIBRATION REPORT
 ============================================================
 
-  Total games logged: 493
-  Games with projections: 242
+  Total games logged: 523
+  Games with projections: 260
 
   Overall Accuracy:
-    Avg Projected Ks:  5.11
+    Avg Projected Ks:  5.06
     Avg Actual Ks:     4.98
-    Avg Miss:          +0.13 (over-projecting)
+    Avg Miss:          +0.08 (over-projecting)
     MAE:               1.92
     RMSE:              2.34
 
@@ -26,12 +26,12 @@
   STRONG (edge > 8)             47     47%      5.7      5.0     +0.8
   MODERATE (edge 4-8)            8     75%      5.5      6.2     -0.8
   LEAN (edge 1-4)                9     44%      5.5      5.7     -0.1
-  NO VALUE (edge < 1)          178     85%      4.9      4.9     +0.0
+  NO VALUE (edge < 1)          196     87%      4.9      4.9     -0.0
 
   Line Results:
-    Overs hit:  149/201 (74%)
-    Unders hit: 52/201 (26%)
-    Pushes:     0/201 (0%)
+    Overs hit:  167/219 (76%)
+    Unders hit: 52/219 (24%)
+    Pushes:     0/219 (0%)
 
 ============================================================
   SECTION 2: FACTOR CORRELATION
@@ -42,23 +42,23 @@
 
   Factor                        Corr    p-value      N Strength       
   ------------------------- -------- ---------- ------ ---------------
-  rolling_k_avg_5            +0.3098     0.0000*   288 Moderate       
+  rolling_k_avg_5            +0.3235     0.0000*   318 Moderate       
   projected_ks_manual        +0.2280     0.0138*   116 Weak           
-  days_rest                  +0.2082     0.0011*   242 Weak           
-  rolling_k_avg_3            +0.2021     0.0016*   242 Weak           
-  pitch_count_last_outing    +0.1818     0.0046*   242 Weak           
-  weather_wind               +0.1687     0.0086*   242 Weak           
-  o_swing_pct                -0.1570     0.0145*   242 Weak           
-  park_factor                +0.1491     0.0204*   242 Negligible     
-  k_pct                      -0.1450     0.0241*   242 Negligible     
-  opp_k_pct_vs_hand          -0.1415     0.0277*   242 Negligible     
-  ump_adjustment             -0.1263     0.0497*   242 Negligible     
-  csw_pct                    +0.0593     0.3585    242 Negligible     
-  swstr_pct                  -0.0521     0.4199    242 Negligible     
-  weather_temp               +0.0102     0.8744    242 Negligible     
+  rolling_k_avg_3            +0.2006     0.0011*   260 Weak           
+  days_rest                  +0.1896     0.0021*   260 Weak           
+  pitch_count_last_outing    +0.1637     0.0082*   260 Weak           
+  weather_wind               +0.1600     0.0098*   260 Weak           
+  o_swing_pct                -0.1374     0.0267*   260 Negligible     
+  ump_adjustment             -0.1333     0.0316*   260 Negligible     
+  park_factor                +0.1317     0.0337*   260 Negligible     
+  k_pct                      -0.1282     0.0389*   260 Negligible     
+  opp_k_pct_vs_hand          -0.1250     0.0440*   260 Negligible     
+  csw_pct                    +0.0638     0.3053    260 Negligible     
+  swstr_pct                  -0.0414     0.5064    260 Negligible     
+  weather_temp               -0.0069     0.9113    260 Negligible     
   pitch_mix_adj              -0.0004     0.9964    116 Negligible     
 
-  Strongest predictor: rolling_k_avg_5 (r=+0.3098)
+  Strongest predictor: rolling_k_avg_5 (r=+0.3235)
 
 ============================================================
   SECTION 3: BIAS DETECTION
@@ -68,37 +68,41 @@
 
   Category                               N   AvgMiss   vs Base Direction 
   ----------------------------------- ---- --------- --------- ----------
-  Park: Fenway Park                      6     +2.32     +2.18 over       ⚠
-  Park: Wrigley Field                    8     -1.88     -2.01 under      ⚠
-  Park: Chase Field                     10     +1.71     +1.58 over       ⚠
-  Park: T-Mobile Park                    5     +1.12     +0.99 over       ⚠
-  Park: loanDepot park                   7     +1.03     +0.90 over       ⚠
-  Park: Busch Stadium                   11     +1.01     +0.88 over       ⚠
-  Park: Great American Ball Park         6     +0.90     +0.77 over      
-  Park: Petco Park                       5     -0.88     -1.01 under     
-  Park: Nationals Park                   8     -0.85     -0.98 under     
-  Park: Truist Park                     11     +0.83     +0.69 over      
-  Park: Oriole Park at Camden Yards      8     +0.76     +0.63 over      
-  Park: American Family Field            9     +0.73     +0.60 over      
-  Park: Citizens Bank Park               8     -0.73     -0.86 under     
-  Park: Oracle Park                      8     -0.64     -0.77 under     
-  Short Rest (<=4 days)                 42     +0.57     +0.53 over      
-  Park: Tropicana Field                  6     -0.57     -0.70 under     
-  Park: Rogers Centre                   12     +0.55     +0.42 over      
-  High Wind (>15 mph)                   21     +0.40     +0.30 over      
-  High K% Pitchers (above median)      119     +0.23     +0.22 over      
-  Neutral Zone Umps                    148     +0.15     +0.02 over      
-  Expanded Zone Umps                    94     +0.10     -0.03 over      
-  Low K% Pitchers (below median)       119     +0.01     -0.22 over      
-  Cold Weather (<60°F)                  83     -0.01     -0.21 under     
+  Park: Fenway Park                      6     +2.32     +2.24 over       ⚠
+  Park: Wrigley Field                    8     -1.88     -1.95 under      ⚠
+  Park: Chase Field                     10     +1.71     +1.63 over       ⚠
+  Park: T-Mobile Park                    5     +1.12     +1.04 over       ⚠
+  Park: Petco Park                       7     -1.11     -1.19 under      ⚠
+  Park: loanDepot park                   7     +1.03     +0.95 over       ⚠
+  Park: UNIQLO Field at Dodger Stadium    7     -1.01     -1.09 under      ⚠
+  Park: Daikin Park                      5     -0.98     -1.06 under     
+  Park: Busch Stadium                   13     +0.92     +0.84 over      
+  Park: Great American Ball Park         6     +0.90     +0.82 over      
+  Park: Nationals Park                   8     -0.85     -0.93 under     
+  Park: Oriole Park at Camden Yards      8     +0.76     +0.69 over      
+  Park: American Family Field           10     +0.76     +0.68 over      
+  Park: Citizens Bank Park               8     -0.73     -0.80 under     
+  Park: Oracle Park                      8     -0.64     -0.71 under     
+  Park: Yankee Stadium                  14     -0.64     -0.71 under     
+  Park: Tropicana Field                  6     -0.57     -0.64 under     
+  Park: Rogers Centre                   12     +0.55     +0.47 over      
+  Park: Truist Park                     13     +0.51     +0.43 over      
+  High Wind (>15 mph)                   21     +0.40     +0.36 over      
+  Short Rest (<=4 days)                 52     +0.24     +0.21 over      
+  Neutral Zone Umps                    148     +0.15     +0.08 over      
+  Low K% Pitchers (below median)       128     +0.10     +0.06 over      
+  Cold Weather (<60°F)                  84     -0.07     -0.21 under     
+  High K% Pitchers (above median)      128     +0.03     -0.06 over      
+  Expanded Zone Umps                   112     -0.02     -0.10 under     
 
-  ⚠ Found 6 significant biases (>1.0 K avg miss):
+  ⚠ Found 7 significant biases (>1.0 K avg miss):
     → Park: Fenway Park: over-projecting by 2.3 Ks on average
     → Park: Wrigley Field: under-projecting by 1.9 Ks on average
     → Park: Chase Field: over-projecting by 1.7 Ks on average
     → Park: T-Mobile Park: over-projecting by 1.1 Ks on average
+    → Park: Petco Park: under-projecting by 1.1 Ks on average
     → Park: loanDepot park: over-projecting by 1.0 Ks on average
-    → Park: Busch Stadium: over-projecting by 1.0 Ks on average
+    → Park: UNIQLO Field at Dodger Stadium: under-projecting by 1.0 Ks on average
 
 ============================================================
   SECTION 4: WEIGHT SUGGESTIONS
@@ -106,13 +110,11 @@
 
   Based on correlation data and projection accuracy:
 
-  1. Rolling K Avg 5 shows moderate correlation (r=+0.244). Current weight seems reasonable — monitor as more data comes in.
+  1. Rolling K Avg 5 shows moderate correlation (r=+0.252). Current weight seems reasonable — monitor as more data comes in.
 
   2. Projected Ks Manual shows moderate correlation (r=+0.228). Current weight seems reasonable — monitor as more data comes in.
 
-  3. Days Rest shows moderate correlation (r=+0.208). Current weight seems reasonable — monitor as more data comes in.
-
-  4. Rolling K Avg 3 shows moderate correlation (r=+0.202). Current weight seems reasonable — monitor as more data comes in.
+  3. Rolling K Avg 3 shows moderate correlation (r=+0.201). Current weight seems reasonable — monitor as more data comes in.
 
 
 ============================================================
