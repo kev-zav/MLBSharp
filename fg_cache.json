@@ -741,13 +741,13 @@
     }
   },
   "Braxton Ashcraft_2026": {
-    "timestamp": "2026-04-11T16:26:15.133181",
+    "timestamp": "2026-04-16T22:53:27.081965",
     "data": {
-      "k_pct": 0.2414,
-      "k_per_9": 6.52,
-      "xk_pct": 0.2414,
-      "k_pct_raw": 0.2391,
-      "ip": 15.3,
+      "k_pct": 0.2741,
+      "k_per_9": 7.4,
+      "xk_pct": 0.2741,
+      "k_pct_raw": 0.303,
+      "ip": 22.0,
       "source": "savant"
     }
   },
@@ -961,13 +961,13 @@
     }
   },
   "Foster Griffin_2026": {
-    "timestamp": "2026-04-11T16:27:12.737821",
+    "timestamp": "2026-04-16T22:53:20.737572",
     "data": {
-      "k_pct": 0.2324,
-      "k_per_9": 6.27,
-      "xk_pct": 0.2324,
-      "k_pct_raw": 0.2558,
-      "ip": 14.3,
+      "k_pct": 0.2068,
+      "k_per_9": 5.58,
+      "xk_pct": 0.2068,
+      "k_pct_raw": 0.1905,
+      "ip": 21.0,
       "source": "savant"
     }
   },
@@ -3421,6 +3421,105 @@
       "csw_pct": 0.2556,
       "ip_per_start": 4.9,
       "pitches_per_start": 84.3
+    }
+  },
+  "prior_stats_694738_2025": {
+    "timestamp": "2026-04-16T22:53:34.071825",
+    "data": {
+      "k_pct": 0.2113,
+      "bb_pct": 0.0921,
+      "swstr_pct": 0.1096,
+      "csw_pct": 0.3011,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 84.2
+    }
+  },
+  "prior_stats_695505_2025": {
+    "timestamp": "2026-04-16T22:53:38.430936",
+    "data": {
+      "k_pct": 0.3545,
+      "bb_pct": 0.0847,
+      "swstr_pct": 0.1673,
+      "csw_pct": 0.2954,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 58.8
+    }
+  },
+  "prior_stats_663460_2025": {
+    "timestamp": "2026-04-16T22:53:44.699800",
+    "data": {
+      "k_pct": 0.2427,
+      "bb_pct": 0.0795,
+      "swstr_pct": 0.1417,
+      "csw_pct": 0.3091,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 90.0
+    }
+  },
+  "prior_stats_672456_2025": {
+    "timestamp": "2026-04-16T22:53:47.045440",
+    "data": {
+      "k_pct": 0.1846,
+      "bb_pct": 0.0795,
+      "swstr_pct": 0.0936,
+      "csw_pct": 0.2829,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 73.7
+    }
+  },
+  "prior_stats_608718_2025": {
+    "timestamp": "2026-04-16T22:53:53.581590",
+    "data": {
+      "k_pct": 0.1815,
+      "bb_pct": 0.0582,
+      "swstr_pct": 0.1025,
+      "csw_pct": 0.2656,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 23.8
+    }
+  },
+  "prior_stats_571578_2025": {
+    "timestamp": "2026-04-16T22:53:58.393277",
+    "data": {
+      "k_pct": 0.197,
+      "bb_pct": 0.0752,
+      "swstr_pct": 0.1239,
+      "csw_pct": 0.2842,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 83.5
+    }
+  },
+  "prior_stats_687075_2025": {
+    "timestamp": "2026-04-16T22:54:02.679687",
+    "data": {
+      "k_pct": 0.2024,
+      "bb_pct": 0.0833,
+      "swstr_pct": 0.0722,
+      "csw_pct": 0.2543,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 72.8
+    }
+  },
+  "prior_stats_571927_2025": {
+    "timestamp": "2026-04-16T22:54:08.428691",
+    "data": {
+      "k_pct": 0.1909,
+      "bb_pct": 0.0356,
+      "swstr_pct": 0.0905,
+      "csw_pct": 0.2862,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 21.9
+    }
+  },
+  "prior_stats_673929_2025": {
+    "timestamp": "2026-04-16T22:54:10.657231",
+    "data": {
+      "k_pct": 0.2974,
+      "bb_pct": 0.1078,
+      "swstr_pct": 0.1545,
+      "csw_pct": 0.2807,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 16.7
     }
   }
 }
