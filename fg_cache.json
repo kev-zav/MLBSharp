@@ -433,13 +433,13 @@
     }
   },
   "Chase Burns_2026": {
-    "timestamp": "2026-04-10T13:56:29.278072",
+    "timestamp": "2026-04-16T20:10:12.658927",
     "data": {
-      "k_pct": 0.3591,
-      "k_per_9": 9.7,
-      "xk_pct": 0.3591,
-      "k_pct_raw": 0.3721,
-      "ip": 14.3,
+      "k_pct": 0.3021,
+      "k_per_9": 8.16,
+      "xk_pct": 0.3021,
+      "k_pct_raw": 0.2571,
+      "ip": 23.3,
       "source": "savant"
     }
   },
@@ -686,13 +686,13 @@
     }
   },
   "Landen Roupp_2026": {
-    "timestamp": "2026-04-10T13:56:43.797580",
+    "timestamp": "2026-04-16T20:10:02.838123",
     "data": {
-      "k_pct": 0.24,
-      "k_per_9": 6.48,
-      "xk_pct": 0.24,
-      "k_pct_raw": 0.3182,
-      "ip": 14.7,
+      "k_pct": 0.2378,
+      "k_per_9": 6.42,
+      "xk_pct": 0.2378,
+      "k_pct_raw": 0.2609,
+      "ip": 23.0,
       "source": "savant"
     }
   },
@@ -3377,6 +3377,50 @@
       "k_pct_raw": 0.2679,
       "ip": 18.7,
       "source": "savant"
+    }
+  },
+  "prior_stats_669358_2025": {
+    "timestamp": "2026-04-16T20:10:20.491904",
+    "data": {
+      "k_pct": 0.2472,
+      "bb_pct": 0.0899,
+      "swstr_pct": 0.1267,
+      "csw_pct": 0.2863,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 87.9
+    }
+  },
+  "prior_stats_675848_2025": {
+    "timestamp": "2026-04-16T20:10:28.176412",
+    "data": {
+      "k_pct": 0.2567,
+      "bb_pct": 0.092,
+      "swstr_pct": 0.1447,
+      "csw_pct": 0.3043,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 19.6
+    }
+  },
+  "prior_stats_680802_2025": {
+    "timestamp": "2026-04-16T20:10:35.895672",
+    "data": {
+      "k_pct": 0.224,
+      "bb_pct": 0.082,
+      "swstr_pct": 0.115,
+      "csw_pct": 0.27,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 88.0
+    }
+  },
+  "prior_stats_621111_2025": {
+    "timestamp": "2026-04-16T20:10:42.776120",
+    "data": {
+      "k_pct": 0.1608,
+      "bb_pct": 0.106,
+      "swstr_pct": 0.0858,
+      "csw_pct": 0.2556,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 84.3
     }
   }
 }
