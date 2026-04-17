@@ -1553,13 +1553,13 @@
     }
   },
   "Janson Junk_2026": {
-    "timestamp": "2026-04-11T16:26:08.750242",
+    "timestamp": "2026-04-17T20:08:54.864004",
     "data": {
-      "k_pct": 0.1704,
-      "k_per_9": 4.6,
-      "xk_pct": 0.1704,
-      "k_pct_raw": 0.1667,
-      "ip": 16.0,
+      "k_pct": 0.1716,
+      "k_per_9": 4.63,
+      "xk_pct": 0.1716,
+      "k_pct_raw": 0.1714,
+      "ip": 23.3,
       "source": "savant"
     }
   },
@@ -3538,6 +3538,103 @@
       "k_per_9": 3.24,
       "xk_pct": 0.12,
       "source": "prior_season"
+    }
+  },
+  "Coleman Crow_2026": {
+    "timestamp": "2026-04-17T20:08:52.292094",
+    "data": {
+      "k_pct": 0.224,
+      "k_per_9": 6.05,
+      "xk_pct": 0.224,
+      "source": "prior_season"
+    }
+  },
+  "prior_stats_663567_2025": {
+    "timestamp": "2026-04-17T20:09:04.742470",
+    "data": {
+      "k_pct": 0.224,
+      "bb_pct": 0.082,
+      "swstr_pct": 0.115,
+      "csw_pct": 0.27,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 88.0
+    }
+  },
+  "prior_stats_607192_2025": {
+    "timestamp": "2026-04-17T20:09:15.814989",
+    "data": {
+      "k_pct": 0.2896,
+      "bb_pct": 0.1175,
+      "swstr_pct": 0.1179,
+      "csw_pct": 0.2972,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 82.4
+    }
+  },
+  "prior_stats_608372_2025": {
+    "timestamp": "2026-04-17T20:09:22.007156",
+    "data": {
+      "k_pct": 0.1553,
+      "bb_pct": 0.0503,
+      "swstr_pct": 0.0867,
+      "csw_pct": 0.248,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 85.8
+    }
+  },
+  "prior_stats_663362_2025": {
+    "timestamp": "2026-04-17T20:09:23.011286",
+    "data": {
+      "k_pct": 0.12,
+      "bb_pct": 0.24,
+      "swstr_pct": 0.0577,
+      "csw_pct": 0.2115,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 104.0
+    }
+  },
+  "prior_stats_669302_2025": {
+    "timestamp": "2026-04-17T20:09:31.386622",
+    "data": {
+      "k_pct": 0.3234,
+      "bb_pct": 0.0579,
+      "swstr_pct": 0.1679,
+      "csw_pct": 0.32,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 86.2
+    }
+  },
+  "Braydon Fisher_2026": {
+    "timestamp": "2026-04-17T20:09:32.575759",
+    "data": {
+      "k_pct": 0.3261,
+      "k_per_9": 8.8,
+      "xk_pct": 0.3261,
+      "k_pct_raw": 0.3636,
+      "ip": 11.0,
+      "source": "savant"
+    }
+  },
+  "prior_stats_647336_2025": {
+    "timestamp": "2026-04-17T20:09:37.031904",
+    "data": {
+      "k_pct": 0.2487,
+      "bb_pct": 0.0759,
+      "swstr_pct": 0.1073,
+      "csw_pct": 0.286,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 69.5
+    }
+  },
+  "prior_stats_663436_2025": {
+    "timestamp": "2026-04-17T20:09:42.113725",
+    "data": {
+      "k_pct": 0.1694,
+      "bb_pct": 0.0781,
+      "swstr_pct": 0.1063,
+      "csw_pct": 0.2458,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 89.0
     }
   }
 }
