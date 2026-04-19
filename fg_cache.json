@@ -3684,5 +3684,38 @@
       "ip": 16.0,
       "source": "savant"
     }
+  },
+  "Walbert Urena_2026": {
+    "timestamp": "2026-04-19T19:58:39.207275",
+    "data": {
+      "k_pct": 0.2059,
+      "k_per_9": 5.56,
+      "xk_pct": 0.2059,
+      "k_pct_raw": 0.1333,
+      "ip": 5.0,
+      "source": "savant"
+    }
+  },
+  "prior_stats_669194_2025": {
+    "timestamp": "2026-04-19T19:58:47.773738",
+    "data": {
+      "k_pct": 0.2132,
+      "bb_pct": 0.0662,
+      "swstr_pct": 0.1086,
+      "csw_pct": 0.259,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 74.8
+    }
+  },
+  "prior_stats_691725_2025": {
+    "timestamp": "2026-04-19T19:59:00.513299",
+    "data": {
+      "k_pct": 0.224,
+      "bb_pct": 0.082,
+      "swstr_pct": 0.115,
+      "csw_pct": 0.27,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 88.0
+    }
   }
 }
