@@ -181,6 +181,128 @@
     .no-report { margin: 48px 16px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 32px; text-align: center; }
     .no-report h2 { font-size: 18px; margin-bottom: 8px; }
     .no-report p { color: var(--text-muted); font-size: 14px; line-height: 1.6; }
+
+    /* ── TABS ── */
+    .tab-bar {
+      display: flex; border-bottom: 1px solid var(--border);
+      background: var(--bg); padding: 0 16px;
+    }
+    .tab-btn {
+      padding: 10px 18px; font-size: 13px; font-weight: 600;
+      color: var(--text-muted); border: none; background: none;
+      cursor: pointer; border-bottom: 2px solid transparent;
+      margin-bottom: -1px; transition: color 0.15s;
+    }
+    .tab-btn.active { color: var(--blue); border-bottom-color: var(--blue); }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    /* ── RESULTS TAB ── */
+    .results-section { padding: 16px 12px 8px; }
+    .results-section-title {
+      font-size: 10px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px;
+    }
+
+    /* accuracy strip */
+    .accuracy-strip { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 16px; }
+    .acc-card {
+      background: var(--card-bg); border: 1px solid var(--border);
+      border-radius: 10px; padding: 10px; text-align: center;
+    }
+    .acc-window { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 4px; }
+    .acc-mae { font-size: 22px; font-weight: 800; letter-spacing: -0.5px; }
+    .acc-mae.good { color: var(--green); }
+    .acc-mae.ok { color: var(--amber); }
+    .acc-mae.bad { color: var(--red); }
+    .acc-mae.na { color: var(--text-muted); font-size: 18px; }
+    .acc-sub { font-size: 10px; color: var(--text-muted); margin-top: 2px; }
+
+    /* pitcher search */
+    .search-input {
+      width: 100%; background: var(--card-bg); border: 1px solid var(--border);
+      border-radius: 8px; padding: 10px 12px; color: var(--text);
+      font-size: 14px; outline: none; margin-bottom: 10px;
+    }
+    .search-input:focus { border-color: var(--blue); }
+    .search-input::placeholder { color: var(--text-muted); }
+
+    .pitcher-history { display: none; }
+    .pitcher-history.visible { display: block; }
+    .ph-header {
+      display: flex; align-items: center; justify-content: space-between;
+      background: var(--card-bg); border: 1px solid var(--border);
+      border-radius: 10px 10px 0 0; padding: 10px 12px;
+      border-bottom: none;
+    }
+    .ph-name { font-size: 15px; font-weight: 700; }
+    .ph-stats { font-size: 11px; color: var(--text-muted); }
+    .ph-table {
+      width: 100%; border-collapse: collapse;
+      background: var(--card-bg); border: 1px solid var(--border);
+      border-radius: 0 0 10px 10px; overflow: hidden; margin-bottom: 12px;
+      font-size: 12px;
+    }
+    .ph-table th {
+      padding: 6px 10px; text-align: left;
+      color: var(--text-muted); font-size: 10px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.5px;
+      border-bottom: 1px solid var(--border); background: #0d1117;
+    }
+    .ph-table td { padding: 8px 10px; border-bottom: 1px solid var(--border); }
+    .ph-table tr:last-child td { border-bottom: none; }
+    .ph-table tr:hover td { background: #161b27; }
+    .result-hit { color: var(--green); font-weight: 700; }
+    .result-miss { color: var(--red); font-weight: 700; }
+    .result-close { color: var(--amber); font-weight: 700; }
+    .no-proj-badge { color: var(--text-muted); font-size: 11px; }
+
+    /* date browser */
+    .date-select {
+      width: 100%; background: var(--card-bg); border: 1px solid var(--border);
+      border-radius: 8px; padding: 10px 12px; color: var(--text);
+      font-size: 14px; outline: none; margin-bottom: 10px;
+      appearance: none; cursor: pointer;
+    }
+    .date-select:focus { border-color: var(--blue); }
+
+    .date-results { display: none; }
+    .date-results.visible { display: block; }
+    .dr-table {
+      width: 100%; border-collapse: collapse;
+      background: var(--card-bg); border: 1px solid var(--border);
+      border-radius: 10px; overflow: hidden;
+      font-size: 12px; margin-bottom: 12px;
+    }
+    .dr-table th {
+      padding: 6px 10px; text-align: left;
+      color: var(--text-muted); font-size: 10px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.5px;
+      border-bottom: 1px solid var(--border); background: #0d1117;
+    }
+    .dr-table td { padding: 8px 10px; border-bottom: 1px solid var(--border); }
+    .dr-table tr:last-child td { border-bottom: none; }
+    .dr-table tr:hover td { background: #161b27; }
+    .dr-summary {
+      background: var(--card-bg); border: 1px solid var(--border);
+      border-radius: 10px; padding: 10px 14px; margin-bottom: 10px;
+      display: flex; gap: 16px; flex-wrap: wrap;
+    }
+    .dr-stat { text-align: center; }
+    .dr-stat-val { font-size: 18px; font-weight: 800; }
+    .dr-stat-lbl { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+
+    .search-suggestions {
+      background: var(--card-bg); border: 1px solid var(--border);
+      border-radius: 8px; margin-top: -8px; margin-bottom: 10px;
+      overflow: hidden; display: none;
+    }
+    .suggestion-item {
+      padding: 9px 12px; font-size: 13px; cursor: pointer;
+      border-bottom: 1px solid var(--border);
+    }
+    .suggestion-item:last-child { border-bottom: none; }
+    .suggestion-item:hover { background: #161b27; }
   </style>
 </head>
 <body>
@@ -347,7 +469,14 @@
       <div class="count-badge">{{ pitchers | length }} pitchers</div>
     </div>
   </div>
+  <div class="tab-bar">
+    <button class="tab-btn active" onclick="switchTab('today')">Today</button>
+    <button class="tab-btn" onclick="switchTab('results')">Results</button>
+  </div>
 </div>
+
+{# ── TODAY TAB ── #}
+<div class="tab-content active" id="tab-today">
 
 {% if pitchers | length == 0 %}
 <div class="no-report">
@@ -380,14 +509,258 @@
 {% endif %}
 
 {% endif %}
+</div>
+
+{# ── RESULTS TAB ── #}
+<div class="tab-content" id="tab-results">
+  <div class="results-section">
+
+    {# Accuracy Strip #}
+    <div class="results-section-title">Model Accuracy (April 11+)</div>
+    <div class="accuracy-strip" id="accuracy-strip">
+      <div class="acc-card"><div class="acc-window">3-Day</div><div class="acc-mae na" id="acc-3d">—</div><div class="acc-sub" id="acc-3d-sub"></div></div>
+      <div class="acc-card"><div class="acc-window">7-Day</div><div class="acc-mae na" id="acc-7d">—</div><div class="acc-sub" id="acc-7d-sub"></div></div>
+      <div class="acc-card"><div class="acc-window">14-Day</div><div class="acc-mae na" id="acc-14d">N/A</div><div class="acc-sub" id="acc-14d-sub">Need more data</div></div>
+    </div>
+
+    {# Pitcher Search #}
+    <div class="results-section-title">Pitcher Lookup</div>
+    <input class="search-input" id="pitcher-search" type="text" placeholder="Search pitcher name…" autocomplete="off">
+    <div class="search-suggestions" id="search-suggestions"></div>
+    <div class="pitcher-history" id="pitcher-history">
+      <div class="ph-header">
+        <div class="ph-name" id="ph-name"></div>
+        <div class="ph-stats" id="ph-stats"></div>
+      </div>
+      <table class="ph-table">
+        <thead><tr>
+          <th>Date</th><th>Opp</th><th>Proj</th><th>Actual</th><th>Miss</th><th>IP</th>
+        </tr></thead>
+        <tbody id="ph-tbody"></tbody>
+      </table>
+    </div>
+
+    {# Date Browser #}
+    <div class="results-section-title">Browse by Date</div>
+    <select class="date-select" id="date-select">
+      <option value="">Select a date…</option>
+    </select>
+    <div class="date-results" id="date-results">
+      <div class="dr-summary" id="dr-summary"></div>
+      <table class="dr-table">
+        <thead><tr>
+          <th>Pitcher</th><th>Team</th><th>Opp</th><th>Proj</th><th>Actual</th><th>Miss</th>
+        </tr></thead>
+        <tbody id="dr-tbody"></tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
 
 <script>
+  // ── Tab switching ──
+  function switchTab(name) {
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById('tab-' + name).classList.add('active');
+    event.target.classList.add('active');
+    if (name === 'results' && !window._resultsLoaded) loadResults();
+  }
+
   function toggleCard(id) {
     const d = document.getElementById('details-' + id);
     const c = document.getElementById('chevron-' + id);
     if (d) d.classList.toggle('open');
     if (c) c.classList.toggle('open');
   }
+
+  // ── Results data ──
+  let allResults = [];
+  const MODEL_START = '2026-04-11';
+
+  async function loadResults() {
+    window._resultsLoaded = true;
+    try {
+      const res = await fetch('/api/results');
+      allResults = await res.json();
+      renderAccuracy();
+      populateDateSelect();
+    } catch(e) { console.error(e); }
+  }
+
+  // ── Accuracy strip ──
+  function computeMAE(rows) {
+    const proj = rows.filter(r => r.projected_ks !== null && r.actual_ks !== null);
+    if (!proj.length) return null;
+    const mae = proj.reduce((s, r) => s + Math.abs(r.projected_ks - r.actual_ks), 0) / proj.length;
+    return { mae, n: proj.length };
+  }
+
+  function maeClass(mae) {
+    if (mae <= 1.5) return 'good';
+    if (mae <= 2.0) return 'ok';
+    return 'bad';
+  }
+
+  function renderAccuracy() {
+    const today = new Date();
+    const fmt = d => d.toISOString().slice(0,10);
+
+    const daysAgo = n => {
+      const d = new Date(today);
+      d.setDate(d.getDate() - n);
+      return fmt(d);
+    };
+
+    // Only include completed days (not today — results not logged yet)
+    const yesterday = daysAgo(1);
+
+    const windows = [
+      { id: '3d', days: 3, label: '3 days' },
+      { id: '7d', days: 7, label: '7 days' },
+      { id: '14d', days: 14, label: '14 days' },
+    ];
+
+    windows.forEach(({ id, days, label }) => {
+      const cutoff = daysAgo(days);
+      const effectiveCutoff = cutoff < MODEL_START ? MODEL_START : cutoff;
+      const rows = allResults.filter(r => r.date >= effectiveCutoff && r.date <= yesterday);
+      const result = computeMAE(rows);
+      const el = document.getElementById('acc-' + id);
+      const sub = document.getElementById('acc-' + id + '-sub');
+
+      // Need at least (days) worth of data from MODEL_START
+      const startDate = new Date(MODEL_START);
+      const windowStart = new Date(today);
+      windowStart.setDate(windowStart.getDate() - days);
+      const hasEnoughData = windowStart >= startDate;
+
+      if (!hasEnoughData || !result) {
+        el.textContent = 'N/A';
+        el.className = 'acc-mae na';
+        sub.textContent = 'Need more data';
+      } else {
+        el.textContent = result.mae.toFixed(2);
+        el.className = 'acc-mae ' + maeClass(result.mae);
+        sub.textContent = result.n + ' games';
+      }
+    });
+  }
+
+  // ── Pitcher search ──
+  const searchInput = document.getElementById('pitcher-search');
+  const suggestionsEl = document.getElementById('search-suggestions');
+
+  searchInput.addEventListener('input', () => {
+    const q = searchInput.value.trim().toLowerCase();
+    suggestionsEl.style.display = 'none';
+    suggestionsEl.innerHTML = '';
+    if (q.length < 2) return;
+
+    const names = [...new Set(allResults.map(r => r.pitcher_name))];
+    const matches = names.filter(n => n.toLowerCase().includes(q)).slice(0, 6);
+    if (!matches.length) return;
+
+    matches.forEach(name => {
+      const div = document.createElement('div');
+      div.className = 'suggestion-item';
+      div.textContent = name;
+      div.onclick = () => selectPitcher(name);
+      suggestionsEl.appendChild(div);
+    });
+    suggestionsEl.style.display = 'block';
+  });
+
+  function selectPitcher(name) {
+    searchInput.value = name;
+    suggestionsEl.style.display = 'none';
+
+    const rows = allResults.filter(r => r.pitcher_name === name).sort((a,b) => b.date.localeCompare(a.date));
+    const projected = rows.filter(r => r.projected_ks !== null && r.actual_ks !== null);
+    const mae = projected.length ? (projected.reduce((s,r) => s + Math.abs(r.projected_ks - r.actual_ks), 0) / projected.length).toFixed(2) : '—';
+    const avgMiss = projected.length ? (projected.reduce((s,r) => s + (r.projected_ks - r.actual_ks), 0) / projected.length) : null;
+
+    document.getElementById('ph-name').textContent = name;
+    document.getElementById('ph-stats').textContent = projected.length
+      ? `${projected.length} projected · MAE ${mae} · Avg Miss ${avgMiss >= 0 ? '+' : ''}${avgMiss.toFixed(1)}`
+      : `${rows.length} games · no projections`;
+
+    const tbody = document.getElementById('ph-tbody');
+    tbody.innerHTML = rows.map(r => {
+      const hasBoth = r.projected_ks !== null && r.actual_ks !== null;
+      const miss = hasBoth ? (r.projected_ks - r.actual_ks) : null;
+      const missClass = miss === null ? '' : Math.abs(miss) <= 1 ? 'result-hit' : Math.abs(miss) <= 2 ? 'result-close' : 'result-miss';
+      const missStr = miss !== null ? `<span class="${missClass}">${miss >= 0 ? '+' : ''}${miss.toFixed(1)}</span>` : '—';
+      const projStr = r.projected_ks !== null ? r.projected_ks.toFixed(1) : '<span class="no-proj-badge">—</span>';
+      const actualStr = r.actual_ks !== null ? r.actual_ks : '—';
+      const ipStr = r.innings_pitched !== null ? r.innings_pitched.toFixed(1) : '—';
+      return `<tr>
+        <td>${r.date}</td>
+        <td>${r.opponent}</td>
+        <td>${projStr}</td>
+        <td>${actualStr}</td>
+        <td>${missStr}</td>
+        <td>${ipStr}</td>
+      </tr>`;
+    }).join('');
+
+    document.getElementById('pitcher-history').classList.add('visible');
+  }
+
+  // ── Date browser ──
+  function populateDateSelect() {
+    const dates = [...new Set(allResults.map(r => r.date))].sort((a,b) => b.localeCompare(a));
+    const sel = document.getElementById('date-select');
+    dates.forEach(d => {
+      const opt = document.createElement('option');
+      opt.value = d;
+      opt.textContent = d;
+      sel.appendChild(opt);
+    });
+  }
+
+  document.getElementById('date-select').addEventListener('change', function() {
+    const date = this.value;
+    if (!date) { document.getElementById('date-results').classList.remove('visible'); return; }
+
+    const rows = allResults.filter(r => r.date === date).sort((a,b) => {
+      // projected first, then by name
+      if ((a.projected_ks !== null) !== (b.projected_ks !== null)) return a.projected_ks !== null ? -1 : 1;
+      return (b.projected_ks || 0) - (a.projected_ks || 0);
+    });
+
+    const projected = rows.filter(r => r.projected_ks !== null && r.actual_ks !== null);
+    const mae = projected.length ? (projected.reduce((s,r) => s + Math.abs(r.projected_ks - r.actual_ks), 0) / projected.length).toFixed(2) : '—';
+    const avgMiss = projected.length ? (projected.reduce((s,r) => s + (r.projected_ks - r.actual_ks), 0) / projected.length) : null;
+    const avgMissStr = avgMiss !== null ? `${avgMiss >= 0 ? '+' : ''}${avgMiss.toFixed(2)}` : '—';
+
+    document.getElementById('dr-summary').innerHTML = `
+      <div class="dr-stat"><div class="dr-stat-val">${rows.length}</div><div class="dr-stat-lbl">Total</div></div>
+      <div class="dr-stat"><div class="dr-stat-val">${projected.length}</div><div class="dr-stat-lbl">Projected</div></div>
+      <div class="dr-stat"><div class="dr-stat-val">${mae}</div><div class="dr-stat-lbl">MAE</div></div>
+      <div class="dr-stat"><div class="dr-stat-val">${avgMissStr}</div><div class="dr-stat-lbl">Avg Miss</div></div>
+    `;
+
+    const tbody = document.getElementById('dr-tbody');
+    tbody.innerHTML = rows.map(r => {
+      const hasBoth = r.projected_ks !== null && r.actual_ks !== null;
+      const miss = hasBoth ? (r.projected_ks - r.actual_ks) : null;
+      const missClass = miss === null ? '' : Math.abs(miss) <= 1 ? 'result-hit' : Math.abs(miss) <= 2 ? 'result-close' : 'result-miss';
+      const missStr = miss !== null ? `<span class="${missClass}">${miss >= 0 ? '+' : ''}${miss.toFixed(1)}</span>` : '—';
+      const projStr = r.projected_ks !== null ? r.projected_ks.toFixed(1) : '<span class="no-proj-badge">—</span>';
+      return `<tr>
+        <td>${r.pitcher_name}</td>
+        <td>${r.team}</td>
+        <td>${r.opponent}</td>
+        <td>${projStr}</td>
+        <td>${r.actual_ks !== null ? r.actual_ks : '—'}</td>
+        <td>${missStr}</td>
+      </tr>`;
+    }).join('');
+
+    document.getElementById('date-results').classList.add('visible');
+  });
 </script>
 </body>
 </html>
