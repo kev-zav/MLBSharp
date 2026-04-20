@@ -22,6 +22,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 RESULTS_CSV = os.path.join(SCRIPT_DIR, "results.csv")
 MODEL_PATH = os.path.join(SCRIPT_DIR, "model.pkl")
 
+XGBOOST_ENABLED = False   # enable when April 11+ sample hits 200 rows
 XGBOOST_THRESHOLD = 200  # minimum rows to train XGBoost
 
 # Factor columns used for correlation analysis and XGBoost
@@ -68,7 +69,7 @@ def load_data() -> pd.DataFrame:
         sys.exit(1)
 
     # Convert numeric columns
-    for col in FACTOR_COLS + ["projected_ks", "actual_ks", "book_line", "our_edge_score", "innings_pitched"]:
+    for col in FACTOR_COLS + ["projected_ks", "actual_ks", "innings_pitched"]:
         if col in df.columns:
             df[col] = pd.to_numeric(df[col], errors="coerce")
 
@@ -120,52 +121,7 @@ def calibration_report(df: pd.DataFrame):
     print(f"    MAE:               {mae:.2f}")
     print(f"    RMSE:              {rmse:.2f}")
 
-    # By edge tier
-    has_edge = has_proj.dropna(subset=["our_edge_score"])
-    if not has_edge.empty:
-        tiers = [
-            ("STRONG (edge > 8)", has_edge[has_edge["our_edge_score"] >= 8]),
-            ("MODERATE (edge 4-8)", has_edge[(has_edge["our_edge_score"] >= 4) & (has_edge["our_edge_score"] < 8)]),
-            ("LEAN (edge 1-4)", has_edge[(has_edge["our_edge_score"] >= 1) & (has_edge["our_edge_score"] < 4)]),
-            ("NO VALUE (edge < 1)", has_edge[has_edge["our_edge_score"] < 1]),
-        ]
-
-        print(f"\n  {'Tier':<25} {'Plays':>6} {'Over%':>7} {'AvgProj':>8} {'AvgAct':>8} {'AvgMiss':>8}")
-        print(f"  {'-'*25} {'-'*6} {'-'*7} {'-'*8} {'-'*8} {'-'*8}")
-
-        for tier_name, tier_df in tiers:
-            if tier_df.empty:
-                print(f"  {tier_name:<25} {'0':>6} {'—':>7} {'—':>8} {'—':>8} {'—':>8}")
-                continue
-
-            n = len(tier_df)
-            has_line = tier_df.dropna(subset=["book_line"])
-            has_line = has_line[has_line["book_line"] > 0]
-
-            if not has_line.empty:
-                over_pct = (has_line["actual_ks"] > has_line["book_line"]).mean() * 100
-            else:
-                over_pct = float("nan")
-
-            avg_p = tier_df["projected_ks"].mean()
-            avg_a = tier_df["actual_ks"].mean()
-            miss = avg_p - avg_a
-
-            over_str = f"{over_pct:.0f}%" if not np.isnan(over_pct) else "—"
-            print(f"  {tier_name:<25} {n:>6} {over_str:>7} {avg_p:>8.1f} {avg_a:>8.1f} {miss:>+8.1f}")
-
-    # Hit rate by over/under
-    has_line = has_proj.dropna(subset=["book_line"])
-    has_line = has_line[has_line["book_line"] > 0]
-    if not has_line.empty:
-        overs_hit = (has_line["actual_ks"] > has_line["book_line"]).sum()
-        unders_hit = (has_line["actual_ks"] < has_line["book_line"]).sum()
-        pushes = (has_line["actual_ks"] == has_line["book_line"]).sum()
-        total = len(has_line)
-        print(f"\n  Line Results:")
-        print(f"    Overs hit:  {overs_hit}/{total} ({overs_hit/total*100:.0f}%)")
-        print(f"    Unders hit: {unders_hit}/{total} ({unders_hit/total*100:.0f}%)")
-        print(f"    Pushes:     {pushes}/{total} ({pushes/total*100:.0f}%)")
+    # (edge tier and book line sections removed — those columns no longer tracked)
 
 
 # =====================================================================
@@ -474,7 +430,15 @@ def weight_suggestions(df: pd.DataFrame):
 def xgboost_tuning(df: pd.DataFrame):
     section_header("XGBOOST AUTO-TUNING", 5)
 
+    if not XGBOOST_ENABLED:
+        print("  XGBoost is currently disabled.")
+        print("  Enable by setting XGBOOST_ENABLED = True once April 11+ sample hits 200 rows.")
+        return
+
     has_both = df.dropna(subset=["projected_ks", "actual_ks"])
+
+    # Only use data from April 11 onwards (last formula change)
+    has_both = has_both[has_both["date"] >= "2026-04-11"]
 
     # Check available factor columns
     available_factors = [c for c in FACTOR_COLS if c in has_both.columns]

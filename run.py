@@ -257,10 +257,15 @@ def main():
     except (FileNotFoundError, json.JSONDecodeError):
         pass
 
-    existing[game_date] = cache_data
+    # Merge into existing cache for this date — don't overwrite pitchers from earlier runs
+    existing_today = {e["pitcher_id"]: e for e in existing.get(game_date, [])}
+    for entry in cache_data:
+        existing_today[entry["pitcher_id"]] = entry
+    existing[game_date] = list(existing_today.values())
+
     with open(cache_path, "w") as f:
         json.dump(existing, f, indent=2)
-    print(f"Projections cached to projections_cache.json ({len(cache_data)} entries)")
+    print(f"Projections cached to projections_cache.json ({len(existing[game_date])} entries)")
 
     # Save dashboard data
     from datetime import datetime
