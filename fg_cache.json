@@ -1093,13 +1093,13 @@
     }
   },
   "Cade Cavalli_2026": {
-    "timestamp": "2026-04-18T16:29:15.019777",
+    "timestamp": "2026-04-23T20:30:52.306959",
     "data": {
-      "k_pct": 0.1788,
-      "k_per_9": 4.83,
-      "xk_pct": 0.1788,
-      "k_pct_raw": 0.1757,
-      "ip": 24.7,
+      "k_pct": 0.1892,
+      "k_per_9": 5.11,
+      "xk_pct": 0.1892,
+      "k_pct_raw": 0.1935,
+      "ip": 31.0,
       "source": "savant"
     }
   },
@@ -3916,6 +3916,37 @@
       "k_per_9": 6.05,
       "xk_pct": 0.224,
       "source": "prior_season"
+    }
+  },
+  "JR Ritchie_2026": {
+    "timestamp": "2026-04-23T20:30:37.167291",
+    "data": {
+      "k_pct": 0.224,
+      "k_per_9": 6.05,
+      "xk_pct": 0.224,
+      "source": "prior_season"
+    }
+  },
+  "prior_stats_801139_2025": {
+    "timestamp": "2026-04-23T20:31:05.571506",
+    "data": {
+      "k_pct": 0.2568,
+      "bb_pct": 0.1081,
+      "swstr_pct": 0.1612,
+      "csw_pct": 0.2632,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 43.4
+    }
+  },
+  "prior_stats_681035_2025": {
+    "timestamp": "2026-04-23T20:31:11.171837",
+    "data": {
+      "k_pct": 0.224,
+      "bb_pct": 0.082,
+      "swstr_pct": 0.115,
+      "csw_pct": 0.27,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 88.0
     }
   }
 }
