@@ -1115,13 +1115,13 @@
     }
   },
   "Garrett Crochet_2026": {
-    "timestamp": "2026-04-19T16:30:38.905148",
+    "timestamp": "2026-04-25T19:59:29.464101",
     "data": {
-      "k_pct": 0.2678,
-      "k_per_9": 7.23,
-      "xk_pct": 0.2678,
-      "k_pct_raw": 0.2391,
-      "ip": 30.7,
+      "k_pct": 0.2767,
+      "k_per_9": 7.47,
+      "xk_pct": 0.2767,
+      "k_pct_raw": 0.2586,
+      "ip": 38.7,
       "source": "savant"
     }
   },
@@ -2719,13 +2719,13 @@
     }
   },
   "Trevor Rogers_2026": {
-    "timestamp": "2026-04-19T16:29:45.266701",
+    "timestamp": "2026-04-25T19:59:36.836121",
     "data": {
-      "k_pct": 0.2177,
-      "k_per_9": 5.88,
-      "xk_pct": 0.2177,
-      "k_pct_raw": 0.202,
-      "ip": 33.0,
+      "k_pct": 0.2165,
+      "k_per_9": 5.85,
+      "xk_pct": 0.2165,
+      "k_pct_raw": 0.2033,
+      "ip": 41.0,
       "source": "savant"
     }
   },
@@ -4011,6 +4011,28 @@
       "k_per_9": 8.97,
       "xk_pct": 0.3322,
       "source": "prior_season"
+    }
+  },
+  "prior_stats_700712_2025": {
+    "timestamp": "2026-04-25T19:59:59.092985",
+    "data": {
+      "k_pct": 0.224,
+      "bb_pct": 0.082,
+      "swstr_pct": 0.115,
+      "csw_pct": 0.27,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 88.0
+    }
+  },
+  "prior_stats_554430_2025": {
+    "timestamp": "2026-04-25T20:00:19.151459",
+    "data": {
+      "k_pct": 0.3322,
+      "bb_pct": 0.0562,
+      "swstr_pct": 0.1583,
+      "csw_pct": 0.302,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 99.8
     }
   }
 }
