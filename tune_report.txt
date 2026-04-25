@@ -2,23 +2,23 @@
 ============================================================
   MLB STRIKEOUT SHARP — MODEL TUNER
 ============================================================
-  Excluding 46 short start(s) (< 3 IP) from model training.
+  Excluding 49 short start(s) (< 3 IP) from model training.
 
-  Loaded 702 rows from results.csv
-  Date range: 2026-03-26 to 2026-04-23 (29 game days)
+  Loaded 727 rows from results.csv
+  Date range: 2026-03-26 to 2026-04-24 (30 game days)
 
 ============================================================
   SECTION 1: CALIBRATION REPORT
 ============================================================
 
-  Total games logged: 702
-  Games with projections: 422
+  Total games logged: 727
+  Games with projections: 444
 
   Overall Accuracy:
-    Avg Projected Ks:  4.93
-    Avg Actual Ks:     4.99
-    Avg Miss:          -0.06 (under-projecting)
-    MAE:               1.85
+    Avg Projected Ks:  4.91
+    Avg Actual Ks:     4.98
+    Avg Miss:          -0.07 (under-projecting)
+    MAE:               1.84
     RMSE:              2.28
 
 ============================================================
@@ -30,23 +30,23 @@
 
   Factor                        Corr    p-value      N Strength       
   ------------------------- -------- ---------- ------ ---------------
-  projected_ks_manual        +0.2374     0.0000*   367 Weak           
-  csw_pct                    +0.2294     0.0000*   422 Weak           
-  rolling_k_avg_5            +0.1705     0.0004*   429 Weak           
-  swstr_pct                  +0.1605     0.0009*   422 Weak           
-  rolling_k_avg_3            +0.1520     0.0017*   422 Weak           
-  weather_wind               +0.1119     0.0215*   422 Negligible     
-  weather_temp               -0.0638     0.1909    422 Negligible     
-  pitch_mix_adj              -0.0580     0.2680    367 Negligible     
-  o_swing_pct                -0.0448     0.3590    422 Negligible     
-  park_factor                +0.0389     0.4258    422 Negligible     
-  pitch_count_last_outing    +0.0388     0.4265    422 Negligible     
-  days_rest                  +0.0385     0.4304    422 Negligible     
-  k_pct                      -0.0355     0.4675    422 Negligible     
-  ump_adjustment             -0.0347     0.4768    422 Negligible     
-  opp_k_pct_vs_hand          -0.0282     0.5630    422 Negligible     
+  projected_ks_manual        +0.2323     0.0000*   389 Weak           
+  csw_pct                    +0.2233     0.0000*   444 Weak           
+  rolling_k_avg_5            +0.1622     0.0005*   451 Weak           
+  swstr_pct                  +0.1564     0.0009*   444 Weak           
+  rolling_k_avg_3            +0.1469     0.0019*   444 Negligible     
+  weather_wind               +0.1129     0.0173*   444 Negligible     
+  weather_temp               -0.0644     0.1753    444 Negligible     
+  pitch_mix_adj              -0.0594     0.2424    389 Negligible     
+  o_swing_pct                -0.0423     0.3735    444 Negligible     
+  days_rest                  +0.0377     0.4277    444 Negligible     
+  park_factor                +0.0366     0.4420    444 Negligible     
+  k_pct                      -0.0332     0.4848    444 Negligible     
+  ump_adjustment             -0.0325     0.4940    444 Negligible     
+  pitch_count_last_outing    +0.0283     0.5519    444 Negligible     
+  opp_k_pct_vs_hand          -0.0258     0.5879    444 Negligible     
 
-  Strongest predictor: projected_ks_manual (r=+0.2374)
+  Strongest predictor: projected_ks_manual (r=+0.2323)
 
 ============================================================
   SECTION 3: BIAS DETECTION
@@ -56,35 +56,35 @@
 
   Category                               N   AvgMiss   vs Base Direction 
   ----------------------------------- ---- --------- --------- ----------
-  Park: Chase Field                     19     +1.35     +1.41 over       ⚠
-  Park: Daikin Park                     12     -1.13     -1.07 under      ⚠
-  Park: Oracle Park                     13     -1.12     -1.06 under      ⚠
-  Park: UNIQLO Field at Dodger Stadium    7     -1.01     -0.95 under      ⚠
-  Park: T-Mobile Park                   16     +0.97     +1.04 over      
+  Park: Chase Field                     19     +1.35     +1.42 over       ⚠
+  Park: UNIQLO Field at Dodger Stadium    9     -1.34     -1.27 under      ⚠
+  Park: Oracle Park                     15     -1.01     -0.94 under      ⚠
+  Park: T-Mobile Park                   16     +0.97     +1.05 over      
   Park: Petco Park                       9     -0.97     -0.90 under     
-  Park: Busch Stadium                   13     +0.92     +0.98 over      
+  Park: Daikin Park                     14     -0.91     -0.84 under     
   Park: Nationals Park                  16     -0.91     -0.84 under     
-  Park: Angel Stadium                   18     -0.84     -0.78 under     
-  Park: Globe Life Field                14     -0.81     -0.75 under     
-  Park: Tropicana Field                 12     -0.78     -0.71 under     
-  Short Rest (<=4 days)                 11     +0.76     +0.85 over      
-  Park: Oriole Park at Camden Yards      8     +0.76     +0.83 over      
-  Park: Yankee Stadium                  21     -0.73     -0.67 under     
-  Park: Great American Ball Park         8     +0.71     +0.78 over      
-  Park: Citizens Bank Park              11     -0.55     -0.49 under     
-  Park: Truist Park                     13     +0.51     +0.57 over      
+  Park: Angel Stadium                   18     -0.84     -0.77 under     
+  Short Rest (<=4 days)                 11     +0.76     +0.86 over      
+  Park: Truist Park                     14     +0.76     +0.83 over      
+  Park: Yankee Stadium                  21     -0.73     -0.66 under     
+  Park: Oriole Park at Camden Yards     10     +0.64     +0.71 over      
+  Park: Tropicana Field                 14     -0.62     -0.55 under     
+  Park: Rogers Centre                   12     +0.61     +0.68 over      
+  Park: Globe Life Field                16     -0.60     -0.53 under     
+  Park: Citizens Bank Park              11     -0.55     -0.48 under     
+  Park: Busch Stadium                   14     +0.52     +0.59 over      
+  Park: Great American Ball Park        10     +0.51     +0.58 over      
+  Low K% Pitchers (below median)       220     -0.25     -0.34 under     
   High Wind (>15 mph)                   23     +0.22     +0.30 over      
-  Low K% Pitchers (below median)       209     -0.20     -0.26 under     
-  Cold Weather (<60°F)                  91     -0.16     -0.13 under     
-  Neutral Zone Umps                    399     -0.07     -0.01 under     
-  High K% Pitchers (above median)      209     +0.06     +0.26 over      
+  Cold Weather (<60°F)                  91     -0.16     -0.12 under     
+  High K% Pitchers (above median)      220     +0.09     +0.34 over      
+  Neutral Zone Umps                    421     -0.08     -0.01 under     
   Expanded Zone Umps                    23     +0.05     +0.12 over      
 
-  ⚠ Found 4 significant biases (>1.0 K avg miss):
+  ⚠ Found 3 significant biases (>1.0 K avg miss):
     → Park: Chase Field: over-projecting by 1.3 Ks on average
-    → Park: Daikin Park: under-projecting by 1.1 Ks on average
-    → Park: Oracle Park: under-projecting by 1.1 Ks on average
-    → Park: UNIQLO Field at Dodger Stadium: under-projecting by 1.0 Ks on average
+    → Park: UNIQLO Field at Dodger Stadium: under-projecting by 1.3 Ks on average
+    → Park: Oracle Park: under-projecting by 1.0 Ks on average
 
 ============================================================
   SECTION 4: WEIGHT SUGGESTIONS
@@ -92,9 +92,9 @@
 
   Based on correlation data and projection accuracy:
 
-  1. Projected Ks Manual shows moderate correlation (r=+0.237). Current weight seems reasonable — monitor as more data comes in.
+  1. Projected Ks Manual shows moderate correlation (r=+0.232). Current weight seems reasonable — monitor as more data comes in.
 
-  2. Csw % shows moderate correlation (r=+0.229). Current weight seems reasonable — monitor as more data comes in.
+  2. Csw % shows moderate correlation (r=+0.223). Current weight seems reasonable — monitor as more data comes in.
 
 
 ============================================================
