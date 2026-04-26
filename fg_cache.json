@@ -3972,13 +3972,13 @@
     }
   },
   "Bryan Hudson_2026": {
-    "timestamp": "2026-04-24T16:45:38.623892",
+    "timestamp": "2026-04-26T22:51:10.795939",
     "data": {
-      "k_pct": 0.2679,
-      "k_per_9": 7.23,
-      "xk_pct": 0.2679,
-      "k_pct_raw": 0.2857,
-      "ip": 16.3,
+      "k_pct": 0.2672,
+      "k_per_9": 7.21,
+      "xk_pct": 0.2672,
+      "k_pct_raw": 0.283,
+      "ip": 17.7,
       "source": "savant"
     }
   },
@@ -4044,6 +4044,17 @@
       "k_pct_raw": 0.2273,
       "ip": 14.7,
       "source": "savant"
+    }
+  },
+  "prior_stats_643377_2025": {
+    "timestamp": "2026-04-26T22:51:05.753925",
+    "data": {
+      "k_pct": 0.3498,
+      "bb_pct": 0.0636,
+      "swstr_pct": 0.1864,
+      "csw_pct": 0.3557,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 15.1
     }
   }
 }
