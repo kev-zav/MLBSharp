@@ -35,9 +35,43 @@ EXCLUDED_PITCHER_NAMES = {
 # Minimum avg IP/start to be considered a starter. Below this = opener/reliever.
 MIN_IP_PER_START = 3.0
 
-# --- Park Factors (FanGraphs SO park factor, 100 = neutral) ---
-# Loaded dynamically but fallback dict for known parks
+# --- Park Factors (calibrated from Apr 11–25 2026 observed data, shrunk toward 100) ---
+# Formula: (N * implied + 20 * 100) / (N + 20), rounded to nearest int.
+# Venues not listed fall back to PARK_FACTOR_DEFAULT.
 PARK_FACTOR_DEFAULT = 100
+PARK_FACTORS = {
+    "Angel Stadium":                      110,
+    "American Family Field":               96,
+    "Busch Stadium":                       96,
+    "Chase Field":                         89,
+    "Citizens Bank Park":                 101,
+    "Citi Field":                          97,
+    "Comerica Park":                       97,
+    "Coors Field":                         95,
+    "Daikin Park":                        109,
+    "Fenway Park":                        104,
+    "Globe Life Field":                   104,
+    "Great American Ball Park":           100,
+    "Guaranteed Rate Field":               98,
+    "Rate Field":                          98,
+    "Kauffman Stadium":                   106,
+    "loanDepot park":                     109,
+    "Nationals Park":                     102,
+    "Oracle Park":                        107,
+    "Oriole Park at Camden Yards":         98,
+    "Petco Park":                         105,
+    "PNC Park":                           102,
+    "Progressive Field":                   96,
+    "Rogers Centre":                       93,
+    "Sutter Health Park":                 103,
+    "T-Mobile Park":                       92,
+    "Target Field":                        98,
+    "Tropicana Field":                    109,
+    "Truist Park":                         94,
+    "UNIQLO Field at Dodger Stadium":     110,
+    "Wrigley Field":                       94,
+    "Yankee Stadium":                     109,
+}
 
 # --- Venue coordinates for weather lookups ---
 VENUE_COORDS = {

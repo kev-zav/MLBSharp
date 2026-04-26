@@ -11,7 +11,7 @@ from datetime import date
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-from config import PARK_FACTOR_DEFAULT
+from config import PARK_FACTOR_DEFAULT, PARK_FACTORS
 
 
 def main():
@@ -132,10 +132,13 @@ def main():
                 print(f" [lineup stats error: {e}]")
                 continue
 
+            venue = m["venue"]
+            park_factor = PARK_FACTORS.get(venue, PARK_FACTOR_DEFAULT)
+
             try:
                 result = project_matchup(
                     p_stats, l_stats,
-                    park_factor=PARK_FACTOR_DEFAULT,
+                    park_factor=park_factor,
                     weather=weather,
                     umpire=umpire,
                 )
@@ -151,7 +154,7 @@ def main():
             result["pitcher_id"] = pitcher_id
             result["pitcher_team"] = pitcher_team_abbr
             result["opp_team"] = opp_abbr
-            result["venue"] = m["venue"]
+            result["venue"] = venue
             result["game_id"] = m["game_id"]
             result["game_time"] = m["game_time"]
             result["swstr_pct"] = p_stats.get("swstr_pct", 0)
@@ -160,7 +163,7 @@ def main():
             result["pitcher_hand"] = p_stats.get("pitcher_hand", "R")
             result["opp_k_pct"] = l_stats.get("team_k_pct", 0)
             result["opp_chase"] = l_stats.get("o_swing_pct", 0)
-            result["park_factor"] = PARK_FACTOR_DEFAULT
+            result["park_factor"] = park_factor
             result["umpire"] = umpire
             result["weather"] = weather
             result["days_rest"] = p_stats.get("days_rest", 5)
