@@ -433,13 +433,13 @@
     }
   },
   "Chase Burns_2026": {
-    "timestamp": "2026-04-21T16:48:38.851269",
+    "timestamp": "2026-04-28T20:46:21.330365",
     "data": {
-      "k_pct": 0.2924,
-      "k_per_9": 7.89,
-      "xk_pct": 0.2924,
-      "k_pct_raw": 0.25,
-      "ip": 29.3,
+      "k_pct": 0.2998,
+      "k_per_9": 8.09,
+      "xk_pct": 0.2998,
+      "k_pct_raw": 0.2703,
+      "ip": 37.0,
       "source": "savant"
     }
   },
@@ -741,13 +741,13 @@
     }
   },
   "Braxton Ashcraft_2026": {
-    "timestamp": "2026-04-22T16:50:36.888707",
+    "timestamp": "2026-04-28T20:46:25.709607",
     "data": {
-      "k_pct": 0.2751,
-      "k_per_9": 7.43,
-      "xk_pct": 0.2751,
-      "k_pct_raw": 0.2967,
-      "ip": 30.3,
+      "k_pct": 0.2644,
+      "k_per_9": 7.14,
+      "xk_pct": 0.2644,
+      "k_pct_raw": 0.2759,
+      "ip": 38.7,
       "source": "savant"
     }
   },
@@ -917,13 +917,13 @@
     }
   },
   "Kyle Leahy_2026": {
-    "timestamp": "2026-04-22T20:28:49.551605",
+    "timestamp": "2026-04-28T20:46:23.644524",
     "data": {
-      "k_pct": 0.1794,
-      "k_per_9": 4.84,
-      "xk_pct": 0.1794,
-      "k_pct_raw": 0.1512,
-      "ip": 28.7,
+      "k_pct": 0.1648,
+      "k_per_9": 4.45,
+      "xk_pct": 0.1648,
+      "k_pct_raw": 0.1351,
+      "ip": 37.0,
       "source": "savant"
     }
   },
@@ -1225,7 +1225,7 @@
     }
   },
   "Kyle Freeland_2026": {
-    "timestamp": "2026-04-12T16:29:48.020491",
+    "timestamp": "2026-04-28T20:46:19.866362",
     "data": {
       "k_pct": 0.185,
       "k_per_9": 5.0,
@@ -4079,6 +4079,28 @@
       "k_per_9": 6.97,
       "xk_pct": 0.2581,
       "source": "prior_season"
+    }
+  },
+  "prior_stats_678906_2025": {
+    "timestamp": "2026-04-28T20:46:15.881918",
+    "data": {
+      "k_pct": 0.2806,
+      "bb_pct": 0.1223,
+      "swstr_pct": 0.1204,
+      "csw_pct": 0.3037,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 71.6
+    }
+  },
+  "prior_stats_702056_2025": {
+    "timestamp": "2026-04-28T20:46:32.582797",
+    "data": {
+      "k_pct": 0.2581,
+      "bb_pct": 0.1129,
+      "swstr_pct": 0.1674,
+      "csw_pct": 0.3431,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 79.7
     }
   }
 }
