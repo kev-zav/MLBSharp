@@ -88,13 +88,13 @@
     }
   },
   "Michael Lorenzen_2026": {
-    "timestamp": "2026-04-24T16:45:23.115099",
+    "timestamp": "2026-04-30T20:38:28.861939",
     "data": {
-      "k_pct": 0.1626,
-      "k_per_9": 4.39,
-      "xk_pct": 0.1626,
-      "k_pct_raw": 0.1391,
-      "ip": 38.3,
+      "k_pct": 0.1565,
+      "k_per_9": 4.23,
+      "xk_pct": 0.1565,
+      "k_pct_raw": 0.1348,
+      "ip": 47.0,
       "source": "savant"
     }
   },
@@ -664,13 +664,13 @@
     }
   },
   "Bryce Elder_2026": {
-    "timestamp": "2026-04-25T16:32:11.792027",
+    "timestamp": "2026-04-30T20:38:04.628827",
     "data": {
-      "k_pct": 0.228,
-      "k_per_9": 6.16,
-      "xk_pct": 0.228,
-      "k_pct_raw": 0.2458,
-      "ip": 39.3,
+      "k_pct": 0.2066,
+      "k_per_9": 5.58,
+      "xk_pct": 0.2066,
+      "k_pct_raw": 0.2123,
+      "ip": 48.7,
       "source": "savant"
     }
   },
@@ -1027,13 +1027,13 @@
     }
   },
   "Paul Skenes_2026": {
-    "timestamp": "2026-04-24T16:45:39.797961",
+    "timestamp": "2026-04-30T20:38:14.968607",
     "data": {
-      "k_pct": 0.2743,
-      "k_per_9": 7.41,
-      "xk_pct": 0.2743,
-      "k_pct_raw": 0.2614,
-      "ip": 29.3,
+      "k_pct": 0.28,
+      "k_per_9": 7.56,
+      "xk_pct": 0.28,
+      "k_pct_raw": 0.2727,
+      "ip": 36.7,
       "source": "savant"
     }
   },
@@ -1060,13 +1060,13 @@
     }
   },
   "Andrew Abbott_2026": {
-    "timestamp": "2026-04-24T16:45:16.209059",
+    "timestamp": "2026-04-30T20:38:30.343826",
     "data": {
-      "k_pct": 0.1613,
-      "k_per_9": 4.36,
-      "xk_pct": 0.1613,
-      "k_pct_raw": 0.1316,
-      "ip": 38.0,
+      "k_pct": 0.1662,
+      "k_per_9": 4.49,
+      "xk_pct": 0.1662,
+      "k_pct_raw": 0.1429,
+      "ip": 44.3,
       "source": "savant"
     }
   },
@@ -1421,13 +1421,13 @@
     }
   },
   "Framber Valdez_2026": {
-    "timestamp": "2026-04-24T16:44:58.891609",
+    "timestamp": "2026-04-30T20:37:56.090029",
     "data": {
-      "k_pct": 0.1817,
-      "k_per_9": 4.91,
-      "xk_pct": 0.1817,
-      "k_pct_raw": 0.1575,
-      "ip": 42.3,
+      "k_pct": 0.1826,
+      "k_per_9": 4.93,
+      "xk_pct": 0.1826,
+      "k_pct_raw": 0.1622,
+      "ip": 49.3,
       "source": "savant"
     }
   },
@@ -1993,13 +1993,13 @@
     }
   },
   "Adrian Houser_2026": {
-    "timestamp": "2026-04-24T16:45:57.379301",
+    "timestamp": "2026-04-30T20:38:24.303736",
     "data": {
-      "k_pct": 0.1276,
+      "k_pct": 0.1279,
       "k_per_9": 3.45,
-      "xk_pct": 0.1276,
-      "k_pct_raw": 0.099,
-      "ip": 33.7,
+      "xk_pct": 0.1279,
+      "k_pct_raw": 0.1048,
+      "ip": 41.3,
       "source": "savant"
     }
   },
@@ -4123,6 +4123,26 @@
       "csw_pct": 0.27,
       "ip_per_start": 4.9,
       "pitches_per_start": 88.0
+    }
+  },
+  "Hunter Dobbins_2026": {
+    "timestamp": "2026-04-30T20:38:12.518484",
+    "data": {
+      "k_pct": 0.1758,
+      "k_per_9": 4.75,
+      "xk_pct": 0.1758,
+      "source": "prior_season"
+    }
+  },
+  "Tim Mayza_2026": {
+    "timestamp": "2026-04-30T20:38:26.309188",
+    "data": {
+      "k_pct": 0.2235,
+      "k_per_9": 6.03,
+      "xk_pct": 0.2235,
+      "k_pct_raw": 0.2424,
+      "ip": 22.0,
+      "source": "savant"
     }
   }
 }
