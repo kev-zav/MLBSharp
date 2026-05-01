@@ -1214,13 +1214,13 @@
     }
   },
   "Mike Burrows_2026": {
-    "timestamp": "2026-04-25T16:32:02.392000",
+    "timestamp": "2026-05-01T20:14:01.947053",
     "data": {
-      "k_pct": 0.2159,
-      "k_per_9": 5.83,
-      "xk_pct": 0.2159,
-      "k_pct_raw": 0.2049,
-      "ip": 40.7,
+      "k_pct": 0.233,
+      "k_per_9": 6.29,
+      "xk_pct": 0.233,
+      "k_pct_raw": 0.2308,
+      "ip": 47.7,
       "source": "savant"
     }
   },
@@ -1410,13 +1410,13 @@
     }
   },
   "Will Warren_2026": {
-    "timestamp": "2026-04-24T16:45:46.600809",
+    "timestamp": "2026-05-01T20:14:01.788991",
     "data": {
-      "k_pct": 0.2742,
-      "k_per_9": 7.4,
-      "xk_pct": 0.2742,
-      "k_pct_raw": 0.2952,
-      "ip": 35.0,
+      "k_pct": 0.2711,
+      "k_per_9": 7.32,
+      "xk_pct": 0.2711,
+      "k_pct_raw": 0.2868,
+      "ip": 43.0,
       "source": "savant"
     }
   },
@@ -2004,13 +2004,13 @@
     }
   },
   "Cade Povich_2026": {
-    "timestamp": "2026-04-12T16:28:01.558936",
+    "timestamp": "2026-05-01T20:13:55.408453",
     "data": {
-      "k_pct": 0.1947,
-      "k_per_9": 5.26,
-      "xk_pct": 0.1947,
-      "k_pct_raw": 0.0833,
-      "ip": 8.0,
+      "k_pct": 0.1977,
+      "k_per_9": 5.34,
+      "xk_pct": 0.1977,
+      "k_pct_raw": 0.1458,
+      "ip": 16.0,
       "source": "savant"
     }
   },
@@ -4158,6 +4158,15 @@
       "csw_pct": 0.2821,
       "ip_per_start": 4.9,
       "pitches_per_start": 72.0
+    }
+  },
+  "Jake Bennett_2026": {
+    "timestamp": "2026-05-01T20:14:03.708023",
+    "data": {
+      "k_pct": 0.224,
+      "k_per_9": 6.05,
+      "xk_pct": 0.224,
+      "source": "prior_season"
     }
   }
 }
