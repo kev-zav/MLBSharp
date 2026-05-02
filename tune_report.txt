@@ -4,22 +4,22 @@
 ============================================================
   Excluding 59 short start(s) (< 3 IP) from model training.
 
-  Loaded 871 rows from results.csv
-  Date range: 2026-03-26 to 2026-04-30 (36 game days)
+  Loaded 901 rows from results.csv
+  Date range: 2026-03-26 to 2026-05-01 (37 game days)
 
 ============================================================
   SECTION 1: CALIBRATION REPORT
 ============================================================
 
-  Total games logged: 871
-  Games with projections: 569
+  Total games logged: 901
+  Games with projections: 592
 
   Overall Accuracy:
     Avg Projected Ks:  4.81
     Avg Actual Ks:     5.02
     Avg Miss:          -0.21 (under-projecting)
-    MAE:               1.87
-    RMSE:              2.31
+    MAE:               1.85
+    RMSE:              2.29
 
 ============================================================
   SECTION 2: FACTOR CORRELATION
@@ -30,23 +30,23 @@
 
   Factor                        Corr    p-value      N Strength       
   ------------------------- -------- ---------- ------ ---------------
-  csw_pct                    +0.2463     0.0000*   569 Weak           
-  projected_ks_manual        +0.2361     0.0000*   514 Weak           
-  rolling_k_avg_5            +0.1886     0.0000*   576 Weak           
-  rolling_k_avg_3            +0.1667     0.0001*   569 Weak           
-  swstr_pct                  +0.1633     0.0001*   569 Weak           
-  weather_wind               +0.1025     0.0145*   569 Negligible     
-  pitch_count_last_outing    +0.0545     0.1941    569 Negligible     
-  weather_temp               -0.0487     0.2462    569 Negligible     
-  o_swing_pct                -0.0400     0.3410    569 Negligible     
-  pitch_mix_adj              -0.0387     0.3815    514 Negligible     
-  park_factor                +0.0351     0.4036    569 Negligible     
-  k_pct                      -0.0320     0.4461    569 Negligible     
-  ump_adjustment             -0.0316     0.4520    569 Negligible     
-  days_rest                  +0.0256     0.5428    569 Negligible     
-  opp_k_pct_vs_hand          -0.0252     0.5485    569 Negligible     
+  csw_pct                    +0.2581     0.0000*   592 Weak           
+  projected_ks_manual        +0.2508     0.0000*   537 Weak           
+  rolling_k_avg_5            +0.1982     0.0000*   599 Weak           
+  rolling_k_avg_3            +0.1790     0.0000*   592 Weak           
+  swstr_pct                  +0.1759     0.0000*   592 Weak           
+  weather_wind               +0.0936     0.0228*   592 Negligible     
+  pitch_count_last_outing    +0.0630     0.1258    592 Negligible     
+  weather_temp               -0.0481     0.2430    592 Negligible     
+  o_swing_pct                -0.0390     0.3431    592 Negligible     
+  pitch_mix_adj              -0.0382     0.3774    537 Negligible     
+  park_factor                +0.0342     0.4061    592 Negligible     
+  k_pct                      -0.0311     0.4498    592 Negligible     
+  ump_adjustment             -0.0308     0.4547    592 Negligible     
+  days_rest                  +0.0274     0.5065    592 Negligible     
+  opp_k_pct_vs_hand          -0.0238     0.5631    592 Negligible     
 
-  Strongest predictor: csw_pct (r=+0.2463)
+  Strongest predictor: csw_pct (r=+0.2581)
 
 ============================================================
   SECTION 3: BIAS DETECTION
@@ -56,27 +56,25 @@
 
   Category                               N   AvgMiss   vs Base Direction 
   ----------------------------------- ---- --------- --------- ----------
-  Park: Chase Field                     19     +1.35     +1.56 over       ⚠
+  Park: Chase Field                     19     +1.35     +1.55 over       ⚠
   Park: UNIQLO Field at Dodger Stadium   19     -1.16     -0.95 under      ⚠
   Park: Rate Field                      16     -1.05     -0.84 under      ⚠
-  Park: T-Mobile Park                   16     +0.97     +1.18 over      
-  Park: Nationals Park                  16     -0.91     -0.70 under     
+  Park: Angel Stadium                   19     -0.99     -0.79 under     
   Park: Oracle Park                     19     -0.88     -0.67 under     
+  Park: Nationals Park                  18     -0.86     -0.65 under     
   Short Rest (<=4 days)                 12     +0.85     +1.08 over      
-  Park: Angel Stadium                   18     -0.84     -0.64 under     
   Park: Daikin Park                     18     -0.83     -0.62 under     
-  Park: Yankee Stadium                  21     -0.73     -0.52 under     
+  Park: T-Mobile Park                   17     +0.82     +1.03 over      
+  Park: Yankee Stadium                  23     -0.81     -0.60 under     
   Park: Citizens Bank Park              15     -0.71     -0.50 under     
-  Park: PNC Park                        21     -0.64     -0.43 under     
-  Park: Tropicana Field                 16     -0.62     -0.41 under     
-  Park: Petco Park                      15     -0.57     -0.36 under     
-  Park: Rogers Centre                   21     +0.55     +0.76 over      
-  Low K% Pitchers (below median)       281     -0.42     -0.40 under     
-  Neutral Zone Umps                    546     -0.22     -0.01 under     
+  Park: PNC Park                        21     -0.64     -0.44 under     
+  Park: Rogers Centre                   21     +0.55     +0.75 over      
+  Low K% Pitchers (below median)       291     -0.41     -0.39 under     
   High Wind (>15 mph)                   23     +0.22     +0.44 over      
+  Neutral Zone Umps                    569     -0.22     -0.01 under     
   Cold Weather (<60°F)                  91     -0.16     +0.05 under     
   Expanded Zone Umps                    23     +0.05     +0.26 over      
-  High K% Pitchers (above median)      284     -0.02     +0.40 under     
+  High K% Pitchers (above median)      297     -0.02     +0.39 under     
 
   ⚠ Found 3 significant biases (>1.0 K avg miss):
     → Park: Chase Field: over-projecting by 1.3 Ks on average
@@ -89,9 +87,9 @@
 
   Based on correlation data and projection accuracy:
 
-  1. Csw % shows moderate correlation (r=+0.246). Current weight seems reasonable — monitor as more data comes in.
+  1. Csw % shows moderate correlation (r=+0.258). Current weight seems reasonable — monitor as more data comes in.
 
-  2. Projected Ks Manual shows moderate correlation (r=+0.236). Current weight seems reasonable — monitor as more data comes in.
+  2. Projected Ks Manual shows moderate correlation (r=+0.251). Current weight seems reasonable — monitor as more data comes in.
 
 
 ============================================================
