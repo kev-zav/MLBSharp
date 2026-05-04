@@ -785,13 +785,13 @@
     }
   },
   "Nick Martinez_2026": {
-    "timestamp": "2026-04-28T17:30:24.351735",
+    "timestamp": "2026-05-04T20:46:11.022117",
     "data": {
-      "k_pct": 0.1837,
-      "k_per_9": 4.96,
-      "xk_pct": 0.1837,
-      "k_pct_raw": 0.1639,
-      "ip": 40.7,
+      "k_pct": 0.1809,
+      "k_per_9": 4.88,
+      "xk_pct": 0.1809,
+      "k_pct_raw": 0.1633,
+      "ip": 49.0,
       "source": "savant"
     }
   },
@@ -807,13 +807,13 @@
     }
   },
   "Eric Lauer_2026": {
-    "timestamp": "2026-04-29T17:17:56.370610",
+    "timestamp": "2026-05-04T20:46:07.642681",
     "data": {
-      "k_pct": 0.2033,
-      "k_per_9": 5.49,
-      "xk_pct": 0.2033,
-      "k_pct_raw": 0.1827,
-      "ip": 34.7,
+      "k_pct": 0.1876,
+      "k_per_9": 5.07,
+      "xk_pct": 0.1876,
+      "k_pct_raw": 0.1626,
+      "ip": 41.0,
       "source": "savant"
     }
   },
@@ -4357,6 +4357,50 @@
       "k_per_9": 6.3,
       "xk_pct": 0.2333,
       "source": "prior_season"
+    }
+  },
+  "prior_stats_623211_2025": {
+    "timestamp": "2026-05-04T20:45:36.529331",
+    "data": {
+      "k_pct": 0.2167,
+      "bb_pct": 0.0989,
+      "swstr_pct": 0.115,
+      "csw_pct": 0.2743,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 19.6
+    }
+  },
+  "prior_stats_695534_2025": {
+    "timestamp": "2026-05-04T20:46:25.202874",
+    "data": {
+      "k_pct": 0.175,
+      "bb_pct": 0.2,
+      "swstr_pct": 0.1479,
+      "csw_pct": 0.284,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 56.3
+    }
+  },
+  "prior_stats_595345_2025": {
+    "timestamp": "2026-05-04T20:46:52.355562",
+    "data": {
+      "k_pct": 0.3043,
+      "bb_pct": 0.0652,
+      "swstr_pct": 0.1675,
+      "csw_pct": 0.315,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 15.5
+    }
+  },
+  "prior_stats_686790_2025": {
+    "timestamp": "2026-05-04T20:47:03.093583",
+    "data": {
+      "k_pct": 0.2333,
+      "bb_pct": 0.0333,
+      "swstr_pct": 0.1502,
+      "csw_pct": 0.3615,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 71.0
     }
   }
 }
