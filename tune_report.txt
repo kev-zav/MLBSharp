@@ -4,20 +4,20 @@
 ============================================================
   Excluding 76 short start(s) (< 3 IP) from model training.
 
-  Loaded 1044 rows from results.csv
-  Date range: 2026-03-26 to 2026-05-07 (43 game days)
+  Loaded 1074 rows from results.csv
+  Date range: 2026-03-26 to 2026-05-08 (44 game days)
 
 ============================================================
   SECTION 1: CALIBRATION REPORT
 ============================================================
 
-  Total games logged: 1044
-  Games with projections: 719
+  Total games logged: 1074
+  Games with projections: 744
 
   Overall Accuracy:
     Avg Projected Ks:  4.76
-    Avg Actual Ks:     4.99
-    Avg Miss:          -0.24 (under-projecting)
+    Avg Actual Ks:     5.02
+    Avg Miss:          -0.25 (under-projecting)
     MAE:               1.85
     RMSE:              2.32
 
@@ -30,23 +30,23 @@
 
   Factor                        Corr    p-value      N Strength       
   ------------------------- -------- ---------- ------ ---------------
-  csw_pct                    +0.2732     0.0000*   719 Weak           
-  projected_ks_manual        +0.2709     0.0000*   664 Weak           
-  rolling_k_avg_5            +0.2212     0.0000*   726 Weak           
-  swstr_pct                  +0.2029     0.0000*   719 Weak           
-  rolling_k_avg_3            +0.1918     0.0000*   719 Weak           
-  weather_wind               +0.0758     0.0422*   719 Negligible     
-  pitch_count_last_outing    +0.0670     0.0725    719 Negligible     
-  weather_temp               -0.0451     0.2275    719 Negligible     
-  pitch_mix_adj              -0.0366     0.3463    664 Negligible     
-  o_swing_pct                -0.0328     0.3803    719 Negligible     
-  park_factor                +0.0285     0.4458    719 Negligible     
-  k_pct                      -0.0256     0.4938    719 Negligible     
-  ump_adjustment             -0.0255     0.4953    719 Negligible     
-  opp_k_pct_vs_hand          -0.0164     0.6606    719 Negligible     
-  days_rest                  +0.0164     0.6611    719 Negligible     
+  csw_pct                    +0.2786     0.0000*   744 Weak           
+  projected_ks_manual        +0.2765     0.0000*   689 Weak           
+  rolling_k_avg_5            +0.2355     0.0000*   751 Weak           
+  rolling_k_avg_3            +0.2101     0.0000*   744 Weak           
+  swstr_pct                  +0.2073     0.0000*   744 Weak           
+  pitch_count_last_outing    +0.0871     0.0174*   744 Negligible     
+  weather_wind               +0.0670     0.0679    744 Negligible     
+  weather_temp               -0.0408     0.2660    744 Negligible     
+  o_swing_pct                -0.0341     0.3533    744 Negligible     
+  pitch_mix_adj              -0.0311     0.4158    689 Negligible     
+  park_factor                +0.0299     0.4155    744 Negligible     
+  k_pct                      -0.0270     0.4623    744 Negligible     
+  ump_adjustment             -0.0269     0.4632    744 Negligible     
+  days_rest                  +0.0213     0.5617    744 Negligible     
+  opp_k_pct_vs_hand          -0.0180     0.6237    744 Negligible     
 
-  Strongest predictor: csw_pct (r=+0.2732)
+  Strongest predictor: csw_pct (r=+0.2786)
 
 ============================================================
   SECTION 3: BIAS DETECTION
@@ -56,30 +56,27 @@
 
   Category                               N   AvgMiss   vs Base Direction 
   ----------------------------------- ---- --------- --------- ----------
-  Park: UNIQLO Field at Dodger Stadium   19     -1.16     -0.92 under      ⚠
-  Park: Rate Field                      16     -1.05     -0.81 under      ⚠
-  Park: PNC Park                        24     -0.94     -0.70 under     
-  Park: Chase Field                     23     +0.93     +1.17 over      
-  Park: Daikin Park                     21     -0.88     -0.64 under     
-  Short Rest (<=4 days)                 12     +0.85     +1.11 over      
-  Park: Angel Stadium                   27     -0.81     -0.58 under     
-  Park: Oracle Park                     24     -0.77     -0.54 under     
-  Park: Fenway Park                     24     +0.75     +0.99 over      
-  Park: Petco Park                      23     -0.64     -0.41 under     
-  Park: loanDepot park                  29     -0.61     -0.38 under     
-  Park: Citizens Bank Park              20     -0.56     -0.32 under     
-  Park: Rogers Centre                   21     +0.55     +0.79 over      
-  Park: Yankee Stadium                  32     -0.50     -0.26 under     
-  Low K% Pitchers (below median)       357     -0.37     -0.25 under     
-  Neutral Zone Umps                    696     -0.25     -0.01 under     
-  High Wind (>15 mph)                   23     +0.22     +0.47 over      
-  Cold Weather (<60°F)                  91     -0.16     +0.08 under     
-  High K% Pitchers (above median)      358     -0.12     +0.25 under     
-  Expanded Zone Umps                    23     +0.05     +0.29 over      
+  Park: UNIQLO Field at Dodger Stadium   21     -1.09     -0.83 under      ⚠
+  Park: PNC Park                        24     -0.94     -0.68 under     
+  Park: Daikin Park                     21     -0.88     -0.63 under     
+  Short Rest (<=4 days)                 13     +0.88     +1.15 over      
+  Park: Rate Field                      18     -0.83     -0.58 under     
+  Park: Angel Stadium                   27     -0.81     -0.56 under     
+  Park: Petco Park                      25     -0.78     -0.53 under     
+  Park: Oracle Park                     24     -0.77     -0.52 under     
+  Park: Chase Field                     24     +0.76     +1.01 over      
+  Park: loanDepot park                  31     -0.63     -0.37 under     
+  Park: Fenway Park                     26     +0.60     +0.85 over      
+  Park: Yankee Stadium                  32     -0.50     -0.25 under     
+  Low K% Pitchers (below median)       370     -0.41     -0.30 under     
+  Neutral Zone Umps                    721     -0.26     -0.01 under     
+  High Wind (>15 mph)                   23     +0.22     +0.49 over      
+  Cold Weather (<60°F)                  91     -0.16     +0.10 under     
+  High K% Pitchers (above median)      370     -0.11     +0.30 under     
+  Expanded Zone Umps                    23     +0.05     +0.31 over      
 
-  ⚠ Found 2 significant biases (>1.0 K avg miss):
-    → Park: UNIQLO Field at Dodger Stadium: under-projecting by 1.2 Ks on average
-    → Park: Rate Field: under-projecting by 1.1 Ks on average
+  ⚠ Found 1 significant biases (>1.0 K avg miss):
+    → Park: UNIQLO Field at Dodger Stadium: under-projecting by 1.1 Ks on average
 
 ============================================================
   SECTION 4: WEIGHT SUGGESTIONS
@@ -87,13 +84,15 @@
 
   Based on correlation data and projection accuracy:
 
-  1. Csw % shows moderate correlation (r=+0.273). Current weight seems reasonable — monitor as more data comes in.
+  1. Csw % shows moderate correlation (r=+0.279). Current weight seems reasonable — monitor as more data comes in.
 
-  2. Projected Ks Manual shows moderate correlation (r=+0.271). Current weight seems reasonable — monitor as more data comes in.
+  2. Projected Ks Manual shows moderate correlation (r=+0.277). Current weight seems reasonable — monitor as more data comes in.
 
-  3. Rolling K Avg 5 shows moderate correlation (r=+0.216). Current weight seems reasonable — monitor as more data comes in.
+  3. Rolling K Avg 5 shows moderate correlation (r=+0.231). Current weight seems reasonable — monitor as more data comes in.
 
-  4. Swstr % shows moderate correlation (r=+0.203). Current weight seems reasonable — monitor as more data comes in.
+  4. Rolling K Avg 3 shows moderate correlation (r=+0.210). Current weight seems reasonable — monitor as more data comes in.
+
+  5. Swstr % shows moderate correlation (r=+0.207). Current weight seems reasonable — monitor as more data comes in.
 
 
 ============================================================
