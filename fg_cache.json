@@ -4633,5 +4633,38 @@
       "xk_pct": 0.2812,
       "source": "prior_season"
     }
+  },
+  "Richard Lovelady_2026": {
+    "timestamp": "2026-05-09T20:07:34.853944",
+    "data": {
+      "k_pct": 0.2048,
+      "k_per_9": 5.53,
+      "xk_pct": 0.2048,
+      "k_pct_raw": 0.2,
+      "ip": 23.3,
+      "source": "savant"
+    }
+  },
+  "prior_stats_572143_2025": {
+    "timestamp": "2026-05-09T20:07:55.153886",
+    "data": {
+      "k_pct": 0.224,
+      "bb_pct": 0.082,
+      "swstr_pct": 0.115,
+      "csw_pct": 0.27,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 88.0
+    }
+  },
+  "prior_stats_605483_2025": {
+    "timestamp": "2026-05-09T20:08:25.083796",
+    "data": {
+      "k_pct": 0.2812,
+      "bb_pct": 0.0977,
+      "swstr_pct": 0.1665,
+      "csw_pct": 0.3146,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 93.9
+    }
   }
 }
