@@ -1071,13 +1071,13 @@
     }
   },
   "Sandy Alcantara_2026": {
-    "timestamp": "2026-05-05T17:14:34.797669",
+    "timestamp": "2026-05-10T20:08:57.602055",
     "data": {
-      "k_pct": 0.1677,
-      "k_per_9": 4.53,
-      "xk_pct": 0.1677,
-      "k_pct_raw": 0.1606,
-      "ip": 64.3,
+      "k_pct": 0.1706,
+      "k_per_9": 4.61,
+      "xk_pct": 0.1706,
+      "k_pct_raw": 0.1651,
+      "ip": 72.7,
       "source": "savant"
     }
   },
@@ -1093,13 +1093,13 @@
     }
   },
   "Cade Cavalli_2026": {
-    "timestamp": "2026-05-05T17:14:35.071210",
+    "timestamp": "2026-05-10T20:08:45.223412",
     "data": {
-      "k_pct": 0.2411,
-      "k_per_9": 6.51,
-      "xk_pct": 0.2411,
-      "k_pct_raw": 0.2657,
-      "ip": 47.7,
+      "k_pct": 0.2265,
+      "k_per_9": 6.12,
+      "xk_pct": 0.2265,
+      "k_pct_raw": 0.2424,
+      "ip": 55.0,
       "source": "savant"
     }
   },
@@ -4729,6 +4729,28 @@
       "k_pct_raw": 0.16,
       "ip": 8.3,
       "source": "savant"
+    }
+  },
+  "prior_stats_693686_2025": {
+    "timestamp": "2026-05-10T20:09:12.982808",
+    "data": {
+      "k_pct": 0.224,
+      "bb_pct": 0.082,
+      "swstr_pct": 0.115,
+      "csw_pct": 0.27,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 88.0
+    }
+  },
+  "prior_stats_669724_2025": {
+    "timestamp": "2026-05-10T20:09:33.701607",
+    "data": {
+      "k_pct": 0.1538,
+      "bb_pct": 0.0462,
+      "swstr_pct": 0.0702,
+      "csw_pct": 0.2534,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 17.7
     }
   }
 }
