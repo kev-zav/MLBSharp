@@ -352,8 +352,14 @@ def project_strikeouts(
 
     if rolling_3 > 0 and rolling_5 > 0 and num_starts >= 5:
         form_ks = rolling_3 * 0.6 + rolling_5 * 0.4
-        # Scale weight gradually: 5 starts=10%, 8 starts=15%, 12+ starts=20%
-        rolling_weight = min(0.20, (num_starts - 4) / 8 * 0.20)
+        # Consistent pattern = 3-game and 5-game rolling averages within 20% of each other.
+        # These pitchers have earned higher form weight — raise cap from 20% to 35%.
+        # Inconsistent pitchers stay at 20% to avoid overreacting to hot/cold streaks.
+        consistency_gap = abs(rolling_3 - rolling_5) / max(rolling_5, 1.0)
+        if consistency_gap < 0.35:
+            rolling_weight = min(0.35, (num_starts - 4) / 8 * 0.35)
+        else:
+            rolling_weight = min(0.20, (num_starts - 4) / 8 * 0.20)
         final_ks = adjusted_ks * (1 - rolling_weight) + form_ks * rolling_weight
     else:
         final_ks = adjusted_ks

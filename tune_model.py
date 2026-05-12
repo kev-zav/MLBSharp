@@ -22,7 +22,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 RESULTS_CSV = os.path.join(SCRIPT_DIR, "results.csv")
 MODEL_PATH = os.path.join(SCRIPT_DIR, "model.pkl")
 
-XGBOOST_ENABLED = False   # enable when April 11+ sample hits 200 rows
+XGBOOST_ENABLED = True
 XGBOOST_THRESHOLD = 200  # minimum rows to train XGBoost
 
 # Factor columns used for correlation analysis and XGBoost
