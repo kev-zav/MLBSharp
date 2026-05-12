@@ -4013,13 +4013,13 @@
     }
   },
   "Zack Wheeler_2026": {
-    "timestamp": "2026-05-06T17:23:31.829505",
+    "timestamp": "2026-05-12T20:57:52.851792",
     "data": {
-      "k_pct": 0.3294,
-      "k_per_9": 8.89,
-      "xk_pct": 0.3294,
-      "k_pct_raw": 0.3256,
-      "ip": 14.3,
+      "k_pct": 0.2963,
+      "k_per_9": 8.0,
+      "xk_pct": 0.2963,
+      "k_pct_raw": 0.2647,
+      "ip": 22.7,
       "source": "savant"
     }
   },
@@ -4414,13 +4414,13 @@
     }
   },
   "Jovani Mor\u00e1n_2026": {
-    "timestamp": "2026-05-05T17:14:10.414658",
+    "timestamp": "2026-05-12T20:57:56.980786",
     "data": {
-      "k_pct": 0.2302,
-      "k_per_9": 6.22,
-      "xk_pct": 0.2302,
-      "k_pct_raw": 0.2152,
-      "ip": 26.3,
+      "k_pct": 0.2318,
+      "k_per_9": 6.26,
+      "xk_pct": 0.2318,
+      "k_pct_raw": 0.2198,
+      "ip": 30.3,
       "source": "savant"
     }
   },
@@ -4799,6 +4799,17 @@
       "k_pct_raw": 0.1111,
       "ip": 21.0,
       "source": "savant"
+    }
+  },
+  "prior_stats_837227_2025": {
+    "timestamp": "2026-05-12T20:58:16.603283",
+    "data": {
+      "k_pct": 0.224,
+      "bb_pct": 0.082,
+      "swstr_pct": 0.115,
+      "csw_pct": 0.27,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 88.0
     }
   }
 }
