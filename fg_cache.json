@@ -99,13 +99,13 @@
     }
   },
   "Kyle Bradish_2026": {
-    "timestamp": "2026-05-08T17:02:35.501144",
+    "timestamp": "2026-05-13T21:05:49.013162",
     "data": {
-      "k_pct": 0.2622,
-      "k_per_9": 7.08,
-      "xk_pct": 0.2622,
-      "k_pct_raw": 0.2229,
-      "ip": 52.3,
+      "k_pct": 0.2731,
+      "k_per_9": 7.37,
+      "xk_pct": 0.2731,
+      "k_pct_raw": 0.2432,
+      "ip": 61.7,
       "source": "savant"
     }
   },
@@ -939,13 +939,13 @@
     }
   },
   "Max Fried_2026": {
-    "timestamp": "2026-05-08T17:02:45.943210",
+    "timestamp": "2026-05-13T21:05:38.059912",
     "data": {
-      "k_pct": 0.219,
-      "k_per_9": 5.91,
-      "xk_pct": 0.219,
-      "k_pct_raw": 0.2139,
-      "ip": 67.0,
+      "k_pct": 0.2166,
+      "k_per_9": 5.85,
+      "xk_pct": 0.2166,
+      "k_pct_raw": 0.2115,
+      "ip": 75.7,
       "source": "savant"
     }
   },
@@ -4821,6 +4821,17 @@
       "k_per_9": 5.1,
       "xk_pct": 0.1888,
       "source": "prior_season"
+    }
+  },
+  "prior_stats_682243_2025": {
+    "timestamp": "2026-05-13T21:06:28.775101",
+    "data": {
+      "k_pct": 0.1888,
+      "bb_pct": 0.0867,
+      "swstr_pct": 0.1223,
+      "csw_pct": 0.2589,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 85.8
     }
   }
 }
