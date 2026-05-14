@@ -174,13 +174,13 @@
     }
   },
   "Nolan McLean_2026": {
-    "timestamp": "2026-05-08T17:02:54.088072",
+    "timestamp": "2026-05-14T20:51:43.768067",
     "data": {
-      "k_pct": 0.3233,
-      "k_per_9": 8.73,
-      "xk_pct": 0.3233,
-      "k_pct_raw": 0.3333,
-      "ip": 51.0,
+      "k_pct": 0.3186,
+      "k_per_9": 8.6,
+      "xk_pct": 0.3186,
+      "k_pct_raw": 0.3257,
+      "ip": 58.3,
       "source": "savant"
     }
   },
@@ -433,13 +433,13 @@
     }
   },
   "Chase Burns_2026": {
-    "timestamp": "2026-05-09T16:42:22.615893",
+    "timestamp": "2026-05-14T20:51:39.447598",
     "data": {
-      "k_pct": 0.3044,
-      "k_per_9": 8.22,
-      "xk_pct": 0.3044,
-      "k_pct_raw": 0.2857,
-      "ip": 53.7,
+      "k_pct": 0.2839,
+      "k_per_9": 7.67,
+      "xk_pct": 0.2839,
+      "k_pct_raw": 0.2609,
+      "ip": 61.3,
       "source": "savant"
     }
   },
@@ -928,13 +928,13 @@
     }
   },
   "Keider Montero_2026": {
-    "timestamp": "2026-05-08T17:02:40.992570",
+    "timestamp": "2026-05-14T20:51:41.933582",
     "data": {
-      "k_pct": 0.1869,
-      "k_per_9": 5.05,
-      "xk_pct": 0.1869,
-      "k_pct_raw": 0.188,
-      "ip": 44.3,
+      "k_pct": 0.1864,
+      "k_per_9": 5.03,
+      "xk_pct": 0.1864,
+      "k_pct_raw": 0.1871,
+      "ip": 51.7,
       "source": "savant"
     }
   },
@@ -961,13 +961,13 @@
     }
   },
   "Foster Griffin_2026": {
-    "timestamp": "2026-05-08T17:02:38.875427",
+    "timestamp": "2026-05-14T20:51:37.957116",
     "data": {
-      "k_pct": 0.2083,
-      "k_per_9": 5.62,
-      "xk_pct": 0.2083,
-      "k_pct_raw": 0.2025,
-      "ip": 54.3,
+      "k_pct": 0.2218,
+      "k_per_9": 5.99,
+      "xk_pct": 0.2218,
+      "k_pct_raw": 0.2211,
+      "ip": 63.3,
       "source": "savant"
     }
   },
@@ -3003,13 +3003,13 @@
     }
   },
   "Mason Montgomery_2026": {
-    "timestamp": "2026-04-27T17:15:38.594525",
+    "timestamp": "2026-05-14T20:51:36.411961",
     "data": {
-      "k_pct": 0.3521,
-      "k_per_9": 9.51,
-      "xk_pct": 0.3521,
-      "k_pct_raw": 0.4118,
-      "ip": 17.0,
+      "k_pct": 0.3235,
+      "k_per_9": 8.73,
+      "xk_pct": 0.3235,
+      "k_pct_raw": 0.3433,
+      "ip": 22.3,
       "source": "savant"
     }
   },
@@ -4546,13 +4546,13 @@
     }
   },
   "Chase Dollander_2026": {
-    "timestamp": "2026-05-08T17:02:33.305031",
+    "timestamp": "2026-05-14T20:51:03.482122",
     "data": {
-      "k_pct": 0.2448,
-      "k_per_9": 6.61,
-      "xk_pct": 0.2448,
-      "k_pct_raw": 0.2675,
-      "ip": 52.3,
+      "k_pct": 0.2412,
+      "k_per_9": 6.51,
+      "xk_pct": 0.2412,
+      "k_pct_raw": 0.2597,
+      "ip": 60.3,
       "source": "savant"
     }
   },
@@ -4850,6 +4850,28 @@
       "k_per_9": 6.71,
       "xk_pct": 0.2486,
       "source": "prior_season"
+    }
+  },
+  "prior_stats_666129_2025": {
+    "timestamp": "2026-05-14T20:51:43.950673",
+    "data": {
+      "k_pct": 0.224,
+      "bb_pct": 0.082,
+      "swstr_pct": 0.115,
+      "csw_pct": 0.27,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 88.0
+    }
+  },
+  "prior_stats_805673_2025": {
+    "timestamp": "2026-05-14T20:51:45.828174",
+    "data": {
+      "k_pct": 0.2486,
+      "bb_pct": 0.0678,
+      "swstr_pct": 0.139,
+      "csw_pct": 0.289,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 84.6
     }
   }
 }
