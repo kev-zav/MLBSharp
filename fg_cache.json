@@ -4888,5 +4888,27 @@
       "ip": 28.0,
       "source": "savant"
     }
+  },
+  "prior_stats_693855_2025": {
+    "timestamp": "2026-05-15T23:03:50.458905",
+    "data": {
+      "k_pct": 0.2645,
+      "bb_pct": 0.0744,
+      "swstr_pct": 0.1331,
+      "csw_pct": 0.2893,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 52.6
+    }
+  },
+  "Will Klein_2026": {
+    "timestamp": "2026-05-15T23:04:37.292031",
+    "data": {
+      "k_pct": 0.2693,
+      "k_per_9": 7.27,
+      "xk_pct": 0.2693,
+      "k_pct_raw": 0.2429,
+      "ip": 23.3,
+      "source": "savant"
+    }
   }
 }
