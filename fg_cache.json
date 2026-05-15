@@ -1575,13 +1575,13 @@
     }
   },
   "Joe Ryan_2026": {
-    "timestamp": "2026-05-09T16:42:27.644154",
+    "timestamp": "2026-05-15T20:39:26.197601",
     "data": {
-      "k_pct": 0.2452,
-      "k_per_9": 6.62,
-      "xk_pct": 0.2452,
-      "k_pct_raw": 0.2532,
-      "ip": 52.7,
+      "k_pct": 0.2415,
+      "k_per_9": 6.52,
+      "xk_pct": 0.2415,
+      "k_pct_raw": 0.2473,
+      "ip": 60.7,
       "source": "savant"
     }
   },
@@ -3553,12 +3553,14 @@
     }
   },
   "Coleman Crow_2026": {
-    "timestamp": "2026-04-17T20:08:52.292094",
+    "timestamp": "2026-05-15T20:39:24.420737",
     "data": {
-      "k_pct": 0.224,
-      "k_per_9": 6.05,
-      "xk_pct": 0.224,
-      "source": "prior_season"
+      "k_pct": 0.2153,
+      "k_per_9": 5.81,
+      "xk_pct": 0.2153,
+      "k_pct_raw": 0.1905,
+      "ip": 7.0,
+      "source": "savant"
     }
   },
   "prior_stats_663567_2025": {
@@ -4874,6 +4876,17 @@
       "csw_pct": 0.289,
       "ip_per_start": 4.9,
       "pitches_per_start": 84.6
+    }
+  },
+  "Ian Seymour_2026": {
+    "timestamp": "2026-05-15T20:39:23.145785",
+    "data": {
+      "k_pct": 0.2699,
+      "k_per_9": 7.29,
+      "xk_pct": 0.2699,
+      "k_pct_raw": 0.2738,
+      "ip": 28.0,
+      "source": "savant"
     }
   }
 }
