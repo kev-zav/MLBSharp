@@ -11,13 +11,13 @@
     }
   },
   "Eury P\u00e9rez_2026": {
-    "timestamp": "2026-05-12T17:54:12.546963",
+    "timestamp": "2026-05-17T20:12:18.274865",
     "data": {
-      "k_pct": 0.2533,
-      "k_per_9": 6.84,
-      "xk_pct": 0.2533,
-      "k_pct_raw": 0.2473,
-      "ip": 60.7,
+      "k_pct": 0.2594,
+      "k_per_9": 7.0,
+      "xk_pct": 0.2594,
+      "k_pct_raw": 0.256,
+      "ip": 69.0,
       "source": "savant"
     }
   },
@@ -2048,13 +2048,13 @@
     }
   },
   "Drew Rasmussen_2026": {
-    "timestamp": "2026-05-11T17:49:38.257118",
+    "timestamp": "2026-05-17T20:12:38.479326",
     "data": {
-      "k_pct": 0.2412,
-      "k_per_9": 6.51,
-      "xk_pct": 0.2412,
-      "k_pct_raw": 0.2517,
-      "ip": 49.0,
+      "k_pct": 0.2432,
+      "k_per_9": 6.57,
+      "xk_pct": 0.2432,
+      "k_pct_raw": 0.2529,
+      "ip": 56.7,
       "source": "savant"
     }
   },
@@ -4949,6 +4949,17 @@
       "k_per_9": 5.3,
       "xk_pct": 0.1964,
       "source": "prior_season"
+    }
+  },
+  "prior_stats_608337_2025": {
+    "timestamp": "2026-05-17T20:12:57.766416",
+    "data": {
+      "k_pct": 0.1964,
+      "bb_pct": 0.0909,
+      "swstr_pct": 0.1079,
+      "csw_pct": 0.2715,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 91.2
     }
   }
 }
