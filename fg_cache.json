@@ -5042,5 +5042,49 @@
       "xk_pct": 0.1538,
       "source": "prior_season"
     }
+  },
+  "prior_stats_663559_2025": {
+    "timestamp": "2026-05-19T20:58:33.393890",
+    "data": {
+      "k_pct": 0.1544,
+      "bb_pct": 0.0888,
+      "swstr_pct": 0.0845,
+      "csw_pct": 0.2536,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 75.1
+    }
+  },
+  "Jason Alexander_2026": {
+    "timestamp": "2026-05-19T20:58:35.067151",
+    "data": {
+      "k_pct": 0.1854,
+      "k_per_9": 5.01,
+      "xk_pct": 0.1854,
+      "k_pct_raw": 0.1765,
+      "ip": 11.3,
+      "source": "savant"
+    }
+  },
+  "prior_stats_641302_2025": {
+    "timestamp": "2026-05-19T20:58:56.914568",
+    "data": {
+      "k_pct": 0.1929,
+      "bb_pct": 0.0588,
+      "swstr_pct": 0.1029,
+      "csw_pct": 0.2726,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 30.8
+    }
+  },
+  "prior_stats_671111_2025": {
+    "timestamp": "2026-05-19T20:58:57.855854",
+    "data": {
+      "k_pct": 0.1538,
+      "bb_pct": 0.0577,
+      "swstr_pct": 0.103,
+      "csw_pct": 0.2727,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 33.0
+    }
   }
 }
