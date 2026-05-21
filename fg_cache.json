@@ -55,13 +55,13 @@
     }
   },
   "Joey Cantillo_2026": {
-    "timestamp": "2026-05-16T16:46:35.806032",
+    "timestamp": "2026-05-21T21:08:47.940696",
     "data": {
-      "k_pct": 0.2254,
-      "k_per_9": 6.09,
-      "xk_pct": 0.2254,
-      "k_pct_raw": 0.2116,
-      "ip": 63.0,
+      "k_pct": 0.2218,
+      "k_per_9": 5.99,
+      "xk_pct": 0.2218,
+      "k_pct_raw": 0.2085,
+      "ip": 70.3,
       "source": "savant"
     }
   },
@@ -444,13 +444,13 @@
     }
   },
   "Dustin May_2026": {
-    "timestamp": "2026-05-15T17:22:53.712413",
+    "timestamp": "2026-05-21T21:09:14.217190",
     "data": {
-      "k_pct": 0.1844,
-      "k_per_9": 4.98,
-      "xk_pct": 0.1844,
-      "k_pct_raw": 0.1758,
-      "ip": 60.7,
+      "k_pct": 0.1778,
+      "k_per_9": 4.8,
+      "xk_pct": 0.1778,
+      "k_pct_raw": 0.1683,
+      "ip": 69.3,
       "source": "savant"
     }
   },
@@ -741,13 +741,13 @@
     }
   },
   "Braxton Ashcraft_2026": {
-    "timestamp": "2026-05-15T17:22:05.119199",
+    "timestamp": "2026-05-21T21:09:08.914388",
     "data": {
-      "k_pct": 0.2611,
-      "k_per_9": 7.05,
-      "xk_pct": 0.2611,
-      "k_pct_raw": 0.267,
-      "ip": 63.7,
+      "k_pct": 0.2528,
+      "k_per_9": 6.83,
+      "xk_pct": 0.2528,
+      "k_pct_raw": 0.2557,
+      "ip": 73.0,
       "source": "savant"
     }
   },
@@ -1564,13 +1564,13 @@
     }
   },
   "Casey Mize_2026": {
-    "timestamp": "2026-05-16T16:46:04.561258",
+    "timestamp": "2026-05-21T21:08:50.512966",
     "data": {
-      "k_pct": 0.2553,
-      "k_per_9": 6.89,
-      "xk_pct": 0.2553,
-      "k_pct_raw": 0.2713,
-      "ip": 43.0,
+      "k_pct": 0.2512,
+      "k_per_9": 6.78,
+      "xk_pct": 0.2512,
+      "k_pct_raw": 0.2635,
+      "ip": 49.3,
       "source": "savant"
     }
   },
@@ -5127,6 +5127,17 @@
       "k_pct_raw": 0.1562,
       "ip": 42.7,
       "source": "savant"
+    }
+  },
+  "prior_stats_688642_2025": {
+    "timestamp": "2026-05-21T21:09:47.132295",
+    "data": {
+      "k_pct": 0.1314,
+      "bb_pct": 0.1168,
+      "swstr_pct": 0.1423,
+      "csw_pct": 0.2448,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 17.6
     }
   }
 }
