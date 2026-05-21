@@ -1,68 +1,7 @@
 {
   "date": "May 21, 2026",
-  "generated_at": "09:09 PM",
+  "generated_at": "11:10 PM",
   "all_pitchers": [
-    {
-      "pitcher_name": "Spencer Strider",
-      "pitcher_id": 675911,
-      "pitcher_team": "ATL",
-      "pitcher_hand": "R",
-      "opp_team": "MIA",
-      "venue": "loanDepot park",
-      "projected_ks": 5.6,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.15885,
-      "csw_pct": 0.30074999999999996,
-      "k_pct": 0.274,
-      "opp_k_pct": 0.2014,
-      "opp_chase": 0.2868,
-      "days_rest": 6,
-      "rolling_k_3": 6.0,
-      "rolling_k_5": 6.0,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 0,
-        "description": "Dome / Retractable Roof",
-        "adjustment": 1.0,
-        "indoor": true
-      },
-      "last5": [
-        {
-          "date": "05/03",
-          "k": 6,
-          "pitches": 87
-        },
-        {
-          "date": "05/09",
-          "k": 8,
-          "pitches": 91
-        },
-        {
-          "date": "05/15",
-          "k": 4,
-          "pitches": 84
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0134,
-        "1": 0.03,
-        "2": 0.0574,
-        "3": 0.0937,
-        "4": 0.1305,
-        "5": 0.1552,
-        "6": 0.1577,
-        "7": 0.1368,
-        "8": 0.1013,
-        "9": 0.0641,
-        "10+": 0.0598
-      }
-    },
     {
       "pitcher_name": "Carlos Rod\u00f3n",
       "pitcher_id": 607074,
@@ -120,19 +59,90 @@
       }
     },
     {
+      "pitcher_name": "David Peterson",
+      "pitcher_id": 656849,
+      "pitcher_team": "NYM",
+      "pitcher_hand": "L",
+      "opp_team": "WSH",
+      "venue": "Nationals Park",
+      "projected_ks": 5.3,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.1113,
+      "csw_pct": 0.2865,
+      "k_pct": 0.2213,
+      "opp_k_pct": 0.2248,
+      "opp_chase": 0.3068,
+      "days_rest": 5,
+      "rolling_k_3": 5.67,
+      "rolling_k_5": 4.8,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "04/23",
+          "k": 2,
+          "pitches": 45
+        },
+        {
+          "date": "04/29",
+          "k": 5,
+          "pitches": 80
+        },
+        {
+          "date": "05/04",
+          "k": 6,
+          "pitches": 69
+        },
+        {
+          "date": "05/10",
+          "k": 3,
+          "pitches": 77
+        },
+        {
+          "date": "05/16",
+          "k": 8,
+          "pitches": 82
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0174,
+        "1": 0.0372,
+        "2": 0.0678,
+        "3": 0.1055,
+        "4": 0.1401,
+        "5": 0.159,
+        "6": 0.1541,
+        "7": 0.1275,
+        "8": 0.0901,
+        "9": 0.0543,
+        "10+": 0.047
+      }
+    },
+    {
       "pitcher_name": "Jos\u00e9 Soriano",
       "pitcher_id": 667755,
       "pitcher_team": "LAA",
       "pitcher_hand": "R",
       "opp_team": "ATH",
       "venue": "Angel Stadium",
-      "projected_ks": 5.3,
-      "lineup_confirmed": false,
+      "projected_ks": 5.2,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1525,
       "csw_pct": 0.3176,
       "k_pct": 0.2653,
-      "opp_k_pct": 0.211,
-      "opp_chase": 0.2866,
+      "opp_k_pct": 0.2095,
+      "opp_chase": 0.2765,
       "days_rest": 5,
       "rolling_k_3": 6.0,
       "rolling_k_5": 5.6,
@@ -177,17 +187,88 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0174,
-        "1": 0.0372,
-        "2": 0.0678,
-        "3": 0.1055,
-        "4": 0.1401,
-        "5": 0.159,
-        "6": 0.1541,
-        "7": 0.1275,
-        "8": 0.0901,
-        "9": 0.0543,
-        "10+": 0.047
+        "0": 0.019,
+        "1": 0.0398,
+        "2": 0.0714,
+        "3": 0.1094,
+        "4": 0.1431,
+        "5": 0.1598,
+        "6": 0.1524,
+        "7": 0.1241,
+        "8": 0.0863,
+        "9": 0.0513,
+        "10+": 0.0432
+      }
+    },
+    {
+      "pitcher_name": "Cade Cavalli",
+      "pitcher_id": 676917,
+      "pitcher_team": "WSH",
+      "pitcher_hand": "R",
+      "opp_team": "NYM",
+      "venue": "Nationals Park",
+      "projected_ks": 4.8,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.1118,
+      "csw_pct": 0.2985,
+      "k_pct": 0.2281,
+      "opp_k_pct": 0.2085,
+      "opp_chase": 0.2939,
+      "days_rest": 5,
+      "rolling_k_3": 4.67,
+      "rolling_k_5": 6.8,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "04/23",
+          "k": 10,
+          "pitches": 85
+        },
+        {
+          "date": "04/29",
+          "k": 10,
+          "pitches": 97
+        },
+        {
+          "date": "05/05",
+          "k": 2,
+          "pitches": 76
+        },
+        {
+          "date": "05/10",
+          "k": 4,
+          "pitches": 95
+        },
+        {
+          "date": "05/16",
+          "k": 8,
+          "pitches": 94
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0262,
+        "1": 0.0516,
+        "2": 0.0868,
+        "3": 0.1249,
+        "4": 0.1533,
+        "5": 0.1608,
+        "6": 0.1439,
+        "7": 0.1101,
+        "8": 0.0719,
+        "9": 0.0401,
+        "10+": 0.0306
       }
     },
     {
@@ -269,12 +350,12 @@
       "opp_team": "LAA",
       "venue": "Angel Stadium",
       "projected_ks": 4.5,
-      "lineup_confirmed": false,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1035,
       "csw_pct": 0.2609,
       "k_pct": 0.2144,
-      "opp_k_pct": 0.2659,
-      "opp_chase": 0.3018,
+      "opp_k_pct": 0.2424,
+      "opp_chase": 0.3144,
       "days_rest": 5,
       "rolling_k_3": 4.67,
       "rolling_k_5": 5.4,
@@ -472,77 +553,6 @@
         "8": 0.0465,
         "9": 0.0228,
         "10+": 0.0144
-      }
-    },
-    {
-      "pitcher_name": "Sandy Alcantara",
-      "pitcher_id": 645261,
-      "pitcher_team": "MIA",
-      "pitcher_hand": "R",
-      "opp_team": "ATL",
-      "venue": "loanDepot park",
-      "projected_ks": 3.8,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.1149,
-      "csw_pct": 0.2816,
-      "k_pct": 0.1695,
-      "opp_k_pct": 0.2156,
-      "opp_chase": 0.313,
-      "days_rest": 5,
-      "rolling_k_3": 4.33,
-      "rolling_k_5": 4.2,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 0,
-        "description": "Dome / Retractable Roof",
-        "adjustment": 1.0,
-        "indoor": true
-      },
-      "last5": [
-        {
-          "date": "04/24",
-          "k": 4,
-          "pitches": 108
-        },
-        {
-          "date": "04/29",
-          "k": 4,
-          "pitches": 104
-        },
-        {
-          "date": "05/05",
-          "k": 5,
-          "pitches": 106
-        },
-        {
-          "date": "05/10",
-          "k": 3,
-          "pitches": 89
-        },
-        {
-          "date": "05/16",
-          "k": 5,
-          "pitches": 101
-        }
-      ],
-      "k_distribution": {
-        "0": 0.053,
-        "1": 0.0892,
-        "2": 0.1282,
-        "3": 0.1574,
-        "4": 0.1651,
-        "5": 0.1478,
-        "6": 0.113,
-        "7": 0.0738,
-        "8": 0.0411,
-        "9": 0.0196,
-        "10+": 0.0118
       }
     },
     {
