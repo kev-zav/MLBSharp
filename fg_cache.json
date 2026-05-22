@@ -664,13 +664,13 @@
     }
   },
   "Bryce Elder_2026": {
-    "timestamp": "2026-05-16T16:46:39.834531",
+    "timestamp": "2026-05-22T20:53:54.228076",
     "data": {
-      "k_pct": 0.2331,
-      "k_per_9": 6.29,
-      "xk_pct": 0.2331,
-      "k_pct_raw": 0.2442,
-      "ip": 72.3,
+      "k_pct": 0.2187,
+      "k_per_9": 5.9,
+      "xk_pct": 0.2187,
+      "k_pct_raw": 0.2249,
+      "ip": 83.0,
       "source": "savant"
     }
   },
@@ -4645,13 +4645,13 @@
     }
   },
   "Richard Lovelady_2026": {
-    "timestamp": "2026-05-17T16:45:25.805323",
+    "timestamp": "2026-05-22T20:53:52.629400",
     "data": {
-      "k_pct": 0.2127,
-      "k_per_9": 5.74,
-      "xk_pct": 0.2127,
-      "k_pct_raw": 0.2143,
-      "ip": 28.0,
+      "k_pct": 0.2133,
+      "k_per_9": 5.76,
+      "xk_pct": 0.2133,
+      "k_pct_raw": 0.2151,
+      "ip": 31.0,
       "source": "savant"
     }
   },
@@ -4689,13 +4689,13 @@
     }
   },
   "Keegan Akin_2026": {
-    "timestamp": "2026-05-10T16:42:46.457306",
+    "timestamp": "2026-05-22T20:53:51.247435",
     "data": {
-      "k_pct": 0.2087,
-      "k_per_9": 5.63,
-      "xk_pct": 0.2087,
-      "k_pct_raw": 0.1852,
-      "ip": 9.0,
+      "k_pct": 0.2054,
+      "k_per_9": 5.55,
+      "xk_pct": 0.2054,
+      "k_pct_raw": 0.186,
+      "ip": 14.3,
       "source": "savant"
     }
   },
@@ -5149,6 +5149,17 @@
       "k_per_9": 6.05,
       "xk_pct": 0.224,
       "source": "prior_season"
+    }
+  },
+  "prior_stats_543037_2025": {
+    "timestamp": "2026-05-22T20:53:28.325799",
+    "data": {
+      "k_pct": 0.224,
+      "bb_pct": 0.082,
+      "swstr_pct": 0.115,
+      "csw_pct": 0.27,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 88.0
     }
   }
 }
