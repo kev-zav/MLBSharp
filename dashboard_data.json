@@ -1,7 +1,78 @@
 {
   "date": "May 23, 2026",
-  "generated_at": "08:14 PM",
+  "generated_at": "11:00 PM",
   "all_pitchers": [
+    {
+      "pitcher_name": "Paul Skenes",
+      "pitcher_id": 694973,
+      "pitcher_team": "PIT",
+      "pitcher_hand": "R",
+      "opp_team": "TOR",
+      "venue": "Rogers Centre",
+      "projected_ks": 7.1,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.1341,
+      "csw_pct": 0.2778,
+      "k_pct": 0.2996,
+      "opp_k_pct": 0.224,
+      "opp_chase": 0.3,
+      "days_rest": 6,
+      "rolling_k_3": 8.0,
+      "rolling_k_5": 8.0,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 0,
+        "description": "Dome / Retractable Roof",
+        "adjustment": 1.0,
+        "indoor": true
+      },
+      "last5": [
+        {
+          "date": "04/24",
+          "k": 7,
+          "pitches": 93
+        },
+        {
+          "date": "04/30",
+          "k": 9,
+          "pitches": 102
+        },
+        {
+          "date": "05/06",
+          "k": 7,
+          "pitches": 97
+        },
+        {
+          "date": "05/12",
+          "k": 10,
+          "pitches": 98
+        },
+        {
+          "date": "05/17",
+          "k": 7,
+          "pitches": 92
+        }
+      ],
+      "k_distribution": {
+        "0": 0.003,
+        "1": 0.0084,
+        "2": 0.0204,
+        "3": 0.0421,
+        "4": 0.0743,
+        "5": 0.112,
+        "6": 0.1442,
+        "7": 0.1586,
+        "8": 0.1489,
+        "9": 0.1194,
+        "10+": 0.1687
+      }
+    },
     {
       "pitcher_name": "Nathan Eovaldi",
       "pitcher_id": 543135,
@@ -9,13 +80,13 @@
       "pitcher_hand": "R",
       "opp_team": "LAA",
       "venue": "Angel Stadium",
-      "projected_ks": 5.8,
+      "projected_ks": 6.1,
       "lineup_confirmed": false,
       "swstr_pct": 0.1689,
       "csw_pct": 0.3086,
       "k_pct": 0.2425,
-      "opp_k_pct": 0.2635,
-      "opp_chase": 0.3063,
+      "opp_k_pct": 0.224,
+      "opp_chase": 0.3,
       "days_rest": 6,
       "rolling_k_3": 7.33,
       "rolling_k_5": 5.6,
@@ -60,36 +131,36 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0112,
-        "1": 0.0259,
-        "2": 0.051,
-        "3": 0.0859,
-        "4": 0.1235,
-        "5": 0.1516,
-        "6": 0.159,
-        "7": 0.1423,
-        "8": 0.1088,
-        "9": 0.0711,
-        "10+": 0.0698
+        "0": 0.0084,
+        "1": 0.0204,
+        "2": 0.0422,
+        "3": 0.0745,
+        "4": 0.1124,
+        "5": 0.1447,
+        "6": 0.1591,
+        "7": 0.1493,
+        "8": 0.1197,
+        "9": 0.082,
+        "10+": 0.0873
       }
     },
     {
-      "pitcher_name": "Zack Wheeler",
-      "pitcher_id": 554430,
-      "pitcher_team": "PHI",
+      "pitcher_name": "Max Meyer",
+      "pitcher_id": 676974,
+      "pitcher_team": "MIA",
       "pitcher_hand": "R",
-      "opp_team": "CLE",
-      "venue": "Citizens Bank Park",
-      "projected_ks": 5.2,
+      "opp_team": "NYM",
+      "venue": "loanDepot park",
+      "projected_ks": 6.0,
       "lineup_confirmed": true,
-      "swstr_pct": 0.13305,
-      "csw_pct": 0.2835,
-      "k_pct": 0.2774,
-      "opp_k_pct": 0.2062,
-      "opp_chase": 0.2746,
-      "days_rest": 6,
-      "rolling_k_3": 5.33,
-      "rolling_k_5": 6.0,
+      "swstr_pct": 0.1539,
+      "csw_pct": 0.3044,
+      "k_pct": 0.2608,
+      "opp_k_pct": 0.224,
+      "opp_chase": 0.3,
+      "days_rest": 5,
+      "rolling_k_3": 6.67,
+      "rolling_k_5": 6.4,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -98,50 +169,50 @@
       },
       "weather": {
         "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
+        "wind_mph": 0,
+        "description": "Dome / Retractable Roof",
         "adjustment": 1.0,
-        "indoor": false
+        "indoor": true
       },
       "last5": [
         {
-          "date": "04/25",
-          "k": 6,
-          "pitches": 84
+          "date": "04/26",
+          "k": 5,
+          "pitches": 77
         },
         {
-          "date": "05/01",
-          "k": 8,
+          "date": "05/02",
+          "k": 7,
+          "pitches": 83
+        },
+        {
+          "date": "05/07",
+          "k": 5,
           "pitches": 94
         },
         {
-          "date": "05/06",
-          "k": 4,
-          "pitches": 98
+          "date": "05/13",
+          "k": 9,
+          "pitches": 96
         },
         {
-          "date": "05/12",
-          "k": 4,
-          "pitches": 87
-        },
-        {
-          "date": "05/17",
-          "k": 8,
-          "pitches": 98
+          "date": "05/18",
+          "k": 6,
+          "pitches": 97
         }
       ],
       "k_distribution": {
-        "0": 0.019,
-        "1": 0.0398,
-        "2": 0.0714,
-        "3": 0.1094,
-        "4": 0.1431,
-        "5": 0.1598,
-        "6": 0.1524,
-        "7": 0.1241,
-        "8": 0.0863,
-        "9": 0.0513,
-        "10+": 0.0432
+        "0": 0.0093,
+        "1": 0.0221,
+        "2": 0.045,
+        "3": 0.0783,
+        "4": 0.1161,
+        "5": 0.1472,
+        "6": 0.1593,
+        "7": 0.1472,
+        "8": 0.1161,
+        "9": 0.0783,
+        "10+": 0.0811
       }
     },
     {
@@ -152,12 +223,12 @@
       "opp_team": "SD",
       "venue": "Petco Park",
       "projected_ks": 4.9,
-      "lineup_confirmed": false,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1087,
       "csw_pct": 0.2768,
       "k_pct": 0.2241,
-      "opp_k_pct": 0.2244,
-      "opp_chase": 0.3162,
+      "opp_k_pct": 0.224,
+      "opp_chase": 0.3,
       "days_rest": 5,
       "rolling_k_3": 7.0,
       "rolling_k_5": 5.4,
@@ -216,19 +287,90 @@
       }
     },
     {
+      "pitcher_name": "Freddy Peralta",
+      "pitcher_id": 642547,
+      "pitcher_team": "NYM",
+      "pitcher_hand": "R",
+      "opp_team": "MIA",
+      "venue": "loanDepot park",
+      "projected_ks": 4.8,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.1311,
+      "csw_pct": 0.2825,
+      "k_pct": 0.2421,
+      "opp_k_pct": 0.224,
+      "opp_chase": 0.3,
+      "days_rest": 6,
+      "rolling_k_3": 4.0,
+      "rolling_k_5": 5.2,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 0,
+        "description": "Dome / Retractable Roof",
+        "adjustment": 1.0,
+        "indoor": true
+      },
+      "last5": [
+        {
+          "date": "04/24",
+          "k": 8,
+          "pitches": 95
+        },
+        {
+          "date": "04/30",
+          "k": 6,
+          "pitches": 90
+        },
+        {
+          "date": "05/06",
+          "k": 1,
+          "pitches": 91
+        },
+        {
+          "date": "05/12",
+          "k": 7,
+          "pitches": 100
+        },
+        {
+          "date": "05/17",
+          "k": 4,
+          "pitches": 96
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0262,
+        "1": 0.0516,
+        "2": 0.0868,
+        "3": 0.1249,
+        "4": 0.1533,
+        "5": 0.1608,
+        "6": 0.1439,
+        "7": 0.1101,
+        "8": 0.0719,
+        "9": 0.0401,
+        "10+": 0.0306
+      }
+    },
+    {
       "pitcher_name": "Walbert Ure\u00f1a",
       "pitcher_id": 700712,
       "pitcher_team": "LAA",
       "pitcher_hand": "R",
       "opp_team": "TEX",
       "venue": "Angel Stadium",
-      "projected_ks": 4.5,
+      "projected_ks": 4.7,
       "lineup_confirmed": false,
       "swstr_pct": 0.119,
       "csw_pct": 0.2569,
       "k_pct": 0.2119,
-      "opp_k_pct": 0.2191,
-      "opp_chase": 0.3011,
+      "opp_k_pct": 0.224,
+      "opp_chase": 0.3,
       "days_rest": 5,
       "rolling_k_3": 4.33,
       "rolling_k_5": 4.0,
@@ -273,17 +415,88 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0328,
-        "1": 0.0617,
-        "2": 0.099,
-        "3": 0.1358,
-        "4": 0.159,
-        "5": 0.159,
-        "6": 0.1358,
-        "7": 0.099,
-        "8": 0.0617,
-        "9": 0.0328,
-        "10+": 0.0233
+        "0": 0.0282,
+        "1": 0.0548,
+        "2": 0.0909,
+        "3": 0.1286,
+        "4": 0.1554,
+        "5": 0.1604,
+        "6": 0.1414,
+        "7": 0.1064,
+        "8": 0.0684,
+        "9": 0.0375,
+        "10+": 0.028
+      }
+    },
+    {
+      "pitcher_name": "Kai-Wei Teng",
+      "pitcher_id": 678906,
+      "pitcher_team": "HOU",
+      "pitcher_hand": "R",
+      "opp_team": "CHC",
+      "venue": "Wrigley Field",
+      "projected_ks": 4.4,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.1016,
+      "csw_pct": 0.3028,
+      "k_pct": 0.2518,
+      "opp_k_pct": 0.224,
+      "opp_chase": 0.3,
+      "days_rest": 7,
+      "rolling_k_3": 3.33,
+      "rolling_k_5": 2.8,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "04/28",
+          "k": 2,
+          "pitches": 42
+        },
+        {
+          "date": "05/02",
+          "k": 2,
+          "pitches": 23
+        },
+        {
+          "date": "05/04",
+          "k": 2,
+          "pitches": 31
+        },
+        {
+          "date": "05/10",
+          "k": 1,
+          "pitches": 63
+        },
+        {
+          "date": "05/16",
+          "k": 7,
+          "pitches": 76
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0353,
+        "1": 0.0653,
+        "2": 0.1032,
+        "3": 0.1393,
+        "4": 0.1605,
+        "5": 0.158,
+        "6": 0.1328,
+        "7": 0.0954,
+        "8": 0.0584,
+        "9": 0.0306,
+        "10+": 0.0212
       }
     },
     {
@@ -293,13 +506,13 @@
       "pitcher_hand": "R",
       "opp_team": "COL",
       "venue": "Chase Field",
-      "projected_ks": 4.4,
-      "lineup_confirmed": false,
+      "projected_ks": 4.3,
+      "lineup_confirmed": true,
       "swstr_pct": 0.0858,
       "csw_pct": 0.2562,
       "k_pct": 0.1699,
-      "opp_k_pct": 0.2238,
-      "opp_chase": 0.3379,
+      "opp_k_pct": 0.224,
+      "opp_chase": 0.3,
       "days_rest": 5,
       "rolling_k_3": 4.67,
       "rolling_k_5": 4.0,
@@ -344,68 +557,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0353,
-        "1": 0.0653,
-        "2": 0.1032,
-        "3": 0.1393,
-        "4": 0.1605,
-        "5": 0.158,
-        "6": 0.1328,
-        "7": 0.0954,
-        "8": 0.0584,
-        "9": 0.0306,
-        "10+": 0.0212
-      }
-    },
-    {
-      "pitcher_name": "Lucas Giolito",
-      "pitcher_id": 608337,
-      "pitcher_team": "SD",
-      "pitcher_hand": "R",
-      "opp_team": "ATH",
-      "venue": "Petco Park",
-      "projected_ks": 4.2,
-      "lineup_confirmed": false,
-      "swstr_pct": 0.10046666666666668,
-      "csw_pct": 0.26633333333333337,
-      "k_pct": 0.1848,
-      "opp_k_pct": 0.2097,
-      "opp_chase": 0.2873,
-      "days_rest": 6,
-      "rolling_k_3": 3.0,
-      "rolling_k_5": 3.0,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "05/17",
-          "k": 3,
-          "pitches": 79
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0406,
-        "1": 0.0728,
-        "2": 0.1115,
-        "3": 0.1459,
-        "4": 0.1629,
-        "5": 0.1554,
-        "6": 0.1265,
-        "7": 0.088,
-        "8": 0.0523,
-        "9": 0.0265,
-        "10+": 0.0175
+        "0": 0.0379,
+        "1": 0.069,
+        "2": 0.1074,
+        "3": 0.1426,
+        "4": 0.1618,
+        "5": 0.1568,
+        "6": 0.1297,
+        "7": 0.0917,
+        "8": 0.0553,
+        "9": 0.0285,
+        "10+": 0.0193
       }
     },
     {
@@ -415,13 +577,13 @@
       "pitcher_hand": "R",
       "opp_team": "CIN",
       "venue": "Great American Ball Park",
-      "projected_ks": 4.1,
+      "projected_ks": 4.2,
       "lineup_confirmed": true,
       "swstr_pct": 0.1064,
       "csw_pct": 0.2914,
       "k_pct": 0.1805,
-      "opp_k_pct": 0.2294,
-      "opp_chase": 0.2793,
+      "opp_k_pct": 0.224,
+      "opp_chase": 0.3,
       "days_rest": 6,
       "rolling_k_3": 4.67,
       "rolling_k_5": 5.6,
@@ -466,36 +628,36 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0435,
-        "1": 0.0768,
-        "2": 0.1157,
-        "3": 0.149,
-        "4": 0.1638,
-        "5": 0.1538,
-        "6": 0.1233,
-        "7": 0.0844,
-        "8": 0.0493,
-        "9": 0.0246,
-        "10+": 0.0159
+        "0": 0.0406,
+        "1": 0.0728,
+        "2": 0.1115,
+        "3": 0.1459,
+        "4": 0.1629,
+        "5": 0.1554,
+        "6": 0.1265,
+        "7": 0.088,
+        "8": 0.0523,
+        "9": 0.0265,
+        "10+": 0.0175
       }
     },
     {
-      "pitcher_name": "Slade Cecconi",
-      "pitcher_id": 677944,
-      "pitcher_team": "CLE",
+      "pitcher_name": "Lucas Giolito",
+      "pitcher_id": 608337,
+      "pitcher_team": "SD",
       "pitcher_hand": "R",
-      "opp_team": "PHI",
-      "venue": "Citizens Bank Park",
-      "projected_ks": 4.1,
+      "opp_team": "ATH",
+      "venue": "Petco Park",
+      "projected_ks": 4.2,
       "lineup_confirmed": true,
-      "swstr_pct": 0.094,
-      "csw_pct": 0.2661,
-      "k_pct": 0.1849,
-      "opp_k_pct": 0.2231,
-      "opp_chase": 0.3183,
-      "days_rest": 5,
-      "rolling_k_3": 4.67,
-      "rolling_k_5": 4.4,
+      "swstr_pct": 0.10046666666666668,
+      "csw_pct": 0.26633333333333337,
+      "k_pct": 0.1848,
+      "opp_k_pct": 0.224,
+      "opp_chase": 0.3,
+      "days_rest": 6,
+      "rolling_k_3": 3.0,
+      "rolling_k_5": 3.0,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -511,43 +673,23 @@
       },
       "last5": [
         {
-          "date": "04/26",
-          "k": 5,
-          "pitches": 90
-        },
-        {
-          "date": "05/02",
+          "date": "05/17",
           "k": 3,
-          "pitches": 70
-        },
-        {
-          "date": "05/07",
-          "k": 3,
-          "pitches": 82
-        },
-        {
-          "date": "05/12",
-          "k": 7,
-          "pitches": 89
-        },
-        {
-          "date": "05/18",
-          "k": 4,
-          "pitches": 96
+          "pitches": 79
         }
       ],
       "k_distribution": {
-        "0": 0.0435,
-        "1": 0.0768,
-        "2": 0.1157,
-        "3": 0.149,
-        "4": 0.1638,
-        "5": 0.1538,
-        "6": 0.1233,
-        "7": 0.0844,
-        "8": 0.0493,
-        "9": 0.0246,
-        "10+": 0.0159
+        "0": 0.0406,
+        "1": 0.0728,
+        "2": 0.1115,
+        "3": 0.1459,
+        "4": 0.1629,
+        "5": 0.1554,
+        "6": 0.1265,
+        "7": 0.088,
+        "8": 0.0523,
+        "9": 0.0265,
+        "10+": 0.0175
       }
     },
     {
@@ -557,13 +699,13 @@
       "pitcher_hand": "R",
       "opp_team": "MIL",
       "venue": "American Family Field",
-      "projected_ks": 3.8,
+      "projected_ks": 4.1,
       "lineup_confirmed": true,
       "swstr_pct": 0.1407,
       "csw_pct": 0.2869,
       "k_pct": 0.2051,
-      "opp_k_pct": 0.2041,
-      "opp_chase": 0.271,
+      "opp_k_pct": 0.224,
+      "opp_chase": 0.3,
       "days_rest": 6,
       "rolling_k_3": 5.67,
       "rolling_k_5": 4.8,
@@ -608,17 +750,149 @@
         }
       ],
       "k_distribution": {
-        "0": 0.053,
-        "1": 0.0892,
-        "2": 0.1282,
-        "3": 0.1574,
-        "4": 0.1651,
-        "5": 0.1478,
-        "6": 0.113,
-        "7": 0.0738,
-        "8": 0.0411,
-        "9": 0.0196,
-        "10+": 0.0118
+        "0": 0.0435,
+        "1": 0.0768,
+        "2": 0.1157,
+        "3": 0.149,
+        "4": 0.1638,
+        "5": 0.1538,
+        "6": 0.1233,
+        "7": 0.0844,
+        "8": 0.0493,
+        "9": 0.0246,
+        "10+": 0.0159
+      }
+    },
+    {
+      "pitcher_name": "Stephen Kolek",
+      "pitcher_id": 663568,
+      "pitcher_team": "KC",
+      "pitcher_hand": "R",
+      "opp_team": "SEA",
+      "venue": "Kauffman Stadium",
+      "projected_ks": 4.0,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.07995,
+      "csw_pct": 0.25915,
+      "k_pct": 0.1706,
+      "opp_k_pct": 0.224,
+      "opp_chase": 0.3,
+      "days_rest": 6,
+      "rolling_k_3": 4.0,
+      "rolling_k_5": 4.0,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "05/05",
+          "k": 3,
+          "pitches": 83
+        },
+        {
+          "date": "05/12",
+          "k": 6,
+          "pitches": 94
+        },
+        {
+          "date": "05/17",
+          "k": 3,
+          "pitches": 82
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0465,
+        "1": 0.0808,
+        "2": 0.1199,
+        "3": 0.1519,
+        "4": 0.1644,
+        "5": 0.1519,
+        "6": 0.1199,
+        "7": 0.0808,
+        "8": 0.0465,
+        "9": 0.0228,
+        "10+": 0.0144
+      }
+    },
+    {
+      "pitcher_name": "Colin Rea",
+      "pitcher_id": 607067,
+      "pitcher_team": "CHC",
+      "pitcher_hand": "R",
+      "opp_team": "HOU",
+      "venue": "Wrigley Field",
+      "projected_ks": 3.6,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.0998,
+      "csw_pct": 0.2685,
+      "k_pct": 0.1928,
+      "opp_k_pct": 0.224,
+      "opp_chase": 0.3,
+      "days_rest": 6,
+      "rolling_k_3": 3.33,
+      "rolling_k_5": 4.0,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "04/25",
+          "k": 4,
+          "pitches": 92
+        },
+        {
+          "date": "05/01",
+          "k": 6,
+          "pitches": 102
+        },
+        {
+          "date": "05/06",
+          "k": 5,
+          "pitches": 98
+        },
+        {
+          "date": "05/12",
+          "k": 1,
+          "pitches": 80
+        },
+        {
+          "date": "05/17",
+          "k": 4,
+          "pitches": 83
+        }
+      ],
+      "k_distribution": {
+        "0": 0.06,
+        "1": 0.0979,
+        "2": 0.1364,
+        "3": 0.1623,
+        "4": 0.1649,
+        "5": 0.143,
+        "6": 0.106,
+        "7": 0.067,
+        "8": 0.0362,
+        "9": 0.0167,
+        "10+": 0.0096
       }
     },
     {
@@ -628,13 +902,13 @@
       "pitcher_hand": "R",
       "opp_team": "STL",
       "venue": "Great American Ball Park",
-      "projected_ks": 3.2,
+      "projected_ks": 3.0,
       "lineup_confirmed": true,
       "swstr_pct": 0.1086,
       "csw_pct": 0.2549,
       "k_pct": 0.1747,
-      "opp_k_pct": 0.2241,
-      "opp_chase": 0.2943,
+      "opp_k_pct": 0.224,
+      "opp_chase": 0.3,
       "days_rest": 7,
       "rolling_k_3": 1.67,
       "rolling_k_5": 3.2,
@@ -679,17 +953,88 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0759,
-        "1": 0.1163,
-        "2": 0.152,
-        "3": 0.1698,
-        "4": 0.162,
-        "5": 0.1319,
-        "6": 0.0917,
-        "7": 0.0545,
-        "8": 0.0276,
-        "9": 0.012,
-        "10+": 0.0063
+        "0": 0.0847,
+        "1": 0.1258,
+        "2": 0.1594,
+        "3": 0.1724,
+        "4": 0.1594,
+        "5": 0.1258,
+        "6": 0.0847,
+        "7": 0.0488,
+        "8": 0.024,
+        "9": 0.0101,
+        "10+": 0.0051
+      }
+    },
+    {
+      "pitcher_name": "Patrick Corbin",
+      "pitcher_id": 571578,
+      "pitcher_team": "TOR",
+      "pitcher_hand": "L",
+      "opp_team": "PIT",
+      "venue": "Rogers Centre",
+      "projected_ks": 3.0,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.089,
+      "csw_pct": 0.2249,
+      "k_pct": 0.1608,
+      "opp_k_pct": 0.224,
+      "opp_chase": 0.3,
+      "days_rest": 5,
+      "rolling_k_3": 1.67,
+      "rolling_k_5": 2.6,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 0,
+        "description": "Dome / Retractable Roof",
+        "adjustment": 1.0,
+        "indoor": true
+      },
+      "last5": [
+        {
+          "date": "04/26",
+          "k": 4,
+          "pitches": 84
+        },
+        {
+          "date": "05/01",
+          "k": 4,
+          "pitches": 79
+        },
+        {
+          "date": "05/06",
+          "k": 1,
+          "pitches": 61
+        },
+        {
+          "date": "05/12",
+          "k": 1,
+          "pitches": 86
+        },
+        {
+          "date": "05/18",
+          "k": 3,
+          "pitches": 79
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0847,
+        "1": 0.1258,
+        "2": 0.1594,
+        "3": 0.1724,
+        "4": 0.1594,
+        "5": 0.1258,
+        "6": 0.0847,
+        "7": 0.0488,
+        "8": 0.024,
+        "9": 0.0101,
+        "10+": 0.0051
       }
     },
     {
@@ -704,8 +1049,8 @@
       "swstr_pct": 0.09855000000000001,
       "csw_pct": 0.26883333333333337,
       "k_pct": 0.1668,
-      "opp_k_pct": 0.2147,
-      "opp_chase": 0.2936,
+      "opp_k_pct": 0.224,
+      "opp_chase": 0.3,
       "days_rest": 6,
       "rolling_k_3": 3.0,
       "rolling_k_5": 3.0,
@@ -750,13 +1095,13 @@
       "pitcher_hand": "R",
       "opp_team": "CIN",
       "venue": "Great American Ball Park",
-      "projected_ks": 2.8,
-      "lineup_confirmed": false,
+      "projected_ks": 2.9,
+      "lineup_confirmed": true,
       "swstr_pct": 0.0974,
       "csw_pct": 0.2679,
       "k_pct": 0.1781,
-      "opp_k_pct": 0.2322,
-      "opp_chase": 0.2604,
+      "opp_k_pct": 0.224,
+      "opp_chase": 0.3,
       "days_rest": 7,
       "rolling_k_3": 4.0,
       "rolling_k_5": 4.2,
@@ -801,17 +1146,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0942,
-        "1": 0.1354,
-        "2": 0.1662,
-        "3": 0.1743,
-        "4": 0.1561,
-        "5": 0.1193,
-        "6": 0.0779,
-        "7": 0.0434,
-        "8": 0.0207,
-        "9": 0.0084,
-        "10+": 0.0041
+        "0": 0.0894,
+        "1": 0.1306,
+        "2": 0.1629,
+        "3": 0.1735,
+        "4": 0.1578,
+        "5": 0.1226,
+        "6": 0.0813,
+        "7": 0.0461,
+        "8": 0.0223,
+        "9": 0.0092,
+        "10+": 0.0045
       }
     },
     {
@@ -822,12 +1167,12 @@
       "opp_team": "STL",
       "venue": "Great American Ball Park",
       "projected_ks": 2.8,
-      "lineup_confirmed": false,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1388,
       "csw_pct": 0.2811166666666667,
       "k_pct": 0.1386,
-      "opp_k_pct": 0.2222,
-      "opp_chase": 0.3108,
+      "opp_k_pct": 0.224,
+      "opp_chase": 0.3,
       "days_rest": 19,
       "rolling_k_3": 1.0,
       "rolling_k_5": 1.0,
@@ -866,5 +1211,5 @@
       }
     }
   ],
-  "total_pitchers": 13
+  "total_pitchers": 18
 }
