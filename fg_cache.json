@@ -2981,13 +2981,13 @@
     }
   },
   "PJ Poulin_2026": {
-    "timestamp": "2026-05-03T16:37:56.387848",
+    "timestamp": "2026-05-25T20:48:39.907974",
     "data": {
-      "k_pct": 0.1963,
-      "k_per_9": 5.3,
-      "xk_pct": 0.1963,
-      "k_pct_raw": 0.1515,
-      "ip": 22.0,
+      "k_pct": 0.197,
+      "k_per_9": 5.32,
+      "xk_pct": 0.197,
+      "k_pct_raw": 0.1667,
+      "ip": 32.0,
       "source": "savant"
     }
   },
@@ -4242,13 +4242,13 @@
     }
   },
   "Griffin Canning_2026": {
-    "timestamp": "2026-05-19T17:58:09.305533",
+    "timestamp": "2026-05-25T20:48:48.584575",
     "data": {
-      "k_pct": 0.2315,
-      "k_per_9": 6.25,
-      "xk_pct": 0.2315,
-      "k_pct_raw": 0.2545,
-      "ip": 18.3,
+      "k_pct": 0.2342,
+      "k_per_9": 6.32,
+      "xk_pct": 0.2342,
+      "k_pct_raw": 0.2533,
+      "ip": 25.0,
       "source": "savant"
     }
   },
@@ -5228,6 +5228,17 @@
       "k_pct_raw": 0.25,
       "ip": 40.0,
       "source": "savant"
+    }
+  },
+  "prior_stats_685299_2025": {
+    "timestamp": "2026-05-25T20:49:00.288602",
+    "data": {
+      "k_pct": 0.184,
+      "bb_pct": 0.0504,
+      "swstr_pct": 0.0956,
+      "csw_pct": 0.2394,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 83.0
     }
   }
 }
