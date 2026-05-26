@@ -433,13 +433,13 @@
     }
   },
   "Chase Burns_2026": {
-    "timestamp": "2026-05-19T17:57:42.975533",
+    "timestamp": "2026-05-26T21:09:32.045617",
     "data": {
-      "k_pct": 0.2857,
-      "k_per_9": 7.71,
-      "xk_pct": 0.2857,
-      "k_pct_raw": 0.2657,
-      "ip": 69.0,
+      "k_pct": 0.2971,
+      "k_per_9": 8.02,
+      "xk_pct": 0.2971,
+      "k_pct_raw": 0.2819,
+      "ip": 75.7,
       "source": "savant"
     }
   },
@@ -1377,13 +1377,13 @@
     }
   },
   "David Peterson_2026": {
-    "timestamp": "2026-05-21T17:50:35.933168",
+    "timestamp": "2026-05-26T21:09:35.470420",
     "data": {
-      "k_pct": 0.2213,
-      "k_per_9": 5.98,
-      "xk_pct": 0.2213,
-      "k_pct_raw": 0.2255,
-      "ip": 68.0,
+      "k_pct": 0.2141,
+      "k_per_9": 5.78,
+      "xk_pct": 0.2141,
+      "k_pct_raw": 0.2159,
+      "ip": 75.7,
       "source": "savant"
     }
   },
@@ -5247,6 +5247,26 @@
       "k_pct": 0.194,
       "k_per_9": 5.24,
       "xk_pct": 0.194,
+      "source": "prior_season"
+    }
+  },
+  "prior_stats_696136_2025": {
+    "timestamp": "2026-05-26T21:09:12.690776",
+    "data": {
+      "k_pct": 0.194,
+      "bb_pct": 0.0149,
+      "swstr_pct": 0.1429,
+      "csw_pct": 0.2673,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 27.1
+    }
+  },
+  "Gage Jump_2026": {
+    "timestamp": "2026-05-26T21:10:05.756165",
+    "data": {
+      "k_pct": 0.224,
+      "k_per_9": 6.05,
+      "xk_pct": 0.224,
       "source": "prior_season"
     }
   }
