@@ -1,7 +1,78 @@
 {
   "date": "May 28, 2026",
-  "generated_at": "09:30 PM",
+  "generated_at": "11:24 PM",
   "all_pitchers": [
+    {
+      "pitcher_name": "Chris Sale",
+      "pitcher_id": 519242,
+      "pitcher_team": "ATL",
+      "pitcher_hand": "L",
+      "opp_team": "BOS",
+      "venue": "Fenway Park",
+      "projected_ks": 7.5,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.1534,
+      "csw_pct": 0.3279,
+      "k_pct": 0.3067,
+      "opp_k_pct": 0.2133,
+      "opp_chase": 0.3023,
+      "days_rest": 8,
+      "rolling_k_3": 7.67,
+      "rolling_k_5": 8.6,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "04/26",
+          "k": 9,
+          "pitches": 100
+        },
+        {
+          "date": "05/02",
+          "k": 11,
+          "pitches": 102
+        },
+        {
+          "date": "05/08",
+          "k": 7,
+          "pitches": 102
+        },
+        {
+          "date": "05/14",
+          "k": 8,
+          "pitches": 100
+        },
+        {
+          "date": "05/20",
+          "k": 8,
+          "pitches": 96
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0019,
+        "1": 0.0056,
+        "2": 0.0146,
+        "3": 0.0321,
+        "4": 0.0603,
+        "5": 0.0969,
+        "6": 0.1328,
+        "7": 0.1555,
+        "8": 0.1555,
+        "9": 0.1328,
+        "10+": 0.212
+      }
+    },
     {
       "pitcher_name": "Davis Martin",
       "pitcher_id": 663436,
@@ -128,77 +199,6 @@
           "date": "05/22",
           "k": 7,
           "pitches": 78
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0093,
-        "1": 0.0221,
-        "2": 0.045,
-        "3": 0.0783,
-        "4": 0.1161,
-        "5": 0.1472,
-        "6": 0.1593,
-        "7": 0.1472,
-        "8": 0.1161,
-        "9": 0.0783,
-        "10+": 0.0811
-      }
-    },
-    {
-      "pitcher_name": "Paul Skenes",
-      "pitcher_id": 694973,
-      "pitcher_team": "PIT",
-      "pitcher_hand": "R",
-      "opp_team": "CHC",
-      "venue": "PNC Park",
-      "projected_ks": 6.0,
-      "lineup_confirmed": false,
-      "swstr_pct": 0.1272,
-      "csw_pct": 0.2679,
-      "k_pct": 0.2873,
-      "opp_k_pct": 0.2097,
-      "opp_chase": 0.2809,
-      "days_rest": 5,
-      "rolling_k_3": 6.33,
-      "rolling_k_5": 7.0,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "04/30",
-          "k": 9,
-          "pitches": 102
-        },
-        {
-          "date": "05/06",
-          "k": 7,
-          "pitches": 97
-        },
-        {
-          "date": "05/12",
-          "k": 10,
-          "pitches": 98
-        },
-        {
-          "date": "05/17",
-          "k": 7,
-          "pitches": 92
-        },
-        {
-          "date": "05/23",
-          "k": 2,
-          "pitches": 98
         }
       ],
       "k_distribution": {
@@ -414,22 +414,22 @@
       }
     },
     {
-      "pitcher_name": "Chris Bassitt",
-      "pitcher_id": 605135,
-      "pitcher_team": "BAL",
-      "pitcher_hand": "R",
-      "opp_team": "TOR",
-      "venue": "Oriole Park at Camden Yards",
+      "pitcher_name": "Payton Tolle",
+      "pitcher_id": 801139,
+      "pitcher_team": "BOS",
+      "pitcher_hand": "L",
+      "opp_team": "ATL",
+      "venue": "Fenway Park",
       "projected_ks": 4.2,
       "lineup_confirmed": true,
-      "swstr_pct": 0.0996,
-      "csw_pct": 0.2598,
-      "k_pct": 0.1679,
-      "opp_k_pct": 0.2042,
-      "opp_chase": 0.3331,
+      "swstr_pct": 0.1374,
+      "csw_pct": 0.2909,
+      "k_pct": 0.2721,
+      "opp_k_pct": 0.2106,
+      "opp_chase": 0.3192,
       "days_rest": 6,
-      "rolling_k_3": 4.67,
-      "rolling_k_5": 4.8,
+      "rolling_k_3": 5.33,
+      "rolling_k_5": 5.6,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -445,29 +445,29 @@
       },
       "last5": [
         {
-          "date": "04/30",
-          "k": 7,
-          "pitches": 94
+          "date": "04/28",
+          "k": 4,
+          "pitches": 68
         },
         {
-          "date": "05/05",
-          "k": 3,
-          "pitches": 76
+          "date": "05/04",
+          "k": 8,
+          "pitches": 83
         },
         {
           "date": "05/10",
-          "k": 6,
-          "pitches": 94
+          "k": 4,
+          "pitches": 81
         },
         {
           "date": "05/16",
-          "k": 4,
-          "pitches": 82
+          "k": 3,
+          "pitches": 85
         },
         {
           "date": "05/22",
-          "k": 4,
-          "pitches": 58
+          "k": 9,
+          "pitches": 85
         }
       ],
       "k_distribution": {
@@ -482,148 +482,6 @@
         "8": 0.0523,
         "9": 0.0265,
         "10+": 0.0175
-      }
-    },
-    {
-      "pitcher_name": "Patrick Corbin",
-      "pitcher_id": 571578,
-      "pitcher_team": "TOR",
-      "pitcher_hand": "L",
-      "opp_team": "BAL",
-      "venue": "Oriole Park at Camden Yards",
-      "projected_ks": 3.5,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.0997,
-      "csw_pct": 0.235,
-      "k_pct": 0.1739,
-      "opp_k_pct": 0.2224,
-      "opp_chase": 0.2876,
-      "days_rest": 5,
-      "rolling_k_3": 3.67,
-      "rolling_k_5": 3.2,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "05/01",
-          "k": 4,
-          "pitches": 79
-        },
-        {
-          "date": "05/06",
-          "k": 1,
-          "pitches": 61
-        },
-        {
-          "date": "05/12",
-          "k": 1,
-          "pitches": 86
-        },
-        {
-          "date": "05/18",
-          "k": 3,
-          "pitches": 79
-        },
-        {
-          "date": "05/23",
-          "k": 7,
-          "pitches": 84
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0638,
-        "1": 0.1024,
-        "2": 0.1404,
-        "3": 0.1644,
-        "4": 0.1644,
-        "5": 0.1404,
-        "6": 0.1024,
-        "7": 0.0638,
-        "8": 0.0339,
-        "9": 0.0154,
-        "10+": 0.0087
-      }
-    },
-    {
-      "pitcher_name": "Colin Rea",
-      "pitcher_id": 607067,
-      "pitcher_team": "CHC",
-      "pitcher_hand": "R",
-      "opp_team": "PIT",
-      "venue": "PNC Park",
-      "projected_ks": 3.5,
-      "lineup_confirmed": false,
-      "swstr_pct": 0.1044,
-      "csw_pct": 0.2681,
-      "k_pct": 0.1887,
-      "opp_k_pct": 0.2229,
-      "opp_chase": 0.2976,
-      "days_rest": 5,
-      "rolling_k_3": 3.0,
-      "rolling_k_5": 4.0,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "05/01",
-          "k": 6,
-          "pitches": 102
-        },
-        {
-          "date": "05/06",
-          "k": 5,
-          "pitches": 98
-        },
-        {
-          "date": "05/12",
-          "k": 1,
-          "pitches": 80
-        },
-        {
-          "date": "05/17",
-          "k": 4,
-          "pitches": 83
-        },
-        {
-          "date": "05/23",
-          "k": 4,
-          "pitches": 98
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0638,
-        "1": 0.1024,
-        "2": 0.1404,
-        "3": 0.1644,
-        "4": 0.1644,
-        "5": 0.1404,
-        "6": 0.1024,
-        "7": 0.0638,
-        "8": 0.0339,
-        "9": 0.0154,
-        "10+": 0.0087
       }
     },
     {
@@ -698,5 +556,5 @@
       }
     }
   ],
-  "total_pitchers": 10
+  "total_pitchers": 8
 }
