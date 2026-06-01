@@ -1,7 +1,78 @@
 {
   "date": "June 01, 2026",
-  "generated_at": "08:10 PM",
+  "generated_at": "10:20 PM",
   "all_pitchers": [
+    {
+      "pitcher_name": "Joe Ryan",
+      "pitcher_id": 657746,
+      "pitcher_team": "MIN",
+      "pitcher_hand": "R",
+      "opp_team": "CWS",
+      "venue": "Target Field",
+      "projected_ks": 6.4,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.1299,
+      "csw_pct": 0.3149,
+      "k_pct": 0.2641,
+      "opp_k_pct": 0.2202,
+      "opp_chase": 0.2831,
+      "days_rest": 6,
+      "rolling_k_3": 8.33,
+      "rolling_k_5": 6.2,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "05/03",
+          "k": 1,
+          "pitches": 9
+        },
+        {
+          "date": "05/09",
+          "k": 5,
+          "pitches": 108
+        },
+        {
+          "date": "05/15",
+          "k": 7,
+          "pitches": 90
+        },
+        {
+          "date": "05/20",
+          "k": 9,
+          "pitches": 99
+        },
+        {
+          "date": "05/26",
+          "k": 9,
+          "pitches": 98
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0063,
+        "1": 0.0159,
+        "2": 0.0345,
+        "3": 0.0638,
+        "4": 0.1009,
+        "5": 0.1362,
+        "6": 0.157,
+        "7": 0.1545,
+        "8": 0.1299,
+        "9": 0.0932,
+        "10+": 0.1078
+      }
+    },
     {
       "pitcher_name": "Jacob deGrom",
       "pitcher_id": 594798,
@@ -80,13 +151,13 @@
       "pitcher_hand": "R",
       "opp_team": "COL",
       "venue": "Angel Stadium",
-      "projected_ks": 5.5,
-      "lineup_confirmed": false,
+      "projected_ks": 5.7,
+      "lineup_confirmed": true,
       "swstr_pct": 0.152,
       "csw_pct": 0.3049,
       "k_pct": 0.2609,
-      "opp_k_pct": 0.2229,
-      "opp_chase": 0.3383,
+      "opp_k_pct": 0.2294,
+      "opp_chase": 0.3242,
       "days_rest": 5,
       "rolling_k_3": 5.67,
       "rolling_k_5": 5.8,
@@ -131,88 +202,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0147,
-        "1": 0.0323,
-        "2": 0.0608,
-        "3": 0.0976,
-        "4": 0.1338,
-        "5": 0.1567,
-        "6": 0.1567,
-        "7": 0.1338,
-        "8": 0.0976,
-        "9": 0.0608,
-        "10+": 0.0553
-      }
-    },
-    {
-      "pitcher_name": "Emmet Sheehan",
-      "pitcher_id": 686218,
-      "pitcher_team": "LAD",
-      "pitcher_hand": "R",
-      "opp_team": "AZ",
-      "venue": "Chase Field",
-      "projected_ks": 5.3,
-      "lineup_confirmed": false,
-      "swstr_pct": 0.1608,
-      "csw_pct": 0.2977,
-      "k_pct": 0.2546,
-      "opp_k_pct": 0.2142,
-      "opp_chase": 0.3219,
-      "days_rest": 7,
-      "rolling_k_3": 5.33,
-      "rolling_k_5": 6.2,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 0,
-        "description": "Dome / Retractable Roof",
-        "adjustment": 1.0,
-        "indoor": true
-      },
-      "last5": [
-        {
-          "date": "05/01",
-          "k": 8,
-          "pitches": 97
-        },
-        {
-          "date": "05/08",
-          "k": 7,
-          "pitches": 88
-        },
-        {
-          "date": "05/14",
-          "k": 6,
-          "pitches": 98
-        },
-        {
-          "date": "05/19",
-          "k": 2,
-          "pitches": 67
-        },
-        {
-          "date": "05/25",
-          "k": 8,
-          "pitches": 92
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0174,
-        "1": 0.0372,
-        "2": 0.0678,
-        "3": 0.1055,
-        "4": 0.1401,
-        "5": 0.159,
-        "6": 0.1541,
-        "7": 0.1275,
-        "8": 0.0901,
-        "9": 0.0543,
-        "10+": 0.047
+        "0": 0.0123,
+        "1": 0.0279,
+        "2": 0.0541,
+        "3": 0.0897,
+        "4": 0.127,
+        "5": 0.1535,
+        "6": 0.1584,
+        "7": 0.1396,
+        "8": 0.1051,
+        "9": 0.0675,
+        "10+": 0.0647
       }
     },
     {
@@ -294,12 +294,12 @@
       "opp_team": "MIL",
       "venue": "American Family Field",
       "projected_ks": 5.0,
-      "lineup_confirmed": false,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1079,
       "csw_pct": 0.2995,
       "k_pct": 0.2524,
-      "opp_k_pct": 0.206,
-      "opp_chase": 0.2611,
+      "opp_k_pct": 0.1947,
+      "opp_chase": 0.2801,
       "days_rest": 7,
       "rolling_k_3": 5.33,
       "rolling_k_5": 6.0,
@@ -341,6 +341,77 @@
           "date": "05/25",
           "k": 7,
           "pitches": 93
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0223,
+        "1": 0.0455,
+        "2": 0.079,
+        "3": 0.1172,
+        "4": 0.1486,
+        "5": 0.1608,
+        "6": 0.1486,
+        "7": 0.1172,
+        "8": 0.079,
+        "9": 0.0455,
+        "10+": 0.0364
+      }
+    },
+    {
+      "pitcher_name": "Emmet Sheehan",
+      "pitcher_id": 686218,
+      "pitcher_team": "LAD",
+      "pitcher_hand": "R",
+      "opp_team": "AZ",
+      "venue": "Chase Field",
+      "projected_ks": 5.0,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.1608,
+      "csw_pct": 0.2977,
+      "k_pct": 0.2546,
+      "opp_k_pct": 0.1949,
+      "opp_chase": 0.3065,
+      "days_rest": 7,
+      "rolling_k_3": 5.33,
+      "rolling_k_5": 6.2,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 0,
+        "description": "Dome / Retractable Roof",
+        "adjustment": 1.0,
+        "indoor": true
+      },
+      "last5": [
+        {
+          "date": "05/01",
+          "k": 8,
+          "pitches": 97
+        },
+        {
+          "date": "05/08",
+          "k": 7,
+          "pitches": 88
+        },
+        {
+          "date": "05/14",
+          "k": 6,
+          "pitches": 98
+        },
+        {
+          "date": "05/19",
+          "k": 2,
+          "pitches": 67
+        },
+        {
+          "date": "05/25",
+          "k": 8,
+          "pitches": 92
         }
       ],
       "k_distribution": {
@@ -419,19 +490,70 @@
       }
     },
     {
+      "pitcher_name": "David Sandlin",
+      "pitcher_id": 689818,
+      "pitcher_team": "CWS",
+      "pitcher_hand": "R",
+      "opp_team": "MIN",
+      "venue": "Target Field",
+      "projected_ks": 4.8,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.11496666666666668,
+      "csw_pct": 0.2769166666666667,
+      "k_pct": 0.2208,
+      "opp_k_pct": 0.2183,
+      "opp_chase": 0.3091,
+      "days_rest": 5,
+      "rolling_k_3": 4.0,
+      "rolling_k_5": 4.0,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "05/27",
+          "k": 4,
+          "pitches": 61
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0262,
+        "1": 0.0516,
+        "2": 0.0868,
+        "3": 0.1249,
+        "4": 0.1533,
+        "5": 0.1608,
+        "6": 0.1439,
+        "7": 0.1101,
+        "8": 0.0719,
+        "9": 0.0401,
+        "10+": 0.0306
+      }
+    },
+    {
       "pitcher_name": "Shane Drohan",
       "pitcher_id": 675660,
       "pitcher_team": "MIL",
       "pitcher_hand": "L",
       "opp_team": "SF",
       "venue": "American Family Field",
-      "projected_ks": 4.0,
-      "lineup_confirmed": false,
+      "projected_ks": 4.2,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1329,
       "csw_pct": 0.2844,
       "k_pct": 0.2395,
-      "opp_k_pct": 0.221,
-      "opp_chase": 0.3298,
+      "opp_k_pct": 0.2117,
+      "opp_chase": 0.3094,
       "days_rest": 5,
       "rolling_k_3": 2.67,
       "rolling_k_5": 3.0,
@@ -476,17 +598,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0465,
-        "1": 0.0808,
-        "2": 0.1199,
-        "3": 0.1519,
-        "4": 0.1644,
-        "5": 0.1519,
-        "6": 0.1199,
-        "7": 0.0808,
-        "8": 0.0465,
-        "9": 0.0228,
-        "10+": 0.0144
+        "0": 0.0406,
+        "1": 0.0728,
+        "2": 0.1115,
+        "3": 0.1459,
+        "4": 0.1629,
+        "5": 0.1554,
+        "6": 0.1265,
+        "7": 0.088,
+        "8": 0.0523,
+        "9": 0.0265,
+        "10+": 0.0175
       }
     },
     {
@@ -496,13 +618,13 @@
       "pitcher_hand": "R",
       "opp_team": "NYM",
       "venue": "T-Mobile Park",
-      "projected_ks": 4.0,
-      "lineup_confirmed": false,
+      "projected_ks": 3.9,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1256,
       "csw_pct": 0.2467,
       "k_pct": 0.2148,
-      "opp_k_pct": 0.2092,
-      "opp_chase": 0.3023,
+      "opp_k_pct": 0.2136,
+      "opp_chase": 0.2939,
       "days_rest": 6,
       "rolling_k_3": 4.33,
       "rolling_k_5": 6.2,
@@ -547,17 +669,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0465,
-        "1": 0.0808,
-        "2": 0.1199,
-        "3": 0.1519,
-        "4": 0.1644,
-        "5": 0.1519,
-        "6": 0.1199,
-        "7": 0.0808,
-        "8": 0.0465,
-        "9": 0.0228,
-        "10+": 0.0144
+        "0": 0.0497,
+        "1": 0.0849,
+        "2": 0.1241,
+        "3": 0.1548,
+        "4": 0.1649,
+        "5": 0.15,
+        "6": 0.1165,
+        "7": 0.0773,
+        "8": 0.0438,
+        "9": 0.0212,
+        "10+": 0.0131
       }
     },
     {
@@ -639,12 +761,12 @@
       "opp_team": "LAA",
       "venue": "Angel Stadium",
       "projected_ks": 3.6,
-      "lineup_confirmed": false,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1208,
       "csw_pct": 0.2735,
       "k_pct": 0.1886,
-      "opp_k_pct": 0.2406,
-      "opp_chase": 0.2992,
+      "opp_k_pct": 0.2282,
+      "opp_chase": 0.2998,
       "days_rest": 6,
       "rolling_k_3": 3.67,
       "rolling_k_5": 4.4,
@@ -710,12 +832,12 @@
       "opp_team": "SEA",
       "venue": "T-Mobile Park",
       "projected_ks": 3.5,
-      "lineup_confirmed": false,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1139,
       "csw_pct": 0.3323,
       "k_pct": 0.2725,
-      "opp_k_pct": 0.2343,
-      "opp_chase": 0.3042,
+      "opp_k_pct": 0.2195,
+      "opp_chase": 0.3106,
       "days_rest": 2,
       "rolling_k_3": 2.0,
       "rolling_k_5": 1.4,
@@ -967,5 +1089,5 @@
       }
     }
   ],
-  "total_pitchers": 14
+  "total_pitchers": 16
 }
