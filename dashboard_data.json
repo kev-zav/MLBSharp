@@ -1,78 +1,7 @@
 {
   "date": "June 04, 2026",
-  "generated_at": "09:09 PM",
+  "generated_at": "11:16 PM",
   "all_pitchers": [
-    {
-      "pitcher_name": "Chris Sale",
-      "pitcher_id": 519242,
-      "pitcher_team": "ATL",
-      "pitcher_hand": "L",
-      "opp_team": "TOR",
-      "venue": "Truist Park",
-      "projected_ks": 6.6,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.1596,
-      "csw_pct": 0.3295,
-      "k_pct": 0.3178,
-      "opp_k_pct": 0.202,
-      "opp_chase": 0.2877,
-      "days_rest": 7,
-      "rolling_k_3": 8.0,
-      "rolling_k_5": 8.4,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "05/02",
-          "k": 11,
-          "pitches": 102
-        },
-        {
-          "date": "05/08",
-          "k": 7,
-          "pitches": 102
-        },
-        {
-          "date": "05/14",
-          "k": 8,
-          "pitches": 100
-        },
-        {
-          "date": "05/20",
-          "k": 8,
-          "pitches": 96
-        },
-        {
-          "date": "05/28",
-          "k": 8,
-          "pitches": 96
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0051,
-        "1": 0.0134,
-        "2": 0.0299,
-        "3": 0.0571,
-        "4": 0.0932,
-        "5": 0.1298,
-        "6": 0.1544,
-        "7": 0.1569,
-        "8": 0.1361,
-        "9": 0.1008,
-        "10+": 0.1233
-      }
-    },
     {
       "pitcher_name": "Zack Wheeler",
       "pitcher_id": 554430,
@@ -218,12 +147,12 @@
       "opp_team": "HOU",
       "venue": "Daikin Park",
       "projected_ks": 5.1,
-      "lineup_confirmed": false,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1283,
       "csw_pct": 0.2812833333333334,
       "k_pct": 0.24,
-      "opp_k_pct": 0.2233,
-      "opp_chase": 0.3083,
+      "opp_k_pct": 0.2143,
+      "opp_chase": 0.289,
       "days_rest": 6,
       "rolling_k_3": 6.0,
       "rolling_k_5": 6.0,
@@ -268,13 +197,13 @@
       "pitcher_hand": "R",
       "opp_team": "PIT",
       "venue": "Daikin Park",
-      "projected_ks": 5.1,
-      "lineup_confirmed": false,
+      "projected_ks": 4.8,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1109,
       "csw_pct": 0.3055,
       "k_pct": 0.2601,
-      "opp_k_pct": 0.2237,
-      "opp_chase": 0.2967,
+      "opp_k_pct": 0.2145,
+      "opp_chase": 0.2973,
       "days_rest": 6,
       "rolling_k_3": 6.67,
       "rolling_k_5": 4.6,
@@ -319,17 +248,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0206,
-        "1": 0.0426,
-        "2": 0.0752,
-        "3": 0.1133,
-        "4": 0.1459,
-        "5": 0.1604,
-        "6": 0.1506,
-        "7": 0.1207,
-        "8": 0.0826,
-        "9": 0.0483,
-        "10+": 0.0397
+        "0": 0.0262,
+        "1": 0.0516,
+        "2": 0.0868,
+        "3": 0.1249,
+        "4": 0.1533,
+        "5": 0.1608,
+        "6": 0.1439,
+        "7": 0.1101,
+        "8": 0.0719,
+        "9": 0.0401,
+        "10+": 0.0306
       }
     },
     {
@@ -617,6 +546,67 @@
       }
     },
     {
+      "pitcher_name": "Coleman Crow",
+      "pitcher_id": 689441,
+      "pitcher_team": "MIL",
+      "pitcher_hand": "R",
+      "opp_team": "SF",
+      "venue": "American Family Field",
+      "projected_ks": 3.9,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.09875,
+      "csw_pct": 0.26365,
+      "k_pct": 0.1802,
+      "opp_k_pct": 0.2002,
+      "opp_chase": 0.309,
+      "days_rest": 6,
+      "rolling_k_3": 2.67,
+      "rolling_k_5": 2.67,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 0,
+        "description": "Dome / Retractable Roof",
+        "adjustment": 1.0,
+        "indoor": true
+      },
+      "last5": [
+        {
+          "date": "04/17",
+          "k": 4,
+          "pitches": 77
+        },
+        {
+          "date": "05/15",
+          "k": 3,
+          "pitches": 68
+        },
+        {
+          "date": "05/29",
+          "k": 1,
+          "pitches": 61
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0497,
+        "1": 0.0849,
+        "2": 0.1241,
+        "3": 0.1548,
+        "4": 0.1649,
+        "5": 0.15,
+        "6": 0.1165,
+        "7": 0.0773,
+        "8": 0.0438,
+        "9": 0.0212,
+        "10+": 0.0131
+      }
+    },
+    {
       "pitcher_name": "Andrew Morris",
       "pitcher_id": 702193,
       "pitcher_team": "MIN",
@@ -694,13 +684,13 @@
       "pitcher_hand": "L",
       "opp_team": "AZ",
       "venue": "Chase Field",
-      "projected_ks": 3.9,
-      "lineup_confirmed": false,
+      "projected_ks": 3.7,
+      "lineup_confirmed": true,
       "swstr_pct": 0.0835,
       "csw_pct": 0.2576,
       "k_pct": 0.1846,
-      "opp_k_pct": 0.1816,
-      "opp_chase": 0.3213,
+      "opp_k_pct": 0.194,
+      "opp_chase": 0.3086,
       "days_rest": 6,
       "rolling_k_3": 6.0,
       "rolling_k_5": 5.0,
@@ -745,17 +735,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0497,
-        "1": 0.0849,
-        "2": 0.1241,
-        "3": 0.1548,
-        "4": 0.1649,
-        "5": 0.15,
-        "6": 0.1165,
-        "7": 0.0773,
-        "8": 0.0438,
-        "9": 0.0212,
-        "10+": 0.0131
+        "0": 0.0564,
+        "1": 0.0935,
+        "2": 0.1323,
+        "3": 0.1599,
+        "4": 0.1651,
+        "5": 0.1455,
+        "6": 0.1095,
+        "7": 0.0704,
+        "8": 0.0386,
+        "9": 0.0181,
+        "10+": 0.0107
       }
     },
     {
@@ -968,13 +958,13 @@
       "pitcher_hand": "R",
       "opp_team": "LAD",
       "venue": "Chase Field",
-      "projected_ks": 3.4,
-      "lineup_confirmed": false,
+      "projected_ks": 3.2,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1182,
       "csw_pct": 0.2526,
       "k_pct": 0.194,
-      "opp_k_pct": 0.2076,
-      "opp_chase": 0.2652,
+      "opp_k_pct": 0.2046,
+      "opp_chase": 0.2724,
       "days_rest": 5,
       "rolling_k_3": 3.0,
       "rolling_k_5": 4.8,
@@ -1019,36 +1009,36 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0677,
-        "1": 0.107,
-        "2": 0.1444,
-        "3": 0.1664,
-        "4": 0.1638,
-        "5": 0.1377,
-        "6": 0.0988,
-        "7": 0.0606,
-        "8": 0.0317,
-        "9": 0.0142,
-        "10+": 0.0078
+        "0": 0.0759,
+        "1": 0.1163,
+        "2": 0.152,
+        "3": 0.1698,
+        "4": 0.162,
+        "5": 0.1319,
+        "6": 0.0917,
+        "7": 0.0545,
+        "8": 0.0276,
+        "9": 0.012,
+        "10+": 0.0063
       }
     },
     {
-      "pitcher_name": "Mason Fluharty",
-      "pitcher_id": 689254,
-      "pitcher_team": "TOR",
-      "pitcher_hand": "L",
-      "opp_team": "ATL",
-      "venue": "Truist Park",
-      "projected_ks": 2.5,
+      "pitcher_name": "Adrian Houser",
+      "pitcher_id": 605288,
+      "pitcher_team": "SF",
+      "pitcher_hand": "R",
+      "opp_team": "MIL",
+      "venue": "American Family Field",
+      "projected_ks": 2.9,
       "lineup_confirmed": true,
-      "swstr_pct": 0.1343,
-      "csw_pct": 0.3,
-      "k_pct": 0.2797,
-      "opp_k_pct": 0.2066,
-      "opp_chase": 0.3218,
-      "days_rest": 2,
-      "rolling_k_3": 1.33,
-      "rolling_k_5": 1.0,
+      "swstr_pct": 0.0799,
+      "csw_pct": 0.2503,
+      "k_pct": 0.1388,
+      "opp_k_pct": 0.2061,
+      "opp_chase": 0.2743,
+      "days_rest": 5,
+      "rolling_k_3": 4.0,
+      "rolling_k_5": 3.8,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -1057,50 +1047,50 @@
       },
       "weather": {
         "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
+        "wind_mph": 0,
+        "description": "Dome / Retractable Roof",
         "adjustment": 1.0,
-        "indoor": false
+        "indoor": true
       },
       "last5": [
         {
-          "date": "05/25",
-          "k": 1,
-          "pitches": 6
-        },
-        {
-          "date": "05/27",
-          "k": 0,
-          "pitches": 13
-        },
-        {
-          "date": "05/29",
-          "k": 1,
-          "pitches": 20
-        },
-        {
-          "date": "05/31",
+          "date": "05/06",
           "k": 3,
-          "pitches": 12
+          "pitches": 74
         },
         {
-          "date": "06/02",
-          "k": 0,
-          "pitches": 14
+          "date": "05/12",
+          "k": 4,
+          "pitches": 91
+        },
+        {
+          "date": "05/17",
+          "k": 3,
+          "pitches": 93
+        },
+        {
+          "date": "05/23",
+          "k": 5,
+          "pitches": 79
+        },
+        {
+          "date": "05/30",
+          "k": 4,
+          "pitches": 92
         }
       ],
       "k_distribution": {
-        "0": 0.1094,
-        "1": 0.15,
-        "2": 0.1756,
-        "3": 0.1756,
-        "4": 0.15,
-        "5": 0.1094,
-        "6": 0.0681,
-        "7": 0.0362,
-        "8": 0.0164,
-        "9": 0.0064,
-        "10+": 0.0029
+        "0": 0.0894,
+        "1": 0.1306,
+        "2": 0.1629,
+        "3": 0.1735,
+        "4": 0.1578,
+        "5": 0.1226,
+        "6": 0.0813,
+        "7": 0.0461,
+        "8": 0.0223,
+        "9": 0.0092,
+        "10+": 0.0045
       }
     }
   ],
