@@ -1,6 +1,6 @@
 {
   "date": "June 08, 2026",
-  "generated_at": "06:19 PM",
+  "generated_at": "09:21 PM",
   "all_pitchers": [
     {
       "pitcher_name": "Cristopher S\u00e1nchez",
@@ -9,13 +9,13 @@
       "pitcher_hand": "L",
       "opp_team": "TOR",
       "venue": "Rogers Centre",
-      "projected_ks": 6.7,
-      "lineup_confirmed": false,
+      "projected_ks": 6.5,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1717,
       "csw_pct": 0.3538,
       "k_pct": 0.2815,
-      "opp_k_pct": 0.1987,
-      "opp_chase": 0.3048,
+      "opp_k_pct": 0.1984,
+      "opp_chase": 0.2948,
       "days_rest": 5,
       "rolling_k_3": 7.67,
       "rolling_k_5": 8.6,
@@ -60,17 +60,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0046,
-        "1": 0.0122,
-        "2": 0.0278,
-        "3": 0.0539,
-        "4": 0.0893,
-        "5": 0.1264,
-        "6": 0.1528,
-        "7": 0.1577,
-        "8": 0.139,
-        "9": 0.1046,
-        "10+": 0.1316
+        "0": 0.0057,
+        "1": 0.0146,
+        "2": 0.0321,
+        "3": 0.0604,
+        "4": 0.097,
+        "5": 0.1331,
+        "6": 0.1558,
+        "7": 0.1558,
+        "8": 0.1331,
+        "9": 0.097,
+        "10+": 0.1154
       }
     },
     {
@@ -80,13 +80,13 @@
       "pitcher_hand": "R",
       "opp_team": "NYY",
       "venue": "Progressive Field",
-      "projected_ks": 5.8,
-      "lineup_confirmed": false,
+      "projected_ks": 5.6,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1535,
       "csw_pct": 0.3434,
       "k_pct": 0.2602,
-      "opp_k_pct": 0.2298,
-      "opp_chase": 0.2706,
+      "opp_k_pct": 0.2155,
+      "opp_chase": 0.2749,
       "days_rest": 5,
       "rolling_k_3": 6.67,
       "rolling_k_5": 6.6,
@@ -131,17 +131,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0112,
-        "1": 0.0259,
-        "2": 0.051,
-        "3": 0.0859,
-        "4": 0.1235,
-        "5": 0.1516,
-        "6": 0.159,
-        "7": 0.1423,
-        "8": 0.1088,
-        "9": 0.0711,
-        "10+": 0.0698
+        "0": 0.0134,
+        "1": 0.03,
+        "2": 0.0574,
+        "3": 0.0937,
+        "4": 0.1305,
+        "5": 0.1552,
+        "6": 0.1577,
+        "7": 0.1368,
+        "8": 0.1013,
+        "9": 0.0641,
+        "10+": 0.0598
       }
     },
     {
@@ -222,13 +222,13 @@
       "pitcher_hand": "L",
       "opp_team": "TB",
       "venue": "Tropicana Field",
-      "projected_ks": 5.4,
-      "lineup_confirmed": false,
+      "projected_ks": 5.2,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1056,
       "csw_pct": 0.2889,
       "k_pct": 0.2526,
-      "opp_k_pct": 0.1938,
-      "opp_chase": 0.2952,
+      "opp_k_pct": 0.2085,
+      "opp_chase": 0.2919,
       "days_rest": 6,
       "rolling_k_3": 6.0,
       "rolling_k_5": 6.4,
@@ -273,17 +273,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.016,
-        "1": 0.0347,
-        "2": 0.0642,
-        "3": 0.1015,
-        "4": 0.137,
-        "5": 0.158,
-        "6": 0.1555,
-        "7": 0.1307,
-        "8": 0.0938,
-        "9": 0.0575,
-        "10+": 0.051
+        "0": 0.019,
+        "1": 0.0398,
+        "2": 0.0714,
+        "3": 0.1094,
+        "4": 0.1431,
+        "5": 0.1598,
+        "6": 0.1524,
+        "7": 0.1241,
+        "8": 0.0863,
+        "9": 0.0513,
+        "10+": 0.0432
       }
     },
     {
@@ -293,13 +293,13 @@
       "pitcher_hand": "R",
       "opp_team": "CLE",
       "venue": "Progressive Field",
-      "projected_ks": 4.7,
-      "lineup_confirmed": false,
+      "projected_ks": 4.6,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1097,
       "csw_pct": 0.3021,
       "k_pct": 0.2621,
-      "opp_k_pct": 0.2008,
-      "opp_chase": 0.2784,
+      "opp_k_pct": 0.1982,
+      "opp_chase": 0.3006,
       "days_rest": 8,
       "rolling_k_3": 3.67,
       "rolling_k_5": 4.8,
@@ -344,17 +344,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0282,
-        "1": 0.0548,
-        "2": 0.0909,
-        "3": 0.1286,
-        "4": 0.1554,
-        "5": 0.1604,
-        "6": 0.1414,
-        "7": 0.1064,
-        "8": 0.0684,
-        "9": 0.0375,
-        "10+": 0.028
+        "0": 0.0305,
+        "1": 0.0582,
+        "2": 0.0949,
+        "3": 0.1322,
+        "4": 0.1573,
+        "5": 0.1598,
+        "6": 0.1387,
+        "7": 0.1027,
+        "8": 0.065,
+        "9": 0.0351,
+        "10+": 0.0255
       }
     },
     {
@@ -566,6 +566,77 @@
       }
     },
     {
+      "pitcher_name": "Emerson Hancock",
+      "pitcher_id": 676106,
+      "pitcher_team": "SEA",
+      "pitcher_hand": "R",
+      "opp_team": "BAL",
+      "venue": "Oriole Park at Camden Yards",
+      "projected_ks": 4.0,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.1189,
+      "csw_pct": 0.2465,
+      "k_pct": 0.2254,
+      "opp_k_pct": 0.2376,
+      "opp_chase": 0.2814,
+      "days_rest": 7,
+      "rolling_k_3": 4.67,
+      "rolling_k_5": 4.8,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "05/08",
+          "k": 4,
+          "pitches": 94
+        },
+        {
+          "date": "05/15",
+          "k": 6,
+          "pitches": 91
+        },
+        {
+          "date": "05/20",
+          "k": 4,
+          "pitches": 86
+        },
+        {
+          "date": "05/26",
+          "k": 3,
+          "pitches": 87
+        },
+        {
+          "date": "06/01",
+          "k": 7,
+          "pitches": 91
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0465,
+        "1": 0.0808,
+        "2": 0.1199,
+        "3": 0.1519,
+        "4": 0.1644,
+        "5": 0.1519,
+        "6": 0.1199,
+        "7": 0.0808,
+        "8": 0.0465,
+        "9": 0.0228,
+        "10+": 0.0144
+      }
+    },
+    {
       "pitcher_name": "Spencer Arrighetti",
       "pitcher_id": 681293,
       "pitcher_team": "HOU",
@@ -708,77 +779,6 @@
       }
     },
     {
-      "pitcher_name": "Emerson Hancock",
-      "pitcher_id": 676106,
-      "pitcher_team": "SEA",
-      "pitcher_hand": "R",
-      "opp_team": "BAL",
-      "venue": "Oriole Park at Camden Yards",
-      "projected_ks": 3.8,
-      "lineup_confirmed": false,
-      "swstr_pct": 0.1189,
-      "csw_pct": 0.2465,
-      "k_pct": 0.2254,
-      "opp_k_pct": 0.2307,
-      "opp_chase": 0.2831,
-      "days_rest": 7,
-      "rolling_k_3": 4.67,
-      "rolling_k_5": 4.8,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "05/08",
-          "k": 4,
-          "pitches": 94
-        },
-        {
-          "date": "05/15",
-          "k": 6,
-          "pitches": 91
-        },
-        {
-          "date": "05/20",
-          "k": 4,
-          "pitches": 86
-        },
-        {
-          "date": "05/26",
-          "k": 3,
-          "pitches": 87
-        },
-        {
-          "date": "06/01",
-          "k": 7,
-          "pitches": 91
-        }
-      ],
-      "k_distribution": {
-        "0": 0.053,
-        "1": 0.0892,
-        "2": 0.1282,
-        "3": 0.1574,
-        "4": 0.1651,
-        "5": 0.1478,
-        "6": 0.113,
-        "7": 0.0738,
-        "8": 0.0411,
-        "9": 0.0196,
-        "10+": 0.0118
-      }
-    },
-    {
       "pitcher_name": "Trey Gibson",
       "pitcher_id": 694346,
       "pitcher_team": "BAL",
@@ -786,12 +786,12 @@
       "opp_team": "SEA",
       "venue": "Oriole Park at Camden Yards",
       "projected_ks": 3.7,
-      "lineup_confirmed": false,
+      "lineup_confirmed": true,
       "swstr_pct": 0.08515,
       "csw_pct": 0.2502,
       "k_pct": 0.1603,
-      "opp_k_pct": 0.2328,
-      "opp_chase": 0.3062,
+      "opp_k_pct": 0.2169,
+      "opp_chase": 0.3254,
       "days_rest": 12,
       "rolling_k_3": 1.67,
       "rolling_k_5": 1.67,
@@ -846,13 +846,13 @@
       "pitcher_hand": "L",
       "opp_team": "PHI",
       "venue": "Rogers Centre",
-      "projected_ks": 3.7,
-      "lineup_confirmed": false,
+      "projected_ks": 3.4,
+      "lineup_confirmed": true,
       "swstr_pct": 0.0934,
       "csw_pct": 0.2318,
       "k_pct": 0.1649,
-      "opp_k_pct": 0.2201,
-      "opp_chase": 0.3133,
+      "opp_k_pct": 0.2206,
+      "opp_chase": 0.3009,
       "days_rest": 5,
       "rolling_k_3": 4.0,
       "rolling_k_5": 3.2,
@@ -897,17 +897,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0564,
-        "1": 0.0935,
-        "2": 0.1323,
-        "3": 0.1599,
-        "4": 0.1651,
-        "5": 0.1455,
-        "6": 0.1095,
-        "7": 0.0704,
-        "8": 0.0386,
-        "9": 0.0181,
-        "10+": 0.0107
+        "0": 0.0677,
+        "1": 0.107,
+        "2": 0.1444,
+        "3": 0.1664,
+        "4": 0.1638,
+        "5": 0.1377,
+        "6": 0.0988,
+        "7": 0.0606,
+        "8": 0.0317,
+        "9": 0.0142,
+        "10+": 0.0078
       }
     },
     {
@@ -917,13 +917,13 @@
       "pitcher_hand": "L",
       "opp_team": "BOS",
       "venue": "Tropicana Field",
-      "projected_ks": 3.1,
-      "lineup_confirmed": false,
+      "projected_ks": 3.2,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1353,
       "csw_pct": 0.3257,
       "k_pct": 0.2579,
-      "opp_k_pct": 0.2075,
-      "opp_chase": 0.3012,
+      "opp_k_pct": 0.2143,
+      "opp_chase": 0.3037,
       "days_rest": 6,
       "rolling_k_3": 1.33,
       "rolling_k_5": 1.2,
@@ -968,17 +968,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0802,
-        "1": 0.121,
-        "2": 0.1557,
-        "3": 0.1712,
-        "4": 0.1607,
-        "5": 0.1289,
-        "6": 0.0882,
-        "7": 0.0516,
-        "8": 0.0257,
-        "9": 0.011,
-        "10+": 0.0057
+        "0": 0.0759,
+        "1": 0.1163,
+        "2": 0.152,
+        "3": 0.1698,
+        "4": 0.162,
+        "5": 0.1319,
+        "6": 0.0917,
+        "7": 0.0545,
+        "8": 0.0276,
+        "9": 0.012,
+        "10+": 0.0063
       }
     },
     {
