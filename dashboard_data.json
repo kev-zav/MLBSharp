@@ -1,6 +1,6 @@
 {
   "date": "June 11, 2026",
-  "generated_at": "09:34 PM",
+  "generated_at": "11:44 PM",
   "all_pitchers": [
     {
       "pitcher_name": "Christian Scott",
@@ -145,6 +145,148 @@
       }
     },
     {
+      "pitcher_name": "Edward Cabrera",
+      "pitcher_id": 665795,
+      "pitcher_team": "CHC",
+      "pitcher_hand": "R",
+      "opp_team": "COL",
+      "venue": "Coors Field",
+      "projected_ks": 4.7,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.1311,
+      "csw_pct": 0.2754,
+      "k_pct": 0.2259,
+      "opp_k_pct": 0.2267,
+      "opp_chase": 0.3175,
+      "days_rest": 6,
+      "rolling_k_3": 3.33,
+      "rolling_k_5": 4.8,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "05/04",
+          "k": 8,
+          "pitches": 89
+        },
+        {
+          "date": "05/09",
+          "k": 6,
+          "pitches": 88
+        },
+        {
+          "date": "05/15",
+          "k": 2,
+          "pitches": 88
+        },
+        {
+          "date": "05/20",
+          "k": 2,
+          "pitches": 61
+        },
+        {
+          "date": "06/05",
+          "k": 6,
+          "pitches": 80
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0282,
+        "1": 0.0548,
+        "2": 0.0909,
+        "3": 0.1286,
+        "4": 0.1554,
+        "5": 0.1604,
+        "6": 0.1414,
+        "7": 0.1064,
+        "8": 0.0684,
+        "9": 0.0375,
+        "10+": 0.028
+      }
+    },
+    {
+      "pitcher_name": "Michael Wacha",
+      "pitcher_id": 608379,
+      "pitcher_team": "KC",
+      "pitcher_hand": "R",
+      "opp_team": "TEX",
+      "venue": "Kauffman Stadium",
+      "projected_ks": 4.3,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.105,
+      "csw_pct": 0.2564,
+      "k_pct": 0.1935,
+      "opp_k_pct": 0.22,
+      "opp_chase": 0.3007,
+      "days_rest": 6,
+      "rolling_k_3": 4.0,
+      "rolling_k_5": 5.0,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "05/15",
+          "k": 5,
+          "pitches": 87
+        },
+        {
+          "date": "05/20",
+          "k": 8,
+          "pitches": 105
+        },
+        {
+          "date": "05/25",
+          "k": 5,
+          "pitches": 94
+        },
+        {
+          "date": "05/31",
+          "k": 5,
+          "pitches": 83
+        },
+        {
+          "date": "06/05",
+          "k": 2,
+          "pitches": 77
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0379,
+        "1": 0.069,
+        "2": 0.1074,
+        "3": 0.1426,
+        "4": 0.1618,
+        "5": 0.1568,
+        "6": 0.1297,
+        "7": 0.0917,
+        "8": 0.0553,
+        "9": 0.0285,
+        "10+": 0.0193
+      }
+    },
+    {
       "pitcher_name": "Hunter Dobbins",
       "pitcher_id": 690928,
       "pitcher_team": "STL",
@@ -203,77 +345,6 @@
         "8": 0.0523,
         "9": 0.0265,
         "10+": 0.0175
-      }
-    },
-    {
-      "pitcher_name": "Justin Wrobleski",
-      "pitcher_id": 680736,
-      "pitcher_team": "LAD",
-      "pitcher_hand": "L",
-      "opp_team": "PIT",
-      "venue": "PNC Park",
-      "projected_ks": 4.1,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.0841,
-      "csw_pct": 0.264,
-      "k_pct": 0.1895,
-      "opp_k_pct": 0.2295,
-      "opp_chase": 0.3122,
-      "days_rest": 7,
-      "rolling_k_3": 5.67,
-      "rolling_k_5": 5.8,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "05/10",
-          "k": 7,
-          "pitches": 100
-        },
-        {
-          "date": "05/16",
-          "k": 5,
-          "pitches": 103
-        },
-        {
-          "date": "05/22",
-          "k": 4,
-          "pitches": 101
-        },
-        {
-          "date": "05/29",
-          "k": 9,
-          "pitches": 88
-        },
-        {
-          "date": "06/04",
-          "k": 4,
-          "pitches": 84
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0435,
-        "1": 0.0768,
-        "2": 0.1157,
-        "3": 0.149,
-        "4": 0.1638,
-        "5": 0.1538,
-        "6": 0.1233,
-        "7": 0.0844,
-        "8": 0.0493,
-        "9": 0.0246,
-        "10+": 0.0159
       }
     },
     {
@@ -348,6 +419,77 @@
       }
     },
     {
+      "pitcher_name": "Kumar Rocker",
+      "pitcher_id": 677958,
+      "pitcher_team": "TEX",
+      "pitcher_hand": "R",
+      "opp_team": "KC",
+      "venue": "Kauffman Stadium",
+      "projected_ks": 3.8,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.1052,
+      "csw_pct": 0.2486,
+      "k_pct": 0.1896,
+      "opp_k_pct": 0.2278,
+      "opp_chase": 0.295,
+      "days_rest": 6,
+      "rolling_k_3": 4.0,
+      "rolling_k_5": 4.4,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "05/13",
+          "k": 3,
+          "pitches": 97
+        },
+        {
+          "date": "05/19",
+          "k": 7,
+          "pitches": 103
+        },
+        {
+          "date": "05/25",
+          "k": 5,
+          "pitches": 85
+        },
+        {
+          "date": "05/30",
+          "k": 2,
+          "pitches": 85
+        },
+        {
+          "date": "06/05",
+          "k": 5,
+          "pitches": 94
+        }
+      ],
+      "k_distribution": {
+        "0": 0.053,
+        "1": 0.0892,
+        "2": 0.1282,
+        "3": 0.1574,
+        "4": 0.1651,
+        "5": 0.1478,
+        "6": 0.113,
+        "7": 0.0738,
+        "8": 0.0411,
+        "9": 0.0196,
+        "10+": 0.0118
+      }
+    },
+    {
       "pitcher_name": "Mart\u00edn P\u00e9rez",
       "pitcher_id": 527048,
       "pitcher_team": "ATL",
@@ -416,6 +558,72 @@
         "8": 0.0411,
         "9": 0.0196,
         "10+": 0.0118
+      }
+    },
+    {
+      "pitcher_name": "Ryan Feltner",
+      "pitcher_id": 663372,
+      "pitcher_team": "COL",
+      "pitcher_hand": "R",
+      "opp_team": "CHC",
+      "venue": "Coors Field",
+      "projected_ks": 3.7,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.12883333333333336,
+      "csw_pct": 0.2725,
+      "k_pct": 0.1874,
+      "opp_k_pct": 0.21,
+      "opp_chase": 0.2837,
+      "days_rest": 6,
+      "rolling_k_3": 3.0,
+      "rolling_k_5": 3.5,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "04/18",
+          "k": 5,
+          "pitches": 87
+        },
+        {
+          "date": "04/23",
+          "k": 3,
+          "pitches": 40
+        },
+        {
+          "date": "05/30",
+          "k": 2,
+          "pitches": 63
+        },
+        {
+          "date": "06/05",
+          "k": 4,
+          "pitches": 81
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0564,
+        "1": 0.0935,
+        "2": 0.1323,
+        "3": 0.1599,
+        "4": 0.1651,
+        "5": 0.1455,
+        "6": 0.1095,
+        "7": 0.0704,
+        "8": 0.0386,
+        "9": 0.0181,
+        "10+": 0.0107
       }
     },
     {
@@ -632,5 +840,5 @@
       }
     }
   ],
-  "total_pitchers": 9
+  "total_pitchers": 12
 }
