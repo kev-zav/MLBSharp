@@ -5276,13 +5276,13 @@
     }
   },
   "Gage Jump_2026": {
-    "timestamp": "2026-06-07T17:05:49.058703",
+    "timestamp": "2026-06-12T23:25:49.876262",
     "data": {
-      "k_pct": 0.2131,
-      "k_per_9": 5.75,
-      "xk_pct": 0.2131,
-      "k_pct_raw": 0.2,
-      "ip": 16.7,
+      "k_pct": 0.1973,
+      "k_per_9": 5.33,
+      "xk_pct": 0.1973,
+      "k_pct_raw": 0.1757,
+      "ip": 24.7,
       "source": "savant"
     }
   },
@@ -5676,6 +5676,26 @@
       "csw_pct": 0.27,
       "ip_per_start": 4.9,
       "pitches_per_start": 88.0
+    }
+  },
+  "Tanner Banks_2026": {
+    "timestamp": "2026-06-12T23:25:37.961667",
+    "data": {
+      "k_pct": 0.224,
+      "k_per_9": 6.05,
+      "xk_pct": 0.224,
+      "k_pct_raw": 0.2211,
+      "ip": 31.7,
+      "source": "savant"
+    }
+  },
+  "Sean Sullivan_2026": {
+    "timestamp": "2026-06-12T23:25:48.457632",
+    "data": {
+      "k_pct": 0.224,
+      "k_per_9": 6.05,
+      "xk_pct": 0.224,
+      "source": "prior_season"
     }
   }
 }
