@@ -44,13 +44,13 @@
     }
   },
   "MacKenzie Gore_2026": {
-    "timestamp": "2026-06-10T18:25:27.103742",
+    "timestamp": "2026-06-15T22:00:06.764469",
     "data": {
-      "k_pct": 0.2183,
-      "k_per_9": 5.89,
-      "xk_pct": 0.2183,
-      "k_pct_raw": 0.2045,
-      "ip": 73.3,
+      "k_pct": 0.2188,
+      "k_per_9": 5.91,
+      "xk_pct": 0.2188,
+      "k_pct_raw": 0.2054,
+      "ip": 74.7,
       "source": "savant"
     }
   },
@@ -5657,13 +5657,13 @@
     }
   },
   "Mike Paredes_2026": {
-    "timestamp": "2026-06-10T21:34:06.033448",
+    "timestamp": "2026-06-15T22:00:04.835207",
     "data": {
-      "k_pct": 0.1896,
-      "k_per_9": 5.12,
-      "xk_pct": 0.1896,
-      "k_pct_raw": 0.125,
-      "ip": 10.7,
+      "k_pct": 0.2042,
+      "k_per_9": 5.51,
+      "xk_pct": 0.2042,
+      "k_pct_raw": 0.1778,
+      "ip": 15.0,
       "source": "savant"
     }
   },
@@ -5793,6 +5793,28 @@
       "k_pct_raw": 0.1553,
       "ip": 34.3,
       "source": "savant"
+    }
+  },
+  "prior_stats_687765_2025": {
+    "timestamp": "2026-06-15T21:59:48.259381",
+    "data": {
+      "k_pct": 0.1755,
+      "bb_pct": 0.0638,
+      "swstr_pct": 0.1292,
+      "csw_pct": 0.2761,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 42.6
+    }
+  },
+  "prior_stats_593974_2025": {
+    "timestamp": "2026-06-15T21:59:59.281181",
+    "data": {
+      "k_pct": 0.2013,
+      "bb_pct": 0.0863,
+      "swstr_pct": 0.1379,
+      "csw_pct": 0.2819,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 16.2
     }
   }
 }
