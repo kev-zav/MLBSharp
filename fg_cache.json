@@ -721,13 +721,13 @@
     }
   },
   "Parker Messick_2026": {
-    "timestamp": "2026-06-10T21:33:54.111174",
+    "timestamp": "2026-06-18T21:32:58.854101",
     "data": {
-      "k_pct": 0.2565,
-      "k_per_9": 6.93,
-      "xk_pct": 0.2565,
-      "k_pct_raw": 0.2627,
-      "ip": 85.0,
+      "k_pct": 0.2468,
+      "k_per_9": 6.66,
+      "xk_pct": 0.2468,
+      "k_pct_raw": 0.2511,
+      "ip": 75.7,
       "source": "savant"
     }
   },
@@ -1304,24 +1304,24 @@
     }
   },
   "Shane Drohan_2026": {
-    "timestamp": "2026-06-13T17:12:04.545512",
+    "timestamp": "2026-06-18T21:33:00.664787",
     "data": {
-      "k_pct": 0.2434,
-      "k_per_9": 6.57,
-      "xk_pct": 0.2434,
-      "k_pct_raw": 0.2518,
-      "ip": 46.3,
+      "k_pct": 0.2498,
+      "k_per_9": 6.74,
+      "xk_pct": 0.2498,
+      "k_pct_raw": 0.2593,
+      "ip": 54.0,
       "source": "savant"
     }
   },
   "Sonny Gray_2026": {
-    "timestamp": "2026-06-12T17:59:40.059829",
+    "timestamp": "2026-06-18T21:32:56.599641",
     "data": {
-      "k_pct": 0.219,
-      "k_per_9": 5.91,
-      "xk_pct": 0.219,
-      "k_pct_raw": 0.2036,
-      "ip": 55.7,
+      "k_pct": 0.2444,
+      "k_per_9": 6.6,
+      "xk_pct": 0.2444,
+      "k_pct_raw": 0.2381,
+      "ip": 56.0,
       "source": "savant"
     }
   },
@@ -3986,13 +3986,13 @@
     }
   },
   "Bryan Hudson_2026": {
-    "timestamp": "2026-06-14T17:09:31.410949",
+    "timestamp": "2026-06-18T21:33:06.406191",
     "data": {
-      "k_pct": 0.2133,
-      "k_per_9": 5.76,
-      "xk_pct": 0.2133,
-      "k_pct_raw": 0.1905,
-      "ip": 35.0,
+      "k_pct": 0.2012,
+      "k_per_9": 5.43,
+      "xk_pct": 0.2012,
+      "k_pct_raw": 0.17,
+      "ip": 33.3,
       "source": "savant"
     }
   },
@@ -4085,13 +4085,13 @@
     }
   },
   "Trey Yesavage_2026": {
-    "timestamp": "2026-06-12T21:11:44.294132",
+    "timestamp": "2026-06-18T21:32:44.503276",
     "data": {
-      "k_pct": 0.2553,
-      "k_per_9": 6.89,
-      "xk_pct": 0.2553,
-      "k_pct_raw": 0.2543,
-      "ip": 57.7,
+      "k_pct": 0.2422,
+      "k_per_9": 6.54,
+      "xk_pct": 0.2422,
+      "k_pct_raw": 0.2374,
+      "ip": 66.0,
       "source": "savant"
     }
   },
@@ -5879,6 +5879,17 @@
       "csw_pct": 0.27,
       "ip_per_start": 4.9,
       "pitches_per_start": 88.0
+    }
+  },
+  "prior_stats_640455_2025": {
+    "timestamp": "2026-06-18T21:33:04.508747",
+    "data": {
+      "k_pct": 0.2852,
+      "bb_pct": 0.0456,
+      "swstr_pct": 0.1406,
+      "csw_pct": 0.3005,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 73.0
     }
   }
 }
