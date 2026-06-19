@@ -1,6 +1,6 @@
 {
   "date": "June 19, 2026",
-  "generated_at": "08:52 PM",
+  "generated_at": "11:08 PM",
   "all_pitchers": [
     {
       "pitcher_name": "Jacob Misiorowski",
@@ -80,13 +80,13 @@
       "pitcher_hand": "L",
       "opp_team": "SEA",
       "venue": "T-Mobile Park",
-      "projected_ks": 6.6,
-      "lineup_confirmed": false,
+      "projected_ks": 6.8,
+      "lineup_confirmed": true,
       "swstr_pct": 0.124,
       "csw_pct": 0.2933,
       "k_pct": 0.265,
-      "opp_k_pct": 0.2253,
-      "opp_chase": 0.2987,
+      "opp_k_pct": 0.2224,
+      "opp_chase": 0.3059,
       "days_rest": 6,
       "rolling_k_3": 7.67,
       "rolling_k_5": 6.0,
@@ -131,78 +131,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0051,
-        "1": 0.0134,
-        "2": 0.0299,
-        "3": 0.0571,
-        "4": 0.0932,
-        "5": 0.1298,
-        "6": 0.1544,
-        "7": 0.1569,
-        "8": 0.1361,
-        "9": 0.1008,
-        "10+": 0.1233
-      }
-    },
-    {
-      "pitcher_name": "Tarik Skubal",
-      "pitcher_id": 669373,
-      "pitcher_team": "DET",
-      "pitcher_hand": "L",
-      "opp_team": "CWS",
-      "venue": "Comerica Park",
-      "projected_ks": 5.9,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.16275,
-      "csw_pct": 0.3177,
-      "k_pct": 0.2735,
-      "opp_k_pct": 0.2141,
-      "opp_chase": 0.2959,
-      "days_rest": 6,
-      "rolling_k_3": 5.33,
-      "rolling_k_5": 5.33,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "04/23",
-          "k": 5,
-          "pitches": 94
-        },
-        {
-          "date": "04/29",
-          "k": 7,
-          "pitches": 91
-        },
-        {
-          "date": "06/13",
-          "k": 4,
-          "pitches": 80
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0102,
-        "1": 0.0239,
-        "2": 0.048,
-        "3": 0.082,
-        "4": 0.1198,
-        "5": 0.1495,
-        "6": 0.1592,
-        "7": 0.1448,
-        "8": 0.1125,
-        "9": 0.0746,
-        "10+": 0.0753
+        "0": 0.0041,
+        "1": 0.0112,
+        "2": 0.0258,
+        "3": 0.0508,
+        "4": 0.0855,
+        "5": 0.123,
+        "6": 0.151,
+        "7": 0.1583,
+        "8": 0.1417,
+        "9": 0.1084,
+        "10+": 0.1403
       }
     },
     {
@@ -283,13 +222,13 @@
       "pitcher_hand": "R",
       "opp_team": "BOS",
       "venue": "T-Mobile Park",
-      "projected_ks": 5.5,
-      "lineup_confirmed": false,
+      "projected_ks": 5.7,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1512,
       "csw_pct": 0.2823,
       "k_pct": 0.2558,
-      "opp_k_pct": 0.2219,
-      "opp_chase": 0.3239,
+      "opp_k_pct": 0.2255,
+      "opp_chase": 0.3306,
       "days_rest": 7,
       "rolling_k_3": 7.33,
       "rolling_k_5": 6.6,
@@ -331,6 +270,77 @@
           "date": "06/12",
           "k": 7,
           "pitches": 91
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0123,
+        "1": 0.0279,
+        "2": 0.0541,
+        "3": 0.0897,
+        "4": 0.127,
+        "5": 0.1535,
+        "6": 0.1584,
+        "7": 0.1396,
+        "8": 0.1051,
+        "9": 0.0675,
+        "10+": 0.0647
+      }
+    },
+    {
+      "pitcher_name": "Kevin Gausman",
+      "pitcher_id": 592332,
+      "pitcher_team": "TOR",
+      "pitcher_hand": "R",
+      "opp_team": "CHC",
+      "venue": "Wrigley Field",
+      "projected_ks": 5.5,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.129,
+      "csw_pct": 0.2737,
+      "k_pct": 0.2209,
+      "opp_k_pct": 0.2143,
+      "opp_chase": 0.2802,
+      "days_rest": 6,
+      "rolling_k_3": 6.67,
+      "rolling_k_5": 6.6,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "05/22",
+          "k": 8,
+          "pitches": 94
+        },
+        {
+          "date": "05/27",
+          "k": 5,
+          "pitches": 95
+        },
+        {
+          "date": "06/02",
+          "k": 8,
+          "pitches": 96
+        },
+        {
+          "date": "06/07",
+          "k": 5,
+          "pitches": 93
+        },
+        {
+          "date": "06/13",
+          "k": 7,
+          "pitches": 105
         }
       ],
       "k_distribution": {
@@ -426,12 +436,12 @@
       "opp_team": "COL",
       "venue": "Coors Field",
       "projected_ks": 4.9,
-      "lineup_confirmed": false,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1169,
       "csw_pct": 0.2593,
       "k_pct": 0.2391,
-      "opp_k_pct": 0.2179,
-      "opp_chase": 0.3275,
+      "opp_k_pct": 0.2153,
+      "opp_chase": 0.319,
       "days_rest": 6,
       "rolling_k_3": 5.33,
       "rolling_k_5": 6.4,
@@ -487,6 +497,77 @@
         "8": 0.0754,
         "9": 0.0427,
         "10+": 0.0334
+      }
+    },
+    {
+      "pitcher_name": "Ben Brown",
+      "pitcher_id": 676962,
+      "pitcher_team": "CHC",
+      "pitcher_hand": "R",
+      "opp_team": "TOR",
+      "venue": "Wrigley Field",
+      "projected_ks": 4.8,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.1267,
+      "csw_pct": 0.2996,
+      "k_pct": 0.2601,
+      "opp_k_pct": 0.2101,
+      "opp_chase": 0.3199,
+      "days_rest": 6,
+      "rolling_k_3": 4.67,
+      "rolling_k_5": 5.4,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "05/19",
+          "k": 6,
+          "pitches": 82
+        },
+        {
+          "date": "05/25",
+          "k": 7,
+          "pitches": 83
+        },
+        {
+          "date": "05/30",
+          "k": 6,
+          "pitches": 82
+        },
+        {
+          "date": "06/06",
+          "k": 5,
+          "pitches": 87
+        },
+        {
+          "date": "06/13",
+          "k": 3,
+          "pitches": 86
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0262,
+        "1": 0.0516,
+        "2": 0.0868,
+        "3": 0.1249,
+        "4": 0.1533,
+        "5": 0.1608,
+        "6": 0.1439,
+        "7": 0.1101,
+        "8": 0.0719,
+        "9": 0.0401,
+        "10+": 0.0306
       }
     },
     {
@@ -638,13 +719,13 @@
       "pitcher_hand": "L",
       "opp_team": "AZ",
       "venue": "Chase Field",
-      "projected_ks": 4.7,
-      "lineup_confirmed": false,
+      "projected_ks": 4.6,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1018,
       "csw_pct": 0.2749,
       "k_pct": 0.2318,
-      "opp_k_pct": 0.1769,
-      "opp_chase": 0.318,
+      "opp_k_pct": 0.1875,
+      "opp_chase": 0.3097,
       "days_rest": 6,
       "rolling_k_3": 5.33,
       "rolling_k_5": 4.4,
@@ -689,17 +770,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0282,
-        "1": 0.0548,
-        "2": 0.0909,
-        "3": 0.1286,
-        "4": 0.1554,
-        "5": 0.1604,
-        "6": 0.1414,
-        "7": 0.1064,
-        "8": 0.0684,
-        "9": 0.0375,
-        "10+": 0.028
+        "0": 0.0305,
+        "1": 0.0582,
+        "2": 0.0949,
+        "3": 0.1322,
+        "4": 0.1573,
+        "5": 0.1598,
+        "6": 0.1387,
+        "7": 0.1027,
+        "8": 0.065,
+        "9": 0.0351,
+        "10+": 0.0255
       }
     },
     {
@@ -710,12 +791,12 @@
       "opp_team": "MIN",
       "venue": "Chase Field",
       "projected_ks": 4.6,
-      "lineup_confirmed": false,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1105,
       "csw_pct": 0.2757,
       "k_pct": 0.2194,
-      "opp_k_pct": 0.2212,
-      "opp_chase": 0.3095,
+      "opp_k_pct": 0.2157,
+      "opp_chase": 0.313,
       "days_rest": 6,
       "rolling_k_3": 6.33,
       "rolling_k_5": 4.8,
@@ -922,13 +1003,13 @@
       "pitcher_hand": "R",
       "opp_team": "ATH",
       "venue": "Sutter Health Park",
-      "projected_ks": 4.5,
-      "lineup_confirmed": false,
+      "projected_ks": 4.4,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1568,
       "csw_pct": 0.2881,
       "k_pct": 0.2146,
-      "opp_k_pct": 0.2094,
-      "opp_chase": 0.2869,
+      "opp_k_pct": 0.1994,
+      "opp_chase": 0.2877,
       "days_rest": 6,
       "rolling_k_3": 4.33,
       "rolling_k_5": 4.8,
@@ -973,17 +1054,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0328,
-        "1": 0.0617,
-        "2": 0.099,
-        "3": 0.1358,
-        "4": 0.159,
-        "5": 0.159,
-        "6": 0.1358,
-        "7": 0.099,
-        "8": 0.0617,
-        "9": 0.0328,
-        "10+": 0.0233
+        "0": 0.0353,
+        "1": 0.0653,
+        "2": 0.1032,
+        "3": 0.1393,
+        "4": 0.1605,
+        "5": 0.158,
+        "6": 0.1328,
+        "7": 0.0954,
+        "8": 0.0584,
+        "9": 0.0306,
+        "10+": 0.0212
       }
     },
     {
@@ -1206,13 +1287,13 @@
       "pitcher_hand": "L",
       "opp_team": "PIT",
       "venue": "Coors Field",
-      "projected_ks": 3.6,
-      "lineup_confirmed": false,
+      "projected_ks": 3.7,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1063,
       "csw_pct": 0.257,
       "k_pct": 0.1703,
-      "opp_k_pct": 0.2648,
-      "opp_chase": 0.3217,
+      "opp_k_pct": 0.2324,
+      "opp_chase": 0.3077,
       "days_rest": 6,
       "rolling_k_3": 3.33,
       "rolling_k_5": 3.6,
@@ -1257,17 +1338,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.06,
-        "1": 0.0979,
-        "2": 0.1364,
-        "3": 0.1623,
-        "4": 0.1649,
-        "5": 0.143,
-        "6": 0.106,
-        "7": 0.067,
-        "8": 0.0362,
-        "9": 0.0167,
-        "10+": 0.0096
+        "0": 0.0564,
+        "1": 0.0935,
+        "2": 0.1323,
+        "3": 0.1599,
+        "4": 0.1651,
+        "5": 0.1455,
+        "6": 0.1095,
+        "7": 0.0704,
+        "8": 0.0386,
+        "9": 0.0181,
+        "10+": 0.0107
       }
     },
     {
@@ -1623,77 +1704,6 @@
         "8": 0.0207,
         "9": 0.0084,
         "10+": 0.0041
-      }
-    },
-    {
-      "pitcher_name": "Brandon Eisert",
-      "pitcher_id": 685126,
-      "pitcher_team": "CWS",
-      "pitcher_hand": "L",
-      "opp_team": "DET",
-      "venue": "Comerica Park",
-      "projected_ks": 2.7,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.1471,
-      "csw_pct": 0.2684,
-      "k_pct": 0.2648,
-      "opp_k_pct": 0.2264,
-      "opp_chase": 0.2807,
-      "days_rest": 2,
-      "rolling_k_3": 1.33,
-      "rolling_k_5": 1.6,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "06/05",
-          "k": 2,
-          "pitches": 11
-        },
-        {
-          "date": "06/06",
-          "k": 2,
-          "pitches": 23
-        },
-        {
-          "date": "06/09",
-          "k": 1,
-          "pitches": 21
-        },
-        {
-          "date": "06/13",
-          "k": 1,
-          "pitches": 27
-        },
-        {
-          "date": "06/17",
-          "k": 2,
-          "pitches": 13
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0991,
-        "1": 0.1402,
-        "2": 0.1695,
-        "3": 0.1749,
-        "4": 0.1542,
-        "5": 0.116,
-        "6": 0.0746,
-        "7": 0.0409,
-        "8": 0.0192,
-        "9": 0.0077,
-        "10+": 0.0036
       }
     },
     {
