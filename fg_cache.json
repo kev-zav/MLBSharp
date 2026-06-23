@@ -2985,13 +2985,13 @@
     }
   },
   "PJ Poulin_2026": {
-    "timestamp": "2026-06-19T20:51:37.357572",
+    "timestamp": "2026-06-23T21:12:46.446676",
     "data": {
-      "k_pct": 0.1963,
-      "k_per_9": 5.3,
-      "xk_pct": 0.1963,
-      "k_pct_raw": 0.1515,
-      "ip": 22.0,
+      "k_pct": 0.1979,
+      "k_per_9": 5.34,
+      "xk_pct": 0.1979,
+      "k_pct_raw": 0.1571,
+      "ip": 23.3,
       "source": "savant"
     }
   },
@@ -5965,6 +5965,28 @@
       "k_pct_raw": 0.1284,
       "ip": 36.3,
       "source": "savant"
+    }
+  },
+  "prior_stats_615698_2025": {
+    "timestamp": "2026-06-23T21:12:30.094164",
+    "data": {
+      "k_pct": 0.165,
+      "bb_pct": 0.068,
+      "swstr_pct": 0.0942,
+      "csw_pct": 0.2542,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 77.2
+    }
+  },
+  "prior_stats_696270_2025": {
+    "timestamp": "2026-06-23T21:13:35.479190",
+    "data": {
+      "k_pct": 0.2222,
+      "bb_pct": 0.0556,
+      "swstr_pct": 0.1286,
+      "csw_pct": 0.2929,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 20.0
     }
   }
 }
