@@ -11,13 +11,13 @@
     }
   },
   "Eury P\u00e9rez_2026": {
-    "timestamp": "2026-05-27T21:18:33.082068",
+    "timestamp": "2026-06-24T21:08:05.021969",
     "data": {
-      "k_pct": 0.2557,
-      "k_per_9": 6.9,
-      "xk_pct": 0.2557,
-      "k_pct_raw": 0.252,
-      "ip": 83.3,
+      "k_pct": 0.283,
+      "k_per_9": 7.64,
+      "xk_pct": 0.283,
+      "k_pct_raw": 0.2876,
+      "ip": 51.0,
       "source": "savant"
     }
   },
@@ -176,13 +176,13 @@
     }
   },
   "Nolan McLean_2026": {
-    "timestamp": "2026-06-17T21:26:58.422998",
+    "timestamp": "2026-06-24T21:08:10.134082",
     "data": {
-      "k_pct": 0.2695,
-      "k_per_9": 7.28,
-      "xk_pct": 0.2695,
-      "k_pct_raw": 0.262,
-      "ip": 76.3,
+      "k_pct": 0.2642,
+      "k_per_9": 7.13,
+      "xk_pct": 0.2642,
+      "k_pct_raw": 0.2554,
+      "ip": 77.0,
       "source": "savant"
     }
   },
@@ -644,7 +644,7 @@
     }
   },
   "Shota Imanaga_2026": {
-    "timestamp": "2026-06-22T19:19:22.501774",
+    "timestamp": "2026-06-24T21:08:11.819065",
     "data": {
       "k_pct": 0.2139,
       "k_per_9": 5.78,
@@ -1040,13 +1040,13 @@
     }
   },
   "Javier Assad_2026": {
-    "timestamp": "2026-06-17T18:10:07.685153",
+    "timestamp": "2026-06-24T21:08:07.534342",
     "data": {
-      "k_pct": 0.1637,
-      "k_per_9": 4.42,
-      "xk_pct": 0.1637,
-      "k_pct_raw": 0.1714,
-      "ip": 35.0,
+      "k_pct": 0.1525,
+      "k_per_9": 4.12,
+      "xk_pct": 0.1525,
+      "k_pct_raw": 0.1538,
+      "ip": 34.7,
       "source": "savant"
     }
   },
@@ -2151,13 +2151,13 @@
     }
   },
   "Jacob deGrom_2026": {
-    "timestamp": "2026-06-19T17:47:53.051966",
+    "timestamp": "2026-06-24T21:07:51.065276",
     "data": {
-      "k_pct": 0.2806,
-      "k_per_9": 7.58,
-      "xk_pct": 0.2806,
-      "k_pct_raw": 0.2819,
-      "ip": 75.7,
+      "k_pct": 0.2733,
+      "k_per_9": 7.38,
+      "xk_pct": 0.2733,
+      "k_pct_raw": 0.2727,
+      "ip": 77.0,
       "source": "savant"
     }
   },
@@ -6005,6 +6005,37 @@
       "k_per_9": 5.39,
       "xk_pct": 0.1997,
       "source": "prior_season"
+    }
+  },
+  "Carson Palmquist_2026": {
+    "timestamp": "2026-06-24T21:08:34.770946",
+    "data": {
+      "k_pct": 0.1543,
+      "k_per_9": 4.17,
+      "xk_pct": 0.1543,
+      "source": "prior_season"
+    }
+  },
+  "prior_stats_683352_2025": {
+    "timestamp": "2026-06-24T21:08:51.068740",
+    "data": {
+      "k_pct": 0.224,
+      "bb_pct": 0.082,
+      "swstr_pct": 0.115,
+      "csw_pct": 0.27,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 88.0
+    }
+  },
+  "prior_stats_676664_2025": {
+    "timestamp": "2026-06-24T21:08:56.791043",
+    "data": {
+      "k_pct": 0.1997,
+      "bb_pct": 0.0614,
+      "swstr_pct": 0.1014,
+      "csw_pct": 0.2675,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 87.6
     }
   }
 }
