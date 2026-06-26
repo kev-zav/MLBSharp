@@ -4019,13 +4019,13 @@
     }
   },
   "Zack Wheeler_2026": {
-    "timestamp": "2026-06-21T17:20:12.214478",
+    "timestamp": "2026-06-26T21:03:54.110512",
     "data": {
-      "k_pct": 0.2768,
-      "k_per_9": 7.47,
-      "xk_pct": 0.2768,
-      "k_pct_raw": 0.2627,
-      "ip": 78.7,
+      "k_pct": 0.2774,
+      "k_per_9": 7.49,
+      "xk_pct": 0.2774,
+      "k_pct_raw": 0.2636,
+      "ip": 79.7,
       "source": "savant"
     }
   },
@@ -5115,12 +5115,14 @@
     }
   },
   "Zach Thornton_2026": {
-    "timestamp": "2026-05-20T18:10:10.446262",
+    "timestamp": "2026-06-26T21:03:55.699017",
     "data": {
-      "k_pct": 0.224,
-      "k_per_9": 6.05,
-      "xk_pct": 0.224,
-      "source": "prior_season"
+      "k_pct": 0.2081,
+      "k_per_9": 5.62,
+      "xk_pct": 0.2081,
+      "k_pct_raw": 0.1579,
+      "ip": 6.3,
+      "source": "savant"
     }
   },
   "prior_stats_804267_2025": {
@@ -5298,13 +5300,13 @@
     }
   },
   "David Sandlin_2026": {
-    "timestamp": "2026-06-01T22:20:08.501294",
+    "timestamp": "2026-06-26T21:04:08.582782",
     "data": {
-      "k_pct": 0.2208,
-      "k_per_9": 5.96,
-      "xk_pct": 0.2208,
-      "k_pct_raw": 0.2105,
-      "ip": 6.3,
+      "k_pct": 0.2326,
+      "k_per_9": 6.28,
+      "xk_pct": 0.2326,
+      "k_pct_raw": 0.2414,
+      "ip": 19.3,
       "source": "savant"
     }
   },
@@ -6036,6 +6038,17 @@
       "csw_pct": 0.2675,
       "ip_per_start": 4.9,
       "pitches_per_start": 87.6
+    }
+  },
+  "Steven Cruz_2026": {
+    "timestamp": "2026-06-26T21:04:07.036961",
+    "data": {
+      "k_pct": 0.2541,
+      "k_per_9": 6.86,
+      "xk_pct": 0.2541,
+      "k_pct_raw": 0.2949,
+      "ip": 26.0,
+      "source": "savant"
     }
   }
 }
