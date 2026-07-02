@@ -1,78 +1,7 @@
 {
   "date": "July 02, 2026",
-  "generated_at": "05:27 PM",
+  "generated_at": "08:40 PM",
   "all_pitchers": [
-    {
-      "pitcher_name": "Jacob Misiorowski",
-      "pitcher_id": 694819,
-      "pitcher_team": "MIL",
-      "pitcher_hand": "R",
-      "opp_team": "CIN",
-      "venue": "American Family Field",
-      "projected_ks": 7.6,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.1828,
-      "csw_pct": 0.374,
-      "k_pct": 0.35,
-      "opp_k_pct": 0.2339,
-      "opp_chase": 0.2903,
-      "days_rest": 6,
-      "rolling_k_3": 10.0,
-      "rolling_k_5": 9.2,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 0,
-        "description": "Dome / Retractable Roof",
-        "adjustment": 1.0,
-        "indoor": true
-      },
-      "last5": [
-        {
-          "date": "05/31",
-          "k": 8,
-          "pitches": 88
-        },
-        {
-          "date": "06/06",
-          "k": 8,
-          "pitches": 98
-        },
-        {
-          "date": "06/12",
-          "k": 15,
-          "pitches": 95
-        },
-        {
-          "date": "06/19",
-          "k": 7,
-          "pitches": 91
-        },
-        {
-          "date": "06/26",
-          "k": 8,
-          "pitches": 107
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0017,
-        "1": 0.0051,
-        "2": 0.0133,
-        "3": 0.0298,
-        "4": 0.057,
-        "5": 0.093,
-        "6": 0.1296,
-        "7": 0.1542,
-        "8": 0.1566,
-        "9": 0.1359,
-        "10+": 0.2238
-      }
-    },
     {
       "pitcher_name": "Bryce Miller",
       "pitcher_id": 682243,
@@ -145,90 +74,19 @@
       }
     },
     {
-      "pitcher_name": "Chase Burns",
-      "pitcher_id": 695505,
-      "pitcher_team": "CIN",
-      "pitcher_hand": "R",
-      "opp_team": "MIL",
-      "venue": "American Family Field",
-      "projected_ks": 6.0,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.1642,
-      "csw_pct": 0.2945,
-      "k_pct": 0.3251,
-      "opp_k_pct": 0.2194,
-      "opp_chase": 0.2732,
-      "days_rest": 5,
-      "rolling_k_3": 8.0,
-      "rolling_k_5": 8.0,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 0,
-        "description": "Dome / Retractable Roof",
-        "adjustment": 1.0,
-        "indoor": true
-      },
-      "last5": [
-        {
-          "date": "06/03",
-          "k": 9,
-          "pitches": 98
-        },
-        {
-          "date": "06/09",
-          "k": 7,
-          "pitches": 105
-        },
-        {
-          "date": "06/15",
-          "k": 7,
-          "pitches": 100
-        },
-        {
-          "date": "06/21",
-          "k": 7,
-          "pitches": 96
-        },
-        {
-          "date": "06/27",
-          "k": 10,
-          "pitches": 93
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0093,
-        "1": 0.0221,
-        "2": 0.045,
-        "3": 0.0783,
-        "4": 0.1161,
-        "5": 0.1472,
-        "6": 0.1593,
-        "7": 0.1472,
-        "8": 0.1161,
-        "9": 0.0783,
-        "10+": 0.0811
-      }
-    },
-    {
       "pitcher_name": "Nathan Eovaldi",
       "pitcher_id": 543135,
       "pitcher_team": "TEX",
       "pitcher_hand": "R",
       "opp_team": "DET",
       "venue": "Globe Life Field",
-      "projected_ks": 5.8,
-      "lineup_confirmed": false,
+      "projected_ks": 5.9,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1518,
       "csw_pct": 0.3227,
       "k_pct": 0.2503,
-      "opp_k_pct": 0.2311,
-      "opp_chase": 0.2785,
+      "opp_k_pct": 0.2303,
+      "opp_chase": 0.2794,
       "days_rest": 6,
       "rolling_k_3": 8.0,
       "rolling_k_5": 6.6,
@@ -273,17 +131,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0112,
-        "1": 0.0259,
-        "2": 0.051,
-        "3": 0.0859,
-        "4": 0.1235,
-        "5": 0.1516,
-        "6": 0.159,
-        "7": 0.1423,
-        "8": 0.1088,
-        "9": 0.0711,
-        "10+": 0.0698
+        "0": 0.0102,
+        "1": 0.0239,
+        "2": 0.048,
+        "3": 0.082,
+        "4": 0.1198,
+        "5": 0.1495,
+        "6": 0.1592,
+        "7": 0.1448,
+        "8": 0.1125,
+        "9": 0.0746,
+        "10+": 0.0753
       }
     },
     {
@@ -480,22 +338,22 @@
       }
     },
     {
-      "pitcher_name": "Framber Valdez",
-      "pitcher_id": 664285,
-      "pitcher_team": "DET",
-      "pitcher_hand": "L",
-      "opp_team": "TEX",
-      "venue": "Globe Life Field",
-      "projected_ks": 4.5,
-      "lineup_confirmed": false,
-      "swstr_pct": 0.0922,
-      "csw_pct": 0.2711,
-      "k_pct": 0.194,
-      "opp_k_pct": 0.2524,
-      "opp_chase": 0.2767,
+      "pitcher_name": "Jared Jones",
+      "pitcher_id": 683003,
+      "pitcher_team": "PIT",
+      "pitcher_hand": "R",
+      "opp_team": "PHI",
+      "venue": "Citizens Bank Park",
+      "projected_ks": 4.6,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.1569,
+      "csw_pct": 0.2927,
+      "k_pct": 0.2248,
+      "opp_k_pct": 0.2221,
+      "opp_chase": 0.3261,
       "days_rest": 5,
-      "rolling_k_3": 5.33,
-      "rolling_k_5": 4.6,
+      "rolling_k_3": 3.67,
+      "rolling_k_5": 3.8,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -504,50 +362,50 @@
       },
       "weather": {
         "temp_f": 72,
-        "wind_mph": 0,
-        "description": "Dome / Retractable Roof",
+        "wind_mph": 5,
+        "description": "Unknown",
         "adjustment": 1.0,
-        "indoor": true
+        "indoor": false
       },
       "last5": [
         {
-          "date": "06/05",
-          "k": 5,
-          "pitches": 102
+          "date": "06/04",
+          "k": 4,
+          "pitches": 74
         },
         {
           "date": "06/10",
-          "k": 2,
+          "k": 4,
           "pitches": 75
         },
         {
-          "date": "06/16",
-          "k": 6,
-          "pitches": 93
+          "date": "06/15",
+          "k": 4,
+          "pitches": 75
         },
         {
-          "date": "06/22",
-          "k": 8,
-          "pitches": 94
+          "date": "06/21",
+          "k": 3,
+          "pitches": 45
         },
         {
           "date": "06/27",
-          "k": 2,
-          "pitches": 88
+          "k": 4,
+          "pitches": 81
         }
       ],
       "k_distribution": {
-        "0": 0.0328,
-        "1": 0.0617,
-        "2": 0.099,
-        "3": 0.1358,
-        "4": 0.159,
-        "5": 0.159,
-        "6": 0.1358,
-        "7": 0.099,
-        "8": 0.0617,
-        "9": 0.0328,
-        "10+": 0.0233
+        "0": 0.0305,
+        "1": 0.0582,
+        "2": 0.0949,
+        "3": 0.1322,
+        "4": 0.1573,
+        "5": 0.1598,
+        "6": 0.1387,
+        "7": 0.1027,
+        "8": 0.065,
+        "9": 0.0351,
+        "10+": 0.0255
       }
     },
     {
@@ -622,22 +480,22 @@
       }
     },
     {
-      "pitcher_name": "Davis Martin",
-      "pitcher_id": 663436,
-      "pitcher_team": "CWS",
-      "pitcher_hand": "R",
-      "opp_team": "CLE",
-      "venue": "Progressive Field",
+      "pitcher_name": "Framber Valdez",
+      "pitcher_id": 664285,
+      "pitcher_team": "DET",
+      "pitcher_hand": "L",
+      "opp_team": "TEX",
+      "venue": "Globe Life Field",
       "projected_ks": 4.0,
-      "lineup_confirmed": false,
-      "swstr_pct": 0.1455,
-      "csw_pct": 0.29,
-      "k_pct": 0.2285,
-      "opp_k_pct": 0.2109,
-      "opp_chase": 0.2878,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.0922,
+      "csw_pct": 0.2711,
+      "k_pct": 0.194,
+      "opp_k_pct": 0.2191,
+      "opp_chase": 0.2966,
       "days_rest": 5,
-      "rolling_k_3": 3.67,
-      "rolling_k_5": 3.8,
+      "rolling_k_3": 5.33,
+      "rolling_k_5": 4.6,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -646,36 +504,36 @@
       },
       "weather": {
         "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
+        "wind_mph": 0,
+        "description": "Dome / Retractable Roof",
         "adjustment": 1.0,
-        "indoor": false
+        "indoor": true
       },
       "last5": [
         {
-          "date": "06/02",
-          "k": 2,
-          "pitches": 92
+          "date": "06/05",
+          "k": 5,
+          "pitches": 102
         },
         {
           "date": "06/10",
-          "k": 6,
-          "pitches": 100
+          "k": 2,
+          "pitches": 75
         },
         {
           "date": "06/16",
-          "k": 4,
-          "pitches": 88
+          "k": 6,
+          "pitches": 93
         },
         {
-          "date": "06/21",
-          "k": 4,
-          "pitches": 77
+          "date": "06/22",
+          "k": 8,
+          "pitches": 94
         },
         {
           "date": "06/27",
-          "k": 3,
-          "pitches": 87
+          "k": 2,
+          "pitches": 88
         }
       ],
       "k_distribution": {
@@ -764,22 +622,22 @@
       }
     },
     {
-      "pitcher_name": "Ryan Gusto",
-      "pitcher_id": 687473,
-      "pitcher_team": "MIA",
+      "pitcher_name": "Davis Martin",
+      "pitcher_id": 663436,
+      "pitcher_team": "CWS",
       "pitcher_hand": "R",
-      "opp_team": "COL",
-      "venue": "Coors Field",
-      "projected_ks": 3.8,
+      "opp_team": "CLE",
+      "venue": "Progressive Field",
+      "projected_ks": 3.9,
       "lineup_confirmed": true,
-      "swstr_pct": 0.097,
-      "csw_pct": 0.2493,
-      "k_pct": 0.204,
-      "opp_k_pct": 0.2095,
-      "opp_chase": 0.2972,
+      "swstr_pct": 0.1455,
+      "csw_pct": 0.29,
+      "k_pct": 0.2285,
+      "opp_k_pct": 0.1946,
+      "opp_chase": 0.2805,
       "days_rest": 5,
       "rolling_k_3": 3.67,
-      "rolling_k_5": 3.2,
+      "rolling_k_5": 3.8,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -795,43 +653,43 @@
       },
       "last5": [
         {
-          "date": "06/05",
-          "k": 1,
-          "pitches": 33
+          "date": "06/02",
+          "k": 2,
+          "pitches": 92
         },
         {
           "date": "06/10",
-          "k": 4,
-          "pitches": 66
+          "k": 6,
+          "pitches": 100
         },
         {
-          "date": "06/15",
-          "k": 1,
-          "pitches": 91
+          "date": "06/16",
+          "k": 4,
+          "pitches": 88
         },
         {
           "date": "06/21",
-          "k": 6,
-          "pitches": 68
+          "k": 4,
+          "pitches": 77
         },
         {
           "date": "06/27",
-          "k": 4,
-          "pitches": 63
+          "k": 3,
+          "pitches": 87
         }
       ],
       "k_distribution": {
-        "0": 0.053,
-        "1": 0.0892,
-        "2": 0.1282,
-        "3": 0.1574,
-        "4": 0.1651,
-        "5": 0.1478,
-        "6": 0.113,
-        "7": 0.0738,
-        "8": 0.0411,
-        "9": 0.0196,
-        "10+": 0.0118
+        "0": 0.0497,
+        "1": 0.0849,
+        "2": 0.1241,
+        "3": 0.1548,
+        "4": 0.1649,
+        "5": 0.15,
+        "6": 0.1165,
+        "7": 0.0773,
+        "8": 0.0438,
+        "9": 0.0212,
+        "10+": 0.0131
       }
     },
     {
@@ -842,12 +700,12 @@
       "opp_team": "CWS",
       "venue": "Progressive Field",
       "projected_ks": 3.8,
-      "lineup_confirmed": false,
+      "lineup_confirmed": true,
       "swstr_pct": 0.0925,
       "csw_pct": 0.2728,
       "k_pct": 0.1901,
-      "opp_k_pct": 0.2327,
-      "opp_chase": 0.2827,
+      "opp_k_pct": 0.2178,
+      "opp_chase": 0.2875,
       "days_rest": 5,
       "rolling_k_3": 3.0,
       "rolling_k_5": 4.0,
@@ -977,6 +835,62 @@
       }
     },
     {
+      "pitcher_name": "Alan Rangel",
+      "pitcher_id": 660604,
+      "pitcher_team": "PHI",
+      "pitcher_hand": "R",
+      "opp_team": "PIT",
+      "venue": "Citizens Bank Park",
+      "projected_ks": 2.6,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.08736666666666668,
+      "csw_pct": 0.23986666666666667,
+      "k_pct": 0.173,
+      "opp_k_pct": 0.225,
+      "opp_chase": 0.3025,
+      "days_rest": 5,
+      "rolling_k_3": 4.0,
+      "rolling_k_5": 4.0,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "06/22",
+          "k": 4,
+          "pitches": 72
+        },
+        {
+          "date": "06/27",
+          "k": 4,
+          "pitches": 70
+        }
+      ],
+      "k_distribution": {
+        "0": 0.1042,
+        "1": 0.1451,
+        "2": 0.1726,
+        "3": 0.1754,
+        "4": 0.1522,
+        "5": 0.1127,
+        "6": 0.0713,
+        "7": 0.0385,
+        "8": 0.0178,
+        "9": 0.007,
+        "10+": 0.0032
+      }
+    },
+    {
       "pitcher_name": "Randy V\u00e1squez",
       "pitcher_id": 681190,
       "pitcher_team": "SD",
@@ -1048,5 +962,5 @@
       }
     }
   ],
-  "total_pitchers": 15
+  "total_pitchers": 14
 }

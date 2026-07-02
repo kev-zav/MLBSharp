@@ -5331,13 +5331,13 @@
     }
   },
   "Jared Jones_2026": {
-    "timestamp": "2026-06-27T16:57:32.328613",
+    "timestamp": "2026-07-02T20:39:34.769405",
     "data": {
-      "k_pct": 0.2281,
-      "k_per_9": 6.16,
-      "xk_pct": 0.2281,
-      "k_pct_raw": 0.2308,
-      "ip": 30.3,
+      "k_pct": 0.2248,
+      "k_per_9": 6.07,
+      "xk_pct": 0.2248,
+      "k_pct_raw": 0.2252,
+      "ip": 37.0,
       "source": "savant"
     }
   },
@@ -6174,6 +6174,28 @@
       "k_pct_raw": 0.25,
       "ip": 4.0,
       "source": "savant"
+    }
+  },
+  "Alan Rangel_2026": {
+    "timestamp": "2026-07-02T20:39:48.724977",
+    "data": {
+      "k_pct": 0.173,
+      "k_per_9": 4.67,
+      "xk_pct": 0.173,
+      "k_pct_raw": 0.2051,
+      "ip": 13.0,
+      "source": "savant"
+    }
+  },
+  "prior_stats_694462_2025": {
+    "timestamp": "2026-07-02T20:40:03.709278",
+    "data": {
+      "k_pct": 0.2391,
+      "bb_pct": 0.0913,
+      "swstr_pct": 0.1263,
+      "csw_pct": 0.2864,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 88.7
     }
   }
 }
