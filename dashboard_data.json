@@ -1,6 +1,6 @@
 {
   "date": "July 03, 2026",
-  "generated_at": "05:14 PM",
+  "generated_at": "08:37 PM",
   "all_pitchers": [
     {
       "pitcher_name": "Dylan Cease",
@@ -80,13 +80,13 @@
       "pitcher_hand": "L",
       "opp_team": "PIT",
       "venue": "Nationals Park",
-      "projected_ks": 6.1,
-      "lineup_confirmed": false,
+      "projected_ks": 6.4,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1313,
       "csw_pct": 0.3204,
       "k_pct": 0.2641,
-      "opp_k_pct": 0.2664,
-      "opp_chase": 0.3267,
+      "opp_k_pct": 0.233,
+      "opp_chase": 0.3222,
       "days_rest": 6,
       "rolling_k_3": 8.0,
       "rolling_k_5": 6.6,
@@ -131,17 +131,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0084,
-        "1": 0.0204,
-        "2": 0.0422,
-        "3": 0.0745,
-        "4": 0.1124,
-        "5": 0.1447,
-        "6": 0.1591,
-        "7": 0.1493,
-        "8": 0.1197,
-        "9": 0.082,
-        "10+": 0.0873
+        "0": 0.0063,
+        "1": 0.0159,
+        "2": 0.0345,
+        "3": 0.0638,
+        "4": 0.1009,
+        "5": 0.1362,
+        "6": 0.157,
+        "7": 0.1545,
+        "8": 0.1299,
+        "9": 0.0932,
+        "10+": 0.1078
       }
     },
     {
@@ -152,12 +152,12 @@
       "opp_team": "ATL",
       "venue": "Truist Park",
       "projected_ks": 5.6,
-      "lineup_confirmed": false,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1224,
       "csw_pct": 0.2799,
       "k_pct": 0.2531,
-      "opp_k_pct": 0.2084,
-      "opp_chase": 0.3302,
+      "opp_k_pct": 0.2108,
+      "opp_chase": 0.3274,
       "days_rest": 6,
       "rolling_k_3": 5.0,
       "rolling_k_5": 5.6,
@@ -287,77 +287,6 @@
       }
     },
     {
-      "pitcher_name": "Gavin Williams",
-      "pitcher_id": 668909,
-      "pitcher_team": "CLE",
-      "pitcher_hand": "R",
-      "opp_team": "CWS",
-      "venue": "Progressive Field",
-      "projected_ks": 5.3,
-      "lineup_confirmed": false,
-      "swstr_pct": 0.1497,
-      "csw_pct": 0.3215,
-      "k_pct": 0.2549,
-      "opp_k_pct": 0.2314,
-      "opp_chase": 0.2827,
-      "days_rest": 5,
-      "rolling_k_3": 6.0,
-      "rolling_k_5": 5.8,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "06/03",
-          "k": 6,
-          "pitches": 96
-        },
-        {
-          "date": "06/08",
-          "k": 5,
-          "pitches": 90
-        },
-        {
-          "date": "06/17",
-          "k": 4,
-          "pitches": 87
-        },
-        {
-          "date": "06/22",
-          "k": 8,
-          "pitches": 95
-        },
-        {
-          "date": "06/28",
-          "k": 6,
-          "pitches": 103
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0174,
-        "1": 0.0372,
-        "2": 0.0678,
-        "3": 0.1055,
-        "4": 0.1401,
-        "5": 0.159,
-        "6": 0.1541,
-        "7": 0.1275,
-        "8": 0.0901,
-        "9": 0.0543,
-        "10+": 0.047
-      }
-    },
-    {
       "pitcher_name": "Spencer Arrighetti",
       "pitcher_id": 681293,
       "pitcher_team": "HOU",
@@ -426,77 +355,6 @@
         "8": 0.0863,
         "9": 0.0513,
         "10+": 0.0432
-      }
-    },
-    {
-      "pitcher_name": "Trevor Rogers",
-      "pitcher_id": 669432,
-      "pitcher_team": "BAL",
-      "pitcher_hand": "L",
-      "opp_team": "CIN",
-      "venue": "Great American Ball Park",
-      "projected_ks": 5.1,
-      "lineup_confirmed": false,
-      "swstr_pct": 0.1108,
-      "csw_pct": 0.2662,
-      "k_pct": 0.1842,
-      "opp_k_pct": 0.2365,
-      "opp_chase": 0.2698,
-      "days_rest": 7,
-      "rolling_k_3": 5.67,
-      "rolling_k_5": 4.6,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "06/04",
-          "k": 3,
-          "pitches": 87
-        },
-        {
-          "date": "06/09",
-          "k": 3,
-          "pitches": 97
-        },
-        {
-          "date": "06/14",
-          "k": 4,
-          "pitches": 82
-        },
-        {
-          "date": "06/20",
-          "k": 6,
-          "pitches": 96
-        },
-        {
-          "date": "06/26",
-          "k": 7,
-          "pitches": 87
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0206,
-        "1": 0.0426,
-        "2": 0.0752,
-        "3": 0.1133,
-        "4": 0.1459,
-        "5": 0.1604,
-        "6": 0.1506,
-        "7": 0.1207,
-        "8": 0.0826,
-        "9": 0.0483,
-        "10+": 0.0397
       }
     },
     {
@@ -642,19 +500,90 @@
       }
     },
     {
+      "pitcher_name": "Gavin Williams",
+      "pitcher_id": 668909,
+      "pitcher_team": "CLE",
+      "pitcher_hand": "R",
+      "opp_team": "CWS",
+      "venue": "Progressive Field",
+      "projected_ks": 5.0,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.1497,
+      "csw_pct": 0.3215,
+      "k_pct": 0.2549,
+      "opp_k_pct": 0.217,
+      "opp_chase": 0.2871,
+      "days_rest": 5,
+      "rolling_k_3": 6.0,
+      "rolling_k_5": 5.8,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "06/03",
+          "k": 6,
+          "pitches": 96
+        },
+        {
+          "date": "06/08",
+          "k": 5,
+          "pitches": 90
+        },
+        {
+          "date": "06/17",
+          "k": 4,
+          "pitches": 87
+        },
+        {
+          "date": "06/22",
+          "k": 8,
+          "pitches": 95
+        },
+        {
+          "date": "06/28",
+          "k": 6,
+          "pitches": 103
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0223,
+        "1": 0.0455,
+        "2": 0.079,
+        "3": 0.1172,
+        "4": 0.1486,
+        "5": 0.1608,
+        "6": 0.1486,
+        "7": 0.1172,
+        "8": 0.079,
+        "9": 0.0455,
+        "10+": 0.0364
+      }
+    },
+    {
       "pitcher_name": "Gerrit Cole",
       "pitcher_id": 543037,
       "pitcher_team": "NYY",
       "pitcher_hand": "R",
       "opp_team": "MIN",
       "venue": "Yankee Stadium",
-      "projected_ks": 4.7,
-      "lineup_confirmed": false,
+      "projected_ks": 4.8,
+      "lineup_confirmed": true,
       "swstr_pct": 0.0853,
       "csw_pct": 0.2833,
       "k_pct": 0.2156,
-      "opp_k_pct": 0.2106,
-      "opp_chase": 0.3056,
+      "opp_k_pct": 0.204,
+      "opp_chase": 0.3,
       "days_rest": 6,
       "rolling_k_3": 5.33,
       "rolling_k_5": 4.4,
@@ -699,17 +628,159 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0282,
-        "1": 0.0548,
-        "2": 0.0909,
-        "3": 0.1286,
-        "4": 0.1554,
-        "5": 0.1604,
-        "6": 0.1414,
-        "7": 0.1064,
-        "8": 0.0684,
-        "9": 0.0375,
-        "10+": 0.028
+        "0": 0.0262,
+        "1": 0.0516,
+        "2": 0.0868,
+        "3": 0.1249,
+        "4": 0.1533,
+        "5": 0.1608,
+        "6": 0.1439,
+        "7": 0.1101,
+        "8": 0.0719,
+        "9": 0.0401,
+        "10+": 0.0306
+      }
+    },
+    {
+      "pitcher_name": "Logan Webb",
+      "pitcher_id": 657277,
+      "pitcher_team": "SF",
+      "pitcher_hand": "R",
+      "opp_team": "COL",
+      "venue": "Coors Field",
+      "projected_ks": 4.8,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.0933,
+      "csw_pct": 0.283,
+      "k_pct": 0.2198,
+      "opp_k_pct": 0.2124,
+      "opp_chase": 0.3205,
+      "days_rest": 6,
+      "rolling_k_3": 6.0,
+      "rolling_k_5": 5.8,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "06/03",
+          "k": 4,
+          "pitches": 95
+        },
+        {
+          "date": "06/08",
+          "k": 7,
+          "pitches": 99
+        },
+        {
+          "date": "06/14",
+          "k": 7,
+          "pitches": 106
+        },
+        {
+          "date": "06/21",
+          "k": 5,
+          "pitches": 103
+        },
+        {
+          "date": "06/27",
+          "k": 6,
+          "pitches": 92
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0262,
+        "1": 0.0516,
+        "2": 0.0868,
+        "3": 0.1249,
+        "4": 0.1533,
+        "5": 0.1608,
+        "6": 0.1439,
+        "7": 0.1101,
+        "8": 0.0719,
+        "9": 0.0401,
+        "10+": 0.0306
+      }
+    },
+    {
+      "pitcher_name": "Trevor Rogers",
+      "pitcher_id": 669432,
+      "pitcher_team": "BAL",
+      "pitcher_hand": "L",
+      "opp_team": "CIN",
+      "venue": "Great American Ball Park",
+      "projected_ks": 4.6,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.1108,
+      "csw_pct": 0.2662,
+      "k_pct": 0.1842,
+      "opp_k_pct": 0.2244,
+      "opp_chase": 0.2799,
+      "days_rest": 7,
+      "rolling_k_3": 5.67,
+      "rolling_k_5": 4.6,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "06/04",
+          "k": 3,
+          "pitches": 87
+        },
+        {
+          "date": "06/09",
+          "k": 3,
+          "pitches": 97
+        },
+        {
+          "date": "06/14",
+          "k": 4,
+          "pitches": 82
+        },
+        {
+          "date": "06/20",
+          "k": 6,
+          "pitches": 96
+        },
+        {
+          "date": "06/26",
+          "k": 7,
+          "pitches": 87
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0305,
+        "1": 0.0582,
+        "2": 0.0949,
+        "3": 0.1322,
+        "4": 0.1573,
+        "5": 0.1598,
+        "6": 0.1387,
+        "7": 0.1027,
+        "8": 0.065,
+        "9": 0.0351,
+        "10+": 0.0255
       }
     },
     {
@@ -917,13 +988,13 @@
       "pitcher_hand": "L",
       "opp_team": "CLE",
       "venue": "Progressive Field",
-      "projected_ks": 4.1,
-      "lineup_confirmed": false,
+      "projected_ks": 3.8,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1115,
       "csw_pct": 0.2736,
       "k_pct": 0.2051,
-      "opp_k_pct": 0.2272,
-      "opp_chase": 0.2832,
+      "opp_k_pct": 0.2244,
+      "opp_chase": 0.287,
       "days_rest": 5,
       "rolling_k_3": 4.0,
       "rolling_k_5": 4.6,
@@ -968,88 +1039,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0435,
-        "1": 0.0768,
-        "2": 0.1157,
-        "3": 0.149,
-        "4": 0.1638,
-        "5": 0.1538,
-        "6": 0.1233,
-        "7": 0.0844,
-        "8": 0.0493,
-        "9": 0.0246,
-        "10+": 0.0159
-      }
-    },
-    {
-      "pitcher_name": "Andre Pallante",
-      "pitcher_id": 669467,
-      "pitcher_team": "STL",
-      "pitcher_hand": "R",
-      "opp_team": "CHC",
-      "venue": "Wrigley Field",
-      "projected_ks": 3.7,
-      "lineup_confirmed": false,
-      "swstr_pct": 0.0902,
-      "csw_pct": 0.286,
-      "k_pct": 0.1733,
-      "opp_k_pct": 0.214,
-      "opp_chase": 0.2798,
-      "days_rest": 6,
-      "rolling_k_3": 4.0,
-      "rolling_k_5": 4.4,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "06/03",
-          "k": 5,
-          "pitches": 85
-        },
-        {
-          "date": "06/10",
-          "k": 5,
-          "pitches": 93
-        },
-        {
-          "date": "06/16",
-          "k": 6,
-          "pitches": 92
-        },
-        {
-          "date": "06/22",
-          "k": 2,
-          "pitches": 85
-        },
-        {
-          "date": "06/27",
-          "k": 4,
-          "pitches": 98
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0564,
-        "1": 0.0935,
-        "2": 0.1323,
-        "3": 0.1599,
+        "0": 0.053,
+        "1": 0.0892,
+        "2": 0.1282,
+        "3": 0.1574,
         "4": 0.1651,
-        "5": 0.1455,
-        "6": 0.1095,
-        "7": 0.0704,
-        "8": 0.0386,
-        "9": 0.0181,
-        "10+": 0.0107
+        "5": 0.1478,
+        "6": 0.113,
+        "7": 0.0738,
+        "8": 0.0411,
+        "9": 0.0196,
+        "10+": 0.0118
       }
     },
     {
@@ -1124,22 +1124,22 @@
       }
     },
     {
-      "pitcher_name": "Mike Paredes",
-      "pitcher_id": 702474,
-      "pitcher_team": "MIN",
+      "pitcher_name": "Ryan Feltner",
+      "pitcher_id": 663372,
+      "pitcher_team": "COL",
       "pitcher_hand": "R",
-      "opp_team": "NYY",
-      "venue": "Yankee Stadium",
+      "opp_team": "SF",
+      "venue": "Coors Field",
       "projected_ks": 3.5,
-      "lineup_confirmed": false,
-      "swstr_pct": 0.0942,
-      "csw_pct": 0.2435,
-      "k_pct": 0.1555,
-      "opp_k_pct": 0.2341,
-      "opp_chase": 0.2795,
-      "days_rest": 6,
-      "rolling_k_3": 1.67,
-      "rolling_k_5": 2.0,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.1064,
+      "csw_pct": 0.261,
+      "k_pct": 0.1517,
+      "opp_k_pct": 0.1946,
+      "opp_chase": 0.3077,
+      "days_rest": 5,
+      "rolling_k_3": 3.0,
+      "rolling_k_5": 3.2,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -1155,29 +1155,29 @@
       },
       "last5": [
         {
-          "date": "06/04",
-          "k": 1,
-          "pitches": 50
-        },
-        {
-          "date": "06/10",
+          "date": "06/05",
           "k": 4,
-          "pitches": 58
+          "pitches": 81
         },
         {
-          "date": "06/15",
+          "date": "06/11",
+          "k": 3,
+          "pitches": 75
+        },
+        {
+          "date": "06/16",
+          "k": 7,
+          "pitches": 104
+        },
+        {
+          "date": "06/22",
           "k": 2,
-          "pitches": 59
+          "pitches": 93
         },
         {
-          "date": "06/21",
-          "k": 1,
-          "pitches": 76
-        },
-        {
-          "date": "06/27",
-          "k": 2,
-          "pitches": 74
+          "date": "06/28",
+          "k": 0,
+          "pitches": 82
         }
       ],
       "k_distribution": {
@@ -1266,22 +1266,22 @@
       }
     },
     {
-      "pitcher_name": "David Peterson",
-      "pitcher_id": 656849,
-      "pitcher_team": "CHC",
-      "pitcher_hand": "L",
-      "opp_team": "STL",
-      "venue": "Wrigley Field",
+      "pitcher_name": "Mike Paredes",
+      "pitcher_id": 702474,
+      "pitcher_team": "MIN",
+      "pitcher_hand": "R",
+      "opp_team": "NYY",
+      "venue": "Yankee Stadium",
       "projected_ks": 3.4,
-      "lineup_confirmed": false,
-      "swstr_pct": 0.0907,
-      "csw_pct": 0.2678,
-      "k_pct": 0.1853,
-      "opp_k_pct": 0.1738,
-      "opp_chase": 0.2915,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.0942,
+      "csw_pct": 0.2435,
+      "k_pct": 0.1555,
+      "opp_k_pct": 0.2188,
+      "opp_chase": 0.2877,
       "days_rest": 6,
-      "rolling_k_3": 2.33,
-      "rolling_k_5": 2.2,
+      "rolling_k_3": 1.67,
+      "rolling_k_5": 2.0,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -1297,29 +1297,29 @@
       },
       "last5": [
         {
-          "date": "05/31",
-          "k": 3,
-          "pitches": 51
+          "date": "06/04",
+          "k": 1,
+          "pitches": 50
         },
         {
           "date": "06/10",
-          "k": 1,
-          "pitches": 64
+          "k": 4,
+          "pitches": 58
         },
         {
           "date": "06/15",
-          "k": 1,
-          "pitches": 54
+          "k": 2,
+          "pitches": 59
         },
         {
           "date": "06/21",
-          "k": 5,
-          "pitches": 79
+          "k": 1,
+          "pitches": 76
         },
         {
           "date": "06/27",
-          "k": 1,
-          "pitches": 69
+          "k": 2,
+          "pitches": 74
         }
       ],
       "k_distribution": {
