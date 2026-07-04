@@ -743,13 +743,13 @@
     }
   },
   "Braxton Ashcraft_2026": {
-    "timestamp": "2026-06-29T18:03:27.149136",
+    "timestamp": "2026-07-04T20:27:32.664744",
     "data": {
-      "k_pct": 0.2628,
-      "k_per_9": 7.1,
-      "xk_pct": 0.2628,
-      "k_pct_raw": 0.2677,
-      "ip": 84.7,
+      "k_pct": 0.2718,
+      "k_per_9": 7.34,
+      "xk_pct": 0.2718,
+      "k_pct_raw": 0.2789,
+      "ip": 83.7,
       "source": "savant"
     }
   },
@@ -6014,12 +6014,14 @@
     }
   },
   "Carson Palmquist_2026": {
-    "timestamp": "2026-06-24T21:08:34.770946",
+    "timestamp": "2026-07-04T20:27:55.235626",
     "data": {
-      "k_pct": 0.1543,
-      "k_per_9": 4.17,
-      "xk_pct": 0.1543,
-      "source": "prior_season"
+      "k_pct": 0.1722,
+      "k_per_9": 4.65,
+      "xk_pct": 0.1722,
+      "k_pct_raw": 0.2353,
+      "ip": 5.7,
+      "source": "savant"
     }
   },
   "prior_stats_683352_2025": {
@@ -6227,6 +6229,17 @@
       "k_per_9": 8.42,
       "xk_pct": 0.3119,
       "source": "prior_season"
+    }
+  },
+  "prior_stats_668881_2025": {
+    "timestamp": "2026-07-04T20:27:59.364674",
+    "data": {
+      "k_pct": 0.3119,
+      "bb_pct": 0.0619,
+      "swstr_pct": 0.167,
+      "csw_pct": 0.3186,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 92.0
     }
   }
 }
