@@ -1051,13 +1051,13 @@
     }
   },
   "Mason Englert_2026": {
-    "timestamp": "2026-04-07T14:33:17.481926",
+    "timestamp": "2026-07-05T23:09:59.310495",
     "data": {
-      "k_pct": 0.2281,
-      "k_per_9": 6.16,
-      "xk_pct": 0.2281,
-      "k_pct_raw": 0.1429,
-      "ip": 4.7,
+      "k_pct": 0.2115,
+      "k_per_9": 5.71,
+      "xk_pct": 0.2115,
+      "k_pct_raw": 0.18,
+      "ip": 16.7,
       "source": "savant"
     }
   },
@@ -3533,13 +3533,13 @@
     }
   },
   "Peter Lambert_2026": {
-    "timestamp": "2026-06-29T18:03:30.800719",
+    "timestamp": "2026-07-05T23:10:01.603652",
     "data": {
-      "k_pct": 0.2068,
-      "k_per_9": 5.58,
-      "xk_pct": 0.2068,
-      "k_pct_raw": 0.2025,
-      "ip": 79.0,
+      "k_pct": 0.211,
+      "k_per_9": 5.7,
+      "xk_pct": 0.211,
+      "k_pct_raw": 0.2074,
+      "ip": 72.3,
       "source": "savant"
     }
   },
@@ -6273,6 +6273,17 @@
       "k_pct_raw": 0.24,
       "ip": 16.7,
       "source": "savant"
+    }
+  },
+  "prior_stats_669684_2025": {
+    "timestamp": "2026-07-05T23:09:48.146122",
+    "data": {
+      "k_pct": 0.2027,
+      "bb_pct": 0.1284,
+      "swstr_pct": 0.1169,
+      "csw_pct": 0.2723,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 24.9
     }
   }
 }
