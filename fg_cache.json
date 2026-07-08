@@ -435,13 +435,13 @@
     }
   },
   "Chase Burns_2026": {
-    "timestamp": "2026-07-02T17:26:41.398276",
+    "timestamp": "2026-07-08T20:42:27.193576",
     "data": {
-      "k_pct": 0.3251,
-      "k_per_9": 8.78,
-      "xk_pct": 0.3251,
-      "k_pct_raw": 0.3174,
-      "ip": 76.7,
+      "k_pct": 0.3158,
+      "k_per_9": 8.53,
+      "xk_pct": 0.3158,
+      "k_pct_raw": 0.3057,
+      "ip": 76.3,
       "source": "savant"
     }
   },
@@ -6181,13 +6181,13 @@
     }
   },
   "Alan Rangel_2026": {
-    "timestamp": "2026-07-02T20:39:48.724977",
+    "timestamp": "2026-07-08T20:42:25.367246",
     "data": {
-      "k_pct": 0.173,
-      "k_per_9": 4.67,
-      "xk_pct": 0.173,
-      "k_pct_raw": 0.2051,
-      "ip": 13.0,
+      "k_pct": 0.1806,
+      "k_per_9": 4.88,
+      "xk_pct": 0.1806,
+      "k_pct_raw": 0.2105,
+      "ip": 19.0,
       "source": "savant"
     }
   },
@@ -6319,6 +6319,17 @@
       "k_pct_raw": 0.0909,
       "ip": 3.7,
       "source": "savant"
+    }
+  },
+  "prior_stats_687312_2025": {
+    "timestamp": "2026-07-08T20:42:43.882055",
+    "data": {
+      "k_pct": 0.224,
+      "bb_pct": 0.082,
+      "swstr_pct": 0.115,
+      "csw_pct": 0.27,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 88.0
     }
   }
 }
