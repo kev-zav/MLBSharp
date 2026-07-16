@@ -68951,5 +68951,35 @@
       "rolling_k_5": 5.6,
       "pitch_mix_adj": 1.0
     }
+  ],
+  "2026-07-16": [
+    {
+      "date": "2026-07-16",
+      "pitcher_name": "Christian Scott",
+      "pitcher_id": 681035,
+      "pitcher_hand": "R",
+      "pitcher_team": "NYM",
+      "opp_team": "PHI",
+      "venue": "Citizens Bank Park",
+      "game_id": 823440,
+      "projected_ks": 6.1,
+      "projected_ks_manual": 6.1,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.125,
+      "csw_pct": 0.2865,
+      "k_pct": 0.2621,
+      "opp_k_pct": 0.2342,
+      "opp_chase": 0.3367,
+      "park_factor": 100,
+      "ump_adjustment": 1.0,
+      "ump_name": "Unknown",
+      "weather_temp": 72,
+      "weather_wind": 5,
+      "days_rest": 8,
+      "last_outing_pitches": 90,
+      "rolling_k_3": 6.0,
+      "rolling_k_5": 5.4,
+      "pitch_mix_adj": 1.0
+    }
   ]
 }

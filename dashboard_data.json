@@ -1,24 +1,24 @@
 {
-  "date": "July 14, 2026",
-  "generated_at": "11:03 PM",
+  "date": "July 16, 2026",
+  "generated_at": "05:03 PM",
   "all_pitchers": [
     {
-      "pitcher_name": "Dylan Cease",
-      "pitcher_id": 656302,
-      "pitcher_team": "AL",
+      "pitcher_name": "Christian Scott",
+      "pitcher_id": 681035,
+      "pitcher_team": "NYM",
       "pitcher_hand": "R",
-      "opp_team": "NL",
+      "opp_team": "PHI",
       "venue": "Citizens Bank Park",
-      "projected_ks": 7.2,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.1644,
-      "csw_pct": 0.335,
-      "k_pct": 0.35,
-      "opp_k_pct": 0.2139,
-      "opp_chase": 0.3029,
-      "days_rest": 6,
-      "rolling_k_3": 10.0,
-      "rolling_k_5": 9.0,
+      "projected_ks": 6.1,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.125,
+      "csw_pct": 0.2865,
+      "k_pct": 0.2621,
+      "opp_k_pct": 0.2342,
+      "opp_chase": 0.3367,
+      "days_rest": 8,
+      "rolling_k_3": 6.0,
+      "rolling_k_5": 5.4,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -34,116 +34,45 @@
       },
       "last5": [
         {
-          "date": "06/16",
-          "k": 7,
-          "pitches": 108
+          "date": "06/05",
+          "k": 3,
+          "pitches": 98
         },
         {
-          "date": "06/22",
-          "k": 8,
-          "pitches": 110
+          "date": "06/11",
+          "k": 6,
+          "pitches": 88
         },
         {
           "date": "06/27",
-          "k": 10,
-          "pitches": 107
+          "k": 6,
+          "pitches": 82
         },
         {
           "date": "07/03",
-          "k": 9,
-          "pitches": 102
+          "k": 7,
+          "pitches": 82
         },
         {
           "date": "07/08",
-          "k": 11,
-          "pitches": 118
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0026,
-        "1": 0.0076,
-        "2": 0.0188,
-        "3": 0.0394,
-        "4": 0.0707,
-        "5": 0.1083,
-        "6": 0.1416,
-        "7": 0.1582,
-        "8": 0.1509,
-        "9": 0.1229,
-        "10+": 0.179
-      }
-    },
-    {
-      "pitcher_name": "Cristopher S\u00e1nchez",
-      "pitcher_id": 650911,
-      "pitcher_team": "NL",
-      "pitcher_hand": "L",
-      "opp_team": "AL",
-      "venue": "Citizens Bank Park",
-      "projected_ks": 5.3,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.1689,
-      "csw_pct": 0.3245,
-      "k_pct": 0.2657,
-      "opp_k_pct": 0.2028,
-      "opp_chase": 0.3009,
-      "days_rest": 3,
-      "rolling_k_3": 5.67,
-      "rolling_k_5": 5.6,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "06/20",
           "k": 5,
-          "pitches": 91
-        },
-        {
-          "date": "06/25",
-          "k": 6,
-          "pitches": 92
-        },
-        {
-          "date": "06/30",
-          "k": 9,
-          "pitches": 92
-        },
-        {
-          "date": "07/06",
-          "k": 1,
-          "pitches": 83
-        },
-        {
-          "date": "07/11",
-          "k": 7,
-          "pitches": 103
+          "pitches": 90
         }
       ],
       "k_distribution": {
-        "0": 0.0174,
-        "1": 0.0372,
-        "2": 0.0678,
-        "3": 0.1055,
-        "4": 0.1401,
-        "5": 0.159,
-        "6": 0.1541,
-        "7": 0.1275,
-        "8": 0.0901,
-        "9": 0.0543,
-        "10+": 0.047
+        "0": 0.0084,
+        "1": 0.0204,
+        "2": 0.0422,
+        "3": 0.0745,
+        "4": 0.1124,
+        "5": 0.1447,
+        "6": 0.1591,
+        "7": 0.1493,
+        "8": 0.1197,
+        "9": 0.082,
+        "10+": 0.0873
       }
     }
   ],
-  "total_pitchers": 2
+  "total_pitchers": 1
 }
