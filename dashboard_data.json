@@ -1,6 +1,6 @@
 {
   "date": "July 16, 2026",
-  "generated_at": "05:03 PM",
+  "generated_at": "08:25 PM",
   "all_pitchers": [
     {
       "pitcher_name": "Christian Scott",
@@ -9,13 +9,13 @@
       "pitcher_hand": "R",
       "opp_team": "PHI",
       "venue": "Citizens Bank Park",
-      "projected_ks": 6.1,
-      "lineup_confirmed": false,
+      "projected_ks": 5.9,
+      "lineup_confirmed": true,
       "swstr_pct": 0.125,
       "csw_pct": 0.2865,
       "k_pct": 0.2621,
-      "opp_k_pct": 0.2342,
-      "opp_chase": 0.3367,
+      "opp_k_pct": 0.2217,
+      "opp_chase": 0.3218,
       "days_rest": 8,
       "rolling_k_3": 6.0,
       "rolling_k_5": 5.4,
@@ -60,17 +60,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0084,
-        "1": 0.0204,
-        "2": 0.0422,
-        "3": 0.0745,
-        "4": 0.1124,
-        "5": 0.1447,
-        "6": 0.1591,
-        "7": 0.1493,
-        "8": 0.1197,
-        "9": 0.082,
-        "10+": 0.0873
+        "0": 0.0102,
+        "1": 0.0239,
+        "2": 0.048,
+        "3": 0.082,
+        "4": 0.1198,
+        "5": 0.1495,
+        "6": 0.1592,
+        "7": 0.1448,
+        "8": 0.1125,
+        "9": 0.0746,
+        "10+": 0.0753
       }
     }
   ],
