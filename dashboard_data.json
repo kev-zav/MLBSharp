@@ -1,6 +1,6 @@
 {
   "date": "July 17, 2026",
-  "generated_at": "05:00 PM",
+  "generated_at": "08:26 PM",
   "all_pitchers": [
     {
       "pitcher_name": "Chris Sale",
@@ -9,13 +9,13 @@
       "pitcher_hand": "L",
       "opp_team": "TEX",
       "venue": "Truist Park",
-      "projected_ks": 6.7,
-      "lineup_confirmed": false,
+      "projected_ks": 6.3,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1486,
       "csw_pct": 0.3257,
       "k_pct": 0.2914,
-      "opp_k_pct": 0.2516,
-      "opp_chase": 0.2799,
+      "opp_k_pct": 0.2215,
+      "opp_chase": 0.2894,
       "days_rest": 7,
       "rolling_k_3": 6.0,
       "rolling_k_5": 6.2,
@@ -60,17 +60,88 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0046,
-        "1": 0.0122,
-        "2": 0.0278,
-        "3": 0.0539,
-        "4": 0.0893,
-        "5": 0.1264,
-        "6": 0.1528,
-        "7": 0.1577,
-        "8": 0.139,
-        "9": 0.1046,
-        "10+": 0.1316
+        "0": 0.0069,
+        "1": 0.0173,
+        "2": 0.0369,
+        "3": 0.0673,
+        "4": 0.1047,
+        "5": 0.1392,
+        "6": 0.1579,
+        "7": 0.153,
+        "8": 0.1266,
+        "9": 0.0894,
+        "10+": 0.1006
+      }
+    },
+    {
+      "pitcher_name": "Gavin Williams",
+      "pitcher_id": 668909,
+      "pitcher_team": "CLE",
+      "pitcher_hand": "R",
+      "opp_team": "PIT",
+      "venue": "Progressive Field",
+      "projected_ks": 6.0,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.1336,
+      "csw_pct": 0.3073,
+      "k_pct": 0.2749,
+      "opp_k_pct": 0.2212,
+      "opp_chase": 0.2978,
+      "days_rest": 8,
+      "rolling_k_3": 7.67,
+      "rolling_k_5": 7.0,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "06/17",
+          "k": 4,
+          "pitches": 87
+        },
+        {
+          "date": "06/22",
+          "k": 8,
+          "pitches": 95
+        },
+        {
+          "date": "06/28",
+          "k": 6,
+          "pitches": 103
+        },
+        {
+          "date": "07/03",
+          "k": 6,
+          "pitches": 79
+        },
+        {
+          "date": "07/09",
+          "k": 11,
+          "pitches": 103
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0093,
+        "1": 0.0221,
+        "2": 0.045,
+        "3": 0.0783,
+        "4": 0.1161,
+        "5": 0.1472,
+        "6": 0.1593,
+        "7": 0.1472,
+        "8": 0.1161,
+        "9": 0.0783,
+        "10+": 0.0811
       }
     },
     {
@@ -142,77 +213,6 @@
         "8": 0.1161,
         "9": 0.0783,
         "10+": 0.0811
-      }
-    },
-    {
-      "pitcher_name": "Gavin Williams",
-      "pitcher_id": 668909,
-      "pitcher_team": "CLE",
-      "pitcher_hand": "R",
-      "opp_team": "PIT",
-      "venue": "Progressive Field",
-      "projected_ks": 5.9,
-      "lineup_confirmed": false,
-      "swstr_pct": 0.1336,
-      "csw_pct": 0.3073,
-      "k_pct": 0.2749,
-      "opp_k_pct": 0.2287,
-      "opp_chase": 0.2976,
-      "days_rest": 8,
-      "rolling_k_3": 7.67,
-      "rolling_k_5": 7.0,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "06/17",
-          "k": 4,
-          "pitches": 87
-        },
-        {
-          "date": "06/22",
-          "k": 8,
-          "pitches": 95
-        },
-        {
-          "date": "06/28",
-          "k": 6,
-          "pitches": 103
-        },
-        {
-          "date": "07/03",
-          "k": 6,
-          "pitches": 79
-        },
-        {
-          "date": "07/09",
-          "k": 11,
-          "pitches": 103
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0102,
-        "1": 0.0239,
-        "2": 0.048,
-        "3": 0.082,
-        "4": 0.1198,
-        "5": 0.1495,
-        "6": 0.1592,
-        "7": 0.1448,
-        "8": 0.1125,
-        "9": 0.0746,
-        "10+": 0.0753
       }
     },
     {
@@ -349,13 +349,13 @@
       "pitcher_hand": "R",
       "opp_team": "CLE",
       "venue": "Progressive Field",
-      "projected_ks": 5.3,
-      "lineup_confirmed": false,
+      "projected_ks": 5.0,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1594,
       "csw_pct": 0.2946,
       "k_pct": 0.2558,
-      "opp_k_pct": 0.2164,
-      "opp_chase": 0.289,
+      "opp_k_pct": 0.2025,
+      "opp_chase": 0.2717,
       "days_rest": 9,
       "rolling_k_3": 6.0,
       "rolling_k_5": 5.0,
@@ -400,17 +400,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0174,
-        "1": 0.0372,
-        "2": 0.0678,
-        "3": 0.1055,
-        "4": 0.1401,
-        "5": 0.159,
-        "6": 0.1541,
-        "7": 0.1275,
-        "8": 0.0901,
-        "9": 0.0543,
-        "10+": 0.047
+        "0": 0.0223,
+        "1": 0.0455,
+        "2": 0.079,
+        "3": 0.1172,
+        "4": 0.1486,
+        "5": 0.1608,
+        "6": 0.1486,
+        "7": 0.1172,
+        "8": 0.079,
+        "9": 0.0455,
+        "10+": 0.0364
       }
     },
     {
@@ -420,13 +420,13 @@
       "pitcher_hand": "R",
       "opp_team": "LAD",
       "venue": "Yankee Stadium",
-      "projected_ks": 4.9,
-      "lineup_confirmed": false,
+      "projected_ks": 4.8,
+      "lineup_confirmed": true,
       "swstr_pct": 0.0869,
       "csw_pct": 0.2879,
       "k_pct": 0.2264,
-      "opp_k_pct": 0.2065,
-      "opp_chase": 0.2709,
+      "opp_k_pct": 0.2107,
+      "opp_chase": 0.2853,
       "days_rest": 9,
       "rolling_k_3": 6.0,
       "rolling_k_5": 5.8,
@@ -471,17 +471,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0242,
-        "1": 0.0485,
-        "2": 0.0829,
-        "3": 0.1211,
-        "4": 0.151,
-        "5": 0.1609,
-        "6": 0.1463,
-        "7": 0.1137,
-        "8": 0.0754,
-        "9": 0.0427,
-        "10+": 0.0334
+        "0": 0.0262,
+        "1": 0.0516,
+        "2": 0.0868,
+        "3": 0.1249,
+        "4": 0.1533,
+        "5": 0.1608,
+        "6": 0.1439,
+        "7": 0.1101,
+        "8": 0.0719,
+        "9": 0.0401,
+        "10+": 0.0306
       }
     },
     {
@@ -1176,8 +1176,8 @@
       "swstr_pct": 0.1414,
       "csw_pct": 0.2828,
       "k_pct": 0.2222,
-      "opp_k_pct": 0.2008,
-      "opp_chase": 0.3016,
+      "opp_k_pct": 0.2011,
+      "opp_chase": 0.3018,
       "days_rest": 9,
       "rolling_k_3": 4.33,
       "rolling_k_5": 5.4,
@@ -1313,13 +1313,13 @@
       "pitcher_hand": "L",
       "opp_team": "TOR",
       "venue": "Rogers Centre",
-      "projected_ks": 3.8,
-      "lineup_confirmed": false,
+      "projected_ks": 3.7,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1174,
       "csw_pct": 0.2705,
       "k_pct": 0.2031,
-      "opp_k_pct": 0.2082,
-      "opp_chase": 0.3138,
+      "opp_k_pct": 0.2041,
+      "opp_chase": 0.2973,
       "days_rest": 8,
       "rolling_k_3": 2.67,
       "rolling_k_5": 3.6,
@@ -1364,17 +1364,88 @@
         }
       ],
       "k_distribution": {
-        "0": 0.053,
-        "1": 0.0892,
-        "2": 0.1282,
-        "3": 0.1574,
+        "0": 0.0564,
+        "1": 0.0935,
+        "2": 0.1323,
+        "3": 0.1599,
         "4": 0.1651,
-        "5": 0.1478,
-        "6": 0.113,
-        "7": 0.0738,
-        "8": 0.0411,
-        "9": 0.0196,
-        "10+": 0.0118
+        "5": 0.1455,
+        "6": 0.1095,
+        "7": 0.0704,
+        "8": 0.0386,
+        "9": 0.0181,
+        "10+": 0.0107
+      }
+    },
+    {
+      "pitcher_name": "Roki Sasaki",
+      "pitcher_id": 808963,
+      "pitcher_team": "LAD",
+      "pitcher_hand": "R",
+      "opp_team": "NYY",
+      "venue": "Yankee Stadium",
+      "projected_ks": 3.6,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.1435,
+      "csw_pct": 0.2697,
+      "k_pct": 0.2227,
+      "opp_k_pct": 0.2216,
+      "opp_chase": 0.2911,
+      "days_rest": 9,
+      "rolling_k_3": 3.33,
+      "rolling_k_5": 4.0,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "06/12",
+          "k": 4,
+          "pitches": 91
+        },
+        {
+          "date": "06/19",
+          "k": 6,
+          "pitches": 90
+        },
+        {
+          "date": "06/26",
+          "k": 2,
+          "pitches": 81
+        },
+        {
+          "date": "07/02",
+          "k": 3,
+          "pitches": 88
+        },
+        {
+          "date": "07/08",
+          "k": 5,
+          "pitches": 78
+        }
+      ],
+      "k_distribution": {
+        "0": 0.06,
+        "1": 0.0979,
+        "2": 0.1364,
+        "3": 0.1623,
+        "4": 0.1649,
+        "5": 0.143,
+        "6": 0.106,
+        "7": 0.067,
+        "8": 0.0362,
+        "9": 0.0167,
+        "10+": 0.0096
       }
     },
     {
@@ -1449,90 +1520,19 @@
       }
     },
     {
-      "pitcher_name": "Roki Sasaki",
-      "pitcher_id": 808963,
-      "pitcher_team": "LAD",
-      "pitcher_hand": "R",
-      "opp_team": "NYY",
-      "venue": "Yankee Stadium",
-      "projected_ks": 3.5,
-      "lineup_confirmed": false,
-      "swstr_pct": 0.1435,
-      "csw_pct": 0.2697,
-      "k_pct": 0.2227,
-      "opp_k_pct": 0.2361,
-      "opp_chase": 0.2844,
-      "days_rest": 9,
-      "rolling_k_3": 3.33,
-      "rolling_k_5": 4.0,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "06/12",
-          "k": 4,
-          "pitches": 91
-        },
-        {
-          "date": "06/19",
-          "k": 6,
-          "pitches": 90
-        },
-        {
-          "date": "06/26",
-          "k": 2,
-          "pitches": 81
-        },
-        {
-          "date": "07/02",
-          "k": 3,
-          "pitches": 88
-        },
-        {
-          "date": "07/08",
-          "k": 5,
-          "pitches": 78
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0638,
-        "1": 0.1024,
-        "2": 0.1404,
-        "3": 0.1644,
-        "4": 0.1644,
-        "5": 0.1404,
-        "6": 0.1024,
-        "7": 0.0638,
-        "8": 0.0339,
-        "9": 0.0154,
-        "10+": 0.0087
-      }
-    },
-    {
       "pitcher_name": "Spencer Miles",
       "pitcher_id": 693686,
       "pitcher_team": "TOR",
       "pitcher_hand": "R",
       "opp_team": "CWS",
       "venue": "Rogers Centre",
-      "projected_ks": 3.5,
-      "lineup_confirmed": false,
+      "projected_ks": 3.4,
+      "lineup_confirmed": true,
       "swstr_pct": 0.0784,
       "csw_pct": 0.2822,
       "k_pct": 0.2337,
-      "opp_k_pct": 0.2312,
-      "opp_chase": 0.2826,
+      "opp_k_pct": 0.2219,
+      "opp_chase": 0.2815,
       "days_rest": 6,
       "rolling_k_3": 2.33,
       "rolling_k_5": 2.6,
@@ -1577,17 +1577,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0638,
-        "1": 0.1024,
-        "2": 0.1404,
-        "3": 0.1644,
-        "4": 0.1644,
-        "5": 0.1404,
-        "6": 0.1024,
-        "7": 0.0638,
-        "8": 0.0339,
-        "9": 0.0154,
-        "10+": 0.0087
+        "0": 0.0677,
+        "1": 0.107,
+        "2": 0.1444,
+        "3": 0.1664,
+        "4": 0.1638,
+        "5": 0.1377,
+        "6": 0.0988,
+        "7": 0.0606,
+        "8": 0.0317,
+        "9": 0.0142,
+        "10+": 0.0078
       }
     },
     {
@@ -1669,12 +1669,12 @@
       "opp_team": "ATL",
       "venue": "Truist Park",
       "projected_ks": 2.8,
-      "lineup_confirmed": false,
+      "lineup_confirmed": true,
       "swstr_pct": 0.0805,
       "csw_pct": 0.2461,
       "k_pct": 0.1331,
-      "opp_k_pct": 0.2123,
-      "opp_chase": 0.329,
+      "opp_k_pct": 0.2126,
+      "opp_chase": 0.328,
       "days_rest": 7,
       "rolling_k_3": 2.67,
       "rolling_k_5": 2.0,
