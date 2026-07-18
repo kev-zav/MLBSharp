@@ -3007,13 +3007,13 @@
     }
   },
   "Mason Montgomery_2026": {
-    "timestamp": "2026-06-07T17:05:14.913471",
+    "timestamp": "2026-07-18T22:57:29.043337",
     "data": {
-      "k_pct": 0.2843,
-      "k_per_9": 7.68,
-      "xk_pct": 0.2843,
-      "k_pct_raw": 0.2716,
-      "ip": 27.0,
+      "k_pct": 0.3316,
+      "k_per_9": 8.95,
+      "xk_pct": 0.3316,
+      "k_pct_raw": 0.3537,
+      "ip": 27.3,
       "source": "savant"
     }
   },
@@ -6446,6 +6446,28 @@
       "csw_pct": 0.27,
       "ip_per_start": 4.9,
       "pitches_per_start": 88.0
+    }
+  },
+  "Logan Allen_2026": {
+    "timestamp": "2026-07-18T22:57:35.508832",
+    "data": {
+      "k_pct": 0.2251,
+      "k_per_9": 6.08,
+      "xk_pct": 0.2251,
+      "k_pct_raw": 0.3684,
+      "ip": 6.3,
+      "source": "savant"
+    }
+  },
+  "prior_stats_677976_2025": {
+    "timestamp": "2026-07-18T22:58:11.214858",
+    "data": {
+      "k_pct": 0.0526,
+      "bb_pct": 0.1053,
+      "swstr_pct": 0.0633,
+      "csw_pct": 0.2025,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 79.0
     }
   }
 }
