@@ -1447,13 +1447,13 @@
     }
   },
   "Eduardo Rodriguez_2026": {
-    "timestamp": "2026-07-24T17:20:48.970859",
+    "timestamp": "2026-07-29T20:29:04.057326",
     "data": {
-      "k_pct": 0.1755,
-      "k_per_9": 4.74,
-      "xk_pct": 0.1755,
-      "k_pct_raw": 0.1681,
-      "ip": 77.3,
+      "k_pct": 0.1675,
+      "k_per_9": 4.52,
+      "xk_pct": 0.1675,
+      "k_pct_raw": 0.1581,
+      "ip": 78.0,
       "source": "savant"
     }
   },
@@ -1469,13 +1469,13 @@
     }
   },
   "Jes\u00fas Luzardo_2026": {
-    "timestamp": "2026-07-24T17:20:49.400787",
+    "timestamp": "2026-07-29T20:28:39.226888",
     "data": {
-      "k_pct": 0.3052,
-      "k_per_9": 8.24,
-      "xk_pct": 0.3052,
-      "k_pct_raw": 0.3105,
-      "ip": 82.7,
+      "k_pct": 0.3119,
+      "k_per_9": 8.42,
+      "xk_pct": 0.3119,
+      "k_pct_raw": 0.3187,
+      "ip": 83.7,
       "source": "savant"
     }
   },
@@ -5333,12 +5333,12 @@
     }
   },
   "Jared Jones_2026": {
-    "timestamp": "2026-07-24T17:20:48.823551",
+    "timestamp": "2026-07-29T20:29:04.526442",
     "data": {
-      "k_pct": 0.2743,
-      "k_per_9": 7.41,
-      "xk_pct": 0.2743,
-      "k_pct_raw": 0.2927,
+      "k_pct": 0.2698,
+      "k_per_9": 7.28,
+      "xk_pct": 0.2698,
+      "k_pct_raw": 0.2866,
       "ip": 54.7,
       "source": "savant"
     }
@@ -5562,13 +5562,13 @@
     }
   },
   "Ryan Gusto_2026": {
-    "timestamp": "2026-07-24T17:20:53.734018",
+    "timestamp": "2026-07-29T20:29:01.604683",
     "data": {
-      "k_pct": 0.1991,
-      "k_per_9": 5.38,
-      "xk_pct": 0.1991,
-      "k_pct_raw": 0.1926,
-      "ip": 45.0,
+      "k_pct": 0.2059,
+      "k_per_9": 5.56,
+      "xk_pct": 0.2059,
+      "k_pct_raw": 0.2027,
+      "ip": 49.3,
       "source": "savant"
     }
   },
@@ -6649,6 +6649,28 @@
       "k_per_9": 5.93,
       "xk_pct": 0.2197,
       "source": "prior_season"
+    }
+  },
+  "prior_stats_700363_2025": {
+    "timestamp": "2026-07-29T20:29:14.154026",
+    "data": {
+      "k_pct": 0.2199,
+      "bb_pct": 0.1047,
+      "swstr_pct": 0.1252,
+      "csw_pct": 0.2954,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 79.0
+    }
+  },
+  "prior_stats_669713_2025": {
+    "timestamp": "2026-07-29T20:29:45.358764",
+    "data": {
+      "k_pct": 0.2197,
+      "bb_pct": 0.0455,
+      "swstr_pct": 0.1102,
+      "csw_pct": 0.2913,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 84.7
     }
   }
 }
