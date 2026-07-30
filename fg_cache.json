@@ -2743,13 +2743,13 @@
     }
   },
   "Shane McClanahan_2026": {
-    "timestamp": "2026-07-24T17:20:51.587151",
+    "timestamp": "2026-07-30T20:40:36.782478",
     "data": {
-      "k_pct": 0.1971,
-      "k_per_9": 5.32,
-      "xk_pct": 0.1971,
-      "k_pct_raw": 0.1888,
-      "ip": 65.3,
+      "k_pct": 0.1986,
+      "k_per_9": 5.36,
+      "xk_pct": 0.1986,
+      "k_pct_raw": 0.1907,
+      "ip": 64.7,
       "source": "savant"
     }
   },
@@ -6691,6 +6691,39 @@
       "k_pct_raw": 0.2292,
       "ip": 32.0,
       "source": "savant"
+    }
+  },
+  "Cole Winn_2026": {
+    "timestamp": "2026-07-30T20:40:14.345302",
+    "data": {
+      "k_pct": 0.2038,
+      "k_per_9": 5.5,
+      "xk_pct": 0.2038,
+      "k_pct_raw": 0.194,
+      "ip": 22.3,
+      "source": "savant"
+    }
+  },
+  "prior_stats_670990_2025": {
+    "timestamp": "2026-07-30T20:40:43.898060",
+    "data": {
+      "k_pct": 0.2903,
+      "bb_pct": 0.0968,
+      "swstr_pct": 0.1266,
+      "csw_pct": 0.2895,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 25.3
+    }
+  },
+  "prior_stats_686930_2025": {
+    "timestamp": "2026-07-30T20:41:10.614884",
+    "data": {
+      "k_pct": 0.1731,
+      "bb_pct": 0.1058,
+      "swstr_pct": 0.0974,
+      "csw_pct": 0.2506,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 86.2
     }
   }
 }
