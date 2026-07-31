@@ -402,13 +402,13 @@
     }
   },
   "Kodai Senga_2026": {
-    "timestamp": "2026-06-22T19:19:23.269407",
+    "timestamp": "2026-07-31T20:40:08.086548",
     "data": {
-      "k_pct": 0.2012,
-      "k_per_9": 5.43,
-      "xk_pct": 0.2012,
-      "k_pct_raw": 0.1562,
-      "ip": 10.7,
+      "k_pct": 0.2453,
+      "k_per_9": 6.62,
+      "xk_pct": 0.2453,
+      "k_pct_raw": 0.2577,
+      "ip": 32.3,
       "source": "savant"
     }
   },
@@ -2017,13 +2017,13 @@
     }
   },
   "Andrew Painter_2026": {
-    "timestamp": "2026-06-17T21:27:25.036134",
+    "timestamp": "2026-07-31T20:39:41.896531",
     "data": {
-      "k_pct": 0.1671,
-      "k_per_9": 4.51,
-      "xk_pct": 0.1671,
-      "k_pct_raw": 0.1518,
-      "ip": 74.7,
+      "k_pct": 0.1906,
+      "k_per_9": 5.15,
+      "xk_pct": 0.1906,
+      "k_pct_raw": 0.1587,
+      "ip": 21.0,
       "source": "savant"
     }
   },
@@ -3973,13 +3973,13 @@
     }
   },
   "Brandon Young_2026": {
-    "timestamp": "2026-07-25T16:45:18.054661",
+    "timestamp": "2026-07-31T20:39:45.337258",
     "data": {
-      "k_pct": 0.2042,
-      "k_per_9": 5.51,
-      "xk_pct": 0.2042,
-      "k_pct_raw": 0.2096,
-      "ip": 76.3,
+      "k_pct": 0.2021,
+      "k_per_9": 5.46,
+      "xk_pct": 0.2021,
+      "k_pct_raw": 0.207,
+      "ip": 75.7,
       "source": "savant"
     }
   },
@@ -6746,6 +6746,17 @@
       "k_pct_raw": 0.2738,
       "ip": 28.0,
       "source": "savant"
+    }
+  },
+  "prior_stats_683618_2025": {
+    "timestamp": "2026-07-31T20:40:42.077383",
+    "data": {
+      "k_pct": 0.2278,
+      "bb_pct": 0.0633,
+      "swstr_pct": 0.15,
+      "csw_pct": 0.2714,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 12.7
     }
   }
 }
