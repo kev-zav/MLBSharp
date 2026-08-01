@@ -895,13 +895,13 @@
     }
   },
   "Mart\u00edn P\u00e9rez_2026": {
-    "timestamp": "2026-07-27T17:30:18.769122",
+    "timestamp": "2026-08-01T23:01:06.630623",
     "data": {
-      "k_pct": 0.163,
-      "k_per_9": 4.4,
-      "xk_pct": 0.163,
-      "k_pct_raw": 0.1524,
-      "ip": 54.7,
+      "k_pct": 0.169,
+      "k_per_9": 4.56,
+      "xk_pct": 0.169,
+      "k_pct_raw": 0.1607,
+      "ip": 56.0,
       "source": "savant"
     }
   },
@@ -6777,6 +6777,28 @@
       "k_pct_raw": 0.42,
       "ip": 16.7,
       "source": "savant"
+    }
+  },
+  "prior_stats_687273_2025": {
+    "timestamp": "2026-08-01T23:00:20.314323",
+    "data": {
+      "k_pct": 0.224,
+      "bb_pct": 0.082,
+      "swstr_pct": 0.115,
+      "csw_pct": 0.27,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 88.0
+    }
+  },
+  "prior_stats_663855_2025": {
+    "timestamp": "2026-08-01T23:00:46.839845",
+    "data": {
+      "k_pct": 0.1847,
+      "bb_pct": 0.0987,
+      "swstr_pct": 0.1006,
+      "csw_pct": 0.2851,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 35.4
     }
   }
 }
