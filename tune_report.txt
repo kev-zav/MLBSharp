@@ -2,24 +2,24 @@
 ============================================================
   MLB STRIKEOUT SHARP — MODEL TUNER
 ============================================================
-  Excluding 268 short start(s) (< 3 IP) from model training.
+  Excluding 271 short start(s) (< 3 IP) from model training.
 
-  Loaded 3034 rows from results.csv
-  Date range: 2026-03-26 to 2026-07-31 (125 game days)
+  Loaded 3061 rows from results.csv
+  Date range: 2026-03-26 to 2026-08-01 (126 game days)
 
 ============================================================
   SECTION 1: CALIBRATION REPORT
 ============================================================
 
-  Total games logged: 3034
-  Games with projections: 2483
+  Total games logged: 3061
+  Games with projections: 2509
 
   Overall Accuracy:
     Avg Projected Ks:  4.64
     Avg Actual Ks:     5.04
     Avg Miss:          -0.40 (under-projecting)
     MAE:               1.83
-    RMSE:              2.30
+    RMSE:              2.31
 
 ============================================================
   SECTION 2: FACTOR CORRELATION
@@ -30,23 +30,23 @@
 
   Factor                        Corr    p-value      N Strength       
   ------------------------- -------- ---------- ------ ---------------
-  projected_ks_manual        +0.3450     0.0000*  2428 Moderate       
-  rolling_k_avg_5            +0.3120     0.0000*  2490 Moderate       
-  csw_pct                    +0.3075     0.0000*  2483 Moderate       
-  rolling_k_avg_3            +0.2934     0.0000*  2483 Weak           
-  swstr_pct                  +0.2840     0.0000*  2483 Weak           
-  pitch_count_last_outing    +0.1367     0.0000*  2483 Negligible     
-  days_rest                  -0.0301     0.1333   2483 Negligible     
-  weather_wind               +0.0284     0.1578   2483 Negligible     
-  weather_temp               -0.0196     0.3302   2483 Negligible     
-  o_swing_pct                -0.0191     0.3424   2483 Negligible     
-  park_factor                +0.0168     0.4019   2483 Negligible     
-  ump_adjustment             -0.0153     0.4473   2483 Negligible     
-  k_pct                      -0.0140     0.4855   2483 Negligible     
-  pitch_mix_adj              -0.0129     0.5257   2428 Negligible     
-  opp_k_pct_vs_hand          +0.0036     0.8578   2483 Negligible     
+  projected_ks_manual        +0.3431     0.0000*  2454 Moderate       
+  rolling_k_avg_5            +0.3101     0.0000*  2516 Moderate       
+  csw_pct                    +0.3067     0.0000*  2509 Moderate       
+  rolling_k_avg_3            +0.2933     0.0000*  2509 Weak           
+  swstr_pct                  +0.2836     0.0000*  2509 Weak           
+  pitch_count_last_outing    +0.1364     0.0000*  2509 Negligible     
+  days_rest                  -0.0303     0.1294   2509 Negligible     
+  weather_wind               +0.0273     0.1714   2509 Negligible     
+  weather_temp               -0.0194     0.3311   2509 Negligible     
+  o_swing_pct                -0.0190     0.3419   2509 Negligible     
+  park_factor                +0.0167     0.4018   2509 Negligible     
+  ump_adjustment             -0.0152     0.4472   2509 Negligible     
+  k_pct                      -0.0139     0.4858   2509 Negligible     
+  pitch_mix_adj              -0.0128     0.5270   2454 Negligible     
+  opp_k_pct_vs_hand          +0.0040     0.8427   2509 Negligible     
 
-  Strongest predictor: projected_ks_manual (r=+0.3450)
+  Strongest predictor: projected_ks_manual (r=+0.3431)
 
 ============================================================
   SECTION 3: BIAS DETECTION
@@ -56,27 +56,28 @@
 
   Category                               N   AvgMiss   vs Base Direction 
   ----------------------------------- ---- --------- --------- ----------
-  Park: Angel Stadium                   87     -0.99     -0.58 under     
-  Park: PNC Park                        81     -0.95     -0.55 under     
-  Park: UNIQLO Field at Dodger Stadium   83     -0.92     -0.51 under     
+  Park: Angel Stadium                   88     -1.01     -0.60 under      ⚠
+  Park: PNC Park                        81     -0.95     -0.54 under     
+  Park: UNIQLO Field at Dodger Stadium   85     -0.89     -0.49 under     
   Park: Citizens Bank Park              74     -0.81     -0.40 under     
   Park: American Family Field           89     -0.79     -0.39 under     
-  Park: Great American Ball Park        74     -0.71     -0.30 under     
   Park: Yankee Stadium                  83     -0.68     -0.28 under     
   Park: Rate Field                      85     -0.68     -0.27 under     
-  Park: Sutter Health Park              78     -0.61     -0.20 under     
-  Park: Tropicana Field                 87     -0.60     -0.20 under     
+  Park: Sutter Health Park              80     -0.67     -0.26 under     
+  Park: Great American Ball Park        76     -0.65     -0.24 under     
+  Park: Tropicana Field                 88     -0.65     -0.24 under     
   Park: loanDepot park                  84     -0.56     -0.16 under     
-  Park: Daikin Park                     86     -0.56     -0.16 under     
   Park: Oracle Park                     76     -0.54     -0.14 under     
-  Park: T-Mobile Park                   71     -0.52     -0.12 under     
-  Low K% Pitchers (below median)      1239     -0.47     -0.14 under     
-  Neutral Zone Umps                   2460     -0.41     -0.00 under     
-  High K% Pitchers (above median)     1240     -0.34     +0.14 under     
+  Low K% Pitchers (below median)      1251     -0.48     -0.14 under     
+  Neutral Zone Umps                   2486     -0.41     -0.00 under     
+  High K% Pitchers (above median)     1254     -0.34     +0.14 under     
   Short Rest (<=4 days)                 25     -0.26     +0.15 under     
   High Wind (>15 mph)                   23     +0.22     +0.63 over      
   Cold Weather (<60°F)                  91     -0.16     +0.25 under     
   Expanded Zone Umps                    23     +0.05     +0.46 over      
+
+  ⚠ Found 1 significant biases (>1.0 K avg miss):
+    → Park: Angel Stadium: under-projecting by 1.0 Ks on average
 
 ============================================================
   SECTION 4: WEIGHT SUGGESTIONS
@@ -84,9 +85,9 @@
 
   Based on correlation data and projection accuracy:
 
-  1. Projected Ks Manual shows moderate correlation (r=+0.345). Current weight seems reasonable — monitor as more data comes in.
+  1. Projected Ks Manual shows moderate correlation (r=+0.343). Current weight seems reasonable — monitor as more data comes in.
 
-  2. Rolling K Avg 5 shows moderate correlation (r=+0.311). Current weight seems reasonable — monitor as more data comes in.
+  2. Rolling K Avg 5 shows moderate correlation (r=+0.309). Current weight seems reasonable — monitor as more data comes in.
 
   3. Csw % shows moderate correlation (r=+0.307). Current weight seems reasonable — monitor as more data comes in.
 
@@ -99,30 +100,30 @@
   SECTION 5: XGBOOST AUTO-TUNING
 ============================================================
 
-  Training XGBoost on 2312 rows with 15 features...
+  Training XGBoost on 2338 rows with 15 features...
 
   Model Performance:
     Metric                  Manual Model         XGBoost     Improvement
     -------------------- --------------- --------------- ---------------
-    MAE                             1.81            1.16          +36.3%
-    RMSE                            2.30            1.47          +36.0%
-    CV MAE (5-fold)                    —            1.84               —
+    MAE                             1.82            1.16          +36.1%
+    RMSE                            2.30            1.48          +35.9%
+    CV MAE (5-fold)                    —            1.82               —
 
   Feature Importance Rankings:
     Rank  Feature                     Importance Bar
     ----  ------------------------- ------------ --------------------
-       1  k_pct                           0.1643 ████████████████████
-       2  projected_ks_manual             0.1245 ███████████████
-       3  rolling_k_avg_5                 0.0925 ███████████
-       4  opp_k_pct_vs_hand               0.0822 ██████████
-       5  pitch_count_last_outing         0.0753 █████████
-       6  csw_pct                         0.0741 █████████
-       7  swstr_pct                       0.0741 █████████
-       8  o_swing_pct                     0.0731 ████████
-       9  days_rest                       0.0669 ████████
-      10  weather_wind                    0.0653 ███████
-      11  rolling_k_avg_3                 0.0637 ███████
-      12  weather_temp                    0.0442 █████
+       1  k_pct                           0.1618 ████████████████████
+       2  projected_ks_manual             0.1214 ███████████████
+       3  rolling_k_avg_5                 0.0923 ███████████
+       4  opp_k_pct_vs_hand               0.0840 ██████████
+       5  pitch_count_last_outing         0.0780 █████████
+       6  o_swing_pct                     0.0772 █████████
+       7  csw_pct                         0.0751 █████████
+       8  swstr_pct                       0.0688 ████████
+       9  rolling_k_avg_3                 0.0687 ████████
+      10  days_rest                       0.0648 ████████
+      11  weather_wind                    0.0588 ███████
+      12  weather_temp                    0.0492 ██████
       13  park_factor                     0.0000 
       14  ump_adjustment                  0.0000 
       15  pitch_mix_adj                   0.0000 
@@ -131,13 +132,13 @@
   To use in run.py, load with: pickle.load(open('model.pkl', 'rb'))
 
   Implied Weight Distribution (from XGBoost):
-    K %: 16.4% of prediction weight
-    Projected Ks Manual: 12.5% of prediction weight
+    K %: 16.2% of prediction weight
+    Projected Ks Manual: 12.1% of prediction weight
     Rolling K Avg 5: 9.2% of prediction weight
-    Opp K % Vs Hand: 8.2% of prediction weight
-    Pitch Count Last Outing: 7.5% of prediction weight
-    Csw %: 7.4% of prediction weight
-    Swstr %: 7.4% of prediction weight
+    Opp K % Vs Hand: 8.4% of prediction weight
+    Pitch Count Last Outing: 7.8% of prediction weight
+    O Swing %: 7.7% of prediction weight
+    Csw %: 7.5% of prediction weight
 
 ============================================================
   TUNING COMPLETE
