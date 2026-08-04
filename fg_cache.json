@@ -2006,14 +2006,12 @@
     }
   },
   "Cade Povich_2026": {
-    "timestamp": "2026-05-07T17:42:01.238037",
+    "timestamp": "2026-08-04T20:49:43.902193",
     "data": {
-      "k_pct": 0.1981,
-      "k_per_9": 5.35,
-      "xk_pct": 0.1981,
-      "k_pct_raw": 0.1618,
-      "ip": 22.7,
-      "source": "savant"
+      "k_pct": 0.2393,
+      "k_per_9": 6.46,
+      "xk_pct": 0.2393,
+      "source": "prior_season"
     }
   },
   "Andrew Painter_2026": {
@@ -4950,13 +4948,13 @@
     }
   },
   "Grayson Rodriguez_2026": {
-    "timestamp": "2026-07-29T17:04:59.253919",
+    "timestamp": "2026-08-04T20:49:27.231412",
     "data": {
-      "k_pct": 0.1617,
-      "k_per_9": 4.37,
-      "xk_pct": 0.1617,
-      "k_pct_raw": 0.1311,
-      "ip": 40.7,
+      "k_pct": 0.1773,
+      "k_per_9": 4.79,
+      "xk_pct": 0.1773,
+      "k_pct_raw": 0.1545,
+      "ip": 41.0,
       "source": "savant"
     }
   },
@@ -6830,6 +6828,17 @@
       "k_per_9": 3.46,
       "xk_pct": 0.1282,
       "source": "prior_season"
+    }
+  },
+  "prior_stats_694918_2025": {
+    "timestamp": "2026-08-04T20:50:15.191881",
+    "data": {
+      "k_pct": 0.1282,
+      "bb_pct": 0.1282,
+      "swstr_pct": 0.0841,
+      "csw_pct": 0.2718,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 77.2
     }
   }
 }
