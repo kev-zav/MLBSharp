@@ -1348,13 +1348,13 @@
     }
   },
   "Cristian Javier_2026": {
-    "timestamp": "2026-08-03T17:47:59.646032",
+    "timestamp": "2026-08-09T22:39:31.695260",
     "data": {
-      "k_pct": 0.2647,
-      "k_per_9": 7.15,
-      "xk_pct": 0.2647,
-      "k_pct_raw": 0.3208,
-      "ip": 17.7,
+      "k_pct": 0.233,
+      "k_per_9": 6.29,
+      "xk_pct": 0.233,
+      "k_pct_raw": 0.2468,
+      "ip": 25.7,
       "source": "savant"
     }
   },
@@ -3047,13 +3047,13 @@
     }
   },
   "Randy V\u00e1squez_2026": {
-    "timestamp": "2026-08-04T17:29:22.168812",
+    "timestamp": "2026-08-09T22:39:31.815309",
     "data": {
-      "k_pct": 0.1073,
-      "k_per_9": 2.9,
-      "xk_pct": 0.1073,
-      "k_pct_raw": 0.0959,
-      "ip": 48.7,
+      "k_pct": 0.0985,
+      "k_per_9": 2.66,
+      "xk_pct": 0.0985,
+      "k_pct_raw": 0.0833,
+      "ip": 48.0,
       "source": "savant"
     }
   },
@@ -6936,6 +6936,17 @@
       "k_pct_raw": 0.3548,
       "ip": 20.7,
       "source": "savant"
+    }
+  },
+  "prior_stats_669062_2025": {
+    "timestamp": "2026-08-09T22:39:06.904225",
+    "data": {
+      "k_pct": 0.1719,
+      "bb_pct": 0.125,
+      "swstr_pct": 0.1406,
+      "csw_pct": 0.255,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 13.8
     }
   }
 }
