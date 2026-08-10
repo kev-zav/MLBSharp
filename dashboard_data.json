@@ -1,6 +1,6 @@
 {
   "date": "August 10, 2026",
-  "generated_at": "04:43 PM",
+  "generated_at": "08:07 PM",
   "all_pitchers": [
     {
       "pitcher_name": "Logan Henderson",
@@ -216,77 +216,6 @@
       }
     },
     {
-      "pitcher_name": "Trevor Rogers",
-      "pitcher_id": 669432,
-      "pitcher_team": "BAL",
-      "pitcher_hand": "L",
-      "opp_team": "MIN",
-      "venue": "Target Field",
-      "projected_ks": 5.9,
-      "lineup_confirmed": false,
-      "swstr_pct": 0.1413,
-      "csw_pct": 0.3009,
-      "k_pct": 0.2468,
-      "opp_k_pct": 0.2196,
-      "opp_chase": 0.2834,
-      "days_rest": 5,
-      "rolling_k_3": 7.0,
-      "rolling_k_5": 6.6,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "07/09",
-          "k": 4,
-          "pitches": 89
-        },
-        {
-          "date": "07/18",
-          "k": 8,
-          "pitches": 99
-        },
-        {
-          "date": "07/24",
-          "k": 6,
-          "pitches": 88
-        },
-        {
-          "date": "07/29",
-          "k": 6,
-          "pitches": 94
-        },
-        {
-          "date": "08/05",
-          "k": 9,
-          "pitches": 93
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0102,
-        "1": 0.0239,
-        "2": 0.048,
-        "3": 0.082,
-        "4": 0.1198,
-        "5": 0.1495,
-        "6": 0.1592,
-        "7": 0.1448,
-        "8": 0.1125,
-        "9": 0.0746,
-        "10+": 0.0753
-      }
-    },
-    {
       "pitcher_name": "Jacob Lopez",
       "pitcher_id": 682052,
       "pitcher_team": "ATH",
@@ -355,6 +284,77 @@
         "8": 0.1088,
         "9": 0.0711,
         "10+": 0.0698
+      }
+    },
+    {
+      "pitcher_name": "Trevor Rogers",
+      "pitcher_id": 669432,
+      "pitcher_team": "BAL",
+      "pitcher_hand": "L",
+      "opp_team": "MIN",
+      "venue": "Target Field",
+      "projected_ks": 5.5,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.1413,
+      "csw_pct": 0.3009,
+      "k_pct": 0.2468,
+      "opp_k_pct": 0.2061,
+      "opp_chase": 0.2816,
+      "days_rest": 5,
+      "rolling_k_3": 7.0,
+      "rolling_k_5": 6.6,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "07/09",
+          "k": 4,
+          "pitches": 89
+        },
+        {
+          "date": "07/18",
+          "k": 8,
+          "pitches": 99
+        },
+        {
+          "date": "07/24",
+          "k": 6,
+          "pitches": 88
+        },
+        {
+          "date": "07/29",
+          "k": 6,
+          "pitches": 94
+        },
+        {
+          "date": "08/05",
+          "k": 9,
+          "pitches": 93
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0147,
+        "1": 0.0323,
+        "2": 0.0608,
+        "3": 0.0976,
+        "4": 0.1338,
+        "5": 0.1567,
+        "6": 0.1567,
+        "7": 0.1338,
+        "8": 0.0976,
+        "9": 0.0608,
+        "10+": 0.0553
       }
     },
     {
@@ -436,12 +436,12 @@
       "opp_team": "TOR",
       "venue": "Rogers Centre",
       "projected_ks": 5.4,
-      "lineup_confirmed": false,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1201,
       "csw_pct": 0.2883,
       "k_pct": 0.2499,
-      "opp_k_pct": 0.1891,
-      "opp_chase": 0.3387,
+      "opp_k_pct": 0.2074,
+      "opp_chase": 0.3252,
       "days_rest": 5,
       "rolling_k_3": 5.33,
       "rolling_k_5": 4.8,
@@ -700,12 +700,12 @@
       "opp_team": "BOS",
       "venue": "Rogers Centre",
       "projected_ks": 4.5,
-      "lineup_confirmed": false,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1148,
       "csw_pct": 0.27645,
       "k_pct": 0.2043,
-      "opp_k_pct": 0.2188,
-      "opp_chase": 0.3236,
+      "opp_k_pct": 0.2146,
+      "opp_chase": 0.3264,
       "days_rest": 5,
       "rolling_k_3": 4.33,
       "rolling_k_5": 4.33,
@@ -887,13 +887,13 @@
       "pitcher_hand": "R",
       "opp_team": "BAL",
       "venue": "Target Field",
-      "projected_ks": 3.9,
-      "lineup_confirmed": false,
+      "projected_ks": 4.0,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1098,
       "csw_pct": 0.2529,
       "k_pct": 0.1896,
-      "opp_k_pct": 0.2371,
-      "opp_chase": 0.2839,
+      "opp_k_pct": 0.2492,
+      "opp_chase": 0.2945,
       "days_rest": 5,
       "rolling_k_3": 3.67,
       "rolling_k_5": 4.0,
@@ -938,17 +938,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0497,
-        "1": 0.0849,
-        "2": 0.1241,
-        "3": 0.1548,
-        "4": 0.1649,
-        "5": 0.15,
-        "6": 0.1165,
-        "7": 0.0773,
-        "8": 0.0438,
-        "9": 0.0212,
-        "10+": 0.0131
+        "0": 0.0465,
+        "1": 0.0808,
+        "2": 0.1199,
+        "3": 0.1519,
+        "4": 0.1644,
+        "5": 0.1519,
+        "6": 0.1199,
+        "7": 0.0808,
+        "8": 0.0465,
+        "9": 0.0228,
+        "10+": 0.0144
       }
     },
     {
