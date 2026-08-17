@@ -1,6 +1,6 @@
 {
   "date": "August 17, 2026",
-  "generated_at": "04:16 PM",
+  "generated_at": "07:49 PM",
   "all_pitchers": [
     {
       "pitcher_name": "Blake Snell",
@@ -193,51 +193,6 @@
         "8": 0.0901,
         "9": 0.0543,
         "10+": 0.047
-      }
-    },
-    {
-      "pitcher_name": "Kent Emanuel",
-      "pitcher_id": 592288,
-      "pitcher_team": "CIN",
-      "pitcher_hand": "R",
-      "opp_team": "STL",
-      "venue": "Great American Ball Park",
-      "projected_ks": 5.2,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.115,
-      "csw_pct": 0.27,
-      "k_pct": 0.224,
-      "opp_k_pct": 0.2072,
-      "opp_chase": 0.3185,
-      "days_rest": 5,
-      "rolling_k_3": 0.0,
-      "rolling_k_5": 0.0,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [],
-      "k_distribution": {
-        "0": 0.019,
-        "1": 0.0398,
-        "2": 0.0714,
-        "3": 0.1094,
-        "4": 0.1431,
-        "5": 0.1598,
-        "6": 0.1524,
-        "7": 0.1241,
-        "8": 0.0863,
-        "9": 0.0513,
-        "10+": 0.0432
       }
     },
     {
@@ -454,57 +409,6 @@
       }
     },
     {
-      "pitcher_name": "Quinn Mathews",
-      "pitcher_id": 687273,
-      "pitcher_team": "STL",
-      "pitcher_hand": "L",
-      "opp_team": "CIN",
-      "venue": "Great American Ball Park",
-      "projected_ks": 4.3,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.11645,
-      "csw_pct": 0.2731166666666667,
-      "k_pct": 0.1957,
-      "opp_k_pct": 0.2383,
-      "opp_chase": 0.2805,
-      "days_rest": 16,
-      "rolling_k_3": 3.0,
-      "rolling_k_5": 3.0,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "08/01",
-          "k": 3,
-          "pitches": 97
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0379,
-        "1": 0.069,
-        "2": 0.1074,
-        "3": 0.1426,
-        "4": 0.1618,
-        "5": 0.1568,
-        "6": 0.1297,
-        "7": 0.0917,
-        "8": 0.0553,
-        "9": 0.0285,
-        "10+": 0.0193
-      }
-    },
-    {
       "pitcher_name": "Brandon Young",
       "pitcher_id": 687064,
       "pitcher_team": "BAL",
@@ -559,6 +463,77 @@
           "date": "08/11",
           "k": 4,
           "pitches": 104
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0406,
+        "1": 0.0728,
+        "2": 0.1115,
+        "3": 0.1459,
+        "4": 0.1629,
+        "5": 0.1554,
+        "6": 0.1265,
+        "7": 0.088,
+        "8": 0.0523,
+        "9": 0.0265,
+        "10+": 0.0175
+      }
+    },
+    {
+      "pitcher_name": "Framber Valdez",
+      "pitcher_id": 664285,
+      "pitcher_team": "DET",
+      "pitcher_hand": "L",
+      "opp_team": "PIT",
+      "venue": "PNC Park",
+      "projected_ks": 4.2,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.09,
+      "csw_pct": 0.2649,
+      "k_pct": 0.1892,
+      "opp_k_pct": 0.2326,
+      "opp_chase": 0.3163,
+      "days_rest": 5,
+      "rolling_k_3": 4.67,
+      "rolling_k_5": 3.8,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "07/21",
+          "k": 1,
+          "pitches": 42
+        },
+        {
+          "date": "07/26",
+          "k": 4,
+          "pitches": 97
+        },
+        {
+          "date": "08/01",
+          "k": 6,
+          "pitches": 96
+        },
+        {
+          "date": "08/06",
+          "k": 5,
+          "pitches": 95
+        },
+        {
+          "date": "08/12",
+          "k": 3,
+          "pitches": 102
         }
       ],
       "k_distribution": {
@@ -701,77 +676,6 @@
           "date": "08/12",
           "k": 4,
           "pitches": 94
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0497,
-        "1": 0.0849,
-        "2": 0.1241,
-        "3": 0.1548,
-        "4": 0.1649,
-        "5": 0.15,
-        "6": 0.1165,
-        "7": 0.0773,
-        "8": 0.0438,
-        "9": 0.0212,
-        "10+": 0.0131
-      }
-    },
-    {
-      "pitcher_name": "Framber Valdez",
-      "pitcher_id": 664285,
-      "pitcher_team": "DET",
-      "pitcher_hand": "L",
-      "opp_team": "PIT",
-      "venue": "PNC Park",
-      "projected_ks": 3.9,
-      "lineup_confirmed": false,
-      "swstr_pct": 0.09,
-      "csw_pct": 0.2649,
-      "k_pct": 0.1892,
-      "opp_k_pct": 0.2563,
-      "opp_chase": 0.3235,
-      "days_rest": 5,
-      "rolling_k_3": 4.67,
-      "rolling_k_5": 3.8,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "07/21",
-          "k": 1,
-          "pitches": 42
-        },
-        {
-          "date": "07/26",
-          "k": 4,
-          "pitches": 97
-        },
-        {
-          "date": "08/01",
-          "k": 6,
-          "pitches": 96
-        },
-        {
-          "date": "08/06",
-          "k": 5,
-          "pitches": 95
-        },
-        {
-          "date": "08/12",
-          "k": 3,
-          "pitches": 102
         }
       ],
       "k_distribution": {
@@ -1292,13 +1196,13 @@
       "pitcher_hand": "R",
       "opp_team": "DET",
       "venue": "PNC Park",
-      "projected_ks": 2.5,
-      "lineup_confirmed": false,
+      "projected_ks": 2.3,
+      "lineup_confirmed": true,
       "swstr_pct": 0.0904,
       "csw_pct": 0.2803,
       "k_pct": 0.1791,
-      "opp_k_pct": 0.2245,
-      "opp_chase": 0.2794,
+      "opp_k_pct": 0.1876,
+      "opp_chase": 0.2766,
       "days_rest": 5,
       "rolling_k_3": 2.0,
       "rolling_k_5": 1.8,
@@ -1343,19 +1247,19 @@
         }
       ],
       "k_distribution": {
-        "0": 0.1094,
-        "1": 0.15,
-        "2": 0.1756,
+        "0": 0.1202,
+        "1": 0.1597,
+        "2": 0.1812,
         "3": 0.1756,
-        "4": 0.15,
-        "5": 0.1094,
-        "6": 0.0681,
-        "7": 0.0362,
-        "8": 0.0164,
-        "9": 0.0064,
-        "10+": 0.0029
+        "4": 0.1453,
+        "5": 0.1026,
+        "6": 0.0619,
+        "7": 0.0319,
+        "8": 0.014,
+        "9": 0.0053,
+        "10+": 0.0023
       }
     }
   ],
-  "total_pitchers": 20
+  "total_pitchers": 18
 }
