@@ -154,13 +154,13 @@
     }
   },
   "Jeffrey Springs_2026": {
-    "timestamp": "2026-07-31T23:10:34.956083",
+    "timestamp": "2026-08-19T19:48:15.852835",
     "data": {
-      "k_pct": 0.1677,
-      "k_per_9": 4.53,
-      "xk_pct": 0.1677,
-      "k_pct_raw": 0.1593,
-      "ip": 60.7,
+      "k_pct": 0.1525,
+      "k_per_9": 4.12,
+      "xk_pct": 0.1525,
+      "k_pct_raw": 0.1322,
+      "ip": 40.3,
       "source": "savant"
     }
   },
@@ -490,13 +490,13 @@
     }
   },
   "Seth Lugo_2026": {
-    "timestamp": "2026-08-14T16:41:51.243103",
+    "timestamp": "2026-08-19T19:48:15.989363",
     "data": {
-      "k_pct": 0.1682,
-      "k_per_9": 4.54,
-      "xk_pct": 0.1682,
-      "k_pct_raw": 0.1597,
-      "ip": 79.3,
+      "k_pct": 0.1829,
+      "k_per_9": 4.94,
+      "xk_pct": 0.1829,
+      "k_pct_raw": 0.178,
+      "ip": 78.7,
       "source": "savant"
     }
   },
@@ -7098,6 +7098,28 @@
       "k_per_9": 6.05,
       "xk_pct": 0.224,
       "source": "prior_season"
+    }
+  },
+  "prior_stats_683363_2025": {
+    "timestamp": "2026-08-19T19:48:08.646135",
+    "data": {
+      "k_pct": 0.224,
+      "bb_pct": 0.082,
+      "swstr_pct": 0.115,
+      "csw_pct": 0.27,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 88.0
+    }
+  },
+  "prior_stats_814490_2025": {
+    "timestamp": "2026-08-19T19:48:20.264379",
+    "data": {
+      "k_pct": 0.224,
+      "bb_pct": 0.082,
+      "swstr_pct": 0.115,
+      "csw_pct": 0.27,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 88.0
     }
   }
 }
