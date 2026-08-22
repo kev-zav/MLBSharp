@@ -2019,13 +2019,13 @@
     }
   },
   "Andrew Painter_2026": {
-    "timestamp": "2026-08-16T16:13:28.767268",
+    "timestamp": "2026-08-22T19:44:09.492911",
     "data": {
-      "k_pct": 0.2403,
-      "k_per_9": 6.49,
-      "xk_pct": 0.2403,
-      "k_pct_raw": 0.2533,
-      "ip": 25.0,
+      "k_pct": 0.2168,
+      "k_per_9": 5.85,
+      "xk_pct": 0.2168,
+      "k_pct_raw": 0.2118,
+      "ip": 28.3,
       "source": "savant"
     }
   },
@@ -6766,13 +6766,13 @@
     }
   },
   "Quinn Mathews_2026": {
-    "timestamp": "2026-08-17T16:15:19.648743",
+    "timestamp": "2026-08-22T19:44:07.700229",
     "data": {
-      "k_pct": 0.1957,
-      "k_per_9": 5.28,
-      "xk_pct": 0.1957,
-      "k_pct_raw": 0.125,
-      "ip": 8.0,
+      "k_pct": 0.2321,
+      "k_per_9": 6.27,
+      "xk_pct": 0.2321,
+      "k_pct_raw": 0.2439,
+      "ip": 13.7,
       "source": "savant"
     }
   },
@@ -7129,6 +7129,17 @@
       "k_per_9": 6.05,
       "xk_pct": 0.224,
       "source": "prior_season"
+    }
+  },
+  "prior_stats_807739_2025": {
+    "timestamp": "2026-08-22T19:44:26.483484",
+    "data": {
+      "k_pct": 0.224,
+      "bb_pct": 0.082,
+      "swstr_pct": 0.115,
+      "csw_pct": 0.27,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 88.0
     }
   }
 }
