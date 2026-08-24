@@ -435,13 +435,13 @@
     }
   },
   "Chase Burns_2026": {
-    "timestamp": "2026-08-19T16:20:36.696691",
+    "timestamp": "2026-08-24T19:53:00.218696",
     "data": {
-      "k_pct": 0.2894,
-      "k_per_9": 7.81,
-      "xk_pct": 0.2894,
-      "k_pct_raw": 0.2705,
-      "ip": 69.0,
+      "k_pct": 0.292,
+      "k_per_9": 7.88,
+      "xk_pct": 0.292,
+      "k_pct_raw": 0.274,
+      "ip": 69.3,
       "source": "savant"
     }
   },
@@ -5853,13 +5853,13 @@
     }
   },
   "Carson Whisenhunt_2026": {
-    "timestamp": "2026-08-18T16:19:57.830202",
+    "timestamp": "2026-08-24T19:53:01.566961",
     "data": {
-      "k_pct": 0.1761,
-      "k_per_9": 4.75,
-      "xk_pct": 0.1761,
-      "k_pct_raw": 0.1869,
-      "ip": 35.7,
+      "k_pct": 0.16,
+      "k_per_9": 4.32,
+      "xk_pct": 0.16,
+      "k_pct_raw": 0.1615,
+      "ip": 43.3,
       "source": "savant"
     }
   },
@@ -7171,6 +7171,17 @@
       "k_pct_raw": 0.3143,
       "ip": 11.7,
       "source": "savant"
+    }
+  },
+  "prior_stats_664353_2025": {
+    "timestamp": "2026-08-24T19:52:44.254973",
+    "data": {
+      "k_pct": 0.2143,
+      "bb_pct": 0.2143,
+      "swstr_pct": 0.1786,
+      "csw_pct": 0.375,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 28.0
     }
   }
 }
