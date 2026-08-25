@@ -5536,13 +5536,13 @@
     }
   },
   "Andrew Alvarez_2026": {
-    "timestamp": "2026-08-20T16:23:04.626812",
+    "timestamp": "2026-08-25T22:35:09.779136",
     "data": {
-      "k_pct": 0.1955,
-      "k_per_9": 5.28,
-      "xk_pct": 0.1955,
-      "k_pct_raw": 0.1929,
-      "ip": 65.7,
+      "k_pct": 0.1873,
+      "k_per_9": 5.06,
+      "xk_pct": 0.1873,
+      "k_pct_raw": 0.1823,
+      "ip": 67.7,
       "source": "savant"
     }
   },
@@ -5741,13 +5741,13 @@
     }
   },
   "Casey Legumina_2026": {
-    "timestamp": "2026-07-29T17:04:55.787931",
+    "timestamp": "2026-08-25T22:34:42.467967",
     "data": {
-      "k_pct": 0.2057,
-      "k_per_9": 5.55,
-      "xk_pct": 0.2057,
-      "k_pct_raw": 0.1758,
-      "ip": 30.3,
+      "k_pct": 0.2165,
+      "k_per_9": 5.85,
+      "xk_pct": 0.2165,
+      "k_pct_raw": 0.1961,
+      "ip": 34.0,
       "source": "savant"
     }
   },
@@ -7182,6 +7182,15 @@
       "csw_pct": 0.375,
       "ip_per_start": 4.9,
       "pitches_per_start": 28.0
+    }
+  },
+  "Mason Adams_2026": {
+    "timestamp": "2026-08-25T22:35:07.912240",
+    "data": {
+      "k_pct": 0.224,
+      "k_per_9": 6.05,
+      "xk_pct": 0.224,
+      "source": "prior_season"
     }
   }
 }
