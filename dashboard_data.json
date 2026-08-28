@@ -1,6 +1,6 @@
 {
   "date": "August 28, 2026",
-  "generated_at": "03:39 AM",
+  "generated_at": "06:04 AM",
   "all_pitchers": [
     {
       "pitcher_name": "Cam Schlittler",
@@ -1327,6 +1327,138 @@
       }
     },
     {
+      "pitcher_name": "Kohl Drake",
+      "pitcher_id": 684442,
+      "pitcher_team": "AZ",
+      "pitcher_hand": "L",
+      "opp_team": "SF",
+      "venue": "Oracle Park",
+      "projected_ks": 3.6,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.10193333333333332,
+      "csw_pct": 0.24386666666666668,
+      "k_pct": 0.193,
+      "opp_k_pct": 0.2352,
+      "opp_chase": 0.3365,
+      "days_rest": 22,
+      "rolling_k_3": 2.67,
+      "rolling_k_5": 3.25,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "07/21",
+          "k": 5,
+          "pitches": 85
+        },
+        {
+          "date": "07/26",
+          "k": 1,
+          "pitches": 64
+        },
+        {
+          "date": "08/01",
+          "k": 6,
+          "pitches": 94
+        },
+        {
+          "date": "08/06",
+          "k": 1,
+          "pitches": 82
+        }
+      ],
+      "k_distribution": {
+        "0": 0.06,
+        "1": 0.0979,
+        "2": 0.1364,
+        "3": 0.1623,
+        "4": 0.1649,
+        "5": 0.143,
+        "6": 0.106,
+        "7": 0.067,
+        "8": 0.0362,
+        "9": 0.0167,
+        "10+": 0.0096
+      }
+    },
+    {
+      "pitcher_name": "Blade Tidwell",
+      "pitcher_id": 694918,
+      "pitcher_team": "SF",
+      "pitcher_hand": "R",
+      "opp_team": "AZ",
+      "venue": "Oracle Park",
+      "projected_ks": 3.5,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.09223333333333333,
+      "csw_pct": 0.2776,
+      "k_pct": 0.1715,
+      "opp_k_pct": 0.1974,
+      "opp_chase": 0.3028,
+      "days_rest": 6,
+      "rolling_k_3": 4.67,
+      "rolling_k_5": 4.25,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "08/04",
+          "k": 3,
+          "pitches": 100
+        },
+        {
+          "date": "08/10",
+          "k": 6,
+          "pitches": 96
+        },
+        {
+          "date": "08/16",
+          "k": 1,
+          "pitches": 64
+        },
+        {
+          "date": "08/22",
+          "k": 7,
+          "pitches": 93
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0638,
+        "1": 0.1024,
+        "2": 0.1404,
+        "3": 0.1644,
+        "4": 0.1644,
+        "5": 0.1404,
+        "6": 0.1024,
+        "7": 0.0638,
+        "8": 0.0339,
+        "9": 0.0154,
+        "10+": 0.0087
+      }
+    },
+    {
       "pitcher_name": "Casey Mize",
       "pitcher_id": 663554,
       "pitcher_team": "SD",
@@ -1540,5 +1672,5 @@
       }
     }
   ],
-  "total_pitchers": 22
+  "total_pitchers": 24
 }
