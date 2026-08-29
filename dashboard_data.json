@@ -1,6 +1,6 @@
 {
   "date": "August 29, 2026",
-  "generated_at": "12:17 AM",
+  "generated_at": "02:21 AM",
   "all_pitchers": [
     {
       "pitcher_name": "Cade Cavalli",
@@ -71,51 +71,6 @@
         "8": 0.1443,
         "9": 0.1121,
         "10+": 0.1494
-      }
-    },
-    {
-      "pitcher_name": "Kevin Gausman",
-      "pitcher_id": 592332,
-      "pitcher_team": "CHC",
-      "pitcher_hand": "R",
-      "opp_team": "CIN",
-      "venue": "Wrigley Field",
-      "projected_ks": 6.3,
-      "lineup_confirmed": false,
-      "swstr_pct": 0.1359,
-      "csw_pct": 0.2933,
-      "k_pct": 0.2436,
-      "opp_k_pct": 0.2515,
-      "opp_chase": 0.2766,
-      "days_rest": 5,
-      "rolling_k_3": 0.0,
-      "rolling_k_5": 0.0,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [],
-      "k_distribution": {
-        "0": 0.0069,
-        "1": 0.0173,
-        "2": 0.0369,
-        "3": 0.0673,
-        "4": 0.1047,
-        "5": 0.1392,
-        "6": 0.1579,
-        "7": 0.153,
-        "8": 0.1266,
-        "9": 0.0894,
-        "10+": 0.1006
       }
     },
     {
@@ -248,6 +203,77 @@
         "8": 0.1197,
         "9": 0.082,
         "10+": 0.0873
+      }
+    },
+    {
+      "pitcher_name": "Kevin Gausman",
+      "pitcher_id": 592332,
+      "pitcher_team": "CHC",
+      "pitcher_hand": "R",
+      "opp_team": "CIN",
+      "venue": "Wrigley Field",
+      "projected_ks": 5.4,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.1261,
+      "csw_pct": 0.303,
+      "k_pct": 0.2436,
+      "opp_k_pct": 0.2515,
+      "opp_chase": 0.2766,
+      "days_rest": 5,
+      "rolling_k_3": 6.0,
+      "rolling_k_5": 5.2,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "08/01",
+          "k": 4,
+          "pitches": 94
+        },
+        {
+          "date": "08/07",
+          "k": 4,
+          "pitches": 96
+        },
+        {
+          "date": "08/13",
+          "k": 7,
+          "pitches": 93
+        },
+        {
+          "date": "08/18",
+          "k": 5,
+          "pitches": 86
+        },
+        {
+          "date": "08/24",
+          "k": 6,
+          "pitches": 94
+        }
+      ],
+      "k_distribution": {
+        "0": 0.016,
+        "1": 0.0347,
+        "2": 0.0642,
+        "3": 0.1015,
+        "4": 0.137,
+        "5": 0.158,
+        "6": 0.1555,
+        "7": 0.1307,
+        "8": 0.0938,
+        "9": 0.0575,
+        "10+": 0.051
       }
     },
     {
@@ -1225,6 +1251,77 @@
       }
     },
     {
+      "pitcher_name": "Bennett Sousa",
+      "pitcher_id": 656986,
+      "pitcher_team": "HOU",
+      "pitcher_hand": "L",
+      "opp_team": "NYM",
+      "venue": "Citi Field",
+      "projected_ks": 2.5,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.1734,
+      "csw_pct": 0.3387,
+      "k_pct": 0.2656,
+      "opp_k_pct": 0.2357,
+      "opp_chase": 0.3049,
+      "days_rest": 3,
+      "rolling_k_3": 0.33,
+      "rolling_k_5": 1.0,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "08/19",
+          "k": 1,
+          "pitches": 18
+        },
+        {
+          "date": "08/21",
+          "k": 3,
+          "pitches": 17
+        },
+        {
+          "date": "08/22",
+          "k": 0,
+          "pitches": 12
+        },
+        {
+          "date": "08/25",
+          "k": 0,
+          "pitches": 8
+        },
+        {
+          "date": "08/26",
+          "k": 1,
+          "pitches": 28
+        }
+      ],
+      "k_distribution": {
+        "0": 0.1094,
+        "1": 0.15,
+        "2": 0.1756,
+        "3": 0.1756,
+        "4": 0.15,
+        "5": 0.1094,
+        "6": 0.0681,
+        "7": 0.0362,
+        "8": 0.0164,
+        "9": 0.0064,
+        "10+": 0.0029
+      }
+    },
+    {
       "pitcher_name": "Daniel Lynch IV",
       "pitcher_id": 663738,
       "pitcher_team": "KC",
@@ -1296,5 +1393,5 @@
       }
     }
   ],
-  "total_pitchers": 19
+  "total_pitchers": 20
 }
