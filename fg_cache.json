@@ -4165,13 +4165,13 @@
     }
   },
   "Jake Bennett_2026": {
-    "timestamp": "2026-08-23T16:13:56.691808",
+    "timestamp": "2026-08-29T03:37:27.991410",
     "data": {
-      "k_pct": 0.1893,
-      "k_per_9": 5.11,
-      "xk_pct": 0.1893,
-      "k_pct_raw": 0.1797,
-      "ip": 72.3,
+      "k_pct": 0.1959,
+      "k_per_9": 5.29,
+      "xk_pct": 0.1959,
+      "k_pct_raw": 0.1883,
+      "ip": 74.3,
       "source": "savant"
     }
   },
@@ -4724,13 +4724,13 @@
     }
   },
   "Carlos Rod\u00f3n_2026": {
-    "timestamp": "2026-08-23T16:13:33.212751",
+    "timestamp": "2026-08-29T03:38:12.489315",
     "data": {
-      "k_pct": 0.2584,
-      "k_per_9": 6.98,
-      "xk_pct": 0.2584,
-      "k_pct_raw": 0.2632,
-      "ip": 12.7,
+      "k_pct": 0.2269,
+      "k_per_9": 6.13,
+      "xk_pct": 0.2269,
+      "k_pct_raw": 0.1765,
+      "ip": 11.3,
       "source": "savant"
     }
   },
@@ -7200,6 +7200,17 @@
       "k_pct_raw": 0.2394,
       "ip": 23.7,
       "source": "savant"
+    }
+  },
+  "prior_stats_656986_2025": {
+    "timestamp": "2026-08-29T03:38:34.245418",
+    "data": {
+      "k_pct": 0.2965,
+      "bb_pct": 0.0754,
+      "swstr_pct": 0.1937,
+      "csw_pct": 0.3352,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 16.5
     }
   }
 }
