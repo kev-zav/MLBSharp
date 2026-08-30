@@ -1555,13 +1555,13 @@
     }
   },
   "Janson Junk_2026": {
-    "timestamp": "2026-08-23T16:13:35.705996",
+    "timestamp": "2026-08-30T21:56:51.392572",
     "data": {
-      "k_pct": 0.1657,
-      "k_per_9": 4.47,
-      "xk_pct": 0.1657,
-      "k_pct_raw": 0.1631,
-      "ip": 47.0,
+      "k_pct": 0.1591,
+      "k_per_9": 4.3,
+      "xk_pct": 0.1591,
+      "k_pct_raw": 0.1543,
+      "ip": 54.0,
       "source": "savant"
     }
   },
@@ -7219,6 +7219,17 @@
       "csw_pct": 0.3352,
       "ip_per_start": 4.9,
       "pitches_per_start": 16.5
+    }
+  },
+  "prior_stats_690279_2025": {
+    "timestamp": "2026-08-30T21:57:16.096689",
+    "data": {
+      "k_pct": 0.224,
+      "bb_pct": 0.082,
+      "swstr_pct": 0.115,
+      "csw_pct": 0.27,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 88.0
     }
   }
 }
