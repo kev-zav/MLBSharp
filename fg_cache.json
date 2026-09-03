@@ -1150,13 +1150,13 @@
     }
   },
   "Yoshinobu Yamamoto_2026": {
-    "timestamp": "2026-08-27T03:03:38.712983",
+    "timestamp": "2026-09-03T00:00:39.584911",
     "data": {
-      "k_pct": 0.2686,
-      "k_per_9": 7.25,
-      "xk_pct": 0.2686,
-      "k_pct_raw": 0.2619,
-      "ip": 70.0,
+      "k_pct": 0.2622,
+      "k_per_9": 7.08,
+      "xk_pct": 0.2622,
+      "k_pct_raw": 0.2536,
+      "ip": 69.7,
       "source": "savant"
     }
   },
@@ -5177,12 +5177,14 @@
     }
   },
   "Brycen Mautz_2026": {
-    "timestamp": "2026-05-24T16:52:32.975475",
+    "timestamp": "2026-09-03T00:00:33.938878",
     "data": {
-      "k_pct": 0.224,
-      "k_per_9": 6.05,
-      "xk_pct": 0.224,
-      "source": "prior_season"
+      "k_pct": 0.2859,
+      "k_per_9": 7.72,
+      "xk_pct": 0.2859,
+      "k_pct_raw": 0.5333,
+      "ip": 5.0,
+      "source": "savant"
     }
   },
   "Tyler Phillips_2026": {
@@ -7325,6 +7327,17 @@
       "csw_pct": 0.2742,
       "ip_per_start": 4.9,
       "pitches_per_start": 42.6
+    }
+  },
+  "prior_stats_664199_2025": {
+    "timestamp": "2026-09-03T00:00:02.365001",
+    "data": {
+      "k_pct": 0.2126,
+      "bb_pct": 0.0435,
+      "swstr_pct": 0.1087,
+      "csw_pct": 0.2775,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 17.0
     }
   }
 }
