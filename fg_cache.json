@@ -4827,13 +4827,13 @@
     }
   },
   "Bryce Miller_2026": {
-    "timestamp": "2026-09-02T19:05:47.625043",
+    "timestamp": "2026-09-08T21:58:31.444097",
     "data": {
-      "k_pct": 0.166,
-      "k_per_9": 4.48,
-      "xk_pct": 0.166,
-      "k_pct_raw": 0.1587,
-      "ip": 63.0,
+      "k_pct": 0.1708,
+      "k_per_9": 4.61,
+      "xk_pct": 0.1708,
+      "k_pct_raw": 0.1648,
+      "ip": 60.7,
       "source": "savant"
     }
   },
@@ -5965,13 +5965,13 @@
     }
   },
   "Cal Quantrill_2026": {
-    "timestamp": "2026-09-03T18:59:12.847422",
+    "timestamp": "2026-09-08T21:58:31.264505",
     "data": {
-      "k_pct": 0.1973,
+      "k_pct": 0.1975,
       "k_per_9": 5.33,
-      "xk_pct": 0.1973,
-      "k_pct_raw": 0.2071,
-      "ip": 66.0,
+      "xk_pct": 0.1975,
+      "k_pct_raw": 0.2063,
+      "ip": 74.3,
       "source": "savant"
     }
   },
@@ -7459,6 +7459,17 @@
       "k_pct_raw": 0.2444,
       "ip": 15.0,
       "source": "savant"
+    }
+  },
+  "prior_stats_683000_2025": {
+    "timestamp": "2026-09-08T21:58:17.067818",
+    "data": {
+      "k_pct": 0.224,
+      "bb_pct": 0.082,
+      "swstr_pct": 0.115,
+      "csw_pct": 0.27,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 88.0
     }
   }
 }
