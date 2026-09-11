@@ -44,13 +44,13 @@
     }
   },
   "MacKenzie Gore_2026": {
-    "timestamp": "2026-09-06T17:53:30.153794",
+    "timestamp": "2026-09-11T21:50:08.895435",
     "data": {
-      "k_pct": 0.2567,
-      "k_per_9": 6.93,
-      "xk_pct": 0.2567,
-      "k_pct_raw": 0.2539,
-      "ip": 85.3,
+      "k_pct": 0.2403,
+      "k_per_9": 6.49,
+      "xk_pct": 0.2403,
+      "k_pct_raw": 0.2331,
+      "ip": 78.7,
       "source": "savant"
     }
   },
@@ -644,13 +644,13 @@
     }
   },
   "Shota Imanaga_2026": {
-    "timestamp": "2026-09-04T18:43:48.688919",
+    "timestamp": "2026-09-11T21:49:19.862698",
     "data": {
-      "k_pct": 0.2313,
-      "k_per_9": 6.25,
-      "xk_pct": 0.2313,
-      "k_pct_raw": 0.2388,
-      "ip": 67.0,
+      "k_pct": 0.2293,
+      "k_per_9": 6.19,
+      "xk_pct": 0.2293,
+      "k_pct_raw": 0.2362,
+      "ip": 66.3,
       "source": "savant"
     }
   },
@@ -2704,12 +2704,12 @@
     }
   },
   "Merrill Kelly_2026": {
-    "timestamp": "2026-09-04T18:43:57.179133",
+    "timestamp": "2026-09-11T21:50:12.115831",
     "data": {
-      "k_pct": 0.1904,
-      "k_per_9": 5.14,
-      "xk_pct": 0.1904,
-      "k_pct_raw": 0.1818,
+      "k_pct": 0.1835,
+      "k_per_9": 4.95,
+      "xk_pct": 0.1835,
+      "k_pct_raw": 0.1732,
       "ip": 77.0,
       "source": "savant"
     }
@@ -7499,6 +7499,28 @@
       "k_pct_raw": 0.2308,
       "ip": 4.3,
       "source": "savant"
+    }
+  },
+  "Wilber Dotel_2026": {
+    "timestamp": "2026-09-11T21:48:39.407825",
+    "data": {
+      "k_pct": 0.239,
+      "k_per_9": 6.45,
+      "xk_pct": 0.239,
+      "k_pct_raw": 0.2542,
+      "ip": 19.7,
+      "source": "savant"
+    }
+  },
+  "prior_stats_699044_2025": {
+    "timestamp": "2026-09-11T21:49:41.467525",
+    "data": {
+      "k_pct": 0.224,
+      "bb_pct": 0.082,
+      "swstr_pct": 0.115,
+      "csw_pct": 0.27,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 88.0
     }
   }
 }
