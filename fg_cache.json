@@ -2512,13 +2512,13 @@
     }
   },
   "Gavin Williams_2026": {
-    "timestamp": "2026-09-06T21:30:35.812992",
+    "timestamp": "2026-09-14T20:03:09.376174",
     "data": {
-      "k_pct": 0.3833,
-      "k_per_9": 10.35,
-      "xk_pct": 0.3833,
-      "k_pct_raw": 0.4215,
-      "ip": 74.3,
+      "k_pct": 0.3825,
+      "k_per_9": 10.33,
+      "xk_pct": 0.3825,
+      "k_pct_raw": 0.4208,
+      "ip": 73.7,
       "source": "savant"
     }
   },
@@ -5901,13 +5901,13 @@
     }
   },
   "Sean Newcomb_2026": {
-    "timestamp": "2026-09-12T18:00:09.635541",
+    "timestamp": "2026-09-14T20:03:08.072853",
     "data": {
-      "k_pct": 0.1962,
-      "k_per_9": 5.3,
-      "xk_pct": 0.1962,
-      "k_pct_raw": 0.1789,
-      "ip": 41.0,
+      "k_pct": 0.2111,
+      "k_per_9": 5.7,
+      "xk_pct": 0.2111,
+      "k_pct_raw": 0.2016,
+      "ip": 43.0,
       "source": "savant"
     }
   },
@@ -7551,6 +7551,17 @@
       "csw_pct": 0.27,
       "ip_per_start": 4.9,
       "pitches_per_start": 88.0
+    }
+  },
+  "prior_stats_804636_2025": {
+    "timestamp": "2026-09-14T20:03:15.543977",
+    "data": {
+      "k_pct": 0.25,
+      "bb_pct": 0.1023,
+      "swstr_pct": 0.0968,
+      "csw_pct": 0.293,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 74.4
     }
   }
 }
