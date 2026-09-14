@@ -1,6 +1,6 @@
 {
   "date": "September 14, 2026",
-  "generated_at": "08:03 PM",
+  "generated_at": "10:38 PM",
   "all_pitchers": [
     {
       "pitcher_name": "Gavin Williams",
@@ -202,13 +202,13 @@
       "pitcher_hand": "R",
       "opp_team": "MIN",
       "venue": "Target Field",
-      "projected_ks": 5.0,
-      "lineup_confirmed": false,
+      "projected_ks": 4.7,
+      "lineup_confirmed": true,
       "swstr_pct": 0.0995,
       "csw_pct": 0.2838,
       "k_pct": 0.2389,
-      "opp_k_pct": 0.2028,
-      "opp_chase": 0.3055,
+      "opp_k_pct": 0.1866,
+      "opp_chase": 0.2994,
       "days_rest": 5,
       "rolling_k_3": 5.0,
       "rolling_k_5": 4.8,
@@ -253,17 +253,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0223,
-        "1": 0.0455,
-        "2": 0.079,
-        "3": 0.1172,
-        "4": 0.1486,
-        "5": 0.1608,
-        "6": 0.1486,
-        "7": 0.1172,
-        "8": 0.079,
-        "9": 0.0455,
-        "10+": 0.0364
+        "0": 0.0282,
+        "1": 0.0548,
+        "2": 0.0909,
+        "3": 0.1286,
+        "4": 0.1554,
+        "5": 0.1604,
+        "6": 0.1414,
+        "7": 0.1064,
+        "8": 0.0684,
+        "9": 0.0375,
+        "10+": 0.028
       }
     },
     {
@@ -344,13 +344,13 @@
       "pitcher_hand": "R",
       "opp_team": "NYY",
       "venue": "Target Field",
-      "projected_ks": 4.6,
-      "lineup_confirmed": false,
+      "projected_ks": 4.5,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1215,
       "csw_pct": 0.2897,
       "k_pct": 0.2044,
-      "opp_k_pct": 0.2437,
-      "opp_chase": 0.2856,
+      "opp_k_pct": 0.2302,
+      "opp_chase": 0.3018,
       "days_rest": 6,
       "rolling_k_3": 3.67,
       "rolling_k_5": 4.4,
@@ -395,17 +395,88 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0305,
-        "1": 0.0582,
-        "2": 0.0949,
-        "3": 0.1322,
-        "4": 0.1573,
-        "5": 0.1598,
-        "6": 0.1387,
-        "7": 0.1027,
-        "8": 0.065,
-        "9": 0.0351,
-        "10+": 0.0255
+        "0": 0.0328,
+        "1": 0.0617,
+        "2": 0.099,
+        "3": 0.1358,
+        "4": 0.159,
+        "5": 0.159,
+        "6": 0.1358,
+        "7": 0.099,
+        "8": 0.0617,
+        "9": 0.0328,
+        "10+": 0.0233
+      }
+    },
+    {
+      "pitcher_name": "David Peterson",
+      "pitcher_id": 656849,
+      "pitcher_team": "CHC",
+      "pitcher_hand": "L",
+      "opp_team": "ATL",
+      "venue": "Wrigley Field",
+      "projected_ks": 4.4,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.1043,
+      "csw_pct": 0.2749,
+      "k_pct": 0.2146,
+      "opp_k_pct": 0.2068,
+      "opp_chase": 0.3412,
+      "days_rest": 6,
+      "rolling_k_3": 4.67,
+      "rolling_k_5": 4.6,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "08/17",
+          "k": 1,
+          "pitches": 22
+        },
+        {
+          "date": "08/22",
+          "k": 8,
+          "pitches": 98
+        },
+        {
+          "date": "08/28",
+          "k": 6,
+          "pitches": 88
+        },
+        {
+          "date": "09/02",
+          "k": 4,
+          "pitches": 96
+        },
+        {
+          "date": "09/08",
+          "k": 4,
+          "pitches": 83
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0353,
+        "1": 0.0653,
+        "2": 0.1032,
+        "3": 0.1393,
+        "4": 0.1605,
+        "5": 0.158,
+        "6": 0.1328,
+        "7": 0.0954,
+        "8": 0.0584,
+        "9": 0.0306,
+        "10+": 0.0212
       }
     },
     {
@@ -480,77 +551,6 @@
       }
     },
     {
-      "pitcher_name": "David Peterson",
-      "pitcher_id": 656849,
-      "pitcher_team": "CHC",
-      "pitcher_hand": "L",
-      "opp_team": "ATL",
-      "venue": "Wrigley Field",
-      "projected_ks": 4.3,
-      "lineup_confirmed": false,
-      "swstr_pct": 0.1043,
-      "csw_pct": 0.2749,
-      "k_pct": 0.2146,
-      "opp_k_pct": 0.2138,
-      "opp_chase": 0.3413,
-      "days_rest": 6,
-      "rolling_k_3": 4.67,
-      "rolling_k_5": 4.6,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "08/17",
-          "k": 1,
-          "pitches": 22
-        },
-        {
-          "date": "08/22",
-          "k": 8,
-          "pitches": 98
-        },
-        {
-          "date": "08/28",
-          "k": 6,
-          "pitches": 88
-        },
-        {
-          "date": "09/02",
-          "k": 4,
-          "pitches": 96
-        },
-        {
-          "date": "09/08",
-          "k": 4,
-          "pitches": 83
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0379,
-        "1": 0.069,
-        "2": 0.1074,
-        "3": 0.1426,
-        "4": 0.1618,
-        "5": 0.1568,
-        "6": 0.1297,
-        "7": 0.0917,
-        "8": 0.0553,
-        "9": 0.0285,
-        "10+": 0.0193
-      }
-    },
-    {
       "pitcher_name": "Kade Anderson",
       "pitcher_id": 807739,
       "pitcher_team": "SEA",
@@ -558,12 +558,12 @@
       "opp_team": "LAA",
       "venue": "Angel Stadium",
       "projected_ks": 4.2,
-      "lineup_confirmed": false,
+      "lineup_confirmed": true,
       "swstr_pct": 0.11399999999999999,
       "csw_pct": 0.2536,
       "k_pct": 0.2003,
-      "opp_k_pct": 0.2464,
-      "opp_chase": 0.3154,
+      "opp_k_pct": 0.2347,
+      "opp_chase": 0.3021,
       "days_rest": 5,
       "rolling_k_3": 3.67,
       "rolling_k_5": 4.0,
@@ -624,12 +624,12 @@
       "opp_team": "COL",
       "venue": "Coors Field",
       "projected_ks": 4.0,
-      "lineup_confirmed": false,
+      "lineup_confirmed": true,
       "swstr_pct": 0.0824,
       "csw_pct": 0.2315,
       "k_pct": 0.1773,
-      "opp_k_pct": 0.2198,
-      "opp_chase": 0.3369,
+      "opp_k_pct": 0.2209,
+      "opp_chase": 0.3449,
       "days_rest": 6,
       "rolling_k_3": 4.0,
       "rolling_k_5": 3.0,
@@ -765,13 +765,13 @@
       "pitcher_hand": "R",
       "opp_team": "SD",
       "venue": "Coors Field",
-      "projected_ks": 3.8,
-      "lineup_confirmed": false,
+      "projected_ks": 3.7,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1008,
       "csw_pct": 0.2363,
       "k_pct": 0.1547,
-      "opp_k_pct": 0.2129,
-      "opp_chase": 0.3071,
+      "opp_k_pct": 0.2096,
+      "opp_chase": 0.2953,
       "days_rest": 5,
       "rolling_k_3": 4.33,
       "rolling_k_5": 3.6,
@@ -816,17 +816,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.053,
-        "1": 0.0892,
-        "2": 0.1282,
-        "3": 0.1574,
+        "0": 0.0564,
+        "1": 0.0935,
+        "2": 0.1323,
+        "3": 0.1599,
         "4": 0.1651,
-        "5": 0.1478,
-        "6": 0.113,
-        "7": 0.0738,
-        "8": 0.0411,
-        "9": 0.0196,
-        "10+": 0.0118
+        "5": 0.1455,
+        "6": 0.1095,
+        "7": 0.0704,
+        "8": 0.0386,
+        "9": 0.0181,
+        "10+": 0.0107
       }
     },
     {
@@ -836,13 +836,13 @@
       "pitcher_hand": "R",
       "opp_team": "CHC",
       "venue": "Wrigley Field",
-      "projected_ks": 3.6,
-      "lineup_confirmed": false,
+      "projected_ks": 3.5,
+      "lineup_confirmed": true,
       "swstr_pct": 0.07305,
       "csw_pct": 0.23629999999999998,
       "k_pct": 0.1419,
-      "opp_k_pct": 0.213,
-      "opp_chase": 0.2783,
+      "opp_k_pct": 0.2112,
+      "opp_chase": 0.2794,
       "days_rest": 5,
       "rolling_k_3": 5.33,
       "rolling_k_5": 5.33,
@@ -877,17 +877,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.06,
-        "1": 0.0979,
-        "2": 0.1364,
-        "3": 0.1623,
-        "4": 0.1649,
-        "5": 0.143,
-        "6": 0.106,
-        "7": 0.067,
-        "8": 0.0362,
-        "9": 0.0167,
-        "10+": 0.0096
+        "0": 0.0638,
+        "1": 0.1024,
+        "2": 0.1404,
+        "3": 0.1644,
+        "4": 0.1644,
+        "5": 0.1404,
+        "6": 0.1024,
+        "7": 0.0638,
+        "8": 0.0339,
+        "9": 0.0154,
+        "10+": 0.0087
       }
     },
     {
@@ -973,8 +973,8 @@
       "swstr_pct": 0.1075,
       "csw_pct": 0.2796,
       "k_pct": 0.1839,
-      "opp_k_pct": 0.2133,
-      "opp_chase": 0.271,
+      "opp_k_pct": 0.2159,
+      "opp_chase": 0.2753,
       "days_rest": 6,
       "rolling_k_3": 3.67,
       "rolling_k_5": 3.8,
