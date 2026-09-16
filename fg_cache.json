@@ -723,13 +723,13 @@
     }
   },
   "Parker Messick_2026": {
-    "timestamp": "2026-09-11T18:53:19.352024",
+    "timestamp": "2026-09-16T22:15:13.753103",
     "data": {
-      "k_pct": 0.2763,
-      "k_per_9": 7.46,
-      "xk_pct": 0.2763,
-      "k_pct_raw": 0.289,
-      "ip": 72.7,
+      "k_pct": 0.2727,
+      "k_per_9": 7.36,
+      "xk_pct": 0.2727,
+      "k_pct_raw": 0.2833,
+      "ip": 80.0,
       "source": "savant"
     }
   },
@@ -1458,12 +1458,12 @@
     }
   },
   "Anthony Kay_2026": {
-    "timestamp": "2026-09-11T18:53:23.380185",
+    "timestamp": "2026-09-16T22:14:49.519881",
     "data": {
-      "k_pct": 0.2008,
-      "k_per_9": 5.42,
-      "xk_pct": 0.2008,
-      "k_pct_raw": 0.1948,
+      "k_pct": 0.1905,
+      "k_per_9": 5.14,
+      "xk_pct": 0.1905,
+      "k_pct_raw": 0.1818,
       "ip": 77.0,
       "source": "savant"
     }
@@ -7584,6 +7584,28 @@
       "k_pct_raw": 0.1507,
       "ip": 24.3,
       "source": "savant"
+    }
+  },
+  "prior_stats_688692_2025": {
+    "timestamp": "2026-09-16T22:15:54.877635",
+    "data": {
+      "k_pct": 0.224,
+      "bb_pct": 0.082,
+      "swstr_pct": 0.115,
+      "csw_pct": 0.27,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 88.0
+    }
+  },
+  "prior_stats_675540_2025": {
+    "timestamp": "2026-09-16T22:15:59.366267",
+    "data": {
+      "k_pct": 0.0625,
+      "bb_pct": 0.1875,
+      "swstr_pct": 0.0175,
+      "csw_pct": 0.1404,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 19.0
     }
   }
 }
