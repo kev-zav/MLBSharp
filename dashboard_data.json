@@ -1,6 +1,6 @@
 {
   "date": "September 17, 2026",
-  "generated_at": "12:18 AM",
+  "generated_at": "07:25 PM",
   "all_pitchers": [
     {
       "pitcher_name": "Taj Bradley",
@@ -15,7 +15,7 @@
       "csw_pct": 0.2915,
       "k_pct": 0.2611,
       "opp_k_pct": 0.257,
-      "opp_chase": 0.3211,
+      "opp_chase": 0.3206,
       "days_rest": 6,
       "rolling_k_3": 7.0,
       "rolling_k_5": 7.8,
@@ -85,7 +85,7 @@
       "swstr_pct": 0.1254,
       "csw_pct": 0.2841,
       "k_pct": 0.2315,
-      "opp_k_pct": 0.2029,
+      "opp_k_pct": 0.203,
       "opp_chase": 0.3049,
       "days_rest": 5,
       "rolling_k_3": 6.33,
@@ -145,22 +145,22 @@
       }
     },
     {
-      "pitcher_name": "Drew Rasmussen",
-      "pitcher_id": 656876,
-      "pitcher_team": "TB",
+      "pitcher_name": "Sonny Gray",
+      "pitcher_id": 543243,
+      "pitcher_team": "BOS",
       "pitcher_hand": "R",
-      "opp_team": "ATH",
-      "venue": "Tropicana Field",
+      "opp_team": "TEX",
+      "venue": "Globe Life Field",
       "projected_ks": 5.0,
       "lineup_confirmed": false,
-      "swstr_pct": 0.1263,
-      "csw_pct": 0.2948,
-      "k_pct": 0.2549,
-      "opp_k_pct": 0.2156,
-      "opp_chase": 0.3029,
+      "swstr_pct": 0.113,
+      "csw_pct": 0.2735,
+      "k_pct": 0.2245,
+      "opp_k_pct": 0.2238,
+      "opp_chase": 0.306,
       "days_rest": 6,
       "rolling_k_3": 5.67,
-      "rolling_k_5": 5.4,
+      "rolling_k_5": 6.0,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -176,29 +176,29 @@
       },
       "last5": [
         {
-          "date": "08/19",
-          "k": 5,
+          "date": "08/15",
+          "k": 7,
           "pitches": 86
         },
         {
-          "date": "08/24",
-          "k": 5,
-          "pitches": 103
-        },
-        {
-          "date": "08/30",
+          "date": "08/21",
           "k": 6,
           "pitches": 97
         },
         {
+          "date": "08/26",
+          "k": 5,
+          "pitches": 93
+        },
+        {
           "date": "09/05",
           "k": 7,
-          "pitches": 97
+          "pitches": 92
         },
         {
           "date": "09/11",
-          "k": 4,
-          "pitches": 92
+          "k": 5,
+          "pitches": 90
         }
       ],
       "k_distribution": {
@@ -216,22 +216,22 @@
       }
     },
     {
-      "pitcher_name": "Michael King",
-      "pitcher_id": 650633,
-      "pitcher_team": "SD",
+      "pitcher_name": "Miguel Ullola",
+      "pitcher_id": 699044,
+      "pitcher_team": "HOU",
       "pitcher_hand": "R",
-      "opp_team": "COL",
-      "venue": "Coors Field",
-      "projected_ks": 4.3,
+      "opp_team": "KC",
+      "venue": "Daikin Park",
+      "projected_ks": 4.8,
       "lineup_confirmed": false,
-      "swstr_pct": 0.1136,
-      "csw_pct": 0.28,
-      "k_pct": 0.2176,
-      "opp_k_pct": 0.2171,
-      "opp_chase": 0.337,
-      "days_rest": 5,
-      "rolling_k_3": 4.33,
-      "rolling_k_5": 4.8,
+      "swstr_pct": 0.12926666666666667,
+      "csw_pct": 0.2718,
+      "k_pct": 0.2163,
+      "opp_k_pct": 0.2072,
+      "opp_chase": 0.3091,
+      "days_rest": 6,
+      "rolling_k_3": 1.0,
+      "rolling_k_5": 0.75,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -247,114 +247,38 @@
       },
       "last5": [
         {
-          "date": "08/19",
-          "k": 4,
-          "pitches": 100
+          "date": "07/26",
+          "k": 0,
+          "pitches": 24
         },
         {
-          "date": "08/25",
-          "k": 7,
-          "pitches": 98
-        },
-        {
-          "date": "08/31",
-          "k": 6,
-          "pitches": 96
-        },
-        {
-          "date": "09/06",
-          "k": 3,
-          "pitches": 96
-        },
-        {
-          "date": "09/12",
-          "k": 4,
-          "pitches": 96
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0379,
-        "1": 0.069,
-        "2": 0.1074,
-        "3": 0.1426,
-        "4": 0.1618,
-        "5": 0.1568,
-        "6": 0.1297,
-        "7": 0.0917,
-        "8": 0.0553,
-        "9": 0.0285,
-        "10+": 0.0193
-      }
-    },
-    {
-      "pitcher_name": "Tanner Gordon",
-      "pitcher_id": 685299,
-      "pitcher_team": "COL",
-      "pitcher_hand": "R",
-      "opp_team": "SD",
-      "venue": "Coors Field",
-      "projected_ks": 3.8,
-      "lineup_confirmed": false,
-      "swstr_pct": 0.1211,
-      "csw_pct": 0.2706,
-      "k_pct": 0.1732,
-      "opp_k_pct": 0.2131,
-      "opp_chase": 0.3077,
-      "days_rest": 5,
-      "rolling_k_3": 4.0,
-      "rolling_k_5": 3.8,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "08/21",
+          "date": "08/18",
           "k": 2,
-          "pitches": 82
-        },
-        {
-          "date": "08/26",
-          "k": 5,
-          "pitches": 90
-        },
-        {
-          "date": "08/31",
-          "k": 3,
-          "pitches": 60
+          "pitches": 11
         },
         {
           "date": "09/06",
-          "k": 4,
-          "pitches": 80
+          "k": 1,
+          "pitches": 18
         },
         {
-          "date": "09/12",
-          "k": 5,
-          "pitches": 87
+          "date": "09/11",
+          "k": 0,
+          "pitches": 13
         }
       ],
       "k_distribution": {
-        "0": 0.053,
-        "1": 0.0892,
-        "2": 0.1282,
-        "3": 0.1574,
-        "4": 0.1651,
-        "5": 0.1478,
-        "6": 0.113,
-        "7": 0.0738,
-        "8": 0.0411,
-        "9": 0.0196,
-        "10+": 0.0118
+        "0": 0.0262,
+        "1": 0.0516,
+        "2": 0.0868,
+        "3": 0.1249,
+        "4": 0.1533,
+        "5": 0.1608,
+        "6": 0.1439,
+        "7": 0.1101,
+        "8": 0.0719,
+        "9": 0.0401,
+        "10+": 0.0306
       }
     },
     {
@@ -369,8 +293,8 @@
       "swstr_pct": 0.0759,
       "csw_pct": 0.2467,
       "k_pct": 0.1578,
-      "opp_k_pct": 0.2426,
-      "opp_chase": 0.2883,
+      "opp_k_pct": 0.243,
+      "opp_chase": 0.2899,
       "days_rest": 6,
       "rolling_k_3": 3.33,
       "rolling_k_5": 3.0,
@@ -429,6 +353,77 @@
       }
     },
     {
+      "pitcher_name": "Seth Lugo",
+      "pitcher_id": 607625,
+      "pitcher_team": "KC",
+      "pitcher_hand": "R",
+      "opp_team": "HOU",
+      "venue": "Daikin Park",
+      "projected_ks": 3.5,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.0803,
+      "csw_pct": 0.2649,
+      "k_pct": 0.166,
+      "opp_k_pct": 0.2212,
+      "opp_chase": 0.316,
+      "days_rest": 6,
+      "rolling_k_3": 3.33,
+      "rolling_k_5": 3.6,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "08/19",
+          "k": 3,
+          "pitches": 96
+        },
+        {
+          "date": "08/25",
+          "k": 5,
+          "pitches": 89
+        },
+        {
+          "date": "08/30",
+          "k": 2,
+          "pitches": 93
+        },
+        {
+          "date": "09/05",
+          "k": 1,
+          "pitches": 95
+        },
+        {
+          "date": "09/11",
+          "k": 7,
+          "pitches": 95
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0638,
+        "1": 0.1024,
+        "2": 0.1404,
+        "3": 0.1644,
+        "4": 0.1644,
+        "5": 0.1404,
+        "6": 0.1024,
+        "7": 0.0638,
+        "8": 0.0339,
+        "9": 0.0154,
+        "10+": 0.0087
+      }
+    },
+    {
       "pitcher_name": "Erick Fedde",
       "pitcher_id": 607200,
       "pitcher_team": "CWS",
@@ -440,8 +435,8 @@
       "swstr_pct": 0.0762,
       "csw_pct": 0.2585,
       "k_pct": 0.16,
-      "opp_k_pct": 0.2258,
-      "opp_chase": 0.2807,
+      "opp_k_pct": 0.2254,
+      "opp_chase": 0.2804,
       "days_rest": 7,
       "rolling_k_3": 2.33,
       "rolling_k_5": 2.8,
@@ -498,7 +493,78 @@
         "9": 0.0084,
         "10+": 0.0041
       }
+    },
+    {
+      "pitcher_name": "Tyler Alexander",
+      "pitcher_id": 641302,
+      "pitcher_team": "TEX",
+      "pitcher_hand": "L",
+      "opp_team": "BOS",
+      "venue": "Globe Life Field",
+      "projected_ks": 2.0,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.1038,
+      "csw_pct": 0.2594,
+      "k_pct": 0.182,
+      "opp_k_pct": 0.2126,
+      "opp_chase": 0.3023,
+      "days_rest": 2,
+      "rolling_k_3": 0.67,
+      "rolling_k_5": 0.8,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 0,
+        "description": "Dome / Retractable Roof",
+        "adjustment": 1.0,
+        "indoor": true
+      },
+      "last5": [
+        {
+          "date": "09/05",
+          "k": 1,
+          "pitches": 14
+        },
+        {
+          "date": "09/06",
+          "k": 1,
+          "pitches": 17
+        },
+        {
+          "date": "09/09",
+          "k": 1,
+          "pitches": 22
+        },
+        {
+          "date": "09/13",
+          "k": 0,
+          "pitches": 24
+        },
+        {
+          "date": "09/15",
+          "k": 1,
+          "pitches": 11
+        }
+      ],
+      "k_distribution": {
+        "0": 0.1374,
+        "1": 0.1741,
+        "2": 0.1884,
+        "3": 0.1741,
+        "4": 0.1374,
+        "5": 0.0926,
+        "6": 0.0533,
+        "7": 0.0262,
+        "8": 0.011,
+        "9": 0.0039,
+        "10+": 0.0016
+      }
     }
   ],
-  "total_pitchers": 7
+  "total_pitchers": 8
 }
