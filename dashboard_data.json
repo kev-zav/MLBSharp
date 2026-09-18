@@ -1,6 +1,6 @@
 {
   "date": "September 18, 2026",
-  "generated_at": "12:04 AM",
+  "generated_at": "06:45 PM",
   "all_pitchers": [
     {
       "pitcher_name": "Dylan Cease",
@@ -156,8 +156,8 @@
       "swstr_pct": 0.1653,
       "csw_pct": 0.3213,
       "k_pct": 0.3027,
-      "opp_k_pct": 0.2126,
-      "opp_chase": 0.3023,
+      "opp_k_pct": 0.211,
+      "opp_chase": 0.3022,
       "days_rest": 6,
       "rolling_k_3": 7.33,
       "rolling_k_5": 7.0,
@@ -227,8 +227,8 @@
       "swstr_pct": 0.1652,
       "csw_pct": 0.3391,
       "k_pct": 0.2858,
-      "opp_k_pct": 0.2157,
-      "opp_chase": 0.3032,
+      "opp_k_pct": 0.2155,
+      "opp_chase": 0.3028,
       "days_rest": 4,
       "rolling_k_3": 1.33,
       "rolling_k_5": 1.8,
@@ -284,6 +284,77 @@
         "8": 0.1051,
         "9": 0.0675,
         "10+": 0.0647
+      }
+    },
+    {
+      "pitcher_name": "Chase Burns",
+      "pitcher_id": 695505,
+      "pitcher_team": "CIN",
+      "pitcher_hand": "R",
+      "opp_team": "CHC",
+      "venue": "Great American Ball Park",
+      "projected_ks": 5.4,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.16,
+      "csw_pct": 0.3055,
+      "k_pct": 0.3178,
+      "opp_k_pct": 0.2121,
+      "opp_chase": 0.2783,
+      "days_rest": 5,
+      "rolling_k_3": 5.33,
+      "rolling_k_5": 5.8,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "08/19",
+          "k": 8,
+          "pitches": 104
+        },
+        {
+          "date": "08/24",
+          "k": 5,
+          "pitches": 64
+        },
+        {
+          "date": "08/30",
+          "k": 7,
+          "pitches": 100
+        },
+        {
+          "date": "09/07",
+          "k": 5,
+          "pitches": 44
+        },
+        {
+          "date": "09/13",
+          "k": 4,
+          "pitches": 56
+        }
+      ],
+      "k_distribution": {
+        "0": 0.016,
+        "1": 0.0347,
+        "2": 0.0642,
+        "3": 0.1015,
+        "4": 0.137,
+        "5": 0.158,
+        "6": 0.1555,
+        "7": 0.1307,
+        "8": 0.0938,
+        "9": 0.0575,
+        "10+": 0.051
       }
     },
     {
@@ -350,6 +421,77 @@
         "8": 0.0938,
         "9": 0.0575,
         "10+": 0.051
+      }
+    },
+    {
+      "pitcher_name": "Dustin May",
+      "pitcher_id": 669160,
+      "pitcher_team": "MIL",
+      "pitcher_hand": "R",
+      "opp_team": "BAL",
+      "venue": "Oriole Park at Camden Yards",
+      "projected_ks": 5.1,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.1213,
+      "csw_pct": 0.2815,
+      "k_pct": 0.2201,
+      "opp_k_pct": 0.2397,
+      "opp_chase": 0.2924,
+      "days_rest": 7,
+      "rolling_k_3": 5.0,
+      "rolling_k_5": 3.2,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "08/19",
+          "k": 1,
+          "pitches": 66
+        },
+        {
+          "date": "08/26",
+          "k": 0,
+          "pitches": 1
+        },
+        {
+          "date": "08/30",
+          "k": 4,
+          "pitches": 97
+        },
+        {
+          "date": "09/05",
+          "k": 5,
+          "pitches": 56
+        },
+        {
+          "date": "09/11",
+          "k": 6,
+          "pitches": 84
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0206,
+        "1": 0.0426,
+        "2": 0.0752,
+        "3": 0.1133,
+        "4": 0.1459,
+        "5": 0.1604,
+        "6": 0.1506,
+        "7": 0.1207,
+        "8": 0.0826,
+        "9": 0.0483,
+        "10+": 0.0397
       }
     },
     {
@@ -420,8 +562,8 @@
       "swstr_pct": 0.1242,
       "csw_pct": 0.2832,
       "k_pct": 0.2296,
-      "opp_k_pct": 0.203,
-      "opp_chase": 0.3049,
+      "opp_k_pct": 0.2044,
+      "opp_chase": 0.3053,
       "days_rest": 5,
       "rolling_k_3": 4.67,
       "rolling_k_5": 4.8,
@@ -480,6 +622,67 @@
       }
     },
     {
+      "pitcher_name": "Cade Povich",
+      "pitcher_id": 700249,
+      "pitcher_team": "BAL",
+      "pitcher_hand": "L",
+      "opp_team": "MIL",
+      "venue": "Oriole Park at Camden Yards",
+      "projected_ks": 4.8,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.1005,
+      "csw_pct": 0.2632,
+      "k_pct": 0.228,
+      "opp_k_pct": 0.2122,
+      "opp_chase": 0.273,
+      "days_rest": 18,
+      "rolling_k_3": 4.33,
+      "rolling_k_5": 4.33,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "08/04",
+          "k": 7,
+          "pitches": 88
+        },
+        {
+          "date": "08/09",
+          "k": 2,
+          "pitches": 61
+        },
+        {
+          "date": "08/31",
+          "k": 4,
+          "pitches": 87
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0262,
+        "1": 0.0516,
+        "2": 0.0868,
+        "3": 0.1249,
+        "4": 0.1533,
+        "5": 0.1608,
+        "6": 0.1439,
+        "7": 0.1101,
+        "8": 0.0719,
+        "9": 0.0401,
+        "10+": 0.0306
+      }
+    },
+    {
       "pitcher_name": "Connor Prielipp",
       "pitcher_id": 687570,
       "pitcher_team": "MIN",
@@ -491,8 +694,8 @@
       "swstr_pct": 0.1213,
       "csw_pct": 0.2884,
       "k_pct": 0.234,
-      "opp_k_pct": 0.247,
-      "opp_chase": 0.315,
+      "opp_k_pct": 0.2476,
+      "opp_chase": 0.3148,
       "days_rest": 6,
       "rolling_k_3": 3.67,
       "rolling_k_5": 4.6,
@@ -562,8 +765,8 @@
       "swstr_pct": 0.11280000000000001,
       "csw_pct": 0.2824,
       "k_pct": 0.2117,
-      "opp_k_pct": 0.2254,
-      "opp_chase": 0.2804,
+      "opp_k_pct": 0.2257,
+      "opp_chase": 0.2794,
       "days_rest": 5,
       "rolling_k_3": 4.5,
       "rolling_k_5": 4.5,
@@ -832,7 +1035,7 @@
       "csw_pct": 0.2717,
       "k_pct": 0.2485,
       "opp_k_pct": 0.2072,
-      "opp_chase": 0.3091,
+      "opp_chase": 0.3093,
       "days_rest": 6,
       "rolling_k_3": 3.33,
       "rolling_k_5": 3.8,
@@ -902,8 +1105,8 @@
       "swstr_pct": 0.12426666666666666,
       "csw_pct": 0.27353333333333335,
       "k_pct": 0.1988,
-      "opp_k_pct": 0.243,
-      "opp_chase": 0.2899,
+      "opp_k_pct": 0.2443,
+      "opp_chase": 0.2893,
       "days_rest": 6,
       "rolling_k_3": 3.33,
       "rolling_k_5": 3.25,
@@ -968,8 +1171,8 @@
       "swstr_pct": 0.12029999999999999,
       "csw_pct": 0.25825,
       "k_pct": 0.2003,
-      "opp_k_pct": 0.2044,
-      "opp_chase": 0.2845,
+      "opp_k_pct": 0.2041,
+      "opp_chase": 0.2846,
       "days_rest": 6,
       "rolling_k_3": 3.67,
       "rolling_k_5": 3.67,
@@ -1018,6 +1221,77 @@
       }
     },
     {
+      "pitcher_name": "Clay Holmes",
+      "pitcher_id": 605280,
+      "pitcher_team": "CHC",
+      "pitcher_hand": "R",
+      "opp_team": "CIN",
+      "venue": "Great American Ball Park",
+      "projected_ks": 4.0,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.0984,
+      "csw_pct": 0.2656,
+      "k_pct": 0.1572,
+      "opp_k_pct": 0.2536,
+      "opp_chase": 0.2808,
+      "days_rest": 6,
+      "rolling_k_3": 5.0,
+      "rolling_k_5": 4.0,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "08/19",
+          "k": 0,
+          "pitches": 86
+        },
+        {
+          "date": "08/25",
+          "k": 5,
+          "pitches": 93
+        },
+        {
+          "date": "08/31",
+          "k": 7,
+          "pitches": 101
+        },
+        {
+          "date": "09/06",
+          "k": 2,
+          "pitches": 80
+        },
+        {
+          "date": "09/12",
+          "k": 6,
+          "pitches": 100
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0465,
+        "1": 0.0808,
+        "2": 0.1199,
+        "3": 0.1519,
+        "4": 0.1644,
+        "5": 0.1519,
+        "6": 0.1199,
+        "7": 0.0808,
+        "8": 0.0465,
+        "9": 0.0228,
+        "10+": 0.0144
+      }
+    },
+    {
       "pitcher_name": "Ranger Suarez",
       "pitcher_id": 624133,
       "pitcher_team": "BOS",
@@ -1030,7 +1304,7 @@
       "csw_pct": 0.2781,
       "k_pct": 0.1846,
       "opp_k_pct": 0.182,
-      "opp_chase": 0.3115,
+      "opp_chase": 0.3108,
       "days_rest": 6,
       "rolling_k_3": 4.33,
       "rolling_k_5": 4.0,
@@ -1171,8 +1445,8 @@
       "swstr_pct": 0.0952,
       "csw_pct": 0.2654,
       "k_pct": 0.1488,
-      "opp_k_pct": 0.2329,
-      "opp_chase": 0.3026,
+      "opp_k_pct": 0.2339,
+      "opp_chase": 0.3023,
       "days_rest": 6,
       "rolling_k_3": 4.33,
       "rolling_k_5": 4.4,
@@ -1313,8 +1587,8 @@
       "swstr_pct": 0.1255,
       "csw_pct": 0.3195,
       "k_pct": 0.2048,
-      "opp_k_pct": 0.2126,
-      "opp_chase": 0.308,
+      "opp_k_pct": 0.2122,
+      "opp_chase": 0.3086,
       "days_rest": 6,
       "rolling_k_3": 3.33,
       "rolling_k_5": 4.0,
@@ -1373,5 +1647,5 @@
       }
     }
   ],
-  "total_pitchers": 20
+  "total_pitchers": 24
 }
