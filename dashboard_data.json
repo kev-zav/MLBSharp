@@ -1,52 +1,7 @@
 {
   "date": "September 21, 2026",
-  "generated_at": "08:12 PM",
+  "generated_at": "10:41 PM",
   "all_pitchers": [
-    {
-      "pitcher_name": "DJ Herz",
-      "pitcher_id": 687792,
-      "pitcher_team": "WSH",
-      "pitcher_hand": "R",
-      "opp_team": "DET",
-      "venue": "Comerica Park",
-      "projected_ks": 5.4,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.115,
-      "csw_pct": 0.27,
-      "k_pct": 0.224,
-      "opp_k_pct": 0.2398,
-      "opp_chase": 0.2842,
-      "days_rest": 5,
-      "rolling_k_3": 0.0,
-      "rolling_k_5": 0.0,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [],
-      "k_distribution": {
-        "0": 0.016,
-        "1": 0.0347,
-        "2": 0.0642,
-        "3": 0.1015,
-        "4": 0.137,
-        "5": 0.158,
-        "6": 0.1555,
-        "7": 0.1307,
-        "8": 0.0938,
-        "9": 0.0575,
-        "10+": 0.051
-      }
-    },
     {
       "pitcher_name": "Trey Yesavage",
       "pitcher_id": 702056,
@@ -106,51 +61,6 @@
         "8": 0.0863,
         "9": 0.0513,
         "10+": 0.0432
-      }
-    },
-    {
-      "pitcher_name": "River Ryan",
-      "pitcher_id": 689981,
-      "pitcher_team": "DET",
-      "pitcher_hand": "R",
-      "opp_team": "WSH",
-      "venue": "Comerica Park",
-      "projected_ks": 5.1,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.115,
-      "csw_pct": 0.27,
-      "k_pct": 0.224,
-      "opp_k_pct": 0.2059,
-      "opp_chase": 0.3098,
-      "days_rest": 5,
-      "rolling_k_3": 0.0,
-      "rolling_k_5": 0.0,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [],
-      "k_distribution": {
-        "0": 0.0206,
-        "1": 0.0426,
-        "2": 0.0752,
-        "3": 0.1133,
-        "4": 0.1459,
-        "5": 0.1604,
-        "6": 0.1506,
-        "7": 0.1207,
-        "8": 0.0826,
-        "9": 0.0483,
-        "10+": 0.0397
       }
     },
     {
@@ -367,5 +277,5 @@
       }
     }
   ],
-  "total_pitchers": 6
+  "total_pitchers": 4
 }
