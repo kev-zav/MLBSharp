@@ -1,7 +1,52 @@
 {
   "date": "September 21, 2026",
-  "generated_at": "12:05 AM",
+  "generated_at": "08:12 PM",
   "all_pitchers": [
+    {
+      "pitcher_name": "DJ Herz",
+      "pitcher_id": 687792,
+      "pitcher_team": "WSH",
+      "pitcher_hand": "R",
+      "opp_team": "DET",
+      "venue": "Comerica Park",
+      "projected_ks": 5.4,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.115,
+      "csw_pct": 0.27,
+      "k_pct": 0.224,
+      "opp_k_pct": 0.2398,
+      "opp_chase": 0.2842,
+      "days_rest": 5,
+      "rolling_k_3": 0.0,
+      "rolling_k_5": 0.0,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [],
+      "k_distribution": {
+        "0": 0.016,
+        "1": 0.0347,
+        "2": 0.0642,
+        "3": 0.1015,
+        "4": 0.137,
+        "5": 0.158,
+        "6": 0.1555,
+        "7": 0.1307,
+        "8": 0.0938,
+        "9": 0.0575,
+        "10+": 0.051
+      }
+    },
     {
       "pitcher_name": "Trey Yesavage",
       "pitcher_id": 702056,
@@ -9,13 +54,13 @@
       "pitcher_hand": "R",
       "opp_team": "BAL",
       "venue": "Oriole Park at Camden Yards",
-      "projected_ks": 5.1,
-      "lineup_confirmed": false,
+      "projected_ks": 5.2,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1505,
       "csw_pct": 0.32130000000000003,
       "k_pct": 0.2566,
-      "opp_k_pct": 0.24,
-      "opp_chase": 0.293,
+      "opp_k_pct": 0.2454,
+      "opp_chase": 0.3049,
       "days_rest": 48,
       "rolling_k_3": 4.33,
       "rolling_k_5": 4.33,
@@ -50,6 +95,51 @@
         }
       ],
       "k_distribution": {
+        "0": 0.019,
+        "1": 0.0398,
+        "2": 0.0714,
+        "3": 0.1094,
+        "4": 0.1431,
+        "5": 0.1598,
+        "6": 0.1524,
+        "7": 0.1241,
+        "8": 0.0863,
+        "9": 0.0513,
+        "10+": 0.0432
+      }
+    },
+    {
+      "pitcher_name": "River Ryan",
+      "pitcher_id": 689981,
+      "pitcher_team": "DET",
+      "pitcher_hand": "R",
+      "opp_team": "WSH",
+      "venue": "Comerica Park",
+      "projected_ks": 5.1,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.115,
+      "csw_pct": 0.27,
+      "k_pct": 0.224,
+      "opp_k_pct": 0.2059,
+      "opp_chase": 0.3098,
+      "days_rest": 5,
+      "rolling_k_3": 0.0,
+      "rolling_k_5": 0.0,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [],
+      "k_distribution": {
         "0": 0.0206,
         "1": 0.0426,
         "2": 0.0752,
@@ -75,8 +165,8 @@
       "swstr_pct": 0.1025,
       "csw_pct": 0.2459,
       "k_pct": 0.2235,
-      "opp_k_pct": 0.2041,
-      "opp_chase": 0.3088,
+      "opp_k_pct": 0.2057,
+      "opp_chase": 0.3093,
       "days_rest": 5,
       "rolling_k_3": 4.67,
       "rolling_k_5": 5.2,
@@ -141,13 +231,13 @@
       "pitcher_hand": "R",
       "opp_team": "TOR",
       "venue": "Oriole Park at Camden Yards",
-      "projected_ks": 3.8,
-      "lineup_confirmed": false,
+      "projected_ks": 3.9,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1063,
       "csw_pct": 0.2673,
       "k_pct": 0.2048,
-      "opp_k_pct": 0.1879,
-      "opp_chase": 0.3326,
+      "opp_k_pct": 0.1925,
+      "opp_chase": 0.3266,
       "days_rest": 6,
       "rolling_k_3": 4.33,
       "rolling_k_5": 3.8,
@@ -192,17 +282,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.053,
-        "1": 0.0892,
-        "2": 0.1282,
-        "3": 0.1574,
-        "4": 0.1651,
-        "5": 0.1478,
-        "6": 0.113,
-        "7": 0.0738,
-        "8": 0.0411,
-        "9": 0.0196,
-        "10+": 0.0118
+        "0": 0.0497,
+        "1": 0.0849,
+        "2": 0.1241,
+        "3": 0.1548,
+        "4": 0.1649,
+        "5": 0.15,
+        "6": 0.1165,
+        "7": 0.0773,
+        "8": 0.0438,
+        "9": 0.0212,
+        "10+": 0.0131
       }
     },
     {
@@ -217,8 +307,8 @@
       "swstr_pct": 0.0888,
       "csw_pct": 0.2677,
       "k_pct": 0.1689,
-      "opp_k_pct": 0.2044,
-      "opp_chase": 0.3058,
+      "opp_k_pct": 0.2047,
+      "opp_chase": 0.3061,
       "days_rest": 6,
       "rolling_k_3": 3.67,
       "rolling_k_5": 4.4,
@@ -277,5 +367,5 @@
       }
     }
   ],
-  "total_pitchers": 4
+  "total_pitchers": 6
 }
