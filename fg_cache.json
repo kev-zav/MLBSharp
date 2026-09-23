@@ -1423,13 +1423,13 @@
     }
   },
   "Framber Valdez_2026": {
-    "timestamp": "2026-09-17T00:18:12.956887",
+    "timestamp": "2026-09-23T22:25:01.624994",
     "data": {
-      "k_pct": 0.1578,
-      "k_per_9": 4.26,
-      "xk_pct": 0.1578,
-      "k_pct_raw": 0.1393,
-      "ip": 81.3,
+      "k_pct": 0.1734,
+      "k_per_9": 4.68,
+      "xk_pct": 0.1734,
+      "k_pct_raw": 0.1595,
+      "ip": 85.7,
       "source": "savant"
     }
   },
@@ -4213,14 +4213,12 @@
     }
   },
   "Trey Gibson_2026": {
-    "timestamp": "2026-06-30T17:46:57.097884",
+    "timestamp": "2026-09-23T22:25:10.678001",
     "data": {
-      "k_pct": 0.1922,
-      "k_per_9": 5.19,
-      "xk_pct": 0.1922,
-      "k_pct_raw": 0.1786,
-      "ip": 46.7,
-      "source": "savant"
+      "k_pct": 0.224,
+      "k_per_9": 6.05,
+      "xk_pct": 0.224,
+      "source": "prior_season"
     }
   },
   "Logan Henderson_2026": {
@@ -4651,13 +4649,13 @@
     }
   },
   "Richard Lovelady_2026": {
-    "timestamp": "2026-06-08T23:17:48.371020",
+    "timestamp": "2026-09-23T22:24:34.949651",
     "data": {
-      "k_pct": 0.1963,
-      "k_per_9": 5.3,
-      "xk_pct": 0.1963,
-      "k_pct_raw": 0.1875,
-      "ip": 32.0,
+      "k_pct": 0.2141,
+      "k_per_9": 5.78,
+      "xk_pct": 0.2141,
+      "k_pct_raw": 0.2308,
+      "ip": 4.3,
       "source": "savant"
     }
   },
@@ -7666,6 +7664,26 @@
       "k_pct_raw": 0.234,
       "ip": 15.7,
       "source": "savant"
+    }
+  },
+  "CJ Van Eyk_2026": {
+    "timestamp": "2026-09-23T22:25:08.858671",
+    "data": {
+      "k_pct": 0.224,
+      "k_per_9": 6.05,
+      "xk_pct": 0.224,
+      "source": "prior_season"
+    }
+  },
+  "prior_stats_669438_2025": {
+    "timestamp": "2026-09-23T22:25:22.251964",
+    "data": {
+      "k_pct": 0.2378,
+      "bb_pct": 0.0595,
+      "swstr_pct": 0.1241,
+      "csw_pct": 0.2869,
+      "ip_per_start": 4.9,
+      "pitches_per_start": 25.0
     }
   }
 }
