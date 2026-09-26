@@ -77,13 +77,13 @@
     }
   },
   "Aaron Nola_2026": {
-    "timestamp": "2026-09-23T00:16:41.167645",
+    "timestamp": "2026-09-26T22:04:01.251287",
     "data": {
-      "k_pct": 0.2386,
-      "k_per_9": 6.44,
-      "xk_pct": 0.2386,
-      "k_pct_raw": 0.2385,
-      "ip": 79.7,
+      "k_pct": 0.2464,
+      "k_per_9": 6.65,
+      "xk_pct": 0.2464,
+      "k_pct_raw": 0.2481,
+      "ip": 87.3,
       "source": "savant"
     }
   },
@@ -4048,13 +4048,13 @@
     }
   },
   "Griffin Jax_2026": {
-    "timestamp": "2026-09-20T00:03:32.222244",
+    "timestamp": "2026-09-26T22:03:58.831540",
     "data": {
-      "k_pct": 0.3016,
-      "k_per_9": 8.14,
-      "xk_pct": 0.3016,
-      "k_pct_raw": 0.2773,
-      "ip": 39.7,
+      "k_pct": 0.3068,
+      "k_per_9": 8.28,
+      "xk_pct": 0.3068,
+      "k_pct_raw": 0.2845,
+      "ip": 38.7,
       "source": "savant"
     }
   },
@@ -7726,6 +7726,26 @@
       "k_pct_raw": 0.2464,
       "ip": 23.0,
       "source": "savant"
+    }
+  },
+  "Kirby Yates_2026": {
+    "timestamp": "2026-09-26T22:03:26.011887",
+    "data": {
+      "k_pct": 0.2764,
+      "k_per_9": 7.46,
+      "xk_pct": 0.2764,
+      "k_pct_raw": 0.2687,
+      "ip": 22.3,
+      "source": "savant"
+    }
+  },
+  "Justin Verlander_2026": {
+    "timestamp": "2026-09-26T22:03:28.595477",
+    "data": {
+      "k_pct": 0.2066,
+      "k_per_9": 5.58,
+      "xk_pct": 0.2066,
+      "source": "prior_season"
     }
   }
 }
