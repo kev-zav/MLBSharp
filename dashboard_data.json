@@ -1,78 +1,7 @@
 {
   "date": "September 30, 2026",
-  "generated_at": "08:24 PM",
+  "generated_at": "11:07 PM",
   "all_pitchers": [
-    {
-      "pitcher_name": "Hunter Brown",
-      "pitcher_id": 686613,
-      "pitcher_team": "HOU",
-      "pitcher_hand": "R",
-      "opp_team": "CWS",
-      "venue": "Daikin Park",
-      "projected_ks": 7.1,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.111,
-      "csw_pct": 0.2963,
-      "k_pct": 0.2983,
-      "opp_k_pct": 0.2317,
-      "opp_chase": 0.2812,
-      "days_rest": 5,
-      "rolling_k_3": 8.0,
-      "rolling_k_5": 7.6,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "09/03",
-          "k": 7,
-          "pitches": 101
-        },
-        {
-          "date": "09/09",
-          "k": 7,
-          "pitches": 90
-        },
-        {
-          "date": "09/15",
-          "k": 10,
-          "pitches": 91
-        },
-        {
-          "date": "09/20",
-          "k": 10,
-          "pitches": 98
-        },
-        {
-          "date": "09/25",
-          "k": 4,
-          "pitches": 100
-        }
-      ],
-      "k_distribution": {
-        "0": 0.003,
-        "1": 0.0084,
-        "2": 0.0204,
-        "3": 0.0421,
-        "4": 0.0743,
-        "5": 0.112,
-        "6": 0.1442,
-        "7": 0.1586,
-        "8": 0.1489,
-        "9": 0.1194,
-        "10+": 0.1687
-      }
-    },
     {
       "pitcher_name": "Kevin Gausman",
       "pitcher_id": 592332,
@@ -80,13 +9,13 @@
       "pitcher_hand": "R",
       "opp_team": "SD",
       "venue": "Petco Park",
-      "projected_ks": 6.4,
-      "lineup_confirmed": false,
+      "projected_ks": 6.3,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1463,
       "csw_pct": 0.3281,
       "k_pct": 0.2555,
-      "opp_k_pct": 0.2129,
-      "opp_chase": 0.3104,
+      "opp_k_pct": 0.2101,
+      "opp_chase": 0.3083,
       "days_rest": 7,
       "rolling_k_3": 6.33,
       "rolling_k_5": 7.0,
@@ -131,17 +60,88 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0063,
-        "1": 0.0159,
-        "2": 0.0345,
-        "3": 0.0638,
-        "4": 0.1009,
-        "5": 0.1362,
-        "6": 0.157,
-        "7": 0.1545,
-        "8": 0.1299,
-        "9": 0.0932,
-        "10+": 0.1078
+        "0": 0.0069,
+        "1": 0.0173,
+        "2": 0.0369,
+        "3": 0.0673,
+        "4": 0.1047,
+        "5": 0.1392,
+        "6": 0.1579,
+        "7": 0.153,
+        "8": 0.1266,
+        "9": 0.0894,
+        "10+": 0.1006
+      }
+    },
+    {
+      "pitcher_name": "Cristopher S\u00e1nchez",
+      "pitcher_id": 650911,
+      "pitcher_team": "PHI",
+      "pitcher_hand": "L",
+      "opp_team": "ATL",
+      "venue": "Truist Park",
+      "projected_ks": 5.9,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.1365,
+      "csw_pct": 0.2967,
+      "k_pct": 0.2647,
+      "opp_k_pct": 0.2083,
+      "opp_chase": 0.3394,
+      "days_rest": 5,
+      "rolling_k_3": 7.0,
+      "rolling_k_5": 5.8,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "09/04",
+          "k": 5,
+          "pitches": 108
+        },
+        {
+          "date": "09/09",
+          "k": 3,
+          "pitches": 81
+        },
+        {
+          "date": "09/15",
+          "k": 5,
+          "pitches": 98
+        },
+        {
+          "date": "09/20",
+          "k": 6,
+          "pitches": 98
+        },
+        {
+          "date": "09/25",
+          "k": 10,
+          "pitches": 100
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0102,
+        "1": 0.0239,
+        "2": 0.048,
+        "3": 0.082,
+        "4": 0.1198,
+        "5": 0.1495,
+        "6": 0.1592,
+        "7": 0.1448,
+        "8": 0.1125,
+        "9": 0.0746,
+        "10+": 0.0753
       }
     },
     {
@@ -151,13 +151,13 @@
       "pitcher_hand": "R",
       "opp_team": "CHC",
       "venue": "Petco Park",
-      "projected_ks": 5.9,
-      "lineup_confirmed": false,
+      "projected_ks": 5.8,
+      "lineup_confirmed": true,
       "swstr_pct": 0.09986666666666666,
       "csw_pct": 0.2957,
       "k_pct": 0.2522,
-      "opp_k_pct": 0.2134,
-      "opp_chase": 0.2799,
+      "opp_k_pct": 0.2086,
+      "opp_chase": 0.2793,
       "days_rest": 6,
       "rolling_k_3": 5.33,
       "rolling_k_5": 4.5,
@@ -197,17 +197,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0102,
-        "1": 0.0239,
-        "2": 0.048,
-        "3": 0.082,
-        "4": 0.1198,
-        "5": 0.1495,
-        "6": 0.1592,
-        "7": 0.1448,
-        "8": 0.1125,
-        "9": 0.0746,
-        "10+": 0.0753
+        "0": 0.0112,
+        "1": 0.0259,
+        "2": 0.051,
+        "3": 0.0859,
+        "4": 0.1235,
+        "5": 0.1516,
+        "6": 0.159,
+        "7": 0.1423,
+        "8": 0.1088,
+        "9": 0.0711,
+        "10+": 0.0698
       }
     },
     {
@@ -282,77 +282,6 @@
       }
     },
     {
-      "pitcher_name": "Sean Burke",
-      "pitcher_id": 680732,
-      "pitcher_team": "CWS",
-      "pitcher_hand": "R",
-      "opp_team": "HOU",
-      "venue": "Daikin Park",
-      "projected_ks": 4.8,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.1227,
-      "csw_pct": 0.2739,
-      "k_pct": 0.2134,
-      "opp_k_pct": 0.2075,
-      "opp_chase": 0.3237,
-      "days_rest": 5,
-      "rolling_k_3": 5.33,
-      "rolling_k_5": 4.8,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "09/01",
-          "k": 6,
-          "pitches": 104
-        },
-        {
-          "date": "09/08",
-          "k": 2,
-          "pitches": 48
-        },
-        {
-          "date": "09/14",
-          "k": 4,
-          "pitches": 94
-        },
-        {
-          "date": "09/19",
-          "k": 5,
-          "pitches": 98
-        },
-        {
-          "date": "09/25",
-          "k": 7,
-          "pitches": 89
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0262,
-        "1": 0.0516,
-        "2": 0.0868,
-        "3": 0.1249,
-        "4": 0.1533,
-        "5": 0.1608,
-        "6": 0.1439,
-        "7": 0.1101,
-        "8": 0.0719,
-        "9": 0.0401,
-        "10+": 0.0306
-      }
-    },
-    {
       "pitcher_name": "Sonny Gray",
       "pitcher_id": 543243,
       "pitcher_team": "BOS",
@@ -424,5 +353,5 @@
       }
     }
   ],
-  "total_pitchers": 6
+  "total_pitchers": 5
 }
