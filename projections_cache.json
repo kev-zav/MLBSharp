@@ -119110,6 +119110,34 @@
       "rolling_k_3": 6.0,
       "rolling_k_5": 5.2,
       "pitch_mix_adj": 1.0
+    },
+    {
+      "date": "2026-10-01",
+      "pitcher_name": "Ray Kerr",
+      "pitcher_id": 678061,
+      "pitcher_hand": "L",
+      "pitcher_team": "ATL",
+      "opp_team": "PHI",
+      "venue": "Truist Park",
+      "game_id": 849844,
+      "projected_ks": 4.3,
+      "projected_ks_manual": 4.3,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.1226,
+      "csw_pct": 0.2877,
+      "k_pct": 0.194,
+      "opp_k_pct": 0.2185,
+      "opp_chase": 0.325,
+      "park_factor": 100,
+      "ump_adjustment": 1.0,
+      "ump_name": "Unknown",
+      "weather_temp": 72,
+      "weather_wind": 5,
+      "days_rest": 6,
+      "last_outing_pitches": 32,
+      "rolling_k_3": 1.67,
+      "rolling_k_5": 1.2,
+      "pitch_mix_adj": 1.0
     }
   ]
 }

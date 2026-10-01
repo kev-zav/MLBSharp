@@ -1,95 +1,24 @@
 {
   "date": "October 01, 2026",
-  "generated_at": "01:12 AM",
+  "generated_at": "08:41 PM",
   "all_pitchers": [
     {
-      "pitcher_name": "Gerrit Cole",
-      "pitcher_id": 543037,
-      "pitcher_team": "NYY",
-      "pitcher_hand": "R",
-      "opp_team": "BOS",
-      "venue": "Yankee Stadium",
-      "projected_ks": 4.9,
-      "lineup_confirmed": false,
-      "swstr_pct": 0.1005,
-      "csw_pct": 0.2878,
-      "k_pct": 0.2374,
-      "opp_k_pct": 0.2178,
-      "opp_chase": 0.3204,
-      "days_rest": 8,
-      "rolling_k_3": 6.0,
-      "rolling_k_5": 5.2,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "09/01",
-          "k": 5,
-          "pitches": 90
-        },
-        {
-          "date": "09/06",
-          "k": 3,
-          "pitches": 84
-        },
-        {
-          "date": "09/12",
-          "k": 4,
-          "pitches": 77
-        },
-        {
-          "date": "09/18",
-          "k": 6,
-          "pitches": 90
-        },
-        {
-          "date": "09/23",
-          "k": 8,
-          "pitches": 105
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0242,
-        "1": 0.0485,
-        "2": 0.0829,
-        "3": 0.1211,
-        "4": 0.151,
-        "5": 0.1609,
-        "6": 0.1463,
-        "7": 0.1137,
-        "8": 0.0754,
-        "9": 0.0427,
-        "10+": 0.0334
-      }
-    },
-    {
-      "pitcher_name": "Ranger Suarez",
-      "pitcher_id": 624133,
-      "pitcher_team": "BOS",
+      "pitcher_name": "Ray Kerr",
+      "pitcher_id": 678061,
+      "pitcher_team": "ATL",
       "pitcher_hand": "L",
-      "opp_team": "NYY",
-      "venue": "Yankee Stadium",
-      "projected_ks": 4.8,
+      "opp_team": "PHI",
+      "venue": "Truist Park",
+      "projected_ks": 4.3,
       "lineup_confirmed": false,
-      "swstr_pct": 0.0741,
-      "csw_pct": 0.2716,
-      "k_pct": 0.1852,
-      "opp_k_pct": 0.2401,
-      "opp_chase": 0.2995,
-      "days_rest": 7,
-      "rolling_k_3": 6.0,
-      "rolling_k_5": 4.6,
+      "swstr_pct": 0.1226,
+      "csw_pct": 0.2877,
+      "k_pct": 0.194,
+      "opp_k_pct": 0.2185,
+      "opp_chase": 0.325,
+      "days_rest": 6,
+      "rolling_k_3": 1.67,
+      "rolling_k_5": 1.2,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -105,45 +34,45 @@
       },
       "last5": [
         {
-          "date": "08/30",
-          "k": 2,
-          "pitches": 101
+          "date": "09/05",
+          "k": 1,
+          "pitches": 35
         },
         {
-          "date": "09/04",
-          "k": 3,
-          "pitches": 91
+          "date": "09/09",
+          "k": 0,
+          "pitches": 9
         },
         {
-          "date": "09/12",
-          "k": 8,
-          "pitches": 96
+          "date": "09/13",
+          "k": 4,
+          "pitches": 34
         },
         {
-          "date": "09/18",
-          "k": 5,
-          "pitches": 98
+          "date": "09/20",
+          "k": 1,
+          "pitches": 17
         },
         {
-          "date": "09/24",
-          "k": 5,
-          "pitches": 86
+          "date": "09/25",
+          "k": 0,
+          "pitches": 32
         }
       ],
       "k_distribution": {
-        "0": 0.0262,
-        "1": 0.0516,
-        "2": 0.0868,
-        "3": 0.1249,
-        "4": 0.1533,
-        "5": 0.1608,
-        "6": 0.1439,
-        "7": 0.1101,
-        "8": 0.0719,
-        "9": 0.0401,
-        "10+": 0.0306
+        "0": 0.0379,
+        "1": 0.069,
+        "2": 0.1074,
+        "3": 0.1426,
+        "4": 0.1618,
+        "5": 0.1568,
+        "6": 0.1297,
+        "7": 0.0917,
+        "8": 0.0553,
+        "9": 0.0285,
+        "10+": 0.0193
       }
     }
   ],
-  "total_pitchers": 2
+  "total_pitchers": 1
 }
