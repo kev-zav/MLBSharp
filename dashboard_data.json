@@ -1,7 +1,78 @@
 {
   "date": "October 03, 2026",
-  "generated_at": "01:03 AM",
+  "generated_at": "06:54 PM",
   "all_pitchers": [
+    {
+      "pitcher_name": "Tarik Skubal",
+      "pitcher_id": 669373,
+      "pitcher_team": "LAD",
+      "pitcher_hand": "L",
+      "opp_team": "ATL",
+      "venue": "UNIQLO Field at Dodger Stadium",
+      "projected_ks": 6.9,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.1622,
+      "csw_pct": 0.3114,
+      "k_pct": 0.2918,
+      "opp_k_pct": 0.2071,
+      "opp_chase": 0.3422,
+      "days_rest": 8,
+      "rolling_k_3": 7.33,
+      "rolling_k_5": 6.6,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "09/03",
+          "k": 6,
+          "pitches": 102
+        },
+        {
+          "date": "09/08",
+          "k": 5,
+          "pitches": 94
+        },
+        {
+          "date": "09/14",
+          "k": 9,
+          "pitches": 90
+        },
+        {
+          "date": "09/19",
+          "k": 3,
+          "pitches": 86
+        },
+        {
+          "date": "09/25",
+          "k": 10,
+          "pitches": 75
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0037,
+        "1": 0.0102,
+        "2": 0.0239,
+        "3": 0.0478,
+        "4": 0.0817,
+        "5": 0.1194,
+        "6": 0.1489,
+        "7": 0.1586,
+        "8": 0.1443,
+        "9": 0.1121,
+        "10+": 0.1494
+      }
+    },
     {
       "pitcher_name": "Jacob Misiorowski",
       "pitcher_id": 694819,
@@ -74,90 +145,19 @@
       }
     },
     {
-      "pitcher_name": "Parker Messick",
-      "pitcher_id": 800048,
-      "pitcher_team": "CLE",
-      "pitcher_hand": "L",
-      "opp_team": "CWS",
-      "venue": "Progressive Field",
-      "projected_ks": 5.8,
-      "lineup_confirmed": false,
-      "swstr_pct": 0.1255,
-      "csw_pct": 0.2713,
-      "k_pct": 0.2709,
-      "opp_k_pct": 0.2379,
-      "opp_chase": 0.2877,
-      "days_rest": 6,
-      "rolling_k_3": 5.0,
-      "rolling_k_5": 6.4,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "09/05",
-          "k": 12,
-          "pitches": 103
-        },
-        {
-          "date": "09/11",
-          "k": 5,
-          "pitches": 95
-        },
-        {
-          "date": "09/16",
-          "k": 8,
-          "pitches": 86
-        },
-        {
-          "date": "09/22",
-          "k": 5,
-          "pitches": 96
-        },
-        {
-          "date": "09/27",
-          "k": 2,
-          "pitches": 64
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0112,
-        "1": 0.0259,
-        "2": 0.051,
-        "3": 0.0859,
-        "4": 0.1235,
-        "5": 0.1516,
-        "6": 0.159,
-        "7": 0.1423,
-        "8": 0.1088,
-        "9": 0.0711,
-        "10+": 0.0698
-      }
-    },
-    {
       "pitcher_name": "Drew Rasmussen",
       "pitcher_id": 656876,
       "pitcher_team": "TB",
       "pitcher_hand": "R",
       "opp_team": "NYY",
       "venue": "Tropicana Field",
-      "projected_ks": 5.0,
-      "lineup_confirmed": false,
+      "projected_ks": 4.9,
+      "lineup_confirmed": true,
       "swstr_pct": 0.119,
       "csw_pct": 0.2964,
       "k_pct": 0.2414,
-      "opp_k_pct": 0.2445,
-      "opp_chase": 0.2892,
+      "opp_k_pct": 0.2284,
+      "opp_chase": 0.2864,
       "days_rest": 11,
       "rolling_k_3": 6.0,
       "rolling_k_5": 6.2,
@@ -202,17 +202,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0223,
-        "1": 0.0455,
-        "2": 0.079,
-        "3": 0.1172,
-        "4": 0.1486,
-        "5": 0.1608,
-        "6": 0.1486,
-        "7": 0.1172,
-        "8": 0.079,
-        "9": 0.0455,
-        "10+": 0.0364
+        "0": 0.0242,
+        "1": 0.0485,
+        "2": 0.0829,
+        "3": 0.1211,
+        "4": 0.151,
+        "5": 0.1609,
+        "6": 0.1463,
+        "7": 0.1137,
+        "8": 0.0754,
+        "9": 0.0427,
+        "10+": 0.0334
       }
     },
     {
@@ -222,13 +222,13 @@
       "pitcher_hand": "R",
       "opp_team": "TB",
       "venue": "Tropicana Field",
-      "projected_ks": 4.5,
-      "lineup_confirmed": false,
+      "projected_ks": 4.6,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1042,
       "csw_pct": 0.2948,
-      "k_pct": 0.2374,
-      "opp_k_pct": 0.1906,
-      "opp_chase": 0.3036,
+      "k_pct": 0.239,
+      "opp_k_pct": 0.1779,
+      "opp_chase": 0.2994,
       "days_rest": 10,
       "rolling_k_3": 6.0,
       "rolling_k_5": 5.2,
@@ -273,88 +273,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0328,
-        "1": 0.0617,
-        "2": 0.099,
-        "3": 0.1358,
-        "4": 0.159,
-        "5": 0.159,
-        "6": 0.1358,
-        "7": 0.099,
-        "8": 0.0617,
-        "9": 0.0328,
-        "10+": 0.0233
-      }
-    },
-    {
-      "pitcher_name": "Hagen Smith",
-      "pitcher_id": 696146,
-      "pitcher_team": "CWS",
-      "pitcher_hand": "L",
-      "opp_team": "CLE",
-      "venue": "Progressive Field",
-      "projected_ks": 3.9,
-      "lineup_confirmed": false,
-      "swstr_pct": 0.1535,
-      "csw_pct": 0.3539,
-      "k_pct": 0.3202,
-      "opp_k_pct": 0.2142,
-      "opp_chase": 0.279,
-      "days_rest": 8,
-      "rolling_k_3": 1.33,
-      "rolling_k_5": 1.8,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "09/16",
-          "k": 2,
-          "pitches": 30
-        },
-        {
-          "date": "09/18",
-          "k": 3,
-          "pitches": 20
-        },
-        {
-          "date": "09/20",
-          "k": 1,
-          "pitches": 18
-        },
-        {
-          "date": "09/23",
-          "k": 2,
-          "pitches": 33
-        },
-        {
-          "date": "09/25",
-          "k": 1,
-          "pitches": 18
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0497,
-        "1": 0.0849,
-        "2": 0.1241,
-        "3": 0.1548,
-        "4": 0.1649,
-        "5": 0.15,
-        "6": 0.1165,
-        "7": 0.0773,
-        "8": 0.0438,
-        "9": 0.0212,
-        "10+": 0.0131
+        "0": 0.0305,
+        "1": 0.0582,
+        "2": 0.0949,
+        "3": 0.1322,
+        "4": 0.1573,
+        "5": 0.1598,
+        "6": 0.1387,
+        "7": 0.1027,
+        "8": 0.065,
+        "9": 0.0351,
+        "10+": 0.0255
       }
     },
     {
@@ -426,6 +355,77 @@
         "8": 0.0411,
         "9": 0.0196,
         "10+": 0.0118
+      }
+    },
+    {
+      "pitcher_name": "Dylan Dodd",
+      "pitcher_id": 689266,
+      "pitcher_team": "ATL",
+      "pitcher_hand": "L",
+      "opp_team": "LAD",
+      "venue": "UNIQLO Field at Dodger Stadium",
+      "projected_ks": 2.3,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.1934,
+      "csw_pct": 0.2798,
+      "k_pct": 0.2313,
+      "opp_k_pct": 0.2091,
+      "opp_chase": 0.2857,
+      "days_rest": 7,
+      "rolling_k_3": 2.0,
+      "rolling_k_5": 1.4,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "09/06",
+          "k": 1,
+          "pitches": 22
+        },
+        {
+          "date": "09/16",
+          "k": 0,
+          "pitches": 4
+        },
+        {
+          "date": "09/20",
+          "k": 3,
+          "pitches": 13
+        },
+        {
+          "date": "09/24",
+          "k": 3,
+          "pitches": 21
+        },
+        {
+          "date": "09/26",
+          "k": 0,
+          "pitches": 25
+        }
+      ],
+      "k_distribution": {
+        "0": 0.1202,
+        "1": 0.1597,
+        "2": 0.1812,
+        "3": 0.1756,
+        "4": 0.1453,
+        "5": 0.1026,
+        "6": 0.0619,
+        "7": 0.0319,
+        "8": 0.014,
+        "9": 0.0053,
+        "10+": 0.0023
       }
     }
   ],
