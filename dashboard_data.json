@@ -1,6 +1,6 @@
 {
   "date": "October 04, 2026",
-  "generated_at": "12:27 AM",
+  "generated_at": "06:54 PM",
   "all_pitchers": [
     {
       "pitcher_name": "Logan Henderson",
@@ -9,13 +9,13 @@
       "pitcher_hand": "R",
       "opp_team": "SD",
       "venue": "American Family Field",
-      "projected_ks": 5.9,
-      "lineup_confirmed": false,
+      "projected_ks": 6.0,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1273,
       "csw_pct": 0.2694,
       "k_pct": 0.2833,
-      "opp_k_pct": 0.2128,
-      "opp_chase": 0.3105,
+      "opp_k_pct": 0.2103,
+      "opp_chase": 0.3104,
       "days_rest": 11,
       "rolling_k_3": 5.67,
       "rolling_k_5": 6.2,
@@ -60,17 +60,159 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0102,
-        "1": 0.0239,
-        "2": 0.048,
-        "3": 0.082,
-        "4": 0.1198,
-        "5": 0.1495,
-        "6": 0.1592,
-        "7": 0.1448,
-        "8": 0.1125,
-        "9": 0.0746,
-        "10+": 0.0753
+        "0": 0.0093,
+        "1": 0.0221,
+        "2": 0.045,
+        "3": 0.0783,
+        "4": 0.1161,
+        "5": 0.1472,
+        "6": 0.1593,
+        "7": 0.1472,
+        "8": 0.1161,
+        "9": 0.0783,
+        "10+": 0.0811
+      }
+    },
+    {
+      "pitcher_name": "Blake Snell",
+      "pitcher_id": 605483,
+      "pitcher_team": "LAD",
+      "pitcher_hand": "L",
+      "opp_team": "ATL",
+      "venue": "UNIQLO Field at Dodger Stadium",
+      "projected_ks": 6.0,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.1684,
+      "csw_pct": 0.3218,
+      "k_pct": 0.3096,
+      "opp_k_pct": 0.2147,
+      "opp_chase": 0.3422,
+      "days_rest": 8,
+      "rolling_k_3": 4.0,
+      "rolling_k_5": 5.8,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "08/29",
+          "k": 10,
+          "pitches": 99
+        },
+        {
+          "date": "09/04",
+          "k": 7,
+          "pitches": 101
+        },
+        {
+          "date": "09/11",
+          "k": 8,
+          "pitches": 101
+        },
+        {
+          "date": "09/16",
+          "k": 1,
+          "pitches": 19
+        },
+        {
+          "date": "09/26",
+          "k": 3,
+          "pitches": 77
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0093,
+        "1": 0.0221,
+        "2": 0.045,
+        "3": 0.0783,
+        "4": 0.1161,
+        "5": 0.1472,
+        "6": 0.1593,
+        "7": 0.1472,
+        "8": 0.1161,
+        "9": 0.0783,
+        "10+": 0.0811
+      }
+    },
+    {
+      "pitcher_name": "Ray Kerr",
+      "pitcher_id": 678061,
+      "pitcher_team": "ATL",
+      "pitcher_hand": "L",
+      "opp_team": "LAD",
+      "venue": "UNIQLO Field at Dodger Stadium",
+      "projected_ks": 4.3,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.1226,
+      "csw_pct": 0.2877,
+      "k_pct": 0.194,
+      "opp_k_pct": 0.2036,
+      "opp_chase": 0.2821,
+      "days_rest": 9,
+      "rolling_k_3": 1.67,
+      "rolling_k_5": 1.2,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "09/05",
+          "k": 1,
+          "pitches": 35
+        },
+        {
+          "date": "09/09",
+          "k": 0,
+          "pitches": 9
+        },
+        {
+          "date": "09/13",
+          "k": 4,
+          "pitches": 34
+        },
+        {
+          "date": "09/20",
+          "k": 1,
+          "pitches": 17
+        },
+        {
+          "date": "09/25",
+          "k": 0,
+          "pitches": 32
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0379,
+        "1": 0.069,
+        "2": 0.1074,
+        "3": 0.1426,
+        "4": 0.1618,
+        "5": 0.1568,
+        "6": 0.1297,
+        "7": 0.0917,
+        "8": 0.0553,
+        "9": 0.0285,
+        "10+": 0.0193
       }
     },
     {
@@ -80,13 +222,13 @@
       "pitcher_hand": "R",
       "opp_team": "MIL",
       "venue": "American Family Field",
-      "projected_ks": 4.2,
-      "lineup_confirmed": false,
+      "projected_ks": 4.1,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1051,
       "csw_pct": 0.2715,
       "k_pct": 0.2144,
-      "opp_k_pct": 0.2208,
-      "opp_chase": 0.2683,
+      "opp_k_pct": 0.2266,
+      "opp_chase": 0.2774,
       "days_rest": 12,
       "rolling_k_3": 5.0,
       "rolling_k_5": 4.8,
@@ -131,19 +273,19 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0406,
-        "1": 0.0728,
-        "2": 0.1115,
-        "3": 0.1459,
-        "4": 0.1629,
-        "5": 0.1554,
-        "6": 0.1265,
-        "7": 0.088,
-        "8": 0.0523,
-        "9": 0.0265,
-        "10+": 0.0175
+        "0": 0.0435,
+        "1": 0.0768,
+        "2": 0.1157,
+        "3": 0.149,
+        "4": 0.1638,
+        "5": 0.1538,
+        "6": 0.1233,
+        "7": 0.0844,
+        "8": 0.0493,
+        "9": 0.0246,
+        "10+": 0.0159
       }
     }
   ],
-  "total_pitchers": 2
+  "total_pitchers": 4
 }
