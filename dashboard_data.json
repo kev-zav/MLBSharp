@@ -1,78 +1,7 @@
 {
   "date": "October 05, 2026",
-  "generated_at": "12:41 AM",
+  "generated_at": "10:15 PM",
   "all_pitchers": [
-    {
-      "pitcher_name": "Gavin Williams",
-      "pitcher_id": 668909,
-      "pitcher_team": "CLE",
-      "pitcher_hand": "R",
-      "opp_team": "CWS",
-      "venue": "Progressive Field",
-      "projected_ks": 6.9,
-      "lineup_confirmed": false,
-      "swstr_pct": 0.1738,
-      "csw_pct": 0.3475,
-      "k_pct": 0.3261,
-      "opp_k_pct": 0.2394,
-      "opp_chase": 0.2854,
-      "days_rest": 10,
-      "rolling_k_3": 6.67,
-      "rolling_k_5": 8.6,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "09/01",
-          "k": 13,
-          "pitches": 97
-        },
-        {
-          "date": "09/06",
-          "k": 10,
-          "pitches": 99
-        },
-        {
-          "date": "09/14",
-          "k": 7,
-          "pitches": 113
-        },
-        {
-          "date": "09/20",
-          "k": 9,
-          "pitches": 89
-        },
-        {
-          "date": "09/25",
-          "k": 4,
-          "pitches": 74
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0037,
-        "1": 0.0102,
-        "2": 0.0239,
-        "3": 0.0478,
-        "4": 0.0817,
-        "5": 0.1194,
-        "6": 0.1489,
-        "7": 0.1586,
-        "8": 0.1443,
-        "9": 0.1121,
-        "10+": 0.1494
-      }
-    },
     {
       "pitcher_name": "Cam Schlittler",
       "pitcher_id": 693645,
@@ -80,13 +9,13 @@
       "pitcher_hand": "R",
       "opp_team": "TB",
       "venue": "Tropicana Field",
-      "projected_ks": 6.4,
-      "lineup_confirmed": false,
+      "projected_ks": 6.2,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1639,
       "csw_pct": 0.3219,
       "k_pct": 0.3176,
-      "opp_k_pct": 0.1906,
-      "opp_chase": 0.3037,
+      "opp_k_pct": 0.1779,
+      "opp_chase": 0.2987,
       "days_rest": 11,
       "rolling_k_3": 6.33,
       "rolling_k_5": 7.6,
@@ -131,17 +60,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0063,
-        "1": 0.0159,
-        "2": 0.0345,
-        "3": 0.0638,
-        "4": 0.1009,
-        "5": 0.1362,
-        "6": 0.157,
-        "7": 0.1545,
-        "8": 0.1299,
-        "9": 0.0932,
-        "10+": 0.1078
+        "0": 0.0077,
+        "1": 0.0188,
+        "2": 0.0395,
+        "3": 0.0709,
+        "4": 0.1086,
+        "5": 0.142,
+        "6": 0.1586,
+        "7": 0.1513,
+        "8": 0.1232,
+        "9": 0.0857,
+        "10+": 0.0938
       }
     },
     {
@@ -151,13 +80,13 @@
       "pitcher_hand": "R",
       "opp_team": "NYY",
       "venue": "Tropicana Field",
-      "projected_ks": 5.0,
-      "lineup_confirmed": false,
+      "projected_ks": 4.8,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1283,
       "csw_pct": 0.2491,
       "k_pct": 0.2198,
-      "opp_k_pct": 0.2456,
-      "opp_chase": 0.2894,
+      "opp_k_pct": 0.2295,
+      "opp_chase": 0.2881,
       "days_rest": 10,
       "rolling_k_3": 4.67,
       "rolling_k_5": 4.6,
@@ -202,90 +131,19 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0223,
-        "1": 0.0455,
-        "2": 0.079,
-        "3": 0.1172,
-        "4": 0.1486,
+        "0": 0.0262,
+        "1": 0.0516,
+        "2": 0.0868,
+        "3": 0.1249,
+        "4": 0.1533,
         "5": 0.1608,
-        "6": 0.1486,
-        "7": 0.1172,
-        "8": 0.079,
-        "9": 0.0455,
-        "10+": 0.0364
-      }
-    },
-    {
-      "pitcher_name": "Anthony Kay",
-      "pitcher_id": 641743,
-      "pitcher_team": "CWS",
-      "pitcher_hand": "L",
-      "opp_team": "CLE",
-      "venue": "Progressive Field",
-      "projected_ks": 4.2,
-      "lineup_confirmed": false,
-      "swstr_pct": 0.1162,
-      "csw_pct": 0.2695,
-      "k_pct": 0.1893,
-      "opp_k_pct": 0.2143,
-      "opp_chase": 0.2787,
-      "days_rest": 8,
-      "rolling_k_3": 3.67,
-      "rolling_k_5": 3.2,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "09/05",
-          "k": 3,
-          "pitches": 82
-        },
-        {
-          "date": "09/11",
-          "k": 2,
-          "pitches": 67
-        },
-        {
-          "date": "09/16",
-          "k": 3,
-          "pitches": 66
-        },
-        {
-          "date": "09/22",
-          "k": 4,
-          "pitches": 65
-        },
-        {
-          "date": "09/27",
-          "k": 4,
-          "pitches": 78
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0406,
-        "1": 0.0728,
-        "2": 0.1115,
-        "3": 0.1459,
-        "4": 0.1629,
-        "5": 0.1554,
-        "6": 0.1265,
-        "7": 0.088,
-        "8": 0.0523,
-        "9": 0.0265,
-        "10+": 0.0175
+        "6": 0.1439,
+        "7": 0.1101,
+        "8": 0.0719,
+        "9": 0.0401,
+        "10+": 0.0306
       }
     }
   ],
-  "total_pitchers": 4
+  "total_pitchers": 2
 }
