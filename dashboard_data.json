@@ -1,24 +1,24 @@
 {
-  "date": "October 04, 2026",
-  "generated_at": "10:24 PM",
+  "date": "October 05, 2026",
+  "generated_at": "12:41 AM",
   "all_pitchers": [
     {
-      "pitcher_name": "Blake Snell",
-      "pitcher_id": 605483,
-      "pitcher_team": "LAD",
-      "pitcher_hand": "L",
-      "opp_team": "ATL",
-      "venue": "UNIQLO Field at Dodger Stadium",
-      "projected_ks": 6.1,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.1684,
-      "csw_pct": 0.3218,
-      "k_pct": 0.3096,
-      "opp_k_pct": 0.2082,
-      "opp_chase": 0.3322,
-      "days_rest": 8,
-      "rolling_k_3": 4.0,
-      "rolling_k_5": 5.8,
+      "pitcher_name": "Gavin Williams",
+      "pitcher_id": 668909,
+      "pitcher_team": "CLE",
+      "pitcher_hand": "R",
+      "opp_team": "CWS",
+      "venue": "Progressive Field",
+      "projected_ks": 6.9,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.1738,
+      "csw_pct": 0.3475,
+      "k_pct": 0.3261,
+      "opp_k_pct": 0.2394,
+      "opp_chase": 0.2854,
+      "days_rest": 10,
+      "rolling_k_3": 6.67,
+      "rolling_k_5": 8.6,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -34,62 +34,204 @@
       },
       "last5": [
         {
-          "date": "08/29",
+          "date": "09/01",
+          "k": 13,
+          "pitches": 97
+        },
+        {
+          "date": "09/06",
           "k": 10,
           "pitches": 99
         },
         {
-          "date": "09/04",
+          "date": "09/14",
           "k": 7,
-          "pitches": 101
+          "pitches": 113
         },
         {
-          "date": "09/11",
-          "k": 8,
-          "pitches": 101
+          "date": "09/20",
+          "k": 9,
+          "pitches": 89
         },
         {
-          "date": "09/16",
-          "k": 1,
-          "pitches": 19
-        },
-        {
-          "date": "09/26",
-          "k": 3,
-          "pitches": 77
+          "date": "09/25",
+          "k": 4,
+          "pitches": 74
         }
       ],
       "k_distribution": {
-        "0": 0.0084,
-        "1": 0.0204,
-        "2": 0.0422,
-        "3": 0.0745,
-        "4": 0.1124,
-        "5": 0.1447,
-        "6": 0.1591,
-        "7": 0.1493,
-        "8": 0.1197,
-        "9": 0.082,
-        "10+": 0.0873
+        "0": 0.0037,
+        "1": 0.0102,
+        "2": 0.0239,
+        "3": 0.0478,
+        "4": 0.0817,
+        "5": 0.1194,
+        "6": 0.1489,
+        "7": 0.1586,
+        "8": 0.1443,
+        "9": 0.1121,
+        "10+": 0.1494
       }
     },
     {
-      "pitcher_name": "Ray Kerr",
-      "pitcher_id": 678061,
-      "pitcher_team": "ATL",
+      "pitcher_name": "Cam Schlittler",
+      "pitcher_id": 693645,
+      "pitcher_team": "NYY",
+      "pitcher_hand": "R",
+      "opp_team": "TB",
+      "venue": "Tropicana Field",
+      "projected_ks": 6.4,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.1639,
+      "csw_pct": 0.3219,
+      "k_pct": 0.3176,
+      "opp_k_pct": 0.1906,
+      "opp_chase": 0.3037,
+      "days_rest": 11,
+      "rolling_k_3": 6.33,
+      "rolling_k_5": 7.6,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 0,
+        "description": "Dome / Retractable Roof",
+        "adjustment": 1.0,
+        "indoor": true
+      },
+      "last5": [
+        {
+          "date": "09/02",
+          "k": 9,
+          "pitches": 99
+        },
+        {
+          "date": "09/08",
+          "k": 10,
+          "pitches": 96
+        },
+        {
+          "date": "09/13",
+          "k": 8,
+          "pitches": 94
+        },
+        {
+          "date": "09/19",
+          "k": 6,
+          "pitches": 98
+        },
+        {
+          "date": "09/24",
+          "k": 5,
+          "pitches": 70
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0063,
+        "1": 0.0159,
+        "2": 0.0345,
+        "3": 0.0638,
+        "4": 0.1009,
+        "5": 0.1362,
+        "6": 0.157,
+        "7": 0.1545,
+        "8": 0.1299,
+        "9": 0.0932,
+        "10+": 0.1078
+      }
+    },
+    {
+      "pitcher_name": "Freddy Peralta",
+      "pitcher_id": 642547,
+      "pitcher_team": "TB",
+      "pitcher_hand": "R",
+      "opp_team": "NYY",
+      "venue": "Tropicana Field",
+      "projected_ks": 5.0,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.1283,
+      "csw_pct": 0.2491,
+      "k_pct": 0.2198,
+      "opp_k_pct": 0.2456,
+      "opp_chase": 0.2894,
+      "days_rest": 10,
+      "rolling_k_3": 4.67,
+      "rolling_k_5": 4.6,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 0,
+        "description": "Dome / Retractable Roof",
+        "adjustment": 1.0,
+        "indoor": true
+      },
+      "last5": [
+        {
+          "date": "09/01",
+          "k": 7,
+          "pitches": 74
+        },
+        {
+          "date": "09/08",
+          "k": 2,
+          "pitches": 92
+        },
+        {
+          "date": "09/13",
+          "k": 4,
+          "pitches": 86
+        },
+        {
+          "date": "09/19",
+          "k": 6,
+          "pitches": 97
+        },
+        {
+          "date": "09/25",
+          "k": 4,
+          "pitches": 93
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0223,
+        "1": 0.0455,
+        "2": 0.079,
+        "3": 0.1172,
+        "4": 0.1486,
+        "5": 0.1608,
+        "6": 0.1486,
+        "7": 0.1172,
+        "8": 0.079,
+        "9": 0.0455,
+        "10+": 0.0364
+      }
+    },
+    {
+      "pitcher_name": "Anthony Kay",
+      "pitcher_id": 641743,
+      "pitcher_team": "CWS",
       "pitcher_hand": "L",
-      "opp_team": "LAD",
-      "venue": "UNIQLO Field at Dodger Stadium",
-      "projected_ks": 4.0,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.1226,
-      "csw_pct": 0.2877,
-      "k_pct": 0.194,
-      "opp_k_pct": 0.2004,
-      "opp_chase": 0.283,
-      "days_rest": 9,
-      "rolling_k_3": 1.67,
-      "rolling_k_5": 1.2,
+      "opp_team": "CLE",
+      "venue": "Progressive Field",
+      "projected_ks": 4.2,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.1162,
+      "csw_pct": 0.2695,
+      "k_pct": 0.1893,
+      "opp_k_pct": 0.2143,
+      "opp_chase": 0.2787,
+      "days_rest": 8,
+      "rolling_k_3": 3.67,
+      "rolling_k_5": 3.2,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -106,44 +248,44 @@
       "last5": [
         {
           "date": "09/05",
-          "k": 1,
-          "pitches": 35
+          "k": 3,
+          "pitches": 82
         },
         {
-          "date": "09/09",
-          "k": 0,
-          "pitches": 9
+          "date": "09/11",
+          "k": 2,
+          "pitches": 67
         },
         {
-          "date": "09/13",
+          "date": "09/16",
+          "k": 3,
+          "pitches": 66
+        },
+        {
+          "date": "09/22",
           "k": 4,
-          "pitches": 34
+          "pitches": 65
         },
         {
-          "date": "09/20",
-          "k": 1,
-          "pitches": 17
-        },
-        {
-          "date": "09/25",
-          "k": 0,
-          "pitches": 32
+          "date": "09/27",
+          "k": 4,
+          "pitches": 78
         }
       ],
       "k_distribution": {
-        "0": 0.0465,
-        "1": 0.0808,
-        "2": 0.1199,
-        "3": 0.1519,
-        "4": 0.1644,
-        "5": 0.1519,
-        "6": 0.1199,
-        "7": 0.0808,
-        "8": 0.0465,
-        "9": 0.0228,
-        "10+": 0.0144
+        "0": 0.0406,
+        "1": 0.0728,
+        "2": 0.1115,
+        "3": 0.1459,
+        "4": 0.1629,
+        "5": 0.1554,
+        "6": 0.1265,
+        "7": 0.088,
+        "8": 0.0523,
+        "9": 0.0265,
+        "10+": 0.0175
       }
     }
   ],
-  "total_pitchers": 2
+  "total_pitchers": 4
 }
