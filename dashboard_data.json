@@ -1,24 +1,24 @@
 {
-  "date": "October 05, 2026",
-  "generated_at": "10:15 PM",
+  "date": "October 06, 2026",
+  "generated_at": "12:54 AM",
   "all_pitchers": [
     {
-      "pitcher_name": "Cam Schlittler",
-      "pitcher_id": 693645,
-      "pitcher_team": "NYY",
-      "pitcher_hand": "R",
-      "opp_team": "TB",
-      "venue": "Tropicana Field",
-      "projected_ks": 6.2,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.1639,
-      "csw_pct": 0.3219,
-      "k_pct": 0.3176,
-      "opp_k_pct": 0.1779,
-      "opp_chase": 0.2987,
-      "days_rest": 11,
-      "rolling_k_3": 6.33,
-      "rolling_k_5": 7.6,
+      "pitcher_name": "Chris Sale",
+      "pitcher_id": 519242,
+      "pitcher_team": "ATL",
+      "pitcher_hand": "L",
+      "opp_team": "LAD",
+      "venue": "Truist Park",
+      "projected_ks": 7.1,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.1525,
+      "csw_pct": 0.3263,
+      "k_pct": 0.3204,
+      "opp_k_pct": 0.2045,
+      "opp_chase": 0.2823,
+      "days_rest": 13,
+      "rolling_k_3": 7.67,
+      "rolling_k_5": 8.0,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -27,69 +27,69 @@
       },
       "weather": {
         "temp_f": 72,
-        "wind_mph": 0,
-        "description": "Dome / Retractable Roof",
+        "wind_mph": 5,
+        "description": "Unknown",
         "adjustment": 1.0,
-        "indoor": true
+        "indoor": false
       },
       "last5": [
         {
-          "date": "09/02",
-          "k": 9,
-          "pitches": 99
-        },
-        {
-          "date": "09/08",
-          "k": 10,
-          "pitches": 96
-        },
-        {
-          "date": "09/13",
-          "k": 8,
+          "date": "08/21",
+          "k": 6,
           "pitches": 94
         },
         {
-          "date": "09/19",
-          "k": 6,
-          "pitches": 98
+          "date": "08/27",
+          "k": 11,
+          "pitches": 109
         },
         {
-          "date": "09/24",
-          "k": 5,
-          "pitches": 70
+          "date": "09/04",
+          "k": 7,
+          "pitches": 103
+        },
+        {
+          "date": "09/11",
+          "k": 6,
+          "pitches": 94
+        },
+        {
+          "date": "09/23",
+          "k": 10,
+          "pitches": 97
         }
       ],
       "k_distribution": {
-        "0": 0.0077,
-        "1": 0.0188,
-        "2": 0.0395,
-        "3": 0.0709,
-        "4": 0.1086,
-        "5": 0.142,
-        "6": 0.1586,
-        "7": 0.1513,
-        "8": 0.1232,
-        "9": 0.0857,
-        "10+": 0.0938
+        "0": 0.003,
+        "1": 0.0084,
+        "2": 0.0204,
+        "3": 0.0421,
+        "4": 0.0743,
+        "5": 0.112,
+        "6": 0.1442,
+        "7": 0.1586,
+        "8": 0.1489,
+        "9": 0.1194,
+        "10+": 0.1687
       }
     },
     {
-      "pitcher_name": "Freddy Peralta",
-      "pitcher_id": 642547,
-      "pitcher_team": "TB",
+      "pitcher_name": "Yoshinobu Yamamoto",
+      "pitcher_id": 808967,
+      "pitcher_team": "LAD",
       "pitcher_hand": "R",
-      "opp_team": "NYY",
-      "venue": "Tropicana Field",
-      "projected_ks": 4.8,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.1283,
-      "csw_pct": 0.2491,
-      "k_pct": 0.2198,
-      "opp_k_pct": 0.2295,
-      "opp_chase": 0.2881,
-      "days_rest": 10,
-      "rolling_k_3": 4.67,
-      "rolling_k_5": 4.6,
+      "opp_team": "ATL",
+      "venue": "Truist Park",
+      "projected_ks": 7.0,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.1607,
+      "csw_pct": 0.329,
+      "k_pct": 0.3031,
+      "opp_k_pct": 0.2161,
+      "opp_chase": 0.3303,
+      "days_rest": 13,
+      "rolling_k_3": 7.0,
+      "rolling_k_5": 7.4,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -98,52 +98,189 @@
       },
       "weather": {
         "temp_f": 72,
-        "wind_mph": 0,
-        "description": "Dome / Retractable Roof",
+        "wind_mph": 5,
+        "description": "Unknown",
         "adjustment": 1.0,
-        "indoor": true
+        "indoor": false
       },
       "last5": [
         {
-          "date": "09/01",
-          "k": 7,
-          "pitches": 74
+          "date": "08/27",
+          "k": 8,
+          "pitches": 105
         },
         {
-          "date": "09/08",
-          "k": 2,
-          "pitches": 92
-        },
-        {
-          "date": "09/13",
-          "k": 4,
-          "pitches": 86
-        },
-        {
-          "date": "09/19",
-          "k": 6,
-          "pitches": 97
-        },
-        {
-          "date": "09/25",
-          "k": 4,
+          "date": "09/02",
+          "k": 8,
           "pitches": 93
+        },
+        {
+          "date": "09/09",
+          "k": 10,
+          "pitches": 90
+        },
+        {
+          "date": "09/15",
+          "k": 7,
+          "pitches": 91
+        },
+        {
+          "date": "09/23",
+          "k": 4,
+          "pitches": 88
         }
       ],
       "k_distribution": {
-        "0": 0.0262,
-        "1": 0.0516,
-        "2": 0.0868,
-        "3": 0.1249,
-        "4": 0.1533,
-        "5": 0.1608,
-        "6": 0.1439,
-        "7": 0.1101,
-        "8": 0.0719,
-        "9": 0.0401,
-        "10+": 0.0306
+        "0": 0.0033,
+        "1": 0.0093,
+        "2": 0.0221,
+        "3": 0.0449,
+        "4": 0.078,
+        "5": 0.1158,
+        "6": 0.1467,
+        "7": 0.1587,
+        "8": 0.1467,
+        "9": 0.1158,
+        "10+": 0.1589
+      }
+    },
+    {
+      "pitcher_name": "Nick Pivetta",
+      "pitcher_id": 601713,
+      "pitcher_team": "SD",
+      "pitcher_hand": "R",
+      "opp_team": "MIL",
+      "venue": "Petco Park",
+      "projected_ks": 6.0,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.09986666666666666,
+      "csw_pct": 0.2957,
+      "k_pct": 0.2522,
+      "opp_k_pct": 0.221,
+      "opp_chase": 0.2679,
+      "days_rest": 12,
+      "rolling_k_3": 5.33,
+      "rolling_k_5": 4.5,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "09/07",
+          "k": 2,
+          "pitches": 63
+        },
+        {
+          "date": "09/13",
+          "k": 5,
+          "pitches": 69
+        },
+        {
+          "date": "09/18",
+          "k": 4,
+          "pitches": 76
+        },
+        {
+          "date": "09/24",
+          "k": 7,
+          "pitches": 87
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0093,
+        "1": 0.0221,
+        "2": 0.045,
+        "3": 0.0783,
+        "4": 0.1161,
+        "5": 0.1472,
+        "6": 0.1593,
+        "7": 0.1472,
+        "8": 0.1161,
+        "9": 0.0783,
+        "10+": 0.0811
+      }
+    },
+    {
+      "pitcher_name": "Dustin May",
+      "pitcher_id": 669160,
+      "pitcher_team": "MIL",
+      "pitcher_hand": "R",
+      "opp_team": "SD",
+      "venue": "Petco Park",
+      "projected_ks": 4.4,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.1234,
+      "csw_pct": 0.2704,
+      "k_pct": 0.2293,
+      "opp_k_pct": 0.2125,
+      "opp_chase": 0.3101,
+      "days_rest": 10,
+      "rolling_k_3": 3.67,
+      "rolling_k_5": 4.4,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "09/05",
+          "k": 5,
+          "pitches": 56
+        },
+        {
+          "date": "09/11",
+          "k": 6,
+          "pitches": 84
+        },
+        {
+          "date": "09/18",
+          "k": 4,
+          "pitches": 70
+        },
+        {
+          "date": "09/22",
+          "k": 2,
+          "pitches": 36
+        },
+        {
+          "date": "09/26",
+          "k": 5,
+          "pitches": 58
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0353,
+        "1": 0.0653,
+        "2": 0.1032,
+        "3": 0.1393,
+        "4": 0.1605,
+        "5": 0.158,
+        "6": 0.1328,
+        "7": 0.0954,
+        "8": 0.0584,
+        "9": 0.0306,
+        "10+": 0.0212
       }
     }
   ],
-  "total_pitchers": 2
+  "total_pitchers": 4
 }
