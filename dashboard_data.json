@@ -1,78 +1,7 @@
 {
   "date": "October 07, 2026",
-  "generated_at": "08:54 PM",
+  "generated_at": "11:39 PM",
   "all_pitchers": [
-    {
-      "pitcher_name": "Tyler Glasnow",
-      "pitcher_id": 607192,
-      "pitcher_team": "LAD",
-      "pitcher_hand": "R",
-      "opp_team": "ATL",
-      "venue": "Truist Park",
-      "projected_ks": 7.4,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.1431,
-      "csw_pct": 0.346,
-      "k_pct": 0.3319,
-      "opp_k_pct": 0.2186,
-      "opp_chase": 0.3298,
-      "days_rest": 13,
-      "rolling_k_3": 9.33,
-      "rolling_k_5": 8.4,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "08/30",
-          "k": 6,
-          "pitches": 86
-        },
-        {
-          "date": "09/05",
-          "k": 8,
-          "pitches": 96
-        },
-        {
-          "date": "09/12",
-          "k": 7,
-          "pitches": 91
-        },
-        {
-          "date": "09/18",
-          "k": 10,
-          "pitches": 99
-        },
-        {
-          "date": "09/24",
-          "k": 11,
-          "pitches": 91
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0021,
-        "1": 0.0063,
-        "2": 0.0159,
-        "3": 0.0344,
-        "4": 0.0637,
-        "5": 0.1007,
-        "6": 0.1359,
-        "7": 0.1567,
-        "8": 0.1542,
-        "9": 0.1296,
-        "10+": 0.2006
-      }
-    },
     {
       "pitcher_name": "Max Fried",
       "pitcher_id": 608331,
@@ -145,6 +74,148 @@
       }
     },
     {
+      "pitcher_name": "Daniel Espino",
+      "pitcher_id": 682982,
+      "pitcher_team": "CLE",
+      "pitcher_hand": "R",
+      "opp_team": "CWS",
+      "venue": "Rate Field",
+      "projected_ks": 4.9,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.1699,
+      "csw_pct": 0.3268,
+      "k_pct": 0.2698,
+      "opp_k_pct": 0.2343,
+      "opp_chase": 0.2742,
+      "days_rest": 12,
+      "rolling_k_3": 1.33,
+      "rolling_k_5": 1.4,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "09/12",
+          "k": 2,
+          "pitches": 26
+        },
+        {
+          "date": "09/14",
+          "k": 1,
+          "pitches": 12
+        },
+        {
+          "date": "09/18",
+          "k": 1,
+          "pitches": 27
+        },
+        {
+          "date": "09/24",
+          "k": 2,
+          "pitches": 17
+        },
+        {
+          "date": "09/25",
+          "k": 1,
+          "pitches": 13
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0242,
+        "1": 0.0485,
+        "2": 0.0829,
+        "3": 0.1211,
+        "4": 0.151,
+        "5": 0.1609,
+        "6": 0.1463,
+        "7": 0.1137,
+        "8": 0.0754,
+        "9": 0.0427,
+        "10+": 0.0334
+      }
+    },
+    {
+      "pitcher_name": "Sean Newcomb",
+      "pitcher_id": 656794,
+      "pitcher_team": "CWS",
+      "pitcher_hand": "L",
+      "opp_team": "CLE",
+      "venue": "Rate Field",
+      "projected_ks": 3.8,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.1072,
+      "csw_pct": 0.269,
+      "k_pct": 0.2272,
+      "opp_k_pct": 0.195,
+      "opp_chase": 0.2988,
+      "days_rest": 10,
+      "rolling_k_3": 2.0,
+      "rolling_k_5": 1.2,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "09/16",
+          "k": 0,
+          "pitches": 20
+        },
+        {
+          "date": "09/18",
+          "k": 0,
+          "pitches": 24
+        },
+        {
+          "date": "09/23",
+          "k": 2,
+          "pitches": 25
+        },
+        {
+          "date": "09/26",
+          "k": 2,
+          "pitches": 22
+        },
+        {
+          "date": "09/27",
+          "k": 2,
+          "pitches": 17
+        }
+      ],
+      "k_distribution": {
+        "0": 0.053,
+        "1": 0.0892,
+        "2": 0.1282,
+        "3": 0.1574,
+        "4": 0.1651,
+        "5": 0.1478,
+        "6": 0.113,
+        "7": 0.0738,
+        "8": 0.0411,
+        "9": 0.0196,
+        "10+": 0.0118
+      }
+    },
+    {
       "pitcher_name": "Nick Martinez",
       "pitcher_id": 607259,
       "pitcher_team": "TB",
@@ -214,7 +285,149 @@
         "9": 0.0196,
         "10+": 0.0118
       }
+    },
+    {
+      "pitcher_name": "Robert Gasser",
+      "pitcher_id": 688107,
+      "pitcher_team": "MIL",
+      "pitcher_hand": "L",
+      "opp_team": "SD",
+      "venue": "Petco Park",
+      "projected_ks": 3.8,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.1041,
+      "csw_pct": 0.2811,
+      "k_pct": 0.2137,
+      "opp_k_pct": 0.2142,
+      "opp_chase": 0.2976,
+      "days_rest": 12,
+      "rolling_k_3": 5.33,
+      "rolling_k_5": 5.0,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "09/01",
+          "k": 4,
+          "pitches": 76
+        },
+        {
+          "date": "09/07",
+          "k": 5,
+          "pitches": 83
+        },
+        {
+          "date": "09/13",
+          "k": 5,
+          "pitches": 89
+        },
+        {
+          "date": "09/19",
+          "k": 2,
+          "pitches": 107
+        },
+        {
+          "date": "09/25",
+          "k": 9,
+          "pitches": 87
+        }
+      ],
+      "k_distribution": {
+        "0": 0.053,
+        "1": 0.0892,
+        "2": 0.1282,
+        "3": 0.1574,
+        "4": 0.1651,
+        "5": 0.1478,
+        "6": 0.113,
+        "7": 0.0738,
+        "8": 0.0411,
+        "9": 0.0196,
+        "10+": 0.0118
+      }
+    },
+    {
+      "pitcher_name": "Walker Buehler",
+      "pitcher_id": 621111,
+      "pitcher_team": "SD",
+      "pitcher_hand": "R",
+      "opp_team": "MIL",
+      "venue": "Petco Park",
+      "projected_ks": 3.7,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.0751,
+      "csw_pct": 0.2473,
+      "k_pct": 0.1902,
+      "opp_k_pct": 0.2263,
+      "opp_chase": 0.2822,
+      "days_rest": 11,
+      "rolling_k_3": 3.33,
+      "rolling_k_5": 4.0,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "09/04",
+          "k": 6,
+          "pitches": 76
+        },
+        {
+          "date": "09/09",
+          "k": 4,
+          "pitches": 60
+        },
+        {
+          "date": "09/15",
+          "k": 1,
+          "pitches": 92
+        },
+        {
+          "date": "09/20",
+          "k": 6,
+          "pitches": 89
+        },
+        {
+          "date": "09/26",
+          "k": 3,
+          "pitches": 73
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0564,
+        "1": 0.0935,
+        "2": 0.1323,
+        "3": 0.1599,
+        "4": 0.1651,
+        "5": 0.1455,
+        "6": 0.1095,
+        "7": 0.0704,
+        "8": 0.0386,
+        "9": 0.0181,
+        "10+": 0.0107
+      }
     }
   ],
-  "total_pitchers": 3
+  "total_pitchers": 6
 }
