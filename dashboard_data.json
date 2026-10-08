@@ -1,24 +1,24 @@
 {
   "date": "October 08, 2026",
-  "generated_at": "01:47 AM",
+  "generated_at": "08:55 PM",
   "all_pitchers": [
     {
-      "pitcher_name": "Carlos Rod\u00f3n",
-      "pitcher_id": 607074,
-      "pitcher_team": "NYY",
+      "pitcher_name": "Parker Messick",
+      "pitcher_id": 800048,
+      "pitcher_team": "CLE",
       "pitcher_hand": "L",
-      "opp_team": "TB",
-      "venue": "Yankee Stadium",
-      "projected_ks": 6.2,
-      "lineup_confirmed": false,
-      "swstr_pct": 0.1492,
-      "csw_pct": 0.2967,
-      "k_pct": 0.2637,
-      "opp_k_pct": 0.184,
-      "opp_chase": 0.311,
-      "days_rest": 16,
-      "rolling_k_3": 7.0,
-      "rolling_k_5": 6.6,
+      "opp_team": "CWS",
+      "venue": "Rate Field",
+      "projected_ks": 5.9,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.1222,
+      "csw_pct": 0.2716,
+      "k_pct": 0.2672,
+      "opp_k_pct": 0.2389,
+      "opp_chase": 0.291,
+      "days_rest": 11,
+      "rolling_k_3": 5.0,
+      "rolling_k_5": 6.4,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -34,62 +34,62 @@
       },
       "last5": [
         {
-          "date": "08/29",
-          "k": 5,
-          "pitches": 88
-        },
-        {
           "date": "09/05",
-          "k": 7,
-          "pitches": 89
+          "k": 12,
+          "pitches": 103
         },
         {
           "date": "09/11",
-          "k": 8,
-          "pitches": 93
+          "k": 5,
+          "pitches": 95
         },
         {
           "date": "09/16",
-          "k": 5,
-          "pitches": 102
+          "k": 8,
+          "pitches": 86
         },
         {
           "date": "09/22",
-          "k": 8,
+          "k": 5,
           "pitches": 96
+        },
+        {
+          "date": "09/27",
+          "k": 2,
+          "pitches": 64
         }
       ],
       "k_distribution": {
-        "0": 0.0077,
-        "1": 0.0188,
-        "2": 0.0395,
-        "3": 0.0709,
-        "4": 0.1086,
-        "5": 0.142,
-        "6": 0.1586,
-        "7": 0.1513,
-        "8": 0.1232,
-        "9": 0.0857,
-        "10+": 0.0938
+        "0": 0.0102,
+        "1": 0.0239,
+        "2": 0.048,
+        "3": 0.082,
+        "4": 0.1198,
+        "5": 0.1495,
+        "6": 0.1592,
+        "7": 0.1448,
+        "8": 0.1125,
+        "9": 0.0746,
+        "10+": 0.0753
       }
     },
     {
-      "pitcher_name": "Drew Rasmussen",
-      "pitcher_id": 656876,
-      "pitcher_team": "TB",
-      "pitcher_hand": "R",
-      "opp_team": "NYY",
-      "venue": "Yankee Stadium",
-      "projected_ks": 4.9,
-      "lineup_confirmed": false,
-      "swstr_pct": 0.1175,
-      "csw_pct": 0.2951,
-      "k_pct": 0.2324,
-      "opp_k_pct": 0.2451,
-      "opp_chase": 0.2894,
-      "days_rest": 16,
-      "rolling_k_3": 6.0,
-      "rolling_k_5": 6.2,
+      "pitcher_name": "Hagen Smith",
+      "pitcher_id": 696146,
+      "pitcher_team": "CWS",
+      "pitcher_hand": "L",
+      "opp_team": "CLE",
+      "venue": "Rate Field",
+      "projected_ks": 4.0,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.1535,
+      "csw_pct": 0.3539,
+      "k_pct": 0.3202,
+      "opp_k_pct": 0.1887,
+      "opp_chase": 0.2948,
+      "days_rest": 13,
+      "rolling_k_3": 1.33,
+      "rolling_k_5": 1.8,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -105,43 +105,43 @@
       },
       "last5": [
         {
-          "date": "08/30",
-          "k": 6,
-          "pitches": 97
+          "date": "09/16",
+          "k": 2,
+          "pitches": 30
         },
         {
-          "date": "09/05",
-          "k": 7,
-          "pitches": 97
-        },
-        {
-          "date": "09/11",
-          "k": 4,
-          "pitches": 92
-        },
-        {
-          "date": "09/17",
+          "date": "09/18",
           "k": 3,
-          "pitches": 76
+          "pitches": 20
         },
         {
-          "date": "09/22",
-          "k": 11,
-          "pitches": 114
+          "date": "09/20",
+          "k": 1,
+          "pitches": 18
+        },
+        {
+          "date": "09/23",
+          "k": 2,
+          "pitches": 33
+        },
+        {
+          "date": "09/25",
+          "k": 1,
+          "pitches": 18
         }
       ],
       "k_distribution": {
-        "0": 0.0242,
-        "1": 0.0485,
-        "2": 0.0829,
-        "3": 0.1211,
-        "4": 0.151,
-        "5": 0.1609,
-        "6": 0.1463,
-        "7": 0.1137,
-        "8": 0.0754,
-        "9": 0.0427,
-        "10+": 0.0334
+        "0": 0.0465,
+        "1": 0.0808,
+        "2": 0.1199,
+        "3": 0.1519,
+        "4": 0.1644,
+        "5": 0.1519,
+        "6": 0.1199,
+        "7": 0.0808,
+        "8": 0.0465,
+        "9": 0.0228,
+        "10+": 0.0144
       }
     }
   ],
