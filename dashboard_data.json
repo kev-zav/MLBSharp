@@ -1,24 +1,24 @@
 {
-  "date": "October 08, 2026",
-  "generated_at": "11:50 PM",
+  "date": "October 10, 2026",
+  "generated_at": "01:39 AM",
   "all_pitchers": [
     {
-      "pitcher_name": "Parker Messick",
-      "pitcher_id": 800048,
+      "pitcher_name": "Gavin Williams",
+      "pitcher_id": 668909,
       "pitcher_team": "CLE",
-      "pitcher_hand": "L",
+      "pitcher_hand": "R",
       "opp_team": "CWS",
-      "venue": "Rate Field",
-      "projected_ks": 5.9,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.1222,
-      "csw_pct": 0.2716,
-      "k_pct": 0.2672,
-      "opp_k_pct": 0.2389,
-      "opp_chase": 0.291,
-      "days_rest": 11,
-      "rolling_k_3": 5.0,
-      "rolling_k_5": 6.4,
+      "venue": "Progressive Field",
+      "projected_ks": 6.9,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.1789,
+      "csw_pct": 0.3564,
+      "k_pct": 0.3269,
+      "opp_k_pct": 0.2414,
+      "opp_chase": 0.2862,
+      "days_rest": 15,
+      "rolling_k_3": 6.67,
+      "rolling_k_5": 8.6,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -34,114 +34,114 @@
       },
       "last5": [
         {
-          "date": "09/05",
-          "k": 12,
-          "pitches": 103
+          "date": "09/01",
+          "k": 13,
+          "pitches": 97
         },
         {
-          "date": "09/11",
-          "k": 5,
-          "pitches": 95
+          "date": "09/06",
+          "k": 10,
+          "pitches": 99
         },
         {
-          "date": "09/16",
-          "k": 8,
-          "pitches": 86
-        },
-        {
-          "date": "09/22",
-          "k": 5,
-          "pitches": 96
-        },
-        {
-          "date": "09/27",
-          "k": 2,
-          "pitches": 64
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0102,
-        "1": 0.0239,
-        "2": 0.048,
-        "3": 0.082,
-        "4": 0.1198,
-        "5": 0.1495,
-        "6": 0.1592,
-        "7": 0.1448,
-        "8": 0.1125,
-        "9": 0.0746,
-        "10+": 0.0753
-      }
-    },
-    {
-      "pitcher_name": "Hagen Smith",
-      "pitcher_id": 696146,
-      "pitcher_team": "CWS",
-      "pitcher_hand": "L",
-      "opp_team": "CLE",
-      "venue": "Rate Field",
-      "projected_ks": 4.0,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.1535,
-      "csw_pct": 0.3539,
-      "k_pct": 0.3202,
-      "opp_k_pct": 0.1887,
-      "opp_chase": 0.2948,
-      "days_rest": 13,
-      "rolling_k_3": 1.33,
-      "rolling_k_5": 1.8,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "09/16",
-          "k": 2,
-          "pitches": 30
-        },
-        {
-          "date": "09/18",
-          "k": 3,
-          "pitches": 20
+          "date": "09/14",
+          "k": 7,
+          "pitches": 113
         },
         {
           "date": "09/20",
-          "k": 1,
-          "pitches": 18
-        },
-        {
-          "date": "09/23",
-          "k": 2,
-          "pitches": 33
+          "k": 9,
+          "pitches": 89
         },
         {
           "date": "09/25",
-          "k": 1,
-          "pitches": 18
+          "k": 4,
+          "pitches": 74
         }
       ],
       "k_distribution": {
-        "0": 0.0465,
-        "1": 0.0808,
-        "2": 0.1199,
-        "3": 0.1519,
-        "4": 0.1644,
-        "5": 0.1519,
-        "6": 0.1199,
-        "7": 0.0808,
-        "8": 0.0465,
-        "9": 0.0228,
-        "10+": 0.0144
+        "0": 0.0037,
+        "1": 0.0102,
+        "2": 0.0239,
+        "3": 0.0478,
+        "4": 0.0817,
+        "5": 0.1194,
+        "6": 0.1489,
+        "7": 0.1586,
+        "8": 0.1443,
+        "9": 0.1121,
+        "10+": 0.1494
+      }
+    },
+    {
+      "pitcher_name": "Sean Burke",
+      "pitcher_id": 680732,
+      "pitcher_team": "CWS",
+      "pitcher_hand": "R",
+      "opp_team": "CLE",
+      "venue": "Progressive Field",
+      "projected_ks": 4.5,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.1255,
+      "csw_pct": 0.2788,
+      "k_pct": 0.2144,
+      "opp_k_pct": 0.2041,
+      "opp_chase": 0.2889,
+      "days_rest": 15,
+      "rolling_k_3": 5.33,
+      "rolling_k_5": 4.8,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "09/01",
+          "k": 6,
+          "pitches": 104
+        },
+        {
+          "date": "09/08",
+          "k": 2,
+          "pitches": 48
+        },
+        {
+          "date": "09/14",
+          "k": 4,
+          "pitches": 94
+        },
+        {
+          "date": "09/19",
+          "k": 5,
+          "pitches": 98
+        },
+        {
+          "date": "09/25",
+          "k": 7,
+          "pitches": 89
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0328,
+        "1": 0.0617,
+        "2": 0.099,
+        "3": 0.1358,
+        "4": 0.159,
+        "5": 0.159,
+        "6": 0.1358,
+        "7": 0.099,
+        "8": 0.0617,
+        "9": 0.0328,
+        "10+": 0.0233
       }
     }
   ],
