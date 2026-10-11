@@ -1,6 +1,6 @@
 {
   "date": "October 11, 2026",
-  "generated_at": "07:49 PM",
+  "generated_at": "11:01 PM",
   "all_pitchers": [
     {
       "pitcher_name": "Tarik Skubal",
@@ -9,13 +9,13 @@
       "pitcher_hand": "L",
       "opp_team": "MIL",
       "venue": "American Family Field",
-      "projected_ks": 6.8,
-      "lineup_confirmed": false,
+      "projected_ks": 6.7,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1651,
       "csw_pct": 0.3221,
       "k_pct": 0.2961,
-      "opp_k_pct": 0.2107,
-      "opp_chase": 0.2728,
+      "opp_k_pct": 0.215,
+      "opp_chase": 0.2722,
       "days_rest": 16,
       "rolling_k_3": 7.33,
       "rolling_k_5": 6.6,
@@ -60,17 +60,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0041,
-        "1": 0.0112,
-        "2": 0.0258,
-        "3": 0.0508,
-        "4": 0.0855,
-        "5": 0.123,
-        "6": 0.151,
-        "7": 0.1583,
-        "8": 0.1417,
-        "9": 0.1084,
-        "10+": 0.1403
+        "0": 0.0046,
+        "1": 0.0122,
+        "2": 0.0278,
+        "3": 0.0539,
+        "4": 0.0893,
+        "5": 0.1264,
+        "6": 0.1528,
+        "7": 0.1577,
+        "8": 0.139,
+        "9": 0.1046,
+        "10+": 0.1316
       }
     },
     {
@@ -80,13 +80,13 @@
       "pitcher_hand": "R",
       "opp_team": "LAD",
       "venue": "American Family Field",
-      "projected_ks": 6.2,
-      "lineup_confirmed": false,
+      "projected_ks": 6.0,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1692,
       "csw_pct": 0.3097,
       "k_pct": 0.3003,
-      "opp_k_pct": 0.2056,
-      "opp_chase": 0.2708,
+      "opp_k_pct": 0.2052,
+      "opp_chase": 0.2788,
       "days_rest": 14,
       "rolling_k_3": 5.33,
       "rolling_k_5": 6.0,
@@ -131,17 +131,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0077,
-        "1": 0.0188,
-        "2": 0.0395,
-        "3": 0.0709,
-        "4": 0.1086,
-        "5": 0.142,
-        "6": 0.1586,
-        "7": 0.1513,
-        "8": 0.1232,
-        "9": 0.0857,
-        "10+": 0.0938
+        "0": 0.0093,
+        "1": 0.0221,
+        "2": 0.045,
+        "3": 0.0783,
+        "4": 0.1161,
+        "5": 0.1472,
+        "6": 0.1593,
+        "7": 0.1472,
+        "8": 0.1161,
+        "9": 0.0783,
+        "10+": 0.0811
       }
     }
   ],
