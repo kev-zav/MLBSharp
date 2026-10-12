@@ -1,149 +1,7 @@
 {
   "date": "October 12, 2026",
-  "generated_at": "01:11 AM",
+  "generated_at": "10:39 PM",
   "all_pitchers": [
-    {
-      "pitcher_name": "Yoshinobu Yamamoto",
-      "pitcher_id": 808967,
-      "pitcher_team": "LAD",
-      "pitcher_hand": "R",
-      "opp_team": "MIL",
-      "venue": "American Family Field",
-      "projected_ks": 6.7,
-      "lineup_confirmed": false,
-      "swstr_pct": 0.1729,
-      "csw_pct": 0.3383,
-      "k_pct": 0.3086,
-      "opp_k_pct": 0.2201,
-      "opp_chase": 0.2684,
-      "days_rest": 19,
-      "rolling_k_3": 7.0,
-      "rolling_k_5": 7.4,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 0,
-        "description": "Dome / Retractable Roof",
-        "adjustment": 1.0,
-        "indoor": true
-      },
-      "last5": [
-        {
-          "date": "08/27",
-          "k": 8,
-          "pitches": 105
-        },
-        {
-          "date": "09/02",
-          "k": 8,
-          "pitches": 93
-        },
-        {
-          "date": "09/09",
-          "k": 10,
-          "pitches": 90
-        },
-        {
-          "date": "09/15",
-          "k": 7,
-          "pitches": 91
-        },
-        {
-          "date": "09/23",
-          "k": 4,
-          "pitches": 88
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0046,
-        "1": 0.0122,
-        "2": 0.0278,
-        "3": 0.0539,
-        "4": 0.0893,
-        "5": 0.1264,
-        "6": 0.1528,
-        "7": 0.1577,
-        "8": 0.139,
-        "9": 0.1046,
-        "10+": 0.1316
-      }
-    },
-    {
-      "pitcher_name": "Logan Henderson",
-      "pitcher_id": 701656,
-      "pitcher_team": "MIL",
-      "pitcher_hand": "R",
-      "opp_team": "LAD",
-      "venue": "American Family Field",
-      "projected_ks": 5.7,
-      "lineup_confirmed": false,
-      "swstr_pct": 0.1282,
-      "csw_pct": 0.2702,
-      "k_pct": 0.2824,
-      "opp_k_pct": 0.2056,
-      "opp_chase": 0.2708,
-      "days_rest": 19,
-      "rolling_k_3": 5.67,
-      "rolling_k_5": 6.2,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 0,
-        "description": "Dome / Retractable Roof",
-        "adjustment": 1.0,
-        "indoor": true
-      },
-      "last5": [
-        {
-          "date": "08/28",
-          "k": 7,
-          "pitches": 91
-        },
-        {
-          "date": "09/03",
-          "k": 7,
-          "pitches": 102
-        },
-        {
-          "date": "09/09",
-          "k": 6,
-          "pitches": 95
-        },
-        {
-          "date": "09/16",
-          "k": 8,
-          "pitches": 87
-        },
-        {
-          "date": "09/23",
-          "k": 3,
-          "pitches": 87
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0123,
-        "1": 0.0279,
-        "2": 0.0541,
-        "3": 0.0897,
-        "4": 0.127,
-        "5": 0.1535,
-        "6": 0.1584,
-        "7": 0.1396,
-        "8": 0.1051,
-        "9": 0.0675,
-        "10+": 0.0647
-      }
-    },
     {
       "pitcher_name": "Foster Griffin",
       "pitcher_id": 656492,
@@ -151,13 +9,13 @@
       "pitcher_hand": "L",
       "opp_team": "TB",
       "venue": "Tropicana Field",
-      "projected_ks": 4.9,
-      "lineup_confirmed": false,
+      "projected_ks": 4.6,
+      "lineup_confirmed": true,
       "swstr_pct": 0.102,
       "csw_pct": 0.2747,
       "k_pct": 0.216,
-      "opp_k_pct": 0.1854,
-      "opp_chase": 0.3117,
+      "opp_k_pct": 0.2006,
+      "opp_chase": 0.3034,
       "days_rest": 19,
       "rolling_k_3": 5.33,
       "rolling_k_5": 4.6,
@@ -202,17 +60,17 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0242,
-        "1": 0.0485,
-        "2": 0.0829,
-        "3": 0.1211,
-        "4": 0.151,
-        "5": 0.1609,
-        "6": 0.1463,
-        "7": 0.1137,
-        "8": 0.0754,
-        "9": 0.0427,
-        "10+": 0.0334
+        "0": 0.0305,
+        "1": 0.0582,
+        "2": 0.0949,
+        "3": 0.1322,
+        "4": 0.1573,
+        "5": 0.1598,
+        "6": 0.1387,
+        "7": 0.1027,
+        "8": 0.065,
+        "9": 0.0351,
+        "10+": 0.0255
       }
     },
     {
@@ -222,13 +80,13 @@
       "pitcher_hand": "R",
       "opp_team": "CLE",
       "venue": "Tropicana Field",
-      "projected_ks": 4.8,
-      "lineup_confirmed": false,
+      "projected_ks": 4.5,
+      "lineup_confirmed": true,
       "swstr_pct": 0.1188,
       "csw_pct": 0.3038,
       "k_pct": 0.2408,
-      "opp_k_pct": 0.204,
-      "opp_chase": 0.2888,
+      "opp_k_pct": 0.1835,
+      "opp_chase": 0.2765,
       "days_rest": 20,
       "rolling_k_3": 6.0,
       "rolling_k_5": 6.2,
@@ -273,19 +131,19 @@
         }
       ],
       "k_distribution": {
-        "0": 0.0262,
-        "1": 0.0516,
-        "2": 0.0868,
-        "3": 0.1249,
-        "4": 0.1533,
-        "5": 0.1608,
-        "6": 0.1439,
-        "7": 0.1101,
-        "8": 0.0719,
-        "9": 0.0401,
-        "10+": 0.0306
+        "0": 0.0328,
+        "1": 0.0617,
+        "2": 0.099,
+        "3": 0.1358,
+        "4": 0.159,
+        "5": 0.159,
+        "6": 0.1358,
+        "7": 0.099,
+        "8": 0.0617,
+        "9": 0.0328,
+        "10+": 0.0233
       }
     }
   ],
-  "total_pitchers": 4
+  "total_pitchers": 2
 }
