@@ -1,24 +1,24 @@
 {
-  "date": "October 11, 2026",
-  "generated_at": "11:01 PM",
+  "date": "October 12, 2026",
+  "generated_at": "01:11 AM",
   "all_pitchers": [
     {
-      "pitcher_name": "Tarik Skubal",
-      "pitcher_id": 669373,
+      "pitcher_name": "Yoshinobu Yamamoto",
+      "pitcher_id": 808967,
       "pitcher_team": "LAD",
-      "pitcher_hand": "L",
+      "pitcher_hand": "R",
       "opp_team": "MIL",
       "venue": "American Family Field",
       "projected_ks": 6.7,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.1651,
-      "csw_pct": 0.3221,
-      "k_pct": 0.2961,
-      "opp_k_pct": 0.215,
-      "opp_chase": 0.2722,
-      "days_rest": 16,
-      "rolling_k_3": 7.33,
-      "rolling_k_5": 6.6,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.1729,
+      "csw_pct": 0.3383,
+      "k_pct": 0.3086,
+      "opp_k_pct": 0.2201,
+      "opp_chase": 0.2684,
+      "days_rest": 19,
+      "rolling_k_3": 7.0,
+      "rolling_k_5": 7.4,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -34,29 +34,29 @@
       },
       "last5": [
         {
-          "date": "09/03",
-          "k": 6,
-          "pitches": 102
+          "date": "08/27",
+          "k": 8,
+          "pitches": 105
         },
         {
-          "date": "09/08",
-          "k": 5,
-          "pitches": 94
+          "date": "09/02",
+          "k": 8,
+          "pitches": 93
         },
         {
-          "date": "09/14",
-          "k": 9,
+          "date": "09/09",
+          "k": 10,
           "pitches": 90
         },
         {
-          "date": "09/19",
-          "k": 3,
-          "pitches": 86
+          "date": "09/15",
+          "k": 7,
+          "pitches": 91
         },
         {
-          "date": "09/25",
-          "k": 10,
-          "pitches": 75
+          "date": "09/23",
+          "k": 4,
+          "pitches": 88
         }
       ],
       "k_distribution": {
@@ -74,22 +74,22 @@
       }
     },
     {
-      "pitcher_name": "Jacob Misiorowski",
-      "pitcher_id": 694819,
+      "pitcher_name": "Logan Henderson",
+      "pitcher_id": 701656,
       "pitcher_team": "MIL",
       "pitcher_hand": "R",
       "opp_team": "LAD",
       "venue": "American Family Field",
-      "projected_ks": 6.0,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.1692,
-      "csw_pct": 0.3097,
-      "k_pct": 0.3003,
-      "opp_k_pct": 0.2052,
-      "opp_chase": 0.2788,
-      "days_rest": 14,
-      "rolling_k_3": 5.33,
-      "rolling_k_5": 6.0,
+      "projected_ks": 5.7,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.1282,
+      "csw_pct": 0.2702,
+      "k_pct": 0.2824,
+      "opp_k_pct": 0.2056,
+      "opp_chase": 0.2708,
+      "days_rest": 19,
+      "rolling_k_3": 5.67,
+      "rolling_k_5": 6.2,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -105,45 +105,187 @@
       },
       "last5": [
         {
-          "date": "09/02",
-          "k": 5,
-          "pitches": 92
-        },
-        {
-          "date": "09/08",
-          "k": 9,
-          "pitches": 93
-        },
-        {
-          "date": "09/15",
+          "date": "08/28",
           "k": 7,
-          "pitches": 82
+          "pitches": 91
         },
         {
-          "date": "09/20",
-          "k": 4,
-          "pitches": 44
+          "date": "09/03",
+          "k": 7,
+          "pitches": 102
         },
         {
-          "date": "09/27",
-          "k": 5,
-          "pitches": 68
+          "date": "09/09",
+          "k": 6,
+          "pitches": 95
+        },
+        {
+          "date": "09/16",
+          "k": 8,
+          "pitches": 87
+        },
+        {
+          "date": "09/23",
+          "k": 3,
+          "pitches": 87
         }
       ],
       "k_distribution": {
-        "0": 0.0093,
-        "1": 0.0221,
-        "2": 0.045,
-        "3": 0.0783,
-        "4": 0.1161,
-        "5": 0.1472,
-        "6": 0.1593,
-        "7": 0.1472,
-        "8": 0.1161,
-        "9": 0.0783,
-        "10+": 0.0811
+        "0": 0.0123,
+        "1": 0.0279,
+        "2": 0.0541,
+        "3": 0.0897,
+        "4": 0.127,
+        "5": 0.1535,
+        "6": 0.1584,
+        "7": 0.1396,
+        "8": 0.1051,
+        "9": 0.0675,
+        "10+": 0.0647
+      }
+    },
+    {
+      "pitcher_name": "Foster Griffin",
+      "pitcher_id": 656492,
+      "pitcher_team": "CLE",
+      "pitcher_hand": "L",
+      "opp_team": "TB",
+      "venue": "Tropicana Field",
+      "projected_ks": 4.9,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.102,
+      "csw_pct": 0.2747,
+      "k_pct": 0.216,
+      "opp_k_pct": 0.1854,
+      "opp_chase": 0.3117,
+      "days_rest": 19,
+      "rolling_k_3": 5.33,
+      "rolling_k_5": 4.6,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 0,
+        "description": "Dome / Retractable Roof",
+        "adjustment": 1.0,
+        "indoor": true
+      },
+      "last5": [
+        {
+          "date": "08/29",
+          "k": 4,
+          "pitches": 82
+        },
+        {
+          "date": "09/04",
+          "k": 3,
+          "pitches": 92
+        },
+        {
+          "date": "09/09",
+          "k": 4,
+          "pitches": 62
+        },
+        {
+          "date": "09/15",
+          "k": 5,
+          "pitches": 83
+        },
+        {
+          "date": "09/23",
+          "k": 7,
+          "pitches": 83
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0242,
+        "1": 0.0485,
+        "2": 0.0829,
+        "3": 0.1211,
+        "4": 0.151,
+        "5": 0.1609,
+        "6": 0.1463,
+        "7": 0.1137,
+        "8": 0.0754,
+        "9": 0.0427,
+        "10+": 0.0334
+      }
+    },
+    {
+      "pitcher_name": "Drew Rasmussen",
+      "pitcher_id": 656876,
+      "pitcher_team": "TB",
+      "pitcher_hand": "R",
+      "opp_team": "CLE",
+      "venue": "Tropicana Field",
+      "projected_ks": 4.8,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.1188,
+      "csw_pct": 0.3038,
+      "k_pct": 0.2408,
+      "opp_k_pct": 0.204,
+      "opp_chase": 0.2888,
+      "days_rest": 20,
+      "rolling_k_3": 6.0,
+      "rolling_k_5": 6.2,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 0,
+        "description": "Dome / Retractable Roof",
+        "adjustment": 1.0,
+        "indoor": true
+      },
+      "last5": [
+        {
+          "date": "08/30",
+          "k": 6,
+          "pitches": 97
+        },
+        {
+          "date": "09/05",
+          "k": 7,
+          "pitches": 97
+        },
+        {
+          "date": "09/11",
+          "k": 4,
+          "pitches": 92
+        },
+        {
+          "date": "09/17",
+          "k": 3,
+          "pitches": 76
+        },
+        {
+          "date": "09/22",
+          "k": 11,
+          "pitches": 114
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0262,
+        "1": 0.0516,
+        "2": 0.0868,
+        "3": 0.1249,
+        "4": 0.1533,
+        "5": 0.1608,
+        "6": 0.1439,
+        "7": 0.1101,
+        "8": 0.0719,
+        "9": 0.0401,
+        "10+": 0.0306
       }
     }
   ],
-  "total_pitchers": 2
+  "total_pitchers": 4
 }
