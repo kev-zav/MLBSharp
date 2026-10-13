@@ -1,23 +1,94 @@
 {
-  "date": "October 12, 2026",
-  "generated_at": "10:39 PM",
+  "date": "October 13, 2026",
+  "generated_at": "01:30 AM",
   "all_pitchers": [
     {
-      "pitcher_name": "Foster Griffin",
-      "pitcher_id": 656492,
+      "pitcher_name": "Parker Messick",
+      "pitcher_id": 800048,
       "pitcher_team": "CLE",
       "pitcher_hand": "L",
       "opp_team": "TB",
       "venue": "Tropicana Field",
-      "projected_ks": 4.6,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.102,
-      "csw_pct": 0.2747,
-      "k_pct": 0.216,
-      "opp_k_pct": 0.2006,
-      "opp_chase": 0.3034,
-      "days_rest": 19,
-      "rolling_k_3": 5.33,
+      "projected_ks": 5.5,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.1228,
+      "csw_pct": 0.2726,
+      "k_pct": 0.2678,
+      "opp_k_pct": 0.1854,
+      "opp_chase": 0.3117,
+      "days_rest": 16,
+      "rolling_k_3": 5.0,
+      "rolling_k_5": 6.4,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 0,
+        "description": "Dome / Retractable Roof",
+        "adjustment": 1.0,
+        "indoor": true
+      },
+      "last5": [
+        {
+          "date": "09/05",
+          "k": 12,
+          "pitches": 103
+        },
+        {
+          "date": "09/11",
+          "k": 5,
+          "pitches": 95
+        },
+        {
+          "date": "09/16",
+          "k": 8,
+          "pitches": 86
+        },
+        {
+          "date": "09/22",
+          "k": 5,
+          "pitches": 96
+        },
+        {
+          "date": "09/27",
+          "k": 2,
+          "pitches": 64
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0147,
+        "1": 0.0323,
+        "2": 0.0608,
+        "3": 0.0976,
+        "4": 0.1338,
+        "5": 0.1567,
+        "6": 0.1567,
+        "7": 0.1338,
+        "8": 0.0976,
+        "9": 0.0608,
+        "10+": 0.0553
+      }
+    },
+    {
+      "pitcher_name": "Freddy Peralta",
+      "pitcher_id": 642547,
+      "pitcher_team": "TB",
+      "pitcher_hand": "R",
+      "opp_team": "CLE",
+      "venue": "Tropicana Field",
+      "projected_ks": 4.7,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.132,
+      "csw_pct": 0.2482,
+      "k_pct": 0.221,
+      "opp_k_pct": 0.204,
+      "opp_chase": 0.2888,
+      "days_rest": 18,
+      "rolling_k_3": 4.67,
       "rolling_k_5": 4.6,
       "umpire": {
         "name": "Unknown",
@@ -34,114 +105,43 @@
       },
       "last5": [
         {
-          "date": "08/29",
-          "k": 4,
-          "pitches": 82
+          "date": "09/01",
+          "k": 7,
+          "pitches": 74
         },
         {
-          "date": "09/04",
-          "k": 3,
+          "date": "09/08",
+          "k": 2,
           "pitches": 92
         },
         {
-          "date": "09/09",
+          "date": "09/13",
           "k": 4,
-          "pitches": 62
+          "pitches": 86
         },
         {
-          "date": "09/15",
-          "k": 5,
-          "pitches": 83
-        },
-        {
-          "date": "09/23",
-          "k": 7,
-          "pitches": 83
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0305,
-        "1": 0.0582,
-        "2": 0.0949,
-        "3": 0.1322,
-        "4": 0.1573,
-        "5": 0.1598,
-        "6": 0.1387,
-        "7": 0.1027,
-        "8": 0.065,
-        "9": 0.0351,
-        "10+": 0.0255
-      }
-    },
-    {
-      "pitcher_name": "Drew Rasmussen",
-      "pitcher_id": 656876,
-      "pitcher_team": "TB",
-      "pitcher_hand": "R",
-      "opp_team": "CLE",
-      "venue": "Tropicana Field",
-      "projected_ks": 4.5,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.1188,
-      "csw_pct": 0.3038,
-      "k_pct": 0.2408,
-      "opp_k_pct": 0.1835,
-      "opp_chase": 0.2765,
-      "days_rest": 20,
-      "rolling_k_3": 6.0,
-      "rolling_k_5": 6.2,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 0,
-        "description": "Dome / Retractable Roof",
-        "adjustment": 1.0,
-        "indoor": true
-      },
-      "last5": [
-        {
-          "date": "08/30",
+          "date": "09/19",
           "k": 6,
           "pitches": 97
         },
         {
-          "date": "09/05",
-          "k": 7,
-          "pitches": 97
-        },
-        {
-          "date": "09/11",
+          "date": "09/25",
           "k": 4,
-          "pitches": 92
-        },
-        {
-          "date": "09/17",
-          "k": 3,
-          "pitches": 76
-        },
-        {
-          "date": "09/22",
-          "k": 11,
-          "pitches": 114
+          "pitches": 93
         }
       ],
       "k_distribution": {
-        "0": 0.0328,
-        "1": 0.0617,
-        "2": 0.099,
-        "3": 0.1358,
-        "4": 0.159,
-        "5": 0.159,
-        "6": 0.1358,
-        "7": 0.099,
-        "8": 0.0617,
-        "9": 0.0328,
-        "10+": 0.0233
+        "0": 0.0282,
+        "1": 0.0548,
+        "2": 0.0909,
+        "3": 0.1286,
+        "4": 0.1554,
+        "5": 0.1604,
+        "6": 0.1414,
+        "7": 0.1064,
+        "8": 0.0684,
+        "9": 0.0375,
+        "10+": 0.028
       }
     }
   ],
