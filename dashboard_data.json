@@ -1,24 +1,24 @@
 {
-  "date": "October 13, 2026",
-  "generated_at": "11:21 PM",
+  "date": "October 14, 2026",
+  "generated_at": "01:04 AM",
   "all_pitchers": [
     {
-      "pitcher_name": "Parker Messick",
-      "pitcher_id": 800048,
-      "pitcher_team": "CLE",
+      "pitcher_name": "Blake Snell",
+      "pitcher_id": 605483,
+      "pitcher_team": "LAD",
       "pitcher_hand": "L",
-      "opp_team": "TB",
-      "venue": "Tropicana Field",
-      "projected_ks": 5.5,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.1228,
-      "csw_pct": 0.2726,
-      "k_pct": 0.2678,
-      "opp_k_pct": 0.1895,
-      "opp_chase": 0.3104,
-      "days_rest": 16,
-      "rolling_k_3": 5.0,
-      "rolling_k_5": 6.4,
+      "opp_team": "MIL",
+      "venue": "UNIQLO Field at Dodger Stadium",
+      "projected_ks": 5.7,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.167,
+      "csw_pct": 0.315,
+      "k_pct": 0.2931,
+      "opp_k_pct": 0.2146,
+      "opp_chase": 0.2745,
+      "days_rest": 18,
+      "rolling_k_3": 4.0,
+      "rolling_k_5": 5.8,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -27,69 +27,69 @@
       },
       "weather": {
         "temp_f": 72,
-        "wind_mph": 0,
-        "description": "Dome / Retractable Roof",
+        "wind_mph": 5,
+        "description": "Unknown",
         "adjustment": 1.0,
-        "indoor": true
+        "indoor": false
       },
       "last5": [
         {
-          "date": "09/05",
-          "k": 12,
-          "pitches": 103
+          "date": "08/29",
+          "k": 10,
+          "pitches": 99
+        },
+        {
+          "date": "09/04",
+          "k": 7,
+          "pitches": 101
         },
         {
           "date": "09/11",
-          "k": 5,
-          "pitches": 95
+          "k": 8,
+          "pitches": 101
         },
         {
           "date": "09/16",
-          "k": 8,
-          "pitches": 86
+          "k": 1,
+          "pitches": 19
         },
         {
-          "date": "09/22",
-          "k": 5,
-          "pitches": 96
-        },
-        {
-          "date": "09/27",
-          "k": 2,
-          "pitches": 64
+          "date": "09/26",
+          "k": 3,
+          "pitches": 77
         }
       ],
       "k_distribution": {
-        "0": 0.0147,
-        "1": 0.0323,
-        "2": 0.0608,
-        "3": 0.0976,
-        "4": 0.1338,
-        "5": 0.1567,
-        "6": 0.1567,
-        "7": 0.1338,
-        "8": 0.0976,
-        "9": 0.0608,
-        "10+": 0.0553
+        "0": 0.0123,
+        "1": 0.0279,
+        "2": 0.0541,
+        "3": 0.0897,
+        "4": 0.127,
+        "5": 0.1535,
+        "6": 0.1584,
+        "7": 0.1396,
+        "8": 0.1051,
+        "9": 0.0675,
+        "10+": 0.0647
       }
     },
     {
-      "pitcher_name": "Freddy Peralta",
-      "pitcher_id": 642547,
-      "pitcher_team": "TB",
-      "pitcher_hand": "R",
-      "opp_team": "CLE",
-      "venue": "Tropicana Field",
-      "projected_ks": 4.5,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.132,
-      "csw_pct": 0.2482,
-      "k_pct": 0.221,
-      "opp_k_pct": 0.1798,
-      "opp_chase": 0.2743,
-      "days_rest": 18,
-      "rolling_k_3": 4.67,
-      "rolling_k_5": 4.6,
+      "pitcher_name": "Robert Gasser",
+      "pitcher_id": 688107,
+      "pitcher_team": "MIL",
+      "pitcher_hand": "L",
+      "opp_team": "LAD",
+      "venue": "UNIQLO Field at Dodger Stadium",
+      "projected_ks": 3.7,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.1082,
+      "csw_pct": 0.2829,
+      "k_pct": 0.218,
+      "opp_k_pct": 0.2068,
+      "opp_chase": 0.2836,
+      "days_rest": 19,
+      "rolling_k_3": 5.33,
+      "rolling_k_5": 5.0,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -98,50 +98,50 @@
       },
       "weather": {
         "temp_f": 72,
-        "wind_mph": 0,
-        "description": "Dome / Retractable Roof",
+        "wind_mph": 5,
+        "description": "Unknown",
         "adjustment": 1.0,
-        "indoor": true
+        "indoor": false
       },
       "last5": [
         {
           "date": "09/01",
-          "k": 7,
-          "pitches": 74
+          "k": 4,
+          "pitches": 76
         },
         {
-          "date": "09/08",
-          "k": 2,
-          "pitches": 92
+          "date": "09/07",
+          "k": 5,
+          "pitches": 83
         },
         {
           "date": "09/13",
-          "k": 4,
-          "pitches": 86
+          "k": 5,
+          "pitches": 89
         },
         {
           "date": "09/19",
-          "k": 6,
-          "pitches": 97
+          "k": 2,
+          "pitches": 107
         },
         {
           "date": "09/25",
-          "k": 4,
-          "pitches": 93
+          "k": 9,
+          "pitches": 87
         }
       ],
       "k_distribution": {
-        "0": 0.0328,
-        "1": 0.0617,
-        "2": 0.099,
-        "3": 0.1358,
-        "4": 0.159,
-        "5": 0.159,
-        "6": 0.1358,
-        "7": 0.099,
-        "8": 0.0617,
-        "9": 0.0328,
-        "10+": 0.0233
+        "0": 0.0564,
+        "1": 0.0935,
+        "2": 0.1323,
+        "3": 0.1599,
+        "4": 0.1651,
+        "5": 0.1455,
+        "6": 0.1095,
+        "7": 0.0704,
+        "8": 0.0386,
+        "9": 0.0181,
+        "10+": 0.0107
       }
     }
   ],
