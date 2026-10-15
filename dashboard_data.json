@@ -1,95 +1,24 @@
 {
-  "date": "October 14, 2026",
-  "generated_at": "10:26 PM",
+  "date": "October 15, 2026",
+  "generated_at": "12:25 AM",
   "all_pitchers": [
     {
-      "pitcher_name": "Blake Snell",
-      "pitcher_id": 605483,
-      "pitcher_team": "LAD",
-      "pitcher_hand": "L",
-      "opp_team": "MIL",
-      "venue": "UNIQLO Field at Dodger Stadium",
-      "projected_ks": 5.8,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.167,
-      "csw_pct": 0.315,
-      "k_pct": 0.2931,
-      "opp_k_pct": 0.2185,
-      "opp_chase": 0.2772,
-      "days_rest": 18,
-      "rolling_k_3": 4.0,
-      "rolling_k_5": 5.8,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "08/29",
-          "k": 10,
-          "pitches": 99
-        },
-        {
-          "date": "09/04",
-          "k": 7,
-          "pitches": 101
-        },
-        {
-          "date": "09/11",
-          "k": 8,
-          "pitches": 101
-        },
-        {
-          "date": "09/16",
-          "k": 1,
-          "pitches": 19
-        },
-        {
-          "date": "09/26",
-          "k": 3,
-          "pitches": 77
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0112,
-        "1": 0.0259,
-        "2": 0.051,
-        "3": 0.0859,
-        "4": 0.1235,
-        "5": 0.1516,
-        "6": 0.159,
-        "7": 0.1423,
-        "8": 0.1088,
-        "9": 0.0711,
-        "10+": 0.0698
-      }
-    },
-    {
-      "pitcher_name": "Robert Gasser",
-      "pitcher_id": 688107,
-      "pitcher_team": "MIL",
-      "pitcher_hand": "L",
-      "opp_team": "LAD",
-      "venue": "UNIQLO Field at Dodger Stadium",
-      "projected_ks": 3.6,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.1082,
-      "csw_pct": 0.2829,
-      "k_pct": 0.218,
-      "opp_k_pct": 0.2023,
-      "opp_chase": 0.2893,
-      "days_rest": 19,
-      "rolling_k_3": 5.33,
-      "rolling_k_5": 5.0,
+      "pitcher_name": "Gavin Williams",
+      "pitcher_id": 668909,
+      "pitcher_team": "CLE",
+      "pitcher_hand": "R",
+      "opp_team": "TB",
+      "venue": "Progressive Field",
+      "projected_ks": 6.7,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.1857,
+      "csw_pct": 0.3587,
+      "k_pct": 0.3404,
+      "opp_k_pct": 0.1907,
+      "opp_chase": 0.3056,
+      "days_rest": 20,
+      "rolling_k_3": 6.67,
+      "rolling_k_5": 8.6,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -106,42 +35,113 @@
       "last5": [
         {
           "date": "09/01",
-          "k": 4,
-          "pitches": 76
+          "k": 13,
+          "pitches": 97
         },
         {
-          "date": "09/07",
-          "k": 5,
-          "pitches": 83
+          "date": "09/06",
+          "k": 10,
+          "pitches": 99
         },
         {
-          "date": "09/13",
-          "k": 5,
+          "date": "09/14",
+          "k": 7,
+          "pitches": 113
+        },
+        {
+          "date": "09/20",
+          "k": 9,
           "pitches": 89
         },
         {
-          "date": "09/19",
-          "k": 2,
-          "pitches": 107
-        },
-        {
           "date": "09/25",
-          "k": 9,
-          "pitches": 87
+          "k": 4,
+          "pitches": 74
         }
       ],
       "k_distribution": {
-        "0": 0.06,
-        "1": 0.0979,
-        "2": 0.1364,
-        "3": 0.1623,
-        "4": 0.1649,
-        "5": 0.143,
-        "6": 0.106,
-        "7": 0.067,
-        "8": 0.0362,
-        "9": 0.0167,
-        "10+": 0.0096
+        "0": 0.0046,
+        "1": 0.0122,
+        "2": 0.0278,
+        "3": 0.0539,
+        "4": 0.0893,
+        "5": 0.1264,
+        "6": 0.1528,
+        "7": 0.1577,
+        "8": 0.139,
+        "9": 0.1046,
+        "10+": 0.1316
+      }
+    },
+    {
+      "pitcher_name": "Griffin Jax",
+      "pitcher_id": 643377,
+      "pitcher_team": "TB",
+      "pitcher_hand": "R",
+      "opp_team": "CLE",
+      "venue": "Progressive Field",
+      "projected_ks": 3.4,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.12681666666666666,
+      "csw_pct": 0.3128666666666667,
+      "k_pct": 0.2623,
+      "opp_k_pct": 0.2043,
+      "opp_chase": 0.2895,
+      "days_rest": 19,
+      "rolling_k_3": 4.33,
+      "rolling_k_5": 3.2,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "09/02",
+          "k": 1,
+          "pitches": 63
+        },
+        {
+          "date": "09/09",
+          "k": 2,
+          "pitches": 66
+        },
+        {
+          "date": "09/15",
+          "k": 7,
+          "pitches": 67
+        },
+        {
+          "date": "09/20",
+          "k": 5,
+          "pitches": 74
+        },
+        {
+          "date": "09/26",
+          "k": 1,
+          "pitches": 52
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0677,
+        "1": 0.107,
+        "2": 0.1444,
+        "3": 0.1664,
+        "4": 0.1638,
+        "5": 0.1377,
+        "6": 0.0988,
+        "7": 0.0606,
+        "8": 0.0317,
+        "9": 0.0142,
+        "10+": 0.0078
       }
     }
   ],
