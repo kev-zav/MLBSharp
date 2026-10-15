@@ -1,24 +1,24 @@
 {
   "date": "October 15, 2026",
-  "generated_at": "12:25 AM",
+  "generated_at": "07:34 PM",
   "all_pitchers": [
     {
-      "pitcher_name": "Gavin Williams",
-      "pitcher_id": 668909,
-      "pitcher_team": "CLE",
+      "pitcher_name": "Tyler Glasnow",
+      "pitcher_id": 607192,
+      "pitcher_team": "LAD",
       "pitcher_hand": "R",
-      "opp_team": "TB",
-      "venue": "Progressive Field",
-      "projected_ks": 6.7,
+      "opp_team": "MIL",
+      "venue": "UNIQLO Field at Dodger Stadium",
+      "projected_ks": 6.9,
       "lineup_confirmed": false,
-      "swstr_pct": 0.1857,
-      "csw_pct": 0.3587,
-      "k_pct": 0.3404,
-      "opp_k_pct": 0.1907,
-      "opp_chase": 0.3056,
-      "days_rest": 20,
-      "rolling_k_3": 6.67,
-      "rolling_k_5": 8.6,
+      "swstr_pct": 0.1431,
+      "csw_pct": 0.346,
+      "k_pct": 0.3319,
+      "opp_k_pct": 0.2195,
+      "opp_chase": 0.2693,
+      "days_rest": 21,
+      "rolling_k_3": 9.33,
+      "rolling_k_5": 8.4,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -34,62 +34,62 @@
       },
       "last5": [
         {
-          "date": "09/01",
-          "k": 13,
-          "pitches": 97
+          "date": "08/30",
+          "k": 6,
+          "pitches": 86
         },
         {
-          "date": "09/06",
+          "date": "09/05",
+          "k": 8,
+          "pitches": 96
+        },
+        {
+          "date": "09/12",
+          "k": 7,
+          "pitches": 91
+        },
+        {
+          "date": "09/18",
           "k": 10,
           "pitches": 99
         },
         {
-          "date": "09/14",
-          "k": 7,
-          "pitches": 113
-        },
-        {
-          "date": "09/20",
-          "k": 9,
-          "pitches": 89
-        },
-        {
-          "date": "09/25",
-          "k": 4,
-          "pitches": 74
+          "date": "09/24",
+          "k": 11,
+          "pitches": 91
         }
       ],
       "k_distribution": {
-        "0": 0.0046,
-        "1": 0.0122,
-        "2": 0.0278,
-        "3": 0.0539,
-        "4": 0.0893,
-        "5": 0.1264,
-        "6": 0.1528,
-        "7": 0.1577,
-        "8": 0.139,
-        "9": 0.1046,
-        "10+": 0.1316
+        "0": 0.0037,
+        "1": 0.0102,
+        "2": 0.0239,
+        "3": 0.0478,
+        "4": 0.0817,
+        "5": 0.1194,
+        "6": 0.1489,
+        "7": 0.1586,
+        "8": 0.1443,
+        "9": 0.1121,
+        "10+": 0.1494
       }
     },
     {
-      "pitcher_name": "Griffin Jax",
-      "pitcher_id": 643377,
-      "pitcher_team": "TB",
-      "pitcher_hand": "R",
-      "opp_team": "CLE",
-      "venue": "Progressive Field",
-      "projected_ks": 3.4,
+      "pitcher_name": "Shane Drohan",
+      "pitcher_id": 675660,
+      "pitcher_team": "MIL",
+      "pitcher_hand": "L",
+      "opp_team": "LAD",
+      "venue": "UNIQLO Field at Dodger Stadium",
+      "projected_ks": 3.9,
       "lineup_confirmed": false,
-      "swstr_pct": 0.12681666666666666,
-      "csw_pct": 0.3128666666666667,
-      "k_pct": 0.2623,
-      "opp_k_pct": 0.2043,
-      "opp_chase": 0.2895,
-      "days_rest": 19,
-      "rolling_k_3": 4.33,
-      "rolling_k_5": 3.2,
+      "swstr_pct": 0.128,
+      "csw_pct": 0.2863,
+      "k_pct": 0.2298,
+      "opp_k_pct": 0.2064,
+      "opp_chase": 0.2841,
+      "days_rest": 18,
+      "rolling_k_3": 2.0,
+      "rolling_k_5": 2.0,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -105,43 +105,43 @@
       },
       "last5": [
         {
-          "date": "09/02",
-          "k": 1,
-          "pitches": 63
+          "date": "09/12",
+          "k": 4,
+          "pitches": 60
         },
         {
-          "date": "09/09",
+          "date": "09/16",
+          "k": 0,
+          "pitches": 11
+        },
+        {
+          "date": "09/18",
           "k": 2,
-          "pitches": 66
+          "pitches": 23
         },
         {
-          "date": "09/15",
-          "k": 7,
-          "pitches": 67
+          "date": "09/24",
+          "k": 2,
+          "pitches": 47
         },
         {
-          "date": "09/20",
-          "k": 5,
-          "pitches": 74
-        },
-        {
-          "date": "09/26",
-          "k": 1,
-          "pitches": 52
+          "date": "09/27",
+          "k": 2,
+          "pitches": 21
         }
       ],
       "k_distribution": {
-        "0": 0.0677,
-        "1": 0.107,
-        "2": 0.1444,
-        "3": 0.1664,
-        "4": 0.1638,
-        "5": 0.1377,
-        "6": 0.0988,
-        "7": 0.0606,
-        "8": 0.0317,
-        "9": 0.0142,
-        "10+": 0.0078
+        "0": 0.0497,
+        "1": 0.0849,
+        "2": 0.1241,
+        "3": 0.1548,
+        "4": 0.1649,
+        "5": 0.15,
+        "6": 0.1165,
+        "7": 0.0773,
+        "8": 0.0438,
+        "9": 0.0212,
+        "10+": 0.0131
       }
     }
   ],
