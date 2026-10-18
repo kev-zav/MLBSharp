@@ -1,24 +1,95 @@
 {
-  "date": "October 17, 2026",
-  "generated_at": "11:56 PM",
+  "date": "October 18, 2026",
+  "generated_at": "06:22 PM",
   "all_pitchers": [
     {
-      "pitcher_name": "Nick Martinez",
-      "pitcher_id": 607259,
+      "pitcher_name": "Parker Messick",
+      "pitcher_id": 800048,
+      "pitcher_team": "CLE",
+      "pitcher_hand": "L",
+      "opp_team": "TB",
+      "venue": "Progressive Field",
+      "projected_ks": 5.5,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.1228,
+      "csw_pct": 0.2726,
+      "k_pct": 0.2678,
+      "opp_k_pct": 0.1926,
+      "opp_chase": 0.3032,
+      "days_rest": 21,
+      "rolling_k_3": 5.0,
+      "rolling_k_5": 6.4,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 5,
+        "description": "Unknown",
+        "adjustment": 1.0,
+        "indoor": false
+      },
+      "last5": [
+        {
+          "date": "09/05",
+          "k": 12,
+          "pitches": 103
+        },
+        {
+          "date": "09/11",
+          "k": 5,
+          "pitches": 95
+        },
+        {
+          "date": "09/16",
+          "k": 8,
+          "pitches": 86
+        },
+        {
+          "date": "09/22",
+          "k": 5,
+          "pitches": 96
+        },
+        {
+          "date": "09/27",
+          "k": 2,
+          "pitches": 64
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0147,
+        "1": 0.0323,
+        "2": 0.0608,
+        "3": 0.0976,
+        "4": 0.1338,
+        "5": 0.1567,
+        "6": 0.1567,
+        "7": 0.1338,
+        "8": 0.0976,
+        "9": 0.0608,
+        "10+": 0.0553
+      }
+    },
+    {
+      "pitcher_name": "Drew Rasmussen",
+      "pitcher_id": 656876,
       "pitcher_team": "TB",
       "pitcher_hand": "R",
       "opp_team": "CLE",
       "venue": "Progressive Field",
-      "projected_ks": 3.7,
+      "projected_ks": 4.5,
       "lineup_confirmed": true,
-      "swstr_pct": 0.0899,
-      "csw_pct": 0.2697,
-      "k_pct": 0.1933,
-      "opp_k_pct": 0.1845,
-      "opp_chase": 0.2813,
-      "days_rest": 20,
-      "rolling_k_3": 3.67,
-      "rolling_k_5": 3.6,
+      "swstr_pct": 0.1188,
+      "csw_pct": 0.3038,
+      "k_pct": 0.2408,
+      "opp_k_pct": 0.1841,
+      "opp_chase": 0.2849,
+      "days_rest": 26,
+      "rolling_k_3": 6.0,
+      "rolling_k_5": 6.2,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -34,104 +105,43 @@
       },
       "last5": [
         {
-          "date": "09/04",
+          "date": "08/30",
+          "k": 6,
+          "pitches": 97
+        },
+        {
+          "date": "09/05",
+          "k": 7,
+          "pitches": 97
+        },
+        {
+          "date": "09/11",
           "k": 4,
-          "pitches": 90
+          "pitches": 92
         },
         {
-          "date": "09/10",
+          "date": "09/17",
           "k": 3,
-          "pitches": 68
-        },
-        {
-          "date": "09/16",
-          "k": 3,
-          "pitches": 72
+          "pitches": 76
         },
         {
           "date": "09/22",
-          "k": 7,
-          "pitches": 94
-        },
-        {
-          "date": "09/27",
-          "k": 1,
-          "pitches": 50
+          "k": 11,
+          "pitches": 114
         }
       ],
       "k_distribution": {
-        "0": 0.0564,
-        "1": 0.0935,
-        "2": 0.1323,
-        "3": 0.1599,
-        "4": 0.1651,
-        "5": 0.1455,
-        "6": 0.1095,
-        "7": 0.0704,
-        "8": 0.0386,
-        "9": 0.0181,
-        "10+": 0.0107
-      }
-    },
-    {
-      "pitcher_name": "Shawn Armstrong",
-      "pitcher_id": 542888,
-      "pitcher_team": "CLE",
-      "pitcher_hand": "R",
-      "opp_team": "TB",
-      "venue": "Progressive Field",
-      "projected_ks": 2.6,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.10655,
-      "csw_pct": 0.24835000000000002,
-      "k_pct": 0.2446,
-      "opp_k_pct": 0.18,
-      "opp_chase": 0.31,
-      "days_rest": 21,
-      "rolling_k_3": 0.33,
-      "rolling_k_5": 0.33,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 5,
-        "description": "Unknown",
-        "adjustment": 1.0,
-        "indoor": false
-      },
-      "last5": [
-        {
-          "date": "09/23",
-          "k": 0,
-          "pitches": 1
-        },
-        {
-          "date": "09/25",
-          "k": 0,
-          "pitches": 19
-        },
-        {
-          "date": "09/26",
-          "k": 1,
-          "pitches": 11
-        }
-      ],
-      "k_distribution": {
-        "0": 0.1042,
-        "1": 0.1451,
-        "2": 0.1726,
-        "3": 0.1754,
-        "4": 0.1522,
-        "5": 0.1127,
-        "6": 0.0713,
-        "7": 0.0385,
-        "8": 0.0178,
-        "9": 0.007,
-        "10+": 0.0032
+        "0": 0.0328,
+        "1": 0.0617,
+        "2": 0.099,
+        "3": 0.1358,
+        "4": 0.159,
+        "5": 0.159,
+        "6": 0.1358,
+        "7": 0.099,
+        "8": 0.0617,
+        "9": 0.0328,
+        "10+": 0.0233
       }
     }
   ],
