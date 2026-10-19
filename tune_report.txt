@@ -2,17 +2,17 @@
 ============================================================
   MLB STRIKEOUT SHARP — MODEL TUNER
 ============================================================
-  Excluding 429 short start(s) (< 3 IP) from model training.
+  Excluding 430 short start(s) (< 3 IP) from model training.
 
-  Loaded 4493 rows from results.csv
-  Date range: 2026-03-26 to 2026-10-17 (198 game days)
+  Loaded 4494 rows from results.csv
+  Date range: 2026-03-26 to 2026-10-18 (199 game days)
 
 ============================================================
   SECTION 1: CALIBRATION REPORT
 ============================================================
 
-  Total games logged: 4493
-  Games with projections: 3770
+  Total games logged: 4494
+  Games with projections: 3771
 
   Overall Accuracy:
     Avg Projected Ks:  4.61
@@ -30,21 +30,21 @@
 
   Factor                        Corr    p-value      N Strength       
   ------------------------- -------- ---------- ------ ---------------
-  projected_ks_manual        +0.3555     0.0000*  3715 Moderate       
-  rolling_k_avg_5            +0.3268     0.0000*  3777 Moderate       
-  rolling_k_avg_3            +0.3052     0.0000*  3770 Moderate       
-  csw_pct                    +0.2990     0.0000*  3770 Weak           
-  swstr_pct                  +0.2934     0.0000*  3770 Weak           
-  pitch_count_last_outing    +0.1463     0.0000*  3770 Negligible     
-  weather_wind               +0.0269     0.0981   3770 Negligible     
-  days_rest                  -0.0256     0.1159   3770 Negligible     
-  opp_k_pct_vs_hand          +0.0198     0.2241   3770 Negligible     
-  weather_temp               -0.0174     0.2844   3770 Negligible     
-  o_swing_pct                -0.0145     0.3743   3770 Negligible     
-  park_factor                +0.0127     0.4373   3770 Negligible     
-  pitch_mix_adj              -0.0125     0.4456   3715 Negligible     
-  ump_adjustment             -0.0114     0.4847   3770 Negligible     
-  k_pct                      -0.0095     0.5585   3770 Negligible     
+  projected_ks_manual        +0.3555     0.0000*  3716 Moderate       
+  rolling_k_avg_5            +0.3269     0.0000*  3778 Moderate       
+  rolling_k_avg_3            +0.3053     0.0000*  3771 Moderate       
+  csw_pct                    +0.2990     0.0000*  3771 Weak           
+  swstr_pct                  +0.2934     0.0000*  3771 Weak           
+  pitch_count_last_outing    +0.1464     0.0000*  3771 Negligible     
+  weather_wind               +0.0270     0.0976   3771 Negligible     
+  days_rest                  -0.0250     0.1247   3771 Negligible     
+  opp_k_pct_vs_hand          +0.0197     0.2256   3771 Negligible     
+  weather_temp               -0.0174     0.2847   3771 Negligible     
+  o_swing_pct                -0.0145     0.3739   3771 Negligible     
+  park_factor                +0.0127     0.4370   3771 Negligible     
+  pitch_mix_adj              -0.0125     0.4462   3716 Negligible     
+  ump_adjustment             -0.0114     0.4843   3771 Negligible     
+  k_pct                      -0.0095     0.5581   3771 Negligible     
 
   Strongest predictor: projected_ks_manual (r=+0.3555)
 
@@ -66,14 +66,14 @@
   Park: Yankee Stadium                 143     -0.64     -0.24 under     
   Park: T-Mobile Park                  106     -0.57     -0.17 under     
   Park: Oriole Park at Camden Yards    117     -0.57     -0.17 under     
-  Park: Progressive Field              125     -0.56     -0.16 under     
+  Park: Progressive Field              126     -0.57     -0.17 under     
   Park: Tropicana Field                137     -0.55     -0.15 under     
   Park: Daikin Park                    129     -0.54     -0.14 under     
-  Park: loanDepot park                 126     -0.51     -0.12 under     
+  Park: loanDepot park                 126     -0.51     -0.11 under     
   Low K% Pitchers (below median)      1878     -0.48     -0.16 under     
   Short Rest (<=4 days)                 43     -0.47     -0.08 under     
-  Neutral Zone Umps                   3747     -0.40     -0.00 under     
-  High K% Pitchers (above median)     1888     -0.32     +0.16 under     
+  Neutral Zone Umps                   3748     -0.40     -0.00 under     
+  High K% Pitchers (above median)     1889     -0.32     +0.16 under     
   High Wind (>15 mph)                   23     +0.22     +0.62 over      
   Cold Weather (<60°F)                  91     -0.16     +0.24 under     
   Expanded Zone Umps                    23     +0.05     +0.45 over      
@@ -102,30 +102,30 @@
   SECTION 5: XGBOOST AUTO-TUNING
 ============================================================
 
-  Training XGBoost on 3599 rows with 15 features...
+  Training XGBoost on 3600 rows with 15 features...
 
   Model Performance:
     Metric                  Manual Model         XGBoost     Improvement
     -------------------- --------------- --------------- ---------------
-    MAE                             1.82            1.32          +27.0%
+    MAE                             1.81            1.33          +26.9%
     RMSE                            2.29            1.67          +27.0%
-    CV MAE (5-fold)                    —            1.81               —
+    CV MAE (5-fold)                    —            1.82               —
 
   Feature Importance Rankings:
     Rank  Feature                     Importance Bar
     ----  ------------------------- ------------ --------------------
-       1  k_pct                           0.1983 ████████████████████
-       2  projected_ks_manual             0.1228 ████████████
-       3  rolling_k_avg_5                 0.0902 █████████
-       4  opp_k_pct_vs_hand               0.0841 ████████
-       5  pitch_count_last_outing         0.0781 ███████
-       6  swstr_pct                       0.0718 ███████
-       7  csw_pct                         0.0699 ███████
-       8  o_swing_pct                     0.0683 ██████
-       9  days_rest                       0.0647 ██████
-      10  rolling_k_avg_3                 0.0637 ██████
-      11  weather_temp                    0.0447 ████
-      12  weather_wind                    0.0433 ████
+       1  k_pct                           0.1977 ████████████████████
+       2  projected_ks_manual             0.1146 ███████████
+       3  rolling_k_avg_5                 0.0922 █████████
+       4  opp_k_pct_vs_hand               0.0820 ████████
+       5  pitch_count_last_outing         0.0777 ███████
+       6  csw_pct                         0.0722 ███████
+       7  swstr_pct                       0.0668 ██████
+       8  o_swing_pct                     0.0654 ██████
+       9  weather_wind                    0.0647 ██████
+      10  rolling_k_avg_3                 0.0625 ██████
+      11  days_rest                       0.0587 █████
+      12  weather_temp                    0.0454 ████
       13  park_factor                     0.0000 
       14  ump_adjustment                  0.0000 
       15  pitch_mix_adj                   0.0000 
@@ -135,12 +135,12 @@
 
   Implied Weight Distribution (from XGBoost):
     K %: 19.8% of prediction weight
-    Projected Ks Manual: 12.3% of prediction weight
-    Rolling K Avg 5: 9.0% of prediction weight
-    Opp K % Vs Hand: 8.4% of prediction weight
+    Projected Ks Manual: 11.5% of prediction weight
+    Rolling K Avg 5: 9.2% of prediction weight
+    Opp K % Vs Hand: 8.2% of prediction weight
     Pitch Count Last Outing: 7.8% of prediction weight
-    Swstr %: 7.2% of prediction weight
-    Csw %: 7.0% of prediction weight
+    Csw %: 7.2% of prediction weight
+    Swstr %: 6.7% of prediction weight
 
 ============================================================
   TUNING COMPLETE
