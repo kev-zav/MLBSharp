@@ -1,24 +1,24 @@
 {
-  "date": "October 19, 2026",
-  "generated_at": "10:59 PM",
+  "date": "October 23, 2026",
+  "generated_at": "12:33 AM",
   "all_pitchers": [
     {
-      "pitcher_name": "Freddy Peralta",
-      "pitcher_id": 642547,
-      "pitcher_team": "TB",
+      "pitcher_name": "Jacob Misiorowski",
+      "pitcher_id": 694819,
+      "pitcher_team": "MIL",
       "pitcher_hand": "R",
-      "opp_team": "CLE",
-      "venue": "Tropicana Field",
-      "projected_ks": 4.8,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.1288,
-      "csw_pct": 0.2496,
-      "k_pct": 0.2301,
-      "opp_k_pct": 0.1844,
-      "opp_chase": 0.2874,
-      "days_rest": 24,
-      "rolling_k_3": 4.67,
-      "rolling_k_5": 4.6,
+      "opp_team": "TB",
+      "venue": "American Family Field",
+      "projected_ks": 6.5,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.1731,
+      "csw_pct": 0.3184,
+      "k_pct": 0.3141,
+      "opp_k_pct": 0.1915,
+      "opp_chase": 0.3065,
+      "days_rest": 26,
+      "rolling_k_3": 5.33,
+      "rolling_k_5": 6.0,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -34,62 +34,62 @@
       },
       "last5": [
         {
-          "date": "09/01",
-          "k": 7,
-          "pitches": 74
-        },
-        {
-          "date": "09/08",
-          "k": 2,
+          "date": "09/02",
+          "k": 5,
           "pitches": 92
         },
         {
-          "date": "09/13",
-          "k": 4,
-          "pitches": 86
-        },
-        {
-          "date": "09/19",
-          "k": 6,
-          "pitches": 97
-        },
-        {
-          "date": "09/25",
-          "k": 4,
+          "date": "09/08",
+          "k": 9,
           "pitches": 93
+        },
+        {
+          "date": "09/15",
+          "k": 7,
+          "pitches": 82
+        },
+        {
+          "date": "09/20",
+          "k": 4,
+          "pitches": 44
+        },
+        {
+          "date": "09/27",
+          "k": 5,
+          "pitches": 68
         }
       ],
       "k_distribution": {
-        "0": 0.0262,
-        "1": 0.0516,
-        "2": 0.0868,
-        "3": 0.1249,
-        "4": 0.1533,
-        "5": 0.1608,
-        "6": 0.1439,
-        "7": 0.1101,
-        "8": 0.0719,
-        "9": 0.0401,
-        "10+": 0.0306
+        "0": 0.0057,
+        "1": 0.0146,
+        "2": 0.0321,
+        "3": 0.0604,
+        "4": 0.097,
+        "5": 0.1331,
+        "6": 0.1558,
+        "7": 0.1558,
+        "8": 0.1331,
+        "9": 0.097,
+        "10+": 0.1154
       }
     },
     {
-      "pitcher_name": "Shawn Armstrong",
-      "pitcher_id": 542888,
-      "pitcher_team": "CLE",
+      "pitcher_name": "Nick Martinez",
+      "pitcher_id": 607259,
+      "pitcher_team": "TB",
       "pitcher_hand": "R",
-      "opp_team": "TB",
-      "venue": "Tropicana Field",
-      "projected_ks": 2.6,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.10655,
-      "csw_pct": 0.24835000000000002,
-      "k_pct": 0.2446,
-      "opp_k_pct": 0.1798,
-      "opp_chase": 0.3088,
-      "days_rest": 23,
-      "rolling_k_3": 0.33,
-      "rolling_k_5": 0.33,
+      "opp_team": "MIL",
+      "venue": "American Family Field",
+      "projected_ks": 3.8,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.0989,
+      "csw_pct": 0.2681,
+      "k_pct": 0.1875,
+      "opp_k_pct": 0.2197,
+      "opp_chase": 0.2691,
+      "days_rest": 26,
+      "rolling_k_3": 3.67,
+      "rolling_k_5": 3.6,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -105,33 +105,43 @@
       },
       "last5": [
         {
-          "date": "09/23",
-          "k": 0,
-          "pitches": 1
+          "date": "09/04",
+          "k": 4,
+          "pitches": 90
         },
         {
-          "date": "09/25",
-          "k": 0,
-          "pitches": 19
+          "date": "09/10",
+          "k": 3,
+          "pitches": 68
         },
         {
-          "date": "09/26",
+          "date": "09/16",
+          "k": 3,
+          "pitches": 72
+        },
+        {
+          "date": "09/22",
+          "k": 7,
+          "pitches": 94
+        },
+        {
+          "date": "09/27",
           "k": 1,
-          "pitches": 11
+          "pitches": 50
         }
       ],
       "k_distribution": {
-        "0": 0.1042,
-        "1": 0.1451,
-        "2": 0.1726,
-        "3": 0.1754,
-        "4": 0.1522,
-        "5": 0.1127,
-        "6": 0.0713,
-        "7": 0.0385,
-        "8": 0.0178,
-        "9": 0.007,
-        "10+": 0.0032
+        "0": 0.053,
+        "1": 0.0892,
+        "2": 0.1282,
+        "3": 0.1574,
+        "4": 0.1651,
+        "5": 0.1478,
+        "6": 0.113,
+        "7": 0.0738,
+        "8": 0.0411,
+        "9": 0.0196,
+        "10+": 0.0118
       }
     }
   ],
