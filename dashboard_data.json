@@ -1,95 +1,24 @@
 {
-  "date": "October 24, 2026",
-  "generated_at": "09:42 PM",
+  "date": "October 26, 2026",
+  "generated_at": "12:04 AM",
   "all_pitchers": [
     {
-      "pitcher_name": "Logan Henderson",
-      "pitcher_id": 701656,
-      "pitcher_team": "MIL",
-      "pitcher_hand": "R",
-      "opp_team": "TB",
-      "venue": "American Family Field",
-      "projected_ks": 5.8,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.13520000000000001,
-      "csw_pct": 0.27725,
-      "k_pct": 0.3035,
-      "opp_k_pct": 0.1794,
-      "opp_chase": 0.31,
-      "days_rest": 31,
-      "rolling_k_3": 5.67,
-      "rolling_k_5": 6.2,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 0,
-        "description": "Dome / Retractable Roof",
-        "adjustment": 1.0,
-        "indoor": true
-      },
-      "last5": [
-        {
-          "date": "08/28",
-          "k": 7,
-          "pitches": 91
-        },
-        {
-          "date": "09/03",
-          "k": 7,
-          "pitches": 102
-        },
-        {
-          "date": "09/09",
-          "k": 6,
-          "pitches": 95
-        },
-        {
-          "date": "09/16",
-          "k": 8,
-          "pitches": 87
-        },
-        {
-          "date": "09/23",
-          "k": 3,
-          "pitches": 87
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0112,
-        "1": 0.0259,
-        "2": 0.051,
-        "3": 0.0859,
-        "4": 0.1235,
-        "5": 0.1516,
-        "6": 0.159,
-        "7": 0.1423,
-        "8": 0.1088,
-        "9": 0.0711,
-        "10+": 0.0698
-      }
-    },
-    {
-      "pitcher_name": "Drew Rasmussen",
-      "pitcher_id": 656876,
+      "pitcher_name": "Freddy Peralta",
+      "pitcher_id": 642547,
       "pitcher_team": "TB",
       "pitcher_hand": "R",
       "opp_team": "MIL",
-      "venue": "American Family Field",
-      "projected_ks": 4.7,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.12123333333333333,
-      "csw_pct": 0.29819999999999997,
-      "k_pct": 0.2441,
-      "opp_k_pct": 0.2252,
-      "opp_chase": 0.2764,
-      "days_rest": 32,
-      "rolling_k_3": 6.0,
-      "rolling_k_5": 6.2,
+      "venue": "Tropicana Field",
+      "projected_ks": 5.1,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.13466666666666668,
+      "csw_pct": 0.25351666666666667,
+      "k_pct": 0.2363,
+      "opp_k_pct": 0.2192,
+      "opp_chase": 0.2697,
+      "days_rest": 31,
+      "rolling_k_3": 4.67,
+      "rolling_k_5": 4.6,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -105,43 +34,114 @@
       },
       "last5": [
         {
-          "date": "08/30",
+          "date": "09/01",
+          "k": 7,
+          "pitches": 74
+        },
+        {
+          "date": "09/08",
+          "k": 2,
+          "pitches": 92
+        },
+        {
+          "date": "09/13",
+          "k": 4,
+          "pitches": 86
+        },
+        {
+          "date": "09/19",
           "k": 6,
           "pitches": 97
         },
         {
-          "date": "09/05",
-          "k": 7,
-          "pitches": 97
-        },
-        {
-          "date": "09/11",
+          "date": "09/25",
           "k": 4,
-          "pitches": 92
-        },
-        {
-          "date": "09/17",
-          "k": 3,
-          "pitches": 76
-        },
-        {
-          "date": "09/22",
-          "k": 11,
-          "pitches": 114
+          "pitches": 93
         }
       ],
       "k_distribution": {
-        "0": 0.0282,
-        "1": 0.0548,
-        "2": 0.0909,
-        "3": 0.1286,
-        "4": 0.1554,
+        "0": 0.0206,
+        "1": 0.0426,
+        "2": 0.0752,
+        "3": 0.1133,
+        "4": 0.1459,
         "5": 0.1604,
-        "6": 0.1414,
-        "7": 0.1064,
-        "8": 0.0684,
-        "9": 0.0375,
-        "10+": 0.028
+        "6": 0.1506,
+        "7": 0.1207,
+        "8": 0.0826,
+        "9": 0.0483,
+        "10+": 0.0397
+      }
+    },
+    {
+      "pitcher_name": "Robert Gasser",
+      "pitcher_id": 688107,
+      "pitcher_team": "MIL",
+      "pitcher_hand": "L",
+      "opp_team": "TB",
+      "venue": "Tropicana Field",
+      "projected_ks": 3.5,
+      "lineup_confirmed": false,
+      "swstr_pct": 0.10683333333333334,
+      "csw_pct": 0.27008333333333334,
+      "k_pct": 0.2142,
+      "opp_k_pct": 0.1872,
+      "opp_chase": 0.3124,
+      "days_rest": 31,
+      "rolling_k_3": 5.33,
+      "rolling_k_5": 5.0,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 0,
+        "description": "Dome / Retractable Roof",
+        "adjustment": 1.0,
+        "indoor": true
+      },
+      "last5": [
+        {
+          "date": "09/01",
+          "k": 4,
+          "pitches": 76
+        },
+        {
+          "date": "09/07",
+          "k": 5,
+          "pitches": 83
+        },
+        {
+          "date": "09/13",
+          "k": 5,
+          "pitches": 89
+        },
+        {
+          "date": "09/19",
+          "k": 2,
+          "pitches": 107
+        },
+        {
+          "date": "09/25",
+          "k": 9,
+          "pitches": 87
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0638,
+        "1": 0.1024,
+        "2": 0.1404,
+        "3": 0.1644,
+        "4": 0.1644,
+        "5": 0.1404,
+        "6": 0.1024,
+        "7": 0.0638,
+        "8": 0.0339,
+        "9": 0.0154,
+        "10+": 0.0087
       }
     }
   ],
