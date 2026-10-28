@@ -1,95 +1,24 @@
 {
-  "date": "October 27, 2026",
-  "generated_at": "11:02 PM",
+  "date": "October 28, 2026",
+  "generated_at": "08:41 PM",
   "all_pitchers": [
     {
-      "pitcher_name": "Dustin May",
-      "pitcher_id": 669160,
+      "pitcher_name": "Jacob Misiorowski",
+      "pitcher_id": 694819,
       "pitcher_team": "MIL",
       "pitcher_hand": "R",
       "opp_team": "TB",
       "venue": "Tropicana Field",
-      "projected_ks": 4.2,
+      "projected_ks": 6.3,
       "lineup_confirmed": true,
-      "swstr_pct": 0.1322,
-      "csw_pct": 0.2843,
-      "k_pct": 0.2461,
-      "opp_k_pct": 0.1786,
-      "opp_chase": 0.3071,
+      "swstr_pct": 0.17635,
+      "csw_pct": 0.3277333333333333,
+      "k_pct": 0.318,
+      "opp_k_pct": 0.1796,
+      "opp_chase": 0.3075,
       "days_rest": 31,
-      "rolling_k_3": 3.67,
-      "rolling_k_5": 4.4,
-      "umpire": {
-        "name": "Unknown",
-        "favor_k": 0.0,
-        "zone_tendency": "Neutral",
-        "adjustment": 1.0
-      },
-      "weather": {
-        "temp_f": 72,
-        "wind_mph": 0,
-        "description": "Dome / Retractable Roof",
-        "adjustment": 1.0,
-        "indoor": true
-      },
-      "last5": [
-        {
-          "date": "09/05",
-          "k": 5,
-          "pitches": 56
-        },
-        {
-          "date": "09/11",
-          "k": 6,
-          "pitches": 84
-        },
-        {
-          "date": "09/18",
-          "k": 4,
-          "pitches": 70
-        },
-        {
-          "date": "09/22",
-          "k": 2,
-          "pitches": 36
-        },
-        {
-          "date": "09/26",
-          "k": 5,
-          "pitches": 58
-        }
-      ],
-      "k_distribution": {
-        "0": 0.0406,
-        "1": 0.0728,
-        "2": 0.1115,
-        "3": 0.1459,
-        "4": 0.1629,
-        "5": 0.1554,
-        "6": 0.1265,
-        "7": 0.088,
-        "8": 0.0523,
-        "9": 0.0265,
-        "10+": 0.0175
-      }
-    },
-    {
-      "pitcher_name": "Griffin Jax",
-      "pitcher_id": 643377,
-      "pitcher_team": "TB",
-      "pitcher_hand": "R",
-      "opp_team": "MIL",
-      "venue": "Tropicana Field",
-      "projected_ks": 3.4,
-      "lineup_confirmed": true,
-      "swstr_pct": 0.12681666666666666,
-      "csw_pct": 0.3128666666666667,
-      "k_pct": 0.2623,
-      "opp_k_pct": 0.2242,
-      "opp_chase": 0.281,
-      "days_rest": 31,
-      "rolling_k_3": 4.33,
-      "rolling_k_5": 3.2,
+      "rolling_k_3": 5.33,
+      "rolling_k_5": 6.0,
       "umpire": {
         "name": "Unknown",
         "favor_k": 0.0,
@@ -106,42 +35,113 @@
       "last5": [
         {
           "date": "09/02",
-          "k": 1,
-          "pitches": 63
+          "k": 5,
+          "pitches": 92
         },
         {
-          "date": "09/09",
-          "k": 2,
-          "pitches": 66
+          "date": "09/08",
+          "k": 9,
+          "pitches": 93
         },
         {
           "date": "09/15",
           "k": 7,
-          "pitches": 67
+          "pitches": 82
         },
         {
           "date": "09/20",
-          "k": 5,
-          "pitches": 74
+          "k": 4,
+          "pitches": 44
         },
         {
-          "date": "09/26",
-          "k": 1,
-          "pitches": 52
+          "date": "09/27",
+          "k": 5,
+          "pitches": 68
         }
       ],
       "k_distribution": {
-        "0": 0.0677,
-        "1": 0.107,
-        "2": 0.1444,
-        "3": 0.1664,
-        "4": 0.1638,
-        "5": 0.1377,
-        "6": 0.0988,
-        "7": 0.0606,
-        "8": 0.0317,
-        "9": 0.0142,
-        "10+": 0.0078
+        "0": 0.0069,
+        "1": 0.0173,
+        "2": 0.0369,
+        "3": 0.0673,
+        "4": 0.1047,
+        "5": 0.1392,
+        "6": 0.1579,
+        "7": 0.153,
+        "8": 0.1266,
+        "9": 0.0894,
+        "10+": 0.1006
+      }
+    },
+    {
+      "pitcher_name": "Drew Rasmussen",
+      "pitcher_id": 656876,
+      "pitcher_team": "TB",
+      "pitcher_hand": "R",
+      "opp_team": "MIL",
+      "venue": "Tropicana Field",
+      "projected_ks": 4.7,
+      "lineup_confirmed": true,
+      "swstr_pct": 0.12123333333333333,
+      "csw_pct": 0.29819999999999997,
+      "k_pct": 0.2441,
+      "opp_k_pct": 0.2243,
+      "opp_chase": 0.2797,
+      "days_rest": 36,
+      "rolling_k_3": 6.0,
+      "rolling_k_5": 6.2,
+      "umpire": {
+        "name": "Unknown",
+        "favor_k": 0.0,
+        "zone_tendency": "Neutral",
+        "adjustment": 1.0
+      },
+      "weather": {
+        "temp_f": 72,
+        "wind_mph": 0,
+        "description": "Dome / Retractable Roof",
+        "adjustment": 1.0,
+        "indoor": true
+      },
+      "last5": [
+        {
+          "date": "08/30",
+          "k": 6,
+          "pitches": 97
+        },
+        {
+          "date": "09/05",
+          "k": 7,
+          "pitches": 97
+        },
+        {
+          "date": "09/11",
+          "k": 4,
+          "pitches": 92
+        },
+        {
+          "date": "09/17",
+          "k": 3,
+          "pitches": 76
+        },
+        {
+          "date": "09/22",
+          "k": 11,
+          "pitches": 114
+        }
+      ],
+      "k_distribution": {
+        "0": 0.0282,
+        "1": 0.0548,
+        "2": 0.0909,
+        "3": 0.1286,
+        "4": 0.1554,
+        "5": 0.1604,
+        "6": 0.1414,
+        "7": 0.1064,
+        "8": 0.0684,
+        "9": 0.0375,
+        "10+": 0.028
       }
     }
   ],
